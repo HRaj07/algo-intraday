@@ -1,0 +1,71 @@
+name: ⚡ IntraDay Algo Scanner
+
+on:
+  schedule:
+    # Every 15 min during NSE market hours (Mon-Fri)
+    # IST = UTC+5:30, so 9:15 IST = 3:45 UTC
+    - cron: '45 3 * * 1-5'   # 9:15 AM IST
+    - cron: '0 4 * * 1-5'    # 9:30 AM IST
+    - cron: '15 4 * * 1-5'   # 9:45 AM IST
+    - cron: '30 4 * * 1-5'   # 10:00 AM IST
+    - cron: '45 4 * * 1-5'   # 10:15 AM IST
+    - cron: '0 5 * * 1-5'    # 10:30 AM IST
+    - cron: '15 5 * * 1-5'   # 10:45 AM IST
+    - cron: '30 5 * * 1-5'   # 11:00 AM IST
+    - cron: '45 5 * * 1-5'   # 11:15 AM IST
+    - cron: '0 6 * * 1-5'    # 11:30 AM IST
+    - cron: '15 6 * * 1-5'   # 11:45 AM IST
+    - cron: '30 6 * * 1-5'   # 12:00 PM IST
+    - cron: '45 6 * * 1-5'   # 12:15 PM IST
+    - cron: '0 7 * * 1-5'    # 12:30 PM IST
+    - cron: '15 7 * * 1-5'   # 12:45 PM IST
+    - cron: '30 7 * * 1-5'   # 1:00 PM IST
+    - cron: '45 7 * * 1-5'   # 1:15 PM IST
+    - cron: '0 8 * * 1-5'    # 1:30 PM IST
+    - cron: '15 8 * * 1-5'   # 1:45 PM IST
+    - cron: '30 8 * * 1-5'   # 2:00 PM IST
+    - cron: '45 8 * * 1-5'   # 2:15 PM IST
+    - cron: '0 9 * * 1-5'    # 2:30 PM IST
+    - cron: '15 9 * * 1-5'   # 2:45 PM IST
+    - cron: '30 9 * * 1-5'   # 3:00 PM IST
+    - cron: '45 9 * * 1-5'   # 3:15 PM IST (last scan + square off)
+  workflow_dispatch:          # Manual trigger for testing
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    name: Run Intraday Scan
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run intraday scan
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python main.py
+
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "HRaj07"
+          git config user.email "2601harshitraj@gmail.com"
+          git add logs/ reports/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "⚡ Intraday: $(date '+%H:%M IST %Y-%m-%d')"
+            git push
+          fi
