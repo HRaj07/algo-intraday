@@ -116,10 +116,15 @@ def run_intraday_scan():
         _save_daily_summary(trader)
         return
 
-    # 3. Scan for high-conviction 30-min ORB signals
+    # 3. Scan for high-conviction signals (ORB-30 and Extreme VWAP Mean Reversion)
+    from strategies.vwap_mr import ExtremeVWAPMeanReversionStrategy
     orb_strat = ORB30Strategy()
-    signals = orb_strat.compute_signals(all_data)
-    logger.info(f"Qualified Signals Found: {len(signals)}")
+    mr_strat = ExtremeVWAPMeanReversionStrategy()
+
+    signals_orb = orb_strat.compute_signals(all_data)
+    signals_mr = mr_strat.compute_signals(all_data)
+    signals = sorted(signals_orb + signals_mr, key=lambda x: x.get("score", 0), reverse=True)[:SYSTEM["max_daily_trades"]]
+    logger.info(f"Qualified Signals Found: {len(signals)} (ORB: {len(signals_orb)}, MR: {len(signals_mr)})")
 
     # 4. Enter trades with strict risk management
     new_entries = []

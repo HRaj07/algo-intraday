@@ -1,8 +1,9 @@
 """
-30-Minute Institutional Opening Range Breakout (ORB-30) Strategy
+30-Minute Institutional Opening Range Breakout (ORB-30) + CPR Confluence Strategy
 - 30-min opening range (9:15-9:45 AM)
 - Multi-factor filtering: ADX trend strength, VWAP bias, Volatility limits
-- Asymmetric 1:2.0 Risk-to-Reward with automated Breakeven Trailing Stop
+- Narrow Central Pivot Range (CPR) Priority Boost for institutional trending setups
+- Asymmetric 1:2.0 Risk-to-Reward with automated Breakeven Trailing Stop at +1R
 """
 import logging
 from datetime import datetime
@@ -36,7 +37,7 @@ class ORB30Strategy:
             except Exception as e:
                 logger.debug(f"ORB error on {ticker}: {e}")
 
-        # Rank signals by ADX score (strongest trend first)
+        # Rank signals by Confluence Score (ADX + CPR Narrow Boost)
         ranked = sorted(signals, key=lambda x: x.get("score", 0), reverse=True)
         return ranked[:SYSTEM["max_daily_trades"]]
 
@@ -68,6 +69,25 @@ class ORB30Strategy:
         if adx_val < self.params["min_adx"]:
             return None
 
+        # Central Pivot Range (CPR) Calculation using prior session
+        prior_df = df[df.index.date < today]
+        cpr_is_narrow = False
+        cpr_width_pct = 0.0
+        if len(prior_df) >= 20:
+            last_prior_date = prior_df.index.date[-1]
+            yesterday_bars = prior_df[prior_df.index.date == last_prior_date]
+            if not yesterday_bars.empty:
+                y_high = yesterday_bars['high'].max()
+                y_low = yesterday_bars['low'].min()
+                y_close = yesterday_bars.iloc[-1]['close']
+                pivot = (y_high + y_low + y_close) / 3
+                bc = (y_high + y_low) / 2
+                tc = (pivot - bc) + pivot
+                cpr_width = abs(tc - bc)
+                cpr_width_pct = cpr_width / pivot if pivot > 0 else 0
+                if cpr_width_pct < self.params.get("cpr_narrow_threshold", 0.0035):
+                    cpr_is_narrow = True
+
         vwap_series = self.ti.vwap(today_df)
         curr_bar = today_df.iloc[-1]
         prev_bar = today_df.iloc[-2]
@@ -80,11 +100,14 @@ class ORB30Strategy:
         if bar_idx > self.params["scan_window_end_bar"]:
             return None
 
+        # Confluence Score: Base ADX + CPR Narrow Priority Boost (+15 pts)
+        confluence_score = adx_val + (15.0 if cpr_is_narrow else 0.0)
+
         # LONG Breakout: Crosses above 30m high, above VWAP
         if curr_close > r30_hi and prev_close <= r30_hi and curr_close > curr_vwap:
             stop = r30_lo
             risk = curr_close - stop
-            if risk <= 0:
+            if risk <= 0 or risk / curr_close > 0.02:
                 return None
             target = curr_close + self.params["risk_reward"] * risk
             return {
@@ -97,9 +120,10 @@ class ORB30Strategy:
                 "range_low": round(r30_lo, 2),
                 "vwap": round(curr_vwap, 2),
                 "adx": round(adx_val, 1),
-                "score": round(adx_val, 2),
+                "cpr_narrow": cpr_is_narrow,
+                "score": round(confluence_score, 2),
                 "risk": round(risk, 2),
-                "strategy": "ORB-30",
+                "strategy": "ORB-30-CPR",
                 "time": str(today_df.index[-1]),
             }
 
@@ -107,7 +131,7 @@ class ORB30Strategy:
         if curr_close < r30_lo and prev_close >= r30_lo and curr_close < curr_vwap:
             stop = r30_hi
             risk = stop - curr_close
-            if risk <= 0:
+            if risk <= 0 or risk / curr_close > 0.02:
                 return None
             target = curr_close - self.params["risk_reward"] * risk
             return {
@@ -120,9 +144,10 @@ class ORB30Strategy:
                 "range_low": round(r30_lo, 2),
                 "vwap": round(curr_vwap, 2),
                 "adx": round(adx_val, 1),
-                "score": round(adx_val, 2),
+                "cpr_narrow": cpr_is_narrow,
+                "score": round(confluence_score, 2),
                 "risk": round(risk, 2),
-                "strategy": "ORB-30",
+                "strategy": "ORB-30-CPR",
                 "time": str(today_df.index[-1]),
             }
 
