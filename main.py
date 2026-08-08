@@ -1,8 +1,8 @@
 """
-Intraday Algo Trading Bot - Main Entry Point
+Intraday Algo Trading Bot - Main Production Execution
 Runs every 15 minutes via GitHub Actions (9:15 AM - 3:15 PM IST)
-Strategies: ORB, VWAP Pullback, EMA 9/21 Crossover
-Mode: Paper Trading (no real money)
+Primary Strategy: 30-Minute Institutional ORB with ADX & VWAP Multi-factor Filter
+Risk Sizing: Fixed ₹2,000 max risk per trade with 1:2.0 Asymmetric R:R and +1R Breakeven Trailing Stop
 """
 import json
 import logging
@@ -28,10 +28,8 @@ Path("logs").mkdir(exist_ok=True)
 Path("reports").mkdir(exist_ok=True)
 
 from config import INTRADAY_UNIVERSE, SYSTEM
-from data.fetcher import IntradayFetcher, TechnicalIndicators
-from strategies.orb import ORBStrategy
-from strategies.vwap_pullback import VWAPPullbackStrategy
-from strategies.ema_cross import EMACrossStrategy
+from data.fetcher import IntradayFetcher
+from strategies.orb import ORB30Strategy
 from engine.paper_trader import PaperTrader
 
 
@@ -52,19 +50,19 @@ def send_discord(message: str):
         urllib.request.urlopen(req, timeout=10)
         logger.info("Discord notification sent")
     except Exception as e:
-        logger.warning(f"Discord failed: {e}")
+        logger.warning(f"Discord alert failed: {e}")
 
 
 def run_intraday_scan():
     """Main intraday scan - runs every 15 minutes."""
     now = datetime.now()
-    logger.info(f"=" * 60)
+    logger.info("=" * 60)
     logger.info(f"Intraday Scan | {now.strftime('%Y-%m-%d %H:%M IST')}")
-    logger.info(f"=" * 60)
+    logger.info("=" * 60)
 
-    # Check if market is open
-    if now.weekday() >= 5:  # Weekend
-        logger.info("Weekend - Market closed")
+    # Weekend check
+    if now.weekday() >= 5:
+        logger.info("Weekend - NSE closed")
         return
 
     market_start = now.replace(hour=9, minute=15, second=0, microsecond=0)
@@ -72,76 +70,84 @@ def run_intraday_scan():
     square_off = now.replace(hour=15, minute=15, second=0, microsecond=0)
 
     if not (market_start <= now <= market_end):
-        logger.info("Outside market hours")
+        logger.info("Outside NSE trading hours")
         return
 
     # Fetch live 15-min data
     fetcher = IntradayFetcher()
-    logger.info(f"Fetching data for {len(INTRADAY_UNIVERSE)} stocks...")
-    data_dict = fetcher.get_today_data(INTRADAY_UNIVERSE)
-    logger.info(f"Got data for {len(data_dict)} stocks")
+    logger.info(f"Fetching 15m data for {len(INTRADAY_UNIVERSE)} stocks...")
+    all_data = fetcher.fetch_intraday(INTRADAY_UNIVERSE, days_back=5)
+    
+    today = now.date()
+    today_data = {t: df[df.index.date == today] for t, df in all_data.items() if not df[df.index.date == today].empty}
+    logger.info(f"Received valid intraday data for {len(today_data)} tickers")
 
-    if not data_dict:
-        logger.warning("No data received")
+    if not today_data:
+        logger.warning("No today data received")
         return
 
-    # Get latest prices for exit checks
-    current_prices = {t: df['close'].iloc[-1] for t, df in data_dict.items()}
+    # Build price map for positions check
+    current_bars = {}
+    for t, df in today_data.items():
+        last = df.iloc[-1]
+        current_bars[t] = {
+            "close": last["close"],
+            "high": last["high"],
+            "low": last["low"]
+        }
 
-    # Initialize paper trader
     trader = PaperTrader()
 
-    # Check exits first
-    exits = trader.check_exits(current_prices)
+    # 1. Manage open positions & check exits
+    exits = trader.check_exits(current_bars)
     for ex in exits:
         icon = "✅" if ex['pnl'] > 0 else "❌"
         msg = (
             f"{icon} **EXIT** `{ex['ticker']}` | {ex['direction']}\n"
             f"Entry: ₹{ex['entry_price']} → Exit: ₹{ex['exit_price']}\n"
-            f"P&L: **₹{ex['pnl']:+.0f}** ({ex['pnl_pct']:+.2f}%) | Reason: {ex['reason']}\n"
+            f"P&L: **₹{ex['pnl']:+.0f}** ({ex['pnl_pct']:+.2f}%) | Reason: `{ex['reason']}`\n"
             f"Strategy: `{ex['strategy']}`"
         )
         send_discord(msg)
 
-    # Square off time? Stop looking for new entries
+    # 2. If square-off time reached, close day
     if now >= square_off:
-        logger.info("Square-off time reached - no new entries")
+        logger.info("Square-off time reached (3:15 PM) - Generating EOD Summary")
         _save_daily_summary(trader)
         return
 
-    # Run all 3 strategies to find entries
-    all_signals = []
-    all_signals += ORBStrategy().compute_signals(data_dict)
-    all_signals += VWAPPullbackStrategy().compute_signals(data_dict)
-    all_signals += EMACrossStrategy().compute_signals(data_dict)
+    # 3. Scan for high-conviction 30-min ORB signals
+    orb_strat = ORB30Strategy()
+    signals = orb_strat.compute_signals(all_data)
+    logger.info(f"Qualified Signals Found: {len(signals)}")
 
-    logger.info(f"Signals found: {len(all_signals)}")
-
-    # Paper trade entries
+    # 4. Enter trades with strict risk management
     new_entries = []
-    for signal in all_signals:
-        position = trader.enter_trade(signal)
-        if position:
-            new_entries.append((signal, position))
+    for sig in signals:
+        pos = trader.enter_trade(sig)
+        if pos:
+            new_entries.append((sig, pos))
 
-    # Send Discord alerts for new entries
-    for signal, pos in new_entries:
-        icon = "🟢" if signal['signal'] == 'BUY' else "🔴"
+    for sig, pos in new_entries:
+        icon = "🟢" if sig['signal'] == 'BUY' else "🔴"
         msg = (
-            f"{icon} **ENTRY** `{signal['ticker']}` | {signal['signal']}\n"
-            f"Price: ₹{signal['price']} | Stop: ₹{signal['stop_loss']} | Target: ₹{signal['target']}\n"
-            f"Strategy: `{signal['strategy']}` | Time: {signal.get('time', 'N/A')[-8:-3]}"
+            f"{icon} **ENTRY** `{sig['ticker']}` | {sig['signal']}\n"
+            f"Price: ₹{sig['price']} | Stop Loss: ₹{sig['stop_loss']} | Target: ₹{sig['target']}\n"
+            f"Qty: {pos['qty']} (Risk: ₹{SYSTEM['risk_per_trade']:,}) | ADX: {sig.get('adx', 'N/A')}\n"
+            f"Strategy: `{sig['strategy']}` | Time: {sig.get('time', 'N/A')[-8:-3]}"
         )
         send_discord(msg)
 
-    # Summary
     summary = trader.get_summary()
-    logger.info(f"Portfolio: Cash=₹{summary['cash']:,.0f} | Open Pos={summary['open_positions']} | Total P&L=₹{summary['total_pnl']:+,.0f} | Win Rate={summary['win_rate_pct']}%")
+    logger.info(
+        f"Portfolio Summary: Cash=₹{summary['cash']:,.0f} | Open={summary['open_positions']} | "
+        f"Total P&L=₹{summary['total_pnl']:+,.0f} | Win Rate={summary['win_rate_pct']}%"
+    )
 
-    # Log signal data
+    # Log entry
     log_entry = {
         "time": str(now),
-        "signals": all_signals,
+        "signals": signals,
         "entries": len(new_entries),
         "exits": len(exits),
         "portfolio": summary,
@@ -151,7 +157,6 @@ def run_intraday_scan():
 
 
 def _save_daily_summary(trader: PaperTrader):
-    """Save end-of-day summary."""
     summary = trader.get_summary()
     today = datetime.now().date()
     history = trader.state.get("trade_history", [])
@@ -182,9 +187,7 @@ def _save_daily_summary(trader: PaperTrader):
             f"Win Rate     : {summary['win_rate_pct']}%\n"
             f"━━━━━━━━━━━━━━━━━━━━━━━━━"
         )
-        webhook = os.environ.get("DISCORD_WEBHOOK_URL")
-        if webhook:
-            send_discord(msg)
+        send_discord(msg)
 
     logger.info(f"EOD Summary: {day_summary}")
 
