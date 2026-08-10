@@ -21,20 +21,34 @@ class IntradayFetcher:
         results = {}
         for ticker in tickers:
             try:
-                df = yf.download(
-                    ticker,
-                    period=f"{days_back}d",
-                    interval="15m",
-                    auto_adjust=True,
-                    progress=False,
-                    multi_level_index=False,
-                )
+                # multi_level_index only exists in newer yfinance; guard for older versions
+                try:
+                    df = yf.download(
+                        ticker,
+                        period=f"{days_back}d",
+                        interval="15m",
+                        auto_adjust=True,
+                        progress=False,
+                        multi_level_index=False,
+                    )
+                except TypeError:
+                    df = yf.download(
+                        ticker,
+                        period=f"{days_back}d",
+                        interval="15m",
+                        auto_adjust=True,
+                        progress=False,
+                    )
                 if df.empty:
                     continue
-                df.columns = [c.lower() for c in df.columns]
-                # Remove timezone info
+                # Flatten multi-level columns if present (older yfinance returns MultiIndex)
+                if isinstance(df.columns, pd.MultiIndex):
+                    df.columns = [c[0].lower() for c in df.columns]
+                else:
+                    df.columns = [c.lower() for c in df.columns]
+                # Remove timezone info safely
                 if df.index.tz is not None:
-                    df.index = df.index.tz_localize(None)
+                    df.index = df.index.tz_convert(None)  # tz_convert(None) strips tz
                 results[ticker] = df.dropna()
                 time.sleep(0.1)
             except Exception as e:
