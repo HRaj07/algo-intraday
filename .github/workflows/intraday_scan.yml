@@ -55,7 +55,7 @@ jobs:
       - name: Run intraday scan
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: python main.py
+        run: python main.py > logs/execution.log 2>&1 || exit 1
 
       - name: Commit results
         if: always()
