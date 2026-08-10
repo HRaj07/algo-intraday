@@ -12,6 +12,10 @@ from datetime import datetime
 from pathlib import Path
 import urllib.request
 
+# Create directories FIRST before logging setup (GitHub Actions clean checkout)
+Path("logs").mkdir(exist_ok=True)
+Path("reports").mkdir(exist_ok=True)
+
 # Setup logging
 logging.basicConfig(
     level=logging.INFO,
@@ -24,8 +28,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-Path("logs").mkdir(exist_ok=True)
-Path("reports").mkdir(exist_ok=True)
 
 from config import INTRADAY_UNIVERSE, SYSTEM
 from data.fetcher import IntradayFetcher
