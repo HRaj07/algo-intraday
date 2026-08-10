@@ -55,7 +55,9 @@ def send_discord(message: str):
 
 def run_intraday_scan():
     """Main intraday scan - runs every 15 minutes."""
-    now = datetime.now()
+    import pytz
+    ist = pytz.timezone("Asia/Kolkata")
+    now = datetime.now(ist)
     logger.info("=" * 60)
     logger.info(f"Intraday Scan | {now.strftime('%Y-%m-%d %H:%M IST')}")
     logger.info("=" * 60)
@@ -162,8 +164,10 @@ def run_intraday_scan():
 
 
 def _save_daily_summary(trader: PaperTrader):
+    import pytz
+    ist = pytz.timezone("Asia/Kolkata")
     summary = trader.get_summary()
-    today = datetime.now().date()
+    today = datetime.now(ist).date()
     history = trader.state.get("trade_history", [])
     today_trades = [t for t in history if str(today) in t.get("exit_time", "")]
     today_pnl = sum(t["pnl"] for t in today_trades)

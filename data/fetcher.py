@@ -73,6 +73,17 @@ class TechnicalIndicators:
         return df['cum_tp_vol'] / df['cum_vol']
 
     @staticmethod
+    def rsi(df: pd.DataFrame, period: int = 14) -> pd.Series:
+        close = df['close']
+        delta = close.diff()
+        gain = delta.clip(lower=0)
+        loss = -delta.clip(upper=0)
+        avg_gain = gain.ewm(com=period - 1, adjust=False).mean()
+        avg_loss = loss.ewm(com=period - 1, adjust=False).mean()
+        rs = avg_gain / avg_loss.replace(0, 1e-9)
+        return 100 - (100 / (1 + rs)).fillna(50)
+
+    @staticmethod
     def ema(series: pd.Series, period: int) -> pd.Series:
         return series.ewm(span=period, adjust=False).mean()
 
