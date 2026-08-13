@@ -125,7 +125,9 @@ class PaperTrader:
         current_data is expected to be {ticker: {'close': c, 'high': h, 'low': l}}
         """
         exits = []
-        now = datetime.now()
+        import pytz
+        ist = pytz.timezone("Asia/Kolkata")
+        now = datetime.now(ist)
         force_exit = now.hour > 15 or (now.hour == 15 and now.minute >= 15)
 
         for ticker, pos in list(self.state["positions"].items()):

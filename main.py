@@ -114,9 +114,20 @@ def run_intraday_scan():
         )
         send_discord(msg)
 
-    # 2. If square-off time reached, close day
+    # 2. If square-off time reached, force-close all open positions then save EOD
     if now >= square_off:
-        logger.info("Square-off time reached (3:15 PM) - Generating EOD Summary")
+        logger.info("Square-off time reached (3:15 PM) - Force closing all open positions")
+        # Force-close any remaining open positions at current market price
+        square_off_exits = trader.check_exits(current_bars)
+        for ex in square_off_exits:
+            icon = "✅" if ex['pnl'] > 0 else "❌"
+            msg = (
+                f"{icon} **SQUARE-OFF** `{ex['ticker']}` | {ex['direction']}\n"
+                f"Entry: ₹{ex['entry_price']} → Exit: ₹{ex['exit_price']}\n"
+                f"P&L: **₹{ex['pnl']:+.0f}** ({ex['pnl_pct']:+.2f}%) | Reason: `square_off`\n"
+                f"Strategy: `{ex['strategy']}`"
+            )
+            send_discord(msg)
         _save_daily_summary(trader)
         return
 

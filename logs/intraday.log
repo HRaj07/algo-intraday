@@ -1,0 +1,696 @@
+2026-08-10 08:08:21 | INFO    | __main__ | ============================================================
+2026-08-10 08:08:21 | INFO    | __main__ | Intraday Scan | 2026-08-10 13:38 IST
+2026-08-10 08:08:21 | INFO    | __main__ | ============================================================
+2026-08-10 08:08:21 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-10 08:08:27 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-10 08:08:27 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-10 08:08:27 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-10 08:08:27 | INFO    | __main__ | Portfolio Summary: Cash=₹500,000 | Open=0 | Total P&L=₹+0 | Win Rate=0%
+2026-08-10 08:13:38 | INFO    | __main__ | ============================================================
+2026-08-10 08:13:38 | INFO    | __main__ | Intraday Scan | 2026-08-10 13:43 IST
+2026-08-10 08:13:38 | INFO    | __main__ | ============================================================
+2026-08-10 08:13:38 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-10 08:13:44 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-10 08:13:44 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-10 08:13:44 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-10 08:13:44 | INFO    | __main__ | Portfolio Summary: Cash=₹500,000 | Open=0 | Total P&L=₹+0 | Win Rate=0%
+2026-08-10 08:16:12 | INFO    | __main__ | ============================================================
+2026-08-10 08:16:12 | INFO    | __main__ | Intraday Scan | 2026-08-10 13:46 IST
+2026-08-10 08:16:12 | INFO    | __main__ | ============================================================
+2026-08-10 08:16:12 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-10 08:16:19 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-10 08:16:19 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-10 08:16:19 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-10 08:16:19 | INFO    | __main__ | Portfolio Summary: Cash=₹500,000 | Open=0 | Total P&L=₹+0 | Win Rate=0%
+2026-08-10 08:23:39 | INFO    | __main__ | ============================================================
+2026-08-10 08:23:39 | INFO    | __main__ | Intraday Scan | 2026-08-10 13:53 IST
+2026-08-10 08:23:39 | INFO    | __main__ | ============================================================
+2026-08-10 08:23:39 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-10 08:23:45 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-10 08:23:45 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-10 08:23:46 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-10 08:23:46 | INFO    | __main__ | Portfolio Summary: Cash=₹500,000 | Open=0 | Total P&L=₹+0 | Win Rate=0%
+2026-08-10 08:51:06 | INFO    | __main__ | ============================================================
+2026-08-10 08:51:06 | INFO    | __main__ | Intraday Scan | 2026-08-10 14:21 IST
+2026-08-10 08:51:06 | INFO    | __main__ | ============================================================
+2026-08-10 08:51:06 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-10 08:51:13 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-10 08:51:13 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-10 08:51:13 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-10 08:51:13 | INFO    | __main__ | Portfolio Summary: Cash=₹500,000 | Open=0 | Total P&L=₹+0 | Win Rate=0%
+2026-08-10 08:57:22 | INFO    | __main__ | ============================================================
+2026-08-10 08:57:22 | INFO    | __main__ | Intraday Scan | 2026-08-10 14:27 IST
+2026-08-10 08:57:22 | INFO    | __main__ | ============================================================
+2026-08-10 08:57:22 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-10 08:57:32 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-10 08:57:32 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-10 08:57:32 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-10 08:57:32 | INFO    | __main__ | Portfolio Summary: Cash=₹500,000 | Open=0 | Total P&L=₹+0 | Win Rate=0%
+2026-08-10 09:01:50 | INFO    | __main__ | ============================================================
+2026-08-10 09:01:50 | INFO    | __main__ | Intraday Scan | 2026-08-10 14:31 IST
+2026-08-10 09:01:50 | INFO    | __main__ | ============================================================
+2026-08-10 09:01:50 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-10 09:01:56 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-10 09:01:56 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-10 09:01:56 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-10 09:01:56 | INFO    | __main__ | Portfolio Summary: Cash=₹500,000 | Open=0 | Total P&L=₹+0 | Win Rate=0%
+2026-08-10 09:27:15 | INFO    | __main__ | ============================================================
+2026-08-10 09:27:15 | INFO    | __main__ | Intraday Scan | 2026-08-10 14:57 IST
+2026-08-10 09:27:15 | INFO    | __main__ | ============================================================
+2026-08-10 09:27:15 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-10 09:27:24 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-10 09:27:24 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-10 09:27:24 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-10 09:27:24 | INFO    | __main__ | Portfolio Summary: Cash=₹500,000 | Open=0 | Total P&L=₹+0 | Win Rate=0%
+2026-08-10 09:46:43 | INFO    | __main__ | ============================================================
+2026-08-10 09:46:43 | INFO    | __main__ | Intraday Scan | 2026-08-10 15:16 IST
+2026-08-10 09:46:43 | INFO    | __main__ | ============================================================
+2026-08-10 09:46:43 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-10 09:46:50 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-10 09:46:50 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-10 09:46:50 | INFO    | __main__ | Square-off time reached (3:15 PM) - Generating EOD Summary
+2026-08-10 09:46:50 | INFO    | __main__ | EOD Summary: {'date': '2026-08-10', 'today_trades': 0, 'today_pnl': 0, 'today_winners': 0, 'total_pnl': 0.0, 'win_rate_pct': 0, 'return_pct': 0.0}
+2026-08-10 09:53:58 | INFO    | __main__ | ============================================================
+2026-08-10 09:53:58 | INFO    | __main__ | Intraday Scan | 2026-08-10 15:23 IST
+2026-08-10 09:53:58 | INFO    | __main__ | ============================================================
+2026-08-10 09:53:58 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-10 09:54:04 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-10 09:54:04 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-10 09:54:04 | INFO    | __main__ | Square-off time reached (3:15 PM) - Generating EOD Summary
+2026-08-10 09:54:04 | INFO    | __main__ | EOD Summary: {'date': '2026-08-10', 'today_trades': 0, 'today_pnl': 0, 'today_winners': 0, 'total_pnl': 0.0, 'win_rate_pct': 0, 'return_pct': 0.0}
+2026-08-10 10:02:35 | INFO    | __main__ | ============================================================
+2026-08-10 10:02:35 | INFO    | __main__ | Intraday Scan | 2026-08-10 15:32 IST
+2026-08-10 10:02:35 | INFO    | __main__ | ============================================================
+2026-08-10 10:02:35 | INFO    | __main__ | Outside NSE trading hours
+2026-08-10 10:20:39 | INFO    | __main__ | ============================================================
+2026-08-10 10:20:39 | INFO    | __main__ | Intraday Scan | 2026-08-10 15:50 IST
+2026-08-10 10:20:39 | INFO    | __main__ | ============================================================
+2026-08-10 10:20:39 | INFO    | __main__ | Outside NSE trading hours
+2026-08-10 10:36:00 | INFO    | __main__ | ============================================================
+2026-08-10 10:36:00 | INFO    | __main__ | Intraday Scan | 2026-08-10 16:06 IST
+2026-08-10 10:36:00 | INFO    | __main__ | ============================================================
+2026-08-10 10:36:00 | INFO    | __main__ | Outside NSE trading hours
+2026-08-10 10:43:15 | INFO    | __main__ | ============================================================
+2026-08-10 10:43:15 | INFO    | __main__ | Intraday Scan | 2026-08-10 16:13 IST
+2026-08-10 10:43:15 | INFO    | __main__ | ============================================================
+2026-08-10 10:43:15 | INFO    | __main__ | Outside NSE trading hours
+2026-08-10 10:48:04 | INFO    | __main__ | ============================================================
+2026-08-10 10:48:04 | INFO    | __main__ | Intraday Scan | 2026-08-10 16:18 IST
+2026-08-10 10:48:04 | INFO    | __main__ | ============================================================
+2026-08-10 10:48:04 | INFO    | __main__ | Outside NSE trading hours
+2026-08-11 04:53:34 | INFO    | __main__ | ============================================================
+2026-08-11 04:53:34 | INFO    | __main__ | Intraday Scan | 2026-08-11 10:23 IST
+2026-08-11 04:53:34 | INFO    | __main__ | ============================================================
+2026-08-11 04:53:34 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 04:53:43 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 04:53:43 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 04:53:43 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 1, MR: 0)
+2026-08-11 04:53:43 | INFO    | engine.paper_trader | ENTER LONG DIVISLAB.NS @ ₹8365.0 | Qty: 25 | SL: ₹8286.5 | Target: ₹8522.0 | Risk: ₹1962.0
+2026-08-11 04:53:43 | INFO    | __main__ | Discord notification sent
+2026-08-11 04:53:43 | INFO    | __main__ | Portfolio Summary: Cash=₹290,739 | Open=1 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 05:12:36 | INFO    | __main__ | ============================================================
+2026-08-11 05:12:36 | INFO    | __main__ | Intraday Scan | 2026-08-11 10:42 IST
+2026-08-11 05:12:36 | INFO    | __main__ | ============================================================
+2026-08-11 05:12:36 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 05:12:41 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 05:12:41 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 05:12:42 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 1, MR: 0)
+2026-08-11 05:12:42 | INFO    | engine.paper_trader | ENTER SHORT TATASTEEL.NS @ ₹189.21 | Qty: 1536 | SL: ₹190.49 | Target: ₹186.65 | Risk: ₹1966.0
+2026-08-11 05:12:42 | INFO    | __main__ | Discord notification sent
+2026-08-11 05:12:42 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 05:19:53 | INFO    | __main__ | ============================================================
+2026-08-11 05:19:53 | INFO    | __main__ | Intraday Scan | 2026-08-11 10:49 IST
+2026-08-11 05:19:53 | INFO    | __main__ | ============================================================
+2026-08-11 05:19:53 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 05:19:59 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 05:19:59 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 05:19:59 | INFO    | engine.paper_trader | TRAIL DIVISLAB.NS stop moved to breakeven + buffer: ₹8372.85
+2026-08-11 05:19:59 | INFO    | __main__ | Qualified Signals Found: 2 (ORB: 2, MR: 1)
+2026-08-11 05:19:59 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-11
+2026-08-11 05:19:59 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-11
+2026-08-11 05:19:59 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 05:34:23 | INFO    | __main__ | ============================================================
+2026-08-11 05:34:23 | INFO    | __main__ | Intraday Scan | 2026-08-11 11:04 IST
+2026-08-11 05:34:23 | INFO    | __main__ | ============================================================
+2026-08-11 05:34:23 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 05:34:34 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 05:34:34 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 05:34:34 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-11 05:34:34 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 05:42:16 | INFO    | __main__ | ============================================================
+2026-08-11 05:42:16 | INFO    | __main__ | Intraday Scan | 2026-08-11 11:12 IST
+2026-08-11 05:42:16 | INFO    | __main__ | ============================================================
+2026-08-11 05:42:16 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 05:42:24 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 05:42:24 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 05:42:25 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-11 05:42:25 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 05:53:24 | INFO    | __main__ | ============================================================
+2026-08-11 05:53:24 | INFO    | __main__ | Intraday Scan | 2026-08-11 11:23 IST
+2026-08-11 05:53:24 | INFO    | __main__ | ============================================================
+2026-08-11 05:53:24 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 05:53:30 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 05:53:30 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 05:53:30 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 0, MR: 1)
+2026-08-11 05:53:30 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-11
+2026-08-11 05:53:30 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 06:04:45 | INFO    | __main__ | ============================================================
+2026-08-11 06:04:45 | INFO    | __main__ | Intraday Scan | 2026-08-11 11:34 IST
+2026-08-11 06:04:45 | INFO    | __main__ | ============================================================
+2026-08-11 06:04:45 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 06:04:51 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 06:04:51 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 06:04:51 | INFO    | engine.paper_trader | TRAIL TATASTEEL.NS stop moved to breakeven + buffer: ₹189.08
+2026-08-11 06:04:51 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 0, MR: 1)
+2026-08-11 06:04:51 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-11
+2026-08-11 06:04:51 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 06:13:15 | INFO    | __main__ | ============================================================
+2026-08-11 06:13:15 | INFO    | __main__ | Intraday Scan | 2026-08-11 11:43 IST
+2026-08-11 06:13:15 | INFO    | __main__ | ============================================================
+2026-08-11 06:13:15 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 06:13:22 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 06:13:22 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 06:13:22 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 0, MR: 1)
+2026-08-11 06:13:22 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-11
+2026-08-11 06:13:22 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 06:33:41 | INFO    | __main__ | ============================================================
+2026-08-11 06:33:41 | INFO    | __main__ | Intraday Scan | 2026-08-11 12:03 IST
+2026-08-11 06:33:41 | INFO    | __main__ | ============================================================
+2026-08-11 06:33:41 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 06:33:49 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 06:33:49 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 06:33:49 | INFO    | __main__ | Qualified Signals Found: 2 (ORB: 0, MR: 2)
+2026-08-11 06:33:49 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-11
+2026-08-11 06:33:49 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-11
+2026-08-11 06:33:49 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 06:49:54 | INFO    | __main__ | ============================================================
+2026-08-11 06:49:54 | INFO    | __main__ | Intraday Scan | 2026-08-11 12:19 IST
+2026-08-11 06:49:54 | INFO    | __main__ | ============================================================
+2026-08-11 06:49:54 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 06:50:05 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 06:50:05 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 06:50:05 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 0, MR: 1)
+2026-08-11 06:50:05 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-11
+2026-08-11 06:50:05 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 07:33:02 | INFO    | __main__ | ============================================================
+2026-08-11 07:33:02 | INFO    | __main__ | Intraday Scan | 2026-08-11 13:03 IST
+2026-08-11 07:33:02 | INFO    | __main__ | ============================================================
+2026-08-11 07:33:02 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 07:33:08 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 07:33:08 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 07:33:08 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 0, MR: 1)
+2026-08-11 07:33:08 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-11
+2026-08-11 07:33:08 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 07:45:58 | INFO    | __main__ | ============================================================
+2026-08-11 07:45:58 | INFO    | __main__ | Intraday Scan | 2026-08-11 13:15 IST
+2026-08-11 07:45:58 | INFO    | __main__ | ============================================================
+2026-08-11 07:45:58 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 07:46:04 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 07:46:04 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 07:46:04 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-11 07:46:04 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 07:51:22 | INFO    | __main__ | ============================================================
+2026-08-11 07:51:22 | INFO    | __main__ | Intraday Scan | 2026-08-11 13:21 IST
+2026-08-11 07:51:22 | INFO    | __main__ | ============================================================
+2026-08-11 07:51:22 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 07:51:28 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 07:51:28 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 07:51:28 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-11 07:51:28 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 08:07:11 | INFO    | __main__ | ============================================================
+2026-08-11 08:07:11 | INFO    | __main__ | Intraday Scan | 2026-08-11 13:37 IST
+2026-08-11 08:07:11 | INFO    | __main__ | ============================================================
+2026-08-11 08:07:11 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 08:07:17 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 08:07:17 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 08:07:17 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-11 08:07:17 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 08:15:10 | INFO    | __main__ | ============================================================
+2026-08-11 08:15:10 | INFO    | __main__ | Intraday Scan | 2026-08-11 13:45 IST
+2026-08-11 08:15:10 | INFO    | __main__ | ============================================================
+2026-08-11 08:15:10 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 08:15:18 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 08:15:18 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 08:15:18 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-11 08:15:18 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 08:30:02 | INFO    | __main__ | ============================================================
+2026-08-11 08:30:02 | INFO    | __main__ | Intraday Scan | 2026-08-11 14:00 IST
+2026-08-11 08:30:02 | INFO    | __main__ | ============================================================
+2026-08-11 08:30:02 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 08:30:07 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 08:30:07 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 08:30:08 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 0, MR: 1)
+2026-08-11 08:30:08 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-11
+2026-08-11 08:30:08 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 08:38:16 | INFO    | __main__ | ============================================================
+2026-08-11 08:38:16 | INFO    | __main__ | Intraday Scan | 2026-08-11 14:08 IST
+2026-08-11 08:38:16 | INFO    | __main__ | ============================================================
+2026-08-11 08:38:16 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 08:38:28 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 08:38:28 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 08:38:28 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-11 08:38:28 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 09:03:27 | INFO    | __main__ | ============================================================
+2026-08-11 09:03:27 | INFO    | __main__ | Intraday Scan | 2026-08-11 14:33 IST
+2026-08-11 09:03:27 | INFO    | __main__ | ============================================================
+2026-08-11 09:03:27 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 09:03:35 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 09:03:35 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 09:03:36 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 0, MR: 1)
+2026-08-11 09:03:36 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-11
+2026-08-11 09:03:36 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 09:13:07 | INFO    | __main__ | ============================================================
+2026-08-11 09:13:07 | INFO    | __main__ | Intraday Scan | 2026-08-11 14:43 IST
+2026-08-11 09:13:07 | INFO    | __main__ | ============================================================
+2026-08-11 09:13:07 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 09:13:13 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 09:13:13 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 09:13:14 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-11 09:13:14 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 09:26:20 | INFO    | __main__ | ============================================================
+2026-08-11 09:26:20 | INFO    | __main__ | Intraday Scan | 2026-08-11 14:56 IST
+2026-08-11 09:26:20 | INFO    | __main__ | ============================================================
+2026-08-11 09:26:20 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 09:26:26 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 09:26:26 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 09:26:27 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-11 09:26:27 | INFO    | __main__ | Portfolio Summary: Cash=₹-66 | Open=2 | Total P&L=₹+0 | Win Rate=0.0%
+2026-08-11 09:43:54 | INFO    | __main__ | ============================================================
+2026-08-11 09:43:54 | INFO    | __main__ | Intraday Scan | 2026-08-11 15:13 IST
+2026-08-11 09:43:54 | INFO    | __main__ | ============================================================
+2026-08-11 09:43:54 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-11 09:44:00 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-11 09:44:00 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-11 09:44:00 | INFO    | engine.paper_trader | EXIT DIVISLAB.NS @ ₹8522.0 | P&L: ₹+3598 (target)
+2026-08-11 09:44:01 | INFO    | __main__ | Discord notification sent
+2026-08-11 09:44:01 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 0, MR: 1)
+2026-08-11 09:44:01 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-11
+2026-08-11 09:44:01 | INFO    | __main__ | Portfolio Summary: Cash=₹212,793 | Open=1 | Total P&L=₹+3,598 | Win Rate=50.0%
+2026-08-11 10:03:09 | INFO    | __main__ | ============================================================
+2026-08-11 10:03:09 | INFO    | __main__ | Intraday Scan | 2026-08-11 15:33 IST
+2026-08-11 10:03:09 | INFO    | __main__ | ============================================================
+2026-08-11 10:03:09 | INFO    | __main__ | Outside NSE trading hours
+2026-08-11 10:10:08 | INFO    | __main__ | ============================================================
+2026-08-11 10:10:08 | INFO    | __main__ | Intraday Scan | 2026-08-11 15:40 IST
+2026-08-11 10:10:08 | INFO    | __main__ | ============================================================
+2026-08-11 10:10:08 | INFO    | __main__ | Outside NSE trading hours
+2026-08-11 10:24:45 | INFO    | __main__ | ============================================================
+2026-08-11 10:24:45 | INFO    | __main__ | Intraday Scan | 2026-08-11 15:54 IST
+2026-08-11 10:24:45 | INFO    | __main__ | ============================================================
+2026-08-11 10:24:45 | INFO    | __main__ | Outside NSE trading hours
+2026-08-11 10:35:18 | INFO    | __main__ | ============================================================
+2026-08-11 10:35:18 | INFO    | __main__ | Intraday Scan | 2026-08-11 16:05 IST
+2026-08-11 10:35:18 | INFO    | __main__ | ============================================================
+2026-08-11 10:35:18 | INFO    | __main__ | Outside NSE trading hours
+2026-08-12 05:18:38 | INFO    | __main__ | ============================================================
+2026-08-12 05:18:38 | INFO    | __main__ | Intraday Scan | 2026-08-12 10:48 IST
+2026-08-12 05:18:38 | INFO    | __main__ | ============================================================
+2026-08-12 05:18:38 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 05:18:48 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 05:18:48 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 05:18:48 | INFO    | __main__ | Qualified Signals Found: 2 (ORB: 2, MR: 1)
+2026-08-12 05:18:48 | INFO    | engine.paper_trader | ENTER SHORT POWERGRID.NS @ ₹266.6 | Qty: 797 | SL: ₹268.35 | Target: ₹263.1 | Risk: ₹1395.0
+2026-08-12 05:18:48 | INFO    | engine.paper_trader | ENTER SHORT ADANIENT.NS @ ₹2959.6 | Qty: 1 | SL: ₹3008.4 | Target: ₹2862.0 | Risk: ₹49.0
+2026-08-12 05:18:49 | INFO    | __main__ | Discord notification sent
+2026-08-12 05:18:49 | INFO    | __main__ | Discord notification sent
+2026-08-12 05:18:49 | INFO    | __main__ | Portfolio Summary: Cash=₹-2,810 | Open=3 | Total P&L=₹+3,598 | Win Rate=25.0%
+2026-08-12 05:40:12 | INFO    | __main__ | ============================================================
+2026-08-12 05:40:12 | INFO    | __main__ | Intraday Scan | 2026-08-12 11:10 IST
+2026-08-12 05:40:12 | INFO    | __main__ | ============================================================
+2026-08-12 05:40:12 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 05:40:23 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 05:40:23 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 05:40:23 | INFO    | engine.paper_trader | EXIT TATASTEEL.NS @ ₹186.65 | P&L: ₹+3504 (target)
+2026-08-12 05:40:23 | INFO    | __main__ | Discord notification sent
+2026-08-12 05:40:23 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 0, MR: 1)
+2026-08-12 05:40:23 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-12
+2026-08-12 05:40:23 | INFO    | __main__ | Portfolio Summary: Cash=₹283,636 | Open=2 | Total P&L=₹+7,103 | Win Rate=50.0%
+2026-08-12 05:44:20 | INFO    | __main__ | ============================================================
+2026-08-12 05:44:20 | INFO    | __main__ | Intraday Scan | 2026-08-12 11:14 IST
+2026-08-12 05:44:20 | INFO    | __main__ | ============================================================
+2026-08-12 05:44:20 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 05:44:30 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 05:44:30 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 05:44:31 | INFO    | __main__ | Qualified Signals Found: 2 (ORB: 2, MR: 1)
+2026-08-12 05:44:31 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-12
+2026-08-12 05:44:31 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-12
+2026-08-12 05:44:31 | INFO    | __main__ | Portfolio Summary: Cash=₹283,636 | Open=2 | Total P&L=₹+7,103 | Win Rate=50.0%
+2026-08-12 05:53:52 | INFO    | __main__ | ============================================================
+2026-08-12 05:53:52 | INFO    | __main__ | Intraday Scan | 2026-08-12 11:23 IST
+2026-08-12 05:53:52 | INFO    | __main__ | ============================================================
+2026-08-12 05:53:52 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 05:54:02 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 05:54:02 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 05:54:02 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 1, MR: 0)
+2026-08-12 05:54:02 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-12
+2026-08-12 05:54:02 | INFO    | __main__ | Portfolio Summary: Cash=₹283,636 | Open=2 | Total P&L=₹+7,103 | Win Rate=50.0%
+2026-08-12 06:05:44 | INFO    | __main__ | ============================================================
+2026-08-12 06:05:44 | INFO    | __main__ | Intraday Scan | 2026-08-12 11:35 IST
+2026-08-12 06:05:44 | INFO    | __main__ | ============================================================
+2026-08-12 06:05:44 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 06:05:50 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 06:05:50 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 06:05:51 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-12 06:05:51 | INFO    | __main__ | Portfolio Summary: Cash=₹283,636 | Open=2 | Total P&L=₹+7,103 | Win Rate=50.0%
+2026-08-12 06:14:39 | INFO    | __main__ | ============================================================
+2026-08-12 06:14:39 | INFO    | __main__ | Intraday Scan | 2026-08-12 11:44 IST
+2026-08-12 06:14:39 | INFO    | __main__ | ============================================================
+2026-08-12 06:14:39 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 06:14:46 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 06:14:46 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 06:14:46 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-12 06:14:46 | INFO    | __main__ | Portfolio Summary: Cash=₹283,636 | Open=2 | Total P&L=₹+7,103 | Win Rate=50.0%
+2026-08-12 06:43:01 | INFO    | __main__ | ============================================================
+2026-08-12 06:43:01 | INFO    | __main__ | Intraday Scan | 2026-08-12 12:13 IST
+2026-08-12 06:43:01 | INFO    | __main__ | ============================================================
+2026-08-12 06:43:01 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 06:43:09 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 06:43:09 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 06:43:09 | INFO    | __main__ | Qualified Signals Found: 2 (ORB: 0, MR: 2)
+2026-08-12 06:43:09 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-12
+2026-08-12 06:43:09 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-12
+2026-08-12 06:43:09 | INFO    | __main__ | Portfolio Summary: Cash=₹283,636 | Open=2 | Total P&L=₹+7,103 | Win Rate=50.0%
+2026-08-12 06:52:13 | INFO    | __main__ | ============================================================
+2026-08-12 06:52:13 | INFO    | __main__ | Intraday Scan | 2026-08-12 12:22 IST
+2026-08-12 06:52:13 | INFO    | __main__ | ============================================================
+2026-08-12 06:52:13 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 06:52:19 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 06:52:19 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 06:52:20 | INFO    | __main__ | Qualified Signals Found: 2 (ORB: 0, MR: 2)
+2026-08-12 06:52:20 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-12
+2026-08-12 06:52:20 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-12
+2026-08-12 06:52:20 | INFO    | __main__ | Portfolio Summary: Cash=₹283,636 | Open=2 | Total P&L=₹+7,103 | Win Rate=50.0%
+2026-08-12 06:57:31 | INFO    | __main__ | ============================================================
+2026-08-12 06:57:31 | INFO    | __main__ | Intraday Scan | 2026-08-12 12:27 IST
+2026-08-12 06:57:31 | INFO    | __main__ | ============================================================
+2026-08-12 06:57:31 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 06:57:38 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 06:57:38 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 06:57:38 | INFO    | __main__ | Qualified Signals Found: 2 (ORB: 0, MR: 2)
+2026-08-12 06:57:38 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-12
+2026-08-12 06:57:38 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-12
+2026-08-12 06:57:38 | INFO    | __main__ | Portfolio Summary: Cash=₹283,636 | Open=2 | Total P&L=₹+7,103 | Win Rate=50.0%
+2026-08-12 07:09:36 | INFO    | __main__ | ============================================================
+2026-08-12 07:09:36 | INFO    | __main__ | Intraday Scan | 2026-08-12 12:39 IST
+2026-08-12 07:09:36 | INFO    | __main__ | ============================================================
+2026-08-12 07:09:36 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 07:09:42 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 07:09:42 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 07:09:42 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 0, MR: 1)
+2026-08-12 07:09:42 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-12
+2026-08-12 07:09:42 | INFO    | __main__ | Portfolio Summary: Cash=₹283,636 | Open=2 | Total P&L=₹+7,103 | Win Rate=50.0%
+2026-08-12 07:48:13 | INFO    | __main__ | ============================================================
+2026-08-12 07:48:13 | INFO    | __main__ | Intraday Scan | 2026-08-12 13:18 IST
+2026-08-12 07:48:13 | INFO    | __main__ | ============================================================
+2026-08-12 07:48:13 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 07:48:24 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 07:48:24 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 07:48:24 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-12 07:48:24 | INFO    | __main__ | Portfolio Summary: Cash=₹283,636 | Open=2 | Total P&L=₹+7,103 | Win Rate=50.0%
+2026-08-12 07:59:27 | INFO    | __main__ | ============================================================
+2026-08-12 07:59:27 | INFO    | __main__ | Intraday Scan | 2026-08-12 13:29 IST
+2026-08-12 07:59:27 | INFO    | __main__ | ============================================================
+2026-08-12 07:59:27 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 07:59:35 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 07:59:35 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 07:59:35 | INFO    | engine.paper_trader | EXIT POWERGRID.NS @ ₹268.35 | P&L: ₹-1724 (stop_loss)
+2026-08-12 07:59:36 | INFO    | __main__ | Discord notification sent
+2026-08-12 07:59:36 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-12 07:59:36 | INFO    | __main__ | Portfolio Summary: Cash=₹497,319 | Open=1 | Total P&L=₹+5,379 | Win Rate=50.0%
+2026-08-12 08:02:50 | INFO    | __main__ | ============================================================
+2026-08-12 08:02:50 | INFO    | __main__ | Intraday Scan | 2026-08-12 13:32 IST
+2026-08-12 08:02:50 | INFO    | __main__ | ============================================================
+2026-08-12 08:02:50 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 08:02:56 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 08:02:56 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 08:02:56 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-12 08:02:56 | INFO    | __main__ | Portfolio Summary: Cash=₹497,319 | Open=1 | Total P&L=₹+5,379 | Win Rate=50.0%
+2026-08-12 08:11:40 | INFO    | __main__ | ============================================================
+2026-08-12 08:11:40 | INFO    | __main__ | Intraday Scan | 2026-08-12 13:41 IST
+2026-08-12 08:11:40 | INFO    | __main__ | ============================================================
+2026-08-12 08:11:40 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 08:11:48 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 08:11:48 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 08:11:48 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-12 08:11:48 | INFO    | __main__ | Portfolio Summary: Cash=₹497,319 | Open=1 | Total P&L=₹+5,379 | Win Rate=50.0%
+2026-08-12 08:39:13 | INFO    | __main__ | ============================================================
+2026-08-12 08:39:13 | INFO    | __main__ | Intraday Scan | 2026-08-12 14:09 IST
+2026-08-12 08:39:13 | INFO    | __main__ | ============================================================
+2026-08-12 08:39:13 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 08:39:26 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 08:39:26 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 08:39:26 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-12 08:39:26 | INFO    | __main__ | Portfolio Summary: Cash=₹497,319 | Open=1 | Total P&L=₹+5,379 | Win Rate=50.0%
+2026-08-12 08:46:51 | INFO    | __main__ | ============================================================
+2026-08-12 08:46:51 | INFO    | __main__ | Intraday Scan | 2026-08-12 14:16 IST
+2026-08-12 08:46:51 | INFO    | __main__ | ============================================================
+2026-08-12 08:46:51 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 08:46:58 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 08:46:58 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 08:46:58 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-12 08:46:58 | INFO    | __main__ | Portfolio Summary: Cash=₹497,319 | Open=1 | Total P&L=₹+5,379 | Win Rate=50.0%
+2026-08-12 08:52:26 | INFO    | __main__ | ============================================================
+2026-08-12 08:52:26 | INFO    | __main__ | Intraday Scan | 2026-08-12 14:22 IST
+2026-08-12 08:52:26 | INFO    | __main__ | ============================================================
+2026-08-12 08:52:26 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 08:52:32 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 08:52:32 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 08:52:33 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-12 08:52:33 | INFO    | __main__ | Portfolio Summary: Cash=₹497,319 | Open=1 | Total P&L=₹+5,379 | Win Rate=50.0%
+2026-08-12 09:16:13 | INFO    | __main__ | ============================================================
+2026-08-12 09:16:13 | INFO    | __main__ | Intraday Scan | 2026-08-12 14:46 IST
+2026-08-12 09:16:13 | INFO    | __main__ | ============================================================
+2026-08-12 09:16:13 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 09:16:24 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 09:16:24 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 09:16:24 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-12 09:16:24 | INFO    | __main__ | Portfolio Summary: Cash=₹497,319 | Open=1 | Total P&L=₹+5,379 | Win Rate=50.0%
+2026-08-12 09:31:16 | INFO    | __main__ | ============================================================
+2026-08-12 09:31:16 | INFO    | __main__ | Intraday Scan | 2026-08-12 15:01 IST
+2026-08-12 09:31:16 | INFO    | __main__ | ============================================================
+2026-08-12 09:31:16 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 09:31:25 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 09:31:25 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 09:31:25 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-12 09:31:25 | INFO    | __main__ | Portfolio Summary: Cash=₹497,319 | Open=1 | Total P&L=₹+5,379 | Win Rate=50.0%
+2026-08-12 09:35:29 | INFO    | __main__ | ============================================================
+2026-08-12 09:35:29 | INFO    | __main__ | Intraday Scan | 2026-08-12 15:05 IST
+2026-08-12 09:35:29 | INFO    | __main__ | ============================================================
+2026-08-12 09:35:29 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 09:35:35 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 09:35:35 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 09:35:36 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-12 09:35:36 | INFO    | __main__ | Portfolio Summary: Cash=₹497,319 | Open=1 | Total P&L=₹+5,379 | Win Rate=50.0%
+2026-08-12 09:47:13 | INFO    | __main__ | ============================================================
+2026-08-12 09:47:13 | INFO    | __main__ | Intraday Scan | 2026-08-12 15:17 IST
+2026-08-12 09:47:13 | INFO    | __main__ | ============================================================
+2026-08-12 09:47:13 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-12 09:47:24 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-12 09:47:24 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-12 09:47:24 | INFO    | __main__ | Square-off time reached (3:15 PM) - Generating EOD Summary
+2026-08-12 09:47:24 | INFO    | __main__ | Discord notification sent
+2026-08-12 09:47:24 | INFO    | __main__ | EOD Summary: {'date': '2026-08-12', 'today_trades': 2, 'today_pnl': 1780.4, 'today_winners': 1, 'total_pnl': 5378.86, 'win_rate_pct': 50.0, 'return_pct': 1.08}
+2026-08-12 10:10:49 | INFO    | __main__ | ============================================================
+2026-08-12 10:10:49 | INFO    | __main__ | Intraday Scan | 2026-08-12 15:40 IST
+2026-08-12 10:10:49 | INFO    | __main__ | ============================================================
+2026-08-12 10:10:49 | INFO    | __main__ | Outside NSE trading hours
+2026-08-12 10:19:37 | INFO    | __main__ | ============================================================
+2026-08-12 10:19:37 | INFO    | __main__ | Intraday Scan | 2026-08-12 15:49 IST
+2026-08-12 10:19:37 | INFO    | __main__ | ============================================================
+2026-08-12 10:19:37 | INFO    | __main__ | Outside NSE trading hours
+2026-08-12 10:35:02 | INFO    | __main__ | ============================================================
+2026-08-12 10:35:02 | INFO    | __main__ | Intraday Scan | 2026-08-12 16:05 IST
+2026-08-12 10:35:02 | INFO    | __main__ | ============================================================
+2026-08-12 10:35:02 | INFO    | __main__ | Outside NSE trading hours
+2026-08-12 10:43:18 | INFO    | __main__ | ============================================================
+2026-08-12 10:43:18 | INFO    | __main__ | Intraday Scan | 2026-08-12 16:13 IST
+2026-08-12 10:43:18 | INFO    | __main__ | ============================================================
+2026-08-12 10:43:18 | INFO    | __main__ | Outside NSE trading hours
+2026-08-13 05:23:06 | INFO    | __main__ | ============================================================
+2026-08-13 05:23:06 | INFO    | __main__ | Intraday Scan | 2026-08-13 10:53 IST
+2026-08-13 05:23:06 | INFO    | __main__ | ============================================================
+2026-08-13 05:23:06 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 05:23:17 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 05:23:17 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 05:23:17 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 1, MR: 0)
+2026-08-13 05:23:17 | INFO    | engine.paper_trader | ENTER SHORT DIVISLAB.NS @ ₹8436.5 | Qty: 27 | SL: ₹8509.0 | Target: ₹8291.5 | Risk: ₹1958.0
+2026-08-13 05:23:18 | INFO    | __main__ | Discord notification sent
+2026-08-13 05:23:18 | INFO    | __main__ | Portfolio Summary: Cash=₹269,388 | Open=2 | Total P&L=₹+5,379 | Win Rate=40.0%
+2026-08-13 05:42:40 | INFO    | __main__ | ============================================================
+2026-08-13 05:42:40 | INFO    | __main__ | Intraday Scan | 2026-08-13 11:12 IST
+2026-08-13 05:42:40 | INFO    | __main__ | ============================================================
+2026-08-13 05:42:40 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 05:42:46 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 05:42:46 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 05:42:46 | INFO    | __main__ | Qualified Signals Found: 1 (ORB: 1, MR: 0)
+2026-08-13 05:42:46 | INFO    | engine.paper_trader | ENTER SHORT POWERGRID.NS @ ₹266.25 | Qty: 851 | SL: ₹268.6 | Target: ₹261.55 | Risk: ₹2000.0
+2026-08-13 05:42:46 | INFO    | __main__ | Discord notification sent
+2026-08-13 05:42:46 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 05:47:02 | INFO    | __main__ | ============================================================
+2026-08-13 05:47:02 | INFO    | __main__ | Intraday Scan | 2026-08-13 11:17 IST
+2026-08-13 05:47:02 | INFO    | __main__ | ============================================================
+2026-08-13 05:47:02 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 05:47:08 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 05:47:08 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 05:47:09 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 05:47:09 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 05:54:19 | INFO    | __main__ | ============================================================
+2026-08-13 05:54:19 | INFO    | __main__ | Intraday Scan | 2026-08-13 11:24 IST
+2026-08-13 05:54:19 | INFO    | __main__ | ============================================================
+2026-08-13 05:54:19 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 05:54:29 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 05:54:29 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 05:54:29 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 05:54:29 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 06:07:05 | INFO    | __main__ | ============================================================
+2026-08-13 06:07:05 | INFO    | __main__ | Intraday Scan | 2026-08-13 11:37 IST
+2026-08-13 06:07:05 | INFO    | __main__ | ============================================================
+2026-08-13 06:07:05 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 06:07:15 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 06:07:15 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 06:07:15 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 06:07:15 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 06:16:43 | INFO    | __main__ | ============================================================
+2026-08-13 06:16:43 | INFO    | __main__ | Intraday Scan | 2026-08-13 11:46 IST
+2026-08-13 06:16:43 | INFO    | __main__ | ============================================================
+2026-08-13 06:16:43 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 06:16:54 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 06:16:54 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 06:16:54 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 06:16:54 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 06:45:24 | INFO    | __main__ | ============================================================
+2026-08-13 06:45:24 | INFO    | __main__ | Intraday Scan | 2026-08-13 12:15 IST
+2026-08-13 06:45:24 | INFO    | __main__ | ============================================================
+2026-08-13 06:45:24 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 06:45:33 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 06:45:33 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 06:45:33 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 06:45:33 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 06:55:09 | INFO    | __main__ | ============================================================
+2026-08-13 06:55:09 | INFO    | __main__ | Intraday Scan | 2026-08-13 12:25 IST
+2026-08-13 06:55:09 | INFO    | __main__ | ============================================================
+2026-08-13 06:55:09 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 06:55:16 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 06:55:16 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 06:55:16 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 06:55:16 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 07:02:10 | INFO    | __main__ | ============================================================
+2026-08-13 07:02:10 | INFO    | __main__ | Intraday Scan | 2026-08-13 12:32 IST
+2026-08-13 07:02:10 | INFO    | __main__ | ============================================================
+2026-08-13 07:02:10 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 07:02:16 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 07:02:16 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 07:02:16 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 07:02:16 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 07:13:23 | INFO    | __main__ | ============================================================
+2026-08-13 07:13:23 | INFO    | __main__ | Intraday Scan | 2026-08-13 12:43 IST
+2026-08-13 07:13:23 | INFO    | __main__ | ============================================================
+2026-08-13 07:13:23 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 07:13:31 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 07:13:31 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 07:13:31 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 07:13:31 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 07:49:41 | INFO    | __main__ | ============================================================
+2026-08-13 07:49:41 | INFO    | __main__ | Intraday Scan | 2026-08-13 13:19 IST
+2026-08-13 07:49:41 | INFO    | __main__ | ============================================================
+2026-08-13 07:49:41 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 07:49:47 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 07:49:47 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 07:49:47 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 07:49:47 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 08:00:49 | INFO    | __main__ | ============================================================
+2026-08-13 08:00:49 | INFO    | __main__ | Intraday Scan | 2026-08-13 13:30 IST
+2026-08-13 08:00:49 | INFO    | __main__ | ============================================================
+2026-08-13 08:00:49 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 08:00:57 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 08:00:57 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 08:00:57 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 08:00:57 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 08:04:11 | INFO    | __main__ | ============================================================
+2026-08-13 08:04:11 | INFO    | __main__ | Intraday Scan | 2026-08-13 13:34 IST
+2026-08-13 08:04:11 | INFO    | __main__ | ============================================================
+2026-08-13 08:04:11 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 08:04:17 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 08:04:17 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 08:04:18 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 08:04:18 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 08:15:35 | INFO    | __main__ | ============================================================
+2026-08-13 08:15:35 | INFO    | __main__ | Intraday Scan | 2026-08-13 13:45 IST
+2026-08-13 08:15:35 | INFO    | __main__ | ============================================================
+2026-08-13 08:15:35 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 08:15:45 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 08:15:45 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 08:15:45 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 08:15:45 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 08:43:18 | INFO    | __main__ | ============================================================
+2026-08-13 08:43:18 | INFO    | __main__ | Intraday Scan | 2026-08-13 14:13 IST
+2026-08-13 08:43:18 | INFO    | __main__ | ============================================================
+2026-08-13 08:43:18 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 08:43:24 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 08:43:24 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 08:43:24 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 08:43:24 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 08:50:43 | INFO    | __main__ | ============================================================
+2026-08-13 08:50:43 | INFO    | __main__ | Intraday Scan | 2026-08-13 14:20 IST
+2026-08-13 08:50:43 | INFO    | __main__ | ============================================================
+2026-08-13 08:50:43 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 08:50:49 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 08:50:49 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 08:50:49 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 08:50:49 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 08:55:20 | INFO    | __main__ | ============================================================
+2026-08-13 08:55:20 | INFO    | __main__ | Intraday Scan | 2026-08-13 14:25 IST
+2026-08-13 08:55:20 | INFO    | __main__ | ============================================================
+2026-08-13 08:55:20 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 08:55:28 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 08:55:28 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 08:55:28 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 08:55:28 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 09:17:14 | INFO    | __main__ | ============================================================
+2026-08-13 09:17:14 | INFO    | __main__ | Intraday Scan | 2026-08-13 14:47 IST
+2026-08-13 09:17:14 | INFO    | __main__ | ============================================================
+2026-08-13 09:17:14 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 09:17:24 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 09:17:24 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 09:17:24 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 09:17:24 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 09:32:39 | INFO    | __main__ | ============================================================
+2026-08-13 09:32:39 | INFO    | __main__ | Intraday Scan | 2026-08-13 15:02 IST
+2026-08-13 09:32:39 | INFO    | __main__ | ============================================================
+2026-08-13 09:32:39 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 09:32:46 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 09:32:46 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 09:32:47 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 09:32:47 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 09:37:20 | INFO    | __main__ | ============================================================
+2026-08-13 09:37:20 | INFO    | __main__ | Intraday Scan | 2026-08-13 15:07 IST
+2026-08-13 09:37:20 | INFO    | __main__ | ============================================================
+2026-08-13 09:37:20 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 09:37:26 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 09:37:26 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 09:37:26 | INFO    | __main__ | Qualified Signals Found: 0 (ORB: 0, MR: 0)
+2026-08-13 09:37:26 | INFO    | __main__ | Portfolio Summary: Cash=₹42,664 | Open=3 | Total P&L=₹+5,379 | Win Rate=33.3%
+2026-08-13 09:47:36 | INFO    | __main__ | ============================================================
+2026-08-13 09:47:36 | INFO    | __main__ | Intraday Scan | 2026-08-13 15:17 IST
+2026-08-13 09:47:36 | INFO    | __main__ | ============================================================
+2026-08-13 09:47:36 | INFO    | __main__ | Fetching 15m data for 24 stocks...
+2026-08-13 09:47:42 | INFO    | data.fetcher | Fetched 15min data for 24/24 tickers
+2026-08-13 09:47:42 | INFO    | __main__ | Received valid intraday data for 24 tickers
+2026-08-13 09:47:42 | INFO    | __main__ | Square-off time reached (3:15 PM) - Generating EOD Summary
+2026-08-13 09:47:42 | INFO    | __main__ | EOD Summary: {'date': '2026-08-13', 'today_trades': 0, 'today_pnl': 0, 'today_winners': 0, 'total_pnl': 5378.86, 'win_rate_pct': 33.3, 'return_pct': 1.08}
+2026-08-13 10:11:45 | INFO    | __main__ | ============================================================
+2026-08-13 10:11:45 | INFO    | __main__ | Intraday Scan | 2026-08-13 15:41 IST
+2026-08-13 10:11:45 | INFO    | __main__ | ============================================================
+2026-08-13 10:11:45 | INFO    | __main__ | Outside NSE trading hours
+2026-08-13 10:21:29 | INFO    | __main__ | ============================================================
+2026-08-13 10:21:29 | INFO    | __main__ | Intraday Scan | 2026-08-13 15:51 IST
+2026-08-13 10:21:29 | INFO    | __main__ | ============================================================
+2026-08-13 10:21:29 | INFO    | __main__ | Outside NSE trading hours
+2026-08-13 10:36:03 | INFO    | __main__ | ============================================================
+2026-08-13 10:36:03 | INFO    | __main__ | Intraday Scan | 2026-08-13 16:06 IST
+2026-08-13 10:36:03 | INFO    | __main__ | ============================================================
+2026-08-13 10:36:03 | INFO    | __main__ | Outside NSE trading hours
+2026-08-13 10:45:20 | INFO    | __main__ | ============================================================
+2026-08-13 10:45:20 | INFO    | __main__ | Intraday Scan | 2026-08-13 16:15 IST
+2026-08-13 10:45:20 | INFO    | __main__ | ============================================================
+2026-08-13 10:45:20 | INFO    | __main__ | Outside NSE trading hours

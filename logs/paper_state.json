@@ -1,0 +1,92 @@
+{
+  "cash": 501574.3873156024,
+  "positions": {},
+  "trade_history": [
+    {
+      "ticker": "DIVISLAB.NS",
+      "direction": "LONG",
+      "entry_price": 8365.0,
+      "exit_price": 8522.0,
+      "qty": 25,
+      "pnl": 3598.46,
+      "pnl_pct": 1.72,
+      "reason": "target",
+      "strategy": "ORB-30-CPR",
+      "entry_time": "2026-08-11 04:53:43.247853",
+      "exit_time": "2026-08-11 09:44:00.936389"
+    },
+    {
+      "ticker": "TATASTEEL.NS",
+      "direction": "SHORT",
+      "entry_price": 189.21,
+      "exit_price": 186.65,
+      "qty": 1536,
+      "pnl": 3504.13,
+      "pnl_pct": 1.21,
+      "reason": "target",
+      "strategy": "ORB-30-CPR",
+      "entry_time": "2026-08-11 05:12:42.161100",
+      "exit_time": "2026-08-12 05:40:23.101781"
+    },
+    {
+      "ticker": "POWERGRID.NS",
+      "direction": "SHORT",
+      "entry_price": 266.6,
+      "exit_price": 268.35,
+      "qty": 797,
+      "pnl": -1723.73,
+      "pnl_pct": -0.81,
+      "reason": "stop_loss",
+      "strategy": "ORB-30-CPR",
+      "entry_time": "2026-08-12 05:18:48.850776",
+      "exit_time": "2026-08-12 07:59:35.745467"
+    },
+    {
+      "ticker": "ADANIENT.NS",
+      "direction": "SHORT",
+      "entry_price": 2959.6,
+      "exit_price": 2964.9,
+      "qty": 1,
+      "pnl": -56.41,
+      "pnl_pct": -1.91,
+      "reason": "square_off",
+      "strategy": "ORB-30-CPR",
+      "entry_time": "2026-08-12 05:18:48.851288",
+      "exit_time": "2026-08-13 20:04:37.431235"
+    },
+    {
+      "ticker": "DIVISLAB.NS",
+      "direction": "SHORT",
+      "entry_price": 8436.5,
+      "exit_price": 8500.0,
+      "qty": 27,
+      "pnl": -2063.95,
+      "pnl_pct": -0.91,
+      "reason": "square_off",
+      "strategy": "ORB-30-CPR",
+      "entry_time": "2026-08-13 05:23:17.725125",
+      "exit_time": "2026-08-13 20:04:37.432019"
+    },
+    {
+      "ticker": "POWERGRID.NS",
+      "direction": "SHORT",
+      "entry_price": 266.25,
+      "exit_price": 266.6,
+      "qty": 851,
+      "pnl": -644.6,
+      "pnl_pct": -0.28,
+      "reason": "square_off",
+      "strategy": "ORB-30-CPR",
+      "entry_time": "2026-08-13 05:42:46.435029",
+      "exit_time": "2026-08-13 20:04:37.432323"
+    }
+  ],
+  "daily_trades_count": {
+    "2026-08-11": 2,
+    "2026-08-12": 2,
+    "2026-08-13": 2
+  },
+  "total_pnl": 2613.904151886206,
+  "total_trades": 6,
+  "winning_trades": 2
+}
