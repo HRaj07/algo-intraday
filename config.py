@@ -3,13 +3,25 @@ Intraday Algo Trading System - Production Configuration
 Calibrated with 30-min Institutional ORB + Central Pivot Range (CPR) + VWAP + ADX + Trailing Stop
 """
 
-# Highly liquid NSE F&O Universe (Top liquid stocks)
+# Expanded Liquid NSE F&O Universe (40 stocks → more VWAP MR signal opportunities)
 INTRADAY_UNIVERSE = [
-    "RELIANCE.NS", "TCS.NS", "HDFCBANK.NS", "ICICIBANK.NS", "INFY.NS",
-    "SBIN.NS", "AXISBANK.NS", "KOTAKBANK.NS", "LT.NS", "BHARTIARTL.NS",
-    "BAJFINANCE.NS", "WIPRO.NS", "HCLTECH.NS", "TITAN.NS", "SUNPHARMA.NS",
-    "MARUTI.NS", "ADANIENT.NS", "NTPC.NS", "POWERGRID.NS", "TATASTEEL.NS",
-    "M&M.NS", "ASIANPAINT.NS", "ULTRACEMCO.NS", "DIVISLAB.NS"
+    # Banking & Finance (high volatility, frequent RSI extremes)
+    "HDFCBANK.NS", "ICICIBANK.NS", "SBIN.NS", "AXISBANK.NS", "KOTAKBANK.NS",
+    "BAJFINANCE.NS", "BAJAJFINSV.NS", "INDUSINDBK.NS", "SHRIRAMFIN.NS",
+    # IT (strong trending + mean-reversion pockets)
+    "TCS.NS", "INFY.NS", "WIPRO.NS", "HCLTECH.NS", "TECHM.NS",
+    # Large-cap diversified
+    "RELIANCE.NS", "LT.NS", "BHARTIARTL.NS", "ADANIENT.NS", "TATAMOTORS.NS",
+    # Pharma (high RSI swings)
+    "SUNPHARMA.NS", "DIVISLAB.NS", "CIPLA.NS", "DRREDDY.NS",
+    # Auto
+    "MARUTI.NS", "HEROMOTOCO.NS", "BAJAJ-AUTO.NS", "EICHERMOT.NS", "M&M.NS",
+    # Energy & Infra
+    "NTPC.NS", "POWERGRID.NS", "ONGC.NS", "BPCL.NS",
+    # Metals & Materials
+    "TATASTEEL.NS", "HINDALCO.NS", "JSWSTEEL.NS",
+    # Consumer
+    "TITAN.NS", "ASIANPAINT.NS", "ULTRACEMCO.NS", "ITC.NS",
 ]
 
 SYSTEM = {

@@ -42,11 +42,24 @@ class ExtremeVWAPMeanReversionStrategy:
         return ranked[:SYSTEM["max_daily_trades"]]
 
     def _compute_signal(self, ticker: str, df: pd.DataFrame, now: datetime) -> Optional[Dict]:
-        today = now.date()
+        import pytz
+        ist = pytz.timezone("Asia/Kolkata")
+        now_ist = datetime.now(ist)
+        today = now_ist.date()
         today_df = df[df.index.date == today].copy()
 
-        # Need at least 2 bars in the day
-        if len(today_df) < 2:
+        # Need at least 4 bars in the day (skip chaotic first 2 bars 9:15–9:45)
+        if len(today_df) < 4:
+            return None
+
+        # Session filter: skip first 30 min (9:15–9:45) and lunch chop (11:30–1:30)
+        # Research: best VWAP MR signals fire 10:00 AM–11:30 AM and 1:30 PM–2:30 PM
+        last_bar_time = today_df.index[-1]
+        hour = last_bar_time.hour
+        minute = last_bar_time.minute
+        in_lunch_chop = (hour == 11 and minute >= 30) or (hour == 12) or (hour == 13 and minute < 30)
+        in_opening_chaos = (hour == 9) or (hour == 10 and minute < 0)
+        if in_lunch_chop or in_opening_chaos:
             return None
 
         # Intraday VWAP

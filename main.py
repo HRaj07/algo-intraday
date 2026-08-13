@@ -31,7 +31,6 @@ logger = logging.getLogger(__name__)
 
 from config import INTRADAY_UNIVERSE, SYSTEM
 from data.fetcher import IntradayFetcher
-from strategies.orb import ORB30Strategy
 from engine.paper_trader import PaperTrader
 
 
@@ -131,15 +130,14 @@ def run_intraday_scan():
         _save_daily_summary(trader)
         return
 
-    # 3. Scan for high-conviction signals (ORB-30 and Extreme VWAP Mean Reversion)
+    # 3. Scan for VWAP Mean Reversion signals ONLY
+    # ORB was removed — 730-day backtest showed ORB PF=0.73 (consistently unprofitable)
+    # VWAP MR (RSI<25/>75) = 57.3% WR, PF 1.42, +₹58k over 730 days — the only proven edge
     from strategies.vwap_mr import ExtremeVWAPMeanReversionStrategy
-    orb_strat = ORB30Strategy()
     mr_strat = ExtremeVWAPMeanReversionStrategy()
-
-    signals_orb = orb_strat.compute_signals(all_data)
-    signals_mr = mr_strat.compute_signals(all_data)
-    signals = sorted(signals_orb + signals_mr, key=lambda x: x.get("score", 0), reverse=True)[:SYSTEM["max_daily_trades"]]
-    logger.info(f"Qualified Signals Found: {len(signals)} (ORB: {len(signals_orb)}, MR: {len(signals_mr)})")
+    signals = mr_strat.compute_signals(all_data)
+    signals = sorted(signals, key=lambda x: x.get("score", 0), reverse=True)[:SYSTEM["max_daily_trades"]]
+    logger.info(f"VWAP MR Signals Found: {len(signals)}")
 
     # 4. Enter trades with strict risk management
     new_entries = []
