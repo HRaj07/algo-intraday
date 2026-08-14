@@ -1,19 +1,19 @@
 {
-  "cash": 216942.86134180235,
+  "cash": 218396.43171912234,
   "positions": {
     "BHARTIARTL.NS": {
       "ticker": "BHARTIARTL.NS",
       "direction": "SHORT",
-      "entry_price": 1989.2,
-      "qty": 143,
-      "stop_loss": 2003.12,
-      "initial_stop_loss": 2003.12,
-      "target": 1965.95,
-      "risk_per_share": 13.92,
+      "entry_price": 2004.0,
+      "qty": 142,
+      "stop_loss": 2018.03,
+      "initial_stop_loss": 2018.03,
+      "target": 1985.67,
+      "risk_per_share": 14.03,
       "trailed_to_be": false,
       "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-08-14 05:40:04.431370",
-      "entry_cost": 175.93
+      "entry_time": "2026-08-14 08:37:18.641522",
+      "entry_cost": 175.99
     }
   },
   "trade_history": [
@@ -94,15 +94,28 @@
       "strategy": "ORB-30-CPR",
       "entry_time": "2026-08-13 05:42:46.435029",
       "exit_time": "2026-08-13 20:04:37.432323"
+    },
+    {
+      "ticker": "BHARTIARTL.NS",
+      "direction": "SHORT",
+      "entry_price": 1989.2,
+      "exit_price": 2003.12,
+      "qty": 143,
+      "pnl": -2415.09,
+      "pnl_pct": -0.85,
+      "reason": "stop_loss",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-14 05:40:04.431370",
+      "exit_time": "2026-08-14 08:37:18.233532"
     }
   ],
   "daily_trades_count": {
     "2026-08-11": 2,
     "2026-08-12": 2,
     "2026-08-13": 2,
-    "2026-08-14": 1
+    "2026-08-14": 2
   },
-  "total_pnl": 2613.904151886206,
-  "total_trades": 7,
+  "total_pnl": 198.81069320622782,
+  "total_trades": 8,
   "winning_trades": 2
 }
