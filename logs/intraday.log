@@ -707,3 +707,18 @@
 2026-08-14 05:20:16 | INFO    | __main__ | Received valid intraday data for 38 tickers
 2026-08-14 05:20:16 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-08-14 05:20:16 | INFO    | __main__ | Portfolio Summary: Cash=₹501,574 | Open=0 | Total P&L=₹+2,614 | Win Rate=33.3%
+2026-08-14 05:39:53 | INFO    | __main__ | ============================================================
+2026-08-14 05:39:53 | INFO    | __main__ | Intraday Scan | 2026-08-14 11:09 IST
+2026-08-14 05:39:53 | INFO    | __main__ | ============================================================
+2026-08-14 05:39:53 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-14 05:39:59 | ERROR   | yfinance | HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: TATAMOTORS.NS"}}}
+2026-08-14 05:39:59 | ERROR   | yfinance | $TATAMOTORS.NS: No data found, symbol may be delisted
+2026-08-14 05:39:59 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-14 05:39:59 | ERROR   | yfinance | ['TATAMOTORS.NS']: No data found, symbol may be delisted
+2026-08-14 05:40:04 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-14 05:40:04 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-14 05:40:04 | INFO    | __main__ | VWAP MR Signals Found: 1
+2026-08-14 05:40:04 | INFO    | engine.paper_trader | ENTER SHORT BHARTIARTL.NS @ ₹1989.2 | Qty: 143 | SL: ₹2003.12 | Target: ₹1965.95 | Risk: ₹1991.0
+2026-08-14 05:40:04 | INFO    | __main__ | Discord notification sent
+2026-08-14 05:40:04 | INFO    | __main__ | Portfolio Summary: Cash=₹216,943 | Open=1 | Total P&L=₹+2,614 | Win Rate=28.6%
