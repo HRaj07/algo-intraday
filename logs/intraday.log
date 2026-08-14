@@ -895,3 +895,17 @@
 2026-08-14 08:37:18 | INFO    | engine.paper_trader | ENTER SHORT BHARTIARTL.NS @ ₹2004.0 | Qty: 142 | SL: ₹2018.03 | Target: ₹1985.67 | Risk: ₹1992.0
 2026-08-14 08:37:18 | INFO    | __main__ | Discord notification sent
 2026-08-14 08:37:18 | INFO    | __main__ | Portfolio Summary: Cash=₹218,396 | Open=1 | Total P&L=₹+199 | Win Rate=25.0%
+2026-08-14 08:43:46 | INFO    | __main__ | ============================================================
+2026-08-14 08:43:46 | INFO    | __main__ | Intraday Scan | 2026-08-14 14:13 IST
+2026-08-14 08:43:46 | INFO    | __main__ | ============================================================
+2026-08-14 08:43:46 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-14 08:43:53 | ERROR   | yfinance | HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: TATAMOTORS.NS"}}}
+2026-08-14 08:43:54 | ERROR   | yfinance | $TATAMOTORS.NS: No data found, symbol may be delisted
+2026-08-14 08:43:54 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-14 08:43:54 | ERROR   | yfinance | ['TATAMOTORS.NS']: No data found, symbol may be delisted
+2026-08-14 08:44:01 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-14 08:44:01 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-14 08:44:01 | INFO    | __main__ | VWAP MR Signals Found: 1
+2026-08-14 08:44:01 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-14
+2026-08-14 08:44:01 | INFO    | __main__ | Portfolio Summary: Cash=₹218,396 | Open=1 | Total P&L=₹+199 | Win Rate=25.0%
