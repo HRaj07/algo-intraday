@@ -975,3 +975,7 @@
 2026-08-14 09:44:23 | INFO    | engine.paper_trader | TRAIL BHARTIARTL.NS stop moved to breakeven + buffer: ₹2002.6
 2026-08-14 09:44:23 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-08-14 09:44:23 | INFO    | __main__ | Portfolio Summary: Cash=₹218,396 | Open=1 | Total P&L=₹+199 | Win Rate=25.0%
+2026-08-14 10:07:13 | INFO    | __main__ | ============================================================
+2026-08-14 10:07:13 | INFO    | __main__ | Intraday Scan | 2026-08-14 15:37 IST
+2026-08-14 10:07:13 | INFO    | __main__ | ============================================================
+2026-08-14 10:07:13 | INFO    | __main__ | Outside NSE trading hours
