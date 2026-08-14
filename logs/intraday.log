@@ -852,3 +852,16 @@
 2026-08-14 07:57:19 | INFO    | __main__ | Received valid intraday data for 38 tickers
 2026-08-14 07:57:19 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-08-14 07:57:19 | INFO    | __main__ | Portfolio Summary: Cash=₹216,943 | Open=1 | Total P&L=₹+2,614 | Win Rate=28.6%
+2026-08-14 08:00:39 | INFO    | __main__ | ============================================================
+2026-08-14 08:00:39 | INFO    | __main__ | Intraday Scan | 2026-08-14 13:30 IST
+2026-08-14 08:00:39 | INFO    | __main__ | ============================================================
+2026-08-14 08:00:39 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-14 08:00:44 | ERROR   | yfinance | HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: TATAMOTORS.NS"}}}
+2026-08-14 08:00:44 | ERROR   | yfinance | $TATAMOTORS.NS: No data found, symbol may be delisted
+2026-08-14 08:00:44 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-14 08:00:44 | ERROR   | yfinance | ['TATAMOTORS.NS']: No data found, symbol may be delisted
+2026-08-14 08:00:49 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-14 08:00:49 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-14 08:00:49 | INFO    | __main__ | VWAP MR Signals Found: 0
+2026-08-14 08:00:49 | INFO    | __main__ | Portfolio Summary: Cash=₹216,943 | Open=1 | Total P&L=₹+2,614 | Win Rate=28.6%
