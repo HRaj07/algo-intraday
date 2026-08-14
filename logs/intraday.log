@@ -961,3 +961,17 @@
 2026-08-14 09:32:14 | INFO    | __main__ | Received valid intraday data for 38 tickers
 2026-08-14 09:32:14 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-08-14 09:32:14 | INFO    | __main__ | Portfolio Summary: Cash=₹218,396 | Open=1 | Total P&L=₹+199 | Win Rate=25.0%
+2026-08-14 09:44:13 | INFO    | __main__ | ============================================================
+2026-08-14 09:44:13 | INFO    | __main__ | Intraday Scan | 2026-08-14 15:14 IST
+2026-08-14 09:44:13 | INFO    | __main__ | ============================================================
+2026-08-14 09:44:13 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-14 09:44:18 | ERROR   | yfinance | HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: TATAMOTORS.NS"}}}
+2026-08-14 09:44:18 | ERROR   | yfinance | $TATAMOTORS.NS: No data found, symbol may be delisted
+2026-08-14 09:44:18 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-14 09:44:18 | ERROR   | yfinance | ['TATAMOTORS.NS']: No data found, symbol may be delisted
+2026-08-14 09:44:23 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-14 09:44:23 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-14 09:44:23 | INFO    | engine.paper_trader | TRAIL BHARTIARTL.NS stop moved to breakeven + buffer: ₹2002.6
+2026-08-14 09:44:23 | INFO    | __main__ | VWAP MR Signals Found: 0
+2026-08-14 09:44:23 | INFO    | __main__ | Portfolio Summary: Cash=₹218,396 | Open=1 | Total P&L=₹+199 | Win Rate=25.0%
