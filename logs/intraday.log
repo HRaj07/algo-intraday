@@ -1294,3 +1294,7 @@
 2026-08-17 09:56:53 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
 2026-08-17 09:56:53 | INFO    | __main__ | Discord notification sent
 2026-08-17 09:56:53 | INFO    | __main__ | EOD Summary: {'date': '2026-08-17', 'today_trades': 1, 'today_pnl': 2181.79, 'today_winners': 1, 'total_pnl': 2380.6, 'win_rate_pct': 37.5, 'return_pct': 0.48}
+2026-08-17 10:05:34 | INFO    | __main__ | ============================================================
+2026-08-17 10:05:34 | INFO    | __main__ | Intraday Scan | 2026-08-17 15:35 IST
+2026-08-17 10:05:34 | INFO    | __main__ | ============================================================
+2026-08-17 10:05:34 | INFO    | __main__ | Outside NSE trading hours
