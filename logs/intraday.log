@@ -1266,3 +1266,17 @@
 2026-08-17 09:24:19 | INFO    | __main__ | Received valid intraday data for 38 tickers
 2026-08-17 09:24:19 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-08-17 09:24:19 | INFO    | __main__ | Portfolio Summary: Cash=₹500,116 | Open=0 | Total P&L=₹+2,381 | Win Rate=37.5%
+2026-08-17 09:46:41 | INFO    | __main__ | ============================================================
+2026-08-17 09:46:41 | INFO    | __main__ | Intraday Scan | 2026-08-17 15:16 IST
+2026-08-17 09:46:41 | INFO    | __main__ | ============================================================
+2026-08-17 09:46:41 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-17 09:46:46 | ERROR   | yfinance | HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: TATAMOTORS.NS"}}}
+2026-08-17 09:46:46 | ERROR   | yfinance | $TATAMOTORS.NS: No data found, symbol may be delisted
+2026-08-17 09:46:46 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-17 09:46:46 | ERROR   | yfinance | ['TATAMOTORS.NS']: No data found, symbol may be delisted
+2026-08-17 09:46:50 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-17 09:46:50 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-17 09:46:50 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
+2026-08-17 09:46:51 | INFO    | __main__ | Discord notification sent
+2026-08-17 09:46:51 | INFO    | __main__ | EOD Summary: {'date': '2026-08-17', 'today_trades': 1, 'today_pnl': 2181.79, 'today_winners': 1, 'total_pnl': 2380.6, 'win_rate_pct': 37.5, 'return_pct': 0.48}
