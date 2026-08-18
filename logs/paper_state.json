@@ -1,5 +1,5 @@
 {
-  "cash": 501574.3873156024,
+  "cash": 502034.3939648273,
   "positions": {},
   "trade_history": [
     {
@@ -79,14 +79,55 @@
       "strategy": "ORB-30-CPR",
       "entry_time": "2026-08-13 05:42:46.435029",
       "exit_time": "2026-08-13 20:04:37.432323"
+    },
+    {
+      "ticker": "BHARTIARTL.NS",
+      "direction": "SHORT",
+      "entry_price": 1989.2,
+      "exit_price": 2003.12,
+      "qty": 143,
+      "pnl": -2415.09,
+      "pnl_pct": -0.85,
+      "reason": "stop_loss",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-14 05:40:04.431370",
+      "exit_time": "2026-08-14 08:37:18.233532"
+    },
+    {
+      "ticker": "BHARTIARTL.NS",
+      "direction": "SHORT",
+      "entry_price": 2004.0,
+      "exit_price": 1985.67,
+      "qty": 142,
+      "pnl": 2181.79,
+      "pnl_pct": 0.77,
+      "reason": "target",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-14 08:37:18.641522",
+      "exit_time": "2026-08-17 04:25:28.190810"
+    },
+    {
+      "ticker": "SHRIRAMFIN.NS",
+      "direction": "LONG",
+      "entry_price": 1101.9,
+      "exit_price": 1110.95,
+      "qty": 259,
+      "pnl": 1917.9,
+      "pnl_pct": 0.67,
+      "reason": "target",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-18 05:29:24.711074",
+      "exit_time": "2026-08-18 07:01:21.443594"
     }
   ],
   "daily_trades_count": {
     "2026-08-11": 2,
     "2026-08-12": 2,
-    "2026-08-13": 2
+    "2026-08-13": 2,
+    "2026-08-14": 2,
+    "2026-08-18": 1
   },
-  "total_pnl": 2613.904151886206,
-  "total_trades": 6,
-  "winning_trades": 2
+  "total_pnl": 4298.5004084612065,
+  "total_trades": 9,
+  "winning_trades": 4
 }
