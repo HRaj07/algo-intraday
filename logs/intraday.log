@@ -1434,3 +1434,19 @@
 2026-08-18 06:27:02 | INFO    | __main__ | Received valid intraday data for 38 tickers
 2026-08-18 06:27:02 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-08-18 06:27:02 | INFO    | __main__ | Portfolio Summary: Cash=₹214,548 | Open=1 | Total P&L=₹+2,381 | Win Rate=33.3%
+2026-08-18 07:01:08 | INFO    | __main__ | ============================================================
+2026-08-18 07:01:08 | INFO    | __main__ | Intraday Scan | 2026-08-18 12:31 IST
+2026-08-18 07:01:08 | INFO    | __main__ | ============================================================
+2026-08-18 07:01:08 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-18 07:01:13 | ERROR   | yfinance | HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: TATAMOTORS.NS"}}}
+2026-08-18 07:01:14 | ERROR   | yfinance | $TATAMOTORS.NS: No data found, symbol may be delisted
+2026-08-18 07:01:14 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-18 07:01:14 | ERROR   | yfinance | ['TATAMOTORS.NS']: No data found, symbol may be delisted
+2026-08-18 07:01:21 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-18 07:01:21 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-18 07:01:21 | INFO    | engine.paper_trader | TRAIL SHRIRAMFIN.NS stop moved to breakeven + buffer: ₹1102.67
+2026-08-18 07:01:21 | INFO    | engine.paper_trader | EXIT SHRIRAMFIN.NS @ ₹1110.95 | P&L: ₹+1918 (target)
+2026-08-18 07:01:21 | INFO    | __main__ | Discord notification sent
+2026-08-18 07:01:21 | INFO    | __main__ | VWAP MR Signals Found: 0
+2026-08-18 07:01:21 | INFO    | __main__ | Portfolio Summary: Cash=₹502,034 | Open=0 | Total P&L=₹+4,298 | Win Rate=44.4%
