@@ -1591,3 +1591,18 @@
 2026-08-18 09:38:10 | INFO    | __main__ | Received valid intraday data for 38 tickers
 2026-08-18 09:38:10 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-08-18 09:38:10 | INFO    | __main__ | Portfolio Summary: Cash=₹216,727 | Open=1 | Total P&L=₹+4,298 | Win Rate=40.0%
+2026-08-18 09:48:04 | INFO    | __main__ | ============================================================
+2026-08-18 09:48:04 | INFO    | __main__ | Intraday Scan | 2026-08-18 15:18 IST
+2026-08-18 09:48:04 | INFO    | __main__ | ============================================================
+2026-08-18 09:48:04 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-18 09:48:13 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-18 09:48:13 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-18 09:48:13 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-18 09:48:20 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-18 09:48:20 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-18 09:48:20 | INFO    | engine.paper_trader | EXIT ITC.NS @ ₹270.20001220703125 | P&L: ₹+316 (square_off)
+2026-08-18 09:48:21 | INFO    | __main__ | Discord notification sent
+2026-08-18 09:48:21 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
+2026-08-18 09:48:21 | INFO    | __main__ | Discord notification sent
+2026-08-18 09:48:21 | INFO    | __main__ | EOD Summary: {'date': '2026-08-18', 'today_trades': 2, 'today_pnl': np.float64(2234.07), 'today_winners': 2, 'total_pnl': np.float64(4614.67), 'win_rate_pct': 50.0, 'return_pct': np.float64(0.92)}
