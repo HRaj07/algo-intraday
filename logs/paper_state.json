@@ -1,6 +1,21 @@
 {
-  "cash": 502034.3939648273,
-  "positions": {},
+  "cash": 216727.10631432728,
+  "positions": {
+    "ITC.NS": {
+      "ticker": "ITC.NS",
+      "direction": "LONG",
+      "entry_price": 269.5,
+      "qty": 1058,
+      "stop_loss": 267.61,
+      "initial_stop_loss": 267.61,
+      "target": 271.4,
+      "risk_per_share": 1.89,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-18 08:52:41.928520",
+      "entry_cost": 176.29
+    }
+  },
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -125,9 +140,9 @@
     "2026-08-12": 2,
     "2026-08-13": 2,
     "2026-08-14": 2,
-    "2026-08-18": 1
+    "2026-08-18": 2
   },
   "total_pnl": 4298.5004084612065,
-  "total_trades": 9,
+  "total_trades": 10,
   "winning_trades": 4
 }
