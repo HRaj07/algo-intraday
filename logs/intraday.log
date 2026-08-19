@@ -1697,3 +1697,15 @@
 2026-08-19 05:30:13 | INFO    | engine.paper_trader | ENTER LONG BPCL.NS @ ₹306.15 | Qty: 934 | SL: ₹304.01 | Target: ₹308.42 | Risk: ₹1999.0
 2026-08-19 05:30:13 | INFO    | __main__ | Discord notification sent
 2026-08-19 05:30:13 | INFO    | __main__ | Portfolio Summary: Cash=₹216,230 | Open=1 | Total P&L=₹+4,615 | Win Rate=45.5%
+2026-08-19 05:46:56 | INFO    | __main__ | ============================================================
+2026-08-19 05:46:56 | INFO    | __main__ | Intraday Scan | 2026-08-19 11:16 IST
+2026-08-19 05:46:56 | INFO    | __main__ | ============================================================
+2026-08-19 05:46:56 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-19 05:47:05 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-19 05:47:05 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-19 05:47:05 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-19 05:47:14 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-19 05:47:14 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-19 05:47:14 | INFO    | __main__ | VWAP MR Signals Found: 0
+2026-08-19 05:47:14 | INFO    | __main__ | Portfolio Summary: Cash=₹216,230 | Open=1 | Total P&L=₹+4,615 | Win Rate=45.5%
