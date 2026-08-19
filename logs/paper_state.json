@@ -1,5 +1,5 @@
 {
-  "cash": 216229.74401187163,
+  "cash": 6.531083421607036,
   "positions": {
     "BPCL.NS": {
       "ticker": "BPCL.NS",
@@ -14,6 +14,20 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-08-19 05:30:13.203419",
       "entry_cost": 176.72
+    },
+    "ITC.NS": {
+      "ticker": "ITC.NS",
+      "direction": "LONG",
+      "entry_price": 267.1,
+      "qty": 809,
+      "stop_loss": 265.23,
+      "initial_stop_loss": 265.23,
+      "target": 268.72,
+      "risk_per_share": 1.87,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-19 08:03:30.833179",
+      "entry_cost": 139.31
     }
   },
   "trade_history": [
@@ -154,9 +168,9 @@
     "2026-08-13": 2,
     "2026-08-14": 2,
     "2026-08-18": 2,
-    "2026-08-19": 1
+    "2026-08-19": 2
   },
   "total_pnl": 4614.671171555506,
-  "total_trades": 11,
+  "total_trades": 12,
   "winning_trades": 5
 }
