@@ -1819,3 +1819,16 @@
 2026-08-19 08:03:30 | INFO    | engine.paper_trader | ENTER LONG ITC.NS @ ₹267.1 | Qty: 809 | SL: ₹265.23 | Target: ₹268.72 | Risk: ₹1513.0
 2026-08-19 08:03:31 | INFO    | __main__ | Discord notification sent
 2026-08-19 08:03:31 | INFO    | __main__ | Portfolio Summary: Cash=₹7 | Open=2 | Total P&L=₹+4,615 | Win Rate=41.7%
+2026-08-19 08:16:23 | INFO    | __main__ | ============================================================
+2026-08-19 08:16:23 | INFO    | __main__ | Intraday Scan | 2026-08-19 13:46 IST
+2026-08-19 08:16:23 | INFO    | __main__ | ============================================================
+2026-08-19 08:16:23 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-19 08:16:31 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-19 08:16:31 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-19 08:16:31 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-19 08:16:38 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-19 08:16:38 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-19 08:16:38 | INFO    | __main__ | VWAP MR Signals Found: 1
+2026-08-19 08:16:38 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-19
+2026-08-19 08:16:38 | INFO    | __main__ | Portfolio Summary: Cash=₹7 | Open=2 | Total P&L=₹+4,615 | Win Rate=41.7%
