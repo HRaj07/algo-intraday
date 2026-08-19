@@ -1,6 +1,21 @@
 {
-  "cash": 502350.5670774216,
-  "positions": {},
+  "cash": 216229.74401187163,
+  "positions": {
+    "BPCL.NS": {
+      "ticker": "BPCL.NS",
+      "direction": "LONG",
+      "entry_price": 306.15,
+      "qty": 934,
+      "stop_loss": 304.01,
+      "initial_stop_loss": 304.01,
+      "target": 308.42,
+      "risk_per_share": 2.14,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-19 05:30:13.203419",
+      "entry_cost": 176.72
+    }
+  },
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -138,9 +153,10 @@
     "2026-08-12": 2,
     "2026-08-13": 2,
     "2026-08-14": 2,
-    "2026-08-18": 2
+    "2026-08-18": 2,
+    "2026-08-19": 1
   },
   "total_pnl": 4614.671171555506,
-  "total_trades": 10,
+  "total_trades": 11,
   "winning_trades": 5
 }
