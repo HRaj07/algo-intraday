@@ -1,35 +1,6 @@
 {
-  "cash": 6.531083421607036,
-  "positions": {
-    "BPCL.NS": {
-      "ticker": "BPCL.NS",
-      "direction": "LONG",
-      "entry_price": 306.15,
-      "qty": 934,
-      "stop_loss": 304.01,
-      "initial_stop_loss": 304.01,
-      "target": 308.42,
-      "risk_per_share": 2.14,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-08-19 05:30:13.203419",
-      "entry_cost": 176.72
-    },
-    "ITC.NS": {
-      "ticker": "ITC.NS",
-      "direction": "LONG",
-      "entry_price": 267.1,
-      "qty": 809,
-      "stop_loss": 265.23,
-      "initial_stop_loss": 265.23,
-      "target": 268.72,
-      "risk_per_share": 1.87,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-08-19 08:03:30.833179",
-      "entry_cost": 139.31
-    }
-  },
+  "cash": 500768.8522960986,
+  "positions": {},
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -160,6 +131,32 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-08-18 08:52:41.928520",
       "exit_time": "2026-08-18 09:48:20.830674"
+    },
+    {
+      "ticker": "BPCL.NS",
+      "direction": "LONG",
+      "entry_price": 306.15,
+      "exit_price": 305.7,
+      "qty": 934,
+      "pnl": -844.89,
+      "pnl_pct": -0.3,
+      "reason": "square_off",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-19 05:30:13.203419",
+      "exit_time": "2026-08-19 09:48:53.852289"
+    },
+    {
+      "ticker": "ITC.NS",
+      "direction": "LONG",
+      "entry_price": 267.1,
+      "exit_price": 266.6,
+      "qty": 809,
+      "pnl": -736.82,
+      "pnl_pct": -0.34,
+      "reason": "square_off",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-19 08:03:30.833179",
+      "exit_time": "2026-08-19 09:48:53.852914"
     }
   ],
   "daily_trades_count": {
@@ -170,7 +167,7 @@
     "2026-08-18": 2,
     "2026-08-19": 2
   },
-  "total_pnl": 4614.671171555506,
+  "total_pnl": 3032.9623842324645,
   "total_trades": 12,
   "winning_trades": 5
 }
