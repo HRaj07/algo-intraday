@@ -2219,3 +2219,16 @@
 2026-08-20 09:49:58 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
 2026-08-20 09:49:58 | INFO    | __main__ | Discord notification sent
 2026-08-20 09:49:58 | INFO    | __main__ | EOD Summary: {'date': '2026-08-20', 'today_trades': 2, 'today_pnl': np.float64(2858.92), 'today_winners': 2, 'total_pnl': np.float64(5891.88), 'win_rate_pct': 50.0, 'return_pct': np.float64(1.18)}
+2026-08-20 09:59:38 | INFO    | __main__ | ============================================================
+2026-08-20 09:59:38 | INFO    | __main__ | Intraday Scan | 2026-08-20 15:29 IST
+2026-08-20 09:59:38 | INFO    | __main__ | ============================================================
+2026-08-20 09:59:38 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-20 09:59:44 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-20 09:59:44 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-20 09:59:44 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-20 09:59:49 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-20 09:59:49 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-20 09:59:49 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
+2026-08-20 09:59:49 | INFO    | __main__ | Discord notification sent
+2026-08-20 09:59:49 | INFO    | __main__ | EOD Summary: {'date': '2026-08-20', 'today_trades': 2, 'today_pnl': 2858.92, 'today_winners': 2, 'total_pnl': 5891.88, 'win_rate_pct': 50.0, 'return_pct': 1.18}
