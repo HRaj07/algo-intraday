@@ -1,20 +1,6 @@
 {
-  "cash": 660.612930398609,
+  "cash": 283255.5315684036,
   "positions": {
-    "JSWSTEEL.NS": {
-      "ticker": "JSWSTEEL.NS",
-      "direction": "SHORT",
-      "entry_price": 1304.6,
-      "qty": 219,
-      "stop_loss": 1303.69,
-      "initial_stop_loss": 1313.73,
-      "target": 1291.51,
-      "risk_per_share": 9.13,
-      "trailed_to_be": true,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-08-20 05:03:36.369908",
-      "entry_cost": 176.6
-    },
     "M&M.NS": {
       "ticker": "M&M.NS",
       "direction": "SHORT",
@@ -186,6 +172,19 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-08-19 08:03:30.833179",
       "exit_time": "2026-08-19 09:48:53.852914"
+    },
+    {
+      "ticker": "JSWSTEEL.NS",
+      "direction": "SHORT",
+      "entry_price": 1304.6,
+      "exit_price": 1291.51,
+      "qty": 219,
+      "pnl": 2444.34,
+      "pnl_pct": 0.86,
+      "reason": "target",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-20 05:03:36.369908",
+      "exit_time": "2026-08-20 08:19:07.025036"
     }
   ],
   "daily_trades_count": {
@@ -197,7 +196,7 @@
     "2026-08-19": 2,
     "2026-08-20": 2
   },
-  "total_pnl": 3032.9623842324645,
+  "total_pnl": 5477.301022237447,
   "total_trades": 14,
-  "winning_trades": 5
+  "winning_trades": 6
 }
