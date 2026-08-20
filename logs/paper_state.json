@@ -1,21 +1,6 @@
 {
-  "cash": 283255.5315684036,
-  "positions": {
-    "M&M.NS": {
-      "ticker": "M&M.NS",
-      "direction": "SHORT",
-      "entry_price": 3453.0,
-      "qty": 62,
-      "stop_loss": 3477.17,
-      "initial_stop_loss": 3477.17,
-      "target": 3427.88,
-      "risk_per_share": 24.17,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-08-20 07:23:27.462306",
-      "entry_cost": 138.24
-    }
-  },
+  "cash": 496406.3514274036,
+  "positions": {},
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -185,6 +170,19 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-08-20 05:03:36.369908",
       "exit_time": "2026-08-20 08:19:07.025036"
+    },
+    {
+      "ticker": "M&M.NS",
+      "direction": "SHORT",
+      "entry_price": 3453.0,
+      "exit_price": 3441.0,
+      "qty": 62,
+      "pnl": 414.58,
+      "pnl_pct": 0.19,
+      "reason": "square_off",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-20 07:23:27.462306",
+      "exit_time": "2026-08-20 09:49:57.585304"
     }
   ],
   "daily_trades_count": {
@@ -196,7 +194,7 @@
     "2026-08-19": 2,
     "2026-08-20": 2
   },
-  "total_pnl": 5477.301022237447,
+  "total_pnl": 5891.880881237447,
   "total_trades": 14,
-  "winning_trades": 6
+  "winning_trades": 7
 }
