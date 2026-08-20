@@ -1,6 +1,21 @@
 {
-  "cash": 500768.8522960986,
-  "positions": {},
+  "cash": 214884.85598339862,
+  "positions": {
+    "JSWSTEEL.NS": {
+      "ticker": "JSWSTEEL.NS",
+      "direction": "SHORT",
+      "entry_price": 1304.6,
+      "qty": 219,
+      "stop_loss": 1313.73,
+      "initial_stop_loss": 1313.73,
+      "target": 1291.51,
+      "risk_per_share": 9.13,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-20 05:03:36.369908",
+      "entry_cost": 176.6
+    }
+  },
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -165,9 +180,10 @@
     "2026-08-13": 2,
     "2026-08-14": 2,
     "2026-08-18": 2,
-    "2026-08-19": 2
+    "2026-08-19": 2,
+    "2026-08-20": 1
   },
   "total_pnl": 3032.9623842324645,
-  "total_trades": 12,
+  "total_trades": 13,
   "winning_trades": 5
 }
