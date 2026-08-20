@@ -1980,3 +1980,15 @@
 2026-08-20 05:03:36 | INFO    | engine.paper_trader | ENTER SHORT JSWSTEEL.NS @ ₹1304.6 | Qty: 219 | SL: ₹1313.73 | Target: ₹1291.51 | Risk: ₹1999.0
 2026-08-20 05:03:36 | INFO    | __main__ | Discord notification sent
 2026-08-20 05:03:36 | INFO    | __main__ | Portfolio Summary: Cash=₹214,885 | Open=1 | Total P&L=₹+3,033 | Win Rate=38.5%
+2026-08-20 05:16:32 | INFO    | __main__ | ============================================================
+2026-08-20 05:16:32 | INFO    | __main__ | Intraday Scan | 2026-08-20 10:46 IST
+2026-08-20 05:16:32 | INFO    | __main__ | ============================================================
+2026-08-20 05:16:32 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-20 05:16:37 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-20 05:16:37 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-20 05:16:37 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-20 05:16:43 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-20 05:16:43 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-20 05:16:43 | INFO    | __main__ | VWAP MR Signals Found: 1
+2026-08-20 05:16:43 | INFO    | __main__ | Portfolio Summary: Cash=₹214,885 | Open=1 | Total P&L=₹+3,033 | Win Rate=38.5%
