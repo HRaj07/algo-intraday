@@ -1,6 +1,21 @@
 {
-  "cash": 496406.3514274036,
-  "positions": {},
+  "cash": 210569.78049740364,
+  "positions": {
+    "POWERGRID.NS": {
+      "ticker": "POWERGRID.NS",
+      "direction": "SHORT",
+      "entry_price": 270.0,
+      "qty": 1058,
+      "stop_loss": 271.89,
+      "initial_stop_loss": 271.89,
+      "target": 266.83,
+      "risk_per_share": 1.89,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-21 05:04:01.340568",
+      "entry_cost": 176.57
+    }
+  },
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -192,9 +207,10 @@
     "2026-08-14": 2,
     "2026-08-18": 2,
     "2026-08-19": 2,
-    "2026-08-20": 2
+    "2026-08-20": 2,
+    "2026-08-21": 1
   },
   "total_pnl": 5891.880881237447,
-  "total_trades": 14,
+  "total_trades": 15,
   "winning_trades": 7
 }
