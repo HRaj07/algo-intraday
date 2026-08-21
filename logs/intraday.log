@@ -2298,3 +2298,19 @@
 2026-08-21 05:17:53 | INFO    | __main__ | Received valid intraday data for 38 tickers
 2026-08-21 05:17:53 | INFO    | __main__ | VWAP MR Signals Found: 1
 2026-08-21 05:17:53 | INFO    | __main__ | Portfolio Summary: Cash=₹210,570 | Open=1 | Total P&L=₹+5,892 | Win Rate=46.7%
+2026-08-21 05:32:17 | INFO    | __main__ | ============================================================
+2026-08-21 05:32:17 | INFO    | __main__ | Intraday Scan | 2026-08-21 11:02 IST
+2026-08-21 05:32:17 | INFO    | __main__ | ============================================================
+2026-08-21 05:32:17 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-21 05:32:22 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-21 05:32:22 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-21 05:32:22 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-21 05:32:28 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-21 05:32:28 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-21 05:32:28 | INFO    | engine.paper_trader | EXIT POWERGRID.NS @ ₹271.89 | P&L: ₹-2426 (stop_loss)
+2026-08-21 05:32:28 | INFO    | __main__ | Discord notification sent
+2026-08-21 05:32:28 | INFO    | __main__ | VWAP MR Signals Found: 1
+2026-08-21 05:32:28 | INFO    | engine.paper_trader | ENTER SHORT POWERGRID.NS @ ₹275.3 | Qty: 1036 | SL: ₹277.23 | Target: ₹270.28 | Risk: ₹1999.0
+2026-08-21 05:32:28 | INFO    | __main__ | Discord notification sent
+2026-08-21 05:32:28 | INFO    | __main__ | Portfolio Summary: Cash=₹212,593 | Open=1 | Total P&L=₹+3,466 | Win Rate=43.8%
