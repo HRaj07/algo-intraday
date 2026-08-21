@@ -1,21 +1,6 @@
 {
-  "cash": 212592.71348249365,
-  "positions": {
-    "POWERGRID.NS": {
-      "ticker": "POWERGRID.NS",
-      "direction": "SHORT",
-      "entry_price": 275.3,
-      "qty": 1036,
-      "stop_loss": 275.11,
-      "initial_stop_loss": 277.23,
-      "target": 270.28,
-      "risk_per_share": 1.93,
-      "trailed_to_be": true,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-08-21 05:32:28.600115",
-      "entry_cost": 176.33
-    }
-  },
+  "cash": 494553.83403701836,
+  "positions": {},
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -211,6 +196,19 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-08-21 05:04:01.340568",
       "exit_time": "2026-08-21 05:32:28.212489"
+    },
+    {
+      "ticker": "POWERGRID.NS",
+      "direction": "SHORT",
+      "entry_price": 275.3,
+      "exit_price": 272.4,
+      "qty": 1036,
+      "pnl": 2582.8,
+      "pnl_pct": 0.91,
+      "reason": "square_off",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-21 05:32:28.600115",
+      "exit_time": "2026-08-21 09:51:50.690142"
     }
   ],
   "daily_trades_count": {
@@ -223,7 +221,7 @@
     "2026-08-20": 2,
     "2026-08-21": 2
   },
-  "total_pnl": 3466.134249727462,
+  "total_pnl": 6048.937450736568,
   "total_trades": 16,
-  "winning_trades": 7
+  "winning_trades": 8
 }
