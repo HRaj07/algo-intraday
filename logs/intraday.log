@@ -2623,3 +2623,18 @@
 2026-08-24 05:54:19 | INFO    | __main__ | Received valid intraday data for 38 tickers
 2026-08-24 05:54:19 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-08-24 05:54:19 | INFO    | __main__ | Portfolio Summary: Cash=₹933 | Open=2 | Total P&L=₹+6,049 | Win Rate=44.4%
+2026-08-24 06:01:39 | INFO    | __main__ | ============================================================
+2026-08-24 06:01:39 | INFO    | __main__ | Intraday Scan | 2026-08-24 11:31 IST
+2026-08-24 06:01:39 | INFO    | __main__ | ============================================================
+2026-08-24 06:01:39 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-24 06:01:45 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-24 06:01:45 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-24 06:01:45 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-24 06:01:50 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-24 06:01:50 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-24 06:01:50 | INFO    | engine.paper_trader | EXIT JSWSTEEL.NS @ ₹1305.62 | P&L: ₹+956 (target)
+2026-08-24 06:01:51 | INFO    | __main__ | Discord notification sent
+2026-08-24 06:01:51 | INFO    | __main__ | VWAP MR Signals Found: 1
+2026-08-24 06:01:51 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-24
+2026-08-24 06:01:51 | INFO    | __main__ | Portfolio Summary: Cash=₹207,035 | Open=1 | Total P&L=₹+7,005 | Win Rate=50.0%
