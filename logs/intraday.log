@@ -2585,3 +2585,17 @@
 2026-08-24 05:10:59 | INFO    | engine.paper_trader | ENTER SHORT TATASTEEL.NS @ ₹185.79 | Qty: 1538 | SL: ₹187.09 | Target: ₹184.47 | Risk: ₹1999.0
 2026-08-24 05:11:00 | INFO    | __main__ | Discord notification sent
 2026-08-24 05:11:00 | INFO    | __main__ | Portfolio Summary: Cash=₹208,632 | Open=1 | Total P&L=₹+6,049 | Win Rate=47.1%
+2026-08-24 05:25:22 | INFO    | __main__ | ============================================================
+2026-08-24 05:25:22 | INFO    | __main__ | Intraday Scan | 2026-08-24 10:55 IST
+2026-08-24 05:25:22 | INFO    | __main__ | ============================================================
+2026-08-24 05:25:22 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-24 05:25:31 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-24 05:25:31 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-24 05:25:31 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-24 05:25:40 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-24 05:25:40 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-24 05:25:40 | INFO    | __main__ | VWAP MR Signals Found: 1
+2026-08-24 05:25:40 | INFO    | engine.paper_trader | ENTER SHORT JSWSTEEL.NS @ ₹1313.7 | Qty: 158 | SL: ₹1322.9 | Target: ₹1305.62 | Risk: ₹1454.0
+2026-08-24 05:25:40 | INFO    | __main__ | Discord notification sent
+2026-08-24 05:25:40 | INFO    | __main__ | Portfolio Summary: Cash=₹933 | Open=2 | Total P&L=₹+6,049 | Win Rate=44.4%
