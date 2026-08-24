@@ -2638,3 +2638,15 @@
 2026-08-24 06:01:51 | INFO    | __main__ | VWAP MR Signals Found: 1
 2026-08-24 06:01:51 | INFO    | engine.paper_trader | Daily trade limit (2) reached for 2026-08-24
 2026-08-24 06:01:51 | INFO    | __main__ | Portfolio Summary: Cash=₹207,035 | Open=1 | Total P&L=₹+7,005 | Win Rate=50.0%
+2026-08-24 06:23:14 | INFO    | __main__ | ============================================================
+2026-08-24 06:23:14 | INFO    | __main__ | Intraday Scan | 2026-08-24 11:53 IST
+2026-08-24 06:23:14 | INFO    | __main__ | ============================================================
+2026-08-24 06:23:14 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-24 06:23:20 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-24 06:23:20 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-24 06:23:20 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-24 06:23:25 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-24 06:23:25 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-24 06:23:25 | INFO    | __main__ | VWAP MR Signals Found: 0
+2026-08-24 06:23:25 | INFO    | __main__ | Portfolio Summary: Cash=₹207,035 | Open=1 | Total P&L=₹+7,005 | Win Rate=50.0%
