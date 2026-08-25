@@ -1,20 +1,6 @@
 {
-  "cash": 1091.465406704956,
+  "cash": 287770.73326633,
   "positions": {
-    "ADANIENT.NS": {
-      "ticker": "ADANIENT.NS",
-      "direction": "SHORT",
-      "entry_price": 3063.8,
-      "qty": 93,
-      "stop_loss": 3085.25,
-      "initial_stop_loss": 3085.25,
-      "target": 3016.13,
-      "risk_per_share": 21.45,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-08-25 08:49:25.913734",
-      "entry_cost": 176.18
-    },
     "SHRIRAMFIN.NS": {
       "ticker": "SHRIRAMFIN.NS",
       "direction": "SHORT",
@@ -264,6 +250,19 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-08-24 05:10:59.914845",
       "exit_time": "2026-08-24 09:52:26.423039"
+    },
+    {
+      "ticker": "ADANIENT.NS",
+      "direction": "SHORT",
+      "entry_price": 3063.8,
+      "exit_price": 3085.25,
+      "qty": 93,
+      "pnl": -2420.01,
+      "pnl_pct": -0.85,
+      "reason": "stop_loss",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-25 08:49:25.913734",
+      "exit_time": "2026-08-25 09:20:20.193117"
     }
   ],
   "daily_trades_count": {
@@ -278,7 +277,7 @@
     "2026-08-24": 2,
     "2026-08-25": 2
   },
-  "total_pnl": 7319.339190298853,
+  "total_pnl": 4899.327049923871,
   "total_trades": 20,
   "winning_trades": 10
 }
