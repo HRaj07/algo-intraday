@@ -3060,3 +3060,15 @@
 2026-08-25 08:58:51 | INFO    | engine.paper_trader | ENTER SHORT SHRIRAMFIN.NS @ ₹1128.9 | Qty: 182 | SL: ₹1136.8 | Target: ₹1120.19 | Risk: ₹1438.0
 2026-08-25 08:58:51 | INFO    | __main__ | Discord notification sent
 2026-08-25 08:58:51 | INFO    | __main__ | Portfolio Summary: Cash=₹1,091 | Open=2 | Total P&L=₹+7,319 | Win Rate=50.0%
+2026-08-25 09:04:48 | INFO    | __main__ | ============================================================
+2026-08-25 09:04:48 | INFO    | __main__ | Intraday Scan | 2026-08-25 14:34 IST
+2026-08-25 09:04:48 | INFO    | __main__ | ============================================================
+2026-08-25 09:04:48 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-25 09:04:54 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-25 09:04:54 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-25 09:04:54 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-25 09:04:59 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-25 09:04:59 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-25 09:04:59 | INFO    | __main__ | VWAP MR Signals Found: 0
+2026-08-25 09:04:59 | INFO    | __main__ | Portfolio Summary: Cash=₹1,091 | Open=2 | Total P&L=₹+7,319 | Win Rate=50.0%
