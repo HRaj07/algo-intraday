@@ -1,6 +1,21 @@
 {
-  "cash": 491794.470965305,
-  "positions": {},
+  "cash": 206684.88912960497,
+  "positions": {
+    "ADANIENT.NS": {
+      "ticker": "ADANIENT.NS",
+      "direction": "SHORT",
+      "entry_price": 3063.8,
+      "qty": 93,
+      "stop_loss": 3085.25,
+      "initial_stop_loss": 3085.25,
+      "target": 3016.13,
+      "risk_per_share": 21.45,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-25 08:49:25.913734",
+      "entry_cost": 176.18
+    }
+  },
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -246,9 +261,10 @@
     "2026-08-19": 2,
     "2026-08-20": 2,
     "2026-08-21": 2,
-    "2026-08-24": 2
+    "2026-08-24": 2,
+    "2026-08-25": 1
   },
   "total_pnl": 7319.339190298853,
-  "total_trades": 18,
+  "total_trades": 19,
   "winning_trades": 10
 }
