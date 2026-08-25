@@ -3046,3 +3046,17 @@
 2026-08-25 08:49:25 | INFO    | engine.paper_trader | ENTER SHORT ADANIENT.NS @ ₹3063.8 | Qty: 93 | SL: ₹3085.25 | Target: ₹3016.13 | Risk: ₹1995.0
 2026-08-25 08:49:26 | INFO    | __main__ | Discord notification sent
 2026-08-25 08:49:26 | INFO    | __main__ | Portfolio Summary: Cash=₹206,685 | Open=1 | Total P&L=₹+7,319 | Win Rate=52.6%
+2026-08-25 08:58:32 | INFO    | __main__ | ============================================================
+2026-08-25 08:58:32 | INFO    | __main__ | Intraday Scan | 2026-08-25 14:28 IST
+2026-08-25 08:58:32 | INFO    | __main__ | ============================================================
+2026-08-25 08:58:32 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-25 08:58:42 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-25 08:58:42 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-25 08:58:42 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-25 08:58:50 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-25 08:58:50 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-25 08:58:51 | INFO    | __main__ | VWAP MR Signals Found: 2
+2026-08-25 08:58:51 | INFO    | engine.paper_trader | ENTER SHORT SHRIRAMFIN.NS @ ₹1128.9 | Qty: 182 | SL: ₹1136.8 | Target: ₹1120.19 | Risk: ₹1438.0
+2026-08-25 08:58:51 | INFO    | __main__ | Discord notification sent
+2026-08-25 08:58:51 | INFO    | __main__ | Portfolio Summary: Cash=₹1,091 | Open=2 | Total P&L=₹+7,319 | Win Rate=50.0%
