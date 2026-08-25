@@ -1,21 +1,6 @@
 {
-  "cash": 287770.73326633,
-  "positions": {
-    "SHRIRAMFIN.NS": {
-      "ticker": "SHRIRAMFIN.NS",
-      "direction": "SHORT",
-      "entry_price": 1128.9,
-      "qty": 182,
-      "stop_loss": 1136.8,
-      "initial_stop_loss": 1136.8,
-      "target": 1120.19,
-      "risk_per_share": 7.9,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-08-25 08:58:51.043932",
-      "entry_cost": 133.62
-    }
-  },
+  "cash": 494482.21520153,
+  "positions": {},
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -263,6 +248,19 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-08-25 08:49:25.913734",
       "exit_time": "2026-08-25 09:20:20.193117"
+    },
+    {
+      "ticker": "SHRIRAMFIN.NS",
+      "direction": "SHORT",
+      "entry_price": 1128.9,
+      "exit_price": 1136.8,
+      "qty": 182,
+      "pnl": -1757.54,
+      "pnl_pct": -0.86,
+      "reason": "stop_loss",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-25 08:58:51.043932",
+      "exit_time": "2026-08-25 09:39:48.858717"
     }
   ],
   "daily_trades_count": {
@@ -277,7 +275,7 @@
     "2026-08-24": 2,
     "2026-08-25": 2
   },
-  "total_pnl": 4899.327049923871,
+  "total_pnl": 3141.7889851238956,
   "total_trades": 20,
   "winning_trades": 10
 }
