@@ -3171,3 +3171,15 @@
 2026-08-26 05:04:36 | INFO    | engine.paper_trader | ENTER SHORT KOTAKBANK.NS @ ₹411.6 | Qty: 694 | SL: ₹414.48 | Target: ₹408.69 | Risk: ₹1999.0
 2026-08-26 05:04:37 | INFO    | __main__ | Discord notification sent
 2026-08-26 05:04:37 | INFO    | __main__ | Portfolio Summary: Cash=₹208,655 | Open=1 | Total P&L=₹+3,142 | Win Rate=47.6%
+2026-08-26 05:17:42 | INFO    | __main__ | ============================================================
+2026-08-26 05:17:42 | INFO    | __main__ | Intraday Scan | 2026-08-26 10:47 IST
+2026-08-26 05:17:42 | INFO    | __main__ | ============================================================
+2026-08-26 05:17:42 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-26 05:17:52 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-26 05:17:52 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-26 05:17:52 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-26 05:18:01 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-26 05:18:01 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-26 05:18:01 | INFO    | __main__ | VWAP MR Signals Found: 1
+2026-08-26 05:18:01 | INFO    | __main__ | Portfolio Summary: Cash=₹208,655 | Open=1 | Total P&L=₹+3,142 | Win Rate=47.6%
