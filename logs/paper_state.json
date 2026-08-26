@@ -20,11 +20,11 @@
       "direction": "LONG",
       "entry_price": 994.0,
       "qty": 209,
-      "stop_loss": 987.04,
+      "stop_loss": 994.7,
       "initial_stop_loss": 987.04,
       "target": 1003.62,
       "risk_per_share": 6.96,
-      "trailed_to_be": false,
+      "trailed_to_be": true,
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-08-26 05:34:15.680683",
       "entry_cost": 134.85
