@@ -3401,3 +3401,16 @@
 2026-08-26 09:25:21 | INFO    | __main__ | Received valid intraday data for 38 tickers
 2026-08-26 09:25:21 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-08-26 09:25:21 | INFO    | __main__ | Portfolio Summary: Cash=₹497,742 | Open=0 | Total P&L=₹+2,404 | Win Rate=50.0%
+2026-08-26 09:46:47 | INFO    | __main__ | ============================================================
+2026-08-26 09:46:47 | INFO    | __main__ | Intraday Scan | 2026-08-26 15:16 IST
+2026-08-26 09:46:47 | INFO    | __main__ | ============================================================
+2026-08-26 09:46:47 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-26 09:46:52 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-26 09:46:52 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-26 09:46:52 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-26 09:46:57 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-26 09:46:57 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-26 09:46:57 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
+2026-08-26 09:46:58 | INFO    | __main__ | Discord notification sent
+2026-08-26 09:46:58 | INFO    | __main__ | EOD Summary: {'date': '2026-08-26', 'today_trades': 2, 'today_pnl': -737.47, 'today_winners': 1, 'total_pnl': 2404.32, 'win_rate_pct': 50.0, 'return_pct': 0.48}
