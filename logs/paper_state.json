@@ -1,20 +1,6 @@
 {
-  "cash": 774.4014293299697,
+  "cash": 288173.97304556996,
   "positions": {
-    "KOTAKBANK.NS": {
-      "ticker": "KOTAKBANK.NS",
-      "direction": "SHORT",
-      "entry_price": 411.6,
-      "qty": 694,
-      "stop_loss": 414.48,
-      "initial_stop_loss": 414.48,
-      "target": 408.69,
-      "risk_per_share": 2.88,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-08-26 05:04:36.793187",
-      "entry_cost": 176.57
-    },
     "INDUSINDBK.NS": {
       "ticker": "INDUSINDBK.NS",
       "direction": "LONG",
@@ -290,6 +276,19 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-08-25 08:58:51.043932",
       "exit_time": "2026-08-25 09:39:48.858717"
+    },
+    {
+      "ticker": "KOTAKBANK.NS",
+      "direction": "SHORT",
+      "entry_price": 411.6,
+      "exit_price": 414.48,
+      "qty": 694,
+      "pnl": -2424.84,
+      "pnl_pct": -0.85,
+      "reason": "stop_loss",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-26 05:04:36.793187",
+      "exit_time": "2026-08-26 07:06:04.938830"
     }
   ],
   "daily_trades_count": {
@@ -305,7 +304,7 @@
     "2026-08-25": 2,
     "2026-08-26": 2
   },
-  "total_pnl": 3141.7889851238956,
+  "total_pnl": 716.9506013638988,
   "total_trades": 22,
   "winning_trades": 10
 }
