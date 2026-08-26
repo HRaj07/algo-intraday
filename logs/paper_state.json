@@ -1,6 +1,21 @@
 {
-  "cash": 494482.21520153,
-  "positions": {},
+  "cash": 208655.24941232998,
+  "positions": {
+    "KOTAKBANK.NS": {
+      "ticker": "KOTAKBANK.NS",
+      "direction": "SHORT",
+      "entry_price": 411.6,
+      "qty": 694,
+      "stop_loss": 414.48,
+      "initial_stop_loss": 414.48,
+      "target": 408.69,
+      "risk_per_share": 2.88,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-08-26 05:04:36.793187",
+      "entry_cost": 176.57
+    }
+  },
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -273,9 +288,10 @@
     "2026-08-20": 2,
     "2026-08-21": 2,
     "2026-08-24": 2,
-    "2026-08-25": 2
+    "2026-08-25": 2,
+    "2026-08-26": 1
   },
   "total_pnl": 3141.7889851238956,
-  "total_trades": 20,
+  "total_trades": 21,
   "winning_trades": 10
 }
