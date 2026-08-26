@@ -3183,3 +3183,17 @@
 2026-08-26 05:18:01 | INFO    | __main__ | Received valid intraday data for 38 tickers
 2026-08-26 05:18:01 | INFO    | __main__ | VWAP MR Signals Found: 1
 2026-08-26 05:18:01 | INFO    | __main__ | Portfolio Summary: Cash=₹208,655 | Open=1 | Total P&L=₹+3,142 | Win Rate=47.6%
+2026-08-26 05:34:00 | INFO    | __main__ | ============================================================
+2026-08-26 05:34:00 | INFO    | __main__ | Intraday Scan | 2026-08-26 11:04 IST
+2026-08-26 05:34:00 | INFO    | __main__ | ============================================================
+2026-08-26 05:34:00 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-08-26 05:34:08 | ERROR   | yfinance | $ZOMATO.NS: No data found, symbol may be delisted
+2026-08-26 05:34:08 | ERROR   | yfinance | 
+1 Failed download:
+2026-08-26 05:34:08 | ERROR   | yfinance | ['ZOMATO.NS']: No data found, symbol may be delisted
+2026-08-26 05:34:15 | INFO    | data.fetcher | Fetched 15min data for 38/39 tickers
+2026-08-26 05:34:15 | INFO    | __main__ | Received valid intraday data for 38 tickers
+2026-08-26 05:34:15 | INFO    | __main__ | VWAP MR Signals Found: 2
+2026-08-26 05:34:15 | INFO    | engine.paper_trader | ENTER LONG INDUSINDBK.NS @ ₹994.0 | Qty: 209 | SL: ₹987.04 | Target: ₹1003.62 | Risk: ₹1455.0
+2026-08-26 05:34:16 | INFO    | __main__ | Discord notification sent
+2026-08-26 05:34:16 | INFO    | __main__ | Portfolio Summary: Cash=₹774 | Open=2 | Total P&L=₹+3,142 | Win Rate=45.5%
