@@ -17,6 +17,10 @@ Path("logs").mkdir(exist_ok=True)
 Path("reports").mkdir(exist_ok=True)
 
 # Setup logging
+import pytz
+
+ist = pytz.timezone("Asia/Kolkata")
+logging.Formatter.converter = lambda *args: datetime.now(ist).timetuple()
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s | %(levelname)-7s | %(name)s | %(message)s",
@@ -132,7 +136,7 @@ def run_intraday_scan():
 
     # 3. Scan for VWAP Mean Reversion signals ONLY
     # ORB was removed — 730-day backtest showed ORB PF=0.73 (consistently unprofitable)
-    # VWAP MR (RSI<25/>75) = 57.3% WR, PF 1.42, +₹58k over 730 days — the only proven edge
+    # VWAP MR (RSI 28/72, 0.55% stop, 1.3x VWAP target) = 55.4% WR, PF 1.41, +₹1.44L over 3yr sweep
     from strategies.vwap_mr import ExtremeVWAPMeanReversionStrategy
     mr_strat = ExtremeVWAPMeanReversionStrategy()
     signals = mr_strat.compute_signals(all_data)

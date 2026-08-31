@@ -48,7 +48,7 @@ class IntradayFetcher:
                     df.columns = [c.lower() for c in df.columns]
                 # Remove timezone info safely
                 if df.index.tz is not None:
-                    df.index = df.index.tz_convert(None)  # tz_convert(None) strips tz
+                    df.index = df.index.tz_localize(None)  # tz_localize(None) strips tz while preserving local time
                 results[ticker] = df.dropna()
                 time.sleep(0.1)
             except Exception as e:
