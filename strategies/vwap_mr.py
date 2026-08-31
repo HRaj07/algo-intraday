@@ -6,6 +6,8 @@ Optimized for NSE Large Caps:
   Net P&L +Rs1,44,564 vs +Rs90,640 for the old 1.0x-VWAP / 0.70%-stop config (+60% profit)
 - 0.55% Stop Loss with 1.3x-VWAP overshoot Target (let winners run past the VWAP line
   instead of exiting exactly on touch)
+- LONG-ONLY: 3yr side-split shows longs carry the edge (PF 1.71) while shorts are noise
+  (PF 1.09); disabling shorts + max 5 trades/day lifts PF 1.33 -> 1.70 and cuts drawdown
 """
 import logging
 from datetime import datetime
@@ -105,6 +107,10 @@ class ExtremeVWAPMeanReversionStrategy:
                 }
 
         # 2. SHORT: Extreme Overbought Rip above VWAP
+        # Disabled by default (long_only): 3yr backtest shows shorts are a PF-1.09 coin flip
+        # that crowd out profitable long slots. Set "long_only": False in config to re-enable.
+        if self.params.get("long_only", False):
+            return None
         dev_short = (curr_close - curr_vwap) / curr_vwap
         if curr_rsi >= self.params.get("rsi_overbought", 75) and dev_short >= dev_min:
             stop = curr_close * (1.0 + stop_pct)

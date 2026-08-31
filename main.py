@@ -136,7 +136,7 @@ def run_intraday_scan():
 
     # 3. Scan for VWAP Mean Reversion signals ONLY
     # ORB was removed — 730-day backtest showed ORB PF=0.73 (consistently unprofitable)
-    # VWAP MR (RSI 28/72, 0.55% stop, 1.3x VWAP target) = 55.4% WR, PF 1.41, +₹1.44L over 3yr sweep
+    # VWAP MR long-only (RSI 28, 0.55% stop, 1.3x VWAP target, max 5/day) = 58.2% WR, PF 1.70, +₹1.40L / 3yr
     from strategies.vwap_mr import ExtremeVWAPMeanReversionStrategy
     mr_strat = ExtremeVWAPMeanReversionStrategy()
     signals = mr_strat.compute_signals(all_data)

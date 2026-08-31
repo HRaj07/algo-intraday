@@ -28,8 +28,8 @@ SYSTEM = {
     "mode": "paper",
     "initial_capital": 500_000,      # ₹5 Lakhs paper capital
     "risk_per_trade": 2_000,         # Max risk ₹2,000 per trade slot
-    "max_daily_trades": 3,           # Raised from 2 -> 3: sweep shows extra diversification adds
-    #                                  net profit with only a small PF trade-off (see VWAP_MR_CONFIG notes)
+    "max_daily_trades": 5,           # Long-only mode frees capacity: 5 long slots beats 3 mixed slots
+    #                                  (PF 1.70 vs 1.33, lower drawdown — see VWAP_MR_CONFIG notes)
     "currency": "INR",
     "timezone": "Asia/Kolkata",
     "market_open": "09:15",
@@ -78,6 +78,11 @@ VWAP_MR_CONFIG = {
                                      # lets winners run further into the mean-reversion move.
                                      # Combined with the tighter stop: Net P&L +90,640 -> +144,564 (+60%),
                                      # PF 1.31 -> 1.41, POSITIVE in all 4 backtested years (2023-2026).
+    "long_only": True,              # Side split over 3yr: LONG 290tr +Rs122,542 vs SHORT 329tr +Rs16,440
+                                     # (PF 1.09 — noise). Dropping shorts + raising cap to 5:
+                                     # PF 1.33 -> 1.70, MaxDD Rs21,070 -> Rs17,197, WR 54.1% -> 58.2%,
+                                     # Net +Rs139,783 with HALF the trades (330 vs 619). Oversold dip-buying
+                                     # in NSE large caps is the real edge; shorting rips barely breaks even.
 }
 
 REPORTING = {
