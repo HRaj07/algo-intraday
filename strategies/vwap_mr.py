@@ -14,8 +14,11 @@ from datetime import datetime
 from typing import Dict, List, Optional
 import pandas as pd
 import numpy as np
+import pytz
 from data.fetcher import TechnicalIndicators
 from config import VWAP_MR_CONFIG, SYSTEM
+
+ist = pytz.timezone("Asia/Kolkata")
 
 logger = logging.getLogger(__name__)
 
@@ -46,8 +49,6 @@ class ExtremeVWAPMeanReversionStrategy:
         return ranked[:SYSTEM["max_daily_trades"]]
 
     def _compute_signal(self, ticker: str, df: pd.DataFrame, now: datetime) -> Optional[Dict]:
-        import pytz
-        ist = pytz.timezone("Asia/Kolkata")
         now_ist = datetime.now(ist)
         today = now_ist.date()
         today_df = df[df.index.date == today].copy()

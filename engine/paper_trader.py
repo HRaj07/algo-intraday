@@ -11,7 +11,10 @@ import logging
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional
+import pytz
 from config import SYSTEM, COSTS, ORB_CONFIG
+
+ist = pytz.timezone("Asia/Kolkata")
 
 logger = logging.getLogger(__name__)
 
@@ -55,8 +58,6 @@ class PaperTrader:
 
     def enter_trade(self, signal: Dict) -> Optional[Dict]:
         """Open a position with risk-based sizing and daily trade limits."""
-        import pytz
-        ist = pytz.timezone("Asia/Kolkata")
         ticker = signal["ticker"]
         now_ist = datetime.now(ist)
         today_str = str(now_ist.date())
@@ -128,8 +129,6 @@ class PaperTrader:
         current_data is expected to be {ticker: {'close': c, 'high': h, 'low': l}}
         """
         exits = []
-        import pytz
-        ist = pytz.timezone("Asia/Kolkata")
         now = datetime.now(ist)
         force_exit = now.hour > 15 or (now.hour == 15 and now.minute >= 15)
 
