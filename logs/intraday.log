@@ -3743,3 +3743,7 @@
 2026-09-01 11:13:33 | INFO    | __main__ | Received valid intraday data for 39 tickers
 2026-09-01 11:13:33 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-09-01 11:13:33 | INFO    | __main__ | Portfolio Summary: Cash=₹497,742 | Open=0 | Total P&L=₹+2,404 | Win Rate=50.0%
+2026-09-01 16:00:07 | INFO    | __main__ | ============================================================
+2026-09-01 16:00:07 | INFO    | __main__ | Intraday Scan | 2026-09-01 16:00 IST
+2026-09-01 16:00:07 | INFO    | __main__ | ============================================================
+2026-09-01 16:00:07 | INFO    | __main__ | Outside NSE trading hours
