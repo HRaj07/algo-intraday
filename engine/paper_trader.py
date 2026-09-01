@@ -55,8 +55,11 @@ class PaperTrader:
 
     def enter_trade(self, signal: Dict) -> Optional[Dict]:
         """Open a position with risk-based sizing and daily trade limits."""
+        import pytz
+        ist = pytz.timezone("Asia/Kolkata")
         ticker = signal["ticker"]
-        today_str = str(datetime.now().date())
+        now_ist = datetime.now(ist)
+        today_str = str(now_ist.date())
         
         # Check daily trade count
         trades_today = self.state.get("daily_trades_count", {}).get(today_str, 0)
@@ -101,7 +104,7 @@ class PaperTrader:
             "risk_per_share": round(risk_per_share, 2),
             "trailed_to_be": False,
             "strategy": signal["strategy"],
-            "entry_time": str(datetime.now()),
+            "entry_time": now_ist.strftime("%Y-%m-%d %H:%M:%S IST"),
             "entry_cost": round(entry_cost, 2),
         }
 
@@ -215,7 +218,7 @@ class PaperTrader:
             "reason": reason,
             "strategy": pos["strategy"],
             "entry_time": pos["entry_time"],
-            "exit_time": str(datetime.now()),
+            "exit_time": datetime.now(ist).strftime("%Y-%m-%d %H:%M:%S IST"),
         }
         self.state["trade_history"].append(trade_record)
         del self.state["positions"][ticker]

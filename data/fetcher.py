@@ -58,8 +58,10 @@ class IntradayFetcher:
 
     def get_today_data(self, tickers: List[str]) -> Dict[str, pd.DataFrame]:
         """Get only today's 15-min bars."""
+        import pytz
+        ist = pytz.timezone("Asia/Kolkata")
         all_data = self.fetch_intraday(tickers, days_back=3)
-        today = datetime.now().date()
+        today = datetime.now(ist).date()
         today_data = {}
         for ticker, df in all_data.items():
             today_df = df[df.index.date == today]

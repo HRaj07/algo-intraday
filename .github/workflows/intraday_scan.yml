@@ -3,32 +3,10 @@ name: ⚡ IntraDay Algo Scanner
 on:
   schedule:
     # Every 15 min during NSE market hours (Mon-Fri)
-    # IST = UTC+5:30, so 9:15 IST = 3:45 UTC
-    - cron: '45 3 * * 1-5'   # 9:15 AM IST
-    - cron: '0 4 * * 1-5'    # 9:30 AM IST
-    - cron: '15 4 * * 1-5'   # 9:45 AM IST
-    - cron: '30 4 * * 1-5'   # 10:00 AM IST
-    - cron: '45 4 * * 1-5'   # 10:15 AM IST
-    - cron: '0 5 * * 1-5'    # 10:30 AM IST
-    - cron: '15 5 * * 1-5'   # 10:45 AM IST
-    - cron: '30 5 * * 1-5'   # 11:00 AM IST
-    - cron: '45 5 * * 1-5'   # 11:15 AM IST
-    - cron: '0 6 * * 1-5'    # 11:30 AM IST
-    - cron: '15 6 * * 1-5'   # 11:45 AM IST
-    - cron: '30 6 * * 1-5'   # 12:00 PM IST
-    - cron: '45 6 * * 1-5'   # 12:15 PM IST
-    - cron: '0 7 * * 1-5'    # 12:30 PM IST
-    - cron: '15 7 * * 1-5'   # 12:45 PM IST
-    - cron: '30 7 * * 1-5'   # 1:00 PM IST
-    - cron: '45 7 * * 1-5'   # 1:15 PM IST
-    - cron: '0 8 * * 1-5'    # 1:30 PM IST
-    - cron: '15 8 * * 1-5'   # 1:45 PM IST
-    - cron: '30 8 * * 1-5'   # 2:00 PM IST
-    - cron: '45 8 * * 1-5'   # 2:15 PM IST
-    - cron: '0 9 * * 1-5'    # 2:30 PM IST
-    - cron: '15 9 * * 1-5'   # 2:45 PM IST
-    - cron: '30 9 * * 1-5'   # 3:00 PM IST
-    - cron: '45 9 * * 1-5'   # 3:15 PM IST (last scan + square off)
+    # IST = UTC+5:30 -> Market hours 9:15 AM - 3:15 PM IST = 3:45 UTC - 9:45 UTC
+    - cron: '45 3 * * 1-5'         # 9:15 AM IST
+    - cron: '*/15 4-8 * * 1-5'     # 9:30 AM - 1:45 PM IST (every 15 min)
+    - cron: '0,15,30,45 9 * * 1-5' # 2:00 PM - 3:15 PM IST (every 15 min)
   workflow_dispatch:          # Manual trigger for testing
 
 permissions:
@@ -38,6 +16,8 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     name: Run Intraday Scan
+    env:
+      TZ: Asia/Kolkata
 
     steps:
       - name: Checkout
@@ -66,6 +46,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes"
           else
-            git commit -m "⚡ Intraday: $(date '+%H:%M IST %Y-%m-%d')"
+            git commit -m "⚡ Intraday: $(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M IST')"
             git push
           fi

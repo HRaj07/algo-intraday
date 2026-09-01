@@ -20,16 +20,32 @@ Path("reports").mkdir(exist_ok=True)
 import pytz
 
 ist = pytz.timezone("Asia/Kolkata")
-logging.Formatter.converter = lambda *args: datetime.now(ist).timetuple()
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s | %(levelname)-7s | %(name)s | %(message)s",
+
+class ISTFormatter(logging.Formatter):
+    """Logging formatter that converts timestamps to IST (Asia/Kolkata)."""
+    def formatTime(self, record, datefmt=None):
+        dt = datetime.fromtimestamp(record.created, tz=pytz.utc).astimezone(ist)
+        if datefmt:
+            return dt.strftime(datefmt)
+        return dt.isoformat()
+
+formatter = ISTFormatter(
+    fmt="%(asctime)s | %(levelname)-7s | %(name)s | %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler("logs/intraday.log", mode="a"),
-    ],
 )
+
+root_logger = logging.getLogger()
+root_logger.setLevel(logging.INFO)
+root_logger.handlers.clear()
+
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+root_logger.addHandler(stream_handler)
+
+file_handler = logging.FileHandler("logs/intraday.log", mode="a")
+file_handler.setFormatter(formatter)
+root_logger.addHandler(file_handler)
+
 logger = logging.getLogger(__name__)
 
 
