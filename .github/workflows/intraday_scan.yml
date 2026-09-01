@@ -3,10 +3,9 @@ name: ⚡ IntraDay Algo Scanner
 on:
   schedule:
     # Every 15 min during NSE market hours (Mon-Fri)
-    # IST = UTC+5:30 -> Market hours 9:15 AM - 3:15 PM IST = 3:45 UTC - 9:45 UTC
-    - cron: '45 3 * * 1-5'         # 9:15 AM IST
-    - cron: '*/15 4-8 * * 1-5'     # 9:30 AM - 1:45 PM IST (every 15 min)
-    - cron: '0,15,30,45 9 * * 1-5' # 2:00 PM - 3:15 PM IST (every 15 min)
+    # Market hours 9:15 AM - 3:15 PM IST = 3:45 UTC - 9:45 UTC
+    # We run from 3:00 UTC to 9:45 UTC (main.py handles pre-market exits cleanly)
+    - cron: '*/15 3-9 * * 1-5'
   workflow_dispatch:          # Manual trigger for testing
 
 permissions:
