@@ -35,18 +35,24 @@ formatter = ISTFormatter(
 )
 
 root_logger = logging.getLogger()
-root_logger.setLevel(logging.DEBUG)
+root_logger.setLevel(logging.INFO)
 root_logger.handlers.clear()
 
 stream_handler = logging.StreamHandler()
 stream_handler.setFormatter(formatter)
-stream_handler.setLevel(logging.DEBUG)
+stream_handler.setLevel(logging.INFO)
 root_logger.addHandler(stream_handler)
 
 file_handler = logging.FileHandler("logs/intraday.log", mode="a")
 file_handler.setFormatter(formatter)
-file_handler.setLevel(logging.DEBUG)
+file_handler.setLevel(logging.INFO)
 root_logger.addHandler(file_handler)
+
+# Silence noisy third-party library logs (also re-enables yfinance multithreading,
+# which yfinance disables when it detects DEBUG-level logging)
+logging.getLogger("yfinance").setLevel(logging.WARNING)
+logging.getLogger("peewee").setLevel(logging.WARNING)
+logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 logger = logging.getLogger(__name__)
 
