@@ -5,7 +5,8 @@ on:
     # Every 15 min during NSE market hours (Mon-Fri)
     # Market hours 9:00 AM - 3:30 PM IST = 3:30 UTC - 10:00 UTC
     # Run 3:30 UTC to 10:00 UTC (main.py handles out-of-hours gracefully)
-    - cron: '*/15 3-10 * * 1-5'
+    # Offset minutes (7,22,37,52) avoid GitHub's congested :00/:15/:30/:45 slots
+    - cron: '7,22,37,52 3-10 * * 1-5'
   workflow_dispatch:          # Manual trigger for testing
 
 permissions:
