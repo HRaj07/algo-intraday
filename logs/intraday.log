@@ -33856,3 +33856,7 @@
 2026-09-02 15:22:19 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
 2026-09-02 15:22:19 | INFO    | __main__ | Discord notification sent
 2026-09-02 15:22:19 | INFO    | __main__ | EOD Summary: {'date': '2026-09-02', 'today_trades': 1, 'today_pnl': -2490.41, 'today_winners': 0, 'total_pnl': -86.09, 'win_rate_pct': 47.8, 'return_pct': -0.02}
+2026-09-02 15:31:11 | INFO    | __main__ | ============================================================
+2026-09-02 15:31:11 | INFO    | __main__ | Intraday Scan | 2026-09-02 15:31 IST
+2026-09-02 15:31:11 | INFO    | __main__ | ============================================================
+2026-09-02 15:31:11 | INFO    | __main__ | Outside NSE trading hours
