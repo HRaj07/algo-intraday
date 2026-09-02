@@ -1,21 +1,6 @@
 {
-  "cash": 139132.66926497995,
-  "positions": {
-    "HEROMOTOCO.NS": {
-      "ticker": "HEROMOTOCO.NS",
-      "direction": "LONG",
-      "entry_price": 5270.5,
-      "qty": 68,
-      "stop_loss": 5241.51,
-      "initial_stop_loss": 5241.51,
-      "target": 5363.07,
-      "risk_per_share": 28.99,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-09-02 10:27:08 IST",
-      "entry_cost": 215.52
-    }
-  },
+  "cash": 495251.77924983995,
+  "positions": {},
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -302,6 +287,19 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-08-26 05:34:15.680683",
       "exit_time": "2026-08-26 07:30:25.557385"
+    },
+    {
+      "ticker": "HEROMOTOCO.NS",
+      "direction": "LONG",
+      "entry_price": 5270.5,
+      "exit_price": 5241.51,
+      "qty": 68,
+      "pnl": -2490.41,
+      "pnl_pct": -0.69,
+      "reason": "stop_loss",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-02 10:27:08 IST",
+      "exit_time": "2026-09-02 12:48:35 IST"
     }
   ],
   "daily_trades_count": {
@@ -318,7 +316,7 @@
     "2026-08-26": 2,
     "2026-09-02": 1
   },
-  "total_pnl": 2404.3168077738997,
+  "total_pnl": -86.09320736608561,
   "total_trades": 23,
   "winning_trades": 11
 }
