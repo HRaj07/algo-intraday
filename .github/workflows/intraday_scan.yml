@@ -3,9 +3,9 @@ name: ⚡ IntraDay Algo Scanner
 on:
   schedule:
     # Every 15 min during NSE market hours (Mon-Fri)
-    # Market hours 9:15 AM - 3:15 PM IST = 3:45 UTC - 9:45 UTC
-    # We run from 3:00 UTC to 9:45 UTC (main.py handles pre-market exits cleanly)
-    - cron: '*/15 3-9 * * 1-5'
+    # Market hours 9:00 AM - 3:30 PM IST = 3:30 UTC - 10:00 UTC
+    # Run 3:30 UTC to 10:00 UTC (main.py handles out-of-hours gracefully)
+    - cron: '*/15 3-10 * * 1-5'
   workflow_dispatch:          # Manual trigger for testing
 
 permissions:
@@ -34,6 +34,7 @@ jobs:
       - name: Run intraday scan
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          PYTHONUNBUFFERED: "1"
         run: python main.py
 
       - name: Commit results

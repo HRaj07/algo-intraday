@@ -46,9 +46,14 @@ class IntradayFetcher:
                     df.columns = [c[0].lower() for c in df.columns]
                 else:
                     df.columns = [c.lower() for c in df.columns]
-                # Remove timezone info safely
+                # Convert to IST then strip tz so df.index.date returns IST dates
+                import pytz as _pytz
+                _ist = _pytz.timezone("Asia/Kolkata")
                 if df.index.tz is not None:
-                    df.index = df.index.tz_localize(None)  # tz_localize(None) strips tz while preserving local time
+                    df.index = df.index.tz_convert(_ist).tz_localize(None)
+                else:
+                    # Assume UTC if tz-naive (yfinance sometimes returns naive UTC)
+                    df.index = df.index.tz_localize("UTC").tz_convert(_ist).tz_localize(None)
                 results[ticker] = df.dropna()
                 time.sleep(0.1)
             except Exception as e:

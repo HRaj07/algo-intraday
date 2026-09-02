@@ -35,15 +35,17 @@ formatter = ISTFormatter(
 )
 
 root_logger = logging.getLogger()
-root_logger.setLevel(logging.INFO)
+root_logger.setLevel(logging.DEBUG)
 root_logger.handlers.clear()
 
 stream_handler = logging.StreamHandler()
 stream_handler.setFormatter(formatter)
+stream_handler.setLevel(logging.DEBUG)
 root_logger.addHandler(stream_handler)
 
 file_handler = logging.FileHandler("logs/intraday.log", mode="a")
 file_handler.setFormatter(formatter)
+file_handler.setLevel(logging.DEBUG)
 root_logger.addHandler(file_handler)
 
 logger = logging.getLogger(__name__)

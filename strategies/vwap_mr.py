@@ -32,10 +32,13 @@ class ExtremeVWAPMeanReversionStrategy:
     def compute_signals(self, data_dict: Dict[str, pd.DataFrame]) -> List[Dict]:
         """Scan all tickers for extreme RSI & VWAP extension signals."""
         signals = []
+        skipped = []
+        near_miss = []  # tickers that almost qualified
         now = datetime.now()
 
         for ticker, df in data_dict.items():
             if len(df) < 14:
+                skipped.append(f"{ticker}(short)")
                 continue
             try:
                 sig = self._compute_signal(ticker, df, now)
@@ -43,6 +46,9 @@ class ExtremeVWAPMeanReversionStrategy:
                     signals.append(sig)
             except Exception as e:
                 logger.debug(f"VWAP MR error on {ticker}: {e}")
+
+        if not signals:
+            logger.info(f"VWAP MR: 0 signals from {len(data_dict)} tickers (skipped: {len(skipped)})")
 
         # Rank signals by extension score (highest divergence first)
         ranked = sorted(signals, key=lambda x: x.get("score", 0), reverse=True)
@@ -55,6 +61,7 @@ class ExtremeVWAPMeanReversionStrategy:
 
         # Need at least 4 bars in the day (skip chaotic first 2 bars 9:15–9:45)
         if len(today_df) < 4:
+            logger.debug(f"{ticker}: only {len(today_df)} today bars — skipping")
             return None
 
         # Session filter: skip first 30 min (9:15–9:45) and lunch chop (11:30–1:30)
@@ -65,6 +72,7 @@ class ExtremeVWAPMeanReversionStrategy:
         in_lunch_chop = (hour == 11 and minute >= 30) or (hour == 12) or (hour == 13 and minute < 30)
         in_opening_chaos = (hour == 9 and minute < 45)
         if in_lunch_chop or in_opening_chaos:
+            logger.debug(f"{ticker}: session filter ({hour}:{minute:02d}) — {'lunch chop' if in_lunch_chop else 'opening chaos'}")
             return None
 
         # Intraday VWAP
@@ -84,6 +92,17 @@ class ExtremeVWAPMeanReversionStrategy:
         stop_pct = self.params.get("stop_loss_pct", 0.007)
         dev_min = self.params.get("vwap_deviation_min", 0.008)
         target_mult = self.params.get("target_mult", 1.0)
+
+        # Log near-misses for diagnostics
+        dev_long = (curr_vwap - curr_close) / curr_close
+        dev_short = (curr_close - curr_vwap) / curr_vwap
+        rsi_thresh_lo = self.params.get("rsi_oversold", 25)
+        rsi_thresh_hi = self.params.get("rsi_overbought", 75)
+        if curr_rsi <= rsi_thresh_lo + 5 or curr_rsi >= rsi_thresh_hi - 5 or dev_long >= dev_min * 0.7 or dev_short >= dev_min * 0.7:
+            logger.debug(
+                f"{ticker}: RSI={curr_rsi:.1f} (need<{rsi_thresh_lo} or >{rsi_thresh_hi}) | "
+                f"dev_long={dev_long*100:.2f}% dev_short={dev_short*100:.2f}% (need>={dev_min*100:.2f}%)"
+            )
 
         # 1. LONG: Extreme Oversold Dip below VWAP
         dev_long = (curr_vwap - curr_close) / curr_close
