@@ -34113,3 +34113,11 @@
 2026-09-03 15:01:13 | INFO    | strategies.vwap_mr | VWAP MR: 0 signals from 39 tickers (skipped: 0)
 2026-09-03 15:01:13 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-09-03 15:01:13 | INFO    | __main__ | Portfolio Summary: Cash=₹495,252 | Open=0 | Total P&L=₹-86 | Win Rate=47.8%
+2026-09-03 15:15:51 | INFO    | __main__ | ============================================================
+2026-09-03 15:15:51 | INFO    | __main__ | Intraday Scan | 2026-09-03 15:15 IST
+2026-09-03 15:15:51 | INFO    | __main__ | ============================================================
+2026-09-03 15:15:51 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-03 15:16:04 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-03 15:16:04 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-03 15:16:04 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
+2026-09-03 15:16:04 | INFO    | __main__ | EOD Summary: {'date': '2026-09-03', 'today_trades': 0, 'today_pnl': 0, 'today_winners': 0, 'total_pnl': -86.09, 'win_rate_pct': 47.8, 'return_pct': -0.02}
