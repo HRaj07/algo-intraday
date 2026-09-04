@@ -1,35 +1,6 @@
 {
-  "cash": 223.65883183994447,
-  "positions": {
-    "MARUTI.NS": {
-      "ticker": "MARUTI.NS",
-      "direction": "LONG",
-      "entry_price": 12658.0,
-      "qty": 28,
-      "stop_loss": 12588.38,
-      "initial_stop_loss": 12588.38,
-      "target": 12774.4,
-      "risk_per_share": 69.62,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-09-04 14:01:16 IST",
-      "entry_cost": 213.39
-    },
-    "HCLTECH.NS": {
-      "ticker": "HCLTECH.NS",
-      "direction": "LONG",
-      "entry_price": 1299.0,
-      "qty": 108,
-      "stop_loss": 1291.86,
-      "initial_stop_loss": 1291.86,
-      "target": 1314.68,
-      "risk_per_share": 7.14,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-09-04 14:01:16 IST",
-      "entry_cost": 98.73
-    }
-  },
+  "cash": 494794.8333108875,
+  "positions": {},
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -329,6 +300,32 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-02 10:27:08 IST",
       "exit_time": "2026-09-02 12:48:35 IST"
+    },
+    {
+      "ticker": "MARUTI.NS",
+      "direction": "LONG",
+      "entry_price": 12658.0,
+      "exit_price": 12690.0,
+      "qty": 28,
+      "pnl": 379.91,
+      "pnl_pct": 0.11,
+      "reason": "square_off",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-04 14:01:16 IST",
+      "exit_time": "2026-09-04 15:16:02 IST"
+    },
+    {
+      "ticker": "HCLTECH.NS",
+      "direction": "LONG",
+      "entry_price": 1299.0,
+      "exit_price": 1293.4,
+      "qty": 108,
+      "pnl": -836.85,
+      "pnl_pct": -0.6,
+      "reason": "square_off",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-04 14:01:16 IST",
+      "exit_time": "2026-09-04 15:16:02 IST"
     }
   ],
   "daily_trades_count": {
@@ -346,7 +343,7 @@
     "2026-09-02": 1,
     "2026-09-04": 2
   },
-  "total_pnl": -86.09320736608561,
+  "total_pnl": -543.0387283184782,
   "total_trades": 25,
-  "winning_trades": 11
+  "winning_trades": 12
 }
