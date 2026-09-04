@@ -34353,3 +34353,12 @@
 2026-09-04 14:16:04 | INFO    | __main__ | Received valid intraday data for 39 tickers
 2026-09-04 14:16:04 | INFO    | __main__ | VWAP MR Signals Found: 1
 2026-09-04 14:16:04 | INFO    | __main__ | Portfolio Summary: Cash=₹224 | Open=2 | Total P&L=₹-86 | Win Rate=44.0%
+2026-09-04 14:31:21 | INFO    | __main__ | ============================================================
+2026-09-04 14:31:21 | INFO    | __main__ | Intraday Scan | 2026-09-04 14:31 IST
+2026-09-04 14:31:21 | INFO    | __main__ | ============================================================
+2026-09-04 14:31:21 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-04 14:31:31 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-04 14:31:31 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-04 14:31:31 | INFO    | strategies.vwap_mr | VWAP MR: 0 signals from 39 tickers (skipped: 0)
+2026-09-04 14:31:31 | INFO    | __main__ | VWAP MR Signals Found: 0
+2026-09-04 14:31:31 | INFO    | __main__ | Portfolio Summary: Cash=₹224 | Open=2 | Total P&L=₹-86 | Win Rate=44.0%
