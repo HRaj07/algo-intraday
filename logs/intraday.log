@@ -34652,3 +34652,13 @@
 2026-09-07 14:46:03 | INFO    | __main__ | VWAP MR Signals Found: 1
 2026-09-07 14:46:03 | INFO    | engine.paper_trader | Daily trade limit (5) reached for 2026-09-07
 2026-09-07 14:46:03 | INFO    | __main__ | Portfolio Summary: Cash=₹258 | Open=4 | Total P&L=₹-1,484 | Win Rate=40.0%
+2026-09-07 15:01:05 | INFO    | __main__ | ============================================================
+2026-09-07 15:01:05 | INFO    | __main__ | Intraday Scan | 2026-09-07 15:01 IST
+2026-09-07 15:01:05 | INFO    | __main__ | ============================================================
+2026-09-07 15:01:05 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-07 15:01:15 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-07 15:01:15 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-07 15:01:15 | INFO    | engine.paper_trader | TRAIL TECHM.NS stop moved to breakeven + buffer: ₹1548.35
+2026-09-07 15:01:15 | INFO    | __main__ | VWAP MR Signals Found: 1
+2026-09-07 15:01:15 | INFO    | engine.paper_trader | Daily trade limit (5) reached for 2026-09-07
+2026-09-07 15:01:15 | INFO    | __main__ | Portfolio Summary: Cash=₹258 | Open=4 | Total P&L=₹-1,484 | Win Rate=40.0%
