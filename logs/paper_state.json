@@ -1,5 +1,5 @@
 {
-  "cash": 131434.7707698875,
+  "cash": 132.90888588747475,
   "positions": {
     "TRENT.NS": {
       "ticker": "TRENT.NS",
@@ -14,6 +14,20 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-07 11:01:17 IST",
       "entry_cost": 218.06
+    },
+    "INFY.NS": {
+      "ticker": "INFY.NS",
+      "direction": "LONG",
+      "entry_price": 1093.4,
+      "qty": 120,
+      "stop_loss": 1087.39,
+      "initial_stop_loss": 1087.39,
+      "target": 1102.59,
+      "risk_per_share": 6.01,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-07 11:15:57 IST",
+      "entry_cost": 93.86
     }
   },
   "trade_history": [
@@ -357,9 +371,9 @@
     "2026-08-26": 2,
     "2026-09-02": 1,
     "2026-09-04": 2,
-    "2026-09-07": 1
+    "2026-09-07": 2
   },
   "total_pnl": -543.0387283184782,
-  "total_trades": 26,
+  "total_trades": 27,
   "winning_trades": 12
 }

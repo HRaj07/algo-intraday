@@ -34497,3 +34497,13 @@
 2026-09-07 11:01:17 | INFO    | engine.paper_trader | ENTER LONG TRENT.NS @ ₹2793.4 | Qty: 130 | SL: ₹2778.04 | Target: ₹2830.34 | Risk: ₹1997.0
 2026-09-07 11:01:17 | INFO    | __main__ | Discord notification sent
 2026-09-07 11:01:17 | INFO    | __main__ | Portfolio Summary: Cash=₹131,435 | Open=1 | Total P&L=₹-543 | Win Rate=46.2%
+2026-09-07 11:15:44 | INFO    | __main__ | ============================================================
+2026-09-07 11:15:44 | INFO    | __main__ | Intraday Scan | 2026-09-07 11:15 IST
+2026-09-07 11:15:44 | INFO    | __main__ | ============================================================
+2026-09-07 11:15:44 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-07 11:15:57 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-07 11:15:57 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-07 11:15:57 | INFO    | __main__ | VWAP MR Signals Found: 2
+2026-09-07 11:15:57 | INFO    | engine.paper_trader | ENTER LONG INFY.NS @ ₹1093.4 | Qty: 120 | SL: ₹1087.39 | Target: ₹1102.59 | Risk: ₹721.0
+2026-09-07 11:15:59 | INFO    | __main__ | Discord notification sent
+2026-09-07 11:15:59 | INFO    | __main__ | Portfolio Summary: Cash=₹133 | Open=2 | Total P&L=₹-543 | Win Rate=44.4%
