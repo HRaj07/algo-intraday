@@ -34579,3 +34579,15 @@
 2026-09-07 13:16:00 | INFO    | strategies.vwap_mr | VWAP MR: 0 signals from 39 tickers (skipped: 0)
 2026-09-07 13:16:00 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-09-07 13:16:00 | INFO    | __main__ | Portfolio Summary: Cash=₹133 | Open=2 | Total P&L=₹-543 | Win Rate=44.4%
+2026-09-07 13:31:17 | INFO    | __main__ | ============================================================
+2026-09-07 13:31:17 | INFO    | __main__ | Intraday Scan | 2026-09-07 13:31 IST
+2026-09-07 13:31:17 | INFO    | __main__ | ============================================================
+2026-09-07 13:31:17 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-07 13:31:26 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-07 13:31:26 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-07 13:31:26 | INFO    | __main__ | VWAP MR Signals Found: 3
+2026-09-07 13:31:26 | INFO    | engine.paper_trader | ENTER LONG HCLTECH.NS @ ₹1263.8 | Qty: 1 | SL: ₹1256.85 | Target: ₹1273.75 | Risk: ₹7.0
+2026-09-07 13:31:26 | INFO    | engine.paper_trader | ENTER LONG TECHM.NS @ ₹1547.5 | Qty: 1 | SL: ₹1538.99 | Target: ₹1562.76 | Risk: ₹9.0
+2026-09-07 13:31:28 | INFO    | __main__ | Discord notification sent
+2026-09-07 13:31:28 | INFO    | __main__ | Discord notification sent
+2026-09-07 13:31:28 | INFO    | __main__ | Portfolio Summary: Cash=₹-2,727 | Open=4 | Total P&L=₹-543 | Win Rate=41.4%
