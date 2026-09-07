@@ -1,5 +1,5 @@
 {
-  "cash": -2727.0965652625255,
+  "cash": 257.5453106874629,
   "positions": {
     "TRENT.NS": {
       "ticker": "TRENT.NS",
@@ -14,20 +14,6 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-07 11:01:17 IST",
       "entry_cost": 218.06
-    },
-    "INFY.NS": {
-      "ticker": "INFY.NS",
-      "direction": "LONG",
-      "entry_price": 1093.4,
-      "qty": 120,
-      "stop_loss": 1087.39,
-      "initial_stop_loss": 1087.39,
-      "target": 1102.59,
-      "risk_per_share": 6.01,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-09-07 11:15:57 IST",
-      "entry_cost": 93.86
     },
     "HCLTECH.NS": {
       "ticker": "HCLTECH.NS",
@@ -56,6 +42,20 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-07 13:31:26 IST",
       "entry_cost": 24.43
+    },
+    "INFY.NS": {
+      "ticker": "INFY.NS",
+      "direction": "LONG",
+      "entry_price": 1087.9,
+      "qty": 117,
+      "stop_loss": 1081.92,
+      "initial_stop_loss": 1081.92,
+      "target": 1099.26,
+      "risk_per_share": 5.98,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-07 13:41:45 IST",
+      "entry_cost": 91.76
     }
   },
   "trade_history": [
@@ -383,6 +383,19 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-04 14:01:16 IST",
       "exit_time": "2026-09-04 15:16:02 IST"
+    },
+    {
+      "ticker": "INFY.NS",
+      "direction": "LONG",
+      "entry_price": 1093.4,
+      "exit_price": 1087.39,
+      "qty": 120,
+      "pnl": -941.16,
+      "pnl_pct": -0.72,
+      "reason": "stop_loss",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-07 11:15:57 IST",
+      "exit_time": "2026-09-07 13:41:44 IST"
     }
   ],
   "daily_trades_count": {
@@ -399,9 +412,9 @@
     "2026-08-26": 2,
     "2026-09-02": 1,
     "2026-09-04": 2,
-    "2026-09-07": 4
+    "2026-09-07": 5
   },
-  "total_pnl": -543.0387283184782,
-  "total_trades": 29,
+  "total_pnl": -1484.1961097184771,
+  "total_trades": 30,
   "winning_trades": 12
 }
