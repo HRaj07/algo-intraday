@@ -34507,3 +34507,12 @@
 2026-09-07 11:15:57 | INFO    | engine.paper_trader | ENTER LONG INFY.NS @ ₹1093.4 | Qty: 120 | SL: ₹1087.39 | Target: ₹1102.59 | Risk: ₹721.0
 2026-09-07 11:15:59 | INFO    | __main__ | Discord notification sent
 2026-09-07 11:15:59 | INFO    | __main__ | Portfolio Summary: Cash=₹133 | Open=2 | Total P&L=₹-543 | Win Rate=44.4%
+2026-09-07 11:31:21 | INFO    | __main__ | ============================================================
+2026-09-07 11:31:21 | INFO    | __main__ | Intraday Scan | 2026-09-07 11:31 IST
+2026-09-07 11:31:21 | INFO    | __main__ | ============================================================
+2026-09-07 11:31:21 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-07 11:31:38 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-07 11:31:38 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-07 11:31:38 | INFO    | strategies.vwap_mr | VWAP MR: 0 signals from 39 tickers (skipped: 0)
+2026-09-07 11:31:38 | INFO    | __main__ | VWAP MR Signals Found: 0
+2026-09-07 11:31:38 | INFO    | __main__ | Portfolio Summary: Cash=₹133 | Open=2 | Total P&L=₹-543 | Win Rate=44.4%
