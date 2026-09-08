@@ -34944,3 +34944,14 @@
 2026-09-08 15:01:18 | INFO    | strategies.vwap_mr | VWAP MR: 0 signals from 39 tickers (skipped: 0)
 2026-09-08 15:01:18 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-09-08 15:01:18 | INFO    | __main__ | Portfolio Summary: Cash=₹126,238 | Open=1 | Total P&L=₹-5,092 | Win Rate=39.4%
+2026-09-08 15:15:49 | INFO    | __main__ | ============================================================
+2026-09-08 15:15:49 | INFO    | __main__ | Intraday Scan | 2026-09-08 15:15 IST
+2026-09-08 15:15:49 | INFO    | __main__ | ============================================================
+2026-09-08 15:15:49 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-08 15:15:58 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-08 15:15:58 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-08 15:15:58 | INFO    | engine.paper_trader | EXIT BPCL.NS @ ₹303.8500061035156 | P&L: ₹+1517 (square_off)
+2026-09-08 15:15:59 | INFO    | __main__ | Discord notification sent
+2026-09-08 15:15:59 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
+2026-09-08 15:15:59 | INFO    | __main__ | Discord notification sent
+2026-09-08 15:15:59 | INFO    | __main__ | EOD Summary: {'date': '2026-09-08', 'today_trades': 3, 'today_pnl': np.float64(-3534.29), 'today_winners': 1, 'total_pnl': np.float64(-3575.04), 'win_rate_pct': 42.4, 'return_pct': np.float64(-0.72)}
