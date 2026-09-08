@@ -34873,3 +34873,13 @@
 2026-09-08 13:30:00 | INFO    | strategies.vwap_mr | VWAP MR: 0 signals from 39 tickers (skipped: 0)
 2026-09-08 13:30:00 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-09-08 13:30:00 | INFO    | __main__ | Portfolio Summary: Cash=₹495,297 | Open=0 | Total P&L=₹-41 | Win Rate=43.3%
+2026-09-08 13:31:17 | INFO    | __main__ | ============================================================
+2026-09-08 13:31:17 | INFO    | __main__ | Intraday Scan | 2026-09-08 13:31 IST
+2026-09-08 13:31:17 | INFO    | __main__ | ============================================================
+2026-09-08 13:31:17 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-08 13:31:30 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-08 13:31:30 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-08 13:31:30 | INFO    | __main__ | VWAP MR Signals Found: 1
+2026-09-08 13:31:30 | INFO    | engine.paper_trader | ENTER LONG BPCL.NS @ ₹306.15 | Qty: 1190 | SL: ₹304.47 | Target: ₹309.6 | Risk: ₹1999.0
+2026-09-08 13:31:31 | INFO    | __main__ | Discord notification sent
+2026-09-08 13:31:31 | INFO    | __main__ | Portfolio Summary: Cash=₹130,760 | Open=1 | Total P&L=₹-41 | Win Rate=41.9%
