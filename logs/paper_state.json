@@ -1,19 +1,19 @@
 {
-  "cash": 128425.03927416599,
+  "cash": 126238.38861281099,
   "positions": {
     "BPCL.NS": {
       "ticker": "BPCL.NS",
       "direction": "LONG",
-      "entry_price": 304.2,
-      "qty": 1197,
-      "stop_loss": 302.53,
-      "initial_stop_loss": 302.53,
-      "target": 309.61,
-      "risk_per_share": 1.67,
+      "entry_price": 302.15,
+      "qty": 1204,
+      "stop_loss": 300.49,
+      "initial_stop_loss": 300.49,
+      "target": 309.02,
+      "risk_per_share": 1.66,
       "trailed_to_be": false,
       "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-09-08 13:46:06 IST",
-      "entry_cost": 218.59
+      "entry_time": "2026-09-08 14:01:27 IST",
+      "entry_cost": 218.41
     }
   },
   "trade_history": [
@@ -419,6 +419,19 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-08 13:31:30 IST",
       "exit_time": "2026-09-08 13:46:06 IST"
+    },
+    {
+      "ticker": "BPCL.NS",
+      "direction": "LONG",
+      "entry_price": 304.2,
+      "exit_price": 302.53,
+      "qty": 1197,
+      "pnl": -2525.63,
+      "pnl_pct": -0.69,
+      "reason": "stop_loss",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-08 13:46:06 IST",
+      "exit_time": "2026-09-08 14:01:26 IST"
     }
   ],
   "daily_trades_count": {
@@ -436,9 +449,9 @@
     "2026-09-02": 1,
     "2026-09-04": 2,
     "2026-09-07": 5,
-    "2026-09-08": 2
+    "2026-09-08": 3
   },
-  "total_pnl": -2566.839366790009,
-  "total_trades": 32,
+  "total_pnl": -5092.471232845028,
+  "total_trades": 33,
   "winning_trades": 13
 }
