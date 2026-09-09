@@ -35206,3 +35206,11 @@
 2026-09-09 14:46:12 | INFO    | engine.paper_trader | ENTER LONG ULTRACEMCO.NS @ ₹10874.0 | Qty: 33 | SL: ₹10814.19 | Target: ₹10960.96 | Risk: ₹1974.0
 2026-09-09 14:46:12 | INFO    | __main__ | Discord notification sent
 2026-09-09 14:46:12 | INFO    | __main__ | Portfolio Summary: Cash=₹4,993 | Open=2 | Total P&L=₹-3,903 | Win Rate=38.9%
+2026-09-09 15:01:11 | INFO    | __main__ | ============================================================
+2026-09-09 15:01:11 | INFO    | __main__ | Intraday Scan | 2026-09-09 15:01 IST
+2026-09-09 15:01:11 | INFO    | __main__ | ============================================================
+2026-09-09 15:01:11 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-09 15:01:21 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-09 15:01:21 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-09 15:01:21 | INFO    | __main__ | VWAP MR Signals Found: 1
+2026-09-09 15:01:21 | INFO    | __main__ | Portfolio Summary: Cash=₹4,993 | Open=2 | Total P&L=₹-3,903 | Win Rate=38.9%
