@@ -35214,3 +35214,16 @@
 2026-09-09 15:01:21 | INFO    | __main__ | Received valid intraday data for 39 tickers
 2026-09-09 15:01:21 | INFO    | __main__ | VWAP MR Signals Found: 1
 2026-09-09 15:01:21 | INFO    | __main__ | Portfolio Summary: Cash=₹4,993 | Open=2 | Total P&L=₹-3,903 | Win Rate=38.9%
+2026-09-09 15:15:53 | INFO    | __main__ | ============================================================
+2026-09-09 15:15:53 | INFO    | __main__ | Intraday Scan | 2026-09-09 15:15 IST
+2026-09-09 15:15:53 | INFO    | __main__ | ============================================================
+2026-09-09 15:15:53 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-09 15:16:02 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-09 15:16:02 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-09 15:16:02 | INFO    | engine.paper_trader | EXIT INFY.NS @ ₹1032.800048828125 | P&L: ₹-473 (square_off)
+2026-09-09 15:16:02 | INFO    | engine.paper_trader | EXIT ULTRACEMCO.NS @ ₹10885.0 | P&L: ₹-159 (square_off)
+2026-09-09 15:16:03 | INFO    | __main__ | Discord notification sent
+2026-09-09 15:16:03 | INFO    | __main__ | Discord notification sent
+2026-09-09 15:16:03 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
+2026-09-09 15:16:03 | INFO    | __main__ | Discord notification sent
+2026-09-09 15:16:03 | INFO    | __main__ | EOD Summary: {'date': '2026-09-09', 'today_trades': 3, 'today_pnl': np.float64(-960.01), 'today_winners': 0, 'total_pnl': np.float64(-4535.04), 'win_rate_pct': 38.9, 'return_pct': np.float64(-0.91)}

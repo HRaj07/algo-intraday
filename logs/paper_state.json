@@ -1,35 +1,6 @@
 {
-  "cash": 4992.5746177814435,
-  "positions": {
-    "INFY.NS": {
-      "ticker": "INFY.NS",
-      "direction": "LONG",
-      "entry_price": 1034.9,
-      "qty": 123,
-      "stop_loss": 1029.21,
-      "initial_stop_loss": 1029.21,
-      "target": 1043.0,
-      "risk_per_share": 5.69,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-09-09 13:46:11 IST",
-      "entry_cost": 91.77
-    },
-    "ULTRACEMCO.NS": {
-      "ticker": "ULTRACEMCO.NS",
-      "direction": "LONG",
-      "entry_price": 10874.0,
-      "qty": 33,
-      "stop_loss": 10814.19,
-      "initial_stop_loss": 10814.19,
-      "target": 10960.96,
-      "risk_per_share": 59.81,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-09-09 14:46:12 IST",
-      "entry_cost": 215.76
-    }
-  },
+  "cash": 490802.83957022324,
+  "positions": {},
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -472,6 +443,32 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-09 10:01:16 IST",
       "exit_time": "2026-09-09 14:46:12 IST"
+    },
+    {
+      "ticker": "INFY.NS",
+      "direction": "LONG",
+      "entry_price": 1034.9,
+      "exit_price": 1032.8,
+      "qty": 123,
+      "pnl": -473.45,
+      "pnl_pct": -0.37,
+      "reason": "square_off",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-09 13:46:11 IST",
+      "exit_time": "2026-09-09 15:16:02 IST"
+    },
+    {
+      "ticker": "ULTRACEMCO.NS",
+      "direction": "LONG",
+      "entry_price": 10874.0,
+      "exit_price": 10885.0,
+      "qty": 33,
+      "pnl": -158.52,
+      "pnl_pct": -0.04,
+      "reason": "square_off",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-09 14:46:12 IST",
+      "exit_time": "2026-09-09 15:16:02 IST"
     }
   ],
   "daily_trades_count": {
@@ -492,7 +489,7 @@
     "2026-09-08": 3,
     "2026-09-09": 3
   },
-  "total_pnl": -3903.0750492245415,
+  "total_pnl": -4535.04009678278,
   "total_trades": 36,
   "winning_trades": 14
 }
