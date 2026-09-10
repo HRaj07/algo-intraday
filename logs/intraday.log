@@ -35486,3 +35486,16 @@
 2026-09-10 15:01:17 | INFO    | engine.paper_trader | ENTER LONG INDUSINDBK.NS @ ₹987.4 | Qty: 129 | SL: ₹981.97 | Target: ₹995.12 | Risk: ₹700.0
 2026-09-10 15:01:18 | INFO    | __main__ | Discord notification sent
 2026-09-10 15:01:18 | INFO    | __main__ | Portfolio Summary: Cash=₹84 | Open=2 | Total P&L=₹-4,535 | Win Rate=36.8%
+2026-09-10 15:15:54 | INFO    | __main__ | ============================================================
+2026-09-10 15:15:54 | INFO    | __main__ | Intraday Scan | 2026-09-10 15:15 IST
+2026-09-10 15:15:54 | INFO    | __main__ | ============================================================
+2026-09-10 15:15:54 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-10 15:16:04 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-10 15:16:04 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-10 15:16:04 | INFO    | engine.paper_trader | EXIT HCLTECH.NS @ ₹1199.0 | P&L: ₹-1462 (square_off)
+2026-09-10 15:16:04 | INFO    | engine.paper_trader | EXIT INDUSINDBK.NS @ ₹990.0 | P&L: ₹+120 (square_off)
+2026-09-10 15:16:05 | INFO    | __main__ | Discord notification sent
+2026-09-10 15:16:05 | INFO    | __main__ | Discord notification sent
+2026-09-10 15:16:05 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
+2026-09-10 15:16:05 | INFO    | __main__ | Discord notification sent
+2026-09-10 15:16:05 | INFO    | __main__ | EOD Summary: {'date': '2026-09-10', 'today_trades': 2, 'today_pnl': np.float64(-1342.56), 'today_winners': 1, 'total_pnl': np.float64(-5877.59), 'win_rate_pct': 39.5, 'return_pct': np.float64(-1.18)}
