@@ -35431,3 +35431,12 @@
 2026-09-10 13:33:25 | INFO    | engine.paper_trader | ENTER LONG HCLTECH.NS @ ₹1202.1 | Qty: 302 | SL: ₹1195.49 | Target: ₹1220.52 | Risk: ₹1996.0
 2026-09-10 13:33:26 | INFO    | __main__ | Discord notification sent
 2026-09-10 13:33:26 | INFO    | __main__ | Portfolio Summary: Cash=₹127,551 | Open=1 | Total P&L=₹-4,535 | Win Rate=37.8%
+2026-09-10 13:45:50 | INFO    | __main__ | ============================================================
+2026-09-10 13:45:50 | INFO    | __main__ | Intraday Scan | 2026-09-10 13:45 IST
+2026-09-10 13:45:50 | INFO    | __main__ | ============================================================
+2026-09-10 13:45:50 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-10 13:46:03 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-10 13:46:03 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-10 13:46:04 | INFO    | strategies.vwap_mr | VWAP MR: 0 signals from 39 tickers (skipped: 0)
+2026-09-10 13:46:04 | INFO    | __main__ | VWAP MR Signals Found: 0
+2026-09-10 13:46:04 | INFO    | __main__ | Portfolio Summary: Cash=₹127,551 | Open=1 | Total P&L=₹-4,535 | Win Rate=37.8%
