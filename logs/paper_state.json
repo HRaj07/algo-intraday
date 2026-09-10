@@ -1,5 +1,5 @@
 {
-  "cash": 127550.6347561233,
+  "cash": 84.22565782330639,
   "positions": {
     "HCLTECH.NS": {
       "ticker": "HCLTECH.NS",
@@ -14,6 +14,20 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-10 13:33:25 IST",
       "entry_cost": 218.0
+    },
+    "INDUSINDBK.NS": {
+      "ticker": "INDUSINDBK.NS",
+      "direction": "LONG",
+      "entry_price": 987.4,
+      "qty": 129,
+      "stop_loss": 981.97,
+      "initial_stop_loss": 981.97,
+      "target": 995.12,
+      "risk_per_share": 5.43,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-10 15:01:17 IST",
+      "entry_cost": 91.81
     }
   },
   "trade_history": [
@@ -503,9 +517,9 @@
     "2026-09-07": 5,
     "2026-09-08": 3,
     "2026-09-09": 3,
-    "2026-09-10": 1
+    "2026-09-10": 2
   },
   "total_pnl": -4535.04009678278,
-  "total_trades": 37,
+  "total_trades": 38,
   "winning_trades": 14
 }
