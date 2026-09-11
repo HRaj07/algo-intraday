@@ -35764,3 +35764,7 @@
 2026-09-11 15:16:01 | INFO    | __main__ | Received valid intraday data for 39 tickers
 2026-09-11 15:16:01 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
 2026-09-11 15:16:01 | INFO    | __main__ | EOD Summary: {'date': '2026-09-11', 'today_trades': 0, 'today_pnl': 0, 'today_winners': 0, 'total_pnl': -5877.59, 'win_rate_pct': 39.5, 'return_pct': -1.18}
+2026-09-11 15:31:17 | INFO    | __main__ | ============================================================
+2026-09-11 15:31:17 | INFO    | __main__ | Intraday Scan | 2026-09-11 15:31 IST
+2026-09-11 15:31:17 | INFO    | __main__ | ============================================================
+2026-09-11 15:31:17 | INFO    | __main__ | Outside NSE trading hours
