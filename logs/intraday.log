@@ -35859,3 +35859,10 @@
 2026-09-14 11:16:04 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
 2026-09-14 11:16:04 | INFO    | __main__ | Received valid intraday data for 0 tickers
 2026-09-14 11:16:04 | WARNING | __main__ | No today data received
+2026-09-14 11:31:29 | INFO    | __main__ | ============================================================
+2026-09-14 11:31:29 | INFO    | __main__ | Intraday Scan | 2026-09-14 11:31 IST
+2026-09-14 11:31:29 | INFO    | __main__ | ============================================================
+2026-09-14 11:31:29 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-14 11:31:39 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-14 11:31:39 | INFO    | __main__ | Received valid intraday data for 0 tickers
+2026-09-14 11:31:39 | WARNING | __main__ | No today data received
