@@ -35978,3 +35978,7 @@
 2026-09-14 15:15:59 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
 2026-09-14 15:15:59 | INFO    | __main__ | Received valid intraday data for 0 tickers
 2026-09-14 15:15:59 | WARNING | __main__ | No today data received
+2026-09-14 15:31:35 | INFO    | __main__ | ============================================================
+2026-09-14 15:31:35 | INFO    | __main__ | Intraday Scan | 2026-09-14 15:31 IST
+2026-09-14 15:31:35 | INFO    | __main__ | ============================================================
+2026-09-14 15:31:35 | INFO    | __main__ | Outside NSE trading hours
