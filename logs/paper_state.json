@@ -1,6 +1,63 @@
 {
-  "cash": 489460.2814738233,
-  "positions": {},
+  "cash": -10744.884506226725,
+  "positions": {
+    "ICICIBANK.NS": {
+      "ticker": "ICICIBANK.NS",
+      "direction": "LONG",
+      "entry_price": 1358.5,
+      "qty": 267,
+      "stop_loss": 1351.03,
+      "initial_stop_loss": 1351.03,
+      "target": 1372.23,
+      "risk_per_share": 7.47,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-15 10:01:18 IST",
+      "entry_cost": 217.84
+    },
+    "SHRIRAMFIN.NS": {
+      "ticker": "SHRIRAMFIN.NS",
+      "direction": "LONG",
+      "entry_price": 1006.3,
+      "qty": 125,
+      "stop_loss": 1000.77,
+      "initial_stop_loss": 1000.77,
+      "target": 1019.44,
+      "risk_per_share": 5.53,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-15 10:01:18 IST",
+      "entry_cost": 90.96
+    },
+    "EICHERMOT.NS": {
+      "ticker": "EICHERMOT.NS",
+      "direction": "LONG",
+      "entry_price": 7481.5,
+      "qty": 1,
+      "stop_loss": 7440.35,
+      "initial_stop_loss": 7440.35,
+      "target": 7540.72,
+      "risk_per_share": 41.15,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-15 10:01:18 IST",
+      "entry_cost": 27.61
+    },
+    "LT.NS": {
+      "ticker": "LT.NS",
+      "direction": "LONG",
+      "entry_price": 3854.6,
+      "qty": 1,
+      "stop_loss": 3833.4,
+      "initial_stop_loss": 3833.4,
+      "target": 3885.04,
+      "risk_per_share": 21.2,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-15 10:01:18 IST",
+      "entry_cost": 25.66
+    }
+  },
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -514,9 +571,10 @@
     "2026-09-07": 5,
     "2026-09-08": 3,
     "2026-09-09": 3,
-    "2026-09-10": 2
+    "2026-09-10": 2,
+    "2026-09-15": 4
   },
   "total_pnl": -5877.59428078275,
-  "total_trades": 38,
+  "total_trades": 42,
   "winning_trades": 15
 }

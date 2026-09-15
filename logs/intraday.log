@@ -36037,3 +36037,19 @@
 2026-09-15 09:45:58 | INFO    | strategies.vwap_mr | VWAP MR: 0 signals from 39 tickers (skipped: 0)
 2026-09-15 09:45:58 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-09-15 09:45:58 | INFO    | __main__ | Portfolio Summary: Cash=₹489,460 | Open=0 | Total P&L=₹-5,878 | Win Rate=39.5%
+2026-09-15 10:01:05 | INFO    | __main__ | ============================================================
+2026-09-15 10:01:05 | INFO    | __main__ | Intraday Scan | 2026-09-15 10:01 IST
+2026-09-15 10:01:05 | INFO    | __main__ | ============================================================
+2026-09-15 10:01:05 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-15 10:01:18 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-15 10:01:18 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-15 10:01:18 | INFO    | __main__ | VWAP MR Signals Found: 4
+2026-09-15 10:01:18 | INFO    | engine.paper_trader | ENTER LONG ICICIBANK.NS @ ₹1358.5 | Qty: 267 | SL: ₹1351.03 | Target: ₹1372.23 | Risk: ₹1994.0
+2026-09-15 10:01:18 | INFO    | engine.paper_trader | ENTER LONG SHRIRAMFIN.NS @ ₹1006.3 | Qty: 125 | SL: ₹1000.77 | Target: ₹1019.44 | Risk: ₹691.0
+2026-09-15 10:01:18 | INFO    | engine.paper_trader | ENTER LONG EICHERMOT.NS @ ₹7481.5 | Qty: 1 | SL: ₹7440.35 | Target: ₹7540.72 | Risk: ₹41.0
+2026-09-15 10:01:18 | INFO    | engine.paper_trader | ENTER LONG LT.NS @ ₹3854.6 | Qty: 1 | SL: ₹3833.4 | Target: ₹3885.04 | Risk: ₹21.0
+2026-09-15 10:01:21 | INFO    | __main__ | Discord notification sent
+2026-09-15 10:01:21 | INFO    | __main__ | Discord notification sent
+2026-09-15 10:01:21 | INFO    | __main__ | Discord notification sent
+2026-09-15 10:01:22 | INFO    | __main__ | Discord notification sent
+2026-09-15 10:01:22 | INFO    | __main__ | Portfolio Summary: Cash=₹-10,745 | Open=4 | Total P&L=₹-5,878 | Win Rate=35.7%
