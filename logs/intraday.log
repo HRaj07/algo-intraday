@@ -36191,3 +36191,13 @@
 2026-09-15 13:31:23 | INFO    | engine.paper_trader | Daily trade limit (5) reached for 2026-09-15
 2026-09-15 13:31:23 | INFO    | engine.paper_trader | Daily trade limit (5) reached for 2026-09-15
 2026-09-15 13:31:23 | INFO    | __main__ | Portfolio Summary: Cash=₹113,407 | Open=3 | Total P&L=₹-7,605 | Win Rate=34.9%
+2026-09-15 13:45:50 | INFO    | __main__ | ============================================================
+2026-09-15 13:45:50 | INFO    | __main__ | Intraday Scan | 2026-09-15 13:45 IST
+2026-09-15 13:45:50 | INFO    | __main__ | ============================================================
+2026-09-15 13:45:50 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-15 13:46:01 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-15 13:46:01 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-15 13:46:01 | INFO    | __main__ | VWAP MR Signals Found: 2
+2026-09-15 13:46:01 | INFO    | engine.paper_trader | Daily trade limit (5) reached for 2026-09-15
+2026-09-15 13:46:01 | INFO    | engine.paper_trader | Daily trade limit (5) reached for 2026-09-15
+2026-09-15 13:46:01 | INFO    | __main__ | Portfolio Summary: Cash=₹113,407 | Open=3 | Total P&L=₹-7,605 | Win Rate=34.9%
