@@ -36271,3 +36271,18 @@
 2026-09-15 15:01:15 | INFO    | engine.paper_trader | Daily trade limit (5) reached for 2026-09-15
 2026-09-15 15:01:15 | INFO    | engine.paper_trader | Daily trade limit (5) reached for 2026-09-15
 2026-09-15 15:01:15 | INFO    | __main__ | Portfolio Summary: Cash=₹113,407 | Open=3 | Total P&L=₹-7,605 | Win Rate=34.9%
+2026-09-15 15:15:53 | INFO    | __main__ | ============================================================
+2026-09-15 15:15:53 | INFO    | __main__ | Intraday Scan | 2026-09-15 15:15 IST
+2026-09-15 15:15:53 | INFO    | __main__ | ============================================================
+2026-09-15 15:15:53 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-15 15:16:03 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-15 15:16:03 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-15 15:16:03 | INFO    | engine.paper_trader | EXIT ICICIBANK.NS @ ₹1355.5 | P&L: ₹-1327 (square_off)
+2026-09-15 15:16:03 | INFO    | engine.paper_trader | EXIT EICHERMOT.NS @ ₹7489.5 | P&L: ₹-49 (square_off)
+2026-09-15 15:16:03 | INFO    | engine.paper_trader | EXIT LT.NS @ ₹3841.800048828125 | P&L: ₹-65 (square_off)
+2026-09-15 15:16:04 | INFO    | __main__ | Discord notification sent
+2026-09-15 15:16:05 | INFO    | __main__ | Discord notification sent
+2026-09-15 15:16:05 | INFO    | __main__ | Discord notification sent
+2026-09-15 15:16:05 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
+2026-09-15 15:16:05 | INFO    | __main__ | Discord notification sent
+2026-09-15 15:16:05 | INFO    | __main__ | EOD Summary: {'date': '2026-09-15', 'today_trades': 5, 'today_pnl': np.float64(-3167.91), 'today_winners': 0, 'total_pnl': np.float64(-9045.51), 'win_rate_pct': 34.9, 'return_pct': np.float64(-1.81)}
