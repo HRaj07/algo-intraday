@@ -1,5 +1,5 @@
 {
-  "cash": 315.9469598982687,
+  "cash": 113406.56589342827,
   "positions": {
     "ICICIBANK.NS": {
       "ticker": "ICICIBANK.NS",
@@ -42,20 +42,6 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-15 10:01:18 IST",
       "entry_cost": 25.66
-    },
-    "SHRIRAMFIN.NS": {
-      "ticker": "SHRIRAMFIN.NS",
-      "direction": "LONG",
-      "entry_price": 998.5,
-      "qty": 114,
-      "stop_loss": 993.01,
-      "initial_stop_loss": 993.01,
-      "target": 1013.82,
-      "risk_per_share": 5.49,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-09-15 10:31:22 IST",
-      "entry_cost": 84.56
     }
   },
   "trade_history": [
@@ -565,6 +551,19 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-15 10:01:18 IST",
       "exit_time": "2026-09-15 10:31:22 IST"
+    },
+    {
+      "ticker": "SHRIRAMFIN.NS",
+      "direction": "LONG",
+      "entry_price": 998.5,
+      "exit_price": 993.01,
+      "qty": 114,
+      "pnl": -822.94,
+      "pnl_pct": -0.72,
+      "reason": "stop_loss",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-15 10:31:22 IST",
+      "exit_time": "2026-09-15 11:16:03 IST"
     }
   ],
   "daily_trades_count": {
@@ -587,7 +586,7 @@
     "2026-09-10": 2,
     "2026-09-15": 5
   },
-  "total_pnl": -6781.667385157746,
+  "total_pnl": -7604.608451627747,
   "total_trades": 43,
   "winning_trades": 15
 }

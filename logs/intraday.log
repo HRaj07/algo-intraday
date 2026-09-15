@@ -36095,3 +36095,15 @@
 2026-09-15 11:01:18 | INFO    | engine.paper_trader | Daily trade limit (5) reached for 2026-09-15
 2026-09-15 11:01:18 | INFO    | engine.paper_trader | Daily trade limit (5) reached for 2026-09-15
 2026-09-15 11:01:18 | INFO    | __main__ | Portfolio Summary: Cash=₹316 | Open=4 | Total P&L=₹-6,782 | Win Rate=34.9%
+2026-09-15 11:15:50 | INFO    | __main__ | ============================================================
+2026-09-15 11:15:50 | INFO    | __main__ | Intraday Scan | 2026-09-15 11:15 IST
+2026-09-15 11:15:50 | INFO    | __main__ | ============================================================
+2026-09-15 11:15:50 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-15 11:16:03 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-15 11:16:03 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-15 11:16:03 | INFO    | engine.paper_trader | EXIT SHRIRAMFIN.NS @ ₹993.01 | P&L: ₹-823 (stop_loss)
+2026-09-15 11:16:04 | INFO    | __main__ | Discord notification sent
+2026-09-15 11:16:04 | INFO    | __main__ | VWAP MR Signals Found: 2
+2026-09-15 11:16:04 | INFO    | engine.paper_trader | Daily trade limit (5) reached for 2026-09-15
+2026-09-15 11:16:04 | INFO    | engine.paper_trader | Daily trade limit (5) reached for 2026-09-15
+2026-09-15 11:16:04 | INFO    | __main__ | Portfolio Summary: Cash=₹113,407 | Open=3 | Total P&L=₹-7,605 | Win Rate=34.9%
