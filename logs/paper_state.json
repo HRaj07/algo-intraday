@@ -1,6 +1,21 @@
 {
-  "cash": 486292.37822431803,
-  "positions": {},
+  "cash": 123074.39172431803,
+  "positions": {
+    "TCS.NS": {
+      "ticker": "TCS.NS",
+      "direction": "LONG",
+      "entry_price": 2200.0,
+      "qty": 165,
+      "stop_loss": 2187.9,
+      "initial_stop_loss": 2187.9,
+      "target": 2229.59,
+      "risk_per_share": 12.1,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-16 13:46:02 IST",
+      "entry_cost": 217.99
+    }
+  },
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -580,9 +595,10 @@
     "2026-09-08": 3,
     "2026-09-09": 3,
     "2026-09-10": 2,
-    "2026-09-15": 5
+    "2026-09-15": 5,
+    "2026-09-16": 1
   },
   "total_pnl": -9045.506120737975,
-  "total_trades": 43,
+  "total_trades": 44,
   "winning_trades": 15
 }
