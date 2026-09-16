@@ -36534,3 +36534,13 @@
 2026-09-16 14:45:56 | INFO    | __main__ | Received valid intraday data for 39 tickers
 2026-09-16 14:45:56 | INFO    | __main__ | VWAP MR Signals Found: 1
 2026-09-16 14:45:56 | INFO    | __main__ | Portfolio Summary: Cash=₹120,677 | Open=1 | Total P&L=₹-11,567 | Win Rate=33.3%
+2026-09-16 15:01:05 | INFO    | __main__ | ============================================================
+2026-09-16 15:01:05 | INFO    | __main__ | Intraday Scan | 2026-09-16 15:01 IST
+2026-09-16 15:01:05 | INFO    | __main__ | ============================================================
+2026-09-16 15:01:05 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-16 15:01:14 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-16 15:01:14 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-16 15:01:14 | INFO    | __main__ | VWAP MR Signals Found: 2
+2026-09-16 15:01:14 | INFO    | engine.paper_trader | ENTER LONG TECHM.NS @ ₹1548.8 | Qty: 77 | SL: ₹1540.28 | Target: ₹1572.63 | Risk: ₹656.0
+2026-09-16 15:01:14 | INFO    | __main__ | Discord notification sent
+2026-09-16 15:01:14 | INFO    | __main__ | Portfolio Summary: Cash=₹1,332 | Open=2 | Total P&L=₹-11,567 | Win Rate=32.6%

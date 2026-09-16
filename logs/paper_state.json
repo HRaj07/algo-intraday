@@ -1,5 +1,5 @@
 {
-  "cash": 120676.80337706808,
+  "cash": 1331.7409322680905,
   "positions": {
     "TCS.NS": {
       "ticker": "TCS.NS",
@@ -14,6 +14,20 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-16 14:31:28 IST",
       "entry_cost": 217.92
+    },
+    "TECHM.NS": {
+      "ticker": "TECHM.NS",
+      "direction": "LONG",
+      "entry_price": 1548.8,
+      "qty": 77,
+      "stop_loss": 1540.28,
+      "initial_stop_loss": 1540.28,
+      "target": 1572.63,
+      "risk_per_share": 8.52,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-16 15:01:14 IST",
+      "entry_cost": 87.46
     }
   },
   "trade_history": [
@@ -609,9 +623,9 @@
     "2026-09-09": 3,
     "2026-09-10": 2,
     "2026-09-15": 5,
-    "2026-09-16": 2
+    "2026-09-16": 3
   },
   "total_pnl": -11567.16436998796,
-  "total_trades": 45,
+  "total_trades": 46,
   "winning_trades": 15
 }
