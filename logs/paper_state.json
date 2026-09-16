@@ -1,19 +1,19 @@
 {
-  "cash": 123074.39172431803,
+  "cash": 120676.80337706808,
   "positions": {
     "TCS.NS": {
       "ticker": "TCS.NS",
       "direction": "LONG",
-      "entry_price": 2200.0,
-      "qty": 165,
-      "stop_loss": 2187.9,
-      "initial_stop_loss": 2187.9,
-      "target": 2229.59,
-      "risk_per_share": 12.1,
+      "entry_price": 2186.0,
+      "qty": 166,
+      "stop_loss": 2173.98,
+      "initial_stop_loss": 2173.98,
+      "target": 2227.44,
+      "risk_per_share": 12.02,
       "trailed_to_be": false,
       "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-09-16 13:46:02 IST",
-      "entry_cost": 217.99
+      "entry_time": "2026-09-16 14:31:28 IST",
+      "entry_cost": 217.92
     }
   },
   "trade_history": [
@@ -575,6 +575,19 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-15 10:01:18 IST",
       "exit_time": "2026-09-15 15:16:03 IST"
+    },
+    {
+      "ticker": "TCS.NS",
+      "direction": "LONG",
+      "entry_price": 2200.0,
+      "exit_price": 2187.9,
+      "qty": 165,
+      "pnl": -2521.66,
+      "pnl_pct": -0.69,
+      "reason": "stop_loss",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-16 13:46:02 IST",
+      "exit_time": "2026-09-16 14:31:28 IST"
     }
   ],
   "daily_trades_count": {
@@ -596,9 +609,9 @@
     "2026-09-09": 3,
     "2026-09-10": 2,
     "2026-09-15": 5,
-    "2026-09-16": 1
+    "2026-09-16": 2
   },
-  "total_pnl": -9045.506120737975,
-  "total_trades": 44,
+  "total_pnl": -11567.16436998796,
+  "total_trades": 45,
   "winning_trades": 15
 }
