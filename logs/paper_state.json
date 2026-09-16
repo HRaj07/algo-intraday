@@ -1,35 +1,6 @@
 {
-  "cash": 1331.7409322680905,
-  "positions": {
-    "TCS.NS": {
-      "ticker": "TCS.NS",
-      "direction": "LONG",
-      "entry_price": 2186.0,
-      "qty": 166,
-      "stop_loss": 2173.98,
-      "initial_stop_loss": 2173.98,
-      "target": 2227.44,
-      "risk_per_share": 12.02,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-09-16 14:31:28 IST",
-      "entry_cost": 217.92
-    },
-    "TECHM.NS": {
-      "ticker": "TECHM.NS",
-      "direction": "LONG",
-      "entry_price": 1548.8,
-      "qty": 77,
-      "stop_loss": 1540.28,
-      "initial_stop_loss": 1540.28,
-      "target": 1572.63,
-      "risk_per_share": 8.52,
-      "trailed_to_be": false,
-      "strategy": "Extreme-VWAP-MR",
-      "entry_time": "2026-09-16 15:01:14 IST",
-      "entry_cost": 87.46
-    }
-  },
+  "cash": 482480.2645552681,
+  "positions": {},
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -602,6 +573,32 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-16 13:46:02 IST",
       "exit_time": "2026-09-16 14:31:28 IST"
+    },
+    {
+      "ticker": "TCS.NS",
+      "direction": "LONG",
+      "entry_price": 2186.0,
+      "exit_price": 2183.0,
+      "qty": 166,
+      "pnl": -1024.17,
+      "pnl_pct": -0.28,
+      "reason": "square_off",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-16 14:31:28 IST",
+      "exit_time": "2026-09-16 15:15:57 IST"
+    },
+    {
+      "ticker": "TECHM.NS",
+      "direction": "LONG",
+      "entry_price": 1548.8,
+      "exit_price": 1548.0,
+      "qty": 77,
+      "pnl": -266.29,
+      "pnl_pct": -0.22,
+      "reason": "square_off",
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-16 15:01:14 IST",
+      "exit_time": "2026-09-16 15:15:57 IST"
     }
   ],
   "daily_trades_count": {
@@ -625,7 +622,7 @@
     "2026-09-15": 5,
     "2026-09-16": 3
   },
-  "total_pnl": -11567.16436998796,
+  "total_pnl": -12857.620746987957,
   "total_trades": 46,
   "winning_trades": 15
 }
