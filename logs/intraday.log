@@ -37045,3 +37045,12 @@
 2026-09-18 14:01:20 | INFO    | engine.paper_trader | TRAIL TITAN.NS stop moved to breakeven + buffer: ₹4791.13
 2026-09-18 14:01:20 | INFO    | __main__ | VWAP MR Signals Found: 1
 2026-09-18 14:01:20 | INFO    | __main__ | Portfolio Summary: Cash=₹-11,753 | Open=3 | Total P&L=₹-12,858 | Win Rate=30.6%
+2026-09-18 14:15:56 | INFO    | __main__ | ============================================================
+2026-09-18 14:15:56 | INFO    | __main__ | Intraday Scan | 2026-09-18 14:15 IST
+2026-09-18 14:15:56 | INFO    | __main__ | ============================================================
+2026-09-18 14:15:56 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-18 14:16:06 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-18 14:16:06 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-18 14:16:06 | INFO    | strategies.vwap_mr | VWAP MR: 0 signals from 39 tickers (skipped: 0)
+2026-09-18 14:16:06 | INFO    | __main__ | VWAP MR Signals Found: 0
+2026-09-18 14:16:06 | INFO    | __main__ | Portfolio Summary: Cash=₹-11,753 | Open=3 | Total P&L=₹-12,858 | Win Rate=30.6%
