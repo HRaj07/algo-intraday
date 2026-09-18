@@ -1,6 +1,21 @@
 {
-  "cash": 482480.2645552681,
-  "positions": {},
+  "cash": 123126.84642401809,
+  "positions": {
+    "TITAN.NS": {
+      "ticker": "TITAN.NS",
+      "direction": "LONG",
+      "entry_price": 4788.5,
+      "qty": 75,
+      "stop_loss": 4762.16,
+      "initial_stop_loss": 4762.16,
+      "target": 4826.39,
+      "risk_per_share": 26.34,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-18 11:16:00 IST",
+      "entry_cost": 215.92
+    }
+  },
   "trade_history": [
     {
       "ticker": "DIVISLAB.NS",
@@ -620,9 +635,10 @@
     "2026-09-09": 3,
     "2026-09-10": 2,
     "2026-09-15": 5,
-    "2026-09-16": 3
+    "2026-09-16": 3,
+    "2026-09-18": 1
   },
   "total_pnl": -12857.620746987957,
-  "total_trades": 46,
+  "total_trades": 47,
   "winning_trades": 15
 }
