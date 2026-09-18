@@ -37071,3 +37071,13 @@
 2026-09-18 14:46:04 | INFO    | __main__ | Received valid intraday data for 39 tickers
 2026-09-18 14:46:04 | INFO    | __main__ | VWAP MR Signals Found: 1
 2026-09-18 14:46:04 | INFO    | __main__ | Portfolio Summary: Cash=₹-11,753 | Open=3 | Total P&L=₹-12,858 | Win Rate=30.6%
+2026-09-18 15:01:11 | INFO    | __main__ | ============================================================
+2026-09-18 15:01:11 | INFO    | __main__ | Intraday Scan | 2026-09-18 15:01 IST
+2026-09-18 15:01:11 | INFO    | __main__ | ============================================================
+2026-09-18 15:01:11 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-18 15:01:20 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-18 15:01:20 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-18 15:01:20 | INFO    | engine.paper_trader | EXIT TITAN.NS @ ₹4826.39 | P&L: ₹+2318 (target)
+2026-09-18 15:01:20 | INFO    | __main__ | Discord notification sent
+2026-09-18 15:01:21 | INFO    | __main__ | VWAP MR Signals Found: 1
+2026-09-18 15:01:21 | INFO    | __main__ | Portfolio Summary: Cash=₹349,918 | Open=2 | Total P&L=₹-10,540 | Win Rate=32.7%
