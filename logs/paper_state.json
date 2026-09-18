@@ -1,5 +1,5 @@
 {
-  "cash": 123126.84642401809,
+  "cash": 437.1939098180883,
   "positions": {
     "TITAN.NS": {
       "ticker": "TITAN.NS",
@@ -14,6 +14,20 @@
       "strategy": "Extreme-VWAP-MR",
       "entry_time": "2026-09-18 11:16:00 IST",
       "entry_cost": 215.92
+    },
+    "TCS.NS": {
+      "ticker": "TCS.NS",
+      "direction": "LONG",
+      "entry_price": 2113.8,
+      "qty": 58,
+      "stop_loss": 2102.17,
+      "initial_stop_loss": 2102.17,
+      "target": 2135.37,
+      "risk_per_share": 11.63,
+      "trailed_to_be": false,
+      "strategy": "Extreme-VWAP-MR",
+      "entry_time": "2026-09-18 13:31:27 IST",
+      "entry_cost": 89.25
     }
   },
   "trade_history": [
@@ -636,9 +650,9 @@
     "2026-09-10": 2,
     "2026-09-15": 5,
     "2026-09-16": 3,
-    "2026-09-18": 1
+    "2026-09-18": 2
   },
   "total_pnl": -12857.620746987957,
-  "total_trades": 47,
+  "total_trades": 48,
   "winning_trades": 15
 }

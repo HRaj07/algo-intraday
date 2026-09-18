@@ -37008,3 +37008,13 @@
 2026-09-18 13:15:59 | INFO    | strategies.vwap_mr | VWAP MR: 0 signals from 39 tickers (skipped: 0)
 2026-09-18 13:15:59 | INFO    | __main__ | VWAP MR Signals Found: 0
 2026-09-18 13:15:59 | INFO    | __main__ | Portfolio Summary: Cash=₹123,127 | Open=1 | Total P&L=₹-12,858 | Win Rate=31.9%
+2026-09-18 13:31:18 | INFO    | __main__ | ============================================================
+2026-09-18 13:31:18 | INFO    | __main__ | Intraday Scan | 2026-09-18 13:31 IST
+2026-09-18 13:31:18 | INFO    | __main__ | ============================================================
+2026-09-18 13:31:18 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-18 13:31:27 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-18 13:31:27 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-18 13:31:27 | INFO    | __main__ | VWAP MR Signals Found: 1
+2026-09-18 13:31:27 | INFO    | engine.paper_trader | ENTER LONG TCS.NS @ ₹2113.8 | Qty: 58 | SL: ₹2102.17 | Target: ₹2135.37 | Risk: ₹675.0
+2026-09-18 13:31:28 | INFO    | __main__ | Discord notification sent
+2026-09-18 13:31:28 | INFO    | __main__ | Portfolio Summary: Cash=₹437 | Open=2 | Total P&L=₹-12,858 | Win Rate=31.2%
