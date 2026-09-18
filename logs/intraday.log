@@ -37081,3 +37081,16 @@
 2026-09-18 15:01:20 | INFO    | __main__ | Discord notification sent
 2026-09-18 15:01:21 | INFO    | __main__ | VWAP MR Signals Found: 1
 2026-09-18 15:01:21 | INFO    | __main__ | Portfolio Summary: Cash=₹349,918 | Open=2 | Total P&L=₹-10,540 | Win Rate=32.7%
+2026-09-18 15:15:49 | INFO    | __main__ | ============================================================
+2026-09-18 15:15:49 | INFO    | __main__ | Intraday Scan | 2026-09-18 15:15 IST
+2026-09-18 15:15:49 | INFO    | __main__ | ============================================================
+2026-09-18 15:15:49 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-18 15:16:01 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-18 15:16:01 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-18 15:16:01 | INFO    | engine.paper_trader | EXIT TCS.NS @ ₹2104.89990234375 | P&L: ₹-725 (square_off)
+2026-09-18 15:16:01 | INFO    | engine.paper_trader | EXIT MARUTI.NS @ ₹12171.0 | P&L: ₹-52 (square_off)
+2026-09-18 15:16:01 | INFO    | __main__ | Discord notification sent
+2026-09-18 15:16:02 | INFO    | __main__ | Discord notification sent
+2026-09-18 15:16:02 | INFO    | __main__ | Square-off time reached (3:15 PM) - Force closing all open positions
+2026-09-18 15:16:02 | INFO    | __main__ | Discord notification sent
+2026-09-18 15:16:02 | INFO    | __main__ | EOD Summary: {'date': '2026-09-18', 'today_trades': 3, 'today_pnl': np.float64(1540.68), 'today_winners': 1, 'total_pnl': np.float64(-11316.95), 'win_rate_pct': 32.7, 'return_pct': np.float64(-2.26)}
