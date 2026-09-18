@@ -37026,3 +37026,13 @@
 2026-09-18 13:40:04 | INFO    | __main__ | Received valid intraday data for 39 tickers
 2026-09-18 13:40:04 | INFO    | __main__ | VWAP MR Signals Found: 1
 2026-09-18 13:40:04 | INFO    | __main__ | Portfolio Summary: Cash=₹437 | Open=2 | Total P&L=₹-12,858 | Win Rate=31.2%
+2026-09-18 13:45:53 | INFO    | __main__ | ============================================================
+2026-09-18 13:45:53 | INFO    | __main__ | Intraday Scan | 2026-09-18 13:45 IST
+2026-09-18 13:45:53 | INFO    | __main__ | ============================================================
+2026-09-18 13:45:53 | INFO    | __main__ | Fetching 15m data for 39 stocks...
+2026-09-18 13:46:03 | INFO    | data.fetcher | Fetched 15min data for 39/39 tickers
+2026-09-18 13:46:03 | INFO    | __main__ | Received valid intraday data for 39 tickers
+2026-09-18 13:46:04 | INFO    | __main__ | VWAP MR Signals Found: 2
+2026-09-18 13:46:04 | INFO    | engine.paper_trader | ENTER LONG MARUTI.NS @ ₹12160.0 | Qty: 1 | SL: ₹12093.12 | Target: ₹12267.87 | Risk: ₹67.0
+2026-09-18 13:46:04 | INFO    | __main__ | Discord notification sent
+2026-09-18 13:46:04 | INFO    | __main__ | Portfolio Summary: Cash=₹-11,753 | Open=3 | Total P&L=₹-12,858 | Win Rate=30.6%
