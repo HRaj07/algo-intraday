@@ -18,51 +18,78 @@ logger = logging.getLogger(__name__)
 class IntradayFetcher:
     """Fetches 15-minute intraday data from Yahoo Finance."""
 
+    # Yahoo accepts a list of symbols in one call. At 214 names the old
+    # one-request-per-ticker loop meant 216 sequential HTTP calls every 15
+    # minutes - roughly 6,900 a day - and Yahoo throttled it. PIDILITE and LTIM
+    # came back "possibly delisted" when they are nothing of the sort.
+    #
+    # Worse, the failure was SILENT: the bot carried on with whatever subset
+    # survived, and nothing recorded which names went missing. A universe that
+    # quietly shrinks is a universe you cannot reason about.
+    BATCH_SIZE = 40
+
     def fetch_intraday(self, tickers: List[str], days_back: int = 5) -> Dict[str, pd.DataFrame]:
-        """Fetch 15-minute OHLCV data for multiple tickers."""
+        """Fetch 15-minute OHLCV for many tickers, batched to avoid throttling."""
         import yfinance as yf
 
-        results = {}
-        for ticker in tickers:
+        results: Dict[str, pd.DataFrame] = {}
+        missing: List[str] = []
+
+        for i in range(0, len(tickers), self.BATCH_SIZE):
+            batch = tickers[i:i + self.BATCH_SIZE]
             try:
-                # multi_level_index only exists in newer yfinance; guard for older versions
-                try:
-                    df = yf.download(
-                        ticker,
-                        period=f"{days_back}d",
-                        interval="15m",
-                        auto_adjust=True,
-                        progress=False,
-                        multi_level_index=False,
-                    )
-                except TypeError:
-                    df = yf.download(
-                        ticker,
-                        period=f"{days_back}d",
-                        interval="15m",
-                        auto_adjust=True,
-                        progress=False,
-                    )
-                if df.empty:
-                    continue
-                # Flatten multi-level columns if present (older yfinance returns MultiIndex)
-                if isinstance(df.columns, pd.MultiIndex):
-                    df.columns = [c[0].lower() for c in df.columns]
-                else:
-                    df.columns = [c.lower() for c in df.columns]
-                # Convert to IST then strip tz so df.index.date returns IST dates
-                from tzutil import IST as _ist
-                if df.index.tz is not None:
-                    df.index = df.index.tz_convert(_ist).tz_localize(None)
-                else:
-                    # Assume UTC if tz-naive (yfinance sometimes returns naive UTC)
-                    df.index = df.index.tz_localize("UTC").tz_convert(_ist).tz_localize(None)
-                results[ticker] = df.dropna()
-                time.sleep(0.1)
+                raw = yf.download(
+                    batch, period=f"{days_back}d", interval="15m",
+                    auto_adjust=True, progress=False, group_by="ticker",
+                    threads=True,
+                )
             except Exception as e:
-                logger.warning(f"Failed {ticker}: {e}")
+                logger.warning(f"batch {i // self.BATCH_SIZE} failed: {e}")
+                missing.extend(batch)
+                continue
+
+            if raw is None or raw.empty:
+                missing.extend(batch)
+                continue
+
+            for t in batch:
+                try:
+                    if isinstance(raw.columns, pd.MultiIndex):
+                        if t not in raw.columns.get_level_values(0):
+                            missing.append(t)
+                            continue
+                        df = raw[t].copy()
+                    else:
+                        df = raw.copy()          # single-symbol batch
+                    df.columns = [str(c).lower() for c in df.columns]
+                    df = df.dropna(how="all")
+                    if df.empty or "close" not in df.columns:
+                        missing.append(t)
+                        continue
+                    results[t] = self._to_ist(df).dropna()
+                except Exception as e:
+                    logger.debug(f"{t}: {e}")
+                    missing.append(t)
+
+            time.sleep(0.5)   # gentle between batches, not between tickers
+
         logger.info(f"Fetched 15min data for {len(results)}/{len(tickers)} tickers")
+        if missing:
+            # Name them. A silently shrinking universe is the failure mode here.
+            head = ", ".join(missing[:12])
+            more = f" (+{len(missing) - 12} more)" if len(missing) > 12 else ""
+            logger.warning(f"NO DATA for {len(missing)} symbol(s): {head}{more}")
         return results
+
+    @staticmethod
+    def _to_ist(df: pd.DataFrame) -> pd.DataFrame:
+        """Convert the index to IST and strip tz, so .date gives IST dates."""
+        from tzutil import IST as _ist
+        if df.index.tz is not None:
+            df.index = df.index.tz_convert(_ist).tz_localize(None)
+        else:
+            df.index = df.index.tz_localize("UTC").tz_convert(_ist).tz_localize(None)
+        return df
 
     def get_today_data(self, tickers: List[str]) -> Dict[str, pd.DataFrame]:
         """Get only today's 15-min bars."""

@@ -26,7 +26,14 @@ VIX_TICKER = "^INDIAVIX"
 # ---------------------------------------------------------------------------
 SYSTEM = {
     "mode": "paper",
-    "initial_capital": 500_000,
+    "initial_capital": 1_000_000,   # was 500_000
+
+    # Why not higher: capital and universe size pull against each other. Every
+    # rupee demands proportionally more liquidity, and the turnover floor that
+    # keeps the 5bps slippage assumption honest rises with it. At Rs50L you need
+    # names doing Rs625cr/day - maybe 30 on the NSE - which collapses a 214-name
+    # universe and undoes the reason for expanding it. Rs10L needs Rs125cr/day,
+    # which most of the list clears.
     "currency": "INR",
     "timezone": "Asia/Kolkata",
     "market_open": "09:15",
@@ -89,10 +96,17 @@ RISK = {
     "max_gross_notional_mult": 2.0,     # total exposure <= 2.0x equity (v1 ran 3.6x)
     "max_notional_per_trade_pct": 0.90, # one trade <= 90% of equity notional
 
-    # The fragment killer. v1 took trades as small as Rs1,264 notional (qty=1),
-    # where the ~Rs47 fixed brokerage alone is 3.7% of the position. Those
-    # trades won 6.7% of the time. If you cannot fund a real position, skip it.
-    "min_notional_per_trade": 60_000,
+    # The fragment killer, now DERIVED (see the bottom of this file) as a
+    # fraction of target notional rather than a fixed Rs60,000. The intent was
+    # never "Rs60,000" - it was "reject a position that got shrunk to a token
+    # of what was intended". A fixed rupee floor stops meaning that the moment
+    # capital changes: at Rs10L every position clears Rs60,000 trivially, and
+    # the guard silently retires.
+    #
+    # v1 took trades as small as Rs1,264 notional (qty=1), where the ~Rs47 fixed
+    # brokerage alone is 3.7% of the position. Those won 6.7% of the time.
+    "min_notional_fraction_of_target": 0.25,
+    "min_notional_per_trade": None,     # computed below
 
     # Never be more than 1% of a bar's liquidity - keeps the 5 bps slippage
     # assumption honest.
@@ -228,8 +242,15 @@ FILTERS = {
     # Gap filter - an overnight gap is an event, not a stretched rubber band.
     "max_opening_gap_pct": 0.015,
 
-    # Liquidity floor, enforced per-name at scan time.
-    "min_median_15m_turnover": 2_00_00_000,   # Rs2 crore per 15-min bar
+    # Liquidity floor, DERIVED from capital (see the bottom of this file).
+    # A fixed Rs2cr was already too low: at Rs5L the wanted notional was Rs2.5L
+    # against a Rs2L cap (1% of a Rs2cr bar), so positions in thin names were
+    # being silently shrunk below target risk - which concentrates the book into
+    # liquid names without ever saying so.
+    #
+    # Deriving it means the universe self-selects to names that can absorb the
+    # size actually being traded. Raise capital and the floor follows.
+    "min_median_15m_turnover": None,    # computed below
 }
 
 # ---------------------------------------------------------------------------
@@ -249,6 +270,19 @@ def _min_deviation_for_cost_hurdle(
     from_trigger = (min_rr * stop_floor + cost_pct) / blended_mult
     return round(from_trigger + trigger_gap, 5)
 
+
+def _target_notional() -> float:
+    """Notional a full-size trade wants, at the floor stop."""
+    return SYSTEM["initial_capital"] * RISK["risk_pct_per_trade"] / STRATEGY["stop_pct_floor"]
+
+
+# A name must be able to absorb the position inside the bar-volume cap.
+RISK["min_median_15m_turnover"] = _target_notional() / RISK["max_pct_of_bar_volume"]
+FILTERS["min_median_15m_turnover"] = RISK["min_median_15m_turnover"]
+
+# A position shrunk below this fraction of intent is not a smaller good trade,
+# it is a donation to the fixed costs.
+RISK["min_notional_per_trade"] = _target_notional() * RISK["min_notional_fraction_of_target"]
 
 STRATEGY["min_vwap_deviation"] = _min_deviation_for_cost_hurdle(
     min_rr=STRATEGY["min_reward_risk_after_cost"],

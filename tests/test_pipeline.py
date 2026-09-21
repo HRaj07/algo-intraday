@@ -107,6 +107,31 @@ check("v2's stop band needs materially less",
       f"{breakeven_win_rate(2000, 0.015, 1.5) * 100:.1f}%")
 
 print("\n" + "=" * 70)
+print("1b. DERIVED CONFIG - settings that must agree, cannot drift apart")
+print("=" * 70)
+# Three numbers are now computed from capital and the cost hurdle rather than
+# typed in. Each one was a bug waiting to happen as a literal: a fixed Rs2cr
+# turnover floor was already too low at Rs5L capital, and a fixed Rs60,000
+# notional floor silently retires the moment capital doubles.
+_target = SYSTEM["initial_capital"] * RISK["risk_pct_per_trade"] / STRATEGY["stop_pct_floor"]
+
+check("a full-size position fits inside the bar-volume cap",
+      _target <= FILTERS["min_median_15m_turnover"] * RISK["max_pct_of_bar_volume"] + 1,
+      f"target Rs{_target:,.0f} vs cap Rs{FILTERS['min_median_15m_turnover'] * RISK['max_pct_of_bar_volume']:,.0f}")
+check("turnover floor scales with capital",
+      FILTERS["min_median_15m_turnover"] > 4e7,
+      f"Rs{FILTERS['min_median_15m_turnover'] / 1e7:.1f}cr per 15-min bar")
+check("minimum notional is a fraction of target, not a literal",
+      abs(RISK["min_notional_per_trade"]
+          - _target * RISK["min_notional_fraction_of_target"]) < 1,
+      f"Rs{RISK['min_notional_per_trade']:,.0f} = "
+      f"{RISK['min_notional_fraction_of_target'] * 100:.0f}% of target")
+check("deviation floor still clears the cost hurdle",
+      STRATEGY["min_vwap_deviation"] * (1 + STRATEGY["t2_vwap_overshoot"] / 2)
+      - 0.001355 >= STRATEGY["min_reward_risk_after_cost"] * STRATEGY["stop_pct_floor"] - 1e-9,
+      f"{STRATEGY['min_vwap_deviation'] * 100:.3f}%")
+
+print("\n" + "=" * 70)
 print("2. RISK MANAGER - the gates v1 did not have")
 print("=" * 70)
 
