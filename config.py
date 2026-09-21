@@ -270,28 +270,6 @@ STRATEGY["min_vwap_deviation"] = _min_deviation_for_cost_hurdle(
 
 REPORTING = {"report_dir": "reports", "log_dir": "logs"}
 
-# ---------------------------------------------------------------------------
-# BACK-COMPAT SHIMS - deprecated, kept only so the v1 modules and the research
-# scripts in the repo root still import. Nothing in the live v2 path uses these.
-#
-# COSTS in particular is the OLD cost dict, and it is the reason this repo lost
-# money: it was mirrored by a Rs50 flat fee in profit_max_sweep.py. Live code
-# must import from costs.py instead, which is the single source of truth.
-# ---------------------------------------------------------------------------
-try:
-    from config_v1 import (          # noqa: F401
-        ORB_CONFIG,
-        VWAP_MR_CONFIG,
-        COSTS,
-    )
-except ImportError:                  # pragma: no cover
-    ORB_CONFIG = VWAP_MR_CONFIG = COSTS = {}
-
-# These two were referenced by strategies/ema_cross.py and vwap_pullback.py but
-# never actually defined in v1's config.py either - those modules have been
-# broken since before this rebuild. Empty dicts keep imports from exploding.
-EMA_CROSS = {}
-VWAP_PULLBACK = {}
 
 # ---------------------------------------------------------------------------
 # VALIDATION PROTOCOL - the rule that would have prevented all of this

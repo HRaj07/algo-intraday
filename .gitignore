@@ -6,3 +6,7 @@ data/cache/
 *.parquet
 *.pkl
 cache_730d.pkl
+
+# Superseded v1 research scripts and modules. Kept locally for
+# reference; never pushed. Also recoverable from git history.
+_local_archive/

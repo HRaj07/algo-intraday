@@ -1,47 +1,247 @@
-# ⚡ AlgoTrade India — Intraday Bot
+# AlgoTrade India — Intraday Bot
 
-Fully automated intraday paper trading system running on **GitHub Actions** — free, serverless, no laptop needed.
+Automated intraday **paper** trading on NSE equities, running on GitHub Actions.
+No server, no laptop needed. Scans every 15 minutes during market hours.
 
-## Live Strategy
+> **Status: rebuilt, not yet validated.**
+> v1 ran live on paper for 49 trades and lost ₹11,317. The cause was diagnosed
+> and fixed (see below), but **no v2 parameter has been backtested**. Treat this
+> as a system under test, not a working edge. The validation gate is at the
+> bottom of this file, and nothing here should touch a live broker until it clears.
 
-**Extreme VWAP Mean Reversion** (`strategies/vwap_mr.py`) is the only strategy currently wired
-into `main.py`. A 730-day backtest showed the previous ORB engine was structurally unprofitable
-(PF 0.73-0.92 across filters), so it was retired from live trading; `strategies/orb.py` and
-`ORB_CONFIG` are kept in the repo for research only.
+---
 
-| Strategy | Status | Win Rate | Profit Factor | Notes |
+## Why v1 lost money
+
+This is the whole story, and it is worth understanding before changing anything.
+
+Across 49 closed paper trades, v1 produced **+₹5,821 of gross profit** and paid
+**₹17,138 in friction**, netting **−₹11,317**. The strategy was picking winners.
+It just could not afford to trade.
+
+The reason nobody noticed: the research code and the live code used different
+cost models. `profit_max_sweep.py` — the file whose output chose every parameter
+in `config.py` — charged a flat **₹50** per round trip. The live engine's actual
+median was **₹421**. Every parameter was therefore selected in a world where
+trading was seven times cheaper than reality. Re-pricing that sweep's own headline
+result at real costs turns its advertised **+₹1,44,564 into roughly −₹56,000**.
+
+The edge was the error.
+
+### The mechanism that made it worse
+
+Position size is not a free choice. Fix your rupee risk and your stop, and notional
+follows:
+
+```
+notional = risk_in_rupees / stop_%
+```
+
+At ₹2,000 risk and v1's 0.55% stop, that is **₹3.64 lakh of stock per trade** — on
+a ₹5 lakh account. And since most costs scale with notional, a *tighter* stop means
+a *bigger* position paying *more* cost for identical risk:
+
+| Stop | Notional | Friction | As % of ₹2,000 risk | Breakeven win rate |
 |---|---|---|---|---|
-| Extreme VWAP Mean Reversion (RSI 28, long-only) | **Live** | 58.2% | 1.70 | 0.55% stop, 1.3x VWAP overshoot, max 5/day |
-| Opening Range Breakout + CPR | Research only | 45-49% | 0.73-0.92 | Not profitable enough over 3yr, disabled in `main.py` |
+| 0.55% (v1) | ₹3,63,636 | ₹535 | 26.7% | 52.8% |
+| 1.00% | ₹2,00,000 | ₹315 | 15.8% | 48.2% |
+| 1.50% | ₹1,33,333 | ₹226 | 11.3% | 46.4% |
+| 2.50% | ₹80,000 | ₹155 | 7.7% | 44.9% |
 
-### 2026-08 tuning pass
-A 3-year parameter sweep (Aug 2023 – Aug 2026, hourly bars, 15 NSE large caps, ₹2,000 risk/trade,
-₹50/trade friction) compared the strategy's exit rules head-to-head:
+v1's config described its 0.55% stop as *"Ultra Tight Stop, Max Capital Efficiency"*.
+Of every available stop width, it was the one that maximised cost per unit of risk.
+After costs its trades were **0.91 : 1** reward-to-risk, needing a **52.5% win rate**
+to return zero. It ran 32.7%.
 
-| Config | Trades | Win Rate | PF | Net P&L |
-|---|---|---|---|---|
-| Old: 0.70% stop, exit exactly at VWAP (1.0x) | 540 | 58.3% | 1.31 | +₹90,640 |
-| **New: 0.55% stop, 1.3x VWAP overshoot target** | 540 | 55.4% | **1.41** | **+₹1,44,564** |
+---
 
-Letting winners run 30% past the VWAP line (instead of exiting on touch) and tightening the stop
-from 0.70% to 0.55% raised net profit ~60% while staying net-positive in every single backtested
-year (2023, 2024, 2025, 2026). See `config.py` → `VWAP_MR_CONFIG` / `SYSTEM` for the exact
-values, and `profit_max_sweep.py` for the sweep harness.
+## What changed in v2
 
-### Long-only pass (same day, follow-up)
-Splitting the 3yr results by side exposed that the edge is one-directional:
+### Cost and sizing
 
-| Variant | Trades | WR | PF | Net P&L | Max DD |
-|---|---|---|---|---|---|
-| Both sides, max 3/day | 619 | 54.1% | 1.33 | +₹1,38,982 | ₹21,070 |
-| Short-only, max 3/day | 332 | 51.5% | 1.09 | +₹22,860 | ₹27,700 |
-| **Long-only, max 5/day (deployed)** | 330 | 58.2% | **1.70** | **+₹1,39,783** | **₹17,197** |
+| | v1 | v2 | Why |
+|---|---|---|---|
+| Cost model | two, disagreeing 7× | one, `costs.py`, shared | The backtest and the bot must price trades identically |
+| Stop | flat 0.55% | 1.2×ATR, floor 0.8%, cap 2.2% | Cuts friction ~58%; normalises risk across ITC and TATASTEEL |
+| Risk/trade | fixed ₹2,000 | 0.4% of equity | Fixed rupees keeps betting the same size all the way down |
+| Missing charges | no stamp duty, GST on brokerage only | full statutory set | v1 understated its own costs |
 
-Shorting overbought rips barely beats costs (PF 1.09) and was crowding profitable long
-signals out of the daily slots. Dropping shorts entirely (`"long_only": True`) and raising
-`max_daily_trades` to 5 keeps the same total profit with **half the trades, a 28% higher
-win rate on capital deployed, and 18% lower max drawdown**. Uncapped and looser-threshold
-variants were also tested and are worse — the score-ranked top-5 cap is doing real work.
+### Position and portfolio limits
 
-## Schedule
-Runs every 15 minutes from **9:15 AM to 3:15 PM IST** on weekdays (`.github/workflows/intraday_scan.yml`).
+v1 had none of these. One trade consumed 73% of the account; the next four were
+silently downsized to whatever cash remained, some to **qty = 1**. Those fragments
+won 6.7% of the time — at qty 1 the ₹47 fixed brokerage swamps any move.
+
+| | v1 | v2 |
+|---|---|---|
+| Concurrent positions | 5 | 2 |
+| Entries per day | 5 (only ~1.5 fundable) | 3 |
+| Per sector | unlimited | 1 |
+| Gross exposure | 3.6× equity | 2.0× equity |
+| Minimum notional | none | ₹60,000 — **below this, skip the trade** |
+| Share of bar volume | none | 1% |
+
+### Circuit breakers
+
+v1 had zero. Its worst day was −₹4,178 and it drew down 4.0% in 21 trading days
+with nothing that would ever have stopped it.
+
+- Daily loss limit: −2R
+- Weekly loss limit: −6R
+- Drawdown halt: −6% equity
+- Kill switch: rolling 30-trade profit factor below 0.85 → stop, manual restart
+
+### Engine bugs fixed
+
+1. **Square-off could fail silently.** `check_exits()` skipped any position whose
+   ticker was missing from that scan's data — not checking its stop, target *or*
+   square-off. 26 runs logged *"No today data received"* and **three positions
+   survived overnight**, one for 2.8 days. Square-off is now clock-driven and
+   unconditional, backed by a last-known-price cache.
+2. **The "breakeven" trail locked in a loss.** It moved the stop to entry + 0.1R
+   while friction was 0.27R, guaranteeing −0.17R. Now computed from the cost model.
+3. **No time stop.** 27 of 49 trades (55%) died at the closing bell averaging −₹137,
+   pinning capital in trades whose thesis had already failed.
+4. **Win rate counted entries, not closed trades**, so open positions diluted it.
+5. **Equity accounting** (found post-merge): `equity()` added full notional to cash
+   that had only lost the 20% margin, inflating equity by ₹2.4L on a ₹3L position.
+   `equity_peak` latched onto the fake high and the drawdown halt fired permanently
+   on the first close. Entry costs were also charged twice, and partial exits
+   stranded margin.
+
+### Strategy logic
+
+- **Entry is now a trigger, not a prediction.** v1 bought the close of a
+  still-forming bar while price was falling — a price you cannot actually transact
+  at. v2 rests a stop-limit buy above the signal bar's high: price must turn up and
+  take you in. If it keeps falling, no fill, no loss.
+- **Market regime gate.** No dip-buying while NIFTY sits below its own VWAP. v1 had
+  no index awareness and opened five positions on 2026-09-15, losing all five. The
+  gate **fails closed** — no index data means no trading.
+- **Don't fade news.** Relative volume ceiling, opening-gap filter, turnover floor.
+  A breakout strategy *wants* high RVOL; a mean-reversion strategy must avoid it,
+  because high RVOL means information is arriving.
+- **Cost hurdle.** Reject any signal below 1.5 : 1 reward-to-risk *after* costs.
+- **Scale out at VWAP**, then trail the remainder by 1.2×ATR.
+- **Universe cut 40 → 25** on liquidity. Four of v1's five worst P&L contributors
+  were event-driven names a reversion strategy should never have been fading.
+
+### Expect far fewer trades
+
+`STRATEGY["min_vwap_deviation"]` is **derived, not chosen**:
+
+```
+D >= (min_rr × stop_floor + cost_pct) / (1 + t2_overshoot/2)     →  1.22%
+```
+
+v1 used 0.6%, loosened from 0.8% "to fire on 15min bars" — producing signals that
+could never pay for themselves, which is precisely how it lost money. Change
+`min_reward_risk_after_cost` or `stop_pct_floor` and the threshold follows
+automatically; they cannot drift apart.
+
+If NSE large caps rarely dislocate 1.22% from VWAP, this strategy rarely has an
+opportunity worth taking. **That is a finding about the market, not a knob to turn.**
+
+---
+
+## How it runs
+
+GitHub Actions fires `python main.py` every 15 minutes, `'7,22,37,52 3-10 * * 1-5'`
+UTC — 32 runs a day, Mon–Fri. Each in-market run fetches data, caches prices, checks
+exits and squares off. Only runs inside **09:45–13:15 IST** can open a position.
+
+| Window | What happens |
+|---|---|
+| Before 09:45 | Scan and manage only — opening auction noise |
+| 09:45–13:15 | Full scan, entries allowed |
+| 13:15–15:05 | Manage open positions, no new entries |
+| 15:05 | Unconditional square-off |
+
+Square-off is 15:05, not 15:15, because Zerodha's own MIS auto-square-off runs at
+15:12 (CAS) / 15:25 and fills at market regardless of your price.
+
+### Local commands
+
+```bash
+python tests/test_pipeline.py    # 51 assertions, synthetic data, no network
+python check_data.py             # is ^NSEI actually fetching?
+python main.py                   # one scan by hand
+```
+
+`check_data.py` matters more than it sounds. The regime gate fails closed, so a
+broken index feed and a genuinely quiet market produce **identical logs**. If the
+bot goes silent for days, run it before assuming the filters are just being strict.
+
+---
+
+## Files
+
+| File | Role |
+|---|---|
+| `main.py` | Entry point. Prices → exits → fills → scan, in that order |
+| `config.py` | Every parameter, each with its justification in a comment |
+| `costs.py` | **Single source of truth for costs.** Imported by engine and backtester |
+| `strategies/vwap_mr_v2.py` | Regime gate, filters, trigger, cost hurdle |
+| `engine/risk_manager.py` | Sizing, exposure caps, circuit breakers |
+| `engine/paper_trader_v2.py` | Orders, fills, exits, ledger |
+| `data/fetcher.py` | yfinance wrapper and indicators |
+| `backtest_honest.py` | Real costs, real cash ledger, walk-forward split |
+| `tests/test_pipeline.py` | Every bug above has a test that fails if it returns |
+| `check_data.py` | Data health check |
+| `tzutil.py` | One definition of "now" (v1 logged a month in UTC by accident) |
+
+Two ledgers, deliberately separate: `logs/paper_state.json` is v1's frozen history
+(49 trades, −₹11,317); `logs/paper_state_v2.json` is live, starting fresh at ₹5L.
+
+Superseded v1 research scripts live in `_local_archive/` (gitignored) and in git
+history. To retrieve one: `git checkout <sha> -- profit_max_sweep.py`.
+
+---
+
+## Before this touches real money
+
+```bash
+python backtest_honest.py --data cache_15m.pkl --index nifty_15m.pkl
+python backtest_honest.py --data cache_15m.pkl --index nifty_15m.pkl --sweep
+```
+
+**Sanity check first:** confirm the *old* config comes out **negative** on the
+training window under the real cost model. If it doesn't, the cost analysis above
+is wrong and everything downstream needs revisiting.
+
+Then walk forward: tune on 2023–24, validate on 2025, leave 2026 untouched until
+the config is frozen. Re-running the test window turns it into training data.
+
+**Go-live bar**, written down in advance so it cannot be negotiated later:
+
+- net positive on the validation window **after real costs**
+- t-statistic > 2
+- at least 200 trades
+- maximum drawdown < 8%
+
+Anything short of that is a story, not an edge.
+
+### Known caveats
+
+- **No v2 parameter has been backtested.** They are reasoned from mechanism and
+  from published research, not fitted.
+- The 13:15 entry cutoff has permutation **p = 0.078** on n=49, and the threshold
+  was chosen *after* looking at the data. Adopted for its mechanism — a trade needs
+  time to work before square-off — not as a validated edge.
+- The RVOL ceiling of 2.0 is a starting point; v1's logs never recorded entry
+  volume, so it could not be tested.
+- Slippage at 5 bps/side is an **assumption, not a measurement**. It is the largest
+  single cost and the only negotiable one. Log intended price against actual fill
+  and check.
+- Context: SEBI found **71% of individual intraday equity traders lost money** in
+  FY23. Fixing the arithmetic makes this system fair rather than rigged against
+  you. Whether a real edge remains underneath is the open question.
+
+### Rollback
+
+v1's `main.py` and `config.py` are in `_local_archive/` and in git history:
+
+```bash
+git log --oneline --all       # find the pre-rebuild commit
+git checkout <sha> -- main.py config.py
+```
