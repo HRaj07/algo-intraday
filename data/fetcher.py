@@ -8,8 +8,10 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Optional
 import pandas as pd
 import numpy as np
-import yfinance as yf
 
+# yfinance is imported lazily inside fetch_intraday(). Importing it at module
+# scope means TechnicalIndicators cannot be used - by a test harness, a
+# backtester, or an offline analysis - without the network library present.
 logger = logging.getLogger(__name__)
 
 
@@ -18,6 +20,8 @@ class IntradayFetcher:
 
     def fetch_intraday(self, tickers: List[str], days_back: int = 5) -> Dict[str, pd.DataFrame]:
         """Fetch 15-minute OHLCV data for multiple tickers."""
+        import yfinance as yf
+
         results = {}
         for ticker in tickers:
             try:
@@ -47,8 +51,7 @@ class IntradayFetcher:
                 else:
                     df.columns = [c.lower() for c in df.columns]
                 # Convert to IST then strip tz so df.index.date returns IST dates
-                import pytz as _pytz
-                _ist = _pytz.timezone("Asia/Kolkata")
+                from tzutil import IST as _ist
                 if df.index.tz is not None:
                     df.index = df.index.tz_convert(_ist).tz_localize(None)
                 else:
@@ -63,10 +66,9 @@ class IntradayFetcher:
 
     def get_today_data(self, tickers: List[str]) -> Dict[str, pd.DataFrame]:
         """Get only today's 15-min bars."""
-        import pytz
-        ist = pytz.timezone("Asia/Kolkata")
+        from tzutil import now_ist
         all_data = self.fetch_intraday(tickers, days_back=3)
-        today = datetime.now(ist).date()
+        today = now_ist().date()
         today_data = {}
         for ticker, df in all_data.items():
             today_df = df[df.index.date == today]
