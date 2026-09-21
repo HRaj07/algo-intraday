@@ -576,6 +576,42 @@ check("and its cash is untouched",
       abs(_t2.state["cash"] - (_old + 7000)) < 1)
 
 print("\n" + "=" * 70)
+print("4e. WHAT GETS RECORDED FOR LATER")
+print("=" * 70)
+# v1's signals_intraday.json is the only reason its 188 candidates could be
+# replayed through v2's filters. Without an equivalent, "what did we reject,
+# and would it have worked?" is unanswerable - trade_history holds only what
+# was taken.
+mod.now_ist = lambda: datetime.combine(trade_day, datetime.min.time()).replace(
+    hour=12, minute=0, tzinfo=IST)
+_ = strat.compute_signals({"TCS.NS": tcs, "INFY.NS": tcs_shallow}, nifty_up, 14.0)
+_scan = getattr(strat, "last_scan", {})
+check("every scan records why candidates were rejected",
+      isinstance(_scan.get("rejects"), dict) and len(_scan["rejects"]) > 0,
+      f"{_scan.get('rejects')}")
+check("scan records how many names were examined",
+      _scan.get("scanned") == 2, f"scanned={_scan.get('scanned')}")
+
+_ = strat.compute_signals({"TCS.NS": tcs}, nifty_down, 14.0)
+check("a closed regime gate is recorded with its reason",
+      "NIFTY" in str(getattr(strat, "last_scan", {}).get("regime", "")),
+      str(strat.last_scan.get("regime"))[:60])
+
+# price cache must cover only what we could need to exit
+_t3 = fresh_trader()
+pt.now_ist = lambda: morning
+_many = {f"X{i}.NS": {"close": 100.0, "high": 101.0, "low": 99.0} for i in range(50)}
+_t3.update_prices(_many, morning)
+check("price cache stays empty with no positions or orders",
+      len(_t3.state["last_known_price"]) == 0,
+      f"{len(_t3.state['last_known_price'])} entries for 50 tickers offered")
+_t3.place_order(order, morning)
+_t3.update_prices({**_many, "TCS.NS": {"close": 3152.0, "high": 3160.0, "low": 3145.0}}, morning)
+check("price cache covers a resting order",
+      list(_t3.state["last_known_price"]) == ["TCS.NS"],
+      f"{list(_t3.state['last_known_price'])}")
+
+print("\n" + "=" * 70)
 print("5. FULL SESSION - main.py wiring, 25 bars, frozen clock")
 print("=" * 70)
 

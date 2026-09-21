@@ -187,19 +187,46 @@ class VWAPMeanReversionV2:
                         vix: Optional[float] = None) -> List[Dict]:
         today = now_ist().date()
 
-        ok, why = self.regime_ok(index_df, vix, today)
+        ok, why_regime = self.regime_ok(index_df, vix, today)
         if not ok:
-            logger.info(f"REGIME GATE CLOSED: {why} - no entries this scan")
+            logger.info(f"REGIME GATE CLOSED: {why_regime} - no entries this scan")
+            self.last_scan = {"regime": why_regime, "scanned": len(data),
+                              "signals": 0, "rejects": {"regime gate closed": len(data)},
+                              "near_misses": []}
             return []
 
         out = []
+        rejects: Dict[str, int] = {}
+        near_misses = []
         for ticker, df in data.items():
             try:
-                sig = self._signal(ticker, df, today)
+                sig, why = self._signal(ticker, df, today)
                 if sig:
                     out.append(sig)
+                elif why:
+                    key = why.split(" -")[0].split("(")[0].strip()
+                    rejects[key] = rejects.get(key, 0) + 1
+                    # A setup that was oversold and stretched but failed the cost
+                    # hurdle is the most informative rejection there is: it says
+                    # the threshold, not the market, is why nothing traded.
+                    if why.startswith("cost hurdle"):
+                        near_misses.append({"ticker": ticker, "reason": why})
             except Exception as e:
                 logger.debug(f"{ticker}: {e}")
+
+        # Recorded so "what did we reject, and would it have worked?" stays
+        # answerable. v1's signals_intraday.json is the only reason its 188
+        # candidates could be replayed through v2's filters - the analysis that
+        # showed the hand-cut universe was self-defeating. v2 had stopped
+        # writing an equivalent, which would have made the same question
+        # unanswerable a year from now.
+        self.last_scan = {
+            "regime": why_regime,
+            "scanned": len(data),
+            "signals": len(out),
+            "rejects": rejects,
+            "near_misses": near_misses[:10],
+        }
 
         # Rank by how much the setup clears its cost hurdle, not by raw
         # extension. v1 ranked on "most oversold", which preferentially picked
@@ -207,20 +234,20 @@ class VWAPMeanReversionV2:
         out.sort(key=lambda s: s["edge_after_cost"], reverse=True)
         return out
 
-    def _signal(self, ticker: str, df: pd.DataFrame, today) -> Optional[Dict]:
+    def _signal(self, ticker: str, df: pd.DataFrame, today):
         today_df = df[df.index.date == today]
         if len(today_df) < 4:
-            return None
+            return None, "too few bars today"
 
         bar_time = today_df.index[-1]
         ok, why = self.in_entry_window(bar_time)
         if not ok:
-            return None
+            return None, why
 
         ok, why, diag = self.name_filters_ok(ticker, df, today_df)
         if not ok:
             logger.debug(f"{ticker}: {why}")
-            return None
+            return None, why
 
         vwap = self.ti.vwap(today_df).iloc[-1]
         rsi = self.ti.rsi(df, self.p["rsi_period"]).iloc[-1]
@@ -229,14 +256,14 @@ class VWAPMeanReversionV2:
         bar = today_df.iloc[-1]
         close, high, low = bar["close"], bar["high"], bar["low"]
         if vwap <= 0 or close <= 0 or not np.isfinite(atr) or atr <= 0:
-            return None
+            return None, "non-finite indicators"
 
         # ---- condition 1: oversold and stretched below VWAP ----
         deviation = (vwap - close) / close
         if rsi > self.p["rsi_oversold"]:
-            return None
+            return None, f"RSI {rsi:.0f} not oversold"
         if deviation < self.p["min_vwap_deviation"]:
-            return None
+            return None, f"deviation {deviation*100:.2f}% below floor"
 
         # ---- the entry TRIGGER (not the entry price) ----
         # A stop-limit buy one tick above this bar's high. Price must turn up
@@ -256,7 +283,7 @@ class VWAPMeanReversionV2:
             stop = trigger * (1 - self.p["stop_pct_floor"])
             stop_pct = self.p["stop_pct_floor"]
         if stop_pct > self.p["stop_pct_cap"]:
-            return None  # too wild to size sensibly
+            return None, f"stop {stop_pct*100:.2f}% above cap"
 
         risk_per_share = trigger - stop
 
@@ -275,11 +302,8 @@ class VWAPMeanReversionV2:
         rr_after_cost = net_reward / risk_per_share if risk_per_share > 0 else 0.0
 
         if rr_after_cost < self.p["min_reward_risk_after_cost"]:
-            logger.debug(
-                f"{ticker}: R:R after cost {rr_after_cost:.2f} < "
-                f"{self.p['min_reward_risk_after_cost']} - skipping"
-            )
-            return None
+            return None, (f"cost hurdle: R:R after cost {rr_after_cost:.2f} < "
+                          f"{self.p['min_reward_risk_after_cost']}")
 
         return {
             "ticker": ticker,
@@ -315,4 +339,4 @@ class VWAPMeanReversionV2:
             "entry_rvol": diag.get("rvol"),
             "entry_gap_pct": diag.get("gap_pct"),
             "entry_turnover_cr": diag.get("turnover_cr"),
-        }
+        }, None

@@ -122,11 +122,29 @@ class PaperTraderV2:
     # PRICE CACHE - the fix for the silent square-off failure
     # ==================================================================
     def update_prices(self, bars: Dict[str, Dict[str, float]], now: datetime):
-        for t, b in bars.items():
-            self.state["last_known_price"][t] = {
-                "close": b["close"], "high": b["high"], "low": b["low"],
-                "as_of": now.isoformat(),
-            }
+        """
+        Cache prices for names we could need to exit - and ONLY those.
+
+        The cache exists so a position is never unmanaged when its ticker is
+        missing from a scan. That means it is needed for open positions and
+        resting orders, nothing else. Caching all 210 names made the state file
+        ~1,266 lines, rewritten and committed 32 times a day - roughly 8,000
+        commits a year each carrying a full copy. The trade history is what
+        deserves versioning; a price cache for names we do not hold is churn.
+        """
+        needed = set(self.state["positions"]) | set(self.state["pending_orders"])
+        for t in needed:
+            b = bars.get(t)
+            if b:
+                self.state["last_known_price"][t] = {
+                    "close": b["close"], "high": b["high"], "low": b["low"],
+                    "as_of": now.isoformat(),
+                }
+        # Drop entries for names no longer held - a stale price we can never
+        # need is a stale price that can only mislead.
+        for t in list(self.state["last_known_price"]):
+            if t not in needed:
+                del self.state["last_known_price"][t]
 
     def _price_for(self, ticker: str) -> Optional[Dict]:
         return self.state["last_known_price"].get(ticker)

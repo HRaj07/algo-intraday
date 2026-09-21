@@ -136,9 +136,27 @@ def main():
             logger.info(line)
 
     strat = VWAPMeanReversionV2()
-    for sig in strat.compute_signals(data, index_df, vix):
+    signals = strat.compute_signals(data, index_df, vix)
+    for sig in signals:
         if not trader.place_order(sig, now):
             continue
+
+    # Record every scan's candidates AND why the rest were rejected.
+    # v1's signals_intraday.json is the only reason its 188 candidates could be
+    # replayed through v2's filters months later - the analysis that showed the
+    # universe cut was self-defeating and the bot would trade 4 times a month.
+    # Without this file, "what did we reject, and would it have worked?" has no
+    # answer, because trade_history only holds trades that were taken.
+    scan = getattr(strat, "last_scan", {})
+    with open(LOG_DIR / "signals_v2.jsonl", "a") as f:
+        f.write(json.dumps({
+            "time": str(now),
+            "regime": scan.get("regime"),
+            "scanned": scan.get("scanned"),
+            "signals": signals,
+            "rejects": scan.get("rejects", {}),
+            "near_misses": scan.get("near_misses", []),
+        }, default=str) + "\n")
 
     s = trader.summary()
     logger.info(f"equity Rs{s['equity']:,.0f} | open {s['open_positions']} | "
