@@ -52,10 +52,11 @@ class PaperTraderV2:
     def _load(self) -> Dict:
         if self.state_file.exists():
             try:
-                return json.load(open(self.state_file))
+                state = json.load(open(self.state_file))
             except Exception:
                 logger.error("state file unreadable - refusing to start with a blank book")
                 raise
+            return self._reconcile_capital(state)
         return {
             "cash": SYSTEM["initial_capital"],
             "initial_capital": SYSTEM["initial_capital"],
@@ -67,6 +68,52 @@ class PaperTraderV2:
             "daily_entry_count": {},
             "total_pnl": 0.0,
         }
+
+    def _reconcile_capital(self, state: Dict) -> Dict:
+        """
+        The state file pins capital at whatever it was created with.
+
+        Raising SYSTEM["initial_capital"] does nothing on its own: _load() reads
+        cash and initial_capital from disk, and the config value is consulted
+        only when the file is absent. Without this check, config.py would claim
+        Rs10L while the book quietly kept trading Rs5L - sizing every position
+        against the wrong base and reporting return_pct against it too.
+
+        That is the same failure shape as the NaN regime gate and the silently
+        shrinking universe: a stale input producing a confident-looking answer.
+        So it is reconciled explicitly, and loudly.
+
+        A book with no closed trades is migrated automatically - nothing is
+        distorted by restating capital before any trade exists. A book WITH
+        history is never silently rebased, because that would make every past
+        R-multiple and return figure incomparable with the future ones.
+        """
+        configured = SYSTEM["initial_capital"]
+        recorded = state.get("initial_capital")
+        if recorded is None or abs(recorded - configured) < 1:
+            return state
+
+        n_trades = len(state.get("trade_history", []))
+        if n_trades == 0 and not state.get("positions"):
+            delta = configured - recorded
+            state["cash"] = state.get("cash", recorded) + delta
+            state["initial_capital"] = configured
+            state["equity_peak"] = max(state.get("equity_peak", 0), state["cash"])
+            logger.warning(
+                f"CAPITAL MIGRATED Rs{recorded:,.0f} -> Rs{configured:,.0f} "
+                f"(book was empty, so nothing is distorted)"
+            )
+            return state
+
+        logger.error(
+            f"CAPITAL MISMATCH: config says Rs{configured:,.0f}, the book was "
+            f"opened at Rs{recorded:,.0f} and already holds {n_trades} closed "
+            f"trade(s). NOT migrating - restating capital mid-book makes past "
+            f"and future returns incomparable. Either revert config.py to "
+            f"Rs{recorded:,.0f}, or archive logs/paper_state_v2.json and start "
+            f"a clean book at the new size. Continuing at Rs{recorded:,.0f}."
+        )
+        return state
 
     def _save(self):
         json.dump(self.state, open(self.state_file, "w"), indent=2, default=str)

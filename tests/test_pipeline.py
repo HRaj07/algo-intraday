@@ -539,6 +539,43 @@ check("learning.py cannot modify entry/exit rules",
       "size only, by construction")
 
 print("\n" + "=" * 70)
+print("4d. CAPITAL RECONCILIATION - raising capital must actually take effect")
+print("=" * 70)
+# The state file pins capital at creation. Raising SYSTEM["initial_capital"]
+# does nothing on its own, because _load() reads cash from disk. Without a
+# reconcile, config.py would claim Rs10L while the book traded Rs5L - the same
+# stale-input-producing-a-confident-answer shape as the NaN regime gate.
+import json as _json
+
+def _write_state(path, cap, cash, trades):
+    _json.dump({"cash": cash, "initial_capital": cap, "equity_peak": cash,
+                "positions": {}, "pending_orders": {}, "last_known_price": {},
+                "trade_history": trades, "daily_entry_count": {},
+                "total_pnl": cash - cap}, open(path, "w"))
+
+_f = tmp / "cap_empty.json"
+_write_state(_f, SYSTEM["initial_capital"] / 2, SYSTEM["initial_capital"] / 2, [])
+_t = PaperTraderV2(state_file=str(_f))
+check("an EMPTY book migrates to the configured capital",
+      abs(_t.state["initial_capital"] - SYSTEM["initial_capital"]) < 1,
+      f"Rs{_t.state['initial_capital']:,.0f}")
+check("migration credits the cash difference too",
+      abs(_t.state["cash"] - SYSTEM["initial_capital"]) < 1,
+      f"cash Rs{_t.state['cash']:,.0f}")
+
+_f2 = tmp / "cap_history.json"
+_old = SYSTEM["initial_capital"] / 2
+_write_state(_f2, _old, _old + 7000,
+             [{"pnl": 7000, "R_multiple": 1.7, "exit_time": "2026-09-22 11:00:00 IST"}])
+_t2 = PaperTraderV2(state_file=str(_f2))
+check("a book WITH history is NOT silently rebased",
+      abs(_t2.state["initial_capital"] - _old) < 1,
+      f"stayed at Rs{_t2.state['initial_capital']:,.0f} - restating mid-book "
+      f"would make past and future returns incomparable")
+check("and its cash is untouched",
+      abs(_t2.state["cash"] - (_old + 7000)) < 1)
+
+print("\n" + "=" * 70)
 print("5. FULL SESSION - main.py wiring, 25 bars, frozen clock")
 print("=" * 70)
 

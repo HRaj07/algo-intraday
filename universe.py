@@ -84,7 +84,7 @@ _EXPANSION = {
     "HDFCAMC.NS": "NBFC",
 
     # IT
-    "LTIM.NS": "IT", "PERSISTENT.NS": "IT", "COFORGE.NS": "IT",
+    "PERSISTENT.NS": "IT", "COFORGE.NS": "IT",
     "MPHASIS.NS": "IT",
 
     # Pharma & healthcare
@@ -93,7 +93,7 @@ _EXPANSION = {
     "BIOCON.NS": "PHARMA", "GLENMARK.NS": "PHARMA", "LAURUSLABS.NS": "PHARMA",
 
     # Auto & components
-    "TATAMOTORS.NS": "AUTO", "TVSMOTOR.NS": "AUTO", "ASHOKLEY.NS": "AUTO",
+    "TVSMOTOR.NS": "AUTO", "ASHOKLEY.NS": "AUTO",
     "BHARATFORG.NS": "AUTO", "MOTHERSON.NS": "AUTO", "BALKRISIND.NS": "AUTO",
     "MRF.NS": "AUTO",
 
@@ -113,7 +113,7 @@ _EXPANSION = {
     # Cement & materials
     "GRASIM.NS": "CEMENT", "SHREECEM.NS": "CEMENT", "AMBUJACEM.NS": "CEMENT",
     "ACC.NS": "CEMENT", "DALBHARAT.NS": "CEMENT",
-    "PIDILITE.NS": "CHEMICAL", "SRF.NS": "CHEMICAL", "PIIND.NS": "CHEMICAL",
+    "SRF.NS": "CHEMICAL", "PIIND.NS": "CHEMICAL",
     "UPL.NS": "CHEMICAL", "DEEPAKNTR.NS": "CHEMICAL", "TATACHEM.NS": "CHEMICAL",
 
     # Industrials & capital goods
@@ -147,7 +147,7 @@ _EXPANSION_2 = {
     "UNIONBANK.NS": "BANK", "INDIANB.NS": "BANK", "BANKINDIA.NS": "BANK",
     "RBLBANK.NS": "BANK", "BANDHANBNK.NS": "BANK", "CUB.NS": "BANK",
     "YESBANK.NS": "BANK", "KARURVYSYA.NS": "BANK",
-    "MANAPPURAM.NS": "NBFC", "PEL.NS": "NBFC", "ABCAPITAL.NS": "NBFC",
+    "MANAPPURAM.NS": "NBFC", "ABCAPITAL.NS": "NBFC",
     "POONAWALLA.NS": "NBFC", "IIFL.NS": "NBFC",
     "CDSL.NS": "FINANCIAL", "KFINTECH.NS": "FINANCIAL",
     "ANGELONE.NS": "FINANCIAL",
@@ -172,7 +172,7 @@ _EXPANSION_2 = {
     "HINDZINC.NS": "METAL", "NATIONALUM.NS": "METAL", "HINDCOPPER.NS": "METAL",
     "MOIL.NS": "METAL", "RATNAMANI.NS": "METAL", "WELCORP.NS": "METAL",
     "OIL.NS": "ENERGY", "PETRONET.NS": "ENERGY", "IGL.NS": "ENERGY",
-    "MGL.NS": "ENERGY", "GUJGASLTD.NS": "ENERGY", "CASTROLIND.NS": "ENERGY",
+    "MGL.NS": "ENERGY", "CASTROLIND.NS": "ENERGY",
 
     # Consumer, retail, durables
     "BATAINDIA.NS": "CONSUMER", "RELAXO.NS": "CONSUMER",
@@ -199,7 +199,30 @@ _EXPANSION_2 = {
     "JUSTDIAL.NS": "INTERNET",
 }
 
-SECTOR = {**_CORE, **_EXPANSION, **_EXPANSION_2}
+# --------------------------------------------------------------------------
+# CONFIRMED DEAD, removed 2026-09-21 by check_data.py
+#
+# These five failed on every attempt, including after the fetch was batched
+# from 216 requests to 6 - so this was not rate limiting, which is what I
+# assumed at first. Deterministic 404s are symbol problems:
+#
+#   PIDILITE.NS    Pidilite Industries trades as PIDILITIND.NS on the NSE.
+#                  My symbol was simply wrong. Re-added below, UNVERIFIED.
+#   TATAMOTORS.NS  Tata Motors demerged its commercial and passenger vehicle
+#                  businesses; the old ticker appears to have gone with it.
+#   LTIM.NS        LTIMindtree. Symbol not resolving on Yahoo.
+#   PEL.NS         Piramal Enterprises. Same.
+#   GUJGASLTD.NS   Gujarat Gas. Same.
+#
+# The lesson is the measurement, not the guess: I called these throttling and
+# was wrong, and the batched fetch is what proved it. Anything added here is a
+# hypothesis until check_data.py says otherwise.
+# --------------------------------------------------------------------------
+_CORRECTIONS = {
+    "PIDILITIND.NS": "CHEMICAL",   # UNVERIFIED - run check_data.py
+}
+
+SECTOR = {**_CORE, **_EXPANSION, **_EXPANSION_2, **_CORRECTIONS}
 INTRADAY_UNIVERSE = sorted(SECTOR)
 
 # A ticker missing from SECTOR falls back to "OTHER", which shares one slot
