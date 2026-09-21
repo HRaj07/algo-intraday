@@ -1,0 +1,71 @@
+name: 📊 Weekly Trade Review
+
+# The human-in-the-loop half of "learn and improve".
+#
+# Fires Saturday morning IST, reads the week's trade record, and posts a review
+# to Discord: what worked, what didn't, and - crucially - whether the sample can
+# support a conclusion at all. It never changes a parameter. It tells you what
+# it would take to know.
+on:
+  schedule:
+    - cron: '30 4 * * 6'      # 04:30 UTC Saturday = 10:00 IST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    name: Review the week
+    env:
+      TZ: Asia/Kolkata
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - run: pip install -r requirements.txt
+
+      - name: Analyse the trade record
+        id: review
+        run: |
+          python analyse_trades.py | tee /tmp/review.txt
+          echo "lines=$(wc -l < /tmp/review.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Post to Discord
+        if: always()
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+            echo "No webhook configured, skipping"; exit 0
+          fi
+          # Discord caps messages at 2000 chars; send the head of the report,
+          # which is the summary and the cost check - the parts that matter.
+          BODY=$(head -c 1700 /tmp/review.txt)
+          python - <<'PY'
+          import json, os, urllib.request
+          body = open('/tmp/review.txt').read()[:1700]
+          msg = "**Weekly Trade Review**\n```\n" + body + "\n```"
+          req = urllib.request.Request(
+              os.environ['DISCORD_WEBHOOK_URL'],
+              data=json.dumps({"username": "IntraDay Review", "content": msg}).encode(),
+              method='POST')
+          req.add_header('Content-Type', 'application/json')
+          req.add_header('User-Agent', 'Mozilla/5.0')
+          urllib.request.urlopen(req, timeout=15)
+          print("posted")
+          PY
+
+      - name: Upload full report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-review
+          path: /tmp/review.txt
+          retention-days: 90

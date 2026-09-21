@@ -404,6 +404,73 @@ if p3:
           f"Rs{m_full:,.0f} -> Rs{p3['margin']:,.0f} after taking half off")
 
 print("\n" + "=" * 70)
+print("4c. ADAPTIVE SIZING - learns, but at the rate the evidence allows")
+print("=" * 70)
+from learning import (adaptive_risk_pct, performance_scalar, drawdown_scalar,
+                      posterior_expectancy, MIN_RISK_PCT, MAX_RISK_PCT,
+                      BASE_RISK_PCT, PRIOR_STRENGTH)
+
+def trades(rs):
+    return [{"R_multiple": r, "pnl": r * 1000} for r in rs]
+
+# --- the central property: small samples must NOT move it much ---
+five_losses = trades([-1.0] * 5)
+p5, _ = performance_scalar(five_losses)
+check("5 straight losses barely move sizing (streaks are normal)",
+      p5 > 0.95, f"scalar {p5:.3f}")
+
+three_wins = trades([1.5, 1.7, 1.6])
+p3, _ = performance_scalar(three_wins)
+check("3 straight wins do NOT size up (luck is not edge)",
+      p3 < 1.05, f"scalar {p3:.3f}")
+
+# --- but it DOES learn, given real evidence ---
+many_bad = trades([-1.0] * 40 + [1.5] * 10)     # 20% win rate over 50
+p_bad, why_bad = performance_scalar(many_bad)
+check("50 genuinely bad trades DO cut size", p_bad < 0.9, why_bad)
+
+many_good = trades([1.5] * 35 + [-1.0] * 15)    # 70% win rate over 50
+p_good, why_good = performance_scalar(many_good)
+check("50 genuinely good trades DO raise size", p_good > 1.05, why_good)
+
+# --- learning rate scales with n, as designed ---
+_, _, n_small = posterior_expectancy(trades([-1.0] * 10))
+post_10, prior, _ = posterior_expectancy(trades([-1.0] * 10))
+post_200, _, _ = posterior_expectancy(trades([-1.0] * 200))
+check("200 bad trades move belief much further than 10",
+      abs(post_200 - prior) > 3 * abs(post_10 - prior),
+      f"10 -> {post_10:+.3f}R, 200 -> {post_200:+.3f}R, prior {prior:+.3f}R")
+
+# --- bounds hold under absurd input ---
+pct_awful, _ = adaptive_risk_pct(trades([-1.0] * 500), 400_000, 500_000)
+pct_amazing, _ = adaptive_risk_pct(trades([3.0] * 500), 900_000, 900_000)
+check("sizing never falls below the floor", pct_awful >= MIN_RISK_PCT,
+      f"{pct_awful*100:.3f}%")
+check("sizing never exceeds the ceiling", pct_amazing <= MAX_RISK_PCT,
+      f"{pct_amazing*100:.3f}%")
+check("a catastrophic record still de-risks hard", pct_awful < BASE_RISK_PCT * 0.7,
+      f"{pct_awful*100:.3f}% vs base {BASE_RISK_PCT*100:.2f}%")
+
+# --- drawdown scalar ---
+d0, _ = drawdown_scalar(500_000, 500_000)
+d2, _ = drawdown_scalar(490_000, 500_000)   # 2%
+d5, _ = drawdown_scalar(475_000, 500_000)   # 5%
+check("no de-risking at the high-water mark", d0 == 1.0)
+check("no de-risking inside normal drawdown", d2 == 1.0, f"{d2}")
+check("half size at 5% drawdown", abs(d5 - 0.5) < 0.01, f"{d5:.2f}")
+check("drawdown de-risking is monotonic", d0 >= d2 >= d5)
+
+# --- it must never touch entry/exit rules ---
+import learning, inspect
+src = inspect.getsource(learning)
+forbidden = ["STRATEGY[", "FILTERS[", "rsi_oversold", "min_vwap_deviation",
+             "stop_atr_mult", "min_reward_risk"]
+leaks = [w for w in forbidden if w in src and "never" not in src.split(w)[0][-200:].lower()]
+check("learning.py cannot modify entry/exit rules",
+      not any(f"{w}] =" in src or f'{w}"] =' in src for w in forbidden),
+      "size only, by construction")
+
+print("\n" + "=" * 70)
 print("5. FULL SESSION - main.py wiring, 25 bars, frozen clock")
 print("=" * 70)
 

@@ -119,14 +119,25 @@ class VWAPMeanReversionV2:
     # PER-NAME FILTERS
     # =====================================================================
     def name_filters_ok(self, ticker: str, df: pd.DataFrame,
-                        today_df: pd.DataFrame) -> tuple[bool, str]:
+                        today_df: pd.DataFrame) -> tuple[bool, str, dict]:
+        """
+        Returns (passed, reason, measurements).
+
+        The third element exists so the numbers this function computes - RVOL,
+        the opening gap, turnover - are RECORDED rather than discarded. v1
+        computed RVOL nowhere and gap nowhere, so its 49 trades could not answer
+        whether either filter was doing anything. Cheap to store, impossible to
+        reconstruct later.
+        """
+        diag = {}
         # --- opening gap: an event, not an overextension ---
         prev = df[df.index.date < today_df.index[0].date()]
         if not prev.empty:
             prev_close = prev["close"].iloc[-1]
-            gap = abs(today_df["open"].iloc[0] - prev_close) / prev_close
-            if gap > self.f["max_opening_gap_pct"]:
-                return False, f"opening gap {gap * 100:.2f}% - treat as news, not stretch"
+            gap = (today_df["open"].iloc[0] - prev_close) / prev_close
+            diag["gap_pct"] = round(float(gap) * 100, 3)
+            if abs(gap) > self.f["max_opening_gap_pct"]:
+                return False, f"opening gap {gap * 100:.2f}% - treat as news, not stretch", diag
 
         # --- relative volume: the news detector ---
         # Compare today's cumulative volume at this point in the session with the
@@ -143,17 +154,19 @@ class VWAPMeanReversionV2:
             if sames:
                 baseline = float(np.median(sames))
                 rvol = today_df["volume"].sum() / baseline if baseline > 0 else 1.0
+                diag["rvol"] = round(float(rvol), 3)
                 if rvol > self.f["rvol_max"]:
-                    return False, f"RVOL {rvol:.2f} - news flow, do not fade it"
+                    return False, f"RVOL {rvol:.2f} - news flow, do not fade it", diag
                 if rvol < self.f["rvol_min"]:
-                    return False, f"RVOL {rvol:.2f} - too quiet for reversion flow"
+                    return False, f"RVOL {rvol:.2f} - too quiet for reversion flow", diag
 
         # --- liquidity: keeps the 5 bps slippage assumption honest ---
         turnover = (df["close"] * df["volume"]).tail(50).median()
+        diag["turnover_cr"] = round(float(turnover) / 1e7, 2)
         if turnover < self.f["min_median_15m_turnover"]:
-            return False, f"median 15m turnover Rs{turnover / 1e7:.1f}cr below floor"
+            return False, f"median 15m turnover Rs{turnover / 1e7:.1f}cr below floor", diag
 
-        return True, "filters ok"
+        return True, "filters ok", diag
 
     # =====================================================================
     # SIGNAL
@@ -193,7 +206,7 @@ class VWAPMeanReversionV2:
         if not ok:
             return None
 
-        ok, why = self.name_filters_ok(ticker, df, today_df)
+        ok, why, diag = self.name_filters_ok(ticker, df, today_df)
         if not ok:
             logger.debug(f"{ticker}: {why}")
             return None
@@ -278,4 +291,17 @@ class VWAPMeanReversionV2:
             "bar_volume": float(bar["volume"]),
             "strategy": self.name,
             "signal_bar_time": str(bar_time),
+
+            # --- the entry snapshot, kept so calibration is testable later ---
+            # rr_after_cost is the system's own PREDICTION for this trade. In a
+            # few months you can ask whether trades it scored 2.9 actually beat
+            # trades it scored 1.6 - which tests the cost hurdle rather than
+            # fishing through arbitrary categories. None of this is
+            # reconstructible after the fact, so it is recorded now.
+            "entry_rsi": round(float(rsi), 1),
+            "entry_deviation_pct": round(float(deviation) * 100, 3),
+            "entry_atr_pct": round(float(atr) / float(close) * 100, 3),
+            "entry_rvol": diag.get("rvol"),
+            "entry_gap_pct": diag.get("gap_pct"),
+            "entry_turnover_cr": diag.get("turnover_cr"),
         }

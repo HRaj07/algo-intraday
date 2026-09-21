@@ -96,6 +96,20 @@ RISK = {
     "risk_pct_per_trade": 0.004,        # 0.4% = Rs2,000 at Rs5L, and it shrinks
                                         # automatically as equity falls.
 
+    # Adaptive sizing (see learning.py). Scales the percentage above by what the
+    # trade record supports believing, and by drawdown state. Hard-bounded to
+    # [0.20%, 0.60%]. It learns from wins AND losses, but shrinks its belief
+    # toward a prior by sample size, so a five-loss streak - which a genuinely
+    # good 45%-win strategy produces about 5% of the time - barely moves it.
+    #
+    # This adapts SIZE ONLY. Entry rules, exit rules, filters and thresholds
+    # never self-adjust; those change when a human reads analyse_trades.py and
+    # decides. v1's parameters were all reactions to observed results, and it
+    # lost Rs11,317 - automating that loop would only run it faster.
+    #
+    # Set False to return to flat 0.4% sizing.
+    "adaptive_sizing": True,
+
     # Hard caps. v1 had none of these, which is why one trade could eat 73% of
     # the account and the next four became qty=1 fragments.
     "max_concurrent_positions": 2,      # was 5
@@ -270,6 +284,28 @@ STRATEGY["min_vwap_deviation"] = _min_deviation_for_cost_hurdle(
 
 REPORTING = {"report_dir": "reports", "log_dir": "logs"}
 
+# ---------------------------------------------------------------------------
+# BACK-COMPAT SHIMS - deprecated, kept only so the v1 modules and the research
+# scripts in the repo root still import. Nothing in the live v2 path uses these.
+#
+# COSTS in particular is the OLD cost dict, and it is the reason this repo lost
+# money: it was mirrored by a Rs50 flat fee in profit_max_sweep.py. Live code
+# must import from costs.py instead, which is the single source of truth.
+# ---------------------------------------------------------------------------
+try:
+    from config_v1 import (          # noqa: F401
+        ORB_CONFIG,
+        VWAP_MR_CONFIG,
+        COSTS,
+    )
+except ImportError:                  # pragma: no cover
+    ORB_CONFIG = VWAP_MR_CONFIG = COSTS = {}
+
+# These two were referenced by strategies/ema_cross.py and vwap_pullback.py but
+# never actually defined in v1's config.py either - those modules have been
+# broken since before this rebuild. Empty dicts keep imports from exploding.
+EMA_CROSS = {}
+VWAP_PULLBACK = {}
 
 # ---------------------------------------------------------------------------
 # VALIDATION PROTOCOL - the rule that would have prevented all of this

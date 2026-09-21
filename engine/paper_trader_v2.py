@@ -155,6 +155,20 @@ class PaperTraderV2:
             "bars_held": 0, "realised_pnl": 0.0,
             "strategy": o["strategy"],
             "entry_time": stamp(now),
+
+            # The entry snapshot, carried from the signal so it reaches the
+            # trade record. rr_after_cost in particular is the system's own
+            # PREDICTION for this trade; keeping it is what makes a calibration
+            # check possible later. v1 discarded every such number, which is why
+            # its 49 trades could not say whether any filter was earning its place.
+            "predicted_rr": o.get("rr_after_cost"),
+            "entry_rsi": o.get("entry_rsi"),
+            "entry_deviation_pct": o.get("entry_deviation_pct"),
+            "entry_atr_pct": o.get("entry_atr_pct"),
+            "entry_rvol": o.get("entry_rvol"),
+            "entry_gap_pct": o.get("entry_gap_pct"),
+            "entry_turnover_cr": o.get("entry_turnover_cr"),
+            "entry_stop_pct": o.get("stop_pct"),
         }
         self.state["positions"][o["ticker"]] = pos
         today = str(now.date())
@@ -293,6 +307,13 @@ class PaperTraderV2:
             "entry_time": pos["entry_time"],
             "exit_time": stamp(now),
         }
+        # Copy the entry snapshot onto every exit record, including partials, so
+        # each realised outcome sits next to the conditions that produced it.
+        for k in ("predicted_rr", "entry_rsi", "entry_deviation_pct",
+                  "entry_atr_pct", "entry_rvol", "entry_gap_pct",
+                  "entry_turnover_cr", "entry_stop_pct"):
+            if pos.get(k) is not None:
+                rec[k] = pos[k]
         self.state["trade_history"].append(rec)
 
         if pos["qty_open"] <= 0:

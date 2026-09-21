@@ -77,8 +77,29 @@ class RiskManager:
         return cash + margin_held + unrealised
 
     def risk_budget(self) -> float:
-        """Rupee risk for one trade, as a fraction of CURRENT equity."""
-        return self.equity() * RISK["risk_pct_per_trade"]
+        """
+        Rupee risk for one trade.
+
+        With adaptive sizing on, the percentage itself moves: down during
+        drawdowns, and up or down with what the trade record supports believing
+        about expectancy. See learning.py - the belief is shrunk toward a prior
+        by sample size, so ten bad trades barely move it and two hundred do.
+
+        Entry and exit rules never adapt. Only size.
+        """
+        eq = self.equity()
+        if not RISK.get("adaptive_sizing", False):
+            return eq * RISK["risk_pct_per_trade"]
+
+        from learning import adaptive_risk_pct
+        pct, detail = adaptive_risk_pct(
+            self.state.get("trade_history", []),
+            eq,
+            self.state.get("equity_peak", eq),
+            base=RISK["risk_pct_per_trade"],
+        )
+        self.state["last_sizing_decision"] = detail   # auditable after the fact
+        return eq * pct
 
     def gross_notional(self) -> float:
         return sum(

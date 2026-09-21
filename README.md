@@ -245,3 +245,72 @@ v1's `main.py` and `config.py` are in `_local_archive/` and in git history:
 git log --oneline --all       # find the pre-rebuild commit
 git checkout <sha> -- main.py config.py
 ```
+
+---
+
+## Does it learn?
+
+Yes, but only about **size** — and at a rate the evidence supports.
+
+### What adapts: position size
+
+`learning.py` scales risk per trade by two factors, hard-bounded to
+**0.20%–0.60%** of equity:
+
+- **Performance.** Expectancy in R, shrunk toward a prior by sample size:
+  `posterior = (k·prior + n·observed) / (k + n)` with k = 50. So ten trades
+  barely move it, two hundred move it a lot.
+- **Drawdown.** Full size above the high-water mark, tapering to half size at a
+  5% drawdown (the halt fires at 6%).
+
+Every sizing decision is logged with both scalars and the reasoning, so any
+position size can be reconstructed afterwards.
+
+### What does NOT adapt: the rules
+
+Entry criteria, exit criteria, filters and thresholds never self-adjust. They
+change when a human reads the review and decides.
+
+That line exists because crossing it is what killed v1. Every v1 parameter was a
+reaction to observed results — RSI 25→28, deviation 0.8%→0.6%, stop 0.70%→0.55%,
+shorts off, max trades 3→5 — each justified with a profit-factor number, all
+fitted to a cost model that was 7× too low. Net outcome: −₹11,317. Automating
+that loop runs the same mistake faster, without a human ever pausing to ask
+whether the cost model was right.
+
+Size is recoverable. A loosened filter that admits unprofitable trades is not.
+
+### Why the shrinkage matters
+
+With a 45% win rate, five losses in a row happen about **5% of the time** — you
+should expect several per hundred trades from a perfectly good strategy. A system
+that reacts to each one is learning superstition. And reacting to *wins* is worse:
+it sizes up exactly when luck, not edge, produced them.
+
+The sample sizes are unforgiving:
+
+| To detect | Trades needed |
+|---|---|
+| 45% → 55% win rate (large) | 392 |
+| 45% → 50% (modest) | 1,565 |
+| 45% → 47% (realistic) | 9,738 |
+
+At v2's expected rate of roughly 0.5 trades/day, 392 trades is about three years.
+Anything adapting faster than that is fitting to noise, by construction.
+
+### The review
+
+```bash
+python analyse_trades.py          # or --json
+```
+
+Breaks the trade record down by exit reason, entry hour, ticker, sector and
+weekday — and prints a **verdict column** next to every row: `anecdote`,
+`too few to act`, `not significant`, or `SIGNIFICANT`. A slice under 30 trades
+is never actionable no matter how good its p-value looks.
+
+It also runs the test that matters most: **gross-profitable but net-negative?**
+That single question is what v1 failed, and it is checked first every time.
+
+A weekly GitHub Action (`weekly_review.yml`) runs this on Saturday mornings and
+posts the summary to Discord.

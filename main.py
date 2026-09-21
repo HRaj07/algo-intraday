@@ -42,7 +42,7 @@ for noisy in ("yfinance", "peewee", "urllib3"):
     logging.getLogger(noisy).setLevel(logging.WARNING)
 logger = logging.getLogger(__name__)
 
-from config import INTRADAY_UNIVERSE, SYSTEM, INDEX_TICKER, VIX_TICKER
+from config import INTRADAY_UNIVERSE, SYSTEM, INDEX_TICKER, VIX_TICKER, RISK
 from data.fetcher import IntradayFetcher
 from engine.paper_trader_v2 import PaperTraderV2
 from strategies.vwap_mr_v2 import VWAPMeanReversionV2
@@ -124,6 +124,16 @@ def main():
         logger.warning(f"NOT TRADING: {why}")
         notify(f"HALTED: {why}")
         return
+
+    # Log what sizing is doing and why, every run. A sizing decision you cannot
+    # reconstruct afterwards is one you cannot trust.
+    if RISK.get("adaptive_sizing", False):
+        from learning import explain
+        for line in explain(trader.state.get("trade_history", []),
+                            trader.risk.equity(),
+                            trader.state.get("equity_peak", trader.risk.equity())
+                            ).splitlines():
+            logger.info(line)
 
     strat = VWAPMeanReversionV2()
     for sig in strat.compute_signals(data, index_df, vix):
