@@ -10,3 +10,7 @@
 2026-09-21 14:15:51 | INFO    | __main__ | Scan | 2026-09-21 14:15 IST
 2026-09-21 14:16:02 | INFO    | data.fetcher | Fetched 15min data for 27/27 tickers
 2026-09-21 14:16:03 | INFO    | __main__ | equity Rs500,000 | open 0 | pending 0 | closed 0 | WR 0.0% | PF None | friction Rs0
+2026-09-21 14:20:14 | INFO    | __main__ | ================================================================
+2026-09-21 14:20:14 | INFO    | __main__ | Scan | 2026-09-21 14:20 IST
+2026-09-21 14:20:21 | INFO    | data.fetcher | Fetched 15min data for 27/27 tickers
+2026-09-21 14:20:21 | INFO    | __main__ | equity Rs500,000 | open 0 | pending 0 | closed 0 | WR 0.0% | PF None | friction Rs0
