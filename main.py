@@ -1,244 +1,139 @@
 """
-Intraday Algo Trading Bot - Main Production Execution
-Runs every 15 minutes via GitHub Actions (9:15 AM - 3:15 PM IST)
-Primary Strategy: 30-Minute Institutional ORB with ADX & VWAP Multi-factor Filter
-Risk Sizing: Fixed ₹2,000 max risk per trade with 1:2.0 Asymmetric R:R and +1R Breakeven Trailing Stop
+Intraday bot v2 - main loop.
+
+Order of operations per scan, which differs from v1 in ways that matter:
+  1. refresh the price cache FIRST, so exits never run blind
+  2. manage exits BEFORE looking for new entries
+  3. fill any pending triggers from the previous bar
+  4. only then scan for new signals, behind the regime gate
 """
 import json
 import logging
 import os
 import sys
-from datetime import datetime
-from pathlib import Path
 import urllib.request
+from datetime import datetime, time as dtime
+from pathlib import Path
 
-# Create directories FIRST before logging setup (GitHub Actions clean checkout)
+from tzutil import IST as ist, UTC, now_ist
+
 Path("logs").mkdir(exist_ok=True)
 Path("reports").mkdir(exist_ok=True)
 
-# Setup logging
-import pytz
-
-ist = pytz.timezone("Asia/Kolkata")
 
 class ISTFormatter(logging.Formatter):
-    """Logging formatter that converts timestamps to IST (Asia/Kolkata)."""
     def formatTime(self, record, datefmt=None):
-        dt = datetime.fromtimestamp(record.created, tz=pytz.utc).astimezone(ist)
-        if datefmt:
-            return dt.strftime(datefmt)
-        return dt.isoformat()
+        dt = datetime.fromtimestamp(record.created, tz=UTC).astimezone(ist)
+        return dt.strftime(datefmt) if datefmt else dt.isoformat()
 
-formatter = ISTFormatter(
-    fmt="%(asctime)s | %(levelname)-7s | %(name)s | %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-)
 
-root_logger = logging.getLogger()
-root_logger.setLevel(logging.INFO)
-root_logger.handlers.clear()
-
-stream_handler = logging.StreamHandler()
-stream_handler.setFormatter(formatter)
-stream_handler.setLevel(logging.INFO)
-root_logger.addHandler(stream_handler)
-
-file_handler = logging.FileHandler("logs/intraday.log", mode="a")
-file_handler.setFormatter(formatter)
-file_handler.setLevel(logging.INFO)
-root_logger.addHandler(file_handler)
-
-# Silence noisy third-party library logs (also re-enables yfinance multithreading,
-# which yfinance disables when it detects DEBUG-level logging)
-logging.getLogger("yfinance").setLevel(logging.WARNING)
-logging.getLogger("peewee").setLevel(logging.WARNING)
-logging.getLogger("urllib3").setLevel(logging.WARNING)
-
+_h = logging.StreamHandler()
+_h.setFormatter(ISTFormatter("%(asctime)s | %(levelname)-7s | %(name)s | %(message)s",
+                             "%Y-%m-%d %H:%M:%S"))
+_f = logging.FileHandler("logs/intraday_v2.log", mode="a")
+_f.setFormatter(_h.formatter)
+logging.basicConfig(level=logging.INFO, handlers=[_h, _f])
+for noisy in ("yfinance", "peewee", "urllib3"):
+    logging.getLogger(noisy).setLevel(logging.WARNING)
 logger = logging.getLogger(__name__)
 
-
-from config import INTRADAY_UNIVERSE, SYSTEM
+from config import INTRADAY_UNIVERSE, SYSTEM, INDEX_TICKER, VIX_TICKER
 from data.fetcher import IntradayFetcher
-from engine.paper_trader import PaperTrader
+from engine.paper_trader_v2 import PaperTraderV2
+from strategies.vwap_mr_v2 import VWAPMeanReversionV2
 
 
-def send_discord(message: str):
-    """Send notification to Discord."""
-    webhook_url = os.environ.get("DISCORD_WEBHOOK_URL")
-    if not webhook_url:
-        logger.debug("Discord webhook not set")
+def notify(msg: str):
+    url = os.environ.get("DISCORD_WEBHOOK_URL")
+    if not url:
         return
     try:
-        payload = json.dumps({
-            "username": "IntraDay Bot 🇮🇳",
-            "content": message,
-        }).encode("utf-8")
-        req = urllib.request.Request(webhook_url, data=payload, method="POST")
+        req = urllib.request.Request(
+            url, data=json.dumps({"username": "IntraDay v2", "content": msg}).encode(),
+            method="POST")
         req.add_header("Content-Type", "application/json")
         req.add_header("User-Agent", "Mozilla/5.0")
         urllib.request.urlopen(req, timeout=10)
-        logger.info("Discord notification sent")
     except Exception as e:
-        logger.warning(f"Discord alert failed: {e}")
+        logger.warning(f"discord failed: {e}")
 
 
-def run_intraday_scan():
-    """Main intraday scan - runs every 15 minutes."""
-    import pytz
-    ist = pytz.timezone("Asia/Kolkata")
-    now = datetime.now(ist)
-    logger.info("=" * 60)
-    logger.info(f"Intraday Scan | {now.strftime('%Y-%m-%d %H:%M IST')}")
-    logger.info("=" * 60)
+def main():
+    now = now_ist()
+    logger.info("=" * 64)
+    logger.info(f"Scan | {now:%Y-%m-%d %H:%M IST}")
 
-    # Weekend check
     if now.weekday() >= 5:
-        logger.info("Weekend - NSE closed")
+        logger.info("weekend - NSE closed")
+        return
+    if not (dtime(9, 15) <= now.time() <= dtime(15, 30)):
+        logger.info("outside NSE hours")
         return
 
-    market_start = now.replace(hour=9, minute=15, second=0, microsecond=0)
-    market_end = now.replace(hour=15, minute=30, second=0, microsecond=0)
-    square_off = now.replace(hour=15, minute=15, second=0, microsecond=0)
-
-    if not (market_start <= now <= market_end):
-        logger.info("Outside NSE trading hours")
-        return
-
-    # Fetch live 15-min data
     fetcher = IntradayFetcher()
-    logger.info(f"Fetching 15m data for {len(INTRADAY_UNIVERSE)} stocks...")
-    all_data = fetcher.fetch_intraday(INTRADAY_UNIVERSE, days_back=5)
-    
+    symbols = INTRADAY_UNIVERSE + [INDEX_TICKER, VIX_TICKER]
+    data = fetcher.fetch_intraday(symbols, days_back=20)   # 20d: enough for RVOL baseline
+
+    index_df = data.pop(INDEX_TICKER, None)
+    vix_df = data.pop(VIX_TICKER, None)
+    vix = float(vix_df["close"].iloc[-1]) if vix_df is not None and not vix_df.empty else None
+
     today = now.date()
-    today_data = {t: df[df.index.date == today] for t, df in all_data.items() if not df[df.index.date == today].empty}
-    logger.info(f"Received valid intraday data for {len(today_data)} tickers")
+    bars = {}
+    for t, df in data.items():
+        d = df[df.index.date == today]
+        if d.empty:
+            continue
+        last = d.iloc[-1]
+        bars[t] = {"close": float(last["close"]), "high": float(last["high"]),
+                   "low": float(last["low"]), "volume": float(last["volume"])}
 
-    if not today_data:
-        logger.warning("No today data received")
+    trader = PaperTraderV2()
+
+    # 1. cache prices BEFORE anything else - this is what makes square-off safe
+    trader.update_prices(bars, now)
+
+    # 2. exits, unconditionally, even if today's fetch came back thin
+    for ex in trader.check_exits(bars, now):
+        icon = "OK" if ex["pnl"] > 0 else "X"
+        notify(f"[{icon}] EXIT {ex['ticker']} {ex['qty']}@Rs{ex['exit_price']} | "
+               f"Rs{ex['pnl']:+,.0f} ({ex['R_multiple']:+.2f}R) | {ex['reason']}")
+
+    sq_h, sq_m = map(int, SYSTEM["square_off_time"].split(":"))
+    if now.time() >= dtime(sq_h, sq_m):
+        s = trader.summary()
+        logger.info(f"EOD: {s}")
+        notify(f"EOD | equity Rs{s['equity']:,.0f} | P&L Rs{s['total_pnl']:+,.0f} | "
+               f"WR {s['win_rate_pct']}% | PF {s['profit_factor']} | "
+               f"friction paid Rs{s['total_friction']:,.0f}")
         return
 
-    # Build price map for positions check
-    current_bars = {}
-    for t, df in today_data.items():
-        last = df.iloc[-1]
-        current_bars[t] = {
-            "close": last["close"],
-            "high": last["high"],
-            "low": last["low"]
-        }
+    # 3. fill triggers resting from the previous bar
+    for pos in trader.process_orders(bars, now):
+        notify(f"FILLED {pos['ticker']} @Rs{pos['entry_price']} qty {pos['qty']} | "
+               f"SL Rs{pos['stop_loss']} T1 Rs{pos['t1']}")
 
-    trader = PaperTrader()
-
-    # 1. Manage open positions & check exits
-    exits = trader.check_exits(current_bars)
-    for ex in exits:
-        icon = "✅" if ex['pnl'] > 0 else "❌"
-        msg = (
-            f"{icon} **EXIT** `{ex['ticker']}` | {ex['direction']}\n"
-            f"Entry: ₹{ex['entry_price']} → Exit: ₹{ex['exit_price']}\n"
-            f"P&L: **₹{ex['pnl']:+.0f}** ({ex['pnl_pct']:+.2f}%) | Reason: `{ex['reason']}`\n"
-            f"Strategy: `{ex['strategy']}`"
-        )
-        send_discord(msg)
-
-    # 2. If square-off time reached, force-close all open positions then save EOD
-    if now >= square_off:
-        logger.info("Square-off time reached (3:15 PM) - Force closing all open positions")
-        # Force-close any remaining open positions at current market price
-        square_off_exits = trader.check_exits(current_bars)
-        for ex in square_off_exits:
-            icon = "✅" if ex['pnl'] > 0 else "❌"
-            msg = (
-                f"{icon} **SQUARE-OFF** `{ex['ticker']}` | {ex['direction']}\n"
-                f"Entry: ₹{ex['entry_price']} → Exit: ₹{ex['exit_price']}\n"
-                f"P&L: **₹{ex['pnl']:+.0f}** ({ex['pnl_pct']:+.2f}%) | Reason: `square_off`\n"
-                f"Strategy: `{ex['strategy']}`"
-            )
-            send_discord(msg)
-        _save_daily_summary(trader)
+    # 4. new signals, behind the regime gate
+    halted, why = trader.risk.trading_halted(now)
+    if halted:
+        logger.warning(f"NOT TRADING: {why}")
+        notify(f"HALTED: {why}")
         return
 
-    # 3. Scan for VWAP Mean Reversion signals ONLY
-    # ORB was removed — 730-day backtest showed ORB PF=0.73 (consistently unprofitable)
-    # VWAP MR long-only (RSI 28, 0.55% stop, 1.3x VWAP target, max 5/day) = 58.2% WR, PF 1.70, +₹1.40L / 3yr
-    from strategies.vwap_mr import ExtremeVWAPMeanReversionStrategy
-    mr_strat = ExtremeVWAPMeanReversionStrategy()
-    signals = mr_strat.compute_signals(all_data)
-    signals = sorted(signals, key=lambda x: x.get("score", 0), reverse=True)[:SYSTEM["max_daily_trades"]]
-    logger.info(f"VWAP MR Signals Found: {len(signals)}")
+    strat = VWAPMeanReversionV2()
+    for sig in strat.compute_signals(data, index_df, vix):
+        if not trader.place_order(sig, now):
+            continue
 
-    # 4. Enter trades with strict risk management
-    new_entries = []
-    for sig in signals:
-        pos = trader.enter_trade(sig)
-        if pos:
-            new_entries.append((sig, pos))
+    s = trader.summary()
+    logger.info(f"equity Rs{s['equity']:,.0f} | open {s['open_positions']} | "
+                f"pending {s['pending_orders']} | closed {s['closed_trades']} | "
+                f"WR {s['win_rate_pct']}% | PF {s['profit_factor']} | "
+                f"friction Rs{s['total_friction']:,.0f}")
 
-    for sig, pos in new_entries:
-        icon = "🟢" if sig['signal'] == 'BUY' else "🔴"
-        msg = (
-            f"{icon} **ENTRY** `{sig['ticker']}` | {sig['signal']}\n"
-            f"Price: ₹{sig['price']} | Stop Loss: ₹{sig['stop_loss']} | Target: ₹{sig['target']}\n"
-            f"Qty: {pos['qty']} (Risk: ₹{SYSTEM['risk_per_trade']:,}) | ADX: {sig.get('adx', 'N/A')}\n"
-            f"Strategy: `{sig['strategy']}` | Time: {sig.get('time', 'N/A')[-8:-3]}"
-        )
-        send_discord(msg)
-
-    summary = trader.get_summary()
-    logger.info(
-        f"Portfolio Summary: Cash=₹{summary['cash']:,.0f} | Open={summary['open_positions']} | "
-        f"Total P&L=₹{summary['total_pnl']:+,.0f} | Win Rate={summary['win_rate_pct']}%"
-    )
-
-    # Log entry
-    log_entry = {
-        "time": str(now),
-        "signals": signals,
-        "entries": len(new_entries),
-        "exits": len(exits),
-        "portfolio": summary,
-    }
-    with open("logs/signals_intraday.json", "a") as f:
-        f.write(json.dumps(log_entry) + "\n")
-
-
-def _save_daily_summary(trader: PaperTrader):
-    import pytz
-    ist = pytz.timezone("Asia/Kolkata")
-    summary = trader.get_summary()
-    today = datetime.now(ist).date()
-    history = trader.state.get("trade_history", [])
-    today_trades = [t for t in history if str(today) in t.get("exit_time", "")]
-    today_pnl = sum(t["pnl"] for t in today_trades)
-
-    day_summary = {
-        "date": str(today),
-        "today_trades": len(today_trades),
-        "today_pnl": round(today_pnl, 2),
-        "today_winners": sum(1 for t in today_trades if t["pnl"] > 0),
-        "total_pnl": summary["total_pnl"],
-        "win_rate_pct": summary["win_rate_pct"],
-        "return_pct": summary["return_pct"],
-    }
-
-    with open("logs/daily_summary.json", "a") as f:
-        f.write(json.dumps(day_summary) + "\n")
-
-    if today_trades:
-        sign = "+" if today_pnl >= 0 else ""
-        msg = (
-            f"📊 **IntraDay Bot — EOD Summary** ({today})\n"
-            f"━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-            f"Today Trades : {len(today_trades)} | Winners: {day_summary['today_winners']}\n"
-            f"Today P&L    : **₹{sign}{today_pnl:,.0f}**\n"
-            f"Total Return : **{sign}{summary['return_pct']}%** (since inception)\n"
-            f"Win Rate     : {summary['win_rate_pct']}%\n"
-            f"━━━━━━━━━━━━━━━━━━━━━━━━━"
-        )
-        send_discord(msg)
-
-    logger.info(f"EOD Summary: {day_summary}")
+    with open("logs/scan_v2.jsonl", "a") as f:
+        f.write(json.dumps({"time": str(now), "summary": s}) + "\n")
 
 
 if __name__ == "__main__":
-    run_intraday_scan()
+    main()
