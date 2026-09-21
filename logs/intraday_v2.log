@@ -30,3 +30,29 @@
 2026-09-21 15:01:13 | INFO    | __main__ |   performance x1.0: n=0, too few trades to infer anything - base size
 2026-09-21 15:01:13 | INFO    | __main__ |   drawdown    x1.0: at high-water mark
 2026-09-21 15:01:13 | INFO    | __main__ | equity Rs500,000 | open 0 | pending 0 | closed 0 | WR 0.0% | PF None | friction Rs0
+2026-09-21 15:15:50 | INFO    | __main__ | ================================================================
+2026-09-21 15:15:50 | INFO    | __main__ | Scan | 2026-09-21 15:15 IST
+2026-09-21 15:16:15 | ERROR   | yfinance | HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: GUJGASLTD.NS"}}}
+2026-09-21 15:16:15 | ERROR   | yfinance | $GUJGASLTD.NS: No data found, symbol may be delisted
+2026-09-21 15:16:15 | ERROR   | yfinance | 
+1 Failed download:
+2026-09-21 15:16:15 | ERROR   | yfinance | ['GUJGASLTD.NS']: No data found, symbol may be delisted
+2026-09-21 15:16:25 | ERROR   | yfinance | HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: LTIM.NS"}}}
+2026-09-21 15:16:25 | ERROR   | yfinance | $LTIM.NS: No data found, symbol may be delisted
+2026-09-21 15:16:25 | ERROR   | yfinance | 
+1 Failed download:
+2026-09-21 15:16:25 | ERROR   | yfinance | ['LTIM.NS']: No data found, symbol may be delisted
+2026-09-21 15:16:32 | ERROR   | yfinance | $PEL.NS: No data found, symbol may be delisted
+2026-09-21 15:16:32 | ERROR   | yfinance | 
+1 Failed download:
+2026-09-21 15:16:32 | ERROR   | yfinance | ['PEL.NS']: No data found, symbol may be delisted
+2026-09-21 15:16:33 | ERROR   | yfinance | $PIDILITE.NS: No data found, symbol may be delisted
+2026-09-21 15:16:33 | ERROR   | yfinance | 
+1 Failed download:
+2026-09-21 15:16:33 | ERROR   | yfinance | ['PIDILITE.NS']: No data found, symbol may be delisted
+2026-09-21 15:16:41 | ERROR   | yfinance | $TATAMOTORS.NS: No data found, symbol may be delisted
+2026-09-21 15:16:41 | ERROR   | yfinance | 
+1 Failed download:
+2026-09-21 15:16:41 | ERROR   | yfinance | ['TATAMOTORS.NS']: No data found, symbol may be delisted
+2026-09-21 15:16:47 | INFO    | data.fetcher | Fetched 15min data for 211/216 tickers
+2026-09-21 15:16:47 | INFO    | __main__ | EOD: {'equity': 500000.0, 'cash': 500000, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 0, 'win_rate_pct': 0.0, 'profit_factor': None, 'total_friction': 0, 'total_pnl': 0.0, 'return_pct': 0.0}
