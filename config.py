@@ -12,49 +12,11 @@ model that was 7x too low, then deployed the result.
 from costs import VARIABLE_ROUNDTRIP_PCT
 
 # ---------------------------------------------------------------------------
-# UNIVERSE
+# UNIVERSE - now lives in universe.py (214 names). See that file for why it
+# grew from 25: the 1.22% deviation floor and my hand-cut universe were fighting
+# each other, and the measured result was ~4 trades a month.
 # ---------------------------------------------------------------------------
-# Cut from 40 names to 25. The 40-name list was built to generate "more signal
-# opportunities" - the wrong objective. More marginal signals on a fixed capital
-# base means more fragment-sized trades, and fragments are pure cost.
-#
-# The filter is liquidity, because the 5 bps slippage assumption only holds in
-# names where a Rs1.3L order is a rounding error. Names dropped from v1 for
-# thin 15-min turnover or event-driven behaviour: ADANIENT, TRENT, SHRIRAMFIN,
-# BAJAJ-AUTO, EICHERMOT, HEROMOTOCO, DIVISLAB, BPCL, ULTRACEMCO, POWERGRID.
-# Four of those five were among v1's five worst P&L contributors.
-INTRADAY_UNIVERSE = [
-    # Banking & Financials
-    "HDFCBANK.NS", "ICICIBANK.NS", "SBIN.NS", "AXISBANK.NS", "KOTAKBANK.NS",
-    "BAJFINANCE.NS", "INDUSINDBK.NS",
-    # IT
-    "TCS.NS", "INFY.NS", "HCLTECH.NS", "WIPRO.NS",
-    # Large-cap diversified
-    "RELIANCE.NS", "LT.NS", "BHARTIARTL.NS", "ITC.NS",
-    # Pharma
-    "SUNPHARMA.NS", "CIPLA.NS", "DRREDDY.NS",
-    # Auto
-    "MARUTI.NS", "M&M.NS",
-    # Energy & Metals
-    "NTPC.NS", "ONGC.NS", "TATASTEEL.NS", "JSWSTEEL.NS",
-    # Consumer
-    "TITAN.NS",
-]
-
-# Sector map - used to stop the book concentrating in one factor.
-SECTOR = {
-    "HDFCBANK.NS": "BANK", "ICICIBANK.NS": "BANK", "SBIN.NS": "BANK",
-    "AXISBANK.NS": "BANK", "KOTAKBANK.NS": "BANK", "BAJFINANCE.NS": "BANK",
-    "INDUSINDBK.NS": "BANK",
-    "TCS.NS": "IT", "INFY.NS": "IT", "HCLTECH.NS": "IT", "WIPRO.NS": "IT",
-    "RELIANCE.NS": "DIVERSIFIED", "LT.NS": "DIVERSIFIED",
-    "BHARTIARTL.NS": "DIVERSIFIED", "ITC.NS": "DIVERSIFIED",
-    "SUNPHARMA.NS": "PHARMA", "CIPLA.NS": "PHARMA", "DRREDDY.NS": "PHARMA",
-    "MARUTI.NS": "AUTO", "M&M.NS": "AUTO",
-    "NTPC.NS": "ENERGY", "ONGC.NS": "ENERGY",
-    "TATASTEEL.NS": "METAL", "JSWSTEEL.NS": "METAL",
-    "TITAN.NS": "CONSUMER",
-}
+from universe import INTRADAY_UNIVERSE, SECTOR, sector_of  # noqa: F401
 
 INDEX_TICKER = "^NSEI"      # NIFTY 50 - drives the regime gate
 VIX_TICKER = "^INDIAVIX"
@@ -112,8 +74,17 @@ RISK = {
 
     # Hard caps. v1 had none of these, which is why one trade could eat 73% of
     # the account and the next four became qty=1 fragments.
-    "max_concurrent_positions": 2,      # was 5
-    "max_entries_per_day": 3,           # was 5
+    # Raised from 2/3 once the universe went to 214 names. Measured signal rate
+    # is ~3/day of candidates; with the old caps the bot topped out at 63 trades
+    # a month, which is 6 months before any review has enough data to say
+    # anything. These caps are what turn universe size into evidence.
+    #
+    # The SECTOR cap below is what makes this safe. v1's problem was never the
+    # number of positions - it was that five NSE large-cap longs are one
+    # leveraged NIFTY bet in five tickets. With 1 per sector and 23 sectors,
+    # three concurrent positions are in three different sectors.
+    "max_concurrent_positions": 3,      # v1: 5, v2 first cut: 2
+    "max_entries_per_day": 5,           # v1: 5, v2 first cut: 3
     "max_positions_per_sector": 1,      # v1 had no sector limit at all
     "max_gross_notional_mult": 2.0,     # total exposure <= 2.0x equity (v1 ran 3.6x)
     "max_notional_per_trade_pct": 0.90, # one trade <= 90% of equity notional
@@ -130,8 +101,12 @@ RISK = {
     # Circuit breakers. v1 had zero. Its worst day was -Rs4,178 and its max
     # drawdown was Rs20,177 (4.0% of capital) in 21 trading days, with no rule
     # that would ever have stopped it.
-    "daily_loss_limit_R": 2.0,          # stop trading for the day at -2R
-    "weekly_loss_limit_R": 6.0,
+    # Widened with the entry cap: at -2R the bot would halt after two losing
+    # trades, which makes a 5-entry cap meaningless. -3R is 1.2% of equity on a
+    # bad day. This IS a loosening, and it is the only one here - the drawdown
+    # halt and kill switch are unchanged.
+    "daily_loss_limit_R": 3.0,          # was 2.0
+    "weekly_loss_limit_R": 8.0,         # was 6.0
     "max_drawdown_halt_pct": 0.06,      # halt entirely at -6% equity
 
     # Kill switch: if the last N closed trades have a profit factor below the

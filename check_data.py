@@ -47,12 +47,21 @@ def main():
         today = idx[idx.index.date == now.date()]
         print(f"{INDEX_TICKER}: {len(idx)} bars total, {len(today)} today")
         if len(today) >= 2:
+            import math
             vwap = ti.vwap(today).iloc[-1]
             close = today["close"].iloc[-1]
-            dev = (vwap - close) / vwap * 100
-            print(f"  last {close:,.2f} | VWAP {vwap:,.2f} | {dev:+.2f}% vs VWAP")
-            print(f"  regime gate would be: "
-                  f"{'OPEN' if dev <= 0.3 else 'CLOSED (index below its VWAP)'}")
+            if not (math.isfinite(vwap) and math.isfinite(close)):
+                problems.append(
+                    f"{INDEX_TICKER} VWAP is not finite ({vwap}). The regime gate "
+                    f"cannot evaluate and will stand down. Indices report zero "
+                    f"volume; the unweighted fallback in TechnicalIndicators.vwap "
+                    f"should prevent this - if you see it, that fallback is broken."
+                )
+            else:
+                dev = (vwap - close) / vwap * 100
+                print(f"  last {close:,.2f} | VWAP {vwap:,.2f} | {dev:+.2f}% vs VWAP")
+                print(f"  regime gate would be: "
+                      f"{'OPEN' if dev <= 0.3 else 'CLOSED (index below its VWAP)'}")
         elif now.hour >= 10:
             problems.append(f"{INDEX_TICKER} has only {len(today)} bars today")
 

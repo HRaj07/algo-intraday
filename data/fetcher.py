@@ -86,14 +86,34 @@ class TechnicalIndicators:
 
     @staticmethod
     def vwap(df: pd.DataFrame) -> pd.Series:
-        """Volume Weighted Average Price - resets each day."""
+        """
+        Volume Weighted Average Price, reset each day.
+
+        INDICES HAVE NO VOLUME. Yahoo returns volume=0 for ^NSEI, so the naive
+        cum(tp*vol)/cum(vol) divides by zero and returns NaN for every bar. That
+        NaN then silently disabled the regime gate: the check is
+        `if deviation > tolerance: stand down`, and `nan > 0.003` is False, so
+        the gate waved everything through instead of standing down. The one
+        safety feature meant to stop dip-buying into a falling market was a
+        no-op, and nothing in the logs said so.
+
+        Where cumulative volume is zero, fall back to the expanding mean of the
+        typical price - the unweighted equivalent, which is the right measure for
+        an index and matches VWAP exactly when volume is flat.
+        """
         df = df.copy()
         df['date'] = df.index.date
         df['tp'] = (df['high'] + df['low'] + df['close']) / 3
         df['tp_vol'] = df['tp'] * df['volume']
-        df['cum_tp_vol'] = df.groupby('date')['tp_vol'].cumsum()
-        df['cum_vol'] = df.groupby('date')['volume'].cumsum()
-        return df['cum_tp_vol'] / df['cum_vol']
+        cum_tp_vol = df.groupby('date')['tp_vol'].cumsum()
+        cum_vol = df.groupby('date')['volume'].cumsum()
+
+        vwap = cum_tp_vol / cum_vol.replace(0, np.nan)
+
+        # Unweighted fallback for zero-volume series (indices).
+        unweighted = df.groupby('date')['tp'].expanding().mean().reset_index(
+            level=0, drop=True)
+        return vwap.fillna(unweighted)
 
     @staticmethod
     def rsi(df: pd.DataFrame, period: int = 14) -> pd.Series:

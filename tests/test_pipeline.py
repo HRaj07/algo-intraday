@@ -137,16 +137,20 @@ ok, why = rm.can_open("TCS.NS", now)
 check("a different sector is allowed", ok)
 
 state["positions"] = {}
-# risk budget is 0.4% of Rs5L = Rs2,000, so the -2R daily limit is -Rs4,000
+# Read the limit from config rather than hard-coding it - this test failed once
+# when the cap moved from -2R to -3R, which is the test drifting from the system
+# rather than catching a bug.
+R = 500_000 * RISK["risk_pct_per_trade"]
+limit = RISK["daily_loss_limit_R"]
+just_under = -(limit - 0.5) * R
 state["trade_history"] = [
-    {"pnl": -1500, "exit_time": "2026-09-21 11:00:00 IST"},
-    {"pnl": -1500, "exit_time": "2026-09-21 12:00:00 IST"},
-]
+    {"pnl": just_under, "exit_time": "2026-09-21 11:00:00 IST"}]
 halted, why = rm.trading_halted(now)
-check("-1.5R day does NOT halt (limit is -2R)", not halted)
-state["trade_history"].append({"pnl": -1500, "exit_time": "2026-09-21 13:00:00 IST"})
+check(f"a {abs(just_under)/R:.1f}R day does NOT halt (limit is -{limit}R)", not halted)
+state["trade_history"].append(
+    {"pnl": -1.0 * R, "exit_time": "2026-09-21 13:00:00 IST"})
 halted, why = rm.trading_halted(now)
-check("daily loss limit halts trading past -2R", halted, why)
+check(f"daily loss limit halts trading past -{limit}R", halted, why)
 
 state["trade_history"] = [{"pnl": -300, "exit_time": "2026-08-01 11:00:00 IST"}] * 30
 halted, why = rm.trading_halted(now)
@@ -332,6 +336,45 @@ for _ in range(4):
     t.process_orders({"TCS.NS": {"close": 3100.0, "high": 3110.0, "low": 3090.0}}, morning)
 check("unfilled trigger expires instead of chasing (v1 always 'filled')",
       len(t.state["pending_orders"]) == 0 and len(t.state["positions"]) == 0)
+
+print("\n" + "=" * 70)
+print("3b. ZERO-VOLUME INDEX - the bug that made the regime gate a no-op")
+print("=" * 70)
+# Yahoo returns volume=0 for ^NSEI. The naive VWAP divided by zero, produced
+# NaN, and every gate comparison silently evaluated False - so the gate passed
+# everything instead of standing down. Caught by check_data.py in production,
+# not by this suite, because every synthetic index here had fake volume.
+from data.fetcher import TechnicalIndicators as _TI
+_ti = _TI()
+
+idx_zero = make_day(trade_day, base=24000.0,
+                    path=[24000 + 8 * i for i in range(25)], vol=0)
+vw_zero = _ti.vwap(idx_zero)
+check("VWAP is finite even with zero volume throughout",
+      bool(np.isfinite(vw_zero.iloc[-1])), f"vwap={vw_zero.iloc[-1]:,.2f}")
+check("zero-volume VWAP equals the unweighted mean of typical price",
+      abs(vw_zero.iloc[-1] -
+          ((idx_zero['high'] + idx_zero['low'] + idx_zero['close']) / 3).mean()) < 0.01)
+
+# and it must still match real VWAP when volume IS present
+idx_vol = make_day(trade_day, base=24000.0,
+                   path=[24000 + 8 * i for i in range(25)], vol=1_000_000)
+vw_flat = _ti.vwap(idx_vol)
+check("flat volume gives the same answer as no volume",
+      abs(vw_flat.iloc[-1] - vw_zero.iloc[-1]) < 0.01)
+
+# the gate itself, on a genuinely zero-volume index
+hist_zero, _ = history(24000.0, 12, vol=0)
+nifty_zero = pd.concat([hist_zero, idx_zero.iloc[:sig_bar]])
+ok_z, why_z = strat.regime_ok(nifty_zero, 14.0, trade_day)
+check("regime gate evaluates on a zero-volume index", ok_z, why_z)
+
+# a corrupt index must FAIL CLOSED, never pass by NaN comparison
+bad = idx_zero.copy()
+bad.loc[:, ["open", "high", "low", "close"]] = np.nan
+nifty_bad = pd.concat([hist_zero, bad.iloc[:sig_bar]])
+ok_b, why_b = strat.regime_ok(nifty_bad, 14.0, trade_day)
+check("non-finite index values FAIL CLOSED, not open", not ok_b, why_b)
 
 print("\n" + "=" * 70)
 print("4b. EQUITY ACCOUNTING - the bug that bricked the first v2 cut")

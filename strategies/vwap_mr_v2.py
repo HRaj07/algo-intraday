@@ -78,6 +78,17 @@ class VWAPMeanReversionV2:
         idx_close = idx_today["close"].iloc[-1]
         idx_open = idx_today["open"].iloc[0]
 
+        # FAIL CLOSED ON NON-FINITE VALUES. This is not defensive padding - it
+        # is the bug that made this whole gate a no-op. Index VWAP came back NaN
+        # (zero volume), and every subsequent comparison silently evaluated
+        # False, so the gate passed everything. A NaN must never be able to
+        # answer a safety question.
+        if not all(np.isfinite([idx_vwap, idx_close, idx_open])):
+            return False, (
+                f"index values not finite (vwap={idx_vwap}, close={idx_close}) "
+                f"- standing down rather than comparing against NaN"
+            )
+
         if self.f["require_index_above_vwap"]:
             dev = (idx_vwap - idx_close) / idx_vwap
             if dev > self.f["index_vwap_tolerance"]:
