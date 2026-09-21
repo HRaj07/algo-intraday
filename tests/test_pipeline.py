@@ -8,6 +8,7 @@ code, and none of them was ever exercised before real (paper) money met them.
 Run:  python tests/test_pipeline.py
 """
 import json
+import os
 import shutil
 import sys
 import tempfile
@@ -18,6 +19,12 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+# Send the harness's own logs somewhere disposable. Previously this wrote a
+# realistic-looking logs/intraday_v2.log full of synthetic trades straight into
+# the repo, which reads exactly like a live run until you notice the dates.
+_LOGTMP = tempfile.mkdtemp(prefix="algo_test_logs_")
+os.environ["ALGO_LOG_DIR"] = _LOGTMP
 
 from tzutil import IST
 from costs import cost_in_rupees, breakeven_win_rate, cost_as_fraction_of_risk
@@ -325,6 +332,76 @@ for _ in range(4):
     t.process_orders({"TCS.NS": {"close": 3100.0, "high": 3110.0, "low": 3090.0}}, morning)
 check("unfilled trigger expires instead of chasing (v1 always 'filled')",
       len(t.state["pending_orders"]) == 0 and len(t.state["positions"]) == 0)
+
+print("\n" + "=" * 70)
+print("4b. EQUITY ACCOUNTING - the bug that bricked the first v2 cut")
+print("=" * 70)
+# The original equity() was cash + sum(entry_price * qty), but opening a position
+# only deducts the 20% margin from cash - so it added the full notional on top of
+# cash that still held 80% of it. equity_peak latched onto the inflated number and
+# the drawdown halt fired permanently the first time a position closed.
+# None of the 44 assertions above noticed. These do.
+
+t = fresh_trader()
+pt.now_ist = lambda: morning
+eq_before = t.risk.equity()
+t.place_order(order, morning)
+bar = {"TCS.NS": {"close": 3152.0, "high": 3160.0, "low": 3145.0}}
+t.update_prices(bar, morning)
+t.process_orders(bar, morning)
+eq_open = t.risk.equity()
+pos = t.state["positions"]["TCS.NS"]
+notional = pos["entry_price"] * pos["qty"]
+
+check("opening a position does not inflate equity",
+      abs(eq_open - eq_before) < 0.02 * eq_before,
+      f"Rs{eq_before:,.0f} -> Rs{eq_open:,.0f} on Rs{notional:,.0f} notional")
+check("equity is not cash + full notional (the old bug)",
+      abs(eq_open - (t.state['cash'] + notional)) > 1000,
+      f"buggy formula would give Rs{t.state['cash'] + notional:,.0f}")
+
+t.risk.update_peak()
+peak_open = t.state["equity_peak"]
+ex = t.check_exits({"TCS.NS": {"close": 3095.0, "high": 3140.0, "low": 3090.0}}, morning)
+eq_closed = t.risk.equity()
+halted, why = t.risk.trading_halted(morning)
+
+check("equity_peak does not latch onto an inflated figure",
+      peak_open < eq_before * 1.05, f"peak Rs{peak_open:,.0f}")
+check("a normal losing trade does NOT trip the drawdown halt",
+      not halted, why or "not halted")
+check("equity after close = equity before + realised P&L",
+      abs(eq_closed - (eq_before + sum(e['pnl'] for e in ex))) < 1.0,
+      f"Rs{eq_closed:,.2f} vs Rs{eq_before + sum(e['pnl'] for e in ex):,.2f}")
+
+# cash must reconcile exactly - the entry cost was previously charged twice,
+# once on open and again inside pnl at close
+t2_ = fresh_trader()
+pt.now_ist = lambda: morning
+start_cash = t2_.state["cash"]
+t2_.place_order(order, morning)
+t2_.update_prices(bar, morning)
+t2_.process_orders(bar, morning)
+ex2 = t2_.check_exits({"TCS.NS": {"close": 3225.0, "high": 3400.0, "low": 3210.0}}, morning)
+ex2 += t2_.check_exits({}, datetime(2026, 9, 21, 15, 5, tzinfo=IST))
+realised = sum(e["pnl"] for e in ex2)
+check("cash reconciles to start + realised P&L (no double-charged costs)",
+      abs(t2_.state["cash"] - (start_cash + realised)) < 1.0,
+      f"cash Rs{t2_.state['cash']:,.2f} vs expected Rs{start_cash + realised:,.2f}")
+
+# partial exits must release their share of margin
+t3_ = fresh_trader()
+pt.now_ist = lambda: morning
+t3_.place_order(order, morning)
+t3_.update_prices(bar, morning)
+t3_.process_orders(bar, morning)
+m_full = t3_.state["positions"]["TCS.NS"]["margin"]
+t3_.check_exits({"TCS.NS": {"close": 3225.0, "high": 3230.0, "low": 3210.0}}, morning)
+p3 = t3_.state["positions"].get("TCS.NS")
+if p3:
+    check("partial exit releases its share of margin",
+          p3["margin"] < m_full * 0.75,
+          f"Rs{m_full:,.0f} -> Rs{p3['margin']:,.0f} after taking half off")
 
 print("\n" + "=" * 70)
 print("5. FULL SESSION - main.py wiring, 25 bars, frozen clock")

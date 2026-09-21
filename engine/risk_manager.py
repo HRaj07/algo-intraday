@@ -38,10 +38,43 @@ class RiskManager:
 
     # ------------------------------------------------------------------ equity
     def equity(self) -> float:
-        """Cash plus mark-to-market of open positions."""
-        return self.state.get("cash", 0.0) + sum(
-            p["entry_price"] * p["qty"] for p in self.state.get("positions", {}).values()
-        )
+        """
+        Account value: cash + margin held against open positions + unrealised P&L.
+
+        THIS WAS BADLY WRONG IN THE FIRST v2 CUT and the bug was severe enough to
+        brick the bot. The original was:
+
+            cash + sum(entry_price * qty)
+
+        but opening a position only deducts the 20% MIS margin from cash, so that
+        expression added the *full* notional on top of cash that still held 80% of
+        it. A Rs3L position inflated reported equity by Rs2.4L.
+
+        The damage: equity_peak latched onto the inflated figure, and the moment
+        the position closed, equity "fell" back to reality. The drawdown halt read
+        that as a 30-65% loss and permanently stopped trading - after the first
+        completed trade. It also inflated risk_budget() and the gross-notional
+        headroom while any position was open, so each subsequent trade was sized
+        off a fantasy account balance.
+
+        Caught by a stray test-harness log, not by the test suite, which asserted
+        plenty about exits and sizing but never that equity stayed sane across a
+        position's life. test_pipeline.py now checks exactly that.
+        """
+        cash = self.state.get("cash", 0.0)
+        positions = self.state.get("positions", {})
+        prices = self.state.get("last_known_price", {})
+
+        margin_held = 0.0
+        unrealised = 0.0
+        for ticker, p in positions.items():
+            margin_held += p.get("margin", 0.0)
+            qty_open = p.get("qty_open", p.get("qty", 0))
+            last = prices.get(ticker, {}).get("close")
+            if last:
+                unrealised += (last - p["entry_price"]) * qty_open
+
+        return cash + margin_held + unrealised
 
     def risk_budget(self) -> float:
         """Rupee risk for one trade, as a fraction of CURRENT equity."""

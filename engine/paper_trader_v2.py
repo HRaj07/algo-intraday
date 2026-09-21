@@ -138,7 +138,11 @@ class PaperTraderV2:
 
         entry_cost = one_side_cost(fill_price, qty, "buy")
         margin = fill_price * qty * 0.20  # MIS ~5x on NSE equity
-        self.state["cash"] -= (margin + entry_cost)
+
+        # Only the MARGIN leaves cash here. The entry cost is carried on the
+        # position and settled at close, where _close() subtracts it inside pnl.
+        # The first cut deducted it in both places, double-charging every trade.
+        self.state["cash"] -= margin
 
         pos = {
             "ticker": o["ticker"], "direction": "LONG",
@@ -259,7 +263,19 @@ class PaperTraderV2:
         entry_cost_share = pos["entry_cost"] * (qty / pos["qty"])
         pnl = (exit_price - pos["entry_price"]) * qty - entry_cost_share - exit_cost
 
-        released = pos["margin"] * (qty / pos["qty"])
+        # Release this slice's margin and DECREMENT what the position still holds,
+        # or a partial exit leaves the full margin on the books and equity()
+        # over-counts for the rest of the position's life.
+        #
+        # The fraction is against qty_open (what is still live), NOT the original
+        # qty. Using the original strands margin on every scale-out: after T1 takes
+        # half, margin is already halved, so a T2 exit of the remaining half would
+        # release half of the half and quietly orphan the rest. On a Rs1.26L
+        # position that was Rs6,300 per trade, which then read as a drawdown and
+        # tripped the halt - the same failure wearing a different hat.
+        qty_open_before = pos["qty_open"]
+        released = pos["margin"] * (qty / qty_open_before) if qty_open_before else pos["margin"]
+        pos["margin"] -= released
         self.state["cash"] += released + pnl
         self.state["total_pnl"] += pnl
         pos["qty_open"] -= qty

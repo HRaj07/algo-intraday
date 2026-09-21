@@ -17,7 +17,12 @@ from pathlib import Path
 
 from tzutil import IST as ist, UTC, now_ist
 
-Path("logs").mkdir(exist_ok=True)
+# LOG_DIR is overridable so the test harness does not write into the real logs/
+# folder. Without this, running tests/test_pipeline.py produced a realistic-looking
+# logs/intraday_v2.log full of synthetic trades, which is indistinguishable from a
+# live run at a glance. It cost an afternoon of confusion; it costs one env var.
+LOG_DIR = Path(os.environ.get("ALGO_LOG_DIR", "logs"))
+LOG_DIR.mkdir(parents=True, exist_ok=True)
 Path("reports").mkdir(exist_ok=True)
 
 
@@ -30,7 +35,7 @@ class ISTFormatter(logging.Formatter):
 _h = logging.StreamHandler()
 _h.setFormatter(ISTFormatter("%(asctime)s | %(levelname)-7s | %(name)s | %(message)s",
                              "%Y-%m-%d %H:%M:%S"))
-_f = logging.FileHandler("logs/intraday_v2.log", mode="a")
+_f = logging.FileHandler(LOG_DIR / "intraday_v2.log", mode="a")
 _f.setFormatter(_h.formatter)
 logging.basicConfig(level=logging.INFO, handlers=[_h, _f])
 for noisy in ("yfinance", "peewee", "urllib3"):
@@ -131,7 +136,7 @@ def main():
                 f"WR {s['win_rate_pct']}% | PF {s['profit_factor']} | "
                 f"friction Rs{s['total_friction']:,.0f}")
 
-    with open("logs/scan_v2.jsonl", "a") as f:
+    with open(LOG_DIR / "scan_v2.jsonl", "a") as f:
         f.write(json.dumps({"time": str(now), "summary": s}) + "\n")
 
 
