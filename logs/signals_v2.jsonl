@@ -20,3 +20,4 @@
 {"time": "2026-09-22 13:57:06.032090+05:30", "regime": "NIFTY 0.33% below its VWAP (limit 0.3%)", "scanned": 210, "signals": [], "rejects": {"regime gate closed": 210}, "near_misses": []}
 {"time": "2026-09-22 14:01:15.604582+05:30", "regime": "NIFTY 0.36% below its VWAP (limit 0.3%)", "scanned": 210, "signals": [], "rejects": {"regime gate closed": 210}, "near_misses": []}
 {"time": "2026-09-22 14:15:54.360304+05:30", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 210}, "near_misses": []}
+{"time": "2026-09-22 14:31:22.422999+05:30", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 210}, "near_misses": []}
