@@ -1,0 +1,11 @@
+{
+  "cash": 1000000,
+  "initial_capital": 1000000,
+  "equity_peak": 1000000,
+  "positions": {},
+  "pending_orders": {},
+  "last_known_price": {},
+  "trade_history": [],
+  "daily_entry_count": {},
+  "total_pnl": 0.0
+}
