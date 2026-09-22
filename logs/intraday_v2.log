@@ -102,3 +102,15 @@
 2026-09-22 09:46:09 | INFO    | __main__ |   performance x1.0: n=0, too few trades to infer anything - base size
 2026-09-22 09:46:09 | INFO    | __main__ |   drawdown    x1.0: at high-water mark
 2026-09-22 09:46:09 | INFO    | __main__ | equity Rs1,000,000 | open 0 | pending 0 | closed 0 | WR 0.0% | PF None | friction Rs0
+2026-09-22 10:01:04 | INFO    | __main__ | ================================================================
+2026-09-22 10:01:04 | INFO    | __main__ | Scan | 2026-09-22 10:01 IST
+2026-09-22 10:01:06 | ERROR   | yfinance | 
+1 Failed download:
+2026-09-22 10:01:06 | ERROR   | yfinance | ['ALKEM.NS']: OperationalError('database is locked')
+2026-09-22 10:01:17 | INFO    | data.fetcher | Fetched 15min data for 211/212 tickers
+2026-09-22 10:01:17 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ALKEM.NS
+2026-09-22 10:01:17 | INFO    | __main__ | SIZING: 0.400% of equity (Rs4,000 risk per trade)
+2026-09-22 10:01:17 | INFO    | __main__ |   base 0.40%
+2026-09-22 10:01:17 | INFO    | __main__ |   performance x1.0: n=0, too few trades to infer anything - base size
+2026-09-22 10:01:17 | INFO    | __main__ |   drawdown    x1.0: at high-water mark
+2026-09-22 10:01:19 | INFO    | __main__ | equity Rs1,000,000 | open 0 | pending 0 | closed 0 | WR 0.0% | PF None | friction Rs0
