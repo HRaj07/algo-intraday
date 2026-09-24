@@ -131,24 +131,40 @@ print("=" * 70)
 # typed in. Each one was a bug waiting to happen as a literal: a fixed Rs2cr
 # turnover floor was already too low at Rs5L capital, and a fixed Rs60,000
 # notional floor silently retires the moment capital doubles.
-_target = SYSTEM["initial_capital"] * RISK["risk_pct_per_trade"] / STRATEGY["stop_pct_floor"]
+import config as _cfgmod
+from config import MOMENTUM, ACTIVE_STRATEGY
+from learning import MIN_RISK_PCT
+_floor = MOMENTUM["stop_pct_floor"] if ACTIVE_STRATEGY == "momentum_v3" else STRATEGY["stop_pct_floor"]
+_target = SYSTEM["initial_capital"] * RISK["risk_pct_per_trade"] / _floor
 
-# The turnover floor asks whether a name can absorb the SMALLEST position we
-# would accept. Requiring it to absorb a full-size one at the tightest stop was
-# the worst case on both axes, and it rejected 35% of all name-checks.
+# The turnover floor asks whether a name can absorb a full-size position at the
+# ACTIVE strategy's floor stop. It is about slippage honesty, so it uses full
+# base risk, not the tapered minimum.
 _min_pos = _target * RISK["min_notional_fraction_of_target"]
 _cap = FILTERS["min_median_15m_turnover"] * RISK["max_pct_of_bar_volume"]
-check("the smallest acceptable position fits inside the bar-volume cap",
+check("the smallest full-size position fits inside the bar-volume cap",
       _min_pos <= _cap + 1, f"min position Rs{_min_pos:,.0f} vs cap Rs{_cap:,.0f}")
-check("turnover floor is derived from the minimum position, not a literal",
+check("turnover floor is derived from the ACTIVE strategy's stop, not v2's",
       abs(FILTERS["min_median_15m_turnover"]
           - _min_pos / RISK["max_pct_of_bar_volume"]) < 1,
       f"Rs{FILTERS['min_median_15m_turnover'] / 1e7:.2f}cr per 15-min bar")
-check("minimum notional is a fraction of target, not a literal",
+
+# THE BUG THE FULL REPLAY FOUND. The notional floor was derived from v2's 0.6%
+# stop; v3 stops at 1.2%+ so its positions are half the size, and adaptive
+# sizing tapers risk toward 0.20% in a drawdown. Against the old floor, 12 of
+# 29 v3 orders were refused as "fragments". The floor must sit below the
+# smallest LEGITIMATE v3 position - a tapered trade at the widest normal stop.
+_smallest_legit = SYSTEM["initial_capital"] * MIN_RISK_PCT / MOMENTUM["stop_pct_cap"]
+check("a drawdown-tapered v3 trade at the widest stop still clears the notional floor",
+      _smallest_legit >= RISK["min_notional_per_trade"],
+      f"smallest legitimate Rs{_smallest_legit:,.0f} vs floor Rs{RISK['min_notional_per_trade']:,.0f}")
+check("a true fragment (qty=1 of a Rs500 stock) is still refused",
+      500 < RISK["min_notional_per_trade"])
+check("minimum notional is derived from the tapered minimum risk, not a literal",
       abs(RISK["min_notional_per_trade"]
-          - _target * RISK["min_notional_fraction_of_target"]) < 1,
-      f"Rs{RISK['min_notional_per_trade']:,.0f} = "
-      f"{RISK['min_notional_fraction_of_target'] * 100:.0f}% of target")
+          - SYSTEM["initial_capital"] * MIN_RISK_PCT / _floor
+            * RISK["min_notional_fraction_of_target"]) < 1,
+      f"Rs{RISK['min_notional_per_trade']:,.0f}")
 # Must read the live cost, not a copy of it. A hardcoded 0.001355 here would
 # have silently passed while the real cost moved underneath it.
 from costs import VARIABLE_ROUNDTRIP_PCT as _C
@@ -212,8 +228,21 @@ halted, why = rm.trading_halted(now)
 check(f"daily loss limit halts trading past -{limit}R", halted, why)
 
 state["trade_history"] = [{"pnl": -300, "exit_time": "2026-08-01 11:00:00 IST"}] * 30
+import engine.risk_manager as _rmmod
+_mode0 = _rmmod.SYSTEM.get("mode")
+_rmmod.SYSTEM["mode"] = "live"
 halted, why = rm.trading_halted(now)
-check("rolling-PF kill switch fires", halted, why)
+check("rolling-PF kill switch HALTS in live mode", halted, why)
+_rmmod.SYSTEM["mode"] = "paper"
+state.pop("killswitch_trips", None)
+halted, why = rm.trading_halted(now)
+check("in PAPER mode the kill switch records the trip and keeps measuring",
+      not halted and state.get("killswitch_trips"),
+      f"trips={state.get('killswitch_trips')}")
+halted2, _ = rm.trading_halted(now)
+check("the trip is recorded once per day, not once per scan",
+      len(state.get("killswitch_trips", [])) == 1)
+_rmmod.SYSTEM["mode"] = _mode0
 
 print("\n" + "=" * 70)
 print("3. STRATEGY - regime gate, filters, trigger, cost hurdle")
@@ -593,7 +622,7 @@ _mkt_sig = {"ticker": "ZZZ.NS", "order_type": "MARKET", "reference_price": 1000.
             "stop_pct": 1.2, "stop_loss": 988.0, "valid_bars": 1, "atr": 6.0,
             "strategy": "MOM-v3", "bar_volume": 5_000_000,
             "exit_cfg": {"use_target": False, "use_breakeven_trail": False,
-                         "use_time_stop": False}}
+                         "use_time_stop": False, "thesis_exits": True}}
 _clock3 = datetime.combine(_td3, datetime.min.time()).replace(hour=11, tzinfo=IST)
 pt.now_ist = lambda c=_clock3: c
 _tr3.place_order(_mkt_sig, _clock3)
@@ -611,6 +640,76 @@ if _filled:
     check("risk per share reflects the real fill",
           abs(_p3["risk_per_share"] - 1010.0 * 0.012) < 0.1,
           f"Rs{_p3['risk_per_share']}")
+
+print("\n" + "=" * 70)
+print("3e. IN-TRADE EXITS - the one rule that measured positive, and the guards")
+print("=" * 70)
+# study_exits.py: nine exit rules on the same 261 entries. Trailing stops lost
+# money at every multiple (-258k at 1.5xATR). Exit-on-VWAP-reclaim was the
+# only rule that raised both the net and the tail-independent total. These
+# assertions pin that outcome into the code so it cannot drift back.
+from engine.exit_manager import ExitManager
+
+check("no trailing-stop switch exists in MOMENTUM to be flipped on",
+      not any("trail" in k for k in MOMENTUM if MOMENTUM[k]),
+      f"{[k for k in MOMENTUM if 'trail' in k]}")
+check("VWAP-reclaim exit is on", MOMENTUM["exit_on_vwap_reclaim"] is True)
+check("RSI and index exits are off (measured as noise)",
+      not MOMENTUM["exit_on_rsi_below"] and not MOMENTUM["exit_on_index_drop"])
+
+_em = ExitManager()
+_v3pos = {"ticker": "AAA.NS", "entry_price": 1000.0, "risk_per_share": 12.0,
+          "stop_loss": 988.0, "bars_held": 3, "strategy": "MOM-v3",
+          "exit_cfg": {"thesis_exits": True}}
+_below = {"open": 1005, "high": 1008, "low": 996, "close": 997, "volume": 1e6}
+_above = {"open": 1005, "high": 1012, "low": 1003, "close": 1010, "volume": 1e6}
+
+_v = _em.evaluate(_v3pos, _below, {"vwap": 1002.0, "rsi": 60}, None)
+check("a v3 position that closes below VWAP is exited",
+      _v is not None and _v[0] == "vwap_reclaim", f"{_v}")
+_v = _em.evaluate(_v3pos, _above, {"vwap": 1002.0, "rsi": 60}, None)
+check("a v3 position still above VWAP is left alone", _v is None, f"{_v}")
+
+_fresh = dict(_v3pos, bars_held=0)
+_v = _em.evaluate(_fresh, _below, {"vwap": 1002.0}, None)
+check("the entry bar itself never triggers the VWAP exit", _v is None,
+      "a market fill can land a tick under a moving VWAP; give it one bar")
+
+_v2pos = dict(_v3pos, strategy="VWAP-MR-v2", exit_cfg={})
+_v = _em.evaluate(_v2pos, _below, {"vwap": 1002.0}, None)
+check("a v2 position (below VWAP by design) is never touched by thesis exits",
+      _v is None, f"{_v}")
+
+_v = _em.evaluate(_v3pos, _below, None, None)
+check("no indicators -> no thesis exit (fail quiet, stop still applies)",
+      _v is None)
+
+# the trader honours it end to end, and a caller without context is unchanged
+_tr = PaperTraderV2(state_file=str(tmp / "thesis.json"))
+_tr.state["cash"] = _tr.state["initial_capital"] = 1_000_000
+_ck = datetime.combine(_td3, datetime.min.time()).replace(hour=11, tzinfo=IST)
+pt.now_ist = lambda c=_ck: c
+_tr.place_order(_mkt_sig, _ck)
+_tr.process_orders({"ZZZ.NS": {"open": 1000.0, "close": 1004.0, "high": 1006.0,
+                               "low": 999.0, "volume": 5e6}}, _ck)
+_ex0 = _tr.check_exits({"ZZZ.NS": {"open": 1004, "close": 990, "high": 1005,
+                                   "low": 989.5, "volume": 5e6}}, _ck)
+check("WITHOUT context a below-VWAP bar does not exit (old callers unchanged)",
+      not _ex0 and "ZZZ.NS" in _tr.state["positions"])
+_ex1 = _tr.check_exits({"ZZZ.NS": {"open": 1004, "close": 990, "high": 1005,
+                                   "low": 989.5, "volume": 5e6}}, _ck,
+                       context={"indicators": {"ZZZ.NS": {"vwap": 995.0, "rsi": 55}},
+                                "index": {"nifty": 24000.0}})
+check("WITH context the same bar exits on vwap_reclaim",
+      _ex1 and _ex1[0]["reason"] == "vwap_reclaim",
+      f"{[e['reason'] for e in _ex1]}")
+check("the per-bar snapshot was recorded for the position",
+      len(_tr.last_snapshots) == 1 and _tr.last_snapshots[0]["ticker"] == "ZZZ.NS")
+if _tr.last_snapshots:
+    _s = _tr.last_snapshots[0]
+    check("snapshot carries R-now, MFE, MAE and the VWAP verdict",
+          all(k in _s for k in ("r_now", "r_mfe", "r_mae", "above_vwap"))
+          and _s["above_vwap"] is False, f"{_s}")
 
 print("\n" + "=" * 70)
 print("3d. WALK-FORWARD OVERRIDES - the weekly job must not be able to hurt you")

@@ -37,6 +37,7 @@ from typing import Dict, List, Optional
 from config import SYSTEM, STRATEGY, RISK
 from costs import one_side_cost, cost_in_rupees, VARIABLE_ROUNDTRIP_PCT, FIXED_ROUNDTRIP
 from engine.risk_manager import RiskManager
+from engine.exit_manager import ExitManager
 
 from tzutil import IST as ist, now_ist, stamp
 logger = logging.getLogger(__name__)
@@ -48,6 +49,8 @@ class PaperTraderV2:
         self.state_file.parent.mkdir(parents=True, exist_ok=True)
         self.state = self._load()
         self.risk = RiskManager(self.state)
+        self.exits = ExitManager()
+        self.last_snapshots: List[Dict] = []   # per-bar state of open trades, this scan
 
     def _load(self) -> Dict:
         if self.state_file.exists():
@@ -187,7 +190,8 @@ class PaperTraderV2:
         self._save()
         return True
 
-    def process_orders(self, bars: Dict[str, Dict[str, float]], now: datetime) -> List[Dict]:
+    def process_orders(self, bars: Dict[str, Dict[str, float]], now: datetime,
+                       context: Optional[Dict] = None) -> List[Dict]:
         """Fill pending triggers; expire stale ones."""
         filled = []
         for ticker, o in list(self.state["pending_orders"].items()):
@@ -207,7 +211,7 @@ class PaperTraderV2:
                 # signal bar closed. Using the bar's CLOSE here would be
                 # lookahead: it is not known when the order is sent.
                 fill = bar.get("open") or bar["close"]
-                pos = self._open(o, float(fill), now)
+                pos = self._open(o, float(fill), now, context)
                 if pos:
                     filled.append(pos)
                 del self.state["pending_orders"][ticker]
@@ -216,7 +220,7 @@ class PaperTraderV2:
             # Triggered when the bar trades through the trigger price.
             if bar["high"] >= o["trigger_price"]:
                 fill = min(o["trigger_price"], o["limit_price"])
-                pos = self._open(o, fill, now)
+                pos = self._open(o, fill, now, context)
                 if pos:
                     filled.append(pos)
                 del self.state["pending_orders"][ticker]
@@ -224,7 +228,8 @@ class PaperTraderV2:
         self._save()
         return filled
 
-    def _open(self, o: Dict, fill_price: float, now: datetime) -> Optional[Dict]:
+    def _open(self, o: Dict, fill_price: float, now: datetime,
+              context: Optional[Dict] = None) -> Optional[Dict]:
         # A MARKET order's stop was expressed against a reference price the
         # order never traded at. Re-derive it from the price actually paid, or
         # a gap between the two silently changes the risk taken - the fill can
@@ -279,6 +284,11 @@ class PaperTraderV2:
             "entry_gap_pct": o.get("entry_gap_pct"),
             "entry_turnover_cr": o.get("entry_turnover_cr"),
             "entry_stop_pct": o.get("stop_pct"),
+
+            # Where the index stood when this was opened, so an index-reversal
+            # exit has something to compare against. None when unknown.
+            "nifty_at_entry": (context or {}).get("index", {}).get("nifty"),
+            "mfe_price": fill_price, "mae_price": fill_price,
         }
         self.state["positions"][o["ticker"]] = pos
         today = str(now.date())
@@ -289,8 +299,19 @@ class PaperTraderV2:
     # ==================================================================
     # EXITS
     # ==================================================================
-    def check_exits(self, bars: Dict[str, Dict[str, float]], now: datetime) -> List[Dict]:
+    def check_exits(self, bars: Dict[str, Dict[str, float]], now: datetime,
+                    context: Optional[Dict] = None) -> List[Dict]:
+        """
+        `context` is optional and carries what the exit rules need to see:
+            {"indicators": {ticker: {"vwap":..., "rsi":..., "rvol":...}},
+             "index": {"nifty": last_close}}
+        Without it, only the stop and the clock apply - which is exactly the
+        behaviour every caller that predates it (tests, backtests) expects.
+        """
         exits = []
+        self.last_snapshots = []
+        ctx_ind = (context or {}).get("indicators", {})
+        ctx_idx = (context or {}).get("index", {})
         sq_h, sq_m = map(int, SYSTEM["square_off_time"].split(":"))
         force = now.time() >= dtime(sq_h, sq_m)
 
@@ -331,6 +352,23 @@ class PaperTraderV2:
             if low <= pos["stop_loss"]:
                 reason = "trailing_stop" if pos["trailed"] else "stop_loss"
                 exits.append(self._close(ticker, pos, pos["stop_loss"], reason, now, pos["qty_open"]))
+                continue
+
+            # ---- 2b. thesis exits, and the per-bar record ----
+            # The record is written BEFORE the decision so that a trade closed
+            # by a thesis rule still has its final bar on file.
+            ind = ctx_ind.get(ticker)
+            idx_ctx = ({"nifty": ctx_idx.get("nifty"),
+                        "nifty_at_entry": pos.get("nifty_at_entry")}
+                       if ctx_idx.get("nifty") else None)
+            if context is not None:
+                self.last_snapshots.append(
+                    self.exits.snapshot(pos, bar, ind, idx_ctx, now))
+            verdict = self.exits.evaluate(pos, bar, ind, idx_ctx)
+            if verdict:
+                why, px = verdict
+                logger.info(f"THESIS EXIT {ticker} - {why} at ~Rs{px:.2f}")
+                exits.append(self._close(ticker, pos, px, why, now, pos["qty_open"]))
                 continue
 
             # Exit rules come from the POSITION, not from a global. Two

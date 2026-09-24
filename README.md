@@ -267,15 +267,49 @@ exits and squares off. Only runs inside **09:45–13:15 IST** can open a positio
 Square-off is 15:05, not 15:15, because Zerodha's own MIS auto-square-off runs at
 15:12 (CAS) / 15:25 and fills at market regardless of your price.
 
+### What happens to an open trade, every 15 minutes
+
+Each scan manages open positions **before** it looks for new ones, in this order:
+
+1. **Clock.** At or after 15:05, close everything at market. Nothing overrides this.
+2. **Stop.** If the bar's low touched the stop, close at the stop.
+3. **Thesis.** If the bar *closed back below VWAP*, close at the next open. The
+   trade was entered because price was extended above VWAP on momentum; a close
+   below VWAP is that thesis being falsified. This is the only in-trade rule that
+   measured positive (`study_exits.py`: +₹15,107 over hold, and a *higher* total
+   without its best five trades). It cannot fire on a trade that is working.
+4. **Record.** One line per open position to `logs/positions_v3.jsonl`: R now, best
+   and worst R so far, VWAP verdict, RSI, relative volume, NIFTY move since entry.
+   That file is committed every scan and is what lets any exit rule be re-tested on
+   trades that actually happened.
+
+What deliberately does **not** happen: no trailing stop, no profit target, no
+breakeven move, no time stop, no partial. Every one of those measured negative on
+identical entries — trailing stops worst of all, and worse the tighter they were.
+The numbers are in `config.py` next to the switches so nobody re-adds one by instinct.
+
+### The three schedules — all on GitHub, nothing on a laptop
+
+| Workflow | When (IST) | Does | Writes |
+|---|---|---|---|
+| `intraday_scan.yml` | every 15 min, Mon–Fri | trades, manages, records | `logs/` |
+| `research.yml` | Saturday 08:30 | fetches fresh bars, re-runs every study | `research/*.txt` |
+| `walkforward.yml` | Sunday 07:30 | refits four thresholds on held-out data | `params_live.json`, `research/walkforward.jsonl` |
+
+Only the Sunday job can change what the bot trades, only within hard bands, and
+only after the change cleared cost on two weeks it never saw. The Saturday job
+measures and writes; it changes nothing. The scanner is unchanged since v2.
+
 ### Local commands
 
 ```bash
-python tests/test_pipeline.py      # 123 assertions, synthetic data, no network
+python tests/test_pipeline.py      # 135 assertions, synthetic data, no network
 python check_data.py               # is ^NSEI actually fetching?
 python main.py                     # one scan by hand
 python backtest_recent.py          # replay the REAL strategy on real bars
 python study_signal_edge.py        # measure the premise itself, no machinery
-python study_swing_daily.py        # the untested question: does holding days work?
+python study_exits.py              # which in-trade exit rules help, on identical entries
+python study_swing_daily.py        # does holding days beat holding hours? (real holdout)
 python walkforward.py --dry-run    # what would Sunday's job decide?
 ```
 
@@ -294,6 +328,7 @@ bot goes silent for days, run it before assuming the filters are just being stri
 | `costs.py` | **Single source of truth for costs.** Imported by engine and backtester |
 | `strategies/momentum_v3.py` | **The live strategy.** Long strength, market entry, stop-or-square-off |
 | `strategies/vwap_mr_v2.py` | The control case. Kept runnable so the studies that condemned it reproduce |
+| `engine/exit_manager.py` | In-trade rules as pure functions. One on (VWAP reclaim), the rest off with the measurement |
 | `walkforward.py` | Weekly refit on held-out data. Adopts nothing that fails the holdout |
 | `study_signal_edge.py` | Forward returns from the raw condition. This is what killed v2 |
 | `study_momentum.py` | The mirror finding, re-tested at tradeable prices |
@@ -301,7 +336,9 @@ bot goes silent for days, run it before assuming the filters are just being stri
 | `study_candidate.py` | The month-robust cuts, alone and combined, with stops |
 | `study_portfolio.py` | The candidate as a real book — where +0.255%/signal became t = +0.20 |
 | `study_sweep.py` | 100 threshold cells, each a full book. Zero survivors |
-| `study_swing_daily.py` | Daily bars, 5 years, real train/test split. **Not yet run** |
+| `study_exits.py` | Nine exit rules on identical entries. Trailing stops lose; VWAP reclaim wins |
+| `study_swing_daily.py` | Daily bars, 5 years, real train/test split. Runs Saturdays on Actions |
+| `research/` | Every study's output, machine-written weekly. See its README |
 | `engine/risk_manager.py` | Sizing, exposure caps, circuit breakers |
 | `engine/paper_trader_v2.py` | Orders, fills, exits, ledger |
 | `data/fetcher.py` | yfinance wrapper and indicators |

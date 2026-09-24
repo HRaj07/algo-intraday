@@ -46,6 +46,7 @@ from config import (INTRADAY_UNIVERSE, SYSTEM, INDEX_TICKER, VIX_TICKER, RISK,
                     ACTIVE_STRATEGY, LIVE_PARAM_OVERRIDES)
 from data.fetcher import IntradayFetcher
 from engine.paper_trader_v2 import PaperTraderV2
+from engine.exit_manager import build_exit_context
 from strategies.vwap_mr_v2 import VWAPMeanReversionV2
 from strategies.momentum_v3 import MomentumV3
 
@@ -117,11 +118,17 @@ def main():
 
     trader = PaperTraderV2()
 
+    # What the in-trade rules are allowed to see, computed ONLY for names the
+    # book is holding or about to fill. Indicators for the whole universe are
+    # the strategy's job at scan time; this is the cheap subset the exit
+    # manager and the per-bar record need.
+    context = build_exit_context(trader, data, index_df, today)
+
     # 1. cache prices BEFORE anything else - this is what makes square-off safe
     trader.update_prices(bars, now)
 
     # 2. exits, unconditionally, even if today's fetch came back thin
-    for ex in trader.check_exits(bars, now):
+    for ex in trader.check_exits(bars, now, context):
         icon = "OK" if ex["pnl"] > 0 else "X"
         notify(f"[{icon}] EXIT {ex['ticker']} {ex['qty']}@Rs{ex['exit_price']} | "
                f"Rs{ex['pnl']:+,.0f} ({ex['R_multiple']:+.2f}R) | {ex['reason']}")
@@ -130,13 +137,29 @@ def main():
     if now.time() >= dtime(sq_h, sq_m):
         s = trader.summary()
         logger.info(f"EOD: {s}")
+        trips = trader.state.get("killswitch_trips") or []
+        if trips:
+            # In paper mode the kill switch records rather than halts. Say so
+            # at every close, because a trip that scrolls past unread is a
+            # trip that never happened.
+            logger.warning(f"KILL SWITCH has tripped {len(trips)}x in paper mode; "
+                           f"latest {trips[-1]} - live mode would be HALTED")
         notify(f"EOD | equity Rs{s['equity']:,.0f} | P&L Rs{s['total_pnl']:+,.0f} | "
                f"WR {s['win_rate_pct']}% | PF {s['profit_factor']} | "
                f"friction paid Rs{s['total_friction']:,.0f}")
         return
 
+    # 2b. the per-bar record of every open trade. One line per position per
+    # scan. This is what makes 'would exit rule X have helped?' answerable on
+    # trades that actually happened, which is the only test that beats the
+    # 59-day sample everything so far was measured on.
+    if trader.last_snapshots:
+        with open(LOG_DIR / "positions_v3.jsonl", "a") as f:
+            for snap in trader.last_snapshots:
+                f.write(json.dumps(snap, default=str) + "\n")
+
     # 3. fill triggers resting from the previous bar
-    for pos in trader.process_orders(bars, now):
+    for pos in trader.process_orders(bars, now, context):
         notify(f"FILLED {pos['ticker']} @Rs{pos['entry_price']} qty {pos['qty']} | "
                f"SL Rs{pos['stop_loss']} T1 Rs{pos['t1']}")
 

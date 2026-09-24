@@ -325,6 +325,9 @@ FILTERS["min_median_15m_turnover"] = RISK["min_median_15m_turnover"]
 
 # A position shrunk below this fraction of intent is not a smaller good trade,
 # it is a donation to the fixed costs.
+# NOTE: both floors above are RE-DERIVED further down for the strategy that is
+# actually active. These v2-based values are what the control case is
+# measured against; the live values are the ones after ACTIVE_STRATEGY.
 RISK["min_notional_per_trade"] = _target_notional() * RISK["min_notional_fraction_of_target"]
 
 STRATEGY["min_vwap_deviation"] = _min_deviation_for_cost_hurdle(
@@ -448,6 +451,39 @@ MOMENTUM = {
     "use_breakeven_trail": False,
     "use_time_stop": False,
 
+    # --- in-trade management: MEASURED, not designed ---
+    # study_exits.py ran nine exit rules over the same 261 live-rule entries
+    # on real bars, so the only thing that differed was the exit. Net P&L
+    # against plain hold-to-close, and the total with the best five trades
+    # removed (the check that tells tail-luck from edge):
+    #
+    #     rule                        vs hold      ex-top-5
+    #     hold to close                    -       +88,508
+    #     trail 1.5xATR             -258,339      -116,399
+    #     trail 2.5xATR             -184,432       -56,383
+    #     trail 3.5xATR              -11,540       +81,022
+    #     exit on close < VWAP       +15,107      +103,615   <- the only one
+    #     exit on RSI < 50            +2,120       +90,628
+    #     exit if NIFTY -0.5%         +2,613       +91,121
+    #     half off at +1R            -13,364      +109,457
+    #     square off 14:30           -29,549       +60,934
+    #
+    # Trailing stops hurt, and tighter hurts more. A trail exists to lock in
+    # gains, and locking in gains is exactly what removes the trades that carry
+    # the result. Do not re-add one by instinct - the number is above.
+    #
+    # The VWAP-reclaim exit is enabled because of its MECHANISM, with the
+    # measurement as support rather than proof: the thesis is "extended above
+    # VWAP on momentum", and a close back below VWAP is that thesis being
+    # falsified. It cannot fire on a trade that is working. It also raised
+    # the tail-independent total, which no other rule did while also raising
+    # the net. It reads the bar's close and exits at the next open, which is
+    # how the 15-minute cron can actually act on it.
+    "exit_on_vwap_reclaim": True,
+    "exit_on_rsi_below": None,       # 50 was measured at +2,120 - noise
+    "exit_on_index_drop": None,      # 0.5% was measured at +2,613 - noise
+    "partial_at_R": None,            # 1R measured at -13,364; smoother, not better
+
     # --- regime ---
     # NOT an alpha filter. Gating on "NIFTY above its VWAP" looked helpful
     # (+0.067% vs -0.024%) and failed in September, so it is not claimed as
@@ -513,6 +549,58 @@ LIVE_PARAM_OVERRIDES = _apply_live_params()
 # v2 is kept importable and testable rather than deleted: it is the control
 # case, and the studies that condemned it must stay reproducible.
 ACTIVE_STRATEGY = "momentum_v3"
+
+# ---------------------------------------------------------------------------
+# RE-DERIVE THE SIZE FLOORS FOR THE STRATEGY THAT IS ACTUALLY RUNNING
+# ---------------------------------------------------------------------------
+# FOUND BY REPLAY, 2026-09-25. The full-universe replay of v3 through the real
+# machine produced 247 signals and 22 trades. The funnel showed 12 of 29 placed
+# orders dying at one gate:
+#
+#     SIZING SKIP: notional below the floor - fixed costs would dominate
+#
+# The floor was derived above from v2's 0.6% stop. v3 stops at 1.2% and wider,
+# and notional = risk / stop%, so a v3 position is HALF the size of a v2 one
+# for the same rupee risk - by design, that is where its friction saving comes
+# from. Measured against a floor built for v2, a normal v3 trade in a volatile
+# name looked like a fragment and was refused. The volatile names are exactly
+# the ones the measurement said were best (+0.318% net above 0.9% ATR).
+#
+# It compounded with adaptive sizing: learning.py tapers risk toward 0.20% in
+# a drawdown, which shrinks notional further, so in any drawdown the floor did
+# not make positions smaller - it stopped trading altogether. A taper that
+# becomes a halt is a different mechanism from the one that was designed.
+#
+# Two changes, both derivations rather than numbers:
+#   1. the stop floor used is the ACTIVE strategy's, not v2's.
+#   2. the notional floor is sized at the MINIMUM risk the taper can reach, so
+#      a tapered position is still a legitimate trade. Its job - refusing true
+#      fragments like qty=1 - is unchanged; "fixed costs dominate" is already
+#      measured exactly by the friction guard in risk_manager.size_position.
+# The turnover floor keeps using full base risk: its job is slippage honesty
+# for a full-size position, which the taper does not change.
+def _active_stop_floor() -> float:
+    return (MOMENTUM["stop_pct_floor"] if ACTIVE_STRATEGY == "momentum_v3"
+            else STRATEGY["stop_pct_floor"])
+
+
+def _full_size_notional() -> float:
+    return SYSTEM["initial_capital"] * RISK["risk_pct_per_trade"] / _active_stop_floor()
+
+
+def _smallest_tapered_notional() -> float:
+    from learning import MIN_RISK_PCT
+    return SYSTEM["initial_capital"] * MIN_RISK_PCT / _active_stop_floor()
+
+
+RISK["min_median_15m_turnover"] = (
+    _full_size_notional() * RISK["min_notional_fraction_of_target"]
+    / RISK["max_pct_of_bar_volume"]
+)
+FILTERS["min_median_15m_turnover"] = RISK["min_median_15m_turnover"]
+RISK["min_notional_per_trade"] = (
+    _smallest_tapered_notional() * RISK["min_notional_fraction_of_target"]
+)
 
 REPORTING = {"report_dir": "reports", "log_dir": "logs"}
 

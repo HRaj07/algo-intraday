@@ -246,6 +246,10 @@ class MomentumV3:
                 "use_target": self.p["use_target"],
                 "use_breakeven_trail": self.p["use_breakeven_trail"],
                 "use_time_stop": self.p["use_time_stop"],
+                # Hands the position to engine/exit_manager.py each bar. Which
+                # thesis rules are live is decided there, from config.MOMENTUM,
+                # with the measurement behind each switch.
+                "thesis_exits": True,
             },
 
             # The entry snapshot. Every number the rule looked at, stored so

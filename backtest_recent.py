@@ -41,9 +41,13 @@ from data.fetcher import IntradayFetcher
 from tzutil import IST
 
 import engine.paper_trader_v2 as pt_mod
-import strategies.vwap_mr_v2 as strat_mod
+import strategies.vwap_mr_v2 as v2_mod
+import strategies.momentum_v3 as v3_mod
 from engine.paper_trader_v2 import PaperTraderV2
+from engine.exit_manager import build_exit_context
 from strategies.vwap_mr_v2 import VWAPMeanReversionV2
+from strategies.momentum_v3 import MomentumV3
+from config import ACTIVE_STRATEGY
 
 CACHE = Path("cache_recent_15m.pkl")
 
@@ -84,7 +88,8 @@ def replay(data: dict, capital: float, verbose: bool) -> dict:
     trader = PaperTraderV2(state_file=str(state))
     trader.state["cash"] = trader.state["initial_capital"] = capital
     trader.state["equity_peak"] = capital
-    strat = VWAPMeanReversionV2()
+    strat = MomentumV3() if ACTIVE_STRATEGY == "momentum_v3" else VWAPMeanReversionV2()
+    print(f"strategy under replay: {strat.name}\n")
 
     rejects = defaultdict(int)
     scans = signals_seen = 0
@@ -110,7 +115,8 @@ def replay(data: dict, capital: float, verbose: bool) -> dict:
 
             # freeze the clock for both modules - they read now_ist()
             pt_mod.now_ist = lambda n=now: n
-            strat_mod.now_ist = lambda n=now: n
+            v2_mod.now_ist = lambda n=now: n
+            v3_mod.now_ist = lambda n=now: n
 
             sliced = {t: df.iloc[:start + i + 1]
                       for t, (df, start, n) in day_names.items() if i < n}
@@ -124,18 +130,23 @@ def replay(data: dict, capital: float, verbose: bool) -> dict:
             bars = {}
             for t, df in sliced.items():
                 last = df.iloc[-1]
-                bars[t] = {"close": float(last["close"]), "high": float(last["high"]),
-                           "low": float(last["low"]), "volume": float(last["volume"])}
+                bars[t] = {"open": float(last["open"]), "close": float(last["close"]),
+                           "high": float(last["high"]), "low": float(last["low"]),
+                           "volume": float(last["volume"])}
 
             # ---- exactly main.py's order ----
+            # The exit context is what lets the replay apply the SAME in-trade
+            # rules the live bot applies. Without it this would replay a
+            # strategy that does not exist - v1's original sin.
+            context = build_exit_context(trader, sliced, idx_sliced, day)
             trader.update_prices(bars, now)
-            trader.check_exits(bars, now)
+            trader.check_exits(bars, now, context)
 
             sq_h, sq_m = map(int, SYSTEM["square_off_time"].split(":"))
             if now.time() >= dtime(sq_h, sq_m):
                 continue
 
-            trader.process_orders(bars, now)
+            trader.process_orders(bars, now, context)
 
             halted, _ = trader.risk.trading_halted(now)
             if halted:

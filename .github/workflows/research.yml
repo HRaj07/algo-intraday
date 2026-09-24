@@ -1,0 +1,103 @@
+name: 📊 Weekly Research
+
+# Saturday 08:30 IST (03:00 UTC). Fetches fresh bars, re-runs every study on
+# them, and commits the text output to research/. The laptop is not involved:
+# GitHub's runners have the network access the sandboxes that wrote these
+# studies did not, which is the only reason study_swing_daily.py has never
+# been run.
+#
+# Nothing here changes what the bot trades. That is walkforward.yml's job, on
+# Sunday, with a holdout. This job only measures and writes down what it saw.
+on:
+  schedule:
+    - cron: '0 3 * * 6'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    name: Re-run every study on fresh data
+    timeout-minutes: 90
+    env:
+      TZ: Asia/Kolkata
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Tests
+        env:
+          ALGO_LOG_DIR: /tmp/research_logs
+        run: python tests/test_pipeline.py
+
+      # backtest_recent.py fetches 60 days of 15-minute bars for the whole
+      # universe and caches them; every study below reads that cache.
+      - name: Replay the live strategy on real bars (and fetch the cache)
+        run: |
+          mkdir -p research
+          python backtest_recent.py | tee research/replay_recent.txt
+
+      - name: The premise itself - forward returns, no machinery
+        run: python study_signal_edge.py | tee research/signal_edge.txt
+
+      - name: Momentum at tradeable prices
+        run: python study_momentum.py | tee research/momentum.txt
+
+      - name: Selection - which features grade the signal
+        run: python study_selection.py | tee research/selection.txt
+
+      - name: The candidate rule, with stops
+        run: python study_candidate.py | tee research/candidate.txt
+
+      - name: The candidate as a real book
+        run: python study_portfolio.py | tee research/portfolio.txt
+
+      - name: Exit rules on identical entries
+        run: python study_exits.py | tee research/exits.txt
+
+      - name: Threshold sweep, 100 cells, each a full book
+        run: python study_sweep.py | tee research/sweep.txt
+
+      # The one test with a real holdout. Five years of daily bars.
+      - name: Does holding for DAYS beat holding for hours?
+        run: python study_swing_daily.py | tee research/swing_daily.txt
+
+      - name: Stamp
+        run: |
+          {
+            echo "generated: $(date '+%Y-%m-%d %H:%M IST')"
+            echo "commit:    $(git rev-parse --short HEAD)"
+            echo "strategy:  $(python -c 'import config; print(config.ACTIVE_STRATEGY)')"
+            echo "overrides: $(python -c 'import config; print(config.LIVE_PARAM_OVERRIDES or \"none\")')"
+          } > research/LAST_RUN.txt
+
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "HRaj07"
+          git config user.email "2601harshitraj@gmail.com"
+          git add research/*.txt 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No change in research output"
+          else
+            git commit -m "📊 Research: $(TZ=Asia/Kolkata date '+%Y-%m-%d')"
+            git pull --rebase --autostash origin main || true
+            git push
+          fi

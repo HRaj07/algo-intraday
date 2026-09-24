@@ -26,7 +26,7 @@ import logging
 from datetime import datetime, timedelta
 from typing import Dict, Optional, Tuple
 
-from config import RISK, SECTOR
+from config import RISK, SECTOR, SYSTEM
 from costs import cost_in_rupees, one_side_cost
 
 logger = logging.getLogger(__name__)
@@ -147,10 +147,31 @@ class RiskManager:
             gl = abs(sum(t["pnl"] for t in recent if t["pnl"] <= 0))
             pf = gp / gl if gl > 0 else 99.0
             if pf < RISK["killswitch_min_pf"]:
-                return True, (
-                    f"rolling {n}-trade PF {pf:.2f} < {RISK['killswitch_min_pf']} "
-                    f"- edge has degraded, manual restart required"
-                )
+                why = (f"rolling {n}-trade PF {pf:.2f} < {RISK['killswitch_min_pf']} "
+                       f"- edge has degraded, manual restart required")
+                if SYSTEM.get("mode", "paper") != "paper":
+                    return True, why
+
+                # PAPER MODE: record it, shout, and keep going.
+                #
+                # Found by replay, 2026-09-25. v3 through the real machine on
+                # 210 names tripped this at about trade 30 and then sat halted
+                # for ~975 of ~1,400 scans - two-thirds of the period produced
+                # no data at all. A paper book has no capital to protect; its
+                # entire job is to MEASURE, and a measurement that switches
+                # itself off after 30 trades cannot. The trip is still recorded
+                # on the state file and in the log so the weekly review sees it,
+                # and in live mode the halt is exactly what it always was.
+                #
+                # This is not the daily or weekly loss limit. Those shape the
+                # strategy's own behaviour and apply in paper too, because the
+                # paper P&L is meant to be what live would have done.
+                trip = self.state.setdefault("killswitch_trips", [])
+                key = f"{now.date()}"
+                if not trip or trip[-1].get("date") != key:
+                    trip.append({"date": key, "pf": round(pf, 3), "n": n,
+                                 "trade_count": len(hist)})
+                    logger.warning(f"KILL SWITCH (paper - continuing): {why}")
 
         return False, ""
 
