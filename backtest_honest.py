@@ -319,11 +319,32 @@ def _group(trades):
     return g
 
 
+# Read from config.py. NEVER write these numbers twice.
+#
+# This dict used to hold its own copies, and by 2026-09-24 every one had
+# drifted: it said rsi 30 / stop floor 0.8% / deviation 0.5% while the live
+# system ran 40 / 0.6% / 0.796%. A backtest of a strategy that does not exist
+# is worse than no backtest - it is v1's original sin in a different file.
+#
+# NOTE: this file still re-implements the signal LOGIC, which is its own drift
+# risk. backtest_recent.py drives the real strategy class instead and should be
+# preferred for anything but the walk-forward structure below.
+from config import STRATEGY as _S, FILTERS as _F
+
 BASE = {
-    "rsi_os": 30, "min_dev": 0.005, "stop_atr": 1.2, "stop_floor": 0.008,
-    "stop_cap": 0.022, "t2_overshoot": 0.5, "min_rr": 1.5, "trail_atr": 1.2,
-    "time_stop_bars": 4, "time_stop_min_R": 0.4, "trigger_valid_bars": 2,
-    "index_vwap_tol": 0.003, "max_index_drop": 0.010,
+    "rsi_os": _S["rsi_oversold"],
+    "min_dev": _S["min_vwap_deviation"],
+    "stop_atr": _S["stop_atr_mult"],
+    "stop_floor": _S["stop_pct_floor"],
+    "stop_cap": _S["stop_pct_cap"],
+    "t2_overshoot": _S["t2_vwap_overshoot"],
+    "min_rr": _S["min_reward_risk_after_cost"],
+    "trail_atr": _S["trail_atr_mult_after_t1"],
+    "time_stop_bars": _S["time_stop_bars"],
+    "time_stop_min_R": _S["time_stop_min_R"],
+    "trigger_valid_bars": _S["trigger_valid_bars"],
+    "index_vwap_tol": _F["index_vwap_tolerance"],
+    "max_index_drop": _F["max_index_daily_drop"],
 }
 
 
