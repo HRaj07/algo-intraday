@@ -50,3 +50,4 @@
 {"time": "2026-09-23 15:01:11.322670+05:30", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 210}, "near_misses": []}
 {"time": "2026-09-24 09:15:50.186219+05:30", "regime": "insufficient index bars", "scanned": 210, "signals": [], "rejects": {"regime gate closed": 210}, "near_misses": []}
 {"time": "2026-09-24 09:31:21.348334+05:30", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"too few bars today": 210}, "near_misses": []}
+{"time": "2026-09-24 09:45:54.223280+05:30", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"too few bars today": 210}, "near_misses": []}
