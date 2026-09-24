@@ -249,12 +249,22 @@ class RiskManager:
                 f"floor - fixed costs would dominate, skipping rather than trading small"
             )
 
-        # Final sanity: friction must not be a silly share of the risk taken.
+        # Final sanity: friction must not be a silly share of the risk ACTUALLY
+        # taken - not the risk we set out to take.
+        #
+        # This compared against `budget` until 2026-09-24, and that was wrong in
+        # a way only cheaper costs made reachable. The caps above can shrink qty
+        # far below the risk budget; comparing friction to the original budget
+        # then flatters a position whose real risk has collapsed. A trade risking
+        # Rs450 to pay Rs477 of friction passed a guard written to stop exactly
+        # that, because it was measured against a Rs2,000 intention.
         friction = cost_in_rupees(notional)
-        if friction > 0.25 * budget:
+        actual_risk = risk_per_share * qty
+        if friction > 0.25 * actual_risk:
             return None, (
-                f"friction Rs{friction:,.0f} is {friction / budget * 100:.0f}% of the "
-                f"Rs{budget:,.0f} risk budget - stop is too tight for this price level"
+                f"friction Rs{friction:,.0f} is {friction / actual_risk * 100:.0f}% of the "
+                f"Rs{actual_risk:,.0f} actually at risk (budget was Rs{budget:,.0f}) - "
+                f"the caps shrank this position past the point of being worth taking"
             )
 
         return qty, f"qty={qty} notional=Rs{notional:,.0f} friction=Rs{friction:,.0f}"

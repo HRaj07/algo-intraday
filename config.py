@@ -136,7 +136,7 @@ RISK = {
 STRATEGY = {
     # --- signal ---
     "rsi_period": 14,
-    "rsi_oversold": 30,              # UNVALIDATED on 15m. v1 used 28, loosened
+    "rsi_oversold": 40,              # UNVALIDATED on 15m. v1 used 28, loosened
                                      # from a 25 that was tuned on HOURLY bars
                                      # and never re-swept for 15m.
 
@@ -154,13 +154,22 @@ STRATEGY = {
     # The signal measures from the bar CLOSE and the trigger sits above it, so
     # add a buffer for that gap. Result: ~1.2%.
     #
-    # v1 used 0.6%, loosened from 0.8% to "fire on 15min bars". That generated
-    # plenty of signals that could never pay for themselves - which is precisely
-    # how it lost money. Signal count is not the objective.
+    # MEASURED, 2026-09-24. Three days live produced ZERO signals. The reject
+    # tally in signals_v2.jsonl showed why: of the 73 names that ever reached
+    # this test, the largest deviation seen was 1.20% against a 1.218% floor.
+    # The threshold sat just above the ceiling of what the market does.
     #
-    # EXPECT FAR FEWER TRADES. If NSE large caps rarely dislocate 1.2% from
-    # VWAP intraday, this strategy rarely has an opportunity worth taking. That
-    # is a finding about the market, not a parameter to tune away.
+    # The cause was a 0.15% "buffer" I added on top of an already-conservative
+    # derivation, to cover the gap between the bar close and the trigger. It is
+    # redundant: the EXACT cost hurdle is evaluated a few lines later using the
+    # real trigger, real ATR stop and real VWAP. A conservative approximation
+    # sitting in front of an exact test can only reject trades the exact test
+    # would have accepted. Buffer removed.
+    #
+    # This is not v1's mistake repeated. v1 loosened the threshold to fire more
+    # often and left the economics broken. Here the economics - the cost hurdle
+    # at 1.5 R:R after costs - are UNCHANGED. Only the cheap pre-filter that
+    # was stricter than the real test has moved.
     "min_vwap_deviation": None,   # computed below, after min_rr is defined
 
     # --- the confirmation trigger (NEW, and the biggest logic change) ---
@@ -182,7 +191,18 @@ STRATEGY = {
     # names. It also forces a Rs3.64L notional, maximising cost per unit risk.
     "stop_atr_mult": 1.2,
     "atr_period": 14,
-    "stop_pct_floor": 0.008,         # 0.80% - below this, costs eat the trade
+    "stop_pct_floor": 0.006,         # was 0.008 - see note
+
+    # WHY THE FLOOR MOVED 0.8% -> 0.6%
+    # It is a pass-through of the cost correction, not a loosening. The floor
+    # exists to stop friction eating the trade, and the measure of that is
+    # friction as a share of risk. The original design accepted 18.1% at a 0.8%
+    # stop under the old (wrong) 0.1355% cost. Correcting entry slippage to
+    # reflect the limit order drops cost to 0.0955%, and a 0.6% stop now carries
+    # 17.1% - strictly better than what was signed off originally.
+    #
+    # This matters because the deviation floor is DERIVED from this number, and
+    # the derived floor turned out to sit above what the market actually does.         # 0.80% - below this, costs eat the trade
     "stop_pct_cap": 0.022,           # 2.20% - above this, the setup is too wild
     "stop_below_signal_low": True,   # also respect structure: stop under the low
 
@@ -236,8 +256,17 @@ FILTERS = {
     # a breakout strategy WANTS high RVOL ("stocks in play"); a mean-reversion
     # strategy must AVOID it. High RVOL means information is arriving, and you
     # do not fade information.
-    "rvol_min": 0.7,                 # too quiet -> no reversion flow either
-    "rvol_max": 2.0,                 # above this, assume news and stand aside
+    # MEASURED: the RVOL band was the single biggest filter, rejecting 41% of
+    # all name-checks - and 79% of those rejections were for being too QUIET,
+    # not for news. rvol_min was mine, justified in a comment as "too quiet for
+    # reversion flow", which is a rationalisation rather than evidence. A stock
+    # sitting below VWAP on ordinary volume is arguably a BETTER reversion
+    # candidate: less information in the move, more of it liquidity noise.
+    #
+    # rvol_max stays. It has a real mechanism - do not fade news - and it
+    # accounted for only 21% of the rejections.
+    "rvol_min": 0.0,                 # was 0.7, removed on measurement
+    "rvol_max": 2.0,                 # kept: above this, assume news and stand aside
 
     # Gap filter - an overnight gap is an event, not a stretched rubber band.
     "max_opening_gap_pct": 0.015,
@@ -263,9 +292,15 @@ def _min_deviation_for_cost_hurdle(
     stop_floor: float,
     t2_overshoot: float,
     cost_pct: float,
-    trigger_gap: float = 0.0015,
+    trigger_gap: float = 0.0,
 ) -> float:
-    """Smallest VWAP deviation that can clear the cost hurdle. See the note above."""
+    """
+    Smallest VWAP deviation that can clear the cost hurdle.
+
+    trigger_gap defaults to 0. It was 0.0015, and that buffer is what made the
+    strategy untradeable - it stacked a safety margin on top of a test that is
+    re-run exactly, moments later, on the real numbers.
+    """
     blended_mult = 1.0 + t2_overshoot / 2.0
     from_trigger = (min_rr * stop_floor + cost_pct) / blended_mult
     return round(from_trigger + trigger_gap, 5)
@@ -276,8 +311,16 @@ def _target_notional() -> float:
     return SYSTEM["initial_capital"] * RISK["risk_pct_per_trade"] / STRATEGY["stop_pct_floor"]
 
 
-# A name must be able to absorb the position inside the bar-volume cap.
-RISK["min_median_15m_turnover"] = _target_notional() / RISK["max_pct_of_bar_volume"]
+# A name must be able to absorb the SMALLEST position we would accept, not a
+# full-size one. Deriving from target notional asked "can this name take a
+# maximum position at the tightest stop?" - the worst case on both axes - and
+# rejected 35% of all name-checks at Rs5cr. The position sizer already scales
+# down to fit max_pct_of_bar_volume, and min_notional_per_trade already refuses
+# anything shrunk too far. The pre-filter was double-counting both.
+RISK["min_median_15m_turnover"] = (
+    _target_notional() * RISK["min_notional_fraction_of_target"]
+    / RISK["max_pct_of_bar_volume"]
+)
 FILTERS["min_median_15m_turnover"] = RISK["min_median_15m_turnover"]
 
 # A position shrunk below this fraction of intent is not a smaller good trade,

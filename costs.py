@@ -28,10 +28,20 @@ GST_PCT              = 0.18        # on brokerage + SEBI + exchange txn charges
                                    #   (v1 applied GST to brokerage only)
 
 # ---------------------------------------------------------------- execution
-# Slippage is an ASSUMPTION, not a fee. It is the single largest and single most
-# controllable line item. 5 bps/side is a fair estimate for a market order in an
-# NSE large cap. See SLIPPAGE_NOTES at the bottom for how to cut it.
-SLIPPAGE_PCT_PER_SIDE = 0.0005     # 0.05%
+# Slippage is an ASSUMPTION, not a fee, and it is ASYMMETRIC because the two
+# legs use different order types.
+#
+# ENTRY is a stop-limit: limit = trigger x 1.002. You fill at or inside the
+# limit, or you do not fill at all. There is no adverse entry slippage to pay -
+# avoiding it is the entire purpose of the order type. Charging 5 bps there was
+# simply wrong, and it propagated into the deviation floor, which is derived
+# from cost. That is how a modelling error became a filter that never fired.
+#
+# EXIT is a stop-loss market order. 5 bps is honest there, and it must stay
+# honest: an exit is never negotiated.
+SLIPPAGE_PCT_ENTRY = 0.0001        # 0.01% - limit order, essentially spread only
+SLIPPAGE_PCT_EXIT = 0.0005         # 0.05% - market order
+SLIPPAGE_PCT_PER_SIDE = SLIPPAGE_PCT_EXIT   # kept for callers that assume one number
 
 
 def one_side_cost(price: float, qty: int, side: str) -> float:
@@ -43,7 +53,7 @@ def one_side_cost(price: float, qty: int, side: str) -> float:
     gst = (brokerage + exchange + sebi) * GST_PCT
     stt = value * STT_PCT_SELL if side == "sell" else 0.0
     stamp = value * STAMP_DUTY_PCT_BUY if side == "buy" else 0.0
-    slippage = value * SLIPPAGE_PCT_PER_SIDE
+    slippage = value * (SLIPPAGE_PCT_ENTRY if side == "buy" else SLIPPAGE_PCT_EXIT)
     return brokerage + exchange + sebi + gst + stt + stamp + slippage
 
 
@@ -59,8 +69,8 @@ VARIABLE_ROUNDTRIP_PCT = (
     + EXCHANGE_TXN_PCT * 2 * (1 + GST_PCT)
     + SEBI_PCT * 2 * (1 + GST_PCT)
     + STAMP_DUTY_PCT_BUY
-    + SLIPPAGE_PCT_PER_SIDE * 2
-)                                              # ~0.1343% of notional
+    + SLIPPAGE_PCT_ENTRY + SLIPPAGE_PCT_EXIT
+)                                              # ~0.0955% of notional
 FIXED_ROUNDTRIP = BROKERAGE_CAP * (1 + GST_PCT) * 2   # ~Rs47
 
 

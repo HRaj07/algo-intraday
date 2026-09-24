@@ -99,9 +99,14 @@ check("tighter stop costs more for identical rupee risk",
       c_tight > c_wide, f"0.55% -> Rs{c_tight:.0f} vs 1.5% -> Rs{c_wide:.0f}")
 check("widening 0.55% -> 1.5% cuts friction by >50%",
       (c_tight - c_wide) / c_tight > 0.5, f"{(c_tight - c_wide) / c_tight * 100:.0f}% saved")
+# v1 entered with a market order at the bar close, so symmetric 5bps slippage
+# was right FOR v1. Pricing its history with v2's limit-order cost would be
+# revisionist - it would credit v1 with an efficiency it never had.
+_V1_COST = 0.001355
+_v1_fric = 2000 / 0.0055 * _V1_COST + 47
+_v1_be = (2000 + _v1_fric) / ((1.4 * 2000 - _v1_fric) + (2000 + _v1_fric))
 check("v1's stop needed >50% win rate to break even",
-      breakeven_win_rate(2000, 0.0055, 1.4) > 0.50,
-      f"{breakeven_win_rate(2000, 0.0055, 1.4) * 100:.1f}% vs its actual 32.7%")
+      _v1_be > 0.50, f"{_v1_be * 100:.1f}% vs its actual 32.7%")
 check("v2's stop band needs materially less",
       breakeven_win_rate(2000, 0.015, 1.5) < 0.47,
       f"{breakeven_win_rate(2000, 0.015, 1.5) * 100:.1f}%")
@@ -115,27 +120,40 @@ print("=" * 70)
 # notional floor silently retires the moment capital doubles.
 _target = SYSTEM["initial_capital"] * RISK["risk_pct_per_trade"] / STRATEGY["stop_pct_floor"]
 
-check("a full-size position fits inside the bar-volume cap",
-      _target <= FILTERS["min_median_15m_turnover"] * RISK["max_pct_of_bar_volume"] + 1,
-      f"target Rs{_target:,.0f} vs cap Rs{FILTERS['min_median_15m_turnover'] * RISK['max_pct_of_bar_volume']:,.0f}")
-check("turnover floor scales with capital",
-      FILTERS["min_median_15m_turnover"] > 4e7,
-      f"Rs{FILTERS['min_median_15m_turnover'] / 1e7:.1f}cr per 15-min bar")
+# The turnover floor asks whether a name can absorb the SMALLEST position we
+# would accept. Requiring it to absorb a full-size one at the tightest stop was
+# the worst case on both axes, and it rejected 35% of all name-checks.
+_min_pos = _target * RISK["min_notional_fraction_of_target"]
+_cap = FILTERS["min_median_15m_turnover"] * RISK["max_pct_of_bar_volume"]
+check("the smallest acceptable position fits inside the bar-volume cap",
+      _min_pos <= _cap + 1, f"min position Rs{_min_pos:,.0f} vs cap Rs{_cap:,.0f}")
+check("turnover floor is derived from the minimum position, not a literal",
+      abs(FILTERS["min_median_15m_turnover"]
+          - _min_pos / RISK["max_pct_of_bar_volume"]) < 1,
+      f"Rs{FILTERS['min_median_15m_turnover'] / 1e7:.2f}cr per 15-min bar")
 check("minimum notional is a fraction of target, not a literal",
       abs(RISK["min_notional_per_trade"]
           - _target * RISK["min_notional_fraction_of_target"]) < 1,
       f"Rs{RISK['min_notional_per_trade']:,.0f} = "
       f"{RISK['min_notional_fraction_of_target'] * 100:.0f}% of target")
+# Must read the live cost, not a copy of it. A hardcoded 0.001355 here would
+# have silently passed while the real cost moved underneath it.
+from costs import VARIABLE_ROUNDTRIP_PCT as _C
+_lhs = STRATEGY["min_vwap_deviation"] * (1 + STRATEGY["t2_vwap_overshoot"] / 2) - _C
+_rhs = STRATEGY["min_reward_risk_after_cost"] * STRATEGY["stop_pct_floor"]
 check("deviation floor still clears the cost hurdle",
-      STRATEGY["min_vwap_deviation"] * (1 + STRATEGY["t2_vwap_overshoot"] / 2)
-      - 0.001355 >= STRATEGY["min_reward_risk_after_cost"] * STRATEGY["stop_pct_floor"] - 1e-9,
-      f"{STRATEGY['min_vwap_deviation'] * 100:.3f}%")
+      _lhs >= _rhs - 1e-5,   # the floor is rounded to 5dp, so allow that much
+      f"{STRATEGY['min_vwap_deviation'] * 100:.3f}% -> {_lhs:.6f} vs {_rhs:.6f}")
 
 print("\n" + "=" * 70)
 print("2. RISK MANAGER - the gates v1 did not have")
 print("=" * 70)
 
-state = {"cash": 500_000, "initial_capital": 500_000, "equity_peak": 500_000,
+# Use the CONFIGURED capital. A fixture pinned to Rs5L while config said Rs10L
+# made min_notional (derived from config) unreachable, and the test failed for
+# a reason that had nothing to do with the code under test.
+_CAP = SYSTEM["initial_capital"]
+state = {"cash": _CAP, "initial_capital": _CAP, "equity_peak": _CAP,
          "positions": {}, "trade_history": [], "daily_entry_count": {},
          "pending_orders": {}, "last_known_price": {}, "total_pnl": 0.0}
 rm = RiskManager(state)
@@ -144,13 +162,16 @@ qty, why = rm.size_position(1000.0, 985.0, bar_volume=1_000_000)
 check("normal trade sizes", qty is not None, why)
 notional = qty * 1000.0 if qty else 0
 check("notional stays under the 2.0x gross cap",
-      notional <= 500_000 * RISK["max_gross_notional_mult"], f"Rs{notional:,.0f}")
+      notional <= _CAP * RISK["max_gross_notional_mult"], f"Rs{notional:,.0f}")
 
 # the fragment v1 would have taken
 qty_frag, why_frag = rm.size_position(12160.0, 12100.0, bar_volume=3)
 check("fragment trade is REFUSED, not shrunk", qty_frag is None, why_frag)
 
 # the stop so tight that friction swamps the risk
+# A 0.1% stop forces so much notional that the caps shrink the position until
+# friction exceeds the risk left in it. The guard must measure friction against
+# what is ACTUALLY at risk, not against the budget it started from.
 qty_tight, why_tight = rm.size_position(1000.0, 999.0, bar_volume=10_000_000)
 check("absurdly tight stop is refused on cost grounds", qty_tight is None, why_tight)
 
@@ -165,7 +186,7 @@ state["positions"] = {}
 # Read the limit from config rather than hard-coding it - this test failed once
 # when the cap moved from -2R to -3R, which is the test drifting from the system
 # rather than catching a bug.
-R = 500_000 * RISK["risk_pct_per_trade"]
+R = _CAP * RISK["risk_pct_per_trade"]
 limit = RISK["daily_loss_limit_R"]
 just_under = -(limit - 0.5) * R
 state["trade_history"] = [
@@ -361,6 +382,47 @@ for _ in range(4):
     t.process_orders({"TCS.NS": {"close": 3100.0, "high": 3110.0, "low": 3090.0}}, morning)
 check("unfilled trigger expires instead of chasing (v1 always 'filled')",
       len(t.state["pending_orders"]) == 0 and len(t.state["positions"]) == 0)
+
+print("\n" + "=" * 70)
+print("3a. REACHABILITY - can the strategy fire on a realistic dislocation?")
+print("=" * 70)
+# THE TEST THAT WAS MISSING. For three days live the suite passed 82 checks
+# while the strategy was structurally incapable of trading: the derived
+# deviation floor (1.218%) sat above the largest dislocation the market
+# produced (1.20%). Every filter was individually defensible and the product
+# of them was zero.
+#
+# A threshold that no realistic market move can clear is a bug, and nothing
+# here would have said so. These assertions fail if that recurs.
+_ATR_PCT = 0.0035          # ~0.35% per 15-min bar, typical NSE large cap
+_realistic_dip = 0.010     # a 1.0% intraday dislocation from VWAP - common
+check("the deviation floor is reachable by a realistic 1.0% dislocation",
+      STRATEGY["min_vwap_deviation"] <= _realistic_dip,
+      f"floor {STRATEGY['min_vwap_deviation']*100:.3f}% vs a 1.0% move")
+check("the stop floor is within a normal bar's ATR range",
+      STRATEGY["stop_pct_floor"] <= 3 * _ATR_PCT,
+      f"floor {STRATEGY['stop_pct_floor']*100:.2f}% vs 3xATR {3*_ATR_PCT*100:.2f}%")
+
+# And end to end: a synthetic dip of realistic depth MUST produce a signal.
+np.random.seed(21)
+_h, _d = history(2000.0, 12, vol=800_000)
+_td = _d
+while _td.weekday() >= 5:
+    _td += timedelta(days=1)
+_mod_now = datetime.combine(_td, datetime.min.time()).replace(hour=12, tzinfo=IST)
+import strategies.vwap_mr_v2 as _m
+_m.now_ist = lambda: _mod_now
+_stock = pd.concat([_h, make_day(_td, base=2000.0,
+                                 path=dip_then_reverse(2000.0, slide=0.0028),
+                                 vol=800_000).iloc[:12]])
+_hn, _ = history(24000.0, 12, vol=0)
+_nif = pd.concat([_hn, make_day(_td, base=24000.0,
+                                path=[24000 + 5 * i for i in range(25)],
+                                vol=0).iloc[:12]])
+_sigs = VWAPMeanReversionV2().compute_signals({"TCS.NS": _stock}, _nif, 14.0)
+check("a realistic dip end-to-end produces a tradeable signal",
+      len(_sigs) == 1,
+      f"{len(_sigs)} signal(s) - if 0, the filter stack is again unreachable")
 
 print("\n" + "=" * 70)
 print("3b. ZERO-VOLUME INDEX - the bug that made the regime gate a no-op")
