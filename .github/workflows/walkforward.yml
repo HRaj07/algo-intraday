@@ -1,0 +1,66 @@
+name: 🔬 Weekly Walk-Forward
+
+# Sunday 07:30 IST (02:00 UTC). The market is shut, nothing is holding a
+# position, and any parameter change lands before Monday's first scan.
+#
+# This job NEVER runs during market hours and never touches the 15-minute
+# scanner. It writes params_live.json and research/walkforward.jsonl; main.py
+# reads the first of those if it exists and falls back to config.MOMENTUM if
+# it does not. A failed run therefore leaves Monday running exactly what
+# Friday ran.
+on:
+  schedule:
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # Never let two of these overlap - both would write params_live.json.
+  group: walkforward
+  cancel-in-progress: false
+
+jobs:
+  walkforward:
+    runs-on: ubuntu-latest
+    name: Refit on held-out data
+    env:
+      TZ: Asia/Kolkata
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Tests must pass before anything is allowed to change parameters
+        env:
+          ALGO_LOG_DIR: /tmp/wf_logs
+        run: python tests/test_pipeline.py
+
+      - name: Walk-forward
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python walkforward.py
+
+      - name: Commit the decision
+        if: always()
+        run: |
+          git config user.name "HRaj07"
+          git config user.email "2601harshitraj@gmail.com"
+          git add research/ params_live.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No parameter change this week - this is the normal outcome"
+          else
+            git commit -m "🔬 Walk-forward: $(TZ=Asia/Kolkata date '+%Y-%m-%d')"
+            git pull --rebase --autostash origin main || true
+            git push
+          fi

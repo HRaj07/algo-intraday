@@ -40,6 +40,7 @@ the sweep could not finish inside a shell timeout; this takes about as long in
 total as two cells used to.
 """
 import itertools
+import os
 import pickle
 import sys
 from datetime import time as dtime
@@ -163,10 +164,18 @@ def run_cell(tab, dev_min, rsi_min, rvol_min, stop_pct, trail, capital):
     return pd.DataFrame(out)
 
 
+TABLE_CACHE = "_sweep_table.pkl"
+
+
 def main():
-    data = pickle.load(open(CACHE, "rb"))
-    print("building the candidate table once...", flush=True)
-    tab = build_tables(data)
+    if os.path.exists(TABLE_CACHE):
+        tab = pickle.load(open(TABLE_CACHE, "rb"))
+        print(f"using cached candidate table ({TABLE_CACHE}, delete to rebuild)")
+    else:
+        data = pickle.load(open(CACHE, "rb"))
+        print("building the candidate table once...", flush=True)
+        tab = build_tables(data)
+        pickle.dump(tab, open(TABLE_CACHE, "wb"))
     cap = SYSTEM["initial_capital"]
     print(f"{len(tab):,} liquid in-window bars, {tab.date.nunique()} days\n")
 
@@ -177,7 +186,13 @@ def main():
         (0.012, 0.016),
         (False, True),
     ))
-    print(f"{len(grid)} cells, each a full 59-day book on Rs{cap:,.0f}\n")
+    # shell timeouts are short, so the grid can be run in slices:
+    #     python3 study_sweep.py 0 30
+    lo = int(sys.argv[1]) if len(sys.argv) > 1 else 0
+    hi = int(sys.argv[2]) if len(sys.argv) > 2 else len(grid)
+    grid = grid[lo:hi]
+    print(f"{len(grid)} cells (of {lo}..{hi}), each a full 59-day book "
+          f"on Rs{cap:,.0f}\n")
     print(f"  {'dev':>5} {'rsi':>4} {'rvol':>5} {'stop':>5} {'trail':>6} "
           f"{'n':>5} {'net Rs':>10} {'%':>7} {'PF':>6} {'t':>6} "
           f"{'Jul':>8} {'Aug':>8} {'Sep':>8} {'ex-top5':>9}")

@@ -334,6 +334,186 @@ STRATEGY["min_vwap_deviation"] = _min_deviation_for_cost_hurdle(
     cost_pct=VARIABLE_ROUNDTRIP_PCT,
 )
 
+# ---------------------------------------------------------------------------
+# MOMENTUM v3 - the strategy that replaced VWAP mean reversion
+# ---------------------------------------------------------------------------
+# WHY THE DIRECTION FLIPPED
+#
+# On 2026-09-24 the reversion premise was measured directly, with no trading
+# machinery attached: 185,847 real 15-minute bars, forward returns from the
+# entry condition, no stops, no sizing, no costs. Buying a stock stretched
+# below VWAP with low RSI returned:
+#
+#       +15 min  +0.008%      +1 hour  -0.028%
+#       +2 hours -0.085%      to close -0.137%   (t = -7.97, n = 4,546)
+#
+# It does not revert. It keeps falling, and it falls further the longer you
+# hold. Being MORE oversold made it worse, not better (-0.095% at 0.8-1.2%
+# below VWAP against -0.004% at 0.2-0.4%), which means the carefully derived
+# deviation floor above was steering toward the worst available bucket. RSI
+# bucketed from 0-20 through 40-50 was uniformly negative, so the oversold
+# threshold was never the problem either.
+#
+# The mirror of that condition was the only positive result anywhere in the
+# study, and four unrelated features all graded monotonically in the same
+# direction (all figures net of the 0.0955% round-trip cost, held to the close,
+# entered at a tradeable price - the next bar's open):
+#
+#       RSI         60-65 -0.126%   65-70 -0.026%   70-75 +0.017%  75+ +0.147%
+#       rel volume  1.2-2 -0.050%   2-4   +0.014%   4+    +0.128%
+#       dev >vwap   0.8-1.2 0.000%  1.2-1.8 +0.082%  1.8-3 +0.117%
+#       ATR         0.4-0.6 -0.017% 0.6-0.9 +0.062%  0.9+  +0.318%
+#
+# One good bucket is luck. Four unrelated features each grading monotonically
+# the same way is a relationship: the return concentrates in strong, heavily
+# traded, volatile extensions. RSI>=75, rvol>=4 and dev>=1.2% each cleared cost
+# in July, August AND September independently.
+#
+# WHAT THIS IS HONESTLY EXPECTED TO MAKE
+#
+# Close to nothing. Run as an account - 3 concurrent, 5 entries a day, real
+# costs both sides - the same rule made +1.28% over 59 days at t = +0.20, and
+# a 100-cell sweep over every threshold below found ZERO settings that were
+# positive in all three months AND still positive with their best five trades
+# removed. Best t across all 100 cells was +1.63, which is the maximum of 100
+# tries on one period and therefore means nothing.
+#
+# So this is not deployed because it is expected to be profitable. It is
+# deployed because it is the only signal measured on this market with the
+# RIGHT SIGN, and running it forward in paper is the only honest way to find
+# out. Every trade from here is genuine out-of-sample data; the 59 days above
+# are now in-sample and spent. The go-live bar in README.md is unchanged.
+#
+# PARAMETERS ARE NOT THE SWEEP'S BEST CELL
+#
+# Deliberately. The best cell of a 100-cell search on one period is the most
+# overfit number available. These come from where the monotone gradients above
+# turn positive and hold across all three months - the same values would have
+# been chosen from any of the three months alone.
+MOMENTUM = {
+    "rsi_period": 14,
+    "atr_period": 14,
+
+    # --- signal ---
+    "min_rsi": 75,                  # the top RSI bucket; 70-75 was +0.017% net
+    "min_dev_above_vwap": 0.012,    # 1.2%; the 0.8-1.2% band netted exactly 0.000%
+    "min_rvol": 4.0,                # THIS BAR's volume vs the name's 50-bar median
+
+    # NOT the cumulative-day RVOL that FILTERS uses. The measurement that
+    # supports this number used bar-level volume, and the two are different
+    # quantities - a name can be quiet all morning and print one enormous bar.
+    # It is the enormous bar that carries the signal.
+    "rvol_lookback_bars": 50,
+
+    # Volatility floor. The ATR gradient was the steepest of the four
+    # (+0.318% net above 0.9%), and the mechanism is plain: a name whose
+    # 15-minute range is 0.4% cannot move far enough to pay 0.0955% of costs.
+    "min_atr_pct": 0.005,
+
+    # --- entry ---
+    # A market order filled at the next bar's open. NO reversal trigger.
+    #
+    # v2's stop-limit-above-the-high trigger was mine, argued for at length,
+    # and it is measurably harmful: -0.153% to the close against -0.137%
+    # without it, and it fired on only 26% of setups. For a momentum entry it
+    # is strictly worse than useless - it makes you pay up for the privilege of
+    # confirming a move that was already confirmed.
+    "order_type": "MARKET",
+
+    # --- stop ---
+    # Volatility-scaled with a floor, and the floor is WIDE on purpose.
+    # notional = risk / stop%, so a wider stop means a smaller position and
+    # less friction for the same rupee risk. Momentum wants that trade-off:
+    # median adverse excursion before the close was -0.76%, so anything much
+    # tighter than 1.2% is stopped out by ordinary noise.
+    "stop_atr_mult": 2.0,
+    "stop_pct_floor": 0.012,
+    "stop_pct_cap": 0.025,
+
+    # --- exits ---
+    # Hold to square-off. No target, no partial, NO BREAKEVEN TRAIL.
+    #
+    # This looks negligent and it is the single most data-driven choice here.
+    # The breakeven trail lost money in EVERY ONE of the 50 sweep cells it
+    # appeared in, often catastrophically (-9.8% in the worst). The reason is
+    # the return distribution: removing the best five trades from any cell of
+    # the sweep turns it negative. The edge IS the right tail, and a breakeven
+    # stop is a machine for amputating right tails. A time stop would do the
+    # same thing more slowly.
+    #
+    # The cost is a 43% win rate and trades that give back open profit. That is
+    # the shape of the distribution, not a flaw to be engineered away.
+    "hold_to_square_off": True,
+    "use_target": False,
+    "use_breakeven_trail": False,
+    "use_time_stop": False,
+
+    # --- regime ---
+    # NOT an alpha filter. Gating on "NIFTY above its VWAP" looked helpful
+    # (+0.067% vs -0.024%) and failed in September, so it is not claimed as
+    # edge. This is a solvency gate: with ~5x MIS leverage and three correlated
+    # longs, a market in free-fall is the one condition that can do real damage
+    # in a hurry. It stands down and says so.
+    "max_index_daily_drop": 0.015,
+    "max_india_vix": 28.0,
+}
+
+# ---------------------------------------------------------------------------
+# WALK-FORWARD OVERRIDES
+# ---------------------------------------------------------------------------
+# walkforward.py may adjust four thresholds weekly, and only after the new
+# values cleared cost on data the fit never saw. It writes params_live.json;
+# this reads it.
+#
+# The clamp below is not defensive padding. It is the thing that makes the
+# weekly job safe to run unattended: whatever that file contains - a bug, a
+# half-written record, a value that scored beautifully on noise - it cannot
+# move a threshold outside a band that was set by hand, and it cannot touch
+# anything else. Direction, exits, risk per trade and the caps are not
+# reachable from that file at all.
+#
+# A missing or unreadable file is normal and silent: the bot then runs the
+# values above, which is exactly what it ran before the job existed.
+_MOMENTUM_BANDS = {
+    "min_dev_above_vwap": (0.008, 0.020),
+    "min_rsi": (70, 80),
+    "min_rvol": (2.0, 6.0),
+    "stop_pct_floor": (0.010, 0.020),
+}
+
+
+def _apply_live_params():
+    import json
+    import os
+    path = os.environ.get("ALGO_LIVE_PARAMS", "params_live.json")
+    if not os.path.exists(path):
+        return {}
+    try:
+        params = json.load(open(path)).get("params", {})
+    except Exception:
+        return {}
+    applied = {}
+    for key, (lo, hi) in _MOMENTUM_BANDS.items():
+        if key not in params:
+            continue
+        try:
+            v = float(params[key])
+        except (TypeError, ValueError):
+            continue
+        if not (lo <= v <= hi):
+            continue
+        MOMENTUM[key] = int(v) if key == "min_rsi" else v
+        applied[key] = MOMENTUM[key]
+    return applied
+
+
+LIVE_PARAM_OVERRIDES = _apply_live_params()
+
+# Which strategy main.py runs. "momentum_v3" or "vwap_mr_v2".
+# v2 is kept importable and testable rather than deleted: it is the control
+# case, and the studies that condemned it must stay reproducible.
+ACTIVE_STRATEGY = "momentum_v3"
+
 REPORTING = {"report_dir": "reports", "log_dir": "logs"}
 
 # ---------------------------------------------------------------------------

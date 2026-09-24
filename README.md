@@ -3,11 +3,32 @@
 Automated intraday **paper** trading on NSE equities, running on GitHub Actions.
 No server, no laptop needed. Scans every 15 minutes during market hours.
 
-> **Status: rebuilt, not yet validated.**
-> v1 ran live on paper for 49 trades and lost ₹11,317. The cause was diagnosed
-> and fixed (see below), but **no v2 parameter has been backtested**. Treat this
-> as a system under test, not a working edge. The validation gate is at the
-> bottom of this file, and nothing here should touch a live broker until it clears.
+> **Status: v3. Direction reversed after measurement. Expected to make roughly nothing.**
+>
+> v1 lost ₹11,317 over 49 paper trades because costs ate its winners. v2 rebuilt
+> the cost model and the engine around the same mean-reversion idea. In September
+> 2026 that idea was finally measured directly — **it was negative before costs**,
+> so v2 was not a cost problem and could not be rescued by tuning.
+>
+> v3 trades the opposite signal, which is the only one on this market measured with
+> the right sign. Its honestly expected return is **approximately zero**. It is
+> running so that forward paper trades can test it on data no one has seen. Do not
+> point this at a broker. The go-live bar is at the bottom of this file and nothing
+> in v3 clears it.
+
+---
+
+## The short version
+
+| | v1 | v2 | v3 |
+|---|---|---|---|
+| Idea | buy stretched **below** VWAP | same, with real costs | buy stretched **above** VWAP |
+| RSI | < 28 | < 40 | **≥ 75** |
+| Volume | ignored | ceiling at 2× | **floor at 4×** |
+| Entry | close of a forming bar | stop-limit above the high | market, next bar's open |
+| Stop | 0.55% flat | 1.2×ATR, floor 0.8% | 2.0×ATR, floor **1.2%** |
+| Exits | target + trail | scale at VWAP, trail, time stop | **stop or square-off, nothing else** |
+| Result | −₹11,317 live | negative before costs | ~breakeven, unproven |
 
 ---
 
@@ -144,6 +165,92 @@ opportunity worth taking. **That is a finding about the market, not a knob to tu
 
 ---
 
+## Why v2 was replaced
+
+Every diagnosis up to this point said the same thing: the signal picks winners and
+cannot afford them. That is a cost problem, and cost problems are fixable. It was
+never tested directly, because the fix always seemed to be one layer further down.
+
+On 2026-09-24 it was tested directly. `study_signal_edge.py` takes 185,847 real
+15-minute bars across 210 NSE names and measures the forward return from the entry
+condition with **no stops, no sizing, no targets and no costs** — just what price
+does next.
+
+| Held for | v2's setup (below VWAP, RSI < 40) |
+|---|---|
+| 15 minutes | +0.008% |
+| 1 hour | −0.028% |
+| 2 hours | −0.085% |
+| to the close | **−0.137%** (t = −7.97, n = 4,546) |
+
+It does not revert. It keeps falling, and further the longer it is held. Two
+corollaries finished the idea off:
+
+- **More oversold was worse.** −0.095% at 0.8–1.2% below VWAP against −0.004% at
+  0.2–0.4%. The carefully derived deviation floor was steering toward the worst
+  available bucket.
+- **RSI did nothing.** Every bucket from 0–20 through 40–50 was negative and
+  roughly equal, so no threshold in that family was ever going to work.
+
+The confirmation trigger — v2's headline improvement — measured **−0.153%** against
+−0.137% without it, and fired on 26% of setups. It made things worse.
+
+### What the same data said to do instead
+
+The mirror condition was the only positive result anywhere, and it was positive
+under four unrelated features that all graded monotonically the same way. All
+figures net of the 0.0955% round-trip cost, entered at a tradeable price:
+
+| | weakest | → | → | strongest |
+|---|---|---|---|---|
+| RSI | 60–65 −0.126% | 65–70 −0.026% | 70–75 +0.017% | **75+ +0.147%** |
+| relative volume | 1.2–2 −0.050% | 2–4 +0.014% | | **4+ +0.128%** |
+| distance above VWAP | 0.8–1.2 0.000% | 1.2–1.8 +0.082% | | **1.8–3 +0.117%** |
+| ATR | 0.4–0.6 −0.017% | 0.6–0.9 +0.062% | | **0.9+ +0.318%** |
+
+One good bucket is luck. Four unrelated features each grading monotonically in the
+same direction is a relationship. RSI ≥ 75, rvol ≥ 4 and dev ≥ 1.2% each cleared
+cost in July, August **and** September independently.
+
+### Why v3 is still expected to make nothing
+
+Run as an account — 3 concurrent, 5 entries a day, real costs both sides —
+`study_portfolio.py` gives:
+
+```
+165 trades · win rate 43.6% · PF 1.04 · net +₹12,787 (+1.28%) · t = +0.20
+gross before costs  ₹93,712        friction paid  ₹80,925
+top 5 trades        ₹88,676        without them   −₹75,889
+```
+
+**Friction is 86% of the gross edge**, and five trades out of 165 are the entire
+result. `study_sweep.py` then ran 100 threshold combinations as full books:
+
+```
+0 of 100 cells positive in all three months AND still positive without their top 5
+best t = +1.63 · median t = −1.47 · 0 cells above t = 2 · 49% made money at all
+```
+
+Zero survivors. The best t is the maximum of 100 tries on one period, which is worth
+nothing. The breakeven trail lost money in **every** cell it appeared in — which is
+why v3 has no trail, no target and no time stop: the edge is the right tail, and
+each of those is a device for cutting the right tail off.
+
+So v3 is not deployed because it is expected to be profitable. It is deployed
+because it is the only signal here with the right sign, the 59 measured days are now
+spent as in-sample, and forward paper trading is the only honest test left.
+
+### The one structural lever not yet pulled
+
+Friction is charged per trade regardless of holding period. A signal capturing 3%
+over six days pays the same toll as one capturing 0.2% over four hours — a tenfold
+change in the only ratio that matters. `study_swing_daily.py` tests that on five
+years of daily bars with a **real train/test split**, which 60 days of 15-minute
+data can never support. That test has not been run yet and it is the highest-value
+thing left to do.
+
+---
+
 ## How it runs
 
 GitHub Actions fires `python main.py` every 15 minutes, `'7,22,37,52 3-10 * * 1-5'`
@@ -163,9 +270,13 @@ Square-off is 15:05, not 15:15, because Zerodha's own MIS auto-square-off runs a
 ### Local commands
 
 ```bash
-python tests/test_pipeline.py    # 51 assertions, synthetic data, no network
-python check_data.py             # is ^NSEI actually fetching?
-python main.py                   # one scan by hand
+python tests/test_pipeline.py      # 123 assertions, synthetic data, no network
+python check_data.py               # is ^NSEI actually fetching?
+python main.py                     # one scan by hand
+python backtest_recent.py          # replay the REAL strategy on real bars
+python study_signal_edge.py        # measure the premise itself, no machinery
+python study_swing_daily.py        # the untested question: does holding days work?
+python walkforward.py --dry-run    # what would Sunday's job decide?
 ```
 
 `check_data.py` matters more than it sounds. The regime gate fails closed, so a
@@ -181,7 +292,16 @@ bot goes silent for days, run it before assuming the filters are just being stri
 | `main.py` | Entry point. Prices → exits → fills → scan, in that order |
 | `config.py` | Every parameter, each with its justification in a comment |
 | `costs.py` | **Single source of truth for costs.** Imported by engine and backtester |
-| `strategies/vwap_mr_v2.py` | Regime gate, filters, trigger, cost hurdle |
+| `strategies/momentum_v3.py` | **The live strategy.** Long strength, market entry, stop-or-square-off |
+| `strategies/vwap_mr_v2.py` | The control case. Kept runnable so the studies that condemned it reproduce |
+| `walkforward.py` | Weekly refit on held-out data. Adopts nothing that fails the holdout |
+| `study_signal_edge.py` | Forward returns from the raw condition. This is what killed v2 |
+| `study_momentum.py` | The mirror finding, re-tested at tradeable prices |
+| `study_selection.py` | Grades RSI / volume / deviation / ATR for a tradeable subset |
+| `study_candidate.py` | The month-robust cuts, alone and combined, with stops |
+| `study_portfolio.py` | The candidate as a real book — where +0.255%/signal became t = +0.20 |
+| `study_sweep.py` | 100 threshold cells, each a full book. Zero survivors |
+| `study_swing_daily.py` | Daily bars, 5 years, real train/test split. **Not yet run** |
 | `engine/risk_manager.py` | Sizing, exposure caps, circuit breakers |
 | `engine/paper_trader_v2.py` | Orders, fills, exits, ledger |
 | `data/fetcher.py` | yfinance wrapper and indicators |
@@ -223,8 +343,17 @@ Anything short of that is a story, not an edge.
 
 ### Known caveats
 
-- **No v2 parameter has been backtested.** They are reasoned from mechanism and
-  from published research, not fitted.
+- **v3 does not clear that bar and is not close.** Its measured account-level
+  t-statistic is +0.20 on 165 trades. It is running to generate out-of-sample
+  evidence, not because it passed anything.
+- **Every v3 threshold was chosen after looking at the 59 days it was scored on.**
+  There is no holdout at 15-minute resolution because yfinance serves 60 days and
+  no more. The forward paper trades are the first genuine out-of-sample data.
+- **The edge, such as it is, lives in the right tail.** Removing the best five
+  trades turned every one of 100 sweep cells negative. A run of ordinary results
+  followed by nothing is the expected shape, not a malfunction.
+- **No v2 parameter was ever backtested either**, and v2's premise turned out to be
+  negative before costs. Reasoning from mechanism is not the same as measuring.
 - The 13:15 entry cutoff has permutation **p = 0.078** on n=49, and the threshold
   was chosen *after* looking at the data. Adopted for its mechanism — a trade needs
   time to work before square-off — not as a validated edge.
@@ -266,17 +395,47 @@ Yes, but only about **size** — and at a rate the evidence supports.
 Every sizing decision is logged with both scalars and the reasoning, so any
 position size can be reconstructed afterwards.
 
-### What does NOT adapt: the rules
+### What adapts weekly, and why it cannot cheat
 
-Entry criteria, exit criteria, filters and thresholds never self-adjust. They
-change when a human reads the review and decides.
+`walkforward.py` runs every Sunday at 07:30 IST — market shut, no positions open,
+any change landing before Monday's first scan. It may move **four thresholds**
+(distance above VWAP, RSI floor, volume floor, stop width), each inside a
+hard-coded band, and **nothing else**. Direction, exits, risk per trade, the caps,
+the universe and the cost model are not reachable from it.
+
+The difference between this and an optimiser is the ordering:
+
+1. Fit on everything **except** the last two weeks.
+2. A candidate only qualifies if it was positive in every month of the fit window
+   **and** still positive with its best five trades removed.
+3. Score the survivor on the held-out two weeks it has never seen.
+4. Adopt only if it cleared cost there **and** beat what is already running.
+5. Write the decision down **before** the period it applies to trades.
+
+Step 5 is the point. Every record in `research/walkforward.jsonl` also carries what
+the frozen original parameters would have scored on the same holdout, so after a
+couple of months the file answers the question almost no self-tuning bot can:
+**did the retuning help?** If refitting never beats leaving the parameters alone,
+the job says so in its own output and the honest move is to switch it off.
+
+Run against real data today, it adopted nothing — no cell survived the
+tail-independence check. That is the filter working, and most weeks should end
+there.
+
+### What still does NOT adapt
+
+The direction of the trade, every exit rule, risk per trade, the position caps and
+the cost model. Those change when a human reads the evidence and decides.
 
 That line exists because crossing it is what killed v1. Every v1 parameter was a
 reaction to observed results — RSI 25→28, deviation 0.8%→0.6%, stop 0.70%→0.55%,
 shorts off, max trades 3→5 — each justified with a profit-factor number, all
-fitted to a cost model that was 7× too low. Net outcome: −₹11,317. Automating
-that loop runs the same mistake faster, without a human ever pausing to ask
-whether the cost model was right.
+fitted to a cost model that was 7× too low. Net outcome: −₹11,317.
+
+It nearly happened again on 2026-09-24: stacking filters until the number looked
+good produced **+0.353% net at t = +5.72** that was **−0.236% in September**. The
+holdout in `walkforward.py` exists specifically to catch that, because the mistake
+is not hypothetical — it was made here, in the analysis that produced v3.
 
 Size is recoverable. A loosened filter that admits unprofitable trades is not.
 

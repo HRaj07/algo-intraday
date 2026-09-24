@@ -42,10 +42,28 @@ for noisy in ("yfinance", "peewee", "urllib3"):
     logging.getLogger(noisy).setLevel(logging.WARNING)
 logger = logging.getLogger(__name__)
 
-from config import INTRADAY_UNIVERSE, SYSTEM, INDEX_TICKER, VIX_TICKER, RISK
+from config import (INTRADAY_UNIVERSE, SYSTEM, INDEX_TICKER, VIX_TICKER, RISK,
+                    ACTIVE_STRATEGY, LIVE_PARAM_OVERRIDES)
 from data.fetcher import IntradayFetcher
 from engine.paper_trader_v2 import PaperTraderV2
 from strategies.vwap_mr_v2 import VWAPMeanReversionV2
+from strategies.momentum_v3 import MomentumV3
+
+# v2 stays importable rather than deleted. It is the control case: the studies
+# that condemned it have to stay reproducible, and "the old one was worse" is
+# only a claim you can defend if the old one still runs.
+STRATEGIES = {
+    "vwap_mr_v2": VWAPMeanReversionV2,
+    "momentum_v3": MomentumV3,
+}
+
+
+def active_strategy():
+    if ACTIVE_STRATEGY not in STRATEGIES:
+        raise SystemExit(
+            f"ACTIVE_STRATEGY={ACTIVE_STRATEGY!r} is not one of {list(STRATEGIES)}"
+        )
+    return STRATEGIES[ACTIVE_STRATEGY]()
 
 
 def notify(msg: str):
@@ -90,8 +108,12 @@ def main():
         if d.empty:
             continue
         last = d.iloc[-1]
-        bars[t] = {"close": float(last["close"]), "high": float(last["high"]),
-                   "low": float(last["low"]), "volume": float(last["volume"])}
+        # `open` is carried because a MARKET order fills at the NEXT bar's open.
+        # Without it the trader would have to fall back to the close, which is
+        # lookahead: the close is not known when the order is sent.
+        bars[t] = {"open": float(last["open"]), "close": float(last["close"]),
+                   "high": float(last["high"]), "low": float(last["low"]),
+                   "volume": float(last["volume"])}
 
     trader = PaperTraderV2()
 
@@ -135,7 +157,13 @@ def main():
                             ).splitlines():
             logger.info(line)
 
-    strat = VWAPMeanReversionV2()
+    strat = active_strategy()
+    logger.info(f"strategy: {strat.name}")
+    if LIVE_PARAM_OVERRIDES:
+        # Say out loud when the weekly walk-forward has moved a threshold.
+        # A parameter that changed without appearing in the log is a parameter
+        # you cannot reconstruct a trade from three months later.
+        logger.info(f"walk-forward overrides in force: {LIVE_PARAM_OVERRIDES}")
     signals = strat.compute_signals(data, index_df, vix)
     for sig in signals:
         if not trader.place_order(sig, now):
@@ -151,6 +179,7 @@ def main():
     with open(LOG_DIR / "signals_v2.jsonl", "a") as f:
         f.write(json.dumps({
             "time": str(now),
+            "strategy": strat.name,
             "regime": scan.get("regime"),
             "scanned": scan.get("scanned"),
             "signals": signals,

@@ -74,6 +74,19 @@ def history(ticker_base, days, **kw):
     return pd.concat(frames), d
 
 
+def rally(base, step=0.0035, n=25):
+    """
+    A session that trends up and away from its own VWAP on rising RSI - the
+    shape momentum v3 is built to trade, and the exact shape v2 was built to
+    stand aside from. Cumulative VWAP lags a trending price, so a steady climb
+    puts the close further above VWAP with every bar.
+    """
+    p = [base]
+    for _ in range(n - 1):
+        p.append(p[-1] * (1 + step))
+    return p[:n]
+
+
 def dip_then_reverse(base, slide=0.0045, n=25):
     """
     A session that slides below its own VWAP on falling RSI, then turns up.
@@ -464,6 +477,212 @@ ok_b, why_b = strat.regime_ok(nifty_bad, 14.0, trade_day)
 check("non-finite index values FAIL CLOSED, not open", not ok_b, why_b)
 
 print("\n" + "=" * 70)
+print("3c. MOMENTUM v3 - the strategy that replaced reversion")
+print("=" * 70)
+# v2 shipped with a filter stack that could not fire, and 82 passing checks
+# said nothing about it. Every assertion here exists so that cannot happen
+# again to v3: the thresholds must be REACHABLE, the direction must be the one
+# the measurement supports, and the exits that lost money in every sweep cell
+# must stay off.
+from config import MOMENTUM
+from strategies.momentum_v3 import MomentumV3
+import strategies.momentum_v3 as _m3
+
+# --- the direction itself. This is the whole point of v3 existing. ---
+check("v3 buys ABOVE vwap where v2 bought below",
+      MOMENTUM["min_dev_above_vwap"] > 0 and STRATEGY["min_vwap_deviation"] > 0,
+      f"v3 needs +{MOMENTUM['min_dev_above_vwap']*100:.1f}% above, "
+      f"v2 needed {STRATEGY['min_vwap_deviation']*100:.2f}% below")
+check("v3 requires HIGH rsi, v2 required low",
+      MOMENTUM["min_rsi"] > STRATEGY["rsi_oversold"],
+      f"{MOMENTUM['min_rsi']} vs {STRATEGY['rsi_oversold']}")
+check("v3 requires HIGH volume, v2 capped it",
+      MOMENTUM["min_rvol"] > FILTERS["rvol_max"],
+      f"v3 floor {MOMENTUM['min_rvol']} vs v2 ceiling {FILTERS['rvol_max']}")
+
+# --- the exits that lost money in every sweep cell they appeared in ---
+check("v3 has NO breakeven trail (lost in all 50 sweep cells with it on)",
+      MOMENTUM["use_breakeven_trail"] is False)
+check("v3 has NO time stop (the edge is the right tail)",
+      MOMENTUM["use_time_stop"] is False)
+check("v3 has NO profit target",
+      MOMENTUM["use_target"] is False)
+
+# --- reachability: a threshold no real move clears is a bug ---
+# Median ATR on the measured sample was 0.619%, median adverse excursion
+# before the close -0.76%. A stop floor inside that noise band is stopped out
+# by nothing in particular; one far outside it cannot be sized.
+check("v3 stop floor sits outside ordinary noise but is still sizeable",
+      0.008 <= MOMENTUM["stop_pct_floor"] <= 0.020,
+      f"{MOMENTUM['stop_pct_floor']*100:.1f}%")
+check("v3 stop floor is wider than v2's (smaller position, less friction)",
+      MOMENTUM["stop_pct_floor"] > STRATEGY["stop_pct_floor"],
+      f"{MOMENTUM['stop_pct_floor']*100:.1f}% vs {STRATEGY['stop_pct_floor']*100:.1f}%")
+
+# --- end to end: a trending name on a volume spike MUST produce a signal ---
+np.random.seed(33)
+
+
+def momentum_day(day, base, bars=10, step=0.005, vol=500_000, spike=8.0,
+                 bar_range=0.006):
+    """
+    A realistic trending session for v3.
+
+    make_day() draws bars only ~0.16% wide, which is a tenth of what NSE
+    15-minute bars actually do - the measured median ATR on the real sample was
+    0.619%. A synthetic day that narrow drags ATR under v3's volatility floor
+    and the strategy correctly refuses to trade it, which would make this test
+    fail for a reason that has nothing to do with the strategy. `bar_range`
+    sets a realistic high-low span; `spike` lifts volume on the signal bar.
+    """
+    idx = session_index(day, bars)
+    p = np.array([base * (1 + step) ** i for i in range(bars)])
+    o = np.concatenate([[base], p[:-1]])
+    h = np.maximum(o, p) * (1 + bar_range / 2)
+    l = np.minimum(o, p) * (1 - bar_range / 2)
+    v = np.full(bars, float(vol))
+    v[-1] = vol * spike                       # the participation spike
+    return pd.DataFrame({"open": o, "high": h, "low": l, "close": p,
+                         "volume": v}, index=idx)
+
+
+_h3, _d3 = history(1800.0, 12, vol=500_000)
+_td3 = _d3
+while _td3.weekday() >= 5:
+    _td3 += timedelta(days=1)
+_now3 = datetime.combine(_td3, datetime.min.time()).replace(hour=11, tzinfo=IST)
+_m3.now_ist = lambda: _now3
+_stock3 = pd.concat([_h3, momentum_day(_td3, 1800.0)])
+_hn3, _ = history(24000.0, 12, vol=0)
+_nif3 = pd.concat([_hn3, make_day(_td3, base=24000.0,
+                                  path=[24000 + 6 * i for i in range(25)],
+                                  vol=0).iloc[:9]])
+_s3 = MomentumV3().compute_signals({"TCS.NS": _stock3}, _nif3, 14.0)
+check("a trending name on a volume spike produces a signal",
+      len(_s3) == 1,
+      f"{len(_s3)} signal(s) - if 0, v3's filter stack is unreachable")
+if _s3:
+    _sig3 = _s3[0]
+    check("the signal is a MARKET order, not v2's stop-limit trigger",
+          _sig3["order_type"] == "MARKET", _sig3["order_type"])
+    check("the signal carries its own exit rules",
+          _sig3["exit_cfg"]["use_breakeven_trail"] is False)
+    check("the entry snapshot records what the rule looked at",
+          all(k in _sig3 for k in
+              ("entry_rsi", "entry_rvol", "entry_deviation_pct", "entry_atr_pct")))
+
+# --- the same name WITHOUT the volume spike must be rejected ---
+_quiet = pd.concat([_h3, momentum_day(_td3, 1800.0, spike=1.0)])
+_sq = MomentumV3().compute_signals({"TCS.NS": _quiet}, _nif3, 14.0)
+check("the same rally on ORDINARY volume is rejected", len(_sq) == 0,
+      f"{len(_sq)} signal(s); rvol is meant to be binding")
+
+# --- the regime gate must fail closed, same as v2's ---
+_okr, _whyr = MomentumV3().regime_ok(None, 14.0, _td3)
+check("v3 regime gate fails closed with no index data", not _okr, _whyr)
+_crash = pd.concat([_hn3, make_day(_td3, base=24000.0,
+                                   path=[24000 * (1 - 0.0035 * i) for i in range(25)],
+                                   vol=0).iloc[:9]])
+_okc, _whyc = MomentumV3().regime_ok(_crash, 14.0, _td3)
+check("v3 stands down when the index is falling hard", not _okc, _whyc)
+
+# --- a MARKET order fills at the NEXT bar's open, never at its close ---
+_tr3 = PaperTraderV2(state_file=str(tmp / "mkt.json"))
+_tr3.state["cash"] = _tr3.state["initial_capital"] = 1_000_000
+_mkt_sig = {"ticker": "ZZZ.NS", "order_type": "MARKET", "reference_price": 1000.0,
+            "stop_pct": 1.2, "stop_loss": 988.0, "valid_bars": 1, "atr": 6.0,
+            "strategy": "MOM-v3", "bar_volume": 5_000_000,
+            "exit_cfg": {"use_target": False, "use_breakeven_trail": False,
+                         "use_time_stop": False}}
+_clock3 = datetime.combine(_td3, datetime.min.time()).replace(hour=11, tzinfo=IST)
+pt.now_ist = lambda c=_clock3: c
+_tr3.place_order(_mkt_sig, _clock3)
+_filled = _tr3.process_orders(
+    {"ZZZ.NS": {"open": 1010.0, "close": 1040.0, "high": 1045.0,
+                "low": 1005.0, "volume": 5_000_000}}, _clock3)
+check("a MARKET order fills at the bar's OPEN, not its close",
+      _filled and abs(_filled[0]["entry_price"] - 1010.0) < 0.01,
+      f"filled at {_filled[0]['entry_price'] if _filled else 'nothing'}")
+if _filled:
+    _p3 = _tr3.state["positions"]["ZZZ.NS"]
+    check("the stop is re-derived from the FILL, not the stale reference",
+          abs(_p3["stop_loss"] - 1010.0 * 0.988) < 0.05,
+          f"stop Rs{_p3['stop_loss']} on a Rs1010 fill (signal said Rs988)")
+    check("risk per share reflects the real fill",
+          abs(_p3["risk_per_share"] - 1010.0 * 0.012) < 0.1,
+          f"Rs{_p3['risk_per_share']}")
+
+print("\n" + "=" * 70)
+print("3d. WALK-FORWARD OVERRIDES - the weekly job must not be able to hurt you")
+print("=" * 70)
+# walkforward.py runs unattended on a schedule and writes a file that config.py
+# reads. That is a remote-control surface on a live trading bot, so the clamp
+# around it is the safety property, not the feature. These assertions describe
+# what a malicious, buggy or half-written params_live.json must NOT be able to
+# do.
+import importlib
+import config as _cfg
+
+_pfile = tmp / "params_live.json"
+
+
+def _reload_with(payload):
+    if payload is None:
+        _pfile.unlink(missing_ok=True)
+    else:
+        json.dump(payload, open(_pfile, "w"))
+    os.environ["ALGO_LIVE_PARAMS"] = str(_pfile)
+    return importlib.reload(_cfg)
+
+
+_base_rsi = _cfg.MOMENTUM["min_rsi"]
+
+# in-band values ARE applied - the job has to be able to do its job
+_c = _reload_with({"params": {"min_rsi": 78, "min_rvol": 5.0}})
+check("an in-band override is applied", _c.MOMENTUM["min_rsi"] == 78,
+      f"rsi {_c.MOMENTUM['min_rsi']}")
+check("the override is reported, not silent", "min_rsi" in _c.LIVE_PARAM_OVERRIDES)
+
+# out-of-band values are REFUSED, silently and safely
+_c = _reload_with({"params": {"min_rsi": 5, "min_rvol": 500.0,
+                              "stop_pct_floor": 0.9}})
+check("an out-of-band RSI is refused", _c.MOMENTUM["min_rsi"] == _base_rsi,
+      f"rsi {_c.MOMENTUM['min_rsi']}")
+check("an absurd stop width is refused",
+      _c.MOMENTUM["stop_pct_floor"] <= 0.020,
+      f"{_c.MOMENTUM['stop_pct_floor']}")
+
+# the things it must never reach, whatever the file says
+_c = _reload_with({"params": {"use_breakeven_trail": True, "use_time_stop": True,
+                              "min_dev_above_vwap": -0.05,
+                              "risk_pct_per_trade": 0.5}})
+check("the file cannot switch the breakeven trail back on",
+      _c.MOMENTUM["use_breakeven_trail"] is False)
+check("the file cannot switch the time stop back on",
+      _c.MOMENTUM["use_time_stop"] is False)
+check("the file cannot flip the direction to negative deviation",
+      _c.MOMENTUM["min_dev_above_vwap"] > 0,
+      f"{_c.MOMENTUM['min_dev_above_vwap']}")
+check("the file cannot touch risk per trade",
+      _c.RISK["risk_pct_per_trade"] < 0.05,
+      f"{_c.RISK['risk_pct_per_trade']}")
+
+# corrupt / missing files must be inert, not fatal
+_pfile.write_text("{not json at all")
+os.environ["ALGO_LIVE_PARAMS"] = str(_pfile)
+try:
+    _c = importlib.reload(_cfg)
+    _survived = True
+except Exception:
+    _survived = False
+check("a corrupt params file does not crash the scan", _survived)
+check("a corrupt params file changes nothing",
+      _survived and _c.MOMENTUM["min_rsi"] == _base_rsi)
+
+os.environ.pop("ALGO_LIVE_PARAMS", None)
+_cfg = importlib.reload(_cfg)
+
+print("\n" + "=" * 70)
 print("4b. EQUITY ACCOUNTING - the bug that bricked the first v2 cut")
 print("=" * 70)
 # The original equity() was cash + sum(entry_price * qty), but opening a position
@@ -679,67 +898,108 @@ print("=" * 70)
 
 import main as bot
 
-np.random.seed(5)
-universe_data = {}
-for tk, base in [("TCS.NS", 3200.0), ("INFY.NS", 1500.0), ("RELIANCE.NS", 2800.0)]:
-    h, _ = history(base, 12, vol=600_000)
-    full = pd.concat([h, make_day(trade_day, base=base,
-                                  path=dip_then_reverse(base), vol=600_000)])
-    universe_data[tk] = full
-nifty_full = pd.concat([hist_nifty, make_day(trade_day, base=24000.0,
-                                             path=[24000 + 8 * i for i in range(25)],
-                                             vol=1_000_000)])
-vix_full = pd.concat([history(14.0, 12, vol=1000)[0],
-                      make_day(trade_day, base=14.0, path=[14.0] * 25, vol=1000)])
+# BOTH strategies are driven through main.py, on the market shape each one is
+# built for. Testing only the active one would leave the other's wiring to rot
+# unnoticed - and v2 is the control case the research still has to reproduce.
+# It also catches the thing a single-strategy test cannot: two different signal
+# shapes and two different exit rule sets sharing one paper trader.
 
-state_file = tmp / "session.json"
-bars_seen, events = 0, []
-for bar_i in range(4, 25):
-    ts = session_index(trade_day)[bar_i]
-    clock = ts.to_pydatetime().replace(tzinfo=IST)
 
-    sliced = {tk: df[df.index <= ts] for tk, df in universe_data.items()}
-    sliced["^NSEI"] = nifty_full[nifty_full.index <= ts]
-    sliced["^INDIAVIX"] = vix_full[vix_full.index <= ts]
+def run_session(strategy_name, day_path_for):
+    np.random.seed(5)
+    universe = {}
+    for tk, base in [("TCS.NS", 3200.0), ("INFY.NS", 1500.0), ("RELIANCE.NS", 2800.0)]:
+        h, _ = history(base, 12, vol=600_000)
+        universe[tk] = pd.concat([h, day_path_for(base)])
+    nifty_full = pd.concat([hist_nifty, make_day(trade_day, base=24000.0,
+                                                 path=[24000 + 8 * i for i in range(25)],
+                                                 vol=1_000_000)])
+    vix_full = pd.concat([history(14.0, 12, vol=1000)[0],
+                          make_day(trade_day, base=14.0, path=[14.0] * 25, vol=1000)])
 
-    class StubFetcher:
-        def fetch_intraday(self, tickers, days_back=5):
-            return {t: sliced[t].copy() for t in tickers if t in sliced}
+    state_file = tmp / f"session_{strategy_name}.json"
+    bars_seen, events = 0, []
+    for bar_i in range(4, 25):
+        ts = session_index(trade_day)[bar_i]
+        clock = ts.to_pydatetime().replace(tzinfo=IST)
 
-    bot.IntradayFetcher = StubFetcher
-    bot.now_ist = lambda c=clock: c
-    bot.INTRADAY_UNIVERSE = ["TCS.NS", "INFY.NS", "RELIANCE.NS"]
-    pt.now_ist = lambda c=clock: c
-    mod.now_ist = lambda c=clock: c
-    bot.PaperTraderV2 = lambda: PaperTraderV2(state_file=str(state_file))
-    try:
-        bot.main()
-        bars_seen += 1
-    except Exception as e:
-        events.append(f"bar {bar_i} ({ts:%H:%M}) raised {type(e).__name__}: {e}")
+        sliced = {tk: df[df.index <= ts] for tk, df in universe.items()}
+        sliced["^NSEI"] = nifty_full[nifty_full.index <= ts]
+        sliced["^INDIAVIX"] = vix_full[vix_full.index <= ts]
 
-check("all 21 scans ran without raising", not events, "; ".join(events[:2]))
-check("every scan completed", bars_seen == 21, f"{bars_seen}/21")
+        class StubFetcher:
+            def fetch_intraday(self, tickers, days_back=5):
+                return {t: sliced[t].copy() for t in tickers if t in sliced}
 
-final = json.load(open(state_file))
-check("state file is written and readable", "cash" in final)
-check("no position left open after 15:05", len(final["positions"]) == 0,
-      f"{list(final['positions'])}")
-check("no orders left resting", len(final["pending_orders"]) == 0)
+        bot.IntradayFetcher = StubFetcher
+        bot.ACTIVE_STRATEGY = strategy_name
+        bot.now_ist = lambda c=clock: c
+        bot.INTRADAY_UNIVERSE = ["TCS.NS", "INFY.NS", "RELIANCE.NS"]
+        pt.now_ist = lambda c=clock: c
+        mod.now_ist = lambda c=clock: c
+        _m3.now_ist = lambda c=clock: c
+        bot.PaperTraderV2 = lambda: PaperTraderV2(state_file=str(state_file))
+        try:
+            bot.main()
+            bars_seen += 1
+        except Exception as e:
+            events.append(f"bar {bar_i} ({ts:%H:%M}) raised {type(e).__name__}: {e}")
+    return state_file, bars_seen, events
 
-h = final["trade_history"]
-print(f"\n  Session result: {len(h)} fill(s), net Rs{sum(t['pnl'] for t in h):+,.0f}, "
-      f"friction Rs{sum(t.get('friction', 0) for t in h):,.0f}")
-for t_ in h:
-    print(f"    {t_['ticker']:<13} {t_['qty']:>4} @ Rs{t_['exit_price']:>8.2f}  "
-          f"Rs{t_['pnl']:>8,.0f} ({t_['R_multiple']:+.2f}R)  {t_['reason']}")
-if h:
-    noms = [t_["entry_price"] * t_["qty"] for t_ in h]
-    check("no fragment trades taken",
-          all(n >= RISK["min_notional_per_trade"] * 0.4 for n in noms),
-          f"min notional Rs{min(noms):,.0f}")
-    check("entry timestamps are IST-labelled (v1 logged UTC for a month)",
-          all("IST" in t_["entry_time"] for t_ in h))
+
+def assert_session(label, state_file, bars_seen, events):
+    check(f"[{label}] all 21 scans ran without raising", not events, "; ".join(events[:2]))
+    check(f"[{label}] every scan completed", bars_seen == 21, f"{bars_seen}/21")
+    final = json.load(open(state_file))
+    check(f"[{label}] state file is written and readable", "cash" in final)
+    check(f"[{label}] no position left open after 15:05",
+          len(final["positions"]) == 0, f"{list(final['positions'])}")
+    check(f"[{label}] no orders left resting", len(final["pending_orders"]) == 0)
+
+    h = final["trade_history"]
+    print(f"\n  {label}: {len(h)} fill(s), net Rs{sum(t['pnl'] for t in h):+,.0f}, "
+          f"friction Rs{sum(t.get('friction', 0) for t in h):,.0f}")
+    for t_ in h:
+        print(f"    {t_['ticker']:<13} {t_['qty']:>4} @ Rs{t_['exit_price']:>8.2f}  "
+              f"Rs{t_['pnl']:>8,.0f} ({t_['R_multiple']:+.2f}R)  {t_['reason']}")
+    if h:
+        noms = [t_["entry_price"] * t_["qty"] for t_ in h]
+        check(f"[{label}] no fragment trades taken",
+              all(n >= RISK["min_notional_per_trade"] * 0.4 for n in noms),
+              f"min notional Rs{min(noms):,.0f}")
+        check(f"[{label}] entry timestamps are IST-labelled (v1 logged UTC for a month)",
+              all("IST" in t_["entry_time"] for t_ in h))
+    return h
+
+
+# --- v2 on the dislocation it was built for ---
+_sf, _bs, _ev = run_session(
+    "vwap_mr_v2",
+    lambda base: make_day(trade_day, base=base, path=dip_then_reverse(base), vol=600_000))
+_h2 = assert_session("v2", _sf, _bs, _ev)
+
+# --- v3 on a trending session with a participation spike ---
+def _mom_full_day(base):
+    # step is steeper than it looks it should need: VWAP is volume-weighted on
+    # the TYPICAL price (h+l+c)/3, so a wide bar drags VWAP up toward the close
+    # and a gentle climb never opens the 1.2% gap the rule wants.
+    d = momentum_day(trade_day, base, bars=25, step=0.0045, vol=600_000, spike=1.0)
+    # the spike arrives mid-session, inside the entry window, not at the bell
+    d.loc[d.index[8:16], "volume"] = 600_000 * 9
+    return d
+
+
+_sf3, _bs3, _ev3 = run_session("momentum_v3", _mom_full_day)
+_h3f = assert_session("v3", _sf3, _bs3, _ev3)
+
+check("v3 actually traded end-to-end through main.py", len(_h3f) > 0,
+      f"{len(_h3f)} fill(s) - 0 means the production path is unreachable")
+if _h3f:
+    check("v3 trades are recorded under their own strategy name",
+          all(t_.get("strategy") == "MOM-v3" for t_ in _h3f))
+    check("v3 exits are square-off or stop, never a target or time stop",
+          all(t_["reason"] in ("square_off", "stop_loss") for t_ in _h3f),
+          f"{sorted({t_['reason'] for t_ in _h3f})}")
 
 shutil.rmtree(tmp, ignore_errors=True)
 

@@ -153,8 +153,18 @@ class PaperTraderV2:
     # PENDING STOP-LIMIT ORDERS
     # ==================================================================
     def place_order(self, sig: Dict, now: datetime) -> bool:
-        """v2 places a resting trigger rather than assuming a fill at the close
-        of a bar that has not closed yet."""
+        """
+        Queue an order. Neither strategy assumes a fill at the close of a bar
+        that has not closed yet - v1's cardinal sin - but they queue different
+        things:
+
+          STOP_LIMIT (v2)  a resting trigger above the signal bar's high; fills
+                           only if price comes up and takes it.
+          MARKET     (v3)  fills at the NEXT bar's open, which is the first
+                           price an order placed now can actually get. Momentum
+                           has no reason to wait for confirmation and measurably
+                           loses by doing so.
+        """
         ok, why = self.risk.can_open(sig["ticker"], now)
         if not ok:
             logger.info(f"ORDER REJECTED {sig['ticker']}: {why}")
@@ -162,10 +172,18 @@ class PaperTraderV2:
         self.state["pending_orders"][sig["ticker"]] = {
             **sig, "placed_at": now.isoformat(), "bars_alive": 0,
         }
-        logger.info(
-            f"ORDER {sig['ticker']} stop-limit buy @ Rs{sig['trigger_price']} "
-            f"(SL Rs{sig['stop_loss']}, {sig['stop_pct']}%, R:R after cost {sig['rr_after_cost']})"
-        )
+        if sig.get("order_type") == "MARKET":
+            logger.info(
+                f"ORDER {sig['ticker']} market buy at next open "
+                f"(ref Rs{sig.get('reference_price')}, SL {sig['stop_pct']}%, "
+                f"RSI {sig.get('entry_rsi')}, rvol {sig.get('entry_rvol')})"
+            )
+        else:
+            logger.info(
+                f"ORDER {sig['ticker']} stop-limit buy @ Rs{sig['trigger_price']} "
+                f"(SL Rs{sig['stop_loss']}, {sig['stop_pct']}%, "
+                f"R:R after cost {sig.get('rr_after_cost')})"
+            )
         self._save()
         return True
 
@@ -184,6 +202,17 @@ class PaperTraderV2:
             if not bar:
                 continue
 
+            if o.get("order_type") == "MARKET":
+                # Fill at this bar's open - the first price reachable after the
+                # signal bar closed. Using the bar's CLOSE here would be
+                # lookahead: it is not known when the order is sent.
+                fill = bar.get("open") or bar["close"]
+                pos = self._open(o, float(fill), now)
+                if pos:
+                    filled.append(pos)
+                del self.state["pending_orders"][ticker]
+                continue
+
             # Triggered when the bar trades through the trigger price.
             if bar["high"] >= o["trigger_price"]:
                 fill = min(o["trigger_price"], o["limit_price"])
@@ -196,7 +225,16 @@ class PaperTraderV2:
         return filled
 
     def _open(self, o: Dict, fill_price: float, now: datetime) -> Optional[Dict]:
-        qty, why = self.risk.size_position(fill_price, o["stop_loss"], o.get("bar_volume"))
+        # A MARKET order's stop was expressed against a reference price the
+        # order never traded at. Re-derive it from the price actually paid, or
+        # a gap between the two silently changes the risk taken - the fill can
+        # be above the reference (stop too close, position too big) or below it
+        # (stop too far, position too small). Percentage risk is the invariant.
+        stop_price = o["stop_loss"]
+        if o.get("order_type") == "MARKET" and o.get("stop_pct"):
+            stop_price = round(fill_price * (1 - float(o["stop_pct"]) / 100.0), 2)
+
+        qty, why = self.risk.size_position(fill_price, stop_price, o.get("bar_volume"))
         if qty is None:
             logger.info(f"SIZING SKIP {o['ticker']}: {why}")
             return None
@@ -212,10 +250,17 @@ class PaperTraderV2:
         pos = {
             "ticker": o["ticker"], "direction": "LONG",
             "entry_price": fill_price, "qty": qty, "qty_open": qty,
-            "stop_loss": o["stop_loss"], "initial_stop": o["stop_loss"],
-            "t1": o["t1"], "t2": o["t2"], "t1_fraction": o["t1_fraction"],
+            "stop_loss": stop_price, "initial_stop": stop_price,
+
+            # Targets are optional. Momentum v3 sets none: removing the best
+            # five trades turns every cell of the threshold sweep negative, so
+            # the edge IS the right tail and a target is a way of cutting it
+            # off. `_exit_cfg` below is what decides whether these are consulted.
+            "t1": o.get("t1"), "t2": o.get("t2"),
+            "t1_fraction": o.get("t1_fraction", 0.5),
+            "exit_cfg": o.get("exit_cfg", {}),
             "t1_done": False, "trailed": False,
-            "risk_per_share": round(fill_price - o["stop_loss"], 2),
+            "risk_per_share": round(fill_price - stop_price, 2),
             "atr": o["atr"], "margin": margin, "entry_cost": entry_cost,
             "bars_held": 0, "realised_pnl": 0.0,
             "strategy": o["strategy"],
@@ -288,8 +333,17 @@ class PaperTraderV2:
                 exits.append(self._close(ticker, pos, pos["stop_loss"], reason, now, pos["qty_open"]))
                 continue
 
+            # Exit rules come from the POSITION, not from a global. Two
+            # strategies with opposite exit logic have to share one book, and
+            # v2's exits reading STRATEGY[...] directly is what prevented that.
+            # Defaults reproduce v2 exactly, so nothing changes for its trades.
+            cfg = pos.get("exit_cfg") or {}
+            use_target = cfg.get("use_target", True)
+            use_trail = cfg.get("use_breakeven_trail", True)
+            use_time = cfg.get("use_time_stop", True)
+
             # ---- 3. T1: scale half out at VWAP, where the thesis completes ----
-            if not pos["t1_done"] and high >= pos["t1"]:
+            if use_target and pos.get("t1") and not pos["t1_done"] and high >= pos["t1"]:
                 part = max(1, int(pos["qty_open"] * pos["t1_fraction"]))
                 exits.append(self._close(ticker, pos, pos["t1"], "t1_vwap", now, part, partial=True))
                 pos["t1_done"] = True
@@ -304,12 +358,12 @@ class PaperTraderV2:
                     continue
 
             # ---- 4. T2 ----
-            if pos["t1_done"] and high >= pos["t2"]:
+            if use_target and pos.get("t2") and pos["t1_done"] and high >= pos["t2"]:
                 exits.append(self._close(ticker, pos, pos["t2"], "t2_target", now, pos["qty_open"]))
                 continue
 
             # ---- 5. ATR trail once T1 is banked ----
-            if pos["trailed"]:
+            if use_trail and pos["trailed"]:
                 trail = price - STRATEGY["trail_atr_mult_after_t1"] * pos["atr"]
                 if trail > pos["stop_loss"]:
                     pos["stop_loss"] = round(trail, 2)
@@ -317,7 +371,8 @@ class PaperTraderV2:
             # ---- 6. time stop ----
             # If a reversion trade has not started reverting in an hour, it is
             # not stretched - it is trending, and you are on the wrong side.
-            if pos["bars_held"] >= STRATEGY["time_stop_bars"] and not pos["t1_done"]:
+            if (use_time and pos["bars_held"] >= STRATEGY["time_stop_bars"]
+                    and not pos["t1_done"]):
                 r_now = (price - entry) / R if R > 0 else 0
                 if r_now < STRATEGY["time_stop_min_R"]:
                     exits.append(self._close(
