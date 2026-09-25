@@ -1020,11 +1020,18 @@ def run_session(strategy_name, day_path_for):
     bars_seen, events = 0, []
     for bar_i in range(4, 25):
         ts = session_index(trade_day)[bar_i]
-        clock = ts.to_pydatetime().replace(tzinfo=IST)
+        # The scan runs a minute after bar `ts` FINISHES, exactly as the cron
+        # does - so Yahoo's response also carries the NEXT bar, still forming.
+        # The first version of this harness set the clock to the bar's START
+        # and handed it that bar as if complete, which is the very mistake that
+        # kept live v3 from ever trading. Here the forming bar is present and
+        # main.py has to ignore it for signals and fill at its open.
+        clock = (ts + pd.Timedelta(minutes=16)).to_pydatetime().replace(tzinfo=IST)
+        seen = ts + pd.Timedelta(minutes=15)
 
-        sliced = {tk: df[df.index <= ts] for tk, df in universe.items()}
-        sliced["^NSEI"] = nifty_full[nifty_full.index <= ts]
-        sliced["^INDIAVIX"] = vix_full[vix_full.index <= ts]
+        sliced = {tk: df[df.index <= seen] for tk, df in universe.items()}
+        sliced["^NSEI"] = nifty_full[nifty_full.index <= seen]
+        sliced["^INDIAVIX"] = vix_full[vix_full.index <= seen]
 
         class StubFetcher:
             def fetch_intraday(self, tickers, days_back=5):
@@ -1099,6 +1106,40 @@ if _h3f:
     check("v3 exits are square-off or stop, never a target or time stop",
           all(t_["reason"] in ("square_off", "stop_loss") for t_ in _h3f),
           f"{sorted({t_['reason'] for t_ in _h3f})}")
+
+# ---- the forming bar -------------------------------------------------------
+# Yahoo's last 15-minute row is the bar in progress. v3 grades THIS bar's
+# volume against a full bar's median (min_rvol 4.0), so a scan that reads the
+# 1-minute-old bar can never pass - the reason live v3 placed nothing.
+print("\n--- live scans grade FINISHED bars only ---")
+_idx = session_index(trade_day)
+_df = pd.DataFrame({"close": range(len(_idx))}, index=_idx)
+_at = (_idx[3] + pd.Timedelta(minutes=16)).to_pydatetime().replace(tzinfo=IST)  # 10:16
+_cb = bot.completed_bars(_df, _at)
+check("the bar still forming is dropped", _cb.index[-1] == _idx[3],
+      f"last kept {_cb.index[-1]:%H:%M}, expected {_idx[3]:%H:%M}")
+_at2 = (_idx[4] + pd.Timedelta(minutes=15)).to_pydatetime().replace(tzinfo=IST)  # 10:30 sharp
+check("a bar counts as finished once its 15 minutes are up",
+      bot.completed_bars(_df, _at2).index[-1] == _idx[4])
+check("an empty frame passes through", bot.completed_bars(_df.iloc[:0], _at).empty)
+
+# The same momentum bar, seen whole vs seen 1 minute in. Whole passes rvol;
+# the 1-minute slice (1/15 of the volume) cannot - which is why the fix is
+# to wait for the bar to finish, not to lower the threshold.
+_strat = MomentumV3()
+_mom = momentum_day(trade_day, 2800.0, bars=25, step=0.0045, vol=600_000, spike=1.0)
+_mom.loc[_mom.index[8:16], "volume"] = 600_000 * 9
+_full = pd.concat([history(2800.0, 12, vol=600_000)[0], _mom])
+_bar = _mom.index[12]   # inside the spike, past the VWAP gap
+_m3.now_ist = lambda: (_bar + pd.Timedelta(minutes=16)).to_pydatetime().replace(tzinfo=IST)
+_whole = _full[_full.index <= _bar]
+_slice = _whole.copy()
+_slice.loc[_bar, "volume"] = _slice.loc[_bar, "volume"] / 15.0
+_s_whole, _ = _strat._signal("X.NS", _whole, trade_day)
+_s_slice, _why_slice = _strat._signal("X.NS", _slice, trade_day)
+check("a finished spike bar produces a signal", _s_whole is not None)
+check("the same bar 1 minute in does not - rvol is the rule that fails",
+      _s_slice is None and str(_why_slice).startswith("rvol"), str(_why_slice))
 
 shutil.rmtree(tmp, ignore_errors=True)
 

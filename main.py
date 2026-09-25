@@ -12,7 +12,7 @@ import logging
 import os
 import sys
 import urllib.request
-from datetime import datetime, time as dtime
+from datetime import datetime, time as dtime, timedelta
 from pathlib import Path
 
 from tzutil import IST as ist, UTC, now_ist
@@ -57,6 +57,29 @@ STRATEGIES = {
     "vwap_mr_v2": VWAPMeanReversionV2,
     "momentum_v3": MomentumV3,
 }
+
+
+BAR_MINUTES = 15
+
+
+def completed_bars(df, now, minutes: int = BAR_MINUTES):
+    """
+    Drop the bar that is still forming.
+
+    Yahoo returns the CURRENT 15-minute bar as the last row, with only the
+    minutes elapsed so far in it. A scan at 10:01 therefore saw a 10:00 bar
+    holding ~1 minute of volume, and v3 asks that bar for 4x a FULL bar's
+    median volume - a requirement a 1-minute slice essentially cannot meet.
+    Every study and the replay graded finished bars; live has to as well, or
+    the rule being traded is not the rule that was measured.
+
+    Index is naive IST (the fetcher strips tz); a bar stamped at its START is
+    complete once start + 15 minutes has passed.
+    """
+    if df is None or df.empty:
+        return df
+    cutoff = now.replace(tzinfo=None) - timedelta(minutes=minutes)
+    return df[df.index <= cutoff]
 
 
 def active_strategy():
@@ -187,10 +210,22 @@ def main():
         # A parameter that changed without appearing in the log is a parameter
         # you cannot reconstruct a trade from three months later.
         logger.info(f"walk-forward overrides in force: {LIVE_PARAM_OVERRIDES}")
-    signals = strat.compute_signals(data, index_df, vix)
-    for sig in signals:
-        if not trader.place_order(sig, now):
-            continue
+    # Signals are graded on FINISHED bars only - see completed_bars().
+    sig_data = {t: completed_bars(df, now) for t, df in data.items()}
+    signals = strat.compute_signals(sig_data, completed_bars(index_df, now), vix)
+    placed = [sig for sig in signals if trader.place_order(sig, now)]
+
+    # A MARKET order on a finished bar fills at the NEXT bar's open - and that
+    # bar is the one forming right now, whose open has already printed. Fill it
+    # this scan rather than waiting 15 minutes for the one after, which would
+    # enter a bar later than the replay and the studies did.
+    now_fill = {s["ticker"]: bars[s["ticker"]] for s in placed
+                if s.get("order_type") == "MARKET" and s["ticker"] in bars}
+    if now_fill:
+        context = build_exit_context(trader, data, index_df, today)
+        for pos in trader.process_orders(now_fill, now, context):
+            notify(f"FILLED {pos['ticker']} @Rs{pos['entry_price']} qty {pos['qty']} | "
+                   f"SL Rs{pos['stop_loss']}")
 
     # Record every scan's candidates AND why the rest were rejected.
     # v1's signals_intraday.json is the only reason its 188 candidates could be
