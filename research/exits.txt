@@ -1,0 +1,22 @@
+305 live-rule signals over 48 days, Rs300,000 per trade, cost 0.0955% + slippage
+
+  rule                          n        net      avg   win%      t       07       08       09   ex-top5  survives
+  hold to close (v3 now)      305    175,110     +574  51.5%  +2.15  132,630   15,256   27,224    92,187  YES
+  trail 1.5xATR               305   -112,503     -369  36.4%  -2.44  -24,343  -30,417  -57,743  -150,294  -   (-287,613 vs hold)
+  trail 2.5xATR               305     -5,498      -18  46.2%  -0.08   52,422  -19,521  -38,399   -64,116  -   (-180,608 vs hold)
+  trail 3.5xATR               305    141,394     +464  51.5%  +1.89  133,739   21,273  -13,618    69,053  -   (-33,716 vs hold)
+  exit on close < VWAP        305    196,234     +643  51.5%  +2.46  138,442   31,672   26,119   113,311  YES   (+21,124 vs hold)
+  exit on RSI < 50            305    177,230     +581  51.5%  +2.18  132,630   17,376   27,224    94,307  YES   (+2,120 vs hold)
+  exit if NIFTY -0.5%         305    177,723     +583  51.5%  +2.19  132,520   15,540   29,663    94,800  YES   (+2,613 vs hold)
+  half at +1R                 305    155,449     +510  53.4%  +2.19  115,704   33,765    5,980   103,594  YES   (-19,661 vs hold)
+  square off 14:30            305    125,741     +412  51.8%  +1.59  131,388   -1,210   -4,437    47,965  -   (-49,369 vs hold)
+
+====================================================================================================
+  HOW TO READ THIS
+====================================================================================================
+  Every rule sees the SAME entries, so a difference is the exit and nothing
+  else. A rule only earns a place in the bot if it beats 'hold' AND is
+  positive in every month AND survives losing its best five trades - the
+  test every exit device in the threshold sweep failed. Same 59 days as
+  everything else, no holdout: a survivor here is a walk-forward candidate,
+  not a rule to switch on.

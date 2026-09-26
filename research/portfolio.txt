@@ -1,0 +1,43 @@
+rule: dev>=0.8% above VWAP, RSI>=75, rvol>=4.0, 1.2% stop, hold to close
+caps: 3 concurrent, 5/day, 1/sector, risk 0.40% of Rs1,000,000
+
+============================================================================
+  ACCOUNT RESULT — the candidate rule run as a book
+============================================================================
+  trading days          59
+  trades                185  (3.1/day)
+  win rate              37.3%
+  profit factor         0.81
+  net P&L               Rs-74,127   (-7.41%)
+  friction paid         Rs88,285
+  gross before costs    Rs14,158
+  avg trade             Rs-401   (-0.102R)
+  t-stat                -1.07   (>2 is the go-live bar)
+  max drawdown          Rs110,060  (11.01%)
+  median notional       Rs323,953
+
+  by exit:
+    square_off     111 trades  Rs   251,173  avg Rs  +2,263
+    stop            74 trades  Rs  -325,300  avg Rs  -4,396
+
+  by month:
+    2026-07     64 trades  Rs    -5,560  (-0.56%)  avg -0.019R
+    2026-08     70 trades  Rs   -48,618  (-4.86%)  avg -0.177R
+    2026-09     51 trades  Rs   -19,950  (-1.99%)  avg -0.102R
+
+  concentration — how much of the P&L is the best few trades:
+    top 1   trades = Rs   26,312 of Rs-74,127 total
+    top 3   trades = Rs   67,489 of Rs-74,127 total
+    top 5   trades = Rs   97,210 of Rs-74,127 total
+    top 10  trades = Rs  144,131 of Rs-74,127 total
+    without the top 5: Rs-171,337 (-17.13%)
+
+============================================================================
+  HOW TO READ THIS
+============================================================================
+  The thresholds were picked after looking at these 59 days, entries
+  assume a fill at the open of a bar in a fast-moving stock, and the
+  concentration block above says how much of the result rests on a
+  handful of trades. If that line says most of it, the rule needs
+  those tails to survive - and tails are the first thing a live fill
+  takes away.

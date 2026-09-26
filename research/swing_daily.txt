@@ -1,0 +1,70 @@
+fetching 5y of daily bars for 211 symbols (a few minutes, once)...
+  40/211
+  80/211
+  120/211
+  160/211
+  200/211
+  211/211
+cached 211 symbols
+
+246,077 name-days, 210 names, 2021-12-08 to 2026-09-24
+delivery round-trip cost 0.322% (intraday was 0.0955% - this is 2.6x worse per trade)
+TRAIN 2021-12-08 .. 2024-10-29   (146,983 rows)
+TEST  2024-10-29 .. 2026-09-24   (99,094 rows)   <- the only block that counts
+
+======================================================================================
+  TRAIN — choose here   (hold 5 sessions, exit at the close)
+======================================================================================
+                                               n     gross       net   win%       t
+  baseline (every name-day)              146,983    +0.40%    +0.08%   52.4%  +30.17
+  above 20/50/200 sma                     53,096    +0.56%    +0.24%   53.2%  +25.52
+  20-day breakout                         10,303    +0.24%    -0.08%   50.0%   +4.54
+  breakout + above 200sma                  7,810    +0.33%    +0.01%   50.6%   +5.49
+  breakout + rvol>=2                       4,811    +0.17%    -0.15%   47.7%   +1.91
+  breakout + rvol>=2 + 200sma              3,800    +0.39%    +0.07%   49.4%   +3.90
+  mom20 top decile                        14,699    +0.66%    +0.34%   52.8%  +12.66
+  mom60 top decile + 200sma               13,422    +0.67%    +0.35%   52.6%  +12.32
+  rsi>=70 + above 200sma                  11,484    +0.55%    +0.23%   53.0%  +10.97
+
+======================================================================================
+  TEST — judge here   (hold 5 sessions, exit at the close)
+======================================================================================
+                                               n     gross       net   win%       t
+  baseline (every name-day)               98,049    -0.01%    -0.33%   47.7%   -0.46
+  above 20/50/200 sma                     27,257    -0.15%    -0.48%   47.5%   -5.54
+  20-day breakout                          5,306    -0.26%    -0.59%   45.9%   -4.23
+  breakout + above 200sma                  3,933    -0.18%    -0.50%   47.0%   -2.46
+  breakout + rvol>=2                       2,218    -0.22%    -0.54%   46.2%   -2.13
+  breakout + rvol>=2 + 200sma              1,731    -0.05%    -0.38%   47.8%   -0.46
+  mom20 top decile                         9,887    -0.16%    -0.49%   47.2%   -3.09
+  mom60 top decile + 200sma                9,261    -0.05%    -0.38%   47.9%   -0.99
+  rsi>=70 + above 200sma                   4,327    -0.02%    -0.34%   48.0%   -0.23
+
+======================================================================================
+  HOLDING PERIOD — does the edge grow faster than the cost? (TEST only)
+======================================================================================
+                                               n     gross       net   win%       t
+  breakout+rvol+200sma, 3 sessions         1,736    -0.17%    -0.49%   46.4%   -1.79
+  breakout+rvol+200sma, 5 sessions         1,731    -0.05%    -0.38%   47.8%   -0.46
+  breakout+rvol+200sma, 10 sessions        1,728    -0.08%    -0.41%   46.9%   -0.52
+
+======================================================================================
+  WITH A STOP (TEST only, 5-session hold)
+======================================================================================
+                                               n     gross       net   win%       t
+  stop at 1.5x ATR                         1,733    -0.09%    -0.41%   44.0%   -0.84
+  stop at 2.5x ATR                         1,732    -0.07%    -0.39%   47.3%   -0.58
+  stop at 4.0x ATR                         1,731    -0.08%    -0.40%   47.8%   -0.67
+
+======================================================================================
+  WHAT TO CONCLUDE
+======================================================================================
+  Read the TEST block and nothing else. The rules above were written
+  after a long look at intraday data and at the TRAIN half, so their
+  TRAIN numbers are not evidence of anything.
+
+  If TEST net is comfortably positive with t>3 on a few thousand
+  observations, holding for days is the fix and it is worth building.
+  If TEST net hovers near zero, then the momentum is real at every
+  horizon and monetisable at none of them, and the right answer is to
+  stop trading this account and say so plainly.

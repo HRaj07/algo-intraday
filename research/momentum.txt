@@ -1,0 +1,74 @@
+185,847 bars, 210 names, 59 days
+entry = NEXT bar's open (tradeable). cost = 0.0955% round trip
+
+======================================================================================
+  1. THE TWO CONDITIONS, ENTERED AT A PRICE YOU COULD ACTUALLY GET
+======================================================================================
+                                      n      gross        net    win%        t
+  -- momentum: long, stretched ABOVE vwap, RSI>=60 --
+  momentum +30 min                5,079    -0.008%    -0.103%    45.6%    -0.81  
+  momentum +1 hour                5,079    +0.008%    -0.087%    46.5%    +0.68  
+  momentum +2 hours               4,513    +0.059%    -0.036%    48.4%    +3.41  
+  momentum to close               5,079    +0.130%    +0.035%    49.2%    +6.42  
+  -- reversion: long, stretched BELOW vwap, RSI<=40 (what we trade) --
+  reversion +30 min               4,536    -0.015%    -0.111%    46.2%    -1.87  
+  reversion +1 hour               4,536    -0.047%    -0.142%    45.0%    -4.55  
+  reversion +2 hours              3,873    -0.100%    -0.195%    43.9%    -6.64  
+  reversion to close              4,536    -0.142%    -0.237%    43.4%    -8.19  
+  -- baseline: every bar --
+  all bars +2 hours             171,756    -0.027%    -0.122%    45.7%   -15.01  
+  all bars to close             185,847    -0.009%    -0.105%    47.5%    -3.99  
+
+======================================================================================
+  2. DOES IT HOLD IN BOTH HALVES OF THE SAMPLE?
+======================================================================================
+                                      n      gross        net    win%        t
+  momentum first half             2,816    +0.122%    +0.026%    50.4%    +4.59  
+  momentum second half            2,263    +0.141%    +0.046%    47.8%    +4.49  
+  reversion first half            2,459    -0.072%    -0.168%    46.3%    -3.12  
+  reversion second half           2,077    -0.224%    -0.319%    39.9%    -8.65  
+
+  split at 2026-08-14
+
+======================================================================================
+  3. MONTH BY MONTH (momentum, to close)
+======================================================================================
+                                      n      gross        net    win%        t
+  2026-07                         2,031    +0.058%    -0.038%    47.3%    +1.80  
+  2026-08                         1,648    +0.270%    +0.174%    54.5%    +8.08  
+  2026-09                         1,400    +0.072%    -0.024%    45.8%    +1.74  
+
+======================================================================================
+  4. IS IT A FEW NAMES? (momentum, to close, names with n>=20)
+======================================================================================
+  109 names with >=20 signals
+  66 of them positive (61%)
+  median name mean  +0.116%
+  mean of the means +0.137%
+  best 5:  RELAXO.NS +1.84%, DIXON.NS +1.65%, ADANIENT.NS +1.24%, POONAWALLA.NS +1.21%, WHIRLPOOL.NS +1.19%
+  worst 5: ALKYLAMINE.NS -1.07%, ENDURANCE.NS -0.99%, DEEPAKNTR.NS -0.98%, AMBER.NS -0.86%, M&M.NS -0.81%
+
+                                      n      gross        net    win%        t
+  excluding the best 5 names      4,920    +0.089%    -0.007%    48.8%    +4.65  
+
+======================================================================================
+  5. CAN A STOP SURVIVE IT? (momentum, to close)
+======================================================================================
+  median adverse excursion before the close  -0.643%
+  median favourable excursion               +0.661%
+  median ATR                                 0.542%
+
+                                      n      gross        net    win%        t
+  with a 0.4% stop                5,079    +0.075%    -0.021%    28.5%    +5.34  
+  with a 0.6% stop                5,079    +0.081%    -0.015%    36.9%    +5.22  
+  with a 0.8% stop                5,079    +0.104%    +0.009%    42.0%    +6.02  
+  with a 1.2% stop                5,079    +0.111%    +0.016%    46.4%    +6.01  
+
+======================================================================================
+  6. WHAT THIS DOES AND DOES NOT ESTABLISH
+======================================================================================
+  59 days is the entire window yfinance serves at 15-minute
+  resolution, so there is no out-of-sample period to hold back. A
+  result that survives every check above is a hypothesis worth
+  testing forward in paper, not an edge that has been validated.
+  Entry at the next bar's open still assumes a fill at that open.

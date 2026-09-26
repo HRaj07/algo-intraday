@@ -1,0 +1,34 @@
+fetching 60d of 15-minute bars for 212 symbols...
+cached 212 symbols to cache_recent_15m.pkl
+replaying 210 names over 59 trading days
+
+strategy under replay: MOM-v3
+
+========================================================================
+  REPLAY RESULT — 59 trading days, 1371 scans
+========================================================================
+  signals generated   294
+  trades closed       103
+  win rate            47.6%
+  profit factor       1.06
+  net P&L             Rs8,150   (0.81% on Rs1,000,000)
+  friction paid       Rs26,073
+  gross before costs  Rs34,223
+  avg R               +0.062
+  t-stat              0.23   (>2 is the go-live bar)
+  max drawdown        Rs-26,189  (2.62%)
+  exits:
+    square_off            60 trades  Rs  115,965
+    vwap_reclaim          24 trades  Rs  -45,208
+    stop_loss             19 trades  Rs  -62,607
+
+  >> Net positive after real costs.
+
+========================================================================
+  WHAT THIS DOES NOT TELL YOU
+========================================================================
+  60 days is ONE period. No train/validate/test split is possible, so
+  this cannot separate an edge from a favourable two months. It answers
+  'would it trade, and what would it cost'. Nothing more.
+  Entries also assume the stop-limit filled whenever the bar traded
+  through the trigger, which is optimistic on a thin bar.

@@ -1,0 +1,91 @@
+loaded 212 symbols
+
+185,847 bars in the entry window across 210 names
+round-trip variable cost to beat: 0.0955%
+
+====================================================================================
+  1. BASELINE — every bar, no condition at all
+====================================================================================
+  condition                                n       mean     median    win%        t
+  all bars, +1 bars                  185,847    -0.002%    -0.010%    46.1%    -3.40
+  all bars, +2 bars                  185,847    -0.005%    -0.017%    45.9%    -6.15
+  all bars, +4 bars                  185,847    -0.012%    -0.028%    45.8%   -10.42
+  all bars, +8 bars                  184,146    -0.023%    -0.041%    45.9%   -14.07
+  all bars, +eod bars                185,847    -0.008%    -0.036%    47.6%    -3.52
+
+====================================================================================
+  2. THE LIVE SETUP — dev >= 0.796% and RSI <= 40
+     (buying the signal bar's close, v1-style, no trigger)
+====================================================================================
+  condition                                n       mean     median    win%        t
+  setup, +1 bars                       4,536    +0.006%    +0.000%    48.5%    +1.20
+  setup, +2 bars                       4,536    -0.002%    -0.012%    47.3%    -0.22
+  setup, +4 bars                       4,536    -0.029%    -0.036%    46.2%    -3.13
+  setup, +8 bars                       4,466    -0.087%    -0.083%    43.8%    -6.65
+  setup, +eod bars                     4,536    -0.139%    -0.114%    43.3%    -8.05
+
+  setups found: 4,536 (2.44% of bars)
+
+====================================================================================
+  3. THE SAME SETUP, ENTERED ON THE v2 TRIGGER
+     (long from one tick above the signal bar's high, only if hit)
+====================================================================================
+  condition                                n       mean     median    win%        t
+  triggered, +1 bars                   1,193    +0.016%    -0.008%    48.4%    +1.62
+  triggered, +2 bars                   1,193    -0.016%    -0.045%    43.3%    -1.10
+  triggered, +4 bars                   1,193    -0.034%    -0.051%    43.8%    -1.89
+  triggered, +8 bars                   1,173    -0.095%    -0.118%    42.1%    -3.58
+  triggered, +eod bars                 1,193    -0.154%    -0.161%    40.7%    -4.48
+
+  trigger hit rate: 26.3% of setups (1,193 entries)
+
+====================================================================================
+  4. IS THE PREMISE BACKWARDS? — the mirror condition
+     (dev <= -0.796%, i.e. stretched ABOVE VWAP, RSI >= 60)
+====================================================================================
+  condition                                n       mean     median    win%        t
+  mirror, +1 bars                      5,079    -0.009%    -0.025%    45.0%    -1.48
+  mirror, +2 bars                      5,079    -0.010%    -0.039%    44.8%    -1.24
+  mirror, +4 bars                      5,079    -0.003%    -0.039%    46.3%    -0.25
+  mirror, +8 bars                      5,026    +0.055%    -0.026%    47.9%    +3.52
+  mirror, +eod bars                    5,079    +0.131%    +0.000%    49.1%    +6.43
+
+  A SHORT of the mirror earns the negative of these numbers.
+  If longs below VWAP lose and shorts above VWAP also lose, the
+  signal is noise. If one wins, there is a direction worth having.
+
+====================================================================================
+  5. HOW THE EDGE MOVES WITH THE DEVIATION THRESHOLD
+     (does being MORE stretched help at all? 2-hour horizon)
+====================================================================================
+  condition                                n       mean     median    win%        t
+  dev 0.2-0.4%, RSI<=40               12,386    +0.006%    -0.008%    48.7%    +1.06
+  dev 0.4-0.6%, RSI<=40                8,421    -0.002%    -0.026%    47.2%    -0.22
+  dev 0.6-0.8%, RSI<=40                4,368    -0.019%    -0.044%    46.6%    -1.75
+  dev 0.8-1.2%, RSI<=40                3,281    -0.091%    -0.092%    42.8%    -6.46
+  dev 1.2-2.0%, RSI<=40                  953    -0.059%    -0.029%    47.4%    -1.93
+  dev 2.0-100.0%, RSI<=40                178    -0.221%    -0.246%    40.4%    -1.93
+
+====================================================================================
+  6. AND WITH RSI (dev at the live floor, 2-hour horizon)
+====================================================================================
+  condition                                n       mean     median    win%        t
+  RSI 0-20                               525    -0.105%    -0.130%    43.0%    -2.21
+  RSI 20-25                              748    -0.077%    -0.066%    44.9%    -2.32
+  RSI 25-30                              970    -0.070%    -0.073%    44.7%    -2.52
+  RSI 30-35                            1,058    -0.103%    -0.073%    43.4%    -4.19
+  RSI 35-40                            1,165    -0.086%    -0.099%    42.9%    -3.57
+  RSI 40-50                            1,845    -0.080%    -0.090%    44.0%    -3.93
+
+====================================================================================
+  7. VERDICT
+====================================================================================
+  Best horizon for the live setup: +1 bars
+  mean forward return +0.0060% over 4,536 occurrences, t=+1.20
+  round-trip cost      0.0955%
+  net of cost          -0.0895%
+
+  >> There IS a drift, but it is smaller than the cost of capturing
+     it. This is a real edge that cannot be monetised at retail
+     friction - and note this number is an upper bound, since it
+     ignores the stop that would have ended many of these early.
