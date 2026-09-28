@@ -1289,3 +1289,7 @@
 2026-09-28 15:08:55 | INFO    | __main__ | Scan | 2026-09-28 15:08 IST
 2026-09-28 15:09:12 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
 2026-09-28 15:09:12 | INFO    | __main__ | EOD: {'equity': 1000000.0, 'cash': 1000000, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 0, 'win_rate_pct': 0.0, 'profit_factor': None, 'total_friction': 0, 'total_pnl': 0.0, 'return_pct': 0.0}
+2026-09-28 15:15:51 | INFO    | __main__ | ================================================================
+2026-09-28 15:15:51 | INFO    | __main__ | Scan | 2026-09-28 15:15 IST
+2026-09-28 15:16:06 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-09-28 15:16:06 | INFO    | __main__ | EOD: {'equity': 1000000.0, 'cash': 1000000, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 0, 'win_rate_pct': 0.0, 'profit_factor': None, 'total_friction': 0, 'total_pnl': 0.0, 'return_pct': 0.0}
