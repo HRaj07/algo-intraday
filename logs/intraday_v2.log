@@ -1460,3 +1460,19 @@
 2026-09-29 12:31:44 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
 2026-09-29 12:31:44 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SUNTV.NS: already holding this name
 2026-09-29 12:31:44 | INFO    | __main__ | equity Rs999,711 | open 1 | pending 0 | closed 0 | WR 0.0% | PF None | friction Rs0
+2026-09-29 12:45:50 | INFO    | __main__ | ================================================================
+2026-09-29 12:45:50 | INFO    | __main__ | Scan | 2026-09-29 12:45 IST
+2026-09-29 12:46:32 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-09-29 12:46:32 | INFO    | engine.paper_trader_v2 | EXIT SUNTV.NS 444@Rs539.5 | P&L Rs+146 (+0.04R) | friction Rs276 | t1_vwap
+2026-09-29 12:46:32 | INFO    | engine.paper_trader_v2 | T1 SUNTV.NS - half out at VWAP, stop to Rs540.52 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-09-29 12:46:33 | INFO    | __main__ | SIZING: 0.400% of equity (Rs4,001 risk per trade)
+2026-09-29 12:46:33 | INFO    | __main__ |   base 0.40%
+2026-09-29 12:46:33 | INFO    | __main__ |   performance x1.0: n=1, too few trades to infer anything - base size
+2026-09-29 12:46:33 | INFO    | __main__ |   drawdown    x1.0: at high-water mark
+2026-09-29 12:46:33 | INFO    | __main__ | strategy: MOM-v3
+2026-09-29 12:46:33 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-09-29 12:46:33 | INFO    | engine.paper_trader_v2 | ORDER SUNTV.NS market buy at next open (ref Rs539.0, SL 1.653%, RSI 73.3, rvol 5.03)
+2026-09-29 12:46:33 | INFO    | engine.paper_trader_v2 | ORDER WELCORP.NS market buy at next open (ref Rs2833.0, SL 1.684%, RSI 70.7, rvol 2.19)
+2026-09-29 12:46:33 | INFO    | engine.paper_trader_v2 | FILLED SUNTV.NS @ Rs539.2000122070312 | qty=224 notional=Rs120,781 friction=Rs163
+2026-09-29 12:46:33 | INFO    | engine.paper_trader_v2 | FILLED WELCORP.NS @ Rs2834.199951171875 | qty=41 notional=Rs116,202 friction=Rs158
+2026-09-29 12:46:34 | INFO    | __main__ | equity Rs1,000,191 | open 2 | pending 0 | closed 1 | WR 100.0% | PF None | friction Rs276
