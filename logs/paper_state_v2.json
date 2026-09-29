@@ -1,48 +1,8 @@
 {
-  "cash": 952749.3621293397,
+  "cash": 910947.4537928768,
   "initial_capital": 1000000,
-  "equity_peak": 1001135.8560746522,
+  "equity_peak": 1001251.5223963924,
   "positions": {
-    "SUNTV.NS": {
-      "ticker": "SUNTV.NS",
-      "direction": "LONG",
-      "entry_price": 539.2000122070312,
-      "qty": 224,
-      "qty_open": 224,
-      "stop_loss": 536.5,
-      "initial_stop": 536.5,
-      "t1": 541.9,
-      "t2": null,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 8.91,
-      "atr": 4.45,
-      "margin": 24156.160546875002,
-      "entry_cost": 43.819431062550784,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-09-29 12:45:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 73.3,
-      "entry_deviation_pct": 2.147,
-      "entry_atr_pct": 0.826,
-      "entry_rvol": 5.03,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 1.7,
-      "entry_stop_pct": 1.653,
-      "nifty_at_entry": 22663.75,
-      "mfe_price": 542.6500244140625,
-      "mae_price": 539.2000122070312
-    },
     "WELCORP.NS": {
       "ticker": "WELCORP.NS",
       "direction": "LONG",
@@ -51,7 +11,7 @@
       "qty_open": 41,
       "stop_loss": 2820.0,
       "initial_stop": 2820.0,
-      "t1": 2848.37,
+      "t1": 2856.87,
       "t2": null,
       "t1_fraction": 1.0,
       "exit_cfg": {
@@ -67,7 +27,7 @@
       "atr": 23.85,
       "margin": 23240.439599609377,
       "entry_cost": 43.052945158061036,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-29 12:45:50 IST",
@@ -80,23 +40,63 @@
       "entry_turnover_cr": 15.37,
       "entry_stop_pct": 1.684,
       "nifty_at_entry": 22663.75,
-      "mfe_price": 2845.0,
+      "mfe_price": 2845.5,
       "mae_price": 2834.199951171875
+    },
+    "SUNTV.NS": {
+      "ticker": "SUNTV.NS",
+      "direction": "LONG",
+      "entry_price": 543.6500244140625,
+      "qty": 614,
+      "qty_open": 614,
+      "stop_loss": 537.13,
+      "initial_stop": 537.13,
+      "t1": 550.63,
+      "t2": 557.16,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 6.52,
+      "atr": 4.42,
+      "margin": 66760.22299804688,
+      "entry_cost": 79.48030945605518,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-09-29 13:15:50 IST",
+      "predicted_rr": null,
+      "entry_rsi": 77.3,
+      "entry_deviation_pct": 2.358,
+      "entry_atr_pct": 0.812,
+      "entry_rvol": 6.41,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 1.85,
+      "entry_stop_pct": 1.2,
+      "nifty_at_entry": 22676.900390625,
+      "mfe_price": 543.6500244140625,
+      "mae_price": 543.6500244140625
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "SUNTV.NS": {
-      "close": 542.0999755859375,
-      "high": 542.6500244140625,
-      "low": 542.0,
-      "as_of": "2026-09-29T13:01:07.458033+05:30"
+      "close": 543.6500244140625,
+      "high": 544.0,
+      "low": 543.25,
+      "as_of": "2026-09-29T13:15:50.644102+05:30"
     },
     "WELCORP.NS": {
-      "close": 2842.5,
-      "high": 2845.0,
-      "low": 2840.800048828125,
-      "as_of": "2026-09-29T13:01:07.458033+05:30"
+      "close": 2841.60009765625,
+      "high": 2845.5,
+      "low": 2841.199951171875,
+      "as_of": "2026-09-29T13:15:50.644102+05:30"
     }
   },
   "trade_history": [
@@ -120,20 +120,41 @@
       "entry_rvol": 5.56,
       "entry_turnover_cr": 1.41,
       "entry_stop_pct": 1.67
+    },
+    {
+      "ticker": "SUNTV.NS",
+      "direction": "LONG",
+      "entry_price": 539.2000122070312,
+      "exit_price": 543.51,
+      "qty": 224,
+      "pnl": 802.15,
+      "R_multiple": 0.4,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 163.28,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-09-29 12:45:50 IST",
+      "exit_time": "2026-09-29 13:15:50 IST",
+      "entry_rsi": 73.3,
+      "entry_deviation_pct": 2.147,
+      "entry_atr_pct": 0.826,
+      "entry_rvol": 5.03,
+      "entry_turnover_cr": 1.7,
+      "entry_stop_pct": 1.653
     }
   ],
   "daily_entry_count": {
-    "2026-09-29": 3
+    "2026-09-29": 4
   },
-  "total_pnl": 145.96227582400243,
+  "total_pnl": 948.1163905330096,
   "last_sizing_decision": {
-    "base_pct": 0.002,
+    "base_pct": 0.004,
     "performance_scalar": 1.0,
-    "performance_reason": "n=1, too few trades to infer anything - base size",
+    "performance_reason": "n=2, too few trades to infer anything - base size",
     "drawdown_scalar": 1.0,
     "drawdown_reason": "at high-water mark",
-    "raw_pct": 0.002,
-    "final_pct": 0.002,
+    "raw_pct": 0.004,
+    "final_pct": 0.004,
     "clamped": false
   }
 }
