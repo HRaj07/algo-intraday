@@ -400,7 +400,7 @@ MOMENTUM_STRICT = {
     "min_rsi": 75,
     "min_dev_above_vwap": 0.012,
     "min_rvol": 4.0,
-    "stop_pct_floor": 0.012,
+    "stop_pct_floor": 0.005,
 }
 
 MOMENTUM = {
@@ -439,8 +439,8 @@ MOMENTUM = {
     # less friction for the same rupee risk. Momentum wants that trade-off:
     # median adverse excursion before the close was -0.76%, so anything much
     # tighter than 1.2% is stopped out by ordinary noise.
-    "stop_atr_mult": 2.0,
-    "stop_pct_floor": 0.012,
+    "stop_atr_mult": 1.0,
+    "stop_pct_floor": 0.005,
     "stop_pct_cap": 0.025,
 
     # --- exits ---

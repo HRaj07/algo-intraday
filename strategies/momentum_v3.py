@@ -224,7 +224,7 @@ class MomentumV3:
         ref = close
         stop = ref * (1 - stop_pct)
         R = ref - stop
-        t1 = ref + (1.5 * R)
+        t1 = ref + (1.0 * R)
         t2 = ref + (2.0 * R)
 
         return {
