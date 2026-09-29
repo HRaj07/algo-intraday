@@ -1534,3 +1534,17 @@
 2026-09-29 13:46:20 | INFO    | __main__ | strategy: MOM-v3
 2026-09-29 13:46:20 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
 2026-09-29 13:46:20 | INFO    | __main__ | equity Rs1,000,204 | open 2 | pending 0 | closed 2 | WR 100.0% | PF None | friction Rs439
+2026-09-29 14:01:04 | INFO    | __main__ | ================================================================
+2026-09-29 14:01:04 | INFO    | __main__ | Scan | 2026-09-29 14:01 IST
+2026-09-29 14:01:33 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-09-29 14:01:33 | INFO    | engine.paper_trader_v2 | EXIT WELCORP.NS 41@Rs2868.21 | P&L Rs+1,235 (+0.63R) | friction Rs159 | t1_vwap
+2026-09-29 14:01:33 | INFO    | engine.paper_trader_v2 | T1 WELCORP.NS - half out at VWAP, stop to Rs2845.22 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-09-29 14:01:33 | INFO    | engine.paper_trader_v2 | EXIT SUNTV.NS 614@Rs546.91 | P&L Rs+1,634 (+0.41R) | friction Rs367 | t1_vwap
+2026-09-29 14:01:33 | INFO    | engine.paper_trader_v2 | T1 SUNTV.NS - half out at VWAP, stop to Rs545.22 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-09-29 14:01:33 | INFO    | __main__ | SIZING: 0.400% of equity (Rs4,015 risk per trade)
+2026-09-29 14:01:33 | INFO    | __main__ |   base 0.40%
+2026-09-29 14:01:33 | INFO    | __main__ |   performance x1.0: n=4, too few trades to infer anything - base size
+2026-09-29 14:01:33 | INFO    | __main__ |   drawdown    x1.0: at high-water mark
+2026-09-29 14:01:33 | INFO    | __main__ | strategy: MOM-v3
+2026-09-29 14:01:33 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-09-29 14:01:34 | INFO    | __main__ | equity Rs1,003,817 | open 0 | pending 0 | closed 4 | WR 100.0% | PF None | friction Rs966
