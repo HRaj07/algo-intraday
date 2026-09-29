@@ -3,6 +3,6 @@
     "min_rsi": 70,
     "min_dev_above_vwap": 0.008,
     "min_rvol": 2.0,
-    "stop_pct_floor": 0.006
+    "stop_pct_floor": 0.008
   }
 }
