@@ -49,9 +49,9 @@
       "entry_price": 543.6500244140625,
       "qty": 614,
       "qty_open": 614,
-      "stop_loss": 537.13,
-      "initial_stop": 537.13,
-      "t1": 550.17,
+      "stop_loss": 540.93,
+      "initial_stop": 540.93,
+      "t1": 546.37,
       "t2": 557.16,
       "t1_fraction": 1.0,
       "exit_cfg": {
