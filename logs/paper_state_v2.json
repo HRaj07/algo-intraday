@@ -16,7 +16,7 @@
       "t1_fraction": 1.0,
       "exit_cfg": {
         "hold_to_square_off": true,
-        "use_target": false,
+        "use_target": true,
         "use_breakeven_trail": false,
         "use_time_stop": false,
         "thesis_exits": true
@@ -56,7 +56,7 @@
       "t1_fraction": 1.0,
       "exit_cfg": {
         "hold_to_square_off": true,
-        "use_target": false,
+        "use_target": true,
         "use_breakeven_trail": false,
         "use_time_stop": false,
         "thesis_exits": true
