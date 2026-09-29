@@ -393,14 +393,23 @@ STRATEGY["min_vwap_deviation"] = _min_deviation_for_cost_hurdle(
 # overfit number available. These come from where the monotone gradients above
 # turn positive and hold across all three months - the same values would have
 # been chosen from any of the three months alone.
+# Backup of the strict settings that originally produced zero trades during flat/bearish days.
+# Kept here so we can revert if the less strict settings don't work.
+MOMENTUM_STRICT = {
+    "min_rsi": 75,
+    "min_dev_above_vwap": 0.012,
+    "min_rvol": 4.0,
+    "stop_pct_floor": 0.012,
+}
+
 MOMENTUM = {
     "rsi_period": 14,
     "atr_period": 14,
 
     # --- signal ---
-    "min_rsi": 75,                  # the top RSI bucket; 70-75 was +0.017% net
-    "min_dev_above_vwap": 0.012,    # 1.2%; the 0.8-1.2% band netted exactly 0.000%
-    "min_rvol": 4.0,                # THIS BAR's volume vs the name's 50-bar median
+    "min_rsi": 70,                  # relaxed from 75 to generate more signals
+    "min_dev_above_vwap": 0.008,    # relaxed from 1.2% to 0.8%
+    "min_rvol": 2.0,                # relaxed from 4.0 to 2.0x
 
     # NOT the cumulative-day RVOL that FILTERS uses. The measurement that
     # supports this number used bar-level volume, and the two are different

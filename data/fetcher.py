@@ -41,7 +41,7 @@ class IntradayFetcher:
                 raw = yf.download(
                     batch, period=f"{days_back}d", interval="15m",
                     auto_adjust=True, progress=False, group_by="ticker",
-                    threads=True,
+                    threads=False,
                 )
             except Exception as e:
                 logger.warning(f"batch {i // self.BATCH_SIZE} failed: {e}")
