@@ -27,7 +27,7 @@
       "atr": 23.85,
       "margin": 23240.439599609377,
       "entry_cost": 43.052945158061036,
-      "bars_held": 3,
+      "bars_held": 4,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-29 12:45:50 IST",
@@ -40,7 +40,7 @@
       "entry_turnover_cr": 15.37,
       "entry_stop_pct": 1.684,
       "nifty_at_entry": 22663.75,
-      "mfe_price": 2845.5,
+      "mfe_price": 2865.89990234375,
       "mae_price": 2834.199951171875
     },
     "SUNTV.NS": {
@@ -67,7 +67,7 @@
       "atr": 4.42,
       "margin": 66760.22299804688,
       "entry_cost": 79.48030945605518,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-29 13:15:50 IST",
@@ -81,22 +81,22 @@
       "entry_stop_pct": 1.2,
       "nifty_at_entry": 22676.900390625,
       "mfe_price": 543.6500244140625,
-      "mae_price": 541.2999877929688
+      "mae_price": 540.7000122070312
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "SUNTV.NS": {
-      "close": 541.2999877929688,
+      "close": 541.0,
       "high": 542.25,
-      "low": 541.2999877929688,
-      "as_of": "2026-09-29T13:31:31.038743+05:30"
+      "low": 540.7000122070312,
+      "as_of": "2026-09-29T13:39:04.256578+05:30"
     },
     "WELCORP.NS": {
-      "close": 2844.89990234375,
-      "high": 2845.0,
+      "close": 2865.89990234375,
+      "high": 2865.89990234375,
       "low": 2843.199951171875,
-      "as_of": "2026-09-29T13:31:31.038743+05:30"
+      "as_of": "2026-09-29T13:39:04.256578+05:30"
     }
   },
   "trade_history": [
