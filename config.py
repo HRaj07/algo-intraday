@@ -62,7 +62,7 @@ SYSTEM = {
 RISK = {
     # Risk per trade as a FRACTION of current equity, not a fixed rupee amount.
     # Fixed rupee risk means you keep betting Rs2,000 all the way down.
-    "risk_pct_per_trade": 0.002,        # 0.2% (lowered from 0.4% to reduce margin/risk)
+    "risk_pct_per_trade": 0.004,        # 0.4% = Rs2,000 at Rs5L, and it shrinks
 
                                         # automatically as equity falls.
 
@@ -457,7 +457,7 @@ MOMENTUM = {
     # The cost is a 43% win rate and trades that give back open profit. That is
     # the shape of the distribution, not a flaw to be engineered away.
     "hold_to_square_off": True,
-    "use_target": False,
+    "use_target": True,
     "use_breakeven_trail": False,
     "use_time_stop": False,
 

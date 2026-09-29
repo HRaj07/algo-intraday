@@ -223,6 +223,9 @@ class MomentumV3:
         # for the record, and the trader recomputes the stop from the real fill.
         ref = close
         stop = ref * (1 - stop_pct)
+        R = ref - stop
+        t1 = ref + (1.5 * R)
+        t2 = ref + (2.0 * R)
 
         return {
             "ticker": ticker,
@@ -231,6 +234,9 @@ class MomentumV3:
             "reference_price": round(ref, 2),
             "stop_pct": round(stop_pct * 100, 3),
             "stop_loss": round(stop, 2),
+            "t1": round(t1, 2),
+            "t2": round(t2, 2),
+            "t1_fraction": 1.0,                          # Exit 100% at T1 for now
             "valid_bars": 1,                             # fill next bar or drop it
             "atr": round(atr, 2),
             "strategy": self.name,
