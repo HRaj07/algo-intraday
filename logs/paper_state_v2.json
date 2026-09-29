@@ -11,12 +11,12 @@
       "qty_open": 444,
       "stop_loss": 529.56,
       "initial_stop": 529.56,
-      "t1": null,
-      "t2": null,
-      "t1_fraction": 0.5,
+      "t1": 539.5,
+      "t2": 539.5,
+      "t1_fraction": 1.0,
       "exit_cfg": {
         "hold_to_square_off": true,
-        "use_target": false,
+        "use_target": true,
         "use_breakeven_trail": false,
         "use_time_stop": false,
         "thesis_exits": true
