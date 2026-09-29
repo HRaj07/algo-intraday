@@ -27,7 +27,7 @@
       "atr": 4.5,
       "margin": 47823.23891601563,
       "entry_cost": 63.62948566987256,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-29 12:15:50 IST",
@@ -41,11 +41,18 @@
       "entry_stop_pct": 1.67,
       "nifty_at_entry": 22734.650390625,
       "mfe_price": 538.5499877929688,
-      "mae_price": 538.5499877929688
+      "mae_price": 537.25
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "SUNTV.NS": {
+      "close": 537.9000244140625,
+      "high": 538.2999877929688,
+      "low": 537.25,
+      "as_of": "2026-09-29T12:31:18.563495+05:30"
+    }
+  },
   "trade_history": [],
   "daily_entry_count": {
     "2026-09-29": 1

@@ -1449,3 +1449,14 @@
 2026-09-29 12:16:20 | INFO    | engine.paper_trader_v2 | ORDER SUNTV.NS market buy at next open (ref Rs538.55, SL 1.67%, RSI 73.2, rvol 5.56)
 2026-09-29 12:16:20 | INFO    | engine.paper_trader_v2 | FILLED SUNTV.NS @ Rs538.5499877929688 | qty=444 notional=Rs239,116 friction=Rs276
 2026-09-29 12:16:20 | INFO    | __main__ | equity Rs1,000,000 | open 1 | pending 0 | closed 0 | WR 0.0% | PF None | friction Rs0
+2026-09-29 12:31:18 | INFO    | __main__ | ================================================================
+2026-09-29 12:31:18 | INFO    | __main__ | Scan | 2026-09-29 12:31 IST
+2026-09-29 12:31:43 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-09-29 12:31:44 | INFO    | __main__ | SIZING: 0.400% of equity (Rs3,999 risk per trade)
+2026-09-29 12:31:44 | INFO    | __main__ |   base 0.40%
+2026-09-29 12:31:44 | INFO    | __main__ |   performance x1.0: n=0, too few trades to infer anything - base size
+2026-09-29 12:31:44 | INFO    | __main__ |   drawdown    x1.0: drawdown 0.0% - within normal range
+2026-09-29 12:31:44 | INFO    | __main__ | strategy: MOM-v3
+2026-09-29 12:31:44 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-09-29 12:31:44 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SUNTV.NS: already holding this name
+2026-09-29 12:31:44 | INFO    | __main__ | equity Rs999,711 | open 1 | pending 0 | closed 0 | WR 0.0% | PF None | friction Rs0
