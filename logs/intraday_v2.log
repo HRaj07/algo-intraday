@@ -1524,3 +1524,13 @@
 2026-09-29 13:39:47 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
 2026-09-29 13:39:47 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SUNTV.NS: already holding this name
 2026-09-29 13:39:47 | INFO    | __main__ | equity Rs1,000,621 | open 2 | pending 0 | closed 2 | WR 100.0% | PF None | friction Rs439
+2026-09-29 13:45:51 | INFO    | __main__ | ================================================================
+2026-09-29 13:45:51 | INFO    | __main__ | Scan | 2026-09-29 13:45 IST
+2026-09-29 13:46:19 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-09-29 13:46:20 | INFO    | __main__ | SIZING: 0.400% of equity (Rs4,001 risk per trade)
+2026-09-29 13:46:20 | INFO    | __main__ |   base 0.40%
+2026-09-29 13:46:20 | INFO    | __main__ |   performance x1.0: n=2, too few trades to infer anything - base size
+2026-09-29 13:46:20 | INFO    | __main__ |   drawdown    x1.0: drawdown 0.1% - within normal range
+2026-09-29 13:46:20 | INFO    | __main__ | strategy: MOM-v3
+2026-09-29 13:46:20 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-09-29 13:46:20 | INFO    | __main__ | equity Rs1,000,204 | open 2 | pending 0 | closed 2 | WR 100.0% | PF None | friction Rs439
