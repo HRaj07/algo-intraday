@@ -4,20 +4,7 @@
   "equity_peak": 1003817.4107790516,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "SUNTV.NS": {
-      "close": 546.4500122070312,
-      "high": 546.9500122070312,
-      "low": 546.4500122070312,
-      "as_of": "2026-09-29T14:01:04.608442+05:30"
-    },
-    "WELCORP.NS": {
-      "close": 2868.39990234375,
-      "high": 2870.89990234375,
-      "low": 2867.39990234375,
-      "as_of": "2026-09-29T14:01:04.608442+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
