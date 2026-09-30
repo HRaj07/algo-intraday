@@ -27,7 +27,7 @@
       "atr": 11.21,
       "margin": 66973.5,
       "entry_cost": 79.658828705,
-      "bars_held": 3,
+      "bars_held": 4,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-30 11:15:50 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 1.2,
       "nifty_at_entry": 22673.69921875,
       "mfe_price": 1131.699951171875,
-      "mae_price": 1122.4000244140625
+      "mae_price": 1122.0
     },
     "SYRMA.NS": {
       "ticker": "SYRMA.NS",
@@ -67,7 +67,7 @@
       "atr": 11.73,
       "margin": 66788.82092285156,
       "entry_cost": 79.50424677705445,
-      "bars_held": 3,
+      "bars_held": 4,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-30 11:15:50 IST",
@@ -80,23 +80,23 @@
       "entry_turnover_cr": 7.25,
       "entry_stop_pct": 1.2,
       "nifty_at_entry": 22673.69921875,
-      "mfe_price": 1769.0999755859375,
+      "mfe_price": 1771.0,
       "mae_price": 1764.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "SYRMA.NS": {
-      "close": 1768.300048828125,
-      "high": 1768.699951171875,
-      "low": 1766.699951171875,
-      "as_of": "2026-09-30T12:01:07.344420+05:30"
+      "close": 1769.300048828125,
+      "high": 1771.0,
+      "low": 1769.0,
+      "as_of": "2026-09-30T12:15:56.870792+05:30"
     },
     "CYIENT.NS": {
-      "close": 1126.9000244140625,
-      "high": 1126.9000244140625,
-      "low": 1125.699951171875,
-      "as_of": "2026-09-30T12:01:07.344420+05:30"
+      "close": 1122.0,
+      "high": 1123.300048828125,
+      "low": 1122.0,
+      "as_of": "2026-09-30T12:15:56.870792+05:30"
     }
   },
   "trade_history": [
