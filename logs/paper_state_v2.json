@@ -1,56 +1,15 @@
 {
-  "cash": 938940.010407405,
+  "cash": 1009385.3030208829,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "SYRMA.NS": {
-      "ticker": "SYRMA.NS",
-      "direction": "LONG",
-      "entry_price": 1766.9000244140625,
-      "qty": 189,
-      "qty_open": 189,
-      "stop_loss": 1745.7,
-      "initial_stop": 1745.7,
-      "t1": 1788.2,
-      "t2": 1809.41,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 21.2,
-      "atr": 11.73,
-      "margin": 66788.82092285156,
-      "entry_cost": 79.50424677705445,
-      "bars_held": 8,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-09-30 11:15:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 74.5,
-      "entry_deviation_pct": 1.495,
-      "entry_atr_pct": 0.664,
-      "entry_rvol": 2.93,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 7.25,
-      "entry_stop_pct": 1.2,
-      "nifty_at_entry": 22673.69921875,
-      "mfe_price": 1788.0,
-      "mae_price": 1764.5
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "SYRMA.NS": {
-      "close": 1787.5,
-      "high": 1788.0,
-      "low": 1787.0,
-      "as_of": "2026-09-30T13:15:50.302665+05:30"
+      "close": 1799.5999755859375,
+      "high": 1799.5999755859375,
+      "low": 1795.0,
+      "as_of": "2026-09-30T13:31:15.102009+05:30"
     }
   },
   "trade_history": [
@@ -242,13 +201,34 @@
       "entry_rvol": 17.49,
       "entry_turnover_cr": 1.5,
       "entry_stop_pct": 1.2
+    },
+    {
+      "ticker": "SYRMA.NS",
+      "direction": "LONG",
+      "entry_price": 1766.9000244140625,
+      "exit_price": 1788.2,
+      "qty": 189,
+      "pnl": 3656.47,
+      "R_multiple": 0.91,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 369.22,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-09-30 11:15:50 IST",
+      "exit_time": "2026-09-30 13:31:15 IST",
+      "entry_rsi": 74.5,
+      "entry_deviation_pct": 1.495,
+      "entry_atr_pct": 0.664,
+      "entry_rvol": 2.93,
+      "entry_turnover_cr": 7.25,
+      "entry_stop_pct": 1.2
     }
   ],
   "daily_entry_count": {
     "2026-09-29": 4,
     "2026-09-30": 6
   },
-  "total_pnl": 5728.831330256276,
+  "total_pnl": 9385.303020882617,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 1.0,

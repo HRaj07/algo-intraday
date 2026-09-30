@@ -1841,3 +1841,17 @@
 2026-09-30 13:16:21 | INFO    | engine.paper_trader_v2 | ORDER REJECTED IGL.NS: at max entries per day (5)
 2026-09-30 13:16:21 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SYRMA.NS: already holding this name
 2026-09-30 13:16:21 | INFO    | __main__ | equity Rs1,009,622 | open 1 | pending 0 | closed 9 | WR 77.8% | PF 1.79 | friction Rs2,761
+2026-09-30 13:31:15 | INFO    | __main__ | ================================================================
+2026-09-30 13:31:15 | INFO    | __main__ | Scan | 2026-09-30 13:31 IST
+2026-09-30 13:31:57 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-09-30 13:31:57 | INFO    | engine.paper_trader_v2 | EXIT SYRMA.NS 189@Rs1788.2 | P&L Rs+3,656 (+0.91R) | friction Rs369 | t1_vwap
+2026-09-30 13:31:57 | INFO    | engine.paper_trader_v2 | T1 SYRMA.NS - half out at VWAP, stop to Rs1772.02 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-09-30 13:31:57 | INFO    | __main__ | SIZING: 0.480% of equity (Rs4,845 risk per trade)
+2026-09-30 13:31:57 | INFO    | __main__ |   base 0.40%
+2026-09-30 13:31:57 | INFO    | __main__ |   performance x1.2: n=10, observed expectancy shrunk to +0.152R vs prior +0.125R -> adding (1.20x)
+2026-09-30 13:31:57 | INFO    | __main__ |   drawdown    x1.0: drawdown 0.0% - within normal range
+2026-09-30 13:31:57 | INFO    | __main__ | strategy: MOM-v3
+2026-09-30 13:31:57 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-09-30 13:31:58 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SUNTV.NS: at max entries per day (5)
+2026-09-30 13:31:58 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SYRMA.NS: at max entries per day (5)
+2026-09-30 13:31:58 | INFO    | __main__ | equity Rs1,009,385 | open 0 | pending 0 | closed 10 | WR 80.0% | PF 2.29 | friction Rs3,131
