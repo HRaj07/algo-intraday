@@ -1739,3 +1739,18 @@
 2026-09-30 11:16:24 | INFO    | engine.paper_trader_v2 | FILLED CYIENT.NS @ Rs1127.5 | qty=297 notional=Rs334,868 friction=Rs367
 2026-09-30 11:16:24 | INFO    | engine.paper_trader_v2 | FILLED SYRMA.NS @ Rs1766.9000244140625 | qty=189 notional=Rs333,944 friction=Rs366
 2026-09-30 11:16:25 | INFO    | __main__ | equity Rs1,006,005 | open 4 | pending 0 | closed 6 | WR 83.3% | PF 1.55 | friction Rs1,698
+2026-09-30 11:31:15 | INFO    | __main__ | ================================================================
+2026-09-30 11:31:15 | INFO    | __main__ | Scan | 2026-09-30 11:31 IST
+2026-09-30 11:31:43 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-09-30 11:31:43 | INFO    | engine.paper_trader_v2 | EXIT SUNTV.NS 486@Rs607.6 | P&L Rs+3,025 (+0.75R) | friction Rs329 | t1_vwap
+2026-09-30 11:31:43 | INFO    | engine.paper_trader_v2 | T1 SUNTV.NS - half out at VWAP, stop to Rs602.61 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-09-30 11:31:43 | INFO    | __main__ | SIZING: 0.400% of equity (Rs4,023 risk per trade)
+2026-09-30 11:31:43 | INFO    | __main__ |   base 0.40%
+2026-09-30 11:31:43 | INFO    | __main__ |   performance x1.0: n=7, too few trades to infer anything - base size
+2026-09-30 11:31:43 | INFO    | __main__ |   drawdown    x1.0: drawdown 0.1% - within normal range
+2026-09-30 11:31:43 | INFO    | __main__ | strategy: MOM-v3
+2026-09-30 11:31:43 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-09-30 11:31:45 | INFO    | engine.paper_trader_v2 | ORDER REJECTED CYIENT.NS: already holding this name
+2026-09-30 11:31:45 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SUNTV.NS: at max concurrent positions (3)
+2026-09-30 11:31:45 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SYRMA.NS: already holding this name
+2026-09-30 11:31:45 | INFO    | __main__ | equity Rs1,005,663 | open 3 | pending 0 | closed 7 | WR 85.7% | PF 2.26 | friction Rs2,027
