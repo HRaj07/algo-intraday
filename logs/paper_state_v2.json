@@ -1,7 +1,7 @@
 {
   "cash": 811698.6069521473,
   "initial_capital": 1000000,
-  "equity_peak": 1003817.4107790516,
+  "equity_peak": 1006767.2882662342,
   "positions": {
     "SUNTV.NS": {
       "ticker": "SUNTV.NS",
@@ -27,7 +27,7 @@
       "atr": 8.26,
       "margin": 58388.04118652344,
       "entry_cost": 72.47254211435572,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-30 10:15:54 IST",
@@ -40,7 +40,7 @@
       "entry_turnover_cr": 2.87,
       "entry_stop_pct": 1.375,
       "nifty_at_entry": 22757.30078125,
-      "mfe_price": 600.7000122070312,
+      "mfe_price": 607.0,
       "mae_price": 600.7000122070312
     },
     "CUB.NS": {
@@ -67,7 +67,7 @@
       "atr": 1.36,
       "margin": 66878.88184204102,
       "entry_cost": 79.5796304682436,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-30 10:15:54 IST",
@@ -80,7 +80,7 @@
       "entry_turnover_cr": 1.51,
       "entry_stop_pct": 1.2,
       "nifty_at_entry": 22757.30078125,
-      "mfe_price": 221.60000610351562,
+      "mfe_price": 222.39999389648438,
       "mae_price": 221.60000610351562
     },
     "INFY.NS": {
@@ -107,7 +107,7 @@
       "atr": 6.35,
       "margin": 66851.88079833984,
       "entry_cost": 79.55702978463441,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-30 10:15:54 IST",
@@ -121,11 +121,30 @@
       "entry_stop_pct": 1.2,
       "nifty_at_entry": 22757.30078125,
       "mfe_price": 1022.2000122070312,
-      "mae_price": 1022.2000122070312
+      "mae_price": 1021.5999755859375
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "INFY.NS": {
+      "close": 1021.5999755859375,
+      "high": 1022.0999755859375,
+      "low": 1021.5999755859375,
+      "as_of": "2026-09-30T10:31:14.815669+05:30"
+    },
+    "CUB.NS": {
+      "close": 222.3000030517578,
+      "high": 222.39999389648438,
+      "low": 221.75999450683594,
+      "as_of": "2026-09-30T10:31:14.815669+05:30"
+    },
+    "SUNTV.NS": {
+      "close": 605.0,
+      "high": 607.0,
+      "low": 605.0,
+      "as_of": "2026-09-30T10:31:14.815669+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
