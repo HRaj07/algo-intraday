@@ -1754,3 +1754,17 @@
 2026-09-30 11:31:45 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SUNTV.NS: at max concurrent positions (3)
 2026-09-30 11:31:45 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SYRMA.NS: already holding this name
 2026-09-30 11:31:45 | INFO    | __main__ | equity Rs1,005,663 | open 3 | pending 0 | closed 7 | WR 85.7% | PF 2.26 | friction Rs2,027
+2026-09-30 11:45:53 | INFO    | __main__ | ================================================================
+2026-09-30 11:45:53 | INFO    | __main__ | Scan | 2026-09-30 11:45 IST
+2026-09-30 11:46:25 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-09-30 11:46:25 | INFO    | engine.paper_trader_v2 | EXIT CUB.NS 1487@Rs227.66 | P&L Rs+3,437 (+0.86R) | friction Rs370 | t1_vwap
+2026-09-30 11:46:25 | INFO    | engine.paper_trader_v2 | T1 CUB.NS - half out at VWAP, stop to Rs225.75 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-09-30 11:46:26 | INFO    | __main__ | SIZING: 0.400% of equity (Rs4,030 risk per trade)
+2026-09-30 11:46:26 | INFO    | __main__ |   base 0.40%
+2026-09-30 11:46:26 | INFO    | __main__ |   performance x1.0: n=8, too few trades to infer anything - base size
+2026-09-30 11:46:26 | INFO    | __main__ |   drawdown    x1.0: at high-water mark
+2026-09-30 11:46:26 | INFO    | __main__ | strategy: MOM-v3
+2026-09-30 11:46:26 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-09-30 11:46:27 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SUNTV.NS: at max entries per day (5)
+2026-09-30 11:46:27 | INFO    | engine.paper_trader_v2 | ORDER REJECTED CUB.NS: max 2 entries per day for CUB.NS
+2026-09-30 11:46:27 | INFO    | __main__ | equity Rs1,007,592 | open 2 | pending 0 | closed 8 | WR 87.5% | PF 3.08 | friction Rs2,396

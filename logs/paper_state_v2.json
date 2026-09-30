@@ -1,48 +1,8 @@
 {
-  "cash": 804622.6840804511,
+  "cash": 875004.3411785769,
   "initial_capital": 1000000,
-  "equity_peak": 1007011.7615008677,
+  "equity_peak": 1007592.1555096316,
   "positions": {
-    "CUB.NS": {
-      "ticker": "CUB.NS",
-      "direction": "LONG",
-      "entry_price": 225.10000610351562,
-      "qty": 1487,
-      "qty_open": 1487,
-      "stop_loss": 222.4,
-      "initial_stop": 222.4,
-      "t1": 227.66,
-      "t2": 230.36,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.7,
-      "atr": 1.55,
-      "margin": 66944.74181518555,
-      "entry_cost": 79.63475724156476,
-      "bars_held": 3,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-09-30 10:45:53 IST",
-      "predicted_rr": null,
-      "entry_rsi": 81.9,
-      "entry_deviation_pct": 1.808,
-      "entry_atr_pct": 0.688,
-      "entry_rvol": 6.3,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 1.51,
-      "entry_stop_pct": 1.2,
-      "nifty_at_entry": 22701.349609375,
-      "mfe_price": 227.3300018310547,
-      "mae_price": 225.10000610351562
-    },
     "CYIENT.NS": {
       "ticker": "CYIENT.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 11.21,
       "margin": 66973.5,
       "entry_cost": 79.658828705,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-30 11:15:50 IST",
@@ -81,7 +41,7 @@
       "entry_stop_pct": 1.2,
       "nifty_at_entry": 22673.69921875,
       "mfe_price": 1131.699951171875,
-      "mae_price": 1124.5999755859375
+      "mae_price": 1122.4000244140625
     },
     "SYRMA.NS": {
       "ticker": "SYRMA.NS",
@@ -107,7 +67,7 @@
       "atr": 11.73,
       "margin": 66788.82092285156,
       "entry_cost": 79.50424677705445,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-30 11:15:50 IST",
@@ -120,35 +80,29 @@
       "entry_turnover_cr": 7.25,
       "entry_stop_pct": 1.2,
       "nifty_at_entry": 22673.69921875,
-      "mfe_price": 1766.9000244140625,
+      "mfe_price": 1769.0999755859375,
       "mae_price": 1764.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "CUB.NS": {
-      "close": 225.77999877929688,
-      "high": 226.72000122070312,
-      "low": 225.77999877929688,
-      "as_of": "2026-09-30T11:31:15.054754+05:30"
-    },
-    "SUNTV.NS": {
-      "close": 605.9500122070312,
-      "high": 608.6500244140625,
-      "low": 605.9500122070312,
-      "as_of": "2026-09-30T11:31:15.054754+05:30"
+      "close": 227.8000030517578,
+      "high": 227.99000549316406,
+      "low": 227.3000030517578,
+      "as_of": "2026-09-30T11:45:53.812904+05:30"
     },
     "SYRMA.NS": {
-      "close": 1766.300048828125,
-      "high": 1766.300048828125,
-      "low": 1764.5,
-      "as_of": "2026-09-30T11:31:15.054754+05:30"
+      "close": 1768.699951171875,
+      "high": 1769.0999755859375,
+      "low": 1767.199951171875,
+      "as_of": "2026-09-30T11:45:53.812904+05:30"
     },
     "CYIENT.NS": {
-      "close": 1125.5999755859375,
-      "high": 1131.699951171875,
-      "low": 1124.5999755859375,
-      "as_of": "2026-09-30T11:31:15.054754+05:30"
+      "close": 1122.4000244140625,
+      "high": 1124.800048828125,
+      "low": 1122.4000244140625,
+      "as_of": "2026-09-30T11:45:53.812904+05:30"
     }
   },
   "trade_history": [
@@ -298,13 +252,34 @@
       "entry_rvol": 33.07,
       "entry_turnover_cr": 2.87,
       "entry_stop_pct": 1.375
+    },
+    {
+      "ticker": "CUB.NS",
+      "direction": "LONG",
+      "entry_price": 225.10000610351562,
+      "exit_price": 227.66,
+      "qty": 1487,
+      "pnl": 3436.92,
+      "R_multiple": 0.86,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 369.8,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-09-30 10:45:53 IST",
+      "exit_time": "2026-09-30 11:45:53 IST",
+      "entry_rsi": 81.9,
+      "entry_deviation_pct": 1.808,
+      "entry_atr_pct": 0.688,
+      "entry_rvol": 6.3,
+      "entry_turnover_cr": 1.51,
+      "entry_stop_pct": 1.2
     }
   ],
   "daily_entry_count": {
     "2026-09-29": 4,
     "2026-09-30": 6
   },
-  "total_pnl": 5329.746818488099,
+  "total_pnl": 8766.662101428275,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 1.0,
