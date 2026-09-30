@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "SYRMA.NS": {
-      "close": 1799.5999755859375,
-      "high": 1799.5999755859375,
-      "low": 1795.0,
-      "as_of": "2026-09-30T13:31:15.102009+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
