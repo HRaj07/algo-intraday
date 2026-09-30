@@ -27,7 +27,7 @@
       "atr": 11.73,
       "margin": 66788.82092285156,
       "entry_cost": 79.50424677705445,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-30 11:15:50 IST",
@@ -40,23 +40,17 @@
       "entry_turnover_cr": 7.25,
       "entry_stop_pct": 1.2,
       "nifty_at_entry": 22673.69921875,
-      "mfe_price": 1776.5999755859375,
+      "mfe_price": 1778.5,
       "mae_price": 1764.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "SYRMA.NS": {
-      "close": 1776.0999755859375,
-      "high": 1776.5999755859375,
-      "low": 1774.9000244140625,
-      "as_of": "2026-09-30T12:31:18.533798+05:30"
-    },
-    "CYIENT.NS": {
-      "close": 1118.5,
-      "high": 1118.5,
-      "low": 1114.800048828125,
-      "as_of": "2026-09-30T12:31:18.533798+05:30"
+      "close": 1778.300048828125,
+      "high": 1778.5,
+      "low": 1774.4000244140625,
+      "as_of": "2026-09-30T12:45:51.281936+05:30"
     }
   },
   "trade_history": [
