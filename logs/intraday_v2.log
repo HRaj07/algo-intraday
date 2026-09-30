@@ -1828,3 +1828,16 @@
 2026-09-30 13:02:04 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
 2026-09-30 13:02:05 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SUNTV.NS: at max entries per day (5)
 2026-09-30 13:02:05 | INFO    | __main__ | equity Rs1,009,055 | open 1 | pending 0 | closed 9 | WR 77.8% | PF 1.79 | friction Rs2,761
+2026-09-30 13:15:50 | INFO    | __main__ | ================================================================
+2026-09-30 13:15:50 | INFO    | __main__ | Scan | 2026-09-30 13:15 IST
+2026-09-30 13:16:20 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-09-30 13:16:20 | INFO    | __main__ | SIZING: 0.400% of equity (Rs4,038 risk per trade)
+2026-09-30 13:16:20 | INFO    | __main__ |   base 0.40%
+2026-09-30 13:16:20 | INFO    | __main__ |   performance x1.0: n=9, too few trades to infer anything - base size
+2026-09-30 13:16:20 | INFO    | __main__ |   drawdown    x1.0: at high-water mark
+2026-09-30 13:16:20 | INFO    | __main__ | strategy: MOM-v3
+2026-09-30 13:16:20 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-09-30 13:16:21 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SUNTV.NS: at max entries per day (5)
+2026-09-30 13:16:21 | INFO    | engine.paper_trader_v2 | ORDER REJECTED IGL.NS: at max entries per day (5)
+2026-09-30 13:16:21 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SYRMA.NS: already holding this name
+2026-09-30 13:16:21 | INFO    | __main__ | equity Rs1,009,622 | open 1 | pending 0 | closed 9 | WR 77.8% | PF 1.79 | friction Rs2,761
