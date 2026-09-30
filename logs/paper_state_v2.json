@@ -1,48 +1,8 @@
 {
-  "cash": 875004.3411785769,
+  "cash": 938940.010407405,
   "initial_capital": 1000000,
   "equity_peak": 1008853.0739666629,
   "positions": {
-    "CYIENT.NS": {
-      "ticker": "CYIENT.NS",
-      "direction": "LONG",
-      "entry_price": 1127.5,
-      "qty": 297,
-      "qty_open": 297,
-      "stop_loss": 1113.97,
-      "initial_stop": 1113.97,
-      "t1": 1141.13,
-      "t2": 1154.66,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 13.53,
-      "atr": 11.21,
-      "margin": 66973.5,
-      "entry_cost": 79.658828705,
-      "bars_held": 4,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-09-30 11:15:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 75.6,
-      "entry_deviation_pct": 1.034,
-      "entry_atr_pct": 0.994,
-      "entry_rvol": 17.49,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 1.5,
-      "entry_stop_pct": 1.2,
-      "nifty_at_entry": 22673.69921875,
-      "mfe_price": 1131.699951171875,
-      "mae_price": 1122.0
-    },
     "SYRMA.NS": {
       "ticker": "SYRMA.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 11.73,
       "margin": 66788.82092285156,
       "entry_cost": 79.50424677705445,
-      "bars_held": 4,
+      "bars_held": 5,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-30 11:15:50 IST",
@@ -80,23 +40,23 @@
       "entry_turnover_cr": 7.25,
       "entry_stop_pct": 1.2,
       "nifty_at_entry": 22673.69921875,
-      "mfe_price": 1771.0,
+      "mfe_price": 1776.5999755859375,
       "mae_price": 1764.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "SYRMA.NS": {
-      "close": 1769.300048828125,
-      "high": 1771.0,
-      "low": 1769.0,
-      "as_of": "2026-09-30T12:15:56.870792+05:30"
+      "close": 1776.0999755859375,
+      "high": 1776.5999755859375,
+      "low": 1774.9000244140625,
+      "as_of": "2026-09-30T12:31:18.533798+05:30"
     },
     "CYIENT.NS": {
-      "close": 1122.0,
-      "high": 1123.300048828125,
-      "low": 1122.0,
-      "as_of": "2026-09-30T12:15:56.870792+05:30"
+      "close": 1118.5,
+      "high": 1118.5,
+      "low": 1114.800048828125,
+      "as_of": "2026-09-30T12:31:18.533798+05:30"
     }
   },
   "trade_history": [
@@ -267,13 +227,34 @@
       "entry_rvol": 6.3,
       "entry_turnover_cr": 1.51,
       "entry_stop_pct": 1.2
+    },
+    {
+      "ticker": "CYIENT.NS",
+      "direction": "LONG",
+      "entry_price": 1127.5,
+      "exit_price": 1118.5,
+      "qty": 297,
+      "pnl": -3037.83,
+      "R_multiple": -0.76,
+      "reason": "vwap_reclaim",
+      "partial": false,
+      "friction": 364.83,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-09-30 11:15:50 IST",
+      "exit_time": "2026-09-30 12:31:18 IST",
+      "entry_rsi": 75.6,
+      "entry_deviation_pct": 1.034,
+      "entry_atr_pct": 0.994,
+      "entry_rvol": 17.49,
+      "entry_turnover_cr": 1.5,
+      "entry_stop_pct": 1.2
     }
   ],
   "daily_entry_count": {
     "2026-09-29": 4,
     "2026-09-30": 6
   },
-  "total_pnl": 8766.662101428275,
+  "total_pnl": 5728.831330256276,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 1.0,
