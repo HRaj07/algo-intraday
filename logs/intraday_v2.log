@@ -1721,3 +1721,21 @@
 2026-09-30 11:01:31 | INFO    | engine.paper_trader_v2 | ORDER REJECTED CUB.NS: already holding this name
 2026-09-30 11:01:31 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SUNTV.NS: already holding this name
 2026-09-30 11:01:31 | INFO    | __main__ | equity Rs1,007,012 | open 3 | pending 0 | closed 5 | WR 100.0% | PF None | friction Rs1,335
+2026-09-30 11:15:50 | INFO    | __main__ | ================================================================
+2026-09-30 11:15:50 | INFO    | __main__ | Scan | 2026-09-30 11:15 IST
+2026-09-30 11:16:23 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-09-30 11:16:23 | INFO    | engine.paper_trader_v2 | THESIS EXIT INFY.NS - vwap_reclaim at ~Rs1010.40
+2026-09-30 11:16:23 | INFO    | engine.paper_trader_v2 | EXIT INFY.NS 327@Rs1010.4000244140625 | P&L Rs-4,222 (-1.05R) | friction Rs363 | vwap_reclaim
+2026-09-30 11:16:23 | INFO    | __main__ | SIZING: 0.400% of equity (Rs4,024 risk per trade)
+2026-09-30 11:16:23 | INFO    | __main__ |   base 0.40%
+2026-09-30 11:16:23 | INFO    | __main__ |   performance x1.0: n=6, too few trades to infer anything - base size
+2026-09-30 11:16:23 | INFO    | __main__ |   drawdown    x1.0: drawdown 0.1% - within normal range
+2026-09-30 11:16:23 | INFO    | __main__ | strategy: MOM-v3
+2026-09-30 11:16:23 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-09-30 11:16:24 | INFO    | engine.paper_trader_v2 | ORDER CYIENT.NS market buy at next open (ref Rs1127.6, SL 1.2%, RSI 75.6, rvol 17.49)
+2026-09-30 11:16:24 | INFO    | engine.paper_trader_v2 | ORDER REJECTED CUB.NS: already holding this name
+2026-09-30 11:16:24 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SUNTV.NS: already holding this name
+2026-09-30 11:16:24 | INFO    | engine.paper_trader_v2 | ORDER SYRMA.NS market buy at next open (ref Rs1767.0, SL 1.2%, RSI 74.5, rvol 2.93)
+2026-09-30 11:16:24 | INFO    | engine.paper_trader_v2 | FILLED CYIENT.NS @ Rs1127.5 | qty=297 notional=Rs334,868 friction=Rs367
+2026-09-30 11:16:24 | INFO    | engine.paper_trader_v2 | FILLED SYRMA.NS @ Rs1766.9000244140625 | qty=189 notional=Rs333,944 friction=Rs366
+2026-09-30 11:16:25 | INFO    | __main__ | equity Rs1,006,005 | open 4 | pending 0 | closed 6 | WR 83.3% | PF 1.55 | friction Rs1,698
