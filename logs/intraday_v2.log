@@ -1692,3 +1692,19 @@
 2026-09-30 10:31:43 | INFO    | engine.paper_trader_v2 | ORDER REJECTED TATATECH.NS: at max concurrent positions (3)
 2026-09-30 10:31:43 | INFO    | engine.paper_trader_v2 | ORDER REJECTED CUB.NS: already holding this name
 2026-09-30 10:31:43 | INFO    | __main__ | equity Rs1,006,767 | open 3 | pending 0 | closed 4 | WR 100.0% | PF None | friction Rs966
+2026-09-30 10:45:53 | INFO    | __main__ | ================================================================
+2026-09-30 10:45:53 | INFO    | __main__ | Scan | 2026-09-30 10:45 IST
+2026-09-30 10:46:25 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-09-30 10:46:25 | INFO    | engine.paper_trader_v2 | EXIT CUB.NS 1509@Rs223.64 | P&L Rs+2,709 (+0.68R) | friction Rs369 | t1_vwap
+2026-09-30 10:46:25 | INFO    | engine.paper_trader_v2 | T1 CUB.NS - half out at VWAP, stop to Rs222.24 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-09-30 10:46:26 | INFO    | __main__ | SIZING: 0.400% of equity (Rs4,015 risk per trade)
+2026-09-30 10:46:26 | INFO    | __main__ |   base 0.40%
+2026-09-30 10:46:26 | INFO    | __main__ |   performance x1.0: n=5, too few trades to infer anything - base size
+2026-09-30 10:46:26 | INFO    | __main__ |   drawdown    x1.0: drawdown 0.3% - within normal range
+2026-09-30 10:46:26 | INFO    | __main__ | strategy: MOM-v3
+2026-09-30 10:46:26 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-09-30 10:46:27 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SUNTV.NS: already holding this name
+2026-09-30 10:46:27 | INFO    | engine.paper_trader_v2 | ORDER REJECTED CYIENT.NS: already hold 1 position(s) in IT
+2026-09-30 10:46:27 | INFO    | engine.paper_trader_v2 | ORDER CUB.NS market buy at next open (ref Rs224.96, SL 1.2%, RSI 81.9, rvol 6.3)
+2026-09-30 10:46:27 | INFO    | engine.paper_trader_v2 | FILLED CUB.NS @ Rs225.10000610351562 | qty=1487 notional=Rs334,724 friction=Rs367
+2026-09-30 10:46:27 | INFO    | __main__ | equity Rs1,003,273 | open 3 | pending 0 | closed 5 | WR 100.0% | PF None | friction Rs1,335

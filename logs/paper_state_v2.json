@@ -1,5 +1,5 @@
 {
-  "cash": 811698.6069521473,
+  "cash": 814342.190062269,
   "initial_capital": 1000000,
   "equity_peak": 1006767.2882662342,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 8.26,
       "margin": 58388.04118652344,
       "entry_cost": 72.47254211435572,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-30 10:15:54 IST",
@@ -41,47 +41,7 @@
       "entry_stop_pct": 1.375,
       "nifty_at_entry": 22757.30078125,
       "mfe_price": 607.0,
-      "mae_price": 600.7000122070312
-    },
-    "CUB.NS": {
-      "ticker": "CUB.NS",
-      "direction": "LONG",
-      "entry_price": 221.60000610351562,
-      "qty": 1509,
-      "qty_open": 1509,
-      "stop_loss": 218.94,
-      "initial_stop": 218.94,
-      "t1": 223.64,
-      "t2": 226.29,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.66,
-      "atr": 1.36,
-      "margin": 66878.88184204102,
-      "entry_cost": 79.5796304682436,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-09-30 10:15:54 IST",
-      "predicted_rr": null,
-      "entry_rsi": 74.2,
-      "entry_deviation_pct": 1.301,
-      "entry_atr_pct": 0.613,
-      "entry_rvol": 2.26,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 1.51,
-      "entry_stop_pct": 1.2,
-      "nifty_at_entry": 22757.30078125,
-      "mfe_price": 222.39999389648438,
-      "mae_price": 221.60000610351562
+      "mae_price": 597.5999755859375
     },
     "INFY.NS": {
       "ticker": "INFY.NS",
@@ -107,7 +67,7 @@
       "atr": 6.35,
       "margin": 66851.88079833984,
       "entry_cost": 79.55702978463441,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-09-30 10:15:54 IST",
@@ -121,28 +81,68 @@
       "entry_stop_pct": 1.2,
       "nifty_at_entry": 22757.30078125,
       "mfe_price": 1022.2000122070312,
-      "mae_price": 1021.5999755859375
+      "mae_price": 1016.5
+    },
+    "CUB.NS": {
+      "ticker": "CUB.NS",
+      "direction": "LONG",
+      "entry_price": 225.10000610351562,
+      "qty": 1487,
+      "qty_open": 1487,
+      "stop_loss": 222.4,
+      "initial_stop": 222.4,
+      "t1": 227.66,
+      "t2": 230.36,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 2.7,
+      "atr": 1.55,
+      "margin": 66944.74181518555,
+      "entry_cost": 79.63475724156476,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-09-30 10:45:53 IST",
+      "predicted_rr": null,
+      "entry_rsi": 81.9,
+      "entry_deviation_pct": 1.808,
+      "entry_atr_pct": 0.688,
+      "entry_rvol": 6.3,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 1.51,
+      "entry_stop_pct": 1.2,
+      "nifty_at_entry": 22701.349609375,
+      "mfe_price": 225.10000610351562,
+      "mae_price": 225.10000610351562
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "INFY.NS": {
-      "close": 1021.5999755859375,
-      "high": 1022.0999755859375,
-      "low": 1021.5999755859375,
-      "as_of": "2026-09-30T10:31:14.815669+05:30"
+      "close": 1016.5,
+      "high": 1017.4000244140625,
+      "low": 1016.5,
+      "as_of": "2026-09-30T10:45:53.381056+05:30"
     },
     "CUB.NS": {
-      "close": 222.3000030517578,
-      "high": 222.39999389648438,
-      "low": 221.75999450683594,
-      "as_of": "2026-09-30T10:31:14.815669+05:30"
+      "close": 224.77000427246094,
+      "high": 225.10000610351562,
+      "low": 224.63999938964844,
+      "as_of": "2026-09-30T10:45:53.381056+05:30"
     },
     "SUNTV.NS": {
-      "close": 605.0,
-      "high": 607.0,
-      "low": 605.0,
-      "as_of": "2026-09-30T10:31:14.815669+05:30"
+      "close": 598.8499755859375,
+      "high": 599.4000244140625,
+      "low": 597.5999755859375,
+      "as_of": "2026-09-30T10:45:53.381056+05:30"
     }
   },
   "trade_history": [
@@ -229,19 +229,40 @@
       "entry_rvol": 6.41,
       "entry_turnover_cr": 1.85,
       "entry_stop_pct": 1.2
+    },
+    {
+      "ticker": "CUB.NS",
+      "direction": "LONG",
+      "entry_price": 221.60000610351562,
+      "exit_price": 223.64,
+      "qty": 1509,
+      "pnl": 2709.44,
+      "R_multiple": 0.68,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 368.91,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-09-30 10:15:54 IST",
+      "exit_time": "2026-09-30 10:45:53 IST",
+      "entry_rsi": 74.2,
+      "entry_deviation_pct": 1.301,
+      "entry_atr_pct": 0.613,
+      "entry_rvol": 2.26,
+      "entry_turnover_cr": 1.51,
+      "entry_stop_pct": 1.2
     }
   ],
   "daily_entry_count": {
     "2026-09-29": 4,
-    "2026-09-30": 3
+    "2026-09-30": 4
   },
-  "total_pnl": 3817.4107790515254,
+  "total_pnl": 6526.853862317623,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 1.0,
-    "performance_reason": "n=4, too few trades to infer anything - base size",
+    "performance_reason": "n=5, too few trades to infer anything - base size",
     "drawdown_scalar": 1.0,
-    "drawdown_reason": "at high-water mark",
+    "drawdown_reason": "drawdown 0.3% - within normal range",
     "raw_pct": 0.004,
     "final_pct": 0.004,
     "clamped": false
