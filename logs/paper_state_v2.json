@@ -27,7 +27,7 @@
       "atr": 1.25,
       "margin": 64345.60634155274,
       "entry_cost": 77.4592028760699,
-      "bars_held": 4,
+      "bars_held": 5,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-01 13:01:19 IST",
@@ -41,16 +41,16 @@
       "entry_stop_pct": 1.2,
       "nifty_at_entry": 22336.900390625,
       "mfe_price": 231.58999633789062,
-      "mae_price": 229.97000122070312
+      "mae_price": 229.6999969482422
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "CUB.NS": {
-      "close": 231.5,
-      "high": 231.58999633789062,
-      "low": 231.5,
-      "as_of": "2026-10-01T14:01:53.204248+05:30"
+      "close": 229.6999969482422,
+      "high": 229.6999969482422,
+      "low": 229.6999969482422,
+      "as_of": "2026-10-01T14:15:51.523739+05:30"
     }
   },
   "trade_history": [
