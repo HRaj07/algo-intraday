@@ -1,18 +1,18 @@
 {
-  "cash": 928710.9407528165,
+  "cash": 933274.4071252281,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "KOTAKBANK.NS": {
-      "ticker": "KOTAKBANK.NS",
+    "HDFCLIFE.NS": {
+      "ticker": "HDFCLIFE.NS",
       "direction": "LONG",
-      "entry_price": 434.20001220703125,
-      "qty": 929,
-      "qty_open": 929,
-      "stop_loss": 428.99,
-      "initial_stop": 428.99,
-      "t1": 439.46,
-      "t2": 444.67,
+      "entry_price": 533.7999877929688,
+      "qty": 668,
+      "qty_open": 668,
+      "stop_loss": 527.39,
+      "initial_stop": 527.39,
+      "t1": 540.1,
+      "t2": 546.51,
       "t1_fraction": 1.0,
       "exit_cfg": {
         "hold_to_square_off": true,
@@ -23,29 +23,36 @@
       },
       "t1_done": false,
       "trailed": false,
-      "risk_per_share": 5.21,
-      "atr": 2.74,
-      "margin": 80674.36226806641,
-      "entry_cost": 91.12686144923961,
+      "risk_per_share": 6.41,
+      "atr": 2.87,
+      "margin": 71315.67836914063,
+      "entry_cost": 83.29336226532178,
       "bars_held": 0,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
-      "entry_time": "2026-10-01 10:45:58 IST",
+      "entry_time": "2026-10-01 11:01:02 IST",
       "predicted_rr": null,
-      "entry_rsi": 81.1,
-      "entry_deviation_pct": 0.975,
-      "entry_atr_pct": 0.632,
-      "entry_rvol": 4.93,
+      "entry_rsi": 79.0,
+      "entry_deviation_pct": 1.026,
+      "entry_atr_pct": 0.537,
+      "entry_rvol": 2.87,
       "entry_gap_pct": null,
-      "entry_turnover_cr": 36.87,
+      "entry_turnover_cr": 6.46,
       "entry_stop_pct": 1.2,
-      "nifty_at_entry": 22562.94921875,
-      "mfe_price": 434.20001220703125,
-      "mae_price": 434.20001220703125
+      "nifty_at_entry": 22555.94921875,
+      "mfe_price": 533.7999877929688,
+      "mae_price": 533.7999877929688
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "KOTAKBANK.NS": {
+      "close": 429.5,
+      "high": 429.70001220703125,
+      "low": 429.3500061035156,
+      "as_of": "2026-10-01T11:01:02.536008+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -256,22 +263,43 @@
       "entry_rvol": 2.93,
       "entry_turnover_cr": 7.25,
       "entry_stop_pct": 1.2
+    },
+    {
+      "ticker": "KOTAKBANK.NS",
+      "direction": "LONG",
+      "entry_price": 434.20001220703125,
+      "exit_price": 429.5,
+      "qty": 929,
+      "pnl": -4795.22,
+      "R_multiple": -0.99,
+      "reason": "vwap_reclaim",
+      "partial": false,
+      "friction": 428.91,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-01 10:45:58 IST",
+      "exit_time": "2026-10-01 11:01:02 IST",
+      "entry_rsi": 81.1,
+      "entry_deviation_pct": 0.975,
+      "entry_atr_pct": 0.632,
+      "entry_rvol": 4.93,
+      "entry_turnover_cr": 36.87,
+      "entry_stop_pct": 1.2
     }
   ],
   "daily_entry_count": {
     "2026-09-29": 4,
     "2026-09-30": 6,
-    "2026-10-01": 1
+    "2026-10-01": 2
   },
-  "total_pnl": 9385.303020882617,
+  "total_pnl": 4590.085494368346,
   "last_sizing_decision": {
     "base_pct": 0.004,
-    "performance_scalar": 1.2,
-    "performance_reason": "n=10, observed expectancy shrunk to +0.152R vs prior +0.125R -> adding (1.20x)",
+    "performance_scalar": 1.066,
+    "performance_reason": "n=11, observed expectancy shrunk to +0.133R vs prior +0.125R -> adding (1.07x)",
     "drawdown_scalar": 1.0,
-    "drawdown_reason": "drawdown 0.0% - within normal range",
-    "raw_pct": 0.0048,
-    "final_pct": 0.0048,
+    "drawdown_reason": "drawdown 0.5% - within normal range",
+    "raw_pct": 0.00426,
+    "final_pct": 0.00426,
     "clamped": false
   }
 }

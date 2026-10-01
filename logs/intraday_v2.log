@@ -2021,3 +2021,17 @@
 2026-10-01 10:46:39 | INFO    | engine.paper_trader_v2 | ORDER KOTAKBANK.NS market buy at next open (ref Rs434.25, SL 1.2%, RSI 81.1, rvol 4.93)
 2026-10-01 10:46:39 | INFO    | engine.paper_trader_v2 | FILLED KOTAKBANK.NS @ Rs434.20001220703125 | qty=929 notional=Rs403,372 friction=Rs432
 2026-10-01 10:46:39 | INFO    | __main__ | equity Rs1,009,385 | open 1 | pending 0 | closed 10 | WR 80.0% | PF 2.29 | friction Rs3,131
+2026-10-01 11:01:02 | INFO    | __main__ | ================================================================
+2026-10-01 11:01:02 | INFO    | __main__ | Scan | 2026-10-01 11:01 IST
+2026-10-01 11:01:27 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-01 11:01:28 | INFO    | engine.paper_trader_v2 | THESIS EXIT KOTAKBANK.NS - vwap_reclaim at ~Rs429.50
+2026-10-01 11:01:28 | INFO    | engine.paper_trader_v2 | EXIT KOTAKBANK.NS 929@Rs429.5 | P&L Rs-4,795 (-0.99R) | friction Rs429 | vwap_reclaim
+2026-10-01 11:01:28 | INFO    | __main__ | SIZING: 0.426% of equity (Rs4,284 risk per trade)
+2026-10-01 11:01:28 | INFO    | __main__ |   base 0.40%
+2026-10-01 11:01:28 | INFO    | __main__ |   performance x1.066: n=11, observed expectancy shrunk to +0.133R vs prior +0.125R -> adding (1.07x)
+2026-10-01 11:01:28 | INFO    | __main__ |   drawdown    x1.0: drawdown 0.5% - within normal range
+2026-10-01 11:01:28 | INFO    | __main__ | strategy: MOM-v3
+2026-10-01 11:01:28 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-10-01 11:01:29 | INFO    | engine.paper_trader_v2 | ORDER HDFCLIFE.NS market buy at next open (ref Rs533.7, SL 1.2%, RSI 79.0, rvol 2.87)
+2026-10-01 11:01:29 | INFO    | engine.paper_trader_v2 | FILLED HDFCLIFE.NS @ Rs533.7999877929688 | qty=668 notional=Rs356,578 friction=Rs388
+2026-10-01 11:01:29 | INFO    | __main__ | equity Rs1,004,590 | open 1 | pending 0 | closed 11 | WR 72.7% | PF 1.38 | friction Rs3,559
