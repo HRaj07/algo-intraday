@@ -2206,3 +2206,6 @@
 2026-10-01 15:16:39 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
 2026-10-01 15:16:39 | INFO    | engine.paper_trader_v2 | EXIT CUB.NS 1399@Rs229.05999755859375 | P&L Rs-1,626 (-0.42R) | friction Rs353 | square_off
 2026-10-01 15:16:39 | INFO    | __main__ | EOD: {'equity': 1000139.68, 'cash': 1000139.68, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 13, 'win_rate_pct': 61.5, 'profit_factor': 1.01, 'total_friction': 4298.58, 'total_pnl': 139.68, 'return_pct': 0.01}
+2026-10-01 15:31:02 | INFO    | __main__ | ================================================================
+2026-10-01 15:31:02 | INFO    | __main__ | Scan | 2026-10-01 15:31 IST
+2026-10-01 15:31:02 | INFO    | __main__ | outside NSE hours
