@@ -2075,3 +2075,15 @@
 2026-10-01 12:01:40 | INFO    | __main__ | strategy: MOM-v3
 2026-10-01 12:01:40 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
 2026-10-01 12:01:41 | INFO    | __main__ | equity Rs1,005,191 | open 1 | pending 0 | closed 11 | WR 72.7% | PF 1.38 | friction Rs3,559
+2026-10-01 12:15:48 | INFO    | __main__ | ================================================================
+2026-10-01 12:15:48 | INFO    | __main__ | Scan | 2026-10-01 12:15 IST
+2026-10-01 12:16:13 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-01 12:16:13 | INFO    | engine.paper_trader_v2 | THESIS EXIT HDFCLIFE.NS - vwap_reclaim at ~Rs530.15
+2026-10-01 12:16:13 | INFO    | engine.paper_trader_v2 | EXIT HDFCLIFE.NS 668@Rs530.1500244140625 | P&L Rs-2,824 (-0.66R) | friction Rs386 | vwap_reclaim
+2026-10-01 12:16:13 | INFO    | __main__ | SIZING: 0.386% of equity (Rs3,862 risk per trade)
+2026-10-01 12:16:13 | INFO    | __main__ |   base 0.40%
+2026-10-01 12:16:13 | INFO    | __main__ |   performance x0.964: n=12, observed expectancy shrunk to +0.120R vs prior +0.125R -> trimming (0.96x)
+2026-10-01 12:16:13 | INFO    | __main__ |   drawdown    x1.0: drawdown 0.8% - within normal range
+2026-10-01 12:16:13 | INFO    | __main__ | strategy: MOM-v3
+2026-10-01 12:16:13 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-10-01 12:16:14 | INFO    | __main__ | equity Rs1,001,766 | open 0 | pending 0 | closed 12 | WR 66.7% | PF 1.12 | friction Rs3,945
