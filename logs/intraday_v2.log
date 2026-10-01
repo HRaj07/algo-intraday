@@ -2151,3 +2151,13 @@
 2026-10-01 13:46:29 | INFO    | __main__ | strategy: MOM-v3
 2026-10-01 13:46:29 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
 2026-10-01 13:46:29 | INFO    | __main__ | equity Rs1,003,585 | open 1 | pending 0 | closed 12 | WR 66.7% | PF 1.12 | friction Rs3,945
+2026-10-01 14:01:53 | INFO    | __main__ | ================================================================
+2026-10-01 14:01:53 | INFO    | __main__ | Scan | 2026-10-01 14:01 IST
+2026-10-01 14:02:21 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-01 14:02:21 | INFO    | __main__ | SIZING: 0.386% of equity (Rs3,871 risk per trade)
+2026-10-01 14:02:21 | INFO    | __main__ |   base 0.40%
+2026-10-01 14:02:21 | INFO    | __main__ |   performance x0.964: n=12, observed expectancy shrunk to +0.120R vs prior +0.125R -> trimming (0.96x)
+2026-10-01 14:02:21 | INFO    | __main__ |   drawdown    x1.0: drawdown 0.6% - within normal range
+2026-10-01 14:02:21 | INFO    | __main__ | strategy: MOM-v3
+2026-10-01 14:02:21 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-10-01 14:02:21 | INFO    | __main__ | equity Rs1,003,907 | open 1 | pending 0 | closed 12 | WR 66.7% | PF 1.12 | friction Rs3,945
