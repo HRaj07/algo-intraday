@@ -27,7 +27,7 @@
       "atr": 2.87,
       "margin": 71315.67836914063,
       "entry_cost": 83.29336226532178,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-01 11:01:02 IST",
@@ -41,16 +41,16 @@
       "entry_stop_pct": 1.2,
       "nifty_at_entry": 22555.94921875,
       "mfe_price": 533.7999877929688,
-      "mae_price": 533.3499755859375
+      "mae_price": 531.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "HDFCLIFE.NS": {
-      "close": 533.5499877929688,
-      "high": 533.75,
-      "low": 533.3499755859375,
-      "as_of": "2026-10-01T11:15:54.014582+05:30"
+      "close": 531.5,
+      "high": 532.0,
+      "low": 531.5,
+      "as_of": "2026-10-01T11:31:24.551642+05:30"
     }
   },
   "trade_history": [
