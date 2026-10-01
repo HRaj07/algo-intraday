@@ -2201,3 +2201,8 @@
 2026-10-01 15:01:39 | INFO    | __main__ | strategy: MOM-v3
 2026-10-01 15:01:39 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
 2026-10-01 15:01:39 | INFO    | __main__ | equity Rs1,003,515 | open 1 | pending 0 | closed 12 | WR 66.7% | PF 1.12 | friction Rs3,945
+2026-10-01 15:15:56 | INFO    | __main__ | ================================================================
+2026-10-01 15:15:56 | INFO    | __main__ | Scan | 2026-10-01 15:15 IST
+2026-10-01 15:16:39 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-01 15:16:39 | INFO    | engine.paper_trader_v2 | EXIT CUB.NS 1399@Rs229.05999755859375 | P&L Rs-1,626 (-0.42R) | friction Rs353 | square_off
+2026-10-01 15:16:39 | INFO    | __main__ | EOD: {'equity': 1000139.68, 'cash': 1000139.68, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 13, 'win_rate_pct': 61.5, 'profit_factor': 1.01, 'total_friction': 4298.58, 'total_pnl': 139.68, 'return_pct': 0.01}

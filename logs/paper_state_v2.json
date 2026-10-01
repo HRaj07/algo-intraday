@@ -1,56 +1,15 @@
 {
-  "cash": 937420.5581222787,
+  "cash": 1000139.6819978681,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "CUB.NS": {
-      "ticker": "CUB.NS",
-      "direction": "LONG",
-      "entry_price": 229.97000122070312,
-      "qty": 1399,
-      "qty_open": 1399,
-      "stop_loss": 227.21,
-      "initial_stop": 227.21,
-      "t1": 232.77,
-      "t2": 235.53,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.76,
-      "atr": 1.25,
-      "margin": 64345.60634155274,
-      "entry_cost": 77.4592028760699,
-      "bars_held": 8,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-01 13:01:19 IST",
-      "predicted_rr": null,
-      "entry_rsi": 72.9,
-      "entry_deviation_pct": 1.062,
-      "entry_atr_pct": 0.545,
-      "entry_rvol": 6.52,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 2.78,
-      "entry_stop_pct": 1.2,
-      "nifty_at_entry": 22336.900390625,
-      "mfe_price": 231.58999633789062,
-      "mae_price": 229.60000610351562
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "CUB.NS": {
-      "close": 231.22000122070312,
-      "high": 231.4199981689453,
-      "low": 231.10000610351562,
-      "as_of": "2026-10-01T15:01:08.133240+05:30"
+      "close": 229.05999755859375,
+      "high": 229.16000366210938,
+      "low": 228.8300018310547,
+      "as_of": "2026-10-01T15:15:56.311446+05:30"
     }
   },
   "trade_history": [
@@ -305,6 +264,27 @@
       "entry_rvol": 2.87,
       "entry_turnover_cr": 6.46,
       "entry_stop_pct": 1.2
+    },
+    {
+      "ticker": "CUB.NS",
+      "direction": "LONG",
+      "entry_price": 229.97000122070312,
+      "exit_price": 229.06,
+      "qty": 1399,
+      "pnl": -1626.48,
+      "R_multiple": -0.42,
+      "reason": "square_off",
+      "partial": false,
+      "friction": 353.39,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-01 13:01:19 IST",
+      "exit_time": "2026-10-01 15:15:56 IST",
+      "entry_rsi": 72.9,
+      "entry_deviation_pct": 1.062,
+      "entry_atr_pct": 0.545,
+      "entry_rvol": 6.52,
+      "entry_turnover_cr": 2.78,
+      "entry_stop_pct": 1.2
     }
   ],
   "daily_entry_count": {
@@ -312,7 +292,7 @@
     "2026-09-30": 6,
     "2026-10-01": 3
   },
-  "total_pnl": 1766.164463830965,
+  "total_pnl": 139.68199786764626,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.964,
