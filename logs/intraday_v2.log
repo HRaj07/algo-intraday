@@ -1958,3 +1958,14 @@
 2026-10-01 09:16:53 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
 2026-10-01 09:16:53 | INFO    | strategies.momentum_v3 | REGIME GATE CLOSED: insufficient index bars - no entries this scan
 2026-10-01 09:16:53 | INFO    | __main__ | equity Rs1,009,385 | open 0 | pending 0 | closed 10 | WR 80.0% | PF 2.29 | friction Rs3,131
+2026-10-01 09:31:16 | INFO    | __main__ | ================================================================
+2026-10-01 09:31:16 | INFO    | __main__ | Scan | 2026-10-01 09:31 IST
+2026-10-01 09:31:59 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-01 09:31:59 | INFO    | __main__ | SIZING: 0.480% of equity (Rs4,845 risk per trade)
+2026-10-01 09:31:59 | INFO    | __main__ |   base 0.40%
+2026-10-01 09:31:59 | INFO    | __main__ |   performance x1.2: n=10, observed expectancy shrunk to +0.152R vs prior +0.125R -> adding (1.20x)
+2026-10-01 09:31:59 | INFO    | __main__ |   drawdown    x1.0: drawdown 0.0% - within normal range
+2026-10-01 09:31:59 | INFO    | __main__ | strategy: MOM-v3
+2026-10-01 09:31:59 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
+2026-10-01 09:31:59 | INFO    | strategies.momentum_v3 | REGIME GATE CLOSED: insufficient index bars - no entries this scan
+2026-10-01 09:31:59 | INFO    | __main__ | equity Rs1,009,385 | open 0 | pending 0 | closed 10 | WR 80.0% | PF 2.29 | friction Rs3,131
