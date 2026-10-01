@@ -27,7 +27,7 @@
       "atr": 2.87,
       "margin": 71315.67836914063,
       "entry_cost": 83.29336226532178,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-01 11:01:02 IST",
@@ -47,10 +47,10 @@
   "pending_orders": {},
   "last_known_price": {
     "HDFCLIFE.NS": {
-      "close": 531.5,
-      "high": 532.0,
-      "low": 531.5,
-      "as_of": "2026-10-01T11:31:24.551642+05:30"
+      "close": 531.9500122070312,
+      "high": 531.9500122070312,
+      "low": 531.9500122070312,
+      "as_of": "2026-10-01T11:45:44.284576+05:30"
     }
   },
   "trade_history": [
