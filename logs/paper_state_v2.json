@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "CUB.NS": {
-      "close": 229.05999755859375,
-      "high": 229.16000366210938,
-      "low": 228.8300018310547,
-      "as_of": "2026-10-01T15:15:56.311446+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
