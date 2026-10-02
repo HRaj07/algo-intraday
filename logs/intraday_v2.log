@@ -2494,3 +2494,7 @@
 2026-10-02 15:01:31 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0, 'stop_pct_floor': 0.012}
 2026-10-02 15:01:31 | INFO    | strategies.momentum_v3 | REGIME GATE CLOSED: insufficient index bars - no entries this scan
 2026-10-02 15:01:31 | INFO    | __main__ | equity Rs1,000,140 | open 0 | pending 0 | closed 13 | WR 61.5% | PF 1.01 | friction Rs4,299
+2026-10-02 15:08:08 | INFO    | __main__ | ================================================================
+2026-10-02 15:08:08 | INFO    | __main__ | Scan | 2026-10-02 15:08 IST
+2026-10-02 15:08:36 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-02 15:08:36 | INFO    | __main__ | EOD: {'equity': 1000139.68, 'cash': 1000139.68, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 13, 'win_rate_pct': 61.5, 'profit_factor': 1.01, 'total_friction': 4298.58, 'total_pnl': 139.68, 'return_pct': 0.01}
