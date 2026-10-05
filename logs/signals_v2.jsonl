@@ -222,3 +222,4 @@
 {"time": "2026-10-05 09:15:53.365029+05:30", "strategy": "MOM-v3", "regime": "insufficient index bars", "scanned": 210, "signals": [], "rejects": {"regime gate closed": 210}, "near_misses": []}
 {"time": "2026-10-05 09:31:22.251732+05:30", "strategy": "MOM-v3", "regime": "insufficient index bars", "scanned": 210, "signals": [], "rejects": {"regime gate closed": 210}, "near_misses": []}
 {"time": "2026-10-05 09:45:49.328452+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"too few bars today": 210}, "near_misses": []}
+{"time": "2026-10-05 10:01:12.329859+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"too few bars today": 210}, "near_misses": []}
