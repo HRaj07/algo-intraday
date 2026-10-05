@@ -2593,3 +2593,8 @@
 2026-10-05 10:32:24 | INFO    | __main__ | strategy: MOM-v3
 2026-10-05 10:32:24 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-05 10:32:25 | INFO    | __main__ | equity Rs992,779 | open 1 | pending 0 | closed 14 | WR 57.1% | PF 0.81 | friction Rs4,651
+2026-10-05 10:45:49 | INFO    | __main__ | ================================================================
+2026-10-05 10:45:49 | INFO    | __main__ | Scan | 2026-10-05 10:45 IST
+2026-10-05 10:46:18 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-05 10:46:18 | INFO    | engine.paper_trader_v2 | EXIT ANGELONE.NS 1461@Rs281.35 | P&L Rs-4,020 (-1.12R) | friction Rs440 | stop_loss
+2026-10-05 10:46:19 | WARNING | __main__ | NOT TRADING: daily loss Rs-7,947 hit the -3.0R limit (-Rs7,144)
