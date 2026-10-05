@@ -2582,3 +2582,14 @@
 2026-10-05 10:16:38 | INFO    | engine.paper_trader_v2 | FILLED CYIENT.NS @ Rs1171.4000244140625 | qty=275 notional=Rs322,135 friction=Rs355
 2026-10-05 10:16:38 | INFO    | engine.paper_trader_v2 | FILLED ANGELONE.NS @ Rs283.79998779296875 | qty=1461 notional=Rs414,632 friction=Rs443
 2026-10-05 10:16:39 | INFO    | __main__ | equity Rs1,000,140 | open 2 | pending 0 | closed 13 | WR 61.5% | PF 1.01 | friction Rs4,299
+2026-10-05 10:31:58 | INFO    | __main__ | ================================================================
+2026-10-05 10:31:58 | INFO    | __main__ | Scan | 2026-10-05 10:31 IST
+2026-10-05 10:32:23 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-05 10:32:23 | INFO    | engine.paper_trader_v2 | EXIT CYIENT.NS 275@Rs1158.4 | P&L Rs-3,927 (-1.10R) | friction Rs352 | stop_loss
+2026-10-05 10:32:24 | INFO    | __main__ | SIZING: 0.298% of equity (Rs2,954 risk per trade)
+2026-10-05 10:32:24 | INFO    | __main__ |   base 0.40%
+2026-10-05 10:32:24 | INFO    | __main__ |   performance x0.744: n=14, observed expectancy shrunk to +0.093R vs prior +0.125R -> trimming (0.74x)
+2026-10-05 10:32:24 | INFO    | __main__ |   drawdown    x1.0: drawdown 1.7% - within normal range
+2026-10-05 10:32:24 | INFO    | __main__ | strategy: MOM-v3
+2026-10-05 10:32:24 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-05 10:32:25 | INFO    | __main__ | equity Rs992,779 | open 1 | pending 0 | closed 14 | WR 57.1% | PF 0.81 | friction Rs4,651

@@ -1,48 +1,8 @@
 {
-  "cash": 852786.3242219891,
+  "cash": 913286.3554626015,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "CYIENT.NS": {
-      "ticker": "CYIENT.NS",
-      "direction": "LONG",
-      "entry_price": 1171.4000244140625,
-      "qty": 275,
-      "qty_open": 275,
-      "stop_loss": 1158.4,
-      "initial_stop": 1158.4,
-      "t1": 1177.02,
-      "t2": 1195.97,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 13.0,
-      "atr": 12.99,
-      "margin": 64427.00134277344,
-      "entry_cost": 77.52733293394165,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-05 10:15:54 IST",
-      "predicted_rr": null,
-      "entry_rsi": 77.4,
-      "entry_deviation_pct": 1.371,
-      "entry_atr_pct": 1.11,
-      "entry_rvol": 3.8,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 3.68,
-      "entry_stop_pct": 1.11,
-      "nifty_at_entry": 22543.099609375,
-      "mfe_price": 1171.4000244140625,
-      "mae_price": 1171.4000244140625
-    },
     "ANGELONE.NS": {
       "ticker": "ANGELONE.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 2.45,
       "margin": 82926.35643310548,
       "entry_cost": 93.01184812520228,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-05 10:15:54 IST",
@@ -81,11 +41,24 @@
       "entry_stop_pct": 0.865,
       "nifty_at_entry": 22543.099609375,
       "mfe_price": 283.79998779296875,
-      "mae_price": 283.79998779296875
+      "mae_price": 281.3999938964844
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "CYIENT.NS": {
+      "close": 1144.9000244140625,
+      "high": 1150.0,
+      "low": 1143.4000244140625,
+      "as_of": "2026-10-05T10:31:58.540087+05:30"
+    },
+    "ANGELONE.NS": {
+      "close": 281.45001220703125,
+      "high": 282.04998779296875,
+      "low": 281.3999938964844,
+      "as_of": "2026-10-05T10:31:58.540087+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -359,6 +332,27 @@
       "entry_rvol": 6.52,
       "entry_turnover_cr": 2.78,
       "entry_stop_pct": 1.2
+    },
+    {
+      "ticker": "CYIENT.NS",
+      "direction": "LONG",
+      "entry_price": 1171.4000244140625,
+      "exit_price": 1158.4,
+      "qty": 275,
+      "pnl": -3926.97,
+      "R_multiple": -1.1,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 351.96,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-05 10:15:54 IST",
+      "exit_time": "2026-10-05 10:31:58 IST",
+      "entry_rsi": 77.4,
+      "entry_deviation_pct": 1.371,
+      "entry_atr_pct": 1.11,
+      "entry_rvol": 3.8,
+      "entry_turnover_cr": 3.68,
+      "entry_stop_pct": 1.11
     }
   ],
   "daily_entry_count": {
@@ -367,7 +361,7 @@
     "2026-10-01": 3,
     "2026-10-05": 2
   },
-  "total_pnl": 139.68199786764626,
+  "total_pnl": -3787.2881042934578,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.895,
