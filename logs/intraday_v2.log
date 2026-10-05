@@ -2670,3 +2670,6 @@
 2026-10-05 15:15:55 | INFO    | __main__ | Scan | 2026-10-05 15:15 IST
 2026-10-05 15:16:26 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
 2026-10-05 15:16:26 | INFO    | __main__ | EOD: {'equity': 992193.0, 'cash': 992193.0, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 15, 'win_rate_pct': 53.3, 'profit_factor': 0.68, 'total_friction': 5090.82, 'total_pnl': -7807.0, 'return_pct': -0.78}
+2026-10-05 15:31:18 | INFO    | __main__ | ================================================================
+2026-10-05 15:31:18 | INFO    | __main__ | Scan | 2026-10-05 15:31 IST
+2026-10-05 15:31:18 | INFO    | __main__ | outside NSE hours
