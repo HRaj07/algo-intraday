@@ -2966,3 +2966,6 @@
 2026-10-06 15:16:25 | INFO    | engine.paper_trader_v2 | EXIT ABB.NS 57@Rs7120.0 | P&L Rs+1,618 (+0.68R) | friction Rs434 | square_off
 2026-10-06 15:16:25 | INFO    | engine.paper_trader_v2 | EXIT BLUESTARCO.NS 216@Rs1571.0 | P&L Rs+234 (+0.10R) | friction Rs371 | square_off
 2026-10-06 15:16:26 | INFO    | __main__ | EOD: {'equity': 996511.65, 'cash': 996511.65, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 20, 'win_rate_pct': 60.0, 'profit_factor': 0.87, 'total_friction': 7065.52, 'total_pnl': -3488.35, 'return_pct': -0.35}
+2026-10-06 15:31:16 | INFO    | __main__ | ================================================================
+2026-10-06 15:31:16 | INFO    | __main__ | Scan | 2026-10-06 15:31 IST
+2026-10-06 15:31:16 | INFO    | __main__ | outside NSE hours
