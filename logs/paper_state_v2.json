@@ -1,5 +1,5 @@
 {
-  "cash": 804014.1649047254,
+  "cash": 841977.1234909005,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 41.49,
       "margin": 80757.6,
       "entry_cost": 91.19653392800001,
-      "bars_held": 6,
+      "bars_held": 7,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-06 10:15:54 IST",
@@ -40,7 +40,7 @@
       "entry_turnover_cr": 4.42,
       "entry_stop_pct": 0.585,
       "nifty_at_entry": 22653.75,
-      "mfe_price": 7106.5,
+      "mfe_price": 7110.5,
       "mae_price": 7075.0
     },
     "BLUESTARCO.NS": {
@@ -67,7 +67,7 @@
       "atr": 10.98,
       "margin": 67746.23789062501,
       "entry_cost": 80.30563350158984,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-06 10:31:22 IST",
@@ -82,67 +82,27 @@
       "nifty_at_entry": 22652.099609375,
       "mfe_price": 1569.300048828125,
       "mae_price": 1560.0
-    },
-    "TRENT.NS": {
-      "ticker": "TRENT.NS",
-      "direction": "LONG",
-      "entry_price": 2875.0,
-      "qty": 69,
-      "qty_open": 69,
-      "stop_loss": 2840.73,
-      "initial_stop": 2840.73,
-      "t1": 2892.25,
-      "t2": 2943.56,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 34.27,
-      "atr": 34.28,
-      "margin": 39675.0,
-      "entry_cost": 56.80916525000001,
-      "bars_held": 4,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-06 10:45:49 IST",
-      "predicted_rr": null,
-      "entry_rsi": 81.9,
-      "entry_deviation_pct": 0.824,
-      "entry_atr_pct": 1.192,
-      "entry_rvol": 11.77,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 8.71,
-      "entry_stop_pct": 1.192,
-      "nifty_at_entry": 22668.30078125,
-      "mfe_price": 2877.89990234375,
-      "mae_price": 2858.89990234375
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "ABB.NS": {
-      "close": 7089.0,
-      "high": 7089.0,
-      "low": 7089.0,
-      "as_of": "2026-10-06T11:45:55.585094+05:30"
+      "close": 7110.0,
+      "high": 7110.5,
+      "low": 7100.0,
+      "as_of": "2026-10-06T12:01:06.761773+05:30"
     },
     "BLUESTARCO.NS": {
-      "close": 1563.800048828125,
-      "high": 1563.800048828125,
-      "low": 1563.800048828125,
-      "as_of": "2026-10-06T11:45:55.585094+05:30"
+      "close": 1566.0999755859375,
+      "high": 1566.9000244140625,
+      "low": 1565.5999755859375,
+      "as_of": "2026-10-06T12:01:06.761773+05:30"
     },
     "TRENT.NS": {
-      "close": 2862.0,
-      "high": 2862.0,
-      "low": 2858.89990234375,
-      "as_of": "2026-10-06T11:45:55.585094+05:30"
+      "close": 2853.60009765625,
+      "high": 2853.89990234375,
+      "low": 2851.89990234375,
+      "as_of": "2026-10-06T12:01:06.761773+05:30"
     }
   },
   "trade_history": [
@@ -460,6 +420,27 @@
       "entry_rvol": 2.63,
       "entry_turnover_cr": 3.2,
       "entry_stop_pct": 0.865
+    },
+    {
+      "ticker": "TRENT.NS",
+      "direction": "LONG",
+      "entry_price": 2875.0,
+      "exit_price": 2853.6,
+      "qty": 69,
+      "pnl": -1712.04,
+      "R_multiple": -0.72,
+      "reason": "vwap_reclaim",
+      "partial": false,
+      "friction": 235.45,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-06 10:45:49 IST",
+      "exit_time": "2026-10-06 12:01:06 IST",
+      "entry_rsi": 81.9,
+      "entry_deviation_pct": 0.824,
+      "entry_atr_pct": 1.192,
+      "entry_rvol": 11.77,
+      "entry_turnover_cr": 8.71,
+      "entry_stop_pct": 1.192
     }
   ],
   "daily_entry_count": {
@@ -469,7 +450,7 @@
     "2026-10-05": 2,
     "2026-10-06": 3
   },
-  "total_pnl": -7806.997204650071,
+  "total_pnl": -9519.038618474984,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
