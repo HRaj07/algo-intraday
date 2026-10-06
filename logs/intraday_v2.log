@@ -2775,3 +2775,13 @@
 2026-10-06 10:46:23 | INFO    | engine.paper_trader_v2 | ORDER TRENT.NS market buy at next open (ref Rs2875.0, SL 1.192%, RSI 81.9, rvol 11.77)
 2026-10-06 10:46:23 | INFO    | engine.paper_trader_v2 | FILLED TRENT.NS @ Rs2875.0 | qty=69 notional=Rs198,375 friction=Rs237
 2026-10-06 10:46:23 | INFO    | __main__ | equity Rs990,450 | open 3 | pending 0 | closed 15 | WR 53.3% | PF 0.68 | friction Rs5,091
+2026-10-06 11:01:03 | INFO    | __main__ | ================================================================
+2026-10-06 11:01:03 | INFO    | __main__ | Scan | 2026-10-06 11:01 IST
+2026-10-06 11:01:32 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-06 11:01:32 | INFO    | __main__ | SIZING: 0.240% of equity (Rs2,382 risk per trade)
+2026-10-06 11:01:32 | INFO    | __main__ |   base 0.40%
+2026-10-06 11:01:32 | INFO    | __main__ |   performance x0.6: n=15, observed expectancy shrunk to +0.074R vs prior +0.125R -> trimming (0.60x)
+2026-10-06 11:01:32 | INFO    | __main__ |   drawdown    x1.0: drawdown 1.7% - within normal range
+2026-10-06 11:01:32 | INFO    | __main__ | strategy: MOM-v3
+2026-10-06 11:01:32 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-06 11:01:33 | INFO    | __main__ | equity Rs992,606 | open 3 | pending 0 | closed 15 | WR 53.3% | PF 0.68 | friction Rs5,091

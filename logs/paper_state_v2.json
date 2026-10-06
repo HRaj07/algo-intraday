@@ -27,7 +27,7 @@
       "atr": 41.49,
       "margin": 80757.6,
       "entry_cost": 91.19653392800001,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-06 10:15:54 IST",
@@ -40,7 +40,7 @@
       "entry_turnover_cr": 4.42,
       "entry_stop_pct": 0.585,
       "nifty_at_entry": 22653.75,
-      "mfe_price": 7084.5,
+      "mfe_price": 7106.5,
       "mae_price": 7075.0
     },
     "BLUESTARCO.NS": {
@@ -67,7 +67,7 @@
       "atr": 10.98,
       "margin": 67746.23789062501,
       "entry_cost": 80.30563350158984,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-06 10:31:22 IST",
@@ -80,7 +80,7 @@
       "entry_turnover_cr": 2.63,
       "entry_stop_pct": 0.7,
       "nifty_at_entry": 22652.099609375,
-      "mfe_price": 1568.199951171875,
+      "mfe_price": 1569.300048828125,
       "mae_price": 1560.0
     },
     "TRENT.NS": {
@@ -107,7 +107,7 @@
       "atr": 34.28,
       "margin": 39675.0,
       "entry_cost": 56.80916525000001,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-06 10:45:49 IST",
@@ -120,23 +120,29 @@
       "entry_turnover_cr": 8.71,
       "entry_stop_pct": 1.192,
       "nifty_at_entry": 22668.30078125,
-      "mfe_price": 2875.0,
-      "mae_price": 2875.0
+      "mfe_price": 2877.89990234375,
+      "mae_price": 2871.199951171875
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "ABB.NS": {
-      "close": 7084.5,
-      "high": 7084.5,
-      "low": 7084.5,
-      "as_of": "2026-10-06T10:45:49.377751+05:30"
+      "close": 7088.5,
+      "high": 7106.5,
+      "low": 7088.5,
+      "as_of": "2026-10-06T11:01:03.564632+05:30"
     },
     "BLUESTARCO.NS": {
-      "close": 1560.0,
-      "high": 1560.0,
-      "low": 1560.0,
-      "as_of": "2026-10-06T10:45:49.377751+05:30"
+      "close": 1568.0,
+      "high": 1569.300048828125,
+      "low": 1567.0,
+      "as_of": "2026-10-06T11:01:03.564632+05:30"
+    },
+    "TRENT.NS": {
+      "close": 2877.89990234375,
+      "high": 2877.89990234375,
+      "low": 2871.199951171875,
+      "as_of": "2026-10-06T11:01:03.564632+05:30"
     }
   },
   "trade_history": [
