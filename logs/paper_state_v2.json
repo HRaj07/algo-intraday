@@ -1,5 +1,5 @@
 {
-  "cash": 752796.4848190255,
+  "cash": 758241.297088116,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 41.49,
       "margin": 80757.6,
       "entry_cost": 91.19653392800001,
-      "bars_held": 10,
+      "bars_held": 11,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-06 10:15:54 IST",
@@ -40,7 +40,7 @@
       "entry_turnover_cr": 4.42,
       "entry_stop_pct": 0.585,
       "nifty_at_entry": 22653.75,
-      "mfe_price": 7117.5,
+      "mfe_price": 7118.0,
       "mae_price": 7075.0
     },
     "BLUESTARCO.NS": {
@@ -67,7 +67,7 @@
       "atr": 10.98,
       "margin": 67746.23789062501,
       "entry_cost": 80.30563350158984,
-      "bars_held": 9,
+      "bars_held": 10,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-06 10:31:22 IST",
@@ -86,13 +86,13 @@
     "MCX.NS": {
       "ticker": "MCX.NS",
       "direction": "LONG",
-      "entry_price": 3278.699951171875,
-      "qty": 136,
-      "qty_open": 136,
-      "stop_loss": 3261.22,
-      "initial_stop": 3261.22,
-      "t1": 3297.37,
-      "t2": 3312.63,
+      "entry_price": 3300.0,
+      "qty": 130,
+      "qty_open": 130,
+      "stop_loss": 3281.78,
+      "initial_stop": 3281.78,
+      "t1": 3319.8,
+      "t2": 3336.46,
       "t1_fraction": 1.0,
       "exit_cfg": {
         "hold_to_square_off": true,
@@ -103,40 +103,46 @@
       },
       "t1_done": false,
       "trailed": false,
-      "risk_per_share": 17.48,
-      "atr": 17.46,
-      "margin": 89180.638671875,
-      "entry_cost": 98.24686998751953,
+      "risk_per_share": 18.22,
+      "atr": 18.23,
+      "margin": 85800.0,
+      "entry_cost": 95.41717399999999,
       "bars_held": 0,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
-      "entry_time": "2026-10-06 12:45:48 IST",
+      "entry_time": "2026-10-06 13:01:05 IST",
       "predicted_rr": null,
-      "entry_rsi": 70.4,
-      "entry_deviation_pct": 1.464,
-      "entry_atr_pct": 0.533,
-      "entry_rvol": 2.32,
+      "entry_rsi": 74.8,
+      "entry_deviation_pct": 1.854,
+      "entry_atr_pct": 0.552,
+      "entry_rvol": 2.63,
       "entry_gap_pct": null,
       "entry_turnover_cr": 15.79,
-      "entry_stop_pct": 0.533,
-      "nifty_at_entry": 22721.80078125,
-      "mfe_price": 3278.699951171875,
-      "mae_price": 3278.699951171875
+      "entry_stop_pct": 0.552,
+      "nifty_at_entry": 22703.05078125,
+      "mfe_price": 3300.0,
+      "mae_price": 3300.0
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "ABB.NS": {
-      "close": 7117.5,
-      "high": 7117.5,
-      "low": 7117.5,
-      "as_of": "2026-10-06T12:45:48.582620+05:30"
+      "close": 7113.0,
+      "high": 7118.0,
+      "low": 7113.0,
+      "as_of": "2026-10-06T13:01:05.081364+05:30"
     },
     "BLUESTARCO.NS": {
-      "close": 1564.5999755859375,
-      "high": 1564.5999755859375,
-      "low": 1564.5999755859375,
-      "as_of": "2026-10-06T12:45:48.582620+05:30"
+      "close": 1566.0,
+      "high": 1566.199951171875,
+      "low": 1564.699951171875,
+      "as_of": "2026-10-06T13:01:05.081364+05:30"
+    },
+    "MCX.NS": {
+      "close": 3300.5,
+      "high": 3302.39990234375,
+      "low": 3298.60009765625,
+      "as_of": "2026-10-06T13:01:05.081364+05:30"
     }
   },
   "trade_history": [
@@ -475,6 +481,27 @@
       "entry_rvol": 11.77,
       "entry_turnover_cr": 8.71,
       "entry_stop_pct": 1.192
+    },
+    {
+      "ticker": "MCX.NS",
+      "direction": "LONG",
+      "entry_price": 3278.699951171875,
+      "exit_price": 3297.37,
+      "qty": 136,
+      "pnl": 2064.17,
+      "R_multiple": 0.87,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 474.95,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-06 12:45:48 IST",
+      "exit_time": "2026-10-06 13:01:05 IST",
+      "entry_rsi": 70.4,
+      "entry_deviation_pct": 1.464,
+      "entry_atr_pct": 0.533,
+      "entry_rvol": 2.32,
+      "entry_turnover_cr": 15.79,
+      "entry_stop_pct": 0.533
     }
   ],
   "daily_entry_count": {
@@ -482,15 +509,15 @@
     "2026-09-30": 6,
     "2026-10-01": 3,
     "2026-10-05": 2,
-    "2026-10-06": 4
+    "2026-10-06": 5
   },
-  "total_pnl": -9519.038618474984,
+  "total_pnl": -7454.865021259438,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=16, observed expectancy shrunk to +0.062R vs prior +0.125R -> trimming (0.60x)",
+    "performance_reason": "n=17, observed expectancy shrunk to +0.074R vs prior +0.125R -> trimming (0.60x)",
     "drawdown_scalar": 1.0,
-    "drawdown_reason": "drawdown 1.8% - within normal range",
+    "drawdown_reason": "drawdown 1.6% - within normal range",
     "raw_pct": 0.0024,
     "final_pct": 0.0024,
     "clamped": false

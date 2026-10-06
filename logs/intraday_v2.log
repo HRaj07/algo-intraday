@@ -2861,3 +2861,18 @@
 2026-10-06 12:46:20 | INFO    | engine.paper_trader_v2 | ORDER MCX.NS market buy at next open (ref Rs3277.7, SL 0.533%, RSI 70.4, rvol 2.32)
 2026-10-06 12:46:20 | INFO    | engine.paper_trader_v2 | FILLED MCX.NS @ Rs3278.699951171875 | qty=136 notional=Rs445,903 friction=Rs473
 2026-10-06 12:46:20 | INFO    | __main__ | equity Rs991,613 | open 3 | pending 0 | closed 16 | WR 50.0% | PF 0.64 | friction Rs5,326
+2026-10-06 13:01:05 | INFO    | __main__ | ================================================================
+2026-10-06 13:01:05 | INFO    | __main__ | Scan | 2026-10-06 13:01 IST
+2026-10-06 13:01:41 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-06 13:01:41 | INFO    | engine.paper_trader_v2 | EXIT MCX.NS 136@Rs3297.37 | P&L Rs+2,064 (+0.87R) | friction Rs475 | t1_vwap
+2026-10-06 13:01:41 | INFO    | engine.paper_trader_v2 | T1 MCX.NS - half out at VWAP, stop to Rs3284.8 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-06 13:01:41 | INFO    | __main__ | SIZING: 0.240% of equity (Rs2,385 risk per trade)
+2026-10-06 13:01:41 | INFO    | __main__ |   base 0.40%
+2026-10-06 13:01:41 | INFO    | __main__ |   performance x0.6: n=17, observed expectancy shrunk to +0.074R vs prior +0.125R -> trimming (0.60x)
+2026-10-06 13:01:41 | INFO    | __main__ |   drawdown    x1.0: drawdown 1.6% - within normal range
+2026-10-06 13:01:41 | INFO    | __main__ | strategy: MOM-v3
+2026-10-06 13:01:41 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-06 13:01:42 | INFO    | engine.paper_trader_v2 | ORDER REJECTED AMBER.NS: already hold 1 position(s) in INDUSTRIAL
+2026-10-06 13:01:42 | INFO    | engine.paper_trader_v2 | ORDER MCX.NS market buy at next open (ref Rs3300.0, SL 0.552%, RSI 74.8, rvol 2.63)
+2026-10-06 13:01:42 | INFO    | engine.paper_trader_v2 | FILLED MCX.NS @ Rs3300.0 | qty=130 notional=Rs429,000 friction=Rs457
+2026-10-06 13:01:42 | INFO    | __main__ | equity Rs993,788 | open 3 | pending 0 | closed 17 | WR 52.9% | PF 0.72 | friction Rs5,801
