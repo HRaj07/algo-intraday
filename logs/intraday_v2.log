@@ -2960,3 +2960,9 @@
 2026-10-06 15:01:43 | INFO    | __main__ | strategy: MOM-v3
 2026-10-06 15:01:43 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-06 15:01:43 | INFO    | __main__ | equity Rs995,264 | open 2 | pending 0 | closed 18 | WR 55.6% | PF 0.8 | friction Rs6,260
+2026-10-06 15:15:53 | INFO    | __main__ | ================================================================
+2026-10-06 15:15:53 | INFO    | __main__ | Scan | 2026-10-06 15:15 IST
+2026-10-06 15:16:25 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-06 15:16:25 | INFO    | engine.paper_trader_v2 | EXIT ABB.NS 57@Rs7120.0 | P&L Rs+1,618 (+0.68R) | friction Rs434 | square_off
+2026-10-06 15:16:25 | INFO    | engine.paper_trader_v2 | EXIT BLUESTARCO.NS 216@Rs1571.0 | P&L Rs+234 (+0.10R) | friction Rs371 | square_off
+2026-10-06 15:16:26 | INFO    | __main__ | EOD: {'equity': 996511.65, 'cash': 996511.65, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 20, 'win_rate_pct': 60.0, 'profit_factor': 0.87, 'total_friction': 7065.52, 'total_pnl': -3488.35, 'return_pct': -0.35}
