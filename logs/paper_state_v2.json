@@ -1,5 +1,5 @@
 {
-  "cash": 911435.4027953504,
+  "cash": 843689.1649047254,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 41.49,
       "margin": 80757.6,
       "entry_cost": 91.19653392800001,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-06 10:15:54 IST",
@@ -41,11 +41,58 @@
       "entry_stop_pct": 0.585,
       "nifty_at_entry": 22653.75,
       "mfe_price": 7084.0,
-      "mae_price": 7084.0
+      "mae_price": 7075.0
+    },
+    "BLUESTARCO.NS": {
+      "ticker": "BLUESTARCO.NS",
+      "direction": "LONG",
+      "entry_price": 1568.199951171875,
+      "qty": 216,
+      "qty_open": 216,
+      "stop_loss": 1557.22,
+      "initial_stop": 1557.22,
+      "t1": 1577.61,
+      "t2": 1590.15,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 10.98,
+      "atr": 10.98,
+      "margin": 67746.23789062501,
+      "entry_cost": 80.30563350158984,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-06 10:31:22 IST",
+      "predicted_rr": null,
+      "entry_rsi": 79.7,
+      "entry_deviation_pct": 0.836,
+      "entry_atr_pct": 0.7,
+      "entry_rvol": 3.57,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 2.63,
+      "entry_stop_pct": 0.7,
+      "nifty_at_entry": 22652.099609375,
+      "mfe_price": 1568.199951171875,
+      "mae_price": 1568.199951171875
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "ABB.NS": {
+      "close": 7075.0,
+      "high": 7079.5,
+      "low": 7075.0,
+      "as_of": "2026-10-06T10:31:22.015542+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -368,7 +415,7 @@
     "2026-09-30": 6,
     "2026-10-01": 3,
     "2026-10-05": 2,
-    "2026-10-06": 1
+    "2026-10-06": 2
   },
   "total_pnl": -7806.997204650071,
   "last_sizing_decision": {
@@ -376,7 +423,7 @@
     "performance_scalar": 0.6,
     "performance_reason": "n=15, observed expectancy shrunk to +0.074R vs prior +0.125R -> trimming (0.60x)",
     "drawdown_scalar": 1.0,
-    "drawdown_reason": "drawdown 1.7% - within normal range",
+    "drawdown_reason": "drawdown 1.8% - within normal range",
     "raw_pct": 0.0024,
     "final_pct": 0.0024,
     "clamped": false

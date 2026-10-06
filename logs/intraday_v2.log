@@ -2751,3 +2751,15 @@
 2026-10-06 10:16:28 | INFO    | engine.paper_trader_v2 | ORDER ABB.NS market buy at next open (ref Rs7090.0, SL 0.585%, RSI 76.9, rvol 2.75)
 2026-10-06 10:16:28 | INFO    | engine.paper_trader_v2 | FILLED ABB.NS @ Rs7084.0 | qty=57 notional=Rs403,788 friction=Rs433
 2026-10-06 10:16:29 | INFO    | __main__ | equity Rs992,193 | open 1 | pending 0 | closed 15 | WR 53.3% | PF 0.68 | friction Rs5,091
+2026-10-06 10:31:22 | INFO    | __main__ | ================================================================
+2026-10-06 10:31:22 | INFO    | __main__ | Scan | 2026-10-06 10:31 IST
+2026-10-06 10:31:55 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-06 10:31:56 | INFO    | __main__ | SIZING: 0.240% of equity (Rs2,380 risk per trade)
+2026-10-06 10:31:56 | INFO    | __main__ |   base 0.40%
+2026-10-06 10:31:56 | INFO    | __main__ |   performance x0.6: n=15, observed expectancy shrunk to +0.074R vs prior +0.125R -> trimming (0.60x)
+2026-10-06 10:31:56 | INFO    | __main__ |   drawdown    x1.0: drawdown 1.8% - within normal range
+2026-10-06 10:31:56 | INFO    | __main__ | strategy: MOM-v3
+2026-10-06 10:31:56 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-06 10:31:57 | INFO    | engine.paper_trader_v2 | ORDER BLUESTARCO.NS market buy at next open (ref Rs1568.2, SL 0.7%, RSI 79.7, rvol 3.57)
+2026-10-06 10:31:57 | INFO    | engine.paper_trader_v2 | FILLED BLUESTARCO.NS @ Rs1568.199951171875 | qty=216 notional=Rs338,731 friction=Rs371
+2026-10-06 10:31:57 | INFO    | __main__ | equity Rs991,680 | open 2 | pending 0 | closed 15 | WR 53.3% | PF 0.68 | friction Rs5,091
