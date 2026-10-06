@@ -27,7 +27,7 @@
       "atr": 41.49,
       "margin": 80757.6,
       "entry_cost": 91.19653392800001,
-      "bars_held": 17,
+      "bars_held": 18,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-06 10:15:54 IST",
@@ -67,7 +67,7 @@
       "atr": 10.98,
       "margin": 67746.23789062501,
       "entry_cost": 80.30563350158984,
-      "bars_held": 16,
+      "bars_held": 17,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-06 10:31:22 IST",
@@ -87,16 +87,16 @@
   "pending_orders": {},
   "last_known_price": {
     "ABB.NS": {
-      "close": 7102.5,
-      "high": 7103.5,
-      "low": 7087.0,
-      "as_of": "2026-10-06T14:31:16.930649+05:30"
+      "close": 7104.0,
+      "high": 7104.0,
+      "low": 7104.0,
+      "as_of": "2026-10-06T14:45:51.518039+05:30"
     },
     "BLUESTARCO.NS": {
       "close": 1565.0,
       "high": 1565.0,
-      "low": 1564.5,
-      "as_of": "2026-10-06T14:31:16.930649+05:30"
+      "low": 1565.0,
+      "as_of": "2026-10-06T14:45:51.518039+05:30"
     }
   },
   "trade_history": [
