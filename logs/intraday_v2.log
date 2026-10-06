@@ -2908,3 +2908,15 @@
 2026-10-06 13:46:19 | INFO    | __main__ | strategy: MOM-v3
 2026-10-06 13:46:19 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-06 13:46:19 | INFO    | __main__ | equity Rs992,955 | open 3 | pending 0 | closed 17 | WR 52.9% | PF 0.72 | friction Rs5,801
+2026-10-06 14:01:05 | INFO    | __main__ | ================================================================
+2026-10-06 14:01:05 | INFO    | __main__ | Scan | 2026-10-06 14:01 IST
+2026-10-06 14:01:40 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-06 14:01:40 | INFO    | engine.paper_trader_v2 | EXIT MCX.NS 130@Rs3319.8 | P&L Rs+2,115 (+0.89R) | friction Rs459 | t1_vwap
+2026-10-06 14:01:40 | INFO    | engine.paper_trader_v2 | T1 MCX.NS - half out at VWAP, stop to Rs3306.25 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-06 14:01:40 | INFO    | __main__ | SIZING: 0.276% of equity (Rs2,749 risk per trade)
+2026-10-06 14:01:40 | INFO    | __main__ |   base 0.40%
+2026-10-06 14:01:40 | INFO    | __main__ |   performance x0.691: n=18, observed expectancy shrunk to +0.086R vs prior +0.125R -> trimming (0.69x)
+2026-10-06 14:01:40 | INFO    | __main__ |   drawdown    x1.0: drawdown 1.4% - within normal range
+2026-10-06 14:01:40 | INFO    | __main__ | strategy: MOM-v3
+2026-10-06 14:01:40 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-06 14:01:40 | INFO    | __main__ | equity Rs995,279 | open 2 | pending 0 | closed 18 | WR 55.6% | PF 0.8 | friction Rs6,260
