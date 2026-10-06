@@ -1,8 +1,49 @@
 {
-  "cash": 992193.0027953504,
+  "cash": 911435.4027953504,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {},
+  "positions": {
+    "ABB.NS": {
+      "ticker": "ABB.NS",
+      "direction": "LONG",
+      "entry_price": 7084.0,
+      "qty": 57,
+      "qty_open": 57,
+      "stop_loss": 7042.56,
+      "initial_stop": 7042.56,
+      "t1": 7132.54,
+      "t2": 7172.98,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 41.44,
+      "atr": 41.49,
+      "margin": 80757.6,
+      "entry_cost": 91.19653392800001,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-06 10:15:54 IST",
+      "predicted_rr": null,
+      "entry_rsi": 76.9,
+      "entry_deviation_pct": 1.089,
+      "entry_atr_pct": 0.585,
+      "entry_rvol": 2.75,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 4.42,
+      "entry_stop_pct": 0.585,
+      "nifty_at_entry": 22653.75,
+      "mfe_price": 7084.0,
+      "mae_price": 7084.0
+    }
+  },
   "pending_orders": {},
   "last_known_price": {},
   "trade_history": [
@@ -326,17 +367,18 @@
     "2026-09-29": 4,
     "2026-09-30": 6,
     "2026-10-01": 3,
-    "2026-10-05": 2
+    "2026-10-05": 2,
+    "2026-10-06": 1
   },
   "total_pnl": -7806.997204650071,
   "last_sizing_decision": {
     "base_pct": 0.004,
-    "performance_scalar": 0.895,
-    "performance_reason": "n=13, observed expectancy shrunk to +0.112R vs prior +0.125R -> trimming (0.90x)",
+    "performance_scalar": 0.6,
+    "performance_reason": "n=15, observed expectancy shrunk to +0.074R vs prior +0.125R -> trimming (0.60x)",
     "drawdown_scalar": 1.0,
-    "drawdown_reason": "drawdown 0.9% - within normal range",
-    "raw_pct": 0.00358,
-    "final_pct": 0.00358,
+    "drawdown_reason": "drawdown 1.7% - within normal range",
+    "raw_pct": 0.0024,
+    "final_pct": 0.0024,
     "clamped": false
   }
 }
