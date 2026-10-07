@@ -1,5 +1,5 @@
 {
-  "cash": 683660.0328436083,
+  "cash": 754515.6346249444,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 2.22,
       "margin": 119540.96333007813,
       "entry_cost": 123.65937253617531,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-07 10:15:48 IST",
@@ -40,48 +40,8 @@
       "entry_turnover_cr": 39.15,
       "entry_stop_pct": 0.506,
       "nifty_at_entry": 22644.80078125,
-      "mfe_price": 439.3500061035156,
+      "mfe_price": 439.5,
       "mae_price": 438.1000061035156
-    },
-    "ANGELONE.NS": {
-      "ticker": "ANGELONE.NS",
-      "direction": "LONG",
-      "entry_price": 301.25,
-      "qty": 1233,
-      "qty_open": 1233,
-      "stop_loss": 298.79,
-      "initial_stop": 298.79,
-      "t1": 303.06,
-      "t2": 306.17,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.46,
-      "atr": 2.46,
-      "margin": 74288.25,
-      "entry_cost": 85.7814938975,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-07 10:31:15 IST",
-      "predicted_rr": null,
-      "entry_rsi": 78.8,
-      "entry_deviation_pct": 0.854,
-      "entry_atr_pct": 0.817,
-      "entry_rvol": 12.74,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.57,
-      "entry_stop_pct": 0.817,
-      "nifty_at_entry": 22692.0,
-      "mfe_price": 301.25,
-      "mae_price": 301.25
     },
     "OFSS.NS": {
       "ticker": "OFSS.NS",
@@ -107,7 +67,7 @@
       "atr": 53.48,
       "margin": 119022.40000000001,
       "entry_cost": 123.225319472,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-07 10:31:15 IST",
@@ -120,17 +80,29 @@
       "entry_turnover_cr": 4.33,
       "entry_stop_pct": 0.503,
       "nifty_at_entry": 22692.0,
-      "mfe_price": 10627.0,
+      "mfe_price": 10637.0,
       "mae_price": 10627.0
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "KOTAKBANK.NS": {
-      "close": 439.3500061035156,
-      "high": 439.3500061035156,
-      "low": 438.1000061035156,
-      "as_of": "2026-10-07T10:31:15.937703+05:30"
+      "close": 439.1499938964844,
+      "high": 439.5,
+      "low": 439.04998779296875,
+      "as_of": "2026-10-07T10:45:51.516923+05:30"
+    },
+    "ANGELONE.NS": {
+      "close": 298.0,
+      "high": 298.0,
+      "low": 298.0,
+      "as_of": "2026-10-07T10:45:51.516923+05:30"
+    },
+    "OFSS.NS": {
+      "close": 10636.0,
+      "high": 10637.0,
+      "low": 10629.0,
+      "as_of": "2026-10-07T10:45:51.516923+05:30"
     }
   },
   "trade_history": [
@@ -553,6 +525,27 @@
       "entry_rvol": 3.57,
       "entry_turnover_cr": 2.63,
       "entry_stop_pct": 0.7
+    },
+    {
+      "ticker": "ANGELONE.NS",
+      "direction": "LONG",
+      "entry_price": 301.25,
+      "exit_price": 298.79,
+      "qty": 1233,
+      "pnl": -3432.65,
+      "R_multiple": -1.13,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 399.47,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-07 10:31:15 IST",
+      "exit_time": "2026-10-07 10:45:51 IST",
+      "entry_rsi": 78.8,
+      "entry_deviation_pct": 0.854,
+      "entry_atr_pct": 0.817,
+      "entry_rvol": 12.74,
+      "entry_turnover_cr": 4.57,
+      "entry_stop_pct": 0.817
     }
   ],
   "daily_entry_count": {
@@ -563,7 +556,7 @@
     "2026-10-06": 5,
     "2026-10-07": 3
   },
-  "total_pnl": -3488.3538263140053,
+  "total_pnl": -6921.0020449779,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.76,
