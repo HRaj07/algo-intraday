@@ -3102,3 +3102,14 @@
 2026-10-07 11:16:41 | INFO    | engine.paper_trader_v2 | ORDER REJECTED ANGELONE.NS: already holding this name
 2026-10-07 11:16:41 | INFO    | engine.paper_trader_v2 | ORDER REJECTED OFSS.NS: already holding this name
 2026-10-07 11:16:41 | INFO    | __main__ | equity Rs997,580 | open 3 | pending 0 | closed 22 | WR 59.1% | PF 0.87 | friction Rs8,083
+2026-10-07 11:31:24 | INFO    | __main__ | ================================================================
+2026-10-07 11:31:24 | INFO    | __main__ | Scan | 2026-10-07 11:31 IST
+2026-10-07 11:31:51 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-07 11:31:51 | INFO    | __main__ | SIZING: 0.291% of equity (Rs2,897 risk per trade)
+2026-10-07 11:31:51 | INFO    | __main__ |   base 0.40%
+2026-10-07 11:31:51 | INFO    | __main__ |   performance x0.727: n=22, observed expectancy shrunk to +0.091R vs prior +0.125R -> trimming (0.73x)
+2026-10-07 11:31:51 | INFO    | __main__ |   drawdown    x1.0: drawdown 1.3% - within normal range
+2026-10-07 11:31:51 | INFO    | __main__ | strategy: MOM-v3
+2026-10-07 11:31:51 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-07 11:31:52 | INFO    | engine.paper_trader_v2 | ORDER REJECTED UNIONBANK.NS: at max concurrent positions (3)
+2026-10-07 11:31:52 | INFO    | __main__ | equity Rs996,678 | open 3 | pending 0 | closed 22 | WR 59.1% | PF 0.87 | friction Rs8,083
