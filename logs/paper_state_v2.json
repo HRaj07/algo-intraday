@@ -27,7 +27,7 @@
       "atr": 2.22,
       "margin": 119540.96333007813,
       "entry_cost": 123.65937253617531,
-      "bars_held": 13,
+      "bars_held": 14,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-07 10:15:48 IST",
@@ -40,17 +40,17 @@
       "entry_turnover_cr": 39.15,
       "entry_stop_pct": 0.506,
       "nifty_at_entry": 22644.80078125,
-      "mfe_price": 440.45001220703125,
+      "mfe_price": 440.79998779296875,
       "mae_price": 438.1000061035156
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "KOTAKBANK.NS": {
-      "close": 440.04998779296875,
-      "high": 440.25,
-      "low": 439.95001220703125,
-      "as_of": "2026-10-07T13:31:17.332013+05:30"
+      "close": 440.5,
+      "high": 440.79998779296875,
+      "low": 440.5,
+      "as_of": "2026-10-07T13:45:52.702929+05:30"
     }
   },
   "trade_history": [
