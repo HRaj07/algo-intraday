@@ -27,7 +27,7 @@
       "atr": 2.22,
       "margin": 119540.96333007813,
       "entry_cost": 123.65937253617531,
-      "bars_held": 3,
+      "bars_held": 4,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-07 10:15:48 IST",
@@ -67,7 +67,7 @@
       "atr": 55.73,
       "margin": 111300.8,
       "entry_cost": 116.762108624,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-07 11:01:06 IST",
@@ -81,7 +81,7 @@
       "entry_stop_pct": 0.52,
       "nifty_at_entry": 22690.75,
       "mfe_price": 10702.0,
-      "mae_price": 10702.0
+      "mae_price": 10680.0
     },
     "ANGELONE.NS": {
       "ticker": "ANGELONE.NS",
@@ -107,7 +107,7 @@
       "atr": 2.73,
       "margin": 64173.311297607426,
       "entry_cost": 77.31498675543635,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-07 11:01:06 IST",
@@ -120,23 +120,29 @@
       "entry_turnover_cr": 5.05,
       "entry_stop_pct": 0.904,
       "nifty_at_entry": 22690.75,
-      "mfe_price": 301.8500061035156,
+      "mfe_price": 302.29998779296875,
       "mae_price": 301.8500061035156
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "KOTAKBANK.NS": {
-      "close": 439.8500061035156,
-      "high": 440.20001220703125,
-      "low": 439.3500061035156,
-      "as_of": "2026-10-07T11:01:06.947150+05:30"
+      "close": 439.54998779296875,
+      "high": 439.54998779296875,
+      "low": 438.8999938964844,
+      "as_of": "2026-10-07T11:15:50.375501+05:30"
     },
     "OFSS.NS": {
-      "close": 10703.0,
-      "high": 10705.0,
-      "low": 10695.0,
-      "as_of": "2026-10-07T11:01:06.947150+05:30"
+      "close": 10685.0,
+      "high": 10691.0,
+      "low": 10680.0,
+      "as_of": "2026-10-07T11:15:50.375501+05:30"
+    },
+    "ANGELONE.NS": {
+      "close": 302.29998779296875,
+      "high": 302.29998779296875,
+      "low": 302.29998779296875,
+      "as_of": "2026-10-07T11:15:50.375501+05:30"
     }
   },
   "trade_history": [
