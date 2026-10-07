@@ -4,20 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "ABB.NS": {
-      "close": 7120.0,
-      "high": 7120.0,
-      "low": 7102.0,
-      "as_of": "2026-10-06T15:15:53.597397+05:30"
-    },
-    "BLUESTARCO.NS": {
-      "close": 1571.0,
-      "high": 1571.0,
-      "low": 1571.0,
-      "as_of": "2026-10-06T15:15:53.597397+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
