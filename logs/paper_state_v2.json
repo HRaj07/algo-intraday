@@ -1,8 +1,49 @@
 {
-  "cash": 996511.6461736865,
+  "cash": 876970.6828436083,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {},
+  "positions": {
+    "KOTAKBANK.NS": {
+      "ticker": "KOTAKBANK.NS",
+      "direction": "LONG",
+      "entry_price": 438.20001220703125,
+      "qty": 1364,
+      "qty_open": 1364,
+      "stop_loss": 435.98,
+      "initial_stop": 435.98,
+      "t1": 440.83,
+      "t2": 442.64,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 2.22,
+      "atr": 2.22,
+      "margin": 119540.96333007813,
+      "entry_cost": 123.65937253617531,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-07 10:15:48 IST",
+      "predicted_rr": null,
+      "entry_rsi": 72.5,
+      "entry_deviation_pct": 1.017,
+      "entry_atr_pct": 0.506,
+      "entry_rvol": 3.2,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 39.15,
+      "entry_stop_pct": 0.506,
+      "nifty_at_entry": 22644.80078125,
+      "mfe_price": 438.20001220703125,
+      "mae_price": 438.20001220703125
+    }
+  },
   "pending_orders": {},
   "last_known_price": {},
   "trade_history": [
@@ -432,17 +473,18 @@
     "2026-09-30": 6,
     "2026-10-01": 3,
     "2026-10-05": 2,
-    "2026-10-06": 5
+    "2026-10-06": 5,
+    "2026-10-07": 1
   },
   "total_pnl": -3488.3538263140053,
   "last_sizing_decision": {
     "base_pct": 0.004,
-    "performance_scalar": 0.6,
-    "performance_reason": "n=17, observed expectancy shrunk to +0.074R vs prior +0.125R -> trimming (0.60x)",
+    "performance_scalar": 0.76,
+    "performance_reason": "n=20, observed expectancy shrunk to +0.095R vs prior +0.125R -> trimming (0.76x)",
     "drawdown_scalar": 1.0,
-    "drawdown_reason": "drawdown 1.6% - within normal range",
-    "raw_pct": 0.0024,
-    "final_pct": 0.0024,
+    "drawdown_reason": "drawdown 1.3% - within normal range",
+    "raw_pct": 0.00304,
+    "final_pct": 0.00304,
     "clamped": false
   }
 }
