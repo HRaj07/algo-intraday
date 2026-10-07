@@ -3113,3 +3113,18 @@
 2026-10-07 11:31:51 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-07 11:31:52 | INFO    | engine.paper_trader_v2 | ORDER REJECTED UNIONBANK.NS: at max concurrent positions (3)
 2026-10-07 11:31:52 | INFO    | __main__ | equity Rs996,678 | open 3 | pending 0 | closed 22 | WR 59.1% | PF 0.87 | friction Rs8,083
+2026-10-07 11:45:52 | INFO    | __main__ | ================================================================
+2026-10-07 11:45:52 | INFO    | __main__ | Scan | 2026-10-07 11:45 IST
+2026-10-07 11:46:45 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-07 11:46:45 | INFO    | engine.paper_trader_v2 | EXIT OFSS.NS 52@Rs10646.35 | P&L Rs-3,470 (-1.20R) | friction Rs576 | stop_loss
+2026-10-07 11:46:45 | INFO    | engine.paper_trader_v2 | EXIT ANGELONE.NS 1063@Rs303.51 | P&L Rs+1,410 (+0.49R) | friction Rs355 | t1_vwap
+2026-10-07 11:46:45 | INFO    | engine.paper_trader_v2 | T1 ANGELONE.NS - half out at VWAP, stop to Rs302.59 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-07 11:46:46 | INFO    | __main__ | SIZING: 0.252% of equity (Rs2,512 risk per trade)
+2026-10-07 11:46:46 | INFO    | __main__ |   base 0.40%
+2026-10-07 11:46:46 | INFO    | __main__ |   performance x0.63: n=24, observed expectancy shrunk to +0.079R vs prior +0.125R -> trimming (0.63x)
+2026-10-07 11:46:46 | INFO    | __main__ |   drawdown    x1.0: drawdown 1.3% - within normal range
+2026-10-07 11:46:46 | INFO    | __main__ | strategy: MOM-v3
+2026-10-07 11:46:46 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-07 11:46:46 | INFO    | engine.paper_trader_v2 | ORDER REJECTED ANGELONE.NS: max 2 entries per day for ANGELONE.NS
+2026-10-07 11:46:46 | INFO    | engine.paper_trader_v2 | ORDER REJECTED BSE.NS: at max entries per day (5)
+2026-10-07 11:46:46 | INFO    | __main__ | equity Rs996,470 | open 1 | pending 0 | closed 24 | WR 58.3% | PF 0.82 | friction Rs9,015
