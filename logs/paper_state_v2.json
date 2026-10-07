@@ -27,7 +27,7 @@
       "atr": 2.22,
       "margin": 119540.96333007813,
       "entry_cost": 123.65937253617531,
-      "bars_held": 7,
+      "bars_held": 8,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-07 10:15:48 IST",
@@ -47,10 +47,10 @@
   "pending_orders": {},
   "last_known_price": {
     "KOTAKBANK.NS": {
-      "close": 439.25,
-      "high": 439.25,
-      "low": 439.0,
-      "as_of": "2026-10-07T12:01:04.708538+05:30"
+      "close": 438.79998779296875,
+      "high": 438.79998779296875,
+      "low": 438.5,
+      "as_of": "2026-10-07T12:15:54.654560+05:30"
     }
   },
   "trade_history": [
