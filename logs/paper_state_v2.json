@@ -1,56 +1,15 @@
 {
-  "cash": 874542.3731711071,
+  "cash": 997049.9194552178,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "KOTAKBANK.NS": {
-      "ticker": "KOTAKBANK.NS",
-      "direction": "LONG",
-      "entry_price": 438.20001220703125,
-      "qty": 1364,
-      "qty_open": 1364,
-      "stop_loss": 435.98,
-      "initial_stop": 435.98,
-      "t1": 440.83,
-      "t2": 442.64,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.22,
-      "atr": 2.22,
-      "margin": 119540.96333007813,
-      "entry_cost": 123.65937253617531,
-      "bars_held": 14,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-07 10:15:48 IST",
-      "predicted_rr": null,
-      "entry_rsi": 72.5,
-      "entry_deviation_pct": 1.017,
-      "entry_atr_pct": 0.506,
-      "entry_rvol": 3.2,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 39.15,
-      "entry_stop_pct": 0.506,
-      "nifty_at_entry": 22644.80078125,
-      "mfe_price": 440.79998779296875,
-      "mae_price": 438.1000061035156
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "KOTAKBANK.NS": {
       "close": 440.5,
-      "high": 440.79998779296875,
-      "low": 440.5,
-      "as_of": "2026-10-07T13:45:52.702929+05:30"
+      "high": 441.1000061035156,
+      "low": 440.3500061035156,
+      "as_of": "2026-10-07T14:01:06.575731+05:30"
     }
   },
   "trade_history": [
@@ -557,6 +516,27 @@
       "entry_rvol": 2.38,
       "entry_turnover_cr": 5.05,
       "entry_stop_pct": 0.904
+    },
+    {
+      "ticker": "KOTAKBANK.NS",
+      "direction": "LONG",
+      "entry_price": 438.20001220703125,
+      "exit_price": 440.83,
+      "qty": 1364,
+      "pnl": 2966.58,
+      "R_multiple": 0.98,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 620.72,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-07 10:15:48 IST",
+      "exit_time": "2026-10-07 14:01:06 IST",
+      "entry_rsi": 72.5,
+      "entry_deviation_pct": 1.017,
+      "entry_atr_pct": 0.506,
+      "entry_rvol": 3.2,
+      "entry_turnover_cr": 39.15,
+      "entry_stop_pct": 0.506
     }
   ],
   "daily_entry_count": {
@@ -567,7 +547,7 @@
     "2026-10-06": 5,
     "2026-10-07": 5
   },
-  "total_pnl": -5916.663498815113,
+  "total_pnl": -2950.080544782655,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.727,
