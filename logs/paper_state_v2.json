@@ -1,5 +1,5 @@
 {
-  "cash": 876970.6828436083,
+  "cash": 683660.0328436083,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 2.22,
       "margin": 119540.96333007813,
       "entry_cost": 123.65937253617531,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-07 10:15:48 IST",
@@ -40,12 +40,99 @@
       "entry_turnover_cr": 39.15,
       "entry_stop_pct": 0.506,
       "nifty_at_entry": 22644.80078125,
-      "mfe_price": 438.20001220703125,
-      "mae_price": 438.20001220703125
+      "mfe_price": 439.3500061035156,
+      "mae_price": 438.1000061035156
+    },
+    "ANGELONE.NS": {
+      "ticker": "ANGELONE.NS",
+      "direction": "LONG",
+      "entry_price": 301.25,
+      "qty": 1233,
+      "qty_open": 1233,
+      "stop_loss": 298.79,
+      "initial_stop": 298.79,
+      "t1": 303.06,
+      "t2": 306.17,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 2.46,
+      "atr": 2.46,
+      "margin": 74288.25,
+      "entry_cost": 85.7814938975,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-07 10:31:15 IST",
+      "predicted_rr": null,
+      "entry_rsi": 78.8,
+      "entry_deviation_pct": 0.854,
+      "entry_atr_pct": 0.817,
+      "entry_rvol": 12.74,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 4.57,
+      "entry_stop_pct": 0.817,
+      "nifty_at_entry": 22692.0,
+      "mfe_price": 301.25,
+      "mae_price": 301.25
+    },
+    "OFSS.NS": {
+      "ticker": "OFSS.NS",
+      "direction": "LONG",
+      "entry_price": 10627.0,
+      "qty": 56,
+      "qty_open": 56,
+      "stop_loss": 10573.55,
+      "initial_stop": 10573.55,
+      "t1": 10692.77,
+      "t2": 10735.97,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 53.45,
+      "atr": 53.48,
+      "margin": 119022.40000000001,
+      "entry_cost": 123.225319472,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-07 10:31:15 IST",
+      "predicted_rr": null,
+      "entry_rsi": 71.1,
+      "entry_deviation_pct": 0.978,
+      "entry_atr_pct": 0.503,
+      "entry_rvol": 2.94,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 4.33,
+      "entry_stop_pct": 0.503,
+      "nifty_at_entry": 22692.0,
+      "mfe_price": 10627.0,
+      "mae_price": 10627.0
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "KOTAKBANK.NS": {
+      "close": 439.3500061035156,
+      "high": 439.3500061035156,
+      "low": 438.1000061035156,
+      "as_of": "2026-10-07T10:31:15.937703+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -474,7 +561,7 @@
     "2026-10-01": 3,
     "2026-10-05": 2,
     "2026-10-06": 5,
-    "2026-10-07": 1
+    "2026-10-07": 3
   },
   "total_pnl": -3488.3538263140053,
   "last_sizing_decision": {
@@ -482,7 +569,7 @@
     "performance_scalar": 0.76,
     "performance_reason": "n=20, observed expectancy shrunk to +0.095R vs prior +0.125R -> trimming (0.76x)",
     "drawdown_scalar": 1.0,
-    "drawdown_reason": "drawdown 1.3% - within normal range",
+    "drawdown_reason": "drawdown 1.1% - within normal range",
     "raw_pct": 0.00304,
     "final_pct": 0.00304,
     "clamped": false
