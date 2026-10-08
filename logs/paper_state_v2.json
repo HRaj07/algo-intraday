@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "PNB.NS": {
-      "close": 116.41000366210938,
-      "high": 116.41000366210938,
-      "low": 116.26000213623047,
-      "as_of": "2026-10-08T11:31:15.601071+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
