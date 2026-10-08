@@ -3372,3 +3372,14 @@
 2026-10-08 10:46:28 | INFO    | __main__ | strategy: MOM-v3
 2026-10-08 10:46:28 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-08 10:46:28 | INFO    | __main__ | equity Rs993,306 | open 2 | pending 0 | closed 25 | WR 60.0% | PF 0.91 | friction Rs9,635
+2026-10-08 11:01:04 | INFO    | __main__ | ================================================================
+2026-10-08 11:01:04 | INFO    | __main__ | Scan | 2026-10-08 11:01 IST
+2026-10-08 11:02:03 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-08 11:02:03 | INFO    | engine.paper_trader_v2 | EXIT LICHSGFIN.NS 649@Rs541.44 | P&L Rs-3,278 (-1.13R) | friction Rs383 | stop_loss
+2026-10-08 11:02:06 | INFO    | __main__ | SIZING: 0.240% of equity (Rs2,382 risk per trade)
+2026-10-08 11:02:06 | INFO    | __main__ |   base 0.40%
+2026-10-08 11:02:06 | INFO    | __main__ |   performance x0.6: n=26, observed expectancy shrunk to +0.075R vs prior +0.125R -> trimming (0.60x)
+2026-10-08 11:02:06 | INFO    | __main__ |   drawdown    x1.0: drawdown 1.7% - within normal range
+2026-10-08 11:02:06 | INFO    | __main__ | strategy: MOM-v3
+2026-10-08 11:02:06 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-08 11:02:06 | INFO    | __main__ | equity Rs992,324 | open 1 | pending 0 | closed 26 | WR 57.7% | PF 0.83 | friction Rs10,018

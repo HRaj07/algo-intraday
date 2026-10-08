@@ -1,48 +1,8 @@
 {
-  "cash": 826422.8975863213,
+  "cash": 894002.9646019017,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "LICHSGFIN.NS": {
-      "ticker": "LICHSGFIN.NS",
-      "direction": "LONG",
-      "entry_price": 545.9000244140625,
-      "qty": 649,
-      "qty_open": 649,
-      "stop_loss": 541.44,
-      "initial_stop": 541.44,
-      "t1": 548.82,
-      "t2": 554.46,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 4.46,
-      "atr": 4.46,
-      "margin": 70857.82316894531,
-      "entry_cost": 82.9101237271023,
-      "bars_held": 2,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-08 10:15:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 88.3,
-      "entry_deviation_pct": 1.074,
-      "entry_atr_pct": 0.817,
-      "entry_rvol": 12.11,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 3.01,
-      "entry_stop_pct": 0.817,
-      "nifty_at_entry": 22493.05078125,
-      "mfe_price": 545.9000244140625,
-      "mae_price": 542.0999755859375
-    },
     "PNB.NS": {
       "ticker": "PNB.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 0.68,
       "margin": 99769.19869995117,
       "entry_cost": 107.10981238782013,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-08 10:15:50 IST",
@@ -87,16 +47,16 @@
   "pending_orders": {},
   "last_known_price": {
     "PNB.NS": {
-      "close": 116.80000305175781,
-      "high": 116.80000305175781,
-      "low": 116.62999725341797,
-      "as_of": "2026-10-08T10:45:45.473391+05:30"
+      "close": 116.76000213623047,
+      "high": 116.76000213623047,
+      "low": 116.72000122070312,
+      "as_of": "2026-10-08T11:01:04.317537+05:30"
     },
     "LICHSGFIN.NS": {
-      "close": 542.0999755859375,
-      "high": 542.4500122070312,
-      "low": 542.0999755859375,
-      "as_of": "2026-10-08T10:45:45.473391+05:30"
+      "close": 541.0,
+      "high": 541.5499877929688,
+      "low": 540.9000244140625,
+      "as_of": "2026-10-08T11:01:04.317537+05:30"
     }
   },
   "trade_history": [
@@ -624,6 +584,27 @@
       "entry_rvol": 3.2,
       "entry_turnover_cr": 39.15,
       "entry_stop_pct": 0.506
+    },
+    {
+      "ticker": "LICHSGFIN.NS",
+      "direction": "LONG",
+      "entry_price": 545.9000244140625,
+      "exit_price": 541.44,
+      "qty": 649,
+      "pnl": -3277.76,
+      "R_multiple": -1.13,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 383.2,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-08 10:15:50 IST",
+      "exit_time": "2026-10-08 11:01:04 IST",
+      "entry_rsi": 88.3,
+      "entry_deviation_pct": 1.074,
+      "entry_atr_pct": 0.817,
+      "entry_rvol": 12.11,
+      "entry_turnover_cr": 3.01,
+      "entry_stop_pct": 0.817
     }
   ],
   "daily_entry_count": {
@@ -635,7 +616,7 @@
     "2026-10-07": 5,
     "2026-10-08": 2
   },
-  "total_pnl": -2950.080544782655,
+  "total_pnl": -6227.836698147645,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.726,
