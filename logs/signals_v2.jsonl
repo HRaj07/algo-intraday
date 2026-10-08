@@ -295,3 +295,4 @@
 {"time": "2026-10-08 14:01:04.847544+05:30", "strategy": "MOM-v3", "regime": "NIFTY down -1.59% on the day - standing down at 1.5%", "scanned": 210, "signals": [], "rejects": {"regime gate closed": 210}, "near_misses": []}
 {"time": "2026-10-08 14:15:49.548200+05:30", "strategy": "MOM-v3", "regime": "NIFTY down -1.61% on the day - standing down at 1.5%", "scanned": 210, "signals": [], "rejects": {"regime gate closed": 210}, "near_misses": []}
 {"time": "2026-10-08 14:31:23.028181+05:30", "strategy": "MOM-v3", "regime": "NIFTY down -1.70% on the day - standing down at 1.5%", "scanned": 210, "signals": [], "rejects": {"regime gate closed": 210}, "near_misses": []}
+{"time": "2026-10-08 14:45:55.511118+05:30", "strategy": "MOM-v3", "regime": "NIFTY down -1.65% on the day - standing down at 1.5%", "scanned": 210, "signals": [], "rejects": {"regime gate closed": 210}, "near_misses": []}
