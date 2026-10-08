@@ -3496,3 +3496,14 @@
 2026-10-08 13:46:36 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-08 13:46:36 | INFO    | strategies.momentum_v3 | REGIME GATE CLOSED: NIFTY down -1.54% on the day - standing down at 1.5% - no entries this scan
 2026-10-08 13:46:36 | INFO    | __main__ | equity Rs990,354 | open 0 | pending 0 | closed 27 | WR 55.6% | PF 0.76 | friction Rs10,540
+2026-10-08 14:01:04 | INFO    | __main__ | ================================================================
+2026-10-08 14:01:04 | INFO    | __main__ | Scan | 2026-10-08 14:01 IST
+2026-10-08 14:01:42 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-08 14:01:42 | INFO    | __main__ | SIZING: 0.240% of equity (Rs2,377 risk per trade)
+2026-10-08 14:01:42 | INFO    | __main__ |   base 0.40%
+2026-10-08 14:01:42 | INFO    | __main__ |   performance x0.6: n=27, observed expectancy shrunk to +0.058R vs prior +0.125R -> trimming (0.60x)
+2026-10-08 14:01:42 | INFO    | __main__ |   drawdown    x1.0: drawdown 1.9% - within normal range
+2026-10-08 14:01:42 | INFO    | __main__ | strategy: MOM-v3
+2026-10-08 14:01:42 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-08 14:01:42 | INFO    | strategies.momentum_v3 | REGIME GATE CLOSED: NIFTY down -1.59% on the day - standing down at 1.5% - no entries this scan
+2026-10-08 14:01:42 | INFO    | __main__ | equity Rs990,354 | open 0 | pending 0 | closed 27 | WR 55.6% | PF 0.76 | friction Rs10,540
