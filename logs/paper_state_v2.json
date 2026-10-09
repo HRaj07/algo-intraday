@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "APOLLOHOSP.NS": {
-      "close": 7905.5,
-      "high": 7908.0,
-      "low": 7903.0,
-      "as_of": "2026-10-09T12:31:12.871841+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",

@@ -3734,3 +3734,7 @@
 2026-10-09 12:32:10 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
 2026-10-09 12:32:10 | INFO    | engine.paper_trader_v2 | EXIT APOLLOHOSP.NS 50@Rs7920.58 | P&L Rs-2,572 (-1.20R) | friction Rs426 | stop_loss
 2026-10-09 12:32:12 | WARNING | __main__ | NOT TRADING: daily loss Rs-9,341 hit the -3.0R limit (-Rs6,082)
+2026-10-09 12:45:55 | INFO    | __main__ | ================================================================
+2026-10-09 12:45:55 | INFO    | __main__ | Scan | 2026-10-09 12:45 IST
+2026-10-09 12:46:21 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-09 12:46:21 | WARNING | __main__ | NOT TRADING: daily loss Rs-9,341 hit the -3.0R limit (-Rs6,082)
