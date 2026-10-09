@@ -3654,3 +3654,14 @@
 2026-10-09 10:31:55 | INFO    | engine.paper_trader_v2 | FILLED TATAELXSI.NS @ Rs3135.699951171875 | qty=105 notional=Rs329,248 friction=Rs362
 2026-10-09 10:31:55 | INFO    | engine.paper_trader_v2 | FILLED TCS.NS @ Rs2191.0 | qty=125 notional=Rs273,875 friction=Rs309
 2026-10-09 10:31:55 | INFO    | __main__ | equity Rs991,947 | open 3 | pending 0 | closed 28 | WR 57.1% | PF 0.79 | friction Rs10,846
+2026-10-09 10:45:46 | INFO    | __main__ | ================================================================
+2026-10-09 10:45:46 | INFO    | __main__ | Scan | 2026-10-09 10:45 IST
+2026-10-09 10:46:27 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-09 10:46:27 | INFO    | __main__ | SIZING: 0.240% of equity (Rs2,377 risk per trade)
+2026-10-09 10:46:27 | INFO    | __main__ |   base 0.40%
+2026-10-09 10:46:27 | INFO    | __main__ |   performance x0.6: n=28, observed expectancy shrunk to +0.065R vs prior +0.125R -> trimming (0.60x)
+2026-10-09 10:46:27 | INFO    | __main__ |   drawdown    x1.0: drawdown 1.9% - within normal range
+2026-10-09 10:46:27 | INFO    | __main__ | strategy: MOM-v3
+2026-10-09 10:46:27 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-09 10:46:28 | INFO    | engine.paper_trader_v2 | ORDER REJECTED TCS.NS: already holding this name
+2026-10-09 10:46:28 | INFO    | __main__ | equity Rs990,560 | open 3 | pending 0 | closed 28 | WR 57.1% | PF 0.79 | friction Rs10,846
