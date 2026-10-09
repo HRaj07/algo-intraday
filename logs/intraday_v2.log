@@ -3724,3 +3724,8 @@
 2026-10-09 12:01:41 | INFO    | engine.paper_trader_v2 | ORDER APOLLOHOSP.NS market buy at next open (ref Rs7963.0, SL 0.539%, RSI 74.5, rvol 3.34)
 2026-10-09 12:01:41 | INFO    | engine.paper_trader_v2 | FILLED APOLLOHOSP.NS @ Rs7963.5 | qty=50 notional=Rs398,175 friction=Rs427
 2026-10-09 12:01:41 | INFO    | __main__ | equity Rs984,519 | open 2 | pending 0 | closed 30 | WR 53.3% | PF 0.7 | friction Rs11,513
+2026-10-09 12:15:47 | INFO    | __main__ | ================================================================
+2026-10-09 12:15:47 | INFO    | __main__ | Scan | 2026-10-09 12:15 IST
+2026-10-09 12:16:23 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-09 12:16:23 | INFO    | engine.paper_trader_v2 | EXIT ICICIGI.NS 225@Rs1672.66 | P&L Rs-2,778 (-1.17R) | friction Rs407 | stop_loss
+2026-10-09 12:16:23 | WARNING | __main__ | NOT TRADING: daily loss Rs-6,769 hit the -3.0R limit (-Rs6,229)
