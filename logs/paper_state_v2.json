@@ -27,7 +27,7 @@
       "atr": 10.52,
       "margin": 75743.99780273438,
       "entry_cost": 86.99999848082277,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-09 10:15:47 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.626,
       "nifty_at_entry": 22468.80078125,
       "mfe_price": 1683.199951171875,
-      "mae_price": 1680.0
+      "mae_price": 1677.699951171875
     },
     "TATAELXSI.NS": {
       "ticker": "TATAELXSI.NS",
@@ -67,7 +67,7 @@
       "atr": 22.59,
       "margin": 65849.69897460938,
       "entry_cost": 78.71817353271729,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-09 10:31:17 IST",
@@ -81,7 +81,7 @@
       "entry_stop_pct": 0.72,
       "nifty_at_entry": 22492.099609375,
       "mfe_price": 3135.699951171875,
-      "mae_price": 3125.300048828125
+      "mae_price": 3120.300048828125
     },
     "TCS.NS": {
       "ticker": "TCS.NS",
@@ -107,7 +107,7 @@
       "atr": 18.95,
       "margin": 54775.0,
       "entry_cost": 69.44831825,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-09 10:31:17 IST",
@@ -120,29 +120,29 @@
       "entry_turnover_cr": 15.79,
       "entry_stop_pct": 0.865,
       "nifty_at_entry": 22492.099609375,
-      "mfe_price": 2196.89990234375,
+      "mfe_price": 2199.89990234375,
       "mae_price": 2191.0
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "TCS.NS": {
-      "close": 2195.10009765625,
-      "high": 2196.89990234375,
-      "low": 2194.0,
-      "as_of": "2026-10-09T10:45:46.012033+05:30"
+      "close": 2196.800048828125,
+      "high": 2199.89990234375,
+      "low": 2195.800048828125,
+      "as_of": "2026-10-09T11:01:05.945921+05:30"
     },
     "ICICIGI.NS": {
-      "close": 1680.4000244140625,
-      "high": 1680.699951171875,
-      "low": 1680.0,
-      "as_of": "2026-10-09T10:45:46.012033+05:30"
+      "close": 1678.5,
+      "high": 1678.5,
+      "low": 1677.699951171875,
+      "as_of": "2026-10-09T11:01:05.945921+05:30"
     },
     "TATAELXSI.NS": {
-      "close": 3125.300048828125,
-      "high": 3129.60009765625,
-      "low": 3125.300048828125,
-      "as_of": "2026-10-09T10:45:46.012033+05:30"
+      "close": 3124.0,
+      "high": 3124.0,
+      "low": 3120.300048828125,
+      "as_of": "2026-10-09T11:01:05.945921+05:30"
     }
   },
   "trade_history": [
