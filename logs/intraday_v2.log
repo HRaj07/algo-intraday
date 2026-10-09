@@ -3638,3 +3638,19 @@
 2026-10-09 10:16:35 | INFO    | engine.paper_trader_v2 | FILLED TCS.NS @ Rs2180.199951171875 | qty=124 notional=Rs270,345 friction=Rs305
 2026-10-09 10:16:35 | INFO    | engine.paper_trader_v2 | FILLED ICICIGI.NS @ Rs1683.199951171875 | qty=225 notional=Rs378,720 friction=Rs409
 2026-10-09 10:16:36 | INFO    | __main__ | equity Rs990,354 | open 2 | pending 0 | closed 27 | WR 55.6% | PF 0.76 | friction Rs10,540
+2026-10-09 10:31:17 | INFO    | __main__ | ================================================================
+2026-10-09 10:31:17 | INFO    | __main__ | Scan | 2026-10-09 10:31 IST
+2026-10-09 10:31:53 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-09 10:31:54 | INFO    | engine.paper_trader_v2 | EXIT TCS.NS 124@Rs2194.09 | P&L Rs+1,416 (+0.60R) | friction Rs307 | t1_vwap
+2026-10-09 10:31:54 | INFO    | engine.paper_trader_v2 | T1 TCS.NS - half out at VWAP, stop to Rs2185.53 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-09 10:31:54 | INFO    | __main__ | SIZING: 0.240% of equity (Rs2,379 risk per trade)
+2026-10-09 10:31:54 | INFO    | __main__ |   base 0.40%
+2026-10-09 10:31:54 | INFO    | __main__ |   performance x0.6: n=28, observed expectancy shrunk to +0.065R vs prior +0.125R -> trimming (0.60x)
+2026-10-09 10:31:54 | INFO    | __main__ |   drawdown    x1.0: drawdown 1.8% - within normal range
+2026-10-09 10:31:54 | INFO    | __main__ | strategy: MOM-v3
+2026-10-09 10:31:54 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-09 10:31:55 | INFO    | engine.paper_trader_v2 | ORDER TATAELXSI.NS market buy at next open (ref Rs3136.9, SL 0.72%, RSI 72.8, rvol 8.66)
+2026-10-09 10:31:55 | INFO    | engine.paper_trader_v2 | ORDER TCS.NS market buy at next open (ref Rs2190.7, SL 0.865%, RSI 75.9, rvol 8.0)
+2026-10-09 10:31:55 | INFO    | engine.paper_trader_v2 | FILLED TATAELXSI.NS @ Rs3135.699951171875 | qty=105 notional=Rs329,248 friction=Rs362
+2026-10-09 10:31:55 | INFO    | engine.paper_trader_v2 | FILLED TCS.NS @ Rs2191.0 | qty=125 notional=Rs273,875 friction=Rs309
+2026-10-09 10:31:55 | INFO    | __main__ | equity Rs991,947 | open 3 | pending 0 | closed 28 | WR 57.1% | PF 0.79 | friction Rs10,846
