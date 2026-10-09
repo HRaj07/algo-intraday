@@ -3699,3 +3699,15 @@
 2026-10-09 11:31:52 | INFO    | __main__ | strategy: MOM-v3
 2026-10-09 11:31:52 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-09 11:31:53 | INFO    | __main__ | equity Rs986,844 | open 2 | pending 0 | closed 29 | WR 55.2% | PF 0.74 | friction Rs11,206
+2026-10-09 11:45:49 | INFO    | __main__ | ================================================================
+2026-10-09 11:45:49 | INFO    | __main__ | Scan | 2026-10-09 11:45 IST
+2026-10-09 11:46:27 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-09 11:46:27 | INFO    | engine.paper_trader_v2 | EXIT TCS.NS 125@Rs2172.05 | P&L Rs-2,676 (-1.13R) | friction Rs307 | stop_loss
+2026-10-09 11:46:28 | WARNING | engine.risk_manager | KILL SWITCH (paper - continuing): rolling 30-trade PF 0.70 < 0.85 - edge has degraded, manual restart required
+2026-10-09 11:46:28 | INFO    | __main__ | SIZING: 0.226% of equity (Rs2,231 risk per trade)
+2026-10-09 11:46:28 | INFO    | __main__ |   base 0.40%
+2026-10-09 11:46:28 | INFO    | __main__ |   performance x0.6: n=30, observed expectancy shrunk to +0.035R vs prior +0.125R -> trimming (0.60x)
+2026-10-09 11:46:28 | INFO    | __main__ |   drawdown    x0.943: drawdown 2.3% - sizing at 0.94x
+2026-10-09 11:46:28 | INFO    | __main__ | strategy: MOM-v3
+2026-10-09 11:46:28 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-09 11:46:28 | INFO    | __main__ | equity Rs985,959 | open 1 | pending 0 | closed 30 | WR 53.3% | PF 0.7 | friction Rs11,513

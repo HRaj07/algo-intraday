@@ -1,5 +1,5 @@
 {
-  "cash": 858520.2317810397,
+  "cash": 910619.6478125022,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 10.52,
       "margin": 75743.99780273438,
       "entry_cost": 86.99999848082277,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-09 10:15:47 IST",
@@ -42,67 +42,21 @@
       "nifty_at_entry": 22468.80078125,
       "mfe_price": 1683.199951171875,
       "mae_price": 1674.199951171875
-    },
-    "TCS.NS": {
-      "ticker": "TCS.NS",
-      "direction": "LONG",
-      "entry_price": 2191.0,
-      "qty": 125,
-      "qty_open": 125,
-      "stop_loss": 2172.05,
-      "initial_stop": 2172.05,
-      "t1": 2203.84,
-      "t2": 2228.59,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 18.95,
-      "atr": 18.95,
-      "margin": 54775.0,
-      "entry_cost": 69.44831825,
-      "bars_held": 4,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-09 10:31:17 IST",
-      "predicted_rr": null,
-      "entry_rsi": 75.9,
-      "entry_deviation_pct": 1.327,
-      "entry_atr_pct": 0.865,
-      "entry_rvol": 8.0,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 15.79,
-      "entry_stop_pct": 0.865,
-      "nifty_at_entry": 22492.099609375,
-      "mfe_price": 2199.89990234375,
-      "mae_price": 2180.39990234375
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "TCS.NS": {
-      "close": 2181.0,
-      "high": 2182.0,
-      "low": 2180.39990234375,
-      "as_of": "2026-10-09T11:31:10.701115+05:30"
+      "close": 2170.60009765625,
+      "high": 2171.5,
+      "low": 2169.0,
+      "as_of": "2026-10-09T11:45:49.462909+05:30"
     },
     "ICICIGI.NS": {
-      "close": 1679.0,
-      "high": 1679.199951171875,
-      "low": 1678.5,
-      "as_of": "2026-10-09T11:31:10.701115+05:30"
-    },
-    "TATAELXSI.NS": {
-      "close": 3108.0,
-      "high": 3110.800048828125,
-      "low": 3105.0,
-      "as_of": "2026-10-09T11:31:10.701115+05:30"
+      "close": 1681.4000244140625,
+      "high": 1682.4000244140625,
+      "low": 1681.0,
+      "as_of": "2026-10-09T11:45:49.462909+05:30"
     }
   },
   "trade_history": [
@@ -714,6 +668,27 @@
       "entry_rvol": 8.66,
       "entry_turnover_cr": 2.02,
       "entry_stop_pct": 0.72
+    },
+    {
+      "ticker": "TCS.NS",
+      "direction": "LONG",
+      "entry_price": 2191.0,
+      "exit_price": 2172.05,
+      "qty": 125,
+      "pnl": -2675.58,
+      "R_multiple": -1.13,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 306.83,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-09 10:31:17 IST",
+      "exit_time": "2026-10-09 11:45:49 IST",
+      "entry_rsi": 75.9,
+      "entry_deviation_pct": 1.327,
+      "entry_atr_pct": 0.865,
+      "entry_rvol": 8.0,
+      "entry_turnover_cr": 15.79,
+      "entry_stop_pct": 0.865
     }
   ],
   "daily_entry_count": {
@@ -726,7 +701,7 @@
     "2026-10-08": 2,
     "2026-10-09": 4
   },
-  "total_pnl": -10960.770416226373,
+  "total_pnl": -13636.35438476385,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
