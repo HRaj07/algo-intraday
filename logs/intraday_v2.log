@@ -3688,3 +3688,14 @@
 2026-10-09 11:16:22 | INFO    | engine.paper_trader_v2 | ORDER REJECTED RBLBANK.NS: at max concurrent positions (3)
 2026-10-09 11:16:22 | INFO    | engine.paper_trader_v2 | ORDER REJECTED TCS.NS: already holding this name
 2026-10-09 11:16:22 | INFO    | __main__ | equity Rs987,522 | open 3 | pending 0 | closed 28 | WR 57.1% | PF 0.79 | friction Rs10,846
+2026-10-09 11:31:10 | INFO    | __main__ | ================================================================
+2026-10-09 11:31:10 | INFO    | __main__ | Scan | 2026-10-09 11:31 IST
+2026-10-09 11:31:52 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-09 11:31:52 | INFO    | engine.paper_trader_v2 | EXIT TATAELXSI.NS 105@Rs3113.12 | P&L Rs-2,731 (-1.15R) | friction Rs360 | stop_loss
+2026-10-09 11:31:52 | INFO    | __main__ | SIZING: 0.230% of equity (Rs2,267 risk per trade)
+2026-10-09 11:31:52 | INFO    | __main__ |   base 0.40%
+2026-10-09 11:31:52 | INFO    | __main__ |   performance x0.6: n=29, observed expectancy shrunk to +0.050R vs prior +0.125R -> trimming (0.60x)
+2026-10-09 11:31:52 | INFO    | __main__ |   drawdown    x0.957: drawdown 2.3% - sizing at 0.96x
+2026-10-09 11:31:52 | INFO    | __main__ | strategy: MOM-v3
+2026-10-09 11:31:52 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-09 11:31:53 | INFO    | __main__ | equity Rs986,844 | open 2 | pending 0 | closed 29 | WR 55.2% | PF 0.74 | friction Rs11,206
