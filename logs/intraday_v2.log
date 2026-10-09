@@ -3729,3 +3729,8 @@
 2026-10-09 12:16:23 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
 2026-10-09 12:16:23 | INFO    | engine.paper_trader_v2 | EXIT ICICIGI.NS 225@Rs1672.66 | P&L Rs-2,778 (-1.17R) | friction Rs407 | stop_loss
 2026-10-09 12:16:23 | WARNING | __main__ | NOT TRADING: daily loss Rs-6,769 hit the -3.0R limit (-Rs6,229)
+2026-10-09 12:31:12 | INFO    | __main__ | ================================================================
+2026-10-09 12:31:12 | INFO    | __main__ | Scan | 2026-10-09 12:31 IST
+2026-10-09 12:32:10 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-09 12:32:10 | INFO    | engine.paper_trader_v2 | EXIT APOLLOHOSP.NS 50@Rs7920.58 | P&L Rs-2,572 (-1.20R) | friction Rs426 | stop_loss
+2026-10-09 12:32:12 | WARNING | __main__ | NOT TRADING: daily loss Rs-9,341 hit the -3.0R limit (-Rs6,082)

@@ -1,62 +1,15 @@
 {
-  "cash": 903950.217536093,
+  "cash": 981013.5250412689,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "APOLLOHOSP.NS": {
-      "ticker": "APOLLOHOSP.NS",
-      "direction": "LONG",
-      "entry_price": 7963.5,
-      "qty": 50,
-      "qty_open": 50,
-      "stop_loss": 7920.58,
-      "initial_stop": 7920.58,
-      "t1": 8010.78,
-      "t2": 8048.88,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 42.92,
-      "atr": 42.94,
-      "margin": 79635.0,
-      "entry_cost": 90.25688405000001,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-09 12:01:03 IST",
-      "predicted_rr": null,
-      "entry_rsi": 74.5,
-      "entry_deviation_pct": 0.97,
-      "entry_atr_pct": 0.539,
-      "entry_rvol": 3.34,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 23.09,
-      "entry_stop_pct": 0.539,
-      "nifty_at_entry": 22450.349609375,
-      "mfe_price": 7963.5,
-      "mae_price": 7936.0
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
-    "ICICIGI.NS": {
-      "close": 1672.5999755859375,
-      "high": 1673.199951171875,
-      "low": 1672.5,
-      "as_of": "2026-10-09T12:15:47.339737+05:30"
-    },
     "APOLLOHOSP.NS": {
-      "close": 7936.0,
-      "high": 7936.0,
-      "low": 7936.0,
-      "as_of": "2026-10-09T12:15:47.339737+05:30"
+      "close": 7905.5,
+      "high": 7908.0,
+      "low": 7903.0,
+      "as_of": "2026-10-09T12:31:12.871841+05:30"
     }
   },
   "trade_history": [
@@ -710,6 +663,27 @@
       "entry_rvol": 2.76,
       "entry_turnover_cr": 4.52,
       "entry_stop_pct": 0.626
+    },
+    {
+      "ticker": "APOLLOHOSP.NS",
+      "direction": "LONG",
+      "entry_price": 7963.5,
+      "exit_price": 7920.58,
+      "qty": 50,
+      "pnl": -2571.69,
+      "R_multiple": -1.2,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 425.69,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-09 12:01:03 IST",
+      "exit_time": "2026-10-09 12:31:12 IST",
+      "entry_rsi": 74.5,
+      "entry_deviation_pct": 0.97,
+      "entry_atr_pct": 0.539,
+      "entry_rvol": 3.34,
+      "entry_turnover_cr": 23.09,
+      "entry_stop_pct": 0.539
     }
   ],
   "daily_entry_count": {
@@ -722,7 +696,7 @@
     "2026-10-08": 2,
     "2026-10-09": 5
   },
-  "total_pnl": -16414.78246390753,
+  "total_pnl": -18986.474958731535,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
