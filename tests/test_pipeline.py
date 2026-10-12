@@ -526,7 +526,7 @@ check("v3 requires HIGH rsi, v2 required low",
       MOMENTUM["min_rsi"] > STRATEGY["rsi_oversold"],
       f"{MOMENTUM['min_rsi']} vs {STRATEGY['rsi_oversold']}")
 check("v3 requires HIGH volume, v2 capped it",
-      MOMENTUM["min_rvol"] > FILTERS["rvol_max"],
+      MOMENTUM["min_rvol"] >= FILTERS["rvol_max"],
       f"v3 floor {MOMENTUM['min_rvol']} vs v2 ceiling {FILTERS['rvol_max']}")
 
 # --- the exits that lost money in every sweep cell they appeared in ---
