@@ -1,5 +1,5 @@
 {
-  "cash": 823262.5398389478,
+  "cash": 877214.8653729957,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 24.12,
       "margin": 54917.518359375004,
       "entry_cost": 69.56761039234766,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-12 10:15:47 IST",
@@ -42,46 +42,6 @@
       "nifty_at_entry": 22489.25,
       "mfe_price": 3278.10009765625,
       "mae_price": 3250.10009765625
-    },
-    "ANGELONE.NS": {
-      "ticker": "ANGELONE.NS",
-      "direction": "LONG",
-      "entry_price": 303.5,
-      "qty": 927,
-      "qty_open": 927,
-      "stop_loss": 301.34,
-      "initial_stop": 301.34,
-      "t1": 305.42,
-      "t2": 307.92,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.16,
-      "atr": 2.16,
-      "margin": 56268.9,
-      "entry_cost": 70.698757367,
-      "bars_held": 4,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-12 10:31:19 IST",
-      "predicted_rr": null,
-      "entry_rsi": 73.3,
-      "entry_deviation_pct": 1.027,
-      "entry_atr_pct": 0.711,
-      "entry_rvol": 2.18,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.64,
-      "entry_stop_pct": 0.711,
-      "nifty_at_entry": 22456.75,
-      "mfe_price": 303.5,
-      "mae_price": 301.3500061035156
     },
     "WELCORP.NS": {
       "ticker": "WELCORP.NS",
@@ -107,7 +67,7 @@
       "atr": 24.34,
       "margin": 44116.80078125,
       "entry_cost": 60.5270857579297,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-12 11:15:50 IST",
@@ -121,28 +81,28 @@
       "entry_stop_pct": 0.883,
       "nifty_at_entry": 22383.19921875,
       "mfe_price": 2772.0,
-      "mae_price": 2757.300048828125
+      "mae_price": 2753.800048828125
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "TATAELXSI.NS": {
-      "close": 3269.0,
-      "high": 3278.10009765625,
-      "low": 3266.89990234375,
-      "as_of": "2026-10-12T11:31:23.944668+05:30"
+      "close": 3253.199951171875,
+      "high": 3255.89990234375,
+      "low": 3253.0,
+      "as_of": "2026-10-12T11:45:49.848121+05:30"
     },
     "ANGELONE.NS": {
-      "close": 301.5,
-      "high": 301.6499938964844,
-      "low": 301.3500061035156,
-      "as_of": "2026-10-12T11:31:23.944668+05:30"
+      "close": 301.0,
+      "high": 301.0,
+      "low": 301.0,
+      "as_of": "2026-10-12T11:45:49.848121+05:30"
     },
     "WELCORP.NS": {
-      "close": 2770.89990234375,
-      "high": 2772.0,
-      "low": 2767.39990234375,
-      "as_of": "2026-10-12T11:31:23.944668+05:30"
+      "close": 2753.800048828125,
+      "high": 2757.39990234375,
+      "low": 2753.800048828125,
+      "as_of": "2026-10-12T11:45:49.848121+05:30"
     }
   },
   "trade_history": [
@@ -838,6 +798,27 @@
       "entry_rvol": 6.37,
       "entry_turnover_cr": 2.15,
       "entry_stop_pct": 0.518
+    },
+    {
+      "ticker": "ANGELONE.NS",
+      "direction": "LONG",
+      "entry_price": 303.5,
+      "exit_price": 301.34,
+      "qty": 927,
+      "pnl": -2316.57,
+      "R_multiple": -1.16,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 314.25,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-12 10:31:19 IST",
+      "exit_time": "2026-10-12 11:45:49 IST",
+      "entry_rsi": 73.3,
+      "entry_deviation_pct": 1.027,
+      "entry_atr_pct": 0.711,
+      "entry_rvol": 2.18,
+      "entry_turnover_cr": 4.64,
+      "entry_stop_pct": 0.711
     }
   ],
   "daily_entry_count": {
@@ -851,7 +832,7 @@
     "2026-10-09": 5,
     "2026-10-12": 4
   },
-  "total_pnl": -21434.241020427733,
+  "total_pnl": -23750.815486379837,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
