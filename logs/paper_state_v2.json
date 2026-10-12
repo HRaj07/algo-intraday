@@ -27,7 +27,7 @@
       "atr": 0.4,
       "margin": 78543.8618347168,
       "entry_cost": 89.34356867151301,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-12 10:15:47 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.518,
       "nifty_at_entry": 22489.25,
       "mfe_price": 77.58000183105469,
-      "mae_price": 77.4800033569336
+      "mae_price": 77.29000091552734
     },
     "TATAELXSI.NS": {
       "ticker": "TATAELXSI.NS",
@@ -67,7 +67,7 @@
       "atr": 24.12,
       "margin": 54917.518359375004,
       "entry_cost": 69.56761039234766,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-12 10:15:47 IST",
@@ -80,7 +80,7 @@
       "entry_turnover_cr": 4.16,
       "entry_stop_pct": 0.738,
       "nifty_at_entry": 22489.25,
-      "mfe_price": 3268.89990234375,
+      "mfe_price": 3270.39990234375,
       "mae_price": 3260.199951171875
     },
     "ANGELONE.NS": {
@@ -107,7 +107,7 @@
       "atr": 2.16,
       "margin": 56268.9,
       "entry_cost": 70.698757367,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-12 10:31:19 IST",
@@ -121,22 +121,28 @@
       "entry_stop_pct": 0.711,
       "nifty_at_entry": 22456.75,
       "mfe_price": 303.5,
-      "mae_price": 303.5
+      "mae_price": 302.6000061035156
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "IRFC.NS": {
-      "close": 77.4800033569336,
-      "high": 77.58000183105469,
-      "low": 77.4800033569336,
-      "as_of": "2026-10-12T10:31:19.267201+05:30"
+      "close": 77.33999633789062,
+      "high": 77.44999694824219,
+      "low": 77.29000091552734,
+      "as_of": "2026-10-12T10:45:49.972802+05:30"
     },
     "TATAELXSI.NS": {
-      "close": 3262.300048828125,
-      "high": 3265.39990234375,
-      "low": 3260.199951171875,
-      "as_of": "2026-10-12T10:31:19.267201+05:30"
+      "close": 3268.39990234375,
+      "high": 3270.39990234375,
+      "low": 3266.800048828125,
+      "as_of": "2026-10-12T10:45:49.972802+05:30"
+    },
+    "ANGELONE.NS": {
+      "close": 302.6000061035156,
+      "high": 302.6000061035156,
+      "low": 302.6000061035156,
+      "as_of": "2026-10-12T10:45:49.972802+05:30"
     }
   },
   "trade_history": [
