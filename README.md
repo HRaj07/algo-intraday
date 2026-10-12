@@ -1,20 +1,54 @@
-# AlgoTrade India — Intraday Bot
+# AlgoTrade India — an intraday bot that measures itself honestly
 
-Automated intraday **paper** trading on NSE equities, running on GitHub Actions.
-No server, no laptop needed. Scans every 15 minutes during market hours.
+[![Scanner](https://github.com/HRaj07/algo-intraday/actions/workflows/intraday_scan.yml/badge.svg)](https://github.com/HRaj07/algo-intraday/actions/workflows/intraday_scan.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)
+![Paper trading only](https://img.shields.io/badge/money-paper%20only-orange.svg)
 
-> **Status: v3. Direction reversed after measurement. Expected to make roughly nothing.**
+**A free, serverless NSE intraday trading bot that runs entirely on GitHub
+Actions — and publishes every trade, every rejected signal and every losing
+experiment in the repo.** No server, no laptop, no broker. Paper money only.
+
+Most trading-bot repos show you a backtest. This one shows you what happened
+after: v1 lost ₹11,317 because its research charged ₹50 a trade and reality
+charged ₹421; v2's whole premise turned out to be negative *before* costs; a
+quick 0.6% scalping experiment lost ₹22,761 in two weeks. Each failure is
+measured, written down, and turned into a test so it cannot quietly come back.
+
+### What you get
+
+- **Runs itself.** A scan every 15 minutes in NSE hours, a research job every
+  Saturday, a walk-forward re-fit every Sunday — all on free GitHub Actions.
+- **A real cost model.** Brokerage, STT, exchange and SEBI fees, stamp duty, GST
+  and slippage are charged on every simulated fill, from one file shared by the backtest and the
+  live engine, so the two cannot disagree again.
+- **Self-tuning that cannot cheat.** The weekly walk-forward may only move four
+  thresholds inside fixed bands, and only if the change also wins on two weeks
+  of data it never saw.
+- **Everything on the record.** `logs/` holds every trade, every open position
+  bar by bar, and on every scan a tally of why the other ~210 stocks were skipped.
+- **144 tests**, including the bugs that cost real (paper) money.
+
+### Run your own copy in five minutes
+
+1. **Fork** this repo.
+2. In your fork: **Settings → Actions → General → Workflow permissions →
+   Read and write**, then open the **Actions** tab and enable workflows
+   (GitHub disables schedules on forks until you do).
+3. Optional: delete the files in `logs/` to start your own ₹10,00,000 paper book
+   instead of continuing this one.
+4. Optional: add a `DISCORD_WEBHOOK_URL` secret to get fills and exits on Discord.
+
+That's it — the next market-hours scan runs on its own. To try it locally:
+`pip install -r requirements.txt && python tests/test_pipeline.py && python main.py`.
+
+> **Status (Oct 2026): v3, unproven. Do not point this at a broker.**
+> It buys NSE stocks running ≥1.2% above VWAP with RSI ≥ 70 on ≥2× volume, and
+> exits on a 1.2%+ stop, a close back below VWAP, or the 15:05 square-off. Its
+> honestly expected return is roughly zero; it runs to collect forward evidence.
+> The go-live bar is at the bottom of this file and nothing here clears it.
 >
-> v1 lost ₹11,317 over 49 paper trades because costs ate its winners. v2 rebuilt
-> the cost model and the engine around the same mean-reversion idea. In September
-> 2026 that idea was finally measured directly — **it was negative before costs**,
-> so v2 was not a cost problem and could not be rescued by tuning.
->
-> v3 trades the opposite signal, which is the only one on this market measured with
-> the right sign. Its honestly expected return is **approximately zero**. It is
-> running so that forward paper trades can test it on data no one has seen. Do not
-> point this at a broker. The go-live bar is at the bottom of this file and nothing
-> in v3 clears it.
+> *Not investment advice. This is research code that trades simulated money.*
 
 ---
 
@@ -23,12 +57,12 @@ No server, no laptop needed. Scans every 15 minutes during market hours.
 | | v1 | v2 | v3 |
 |---|---|---|---|
 | Idea | buy stretched **below** VWAP | same, with real costs | buy stretched **above** VWAP |
-| RSI | < 28 | < 40 | **≥ 75** |
-| Volume | ignored | ceiling at 2× | **floor at 4×** |
+| RSI | < 28 | < 40 | **≥ 70** |
+| Volume | ignored | ceiling at 2× | **floor at 2×** (this bar) |
 | Entry | close of a forming bar | stop-limit above the high | market, next bar's open |
 | Stop | 0.55% flat | 1.2×ATR, floor 0.8% | 2.0×ATR, floor **1.2%** |
 | Exits | target + trail | scale at VWAP, trail, time stop | **stop or square-off, nothing else** |
-| Result | −₹11,317 live | negative before costs | ~breakeven, unproven |
+| Result | −₹11,317 live | negative before costs | 0.6% scalp variant: −₹22,761 live; current: unproven |
 
 ---
 
@@ -303,7 +337,7 @@ measures and writes; it changes nothing. The scanner is unchanged since v2.
 ### Local commands
 
 ```bash
-python tests/test_pipeline.py      # 135 assertions, synthetic data, no network
+python tests/test_pipeline.py      # 144 assertions, synthetic data, no network
 python check_data.py               # is ^NSEI actually fetching?
 python main.py                     # one scan by hand
 python backtest_recent.py          # replay the REAL strategy on real bars
