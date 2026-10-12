@@ -1,48 +1,8 @@
 {
-  "cash": 877214.8653729957,
+  "cash": 933435.38181152,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "TATAELXSI.NS": {
-      "ticker": "TATAELXSI.NS",
-      "direction": "LONG",
-      "entry_price": 3268.89990234375,
-      "qty": 84,
-      "qty_open": 84,
-      "stop_loss": 3244.78,
-      "initial_stop": 3244.78,
-      "t1": 3288.11,
-      "t2": 3316.74,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 24.12,
-      "atr": 24.12,
-      "margin": 54917.518359375004,
-      "entry_cost": 69.56761039234766,
-      "bars_held": 6,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-12 10:15:47 IST",
-      "predicted_rr": null,
-      "entry_rsi": 78.3,
-      "entry_deviation_pct": 0.861,
-      "entry_atr_pct": 0.738,
-      "entry_rvol": 3.81,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.16,
-      "entry_stop_pct": 0.738,
-      "nifty_at_entry": 22489.25,
-      "mfe_price": 3278.10009765625,
-      "mae_price": 3250.10009765625
-    },
     "WELCORP.NS": {
       "ticker": "WELCORP.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 24.34,
       "margin": 44116.80078125,
       "entry_cost": 60.5270857579297,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-12 11:15:50 IST",
@@ -81,28 +41,22 @@
       "entry_stop_pct": 0.883,
       "nifty_at_entry": 22383.19921875,
       "mfe_price": 2772.0,
-      "mae_price": 2753.800048828125
+      "mae_price": 2745.10009765625
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "TATAELXSI.NS": {
-      "close": 3253.199951171875,
-      "high": 3255.89990234375,
-      "low": 3253.0,
-      "as_of": "2026-10-12T11:45:49.848121+05:30"
-    },
-    "ANGELONE.NS": {
-      "close": 301.0,
-      "high": 301.0,
-      "low": 301.0,
-      "as_of": "2026-10-12T11:45:49.848121+05:30"
+      "close": 3281.0,
+      "high": 3289.5,
+      "low": 3281.0,
+      "as_of": "2026-10-12T12:01:08.567831+05:30"
     },
     "WELCORP.NS": {
-      "close": 2753.800048828125,
-      "high": 2757.39990234375,
-      "low": 2753.800048828125,
-      "as_of": "2026-10-12T11:45:49.848121+05:30"
+      "close": 2745.10009765625,
+      "high": 2750.0,
+      "low": 2745.10009765625,
+      "as_of": "2026-10-12T12:01:08.567831+05:30"
     }
   },
   "trade_history": [
@@ -819,6 +773,27 @@
       "entry_rvol": 2.18,
       "entry_turnover_cr": 4.64,
       "entry_stop_pct": 0.711
+    },
+    {
+      "ticker": "TATAELXSI.NS",
+      "direction": "LONG",
+      "entry_price": 3268.89990234375,
+      "exit_price": 3288.11,
+      "qty": 84,
+      "pnl": 1303.0,
+      "R_multiple": 0.64,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 310.65,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-12 10:15:47 IST",
+      "exit_time": "2026-10-12 12:01:08 IST",
+      "entry_rsi": 78.3,
+      "entry_deviation_pct": 0.861,
+      "entry_atr_pct": 0.738,
+      "entry_rvol": 3.81,
+      "entry_turnover_cr": 4.16,
+      "entry_stop_pct": 0.738
     }
   ],
   "daily_entry_count": {
@@ -832,7 +807,7 @@
     "2026-10-09": 5,
     "2026-10-12": 4
   },
-  "total_pnl": -23750.815486379837,
+  "total_pnl": -22447.817407230614,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
