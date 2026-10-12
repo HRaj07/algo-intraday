@@ -1,5 +1,5 @@
 {
-  "cash": 847552.1448471772,
+  "cash": 791283.2448471772,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 0.4,
       "margin": 78543.8618347168,
       "entry_cost": 89.34356867151301,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-12 10:15:47 IST",
@@ -40,8 +40,8 @@
       "entry_turnover_cr": 2.15,
       "entry_stop_pct": 0.518,
       "nifty_at_entry": 22489.25,
-      "mfe_price": 77.48999786376953,
-      "mae_price": 77.48999786376953
+      "mfe_price": 77.58000183105469,
+      "mae_price": 77.4800033569336
     },
     "TATAELXSI.NS": {
       "ticker": "TATAELXSI.NS",
@@ -67,7 +67,7 @@
       "atr": 24.12,
       "margin": 54917.518359375004,
       "entry_cost": 69.56761039234766,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-12 10:15:47 IST",
@@ -81,11 +81,64 @@
       "entry_stop_pct": 0.738,
       "nifty_at_entry": 22489.25,
       "mfe_price": 3268.89990234375,
-      "mae_price": 3268.89990234375
+      "mae_price": 3260.199951171875
+    },
+    "ANGELONE.NS": {
+      "ticker": "ANGELONE.NS",
+      "direction": "LONG",
+      "entry_price": 303.5,
+      "qty": 927,
+      "qty_open": 927,
+      "stop_loss": 301.34,
+      "initial_stop": 301.34,
+      "t1": 305.42,
+      "t2": 307.92,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 2.16,
+      "atr": 2.16,
+      "margin": 56268.9,
+      "entry_cost": 70.698757367,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-12 10:31:19 IST",
+      "predicted_rr": null,
+      "entry_rsi": 73.3,
+      "entry_deviation_pct": 1.027,
+      "entry_atr_pct": 0.711,
+      "entry_rvol": 2.18,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 4.64,
+      "entry_stop_pct": 0.711,
+      "nifty_at_entry": 22456.75,
+      "mfe_price": 303.5,
+      "mae_price": 303.5
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "IRFC.NS": {
+      "close": 77.4800033569336,
+      "high": 77.58000183105469,
+      "low": 77.4800033569336,
+      "as_of": "2026-10-12T10:31:19.267201+05:30"
+    },
+    "TATAELXSI.NS": {
+      "close": 3262.300048828125,
+      "high": 3265.39990234375,
+      "low": 3260.199951171875,
+      "as_of": "2026-10-12T10:31:19.267201+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -769,17 +822,17 @@
     "2026-10-07": 5,
     "2026-10-08": 2,
     "2026-10-09": 5,
-    "2026-10-12": 2
+    "2026-10-12": 3
   },
   "total_pnl": -18986.474958731535,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
     "performance_reason": "n=32, observed expectancy shrunk to +0.005R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.861,
-    "drawdown_reason": "drawdown 2.8% - sizing at 0.86x",
-    "raw_pct": 0.00207,
-    "final_pct": 0.00207,
+    "drawdown_scalar": 0.851,
+    "drawdown_reason": "drawdown 2.9% - sizing at 0.85x",
+    "raw_pct": 0.00204,
+    "final_pct": 0.00204,
     "clamped": false
   },
   "killswitch_trips": [

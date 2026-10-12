@@ -3867,3 +3867,16 @@
 2026-10-12 10:16:35 | INFO    | engine.paper_trader_v2 | FILLED IRFC.NS @ Rs77.48999786376953 | qty=5068 notional=Rs392,719 friction=Rs422
 2026-10-12 10:16:35 | INFO    | engine.paper_trader_v2 | FILLED TATAELXSI.NS @ Rs3268.89990234375 | qty=84 notional=Rs274,588 friction=Rs309
 2026-10-12 10:16:36 | INFO    | __main__ | equity Rs981,014 | open 2 | pending 0 | closed 32 | WR 50.0% | PF 0.62 | friction Rs12,346
+2026-10-12 10:31:19 | INFO    | __main__ | ================================================================
+2026-10-12 10:31:19 | INFO    | __main__ | Scan | 2026-10-12 10:31 IST
+2026-10-12 10:31:45 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-12 10:31:46 | INFO    | __main__ | SIZING: 0.204% of equity (Rs2,003 risk per trade)
+2026-10-12 10:31:46 | INFO    | __main__ |   base 0.40%
+2026-10-12 10:31:46 | INFO    | __main__ |   performance x0.6: n=32, observed expectancy shrunk to +0.005R vs prior +0.125R -> trimming (0.60x)
+2026-10-12 10:31:46 | INFO    | __main__ |   drawdown    x0.851: drawdown 2.9% - sizing at 0.85x
+2026-10-12 10:31:46 | INFO    | __main__ | strategy: MOM-v3
+2026-10-12 10:31:46 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-12 10:31:46 | INFO    | engine.paper_trader_v2 | ORDER REJECTED IRFC.NS: already holding this name
+2026-10-12 10:31:46 | INFO    | engine.paper_trader_v2 | ORDER ANGELONE.NS market buy at next open (ref Rs303.6, SL 0.711%, RSI 73.3, rvol 2.18)
+2026-10-12 10:31:46 | INFO    | engine.paper_trader_v2 | FILLED ANGELONE.NS @ Rs303.5 | qty=927 notional=Rs281,344 friction=Rs316
+2026-10-12 10:31:47 | INFO    | __main__ | equity Rs980,408 | open 3 | pending 0 | closed 32 | WR 50.0% | PF 0.62 | friction Rs12,346
