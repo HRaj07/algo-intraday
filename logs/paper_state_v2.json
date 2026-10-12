@@ -1,56 +1,15 @@
 {
-  "cash": 917954.9533788547,
+  "cash": 977239.2612287613,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "ANGELONE.NS": {
-      "ticker": "ANGELONE.NS",
-      "direction": "LONG",
-      "entry_price": 304.20001220703125,
-      "qty": 998,
-      "qty_open": 998,
-      "stop_loss": 302.24,
-      "initial_stop": 302.24,
-      "t1": 306.08,
-      "t2": 308.17,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 1.96,
-      "atr": 1.96,
-      "margin": 60718.32243652344,
-      "entry_cost": 74.42305742904321,
-      "bars_held": 10,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-12 12:31:15 IST",
-      "predicted_rr": null,
-      "entry_rsi": 70.5,
-      "entry_deviation_pct": 0.878,
-      "entry_atr_pct": 0.645,
-      "entry_rvol": 2.37,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.64,
-      "entry_stop_pct": 0.645,
-      "nifty_at_entry": 22391.30078125,
-      "mfe_price": 304.75,
-      "mae_price": 302.54998779296875
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "ANGELONE.NS": {
-      "close": 303.0,
-      "high": 303.1499938964844,
-      "low": 303.0,
-      "as_of": "2026-10-12T15:01:06.543993+05:30"
+      "close": 303.1000061035156,
+      "high": 303.8500061035156,
+      "low": 302.75,
+      "as_of": "2026-10-12T15:15:56.153145+05:30"
     }
   },
   "trade_history": [
@@ -809,6 +768,27 @@
       "entry_rvol": 2.61,
       "entry_turnover_cr": 7.48,
       "entry_stop_pct": 0.883
+    },
+    {
+      "ticker": "ANGELONE.NS",
+      "direction": "LONG",
+      "entry_price": 304.20001220703125,
+      "exit_price": 303.1,
+      "qty": 998,
+      "pnl": -1434.01,
+      "R_multiple": -0.73,
+      "reason": "square_off",
+      "partial": false,
+      "friction": 336.21,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-12 12:31:15 IST",
+      "exit_time": "2026-10-12 15:15:56 IST",
+      "entry_rsi": 70.5,
+      "entry_deviation_pct": 0.878,
+      "entry_atr_pct": 0.645,
+      "entry_rvol": 2.37,
+      "entry_turnover_cr": 4.64,
+      "entry_stop_pct": 0.645
     }
   ],
   "daily_entry_count": {
@@ -822,7 +802,7 @@
     "2026-10-09": 5,
     "2026-10-12": 5
   },
-  "total_pnl": -21326.72418462253,
+  "total_pnl": -22760.7387712393,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,

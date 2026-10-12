@@ -4089,3 +4089,9 @@
 2026-10-12 15:01:44 | INFO    | __main__ | strategy: MOM-v3
 2026-10-12 15:01:44 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-12 15:01:44 | INFO    | __main__ | equity Rs977,476 | open 1 | pending 0 | closed 36 | WR 50.0% | PF 0.61 | friction Rs13,650
+2026-10-12 15:15:56 | INFO    | __main__ | ================================================================
+2026-10-12 15:15:56 | INFO    | __main__ | Scan | 2026-10-12 15:15 IST
+2026-10-12 15:16:41 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-12 15:16:41 | INFO    | engine.paper_trader_v2 | EXIT ANGELONE.NS 998@Rs303.1000061035156 | P&L Rs-1,434 (-0.73R) | friction Rs336 | square_off
+2026-10-12 15:16:42 | INFO    | __main__ | EOD: {'equity': 977239.26, 'cash': 977239.26, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 37, 'win_rate_pct': 48.6, 'profit_factor': 0.6, 'total_friction': 13986.12, 'total_pnl': -22760.74, 'return_pct': -2.28}
+2026-10-12 15:16:42 | WARNING | __main__ | KILL SWITCH has tripped 2x in paper mode; latest {'date': '2026-10-12', 'pf': 0.605, 'n': 30, 'trade_count': 32} - live mode would be HALTED
