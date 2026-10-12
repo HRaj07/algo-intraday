@@ -1,18 +1,18 @@
 {
-  "cash": 933435.38181152,
+  "cash": 917954.9533788547,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "WELCORP.NS": {
-      "ticker": "WELCORP.NS",
+    "ANGELONE.NS": {
+      "ticker": "ANGELONE.NS",
       "direction": "LONG",
-      "entry_price": 2757.300048828125,
-      "qty": 80,
-      "qty_open": 80,
-      "stop_loss": 2732.95,
-      "initial_stop": 2732.95,
-      "t1": 2774.55,
-      "t2": 2806.68,
+      "entry_price": 304.20001220703125,
+      "qty": 998,
+      "qty_open": 998,
+      "stop_loss": 302.24,
+      "initial_stop": 302.24,
+      "t1": 306.08,
+      "t2": 308.17,
       "t1_fraction": 1.0,
       "exit_cfg": {
         "hold_to_square_off": true,
@@ -23,34 +23,34 @@
       },
       "t1_done": false,
       "trailed": false,
-      "risk_per_share": 24.35,
-      "atr": 24.34,
-      "margin": 44116.80078125,
-      "entry_cost": 60.5270857579297,
-      "bars_held": 4,
+      "risk_per_share": 1.96,
+      "atr": 1.96,
+      "margin": 60718.32243652344,
+      "entry_cost": 74.42305742904321,
+      "bars_held": 0,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
-      "entry_time": "2026-10-12 11:15:50 IST",
+      "entry_time": "2026-10-12 12:31:15 IST",
       "predicted_rr": null,
-      "entry_rsi": 72.3,
-      "entry_deviation_pct": 0.925,
-      "entry_atr_pct": 0.883,
-      "entry_rvol": 2.61,
+      "entry_rsi": 70.5,
+      "entry_deviation_pct": 0.878,
+      "entry_atr_pct": 0.645,
+      "entry_rvol": 2.37,
       "entry_gap_pct": null,
-      "entry_turnover_cr": 7.48,
-      "entry_stop_pct": 0.883,
-      "nifty_at_entry": 22383.19921875,
-      "mfe_price": 2772.0,
-      "mae_price": 2745.10009765625
+      "entry_turnover_cr": 4.64,
+      "entry_stop_pct": 0.645,
+      "nifty_at_entry": 22391.30078125,
+      "mfe_price": 304.20001220703125,
+      "mae_price": 304.20001220703125
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "WELCORP.NS": {
-      "close": 2749.89990234375,
-      "high": 2749.89990234375,
-      "low": 2748.199951171875,
-      "as_of": "2026-10-12T12:15:52.986815+05:30"
+      "close": 2771.0,
+      "high": 2775.0,
+      "low": 2771.0,
+      "as_of": "2026-10-12T12:31:15.817060+05:30"
     }
   },
   "trade_history": [
@@ -788,6 +788,27 @@
       "entry_rvol": 3.81,
       "entry_turnover_cr": 4.16,
       "entry_stop_pct": 0.738
+    },
+    {
+      "ticker": "WELCORP.NS",
+      "direction": "LONG",
+      "entry_price": 2757.300048828125,
+      "exit_price": 2774.55,
+      "qty": 80,
+      "pnl": 1121.09,
+      "R_multiple": 0.58,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 258.9,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-12 11:15:50 IST",
+      "exit_time": "2026-10-12 12:31:15 IST",
+      "entry_rsi": 72.3,
+      "entry_deviation_pct": 0.925,
+      "entry_atr_pct": 0.883,
+      "entry_rvol": 2.61,
+      "entry_turnover_cr": 7.48,
+      "entry_stop_pct": 0.883
     }
   ],
   "daily_entry_count": {
@@ -799,16 +820,16 @@
     "2026-10-07": 5,
     "2026-10-08": 2,
     "2026-10-09": 5,
-    "2026-10-12": 4
+    "2026-10-12": 5
   },
-  "total_pnl": -22447.817407230614,
+  "total_pnl": -21326.72418462253,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=33, observed expectancy shrunk to -0.009R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.8,
-    "drawdown_reason": "drawdown 3.2% - sizing at 0.80x",
-    "raw_pct": 0.00192,
+    "performance_reason": "n=36, observed expectancy shrunk to -0.008R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.822,
+    "drawdown_reason": "drawdown 3.1% - sizing at 0.82x",
+    "raw_pct": 0.00197,
     "final_pct": 0.002,
     "clamped": true
   },
