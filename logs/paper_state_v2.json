@@ -27,7 +27,7 @@
       "atr": 1.96,
       "margin": 60718.32243652344,
       "entry_cost": 74.42305742904321,
-      "bars_held": 8,
+      "bars_held": 9,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-12 12:31:15 IST",
@@ -41,16 +41,16 @@
       "entry_stop_pct": 0.645,
       "nifty_at_entry": 22391.30078125,
       "mfe_price": 304.75,
-      "mae_price": 303.0
+      "mae_price": 302.54998779296875
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "ANGELONE.NS": {
-      "close": 303.20001220703125,
-      "high": 303.3500061035156,
-      "low": 303.0,
-      "as_of": "2026-10-12T14:31:30.976336+05:30"
+      "close": 302.54998779296875,
+      "high": 302.54998779296875,
+      "low": 302.54998779296875,
+      "as_of": "2026-10-12T14:45:51.855813+05:30"
     }
   },
   "trade_history": [
