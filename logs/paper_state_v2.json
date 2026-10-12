@@ -1,48 +1,8 @@
 {
-  "cash": 791283.2448471772,
+  "cash": 867379.3406201978,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "IRFC.NS": {
-      "ticker": "IRFC.NS",
-      "direction": "LONG",
-      "entry_price": 77.48999786376953,
-      "qty": 5068,
-      "qty_open": 5068,
-      "stop_loss": 77.09,
-      "initial_stop": 77.09,
-      "t1": 77.94,
-      "t2": 78.28,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 0.4,
-      "atr": 0.4,
-      "margin": 78543.8618347168,
-      "entry_cost": 89.34356867151301,
-      "bars_held": 2,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-12 10:15:47 IST",
-      "predicted_rr": null,
-      "entry_rsi": 80.4,
-      "entry_deviation_pct": 1.051,
-      "entry_atr_pct": 0.518,
-      "entry_rvol": 6.37,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 2.15,
-      "entry_stop_pct": 0.518,
-      "nifty_at_entry": 22489.25,
-      "mfe_price": 77.58000183105469,
-      "mae_price": 77.29000091552734
-    },
     "TATAELXSI.NS": {
       "ticker": "TATAELXSI.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 24.12,
       "margin": 54917.518359375004,
       "entry_cost": 69.56761039234766,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-12 10:15:47 IST",
@@ -81,7 +41,7 @@
       "entry_stop_pct": 0.738,
       "nifty_at_entry": 22489.25,
       "mfe_price": 3270.39990234375,
-      "mae_price": 3260.199951171875
+      "mae_price": 3250.10009765625
     },
     "ANGELONE.NS": {
       "ticker": "ANGELONE.NS",
@@ -107,7 +67,7 @@
       "atr": 2.16,
       "margin": 56268.9,
       "entry_cost": 70.698757367,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-12 10:31:19 IST",
@@ -121,28 +81,28 @@
       "entry_stop_pct": 0.711,
       "nifty_at_entry": 22456.75,
       "mfe_price": 303.5,
-      "mae_price": 302.6000061035156
+      "mae_price": 302.0
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "IRFC.NS": {
-      "close": 77.33999633789062,
-      "high": 77.44999694824219,
-      "low": 77.29000091552734,
-      "as_of": "2026-10-12T10:45:49.972802+05:30"
+      "close": 77.08000183105469,
+      "high": 77.19999694824219,
+      "low": 77.08000183105469,
+      "as_of": "2026-10-12T11:01:09.586434+05:30"
     },
     "TATAELXSI.NS": {
-      "close": 3268.39990234375,
-      "high": 3270.39990234375,
-      "low": 3266.800048828125,
-      "as_of": "2026-10-12T10:45:49.972802+05:30"
+      "close": 3256.89990234375,
+      "high": 3256.89990234375,
+      "low": 3250.10009765625,
+      "as_of": "2026-10-12T11:01:09.586434+05:30"
     },
     "ANGELONE.NS": {
-      "close": 302.6000061035156,
-      "high": 302.6000061035156,
-      "low": 302.6000061035156,
-      "as_of": "2026-10-12T10:45:49.972802+05:30"
+      "close": 302.0,
+      "high": 302.25,
+      "low": 302.0,
+      "as_of": "2026-10-12T11:01:09.586434+05:30"
     }
   },
   "trade_history": [
@@ -817,6 +777,27 @@
       "entry_rvol": 3.34,
       "entry_turnover_cr": 23.09,
       "entry_stop_pct": 0.539
+    },
+    {
+      "ticker": "IRFC.NS",
+      "direction": "LONG",
+      "entry_price": 77.48999786376953,
+      "exit_price": 77.09,
+      "qty": 5068,
+      "pnl": -2447.77,
+      "R_multiple": -1.21,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 420.58,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-12 10:15:47 IST",
+      "exit_time": "2026-10-12 11:01:09 IST",
+      "entry_rsi": 80.4,
+      "entry_deviation_pct": 1.051,
+      "entry_atr_pct": 0.518,
+      "entry_rvol": 6.37,
+      "entry_turnover_cr": 2.15,
+      "entry_stop_pct": 0.518
     }
   ],
   "daily_entry_count": {
@@ -830,7 +811,7 @@
     "2026-10-09": 5,
     "2026-10-12": 3
   },
-  "total_pnl": -18986.474958731535,
+  "total_pnl": -21434.241020427733,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
