@@ -1,5 +1,5 @@
 {
-  "cash": 819962.5804670425,
+  "cash": 932703.1011402931,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 11.49,
       "margin": 43860.0,
       "entry_cost": 60.3121358,
-      "bars_held": 3,
+      "bars_held": 4,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-13 10:15:45 IST",
@@ -42,107 +42,27 @@
       "nifty_at_entry": 22563.94921875,
       "mfe_price": 1291.300048828125,
       "mae_price": 1284.800048828125
-    },
-    "TATAELXSI.NS": {
-      "ticker": "TATAELXSI.NS",
-      "direction": "LONG",
-      "entry_price": 3334.39990234375,
-      "qty": 86,
-      "qty_open": 86,
-      "stop_loss": 3311.73,
-      "initial_stop": 3311.73,
-      "t1": 3356.62,
-      "t2": 3381.95,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 22.67,
-      "atr": 22.67,
-      "margin": 57351.6783203125,
-      "entry_cost": 71.60507530445118,
-      "bars_held": 3,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-13 10:15:45 IST",
-      "predicted_rr": null,
-      "entry_rsi": 72.4,
-      "entry_deviation_pct": 0.805,
-      "entry_atr_pct": 0.68,
-      "entry_rvol": 3.43,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 7.1,
-      "entry_stop_pct": 0.68,
-      "nifty_at_entry": 22563.94921875,
-      "mfe_price": 3352.699951171875,
-      "mae_price": 3334.39990234375
-    },
-    "TCS.NS": {
-      "ticker": "TCS.NS",
-      "direction": "LONG",
-      "entry_price": 2242.60009765625,
-      "qty": 125,
-      "qty_open": 125,
-      "stop_loss": 2226.99,
-      "initial_stop": 2226.99,
-      "t1": 2256.06,
-      "t2": 2273.8,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 15.61,
-      "atr": 15.6,
-      "margin": 56065.00244140625,
-      "entry_cost": 70.52808899353028,
-      "bars_held": 3,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-13 10:15:45 IST",
-      "predicted_rr": null,
-      "entry_rsi": 79.9,
-      "entry_deviation_pct": 1.008,
-      "entry_atr_pct": 0.696,
-      "entry_rvol": 3.12,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 36.08,
-      "entry_stop_pct": 0.696,
-      "nifty_at_entry": 22563.94921875,
-      "mfe_price": 2242.60009765625,
-      "mae_price": 2229.699951171875
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "TCS.NS": {
-      "close": 2230.699951171875,
-      "high": 2231.300048828125,
-      "low": 2229.699951171875,
-      "as_of": "2026-10-13T11:01:07.586082+05:30"
+      "close": 2228.0,
+      "high": 2228.0,
+      "low": 2226.5,
+      "as_of": "2026-10-13T11:15:43.432901+05:30"
     },
     "TATAELXSI.NS": {
-      "close": 3352.699951171875,
-      "high": 3352.699951171875,
-      "low": 3346.199951171875,
-      "as_of": "2026-10-13T11:01:07.586082+05:30"
+      "close": 3358.39990234375,
+      "high": 3358.39990234375,
+      "low": 3352.39990234375,
+      "as_of": "2026-10-13T11:15:43.432901+05:30"
     },
     "HCLTECH.NS": {
       "close": 1290.0,
-      "high": 1291.199951171875,
-      "low": 1290.0,
-      "as_of": "2026-10-13T11:01:07.586082+05:30"
+      "high": 1290.4000244140625,
+      "low": 1289.4000244140625,
+      "as_of": "2026-10-13T11:15:43.432901+05:30"
     }
   },
   "trade_history": [
@@ -922,6 +842,48 @@
       "entry_rvol": 2.37,
       "entry_turnover_cr": 4.64,
       "entry_stop_pct": 0.645
+    },
+    {
+      "ticker": "TATAELXSI.NS",
+      "direction": "LONG",
+      "entry_price": 3334.39990234375,
+      "exit_price": 3356.62,
+      "qty": 86,
+      "pnl": 1588.42,
+      "R_multiple": 0.81,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 322.51,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-13 10:15:45 IST",
+      "exit_time": "2026-10-13 11:15:43 IST",
+      "entry_rsi": 72.4,
+      "entry_deviation_pct": 0.805,
+      "entry_atr_pct": 0.68,
+      "entry_rvol": 3.43,
+      "entry_turnover_cr": 7.1,
+      "entry_stop_pct": 0.68
+    },
+    {
+      "ticker": "TCS.NS",
+      "direction": "LONG",
+      "entry_price": 2242.60009765625,
+      "exit_price": 2226.99,
+      "qty": 125,
+      "pnl": -2264.58,
+      "R_multiple": -1.16,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 313.32,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-13 10:15:45 IST",
+      "exit_time": "2026-10-13 11:15:43 IST",
+      "entry_rsi": 79.9,
+      "entry_deviation_pct": 1.008,
+      "entry_atr_pct": 0.696,
+      "entry_rvol": 3.12,
+      "entry_turnover_cr": 36.08,
+      "entry_stop_pct": 0.696
     }
   ],
   "daily_entry_count": {
@@ -936,7 +898,7 @@
     "2026-10-12": 5,
     "2026-10-13": 3
   },
-  "total_pnl": -22760.7387712393,
+  "total_pnl": -23436.898859707486,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
