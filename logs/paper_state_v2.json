@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "ANGELONE.NS": {
-      "close": 303.1000061035156,
-      "high": 303.8500061035156,
-      "low": 302.75,
-      "as_of": "2026-10-12T15:15:56.153145+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
