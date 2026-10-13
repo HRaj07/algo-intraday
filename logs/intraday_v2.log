@@ -4280,3 +4280,20 @@
 2026-10-13 11:46:26 | INFO    | engine.paper_trader_v2 | FILLED TATAELXSI.NS @ Rs3401.89990234375 | qty=79 notional=Rs268,750 friction=Rs304
 2026-10-13 11:46:26 | INFO    | engine.paper_trader_v2 | FILLED CYIENT.NS @ Rs1173.699951171875 | qty=220 notional=Rs258,214 friction=Rs294
 2026-10-13 11:46:27 | INFO    | __main__ | equity Rs977,705 | open 5 | pending 0 | closed 40 | WR 50.0% | PF 0.62 | friction Rs14,880
+2026-10-13 12:01:03 | INFO    | __main__ | ================================================================
+2026-10-13 12:01:03 | INFO    | __main__ | Scan | 2026-10-13 12:01 IST
+2026-10-13 12:01:56 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-13 12:01:56 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,952 risk per trade)
+2026-10-13 12:01:56 | INFO    | __main__ |   base 0.40%
+2026-10-13 12:01:56 | INFO    | __main__ |   performance x0.6: n=40, observed expectancy shrunk to -0.013R vs prior +0.125R -> trimming (0.60x)
+2026-10-13 12:01:56 | INFO    | __main__ |   drawdown    x0.782: drawdown 3.3% - sizing at 0.78x
+2026-10-13 12:01:56 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-13 12:01:56 | INFO    | __main__ | strategy: MOM-v3
+2026-10-13 12:01:56 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-13 12:01:57 | INFO    | engine.paper_trader_v2 | ORDER REJECTED KPITTECH.NS: already holding this name
+2026-10-13 12:01:57 | INFO    | engine.paper_trader_v2 | ORDER REJECTED HCLTECH.NS: already holding this name
+2026-10-13 12:01:57 | INFO    | engine.paper_trader_v2 | ORDER REJECTED TECHM.NS: at max concurrent positions (3)
+2026-10-13 12:01:57 | INFO    | engine.paper_trader_v2 | ORDER REJECTED INFY.NS: at max concurrent positions (3)
+2026-10-13 12:01:57 | INFO    | engine.paper_trader_v2 | ORDER REJECTED TCS.NS: at max concurrent positions (3)
+2026-10-13 12:01:57 | INFO    | engine.paper_trader_v2 | ORDER REJECTED COFORGE.NS: already holding this name
+2026-10-13 12:01:57 | INFO    | __main__ | equity Rs976,202 | open 5 | pending 0 | closed 40 | WR 50.0% | PF 0.62 | friction Rs14,880

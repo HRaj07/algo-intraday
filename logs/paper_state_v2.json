@@ -27,7 +27,7 @@
       "atr": 10.74,
       "margin": 47549.32177734375,
       "entry_cost": 63.40020880729004,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-13 11:45:50 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.822,
       "nifty_at_entry": 22499.650390625,
       "mfe_price": 1306.300048828125,
-      "mae_price": 1306.300048828125
+      "mae_price": 1305.0
     },
     "KPITTECH.NS": {
       "ticker": "KPITTECH.NS",
@@ -67,7 +67,7 @@
       "atr": 3.62,
       "margin": 54642.601318359375,
       "entry_cost": 69.33749658150634,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-13 11:45:50 IST",
@@ -80,7 +80,7 @@
       "entry_turnover_cr": 2.5,
       "entry_stop_pct": 0.716,
       "nifty_at_entry": 22499.650390625,
-      "mfe_price": 505.95001220703125,
+      "mfe_price": 507.6499938964844,
       "mae_price": 505.95001220703125
     },
     "COFORGE.NS": {
@@ -107,7 +107,7 @@
       "atr": 12.17,
       "margin": 61596.80078125,
       "entry_cost": 75.1583701579297,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-13 11:45:50 IST",
@@ -121,7 +121,7 @@
       "entry_stop_pct": 0.633,
       "nifty_at_entry": 22499.650390625,
       "mfe_price": 1924.9000244140625,
-      "mae_price": 1924.9000244140625
+      "mae_price": 1919.4000244140625
     },
     "TATAELXSI.NS": {
       "ticker": "TATAELXSI.NS",
@@ -147,7 +147,7 @@
       "atr": 24.54,
       "margin": 53750.018457031256,
       "entry_cost": 68.59037794908888,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-13 11:45:50 IST",
@@ -160,8 +160,8 @@
       "entry_turnover_cr": 7.96,
       "entry_stop_pct": 0.722,
       "nifty_at_entry": 22499.650390625,
-      "mfe_price": 3401.89990234375,
-      "mae_price": 3401.89990234375
+      "mfe_price": 3402.89990234375,
+      "mae_price": 3397.699951171875
     },
     "CYIENT.NS": {
       "ticker": "CYIENT.NS",
@@ -187,7 +187,7 @@
       "atr": 8.86,
       "margin": 51642.7978515625,
       "entry_cost": 66.82657108569336,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-13 11:45:50 IST",
@@ -201,16 +201,40 @@
       "entry_stop_pct": 0.755,
       "nifty_at_entry": 22499.650390625,
       "mfe_price": 1173.699951171875,
-      "mae_price": 1173.699951171875
+      "mae_price": 1169.0
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "HCLTECH.NS": {
-      "close": 1306.199951171875,
-      "high": 1307.199951171875,
-      "low": 1305.5,
-      "as_of": "2026-10-13T11:45:50.693140+05:30"
+      "close": 1305.0,
+      "high": 1306.0,
+      "low": 1305.0,
+      "as_of": "2026-10-13T12:01:03.255140+05:30"
+    },
+    "COFORGE.NS": {
+      "close": 1920.0,
+      "high": 1922.0,
+      "low": 1919.4000244140625,
+      "as_of": "2026-10-13T12:01:03.255140+05:30"
+    },
+    "TATAELXSI.NS": {
+      "close": 3402.5,
+      "high": 3402.89990234375,
+      "low": 3397.699951171875,
+      "as_of": "2026-10-13T12:01:03.255140+05:30"
+    },
+    "CYIENT.NS": {
+      "close": 1169.0,
+      "high": 1170.4000244140625,
+      "low": 1169.0,
+      "as_of": "2026-10-13T12:01:03.255140+05:30"
+    },
+    "KPITTECH.NS": {
+      "close": 506.8500061035156,
+      "high": 507.6499938964844,
+      "low": 506.54998779296875,
+      "as_of": "2026-10-13T12:01:03.255140+05:30"
     }
   },
   "trade_history": [
