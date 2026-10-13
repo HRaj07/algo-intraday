@@ -4202,3 +4202,15 @@
 2026-10-13 10:32:10 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-13 10:32:11 | INFO    | engine.paper_trader_v2 | ORDER REJECTED TATAELXSI.NS: already holding this name
 2026-10-13 10:32:11 | INFO    | __main__ | equity Rs976,956 | open 3 | pending 0 | closed 37 | WR 48.6% | PF 0.6 | friction Rs13,986
+2026-10-13 10:45:45 | INFO    | __main__ | ================================================================
+2026-10-13 10:45:45 | INFO    | __main__ | Scan | 2026-10-13 10:45 IST
+2026-10-13 10:46:33 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-13 10:46:33 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,954 risk per trade)
+2026-10-13 10:46:33 | INFO    | __main__ |   base 0.40%
+2026-10-13 10:46:33 | INFO    | __main__ |   performance x0.6: n=37, observed expectancy shrunk to -0.016R vs prior +0.125R -> trimming (0.60x)
+2026-10-13 10:46:33 | INFO    | __main__ |   drawdown    x0.792: drawdown 3.3% - sizing at 0.79x
+2026-10-13 10:46:33 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-13 10:46:33 | INFO    | __main__ | strategy: MOM-v3
+2026-10-13 10:46:33 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-13 10:46:33 | INFO    | engine.paper_trader_v2 | ORDER REJECTED HCLTECH.NS: already holding this name
+2026-10-13 10:46:33 | INFO    | __main__ | equity Rs976,804 | open 3 | pending 0 | closed 37 | WR 48.6% | PF 0.6 | friction Rs13,986
