@@ -4373,3 +4373,16 @@
 2026-10-13 13:16:30 | INFO    | engine.paper_trader_v2 | ORDER REJECTED HCLTECH.NS: max 2 entries per day for HCLTECH.NS
 2026-10-13 13:16:30 | INFO    | engine.paper_trader_v2 | ORDER REJECTED KPITTECH.NS: at max entries per day (5)
 2026-10-13 13:16:30 | INFO    | __main__ | equity Rs977,064 | open 2 | pending 0 | closed 43 | WR 51.2% | PF 0.64 | friction Rs15,757
+2026-10-13 13:31:27 | INFO    | __main__ | ================================================================
+2026-10-13 13:31:27 | INFO    | __main__ | Scan | 2026-10-13 13:31 IST
+2026-10-13 13:32:04 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-13 13:32:04 | INFO    | engine.paper_trader_v2 | EXIT TATAELXSI.NS 79@Rs3377.34 | P&L Rs-2,243 (-1.16R) | friction Rs302 | stop_loss
+2026-10-13 13:32:05 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,950 risk per trade)
+2026-10-13 13:32:05 | INFO    | __main__ |   base 0.40%
+2026-10-13 13:32:05 | INFO    | __main__ |   performance x0.6: n=44, observed expectancy shrunk to -0.024R vs prior +0.125R -> trimming (0.60x)
+2026-10-13 13:32:05 | INFO    | __main__ |   drawdown    x0.759: drawdown 3.4% - sizing at 0.76x
+2026-10-13 13:32:05 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-13 13:32:05 | INFO    | __main__ | strategy: MOM-v3
+2026-10-13 13:32:05 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-13 13:32:06 | INFO    | engine.paper_trader_v2 | ORDER REJECTED HCLTECH.NS: max 2 entries per day for HCLTECH.NS
+2026-10-13 13:32:06 | INFO    | __main__ | equity Rs974,843 | open 1 | pending 0 | closed 44 | WR 50.0% | PF 0.62 | friction Rs16,059

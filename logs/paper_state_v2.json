@@ -1,5 +1,5 @@
 {
-  "cash": 862618.7529979132,
+  "cash": 914126.2611072159,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 12.17,
       "margin": 61596.80078125,
       "entry_cost": 75.1583701579297,
-      "bars_held": 6,
+      "bars_held": 7,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-13 11:45:50 IST",
@@ -42,67 +42,21 @@
       "nifty_at_entry": 22499.650390625,
       "mfe_price": 1934.9000244140625,
       "mae_price": 1918.5
-    },
-    "TATAELXSI.NS": {
-      "ticker": "TATAELXSI.NS",
-      "direction": "LONG",
-      "entry_price": 3401.89990234375,
-      "qty": 79,
-      "qty_open": 79,
-      "stop_loss": 3377.34,
-      "initial_stop": 3377.34,
-      "t1": 3420.8,
-      "t2": 3449.48,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 24.56,
-      "atr": 24.54,
-      "margin": 53750.018457031256,
-      "entry_cost": 68.59037794908888,
-      "bars_held": 6,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-13 11:45:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 80.9,
-      "entry_deviation_pct": 1.768,
-      "entry_atr_pct": 0.722,
-      "entry_rvol": 4.31,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 7.96,
-      "entry_stop_pct": 0.722,
-      "nifty_at_entry": 22499.650390625,
-      "mfe_price": 3402.89990234375,
-      "mae_price": 3382.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "COFORGE.NS": {
-      "close": 1928.5999755859375,
-      "high": 1929.0,
-      "low": 1928.300048828125,
-      "as_of": "2026-10-13T13:15:53.799480+05:30"
+      "close": 1919.4000244140625,
+      "high": 1920.800048828125,
+      "low": 1919.4000244140625,
+      "as_of": "2026-10-13T13:31:27.617205+05:30"
     },
     "TATAELXSI.NS": {
-      "close": 3383.0,
-      "high": 3386.60009765625,
-      "low": 3382.5,
-      "as_of": "2026-10-13T13:15:53.799480+05:30"
-    },
-    "CYIENT.NS": {
-      "close": 1162.0999755859375,
-      "high": 1163.9000244140625,
-      "low": 1162.0999755859375,
-      "as_of": "2026-10-13T13:15:53.799480+05:30"
+      "close": 3374.5,
+      "high": 3379.5,
+      "low": 3374.5,
+      "as_of": "2026-10-13T13:31:27.617205+05:30"
     }
   },
   "trade_history": [
@@ -1008,6 +962,27 @@
       "entry_rvol": 4.12,
       "entry_turnover_cr": 2.52,
       "entry_stop_pct": 0.755
+    },
+    {
+      "ticker": "TATAELXSI.NS",
+      "direction": "LONG",
+      "entry_price": 3401.89990234375,
+      "exit_price": 3377.34,
+      "qty": 79,
+      "pnl": -2242.51,
+      "R_multiple": -1.16,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 302.28,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-13 11:45:50 IST",
+      "exit_time": "2026-10-13 13:31:27 IST",
+      "entry_rsi": 80.9,
+      "entry_deviation_pct": 1.768,
+      "entry_atr_pct": 0.722,
+      "entry_rvol": 4.31,
+      "entry_turnover_cr": 7.96,
+      "entry_stop_pct": 0.722
     }
   ],
   "daily_entry_count": {
@@ -1022,7 +997,7 @@
     "2026-10-12": 5,
     "2026-10-13": 8
   },
-  "total_pnl": -22034.42776380619,
+  "total_pnl": -24276.938111534677,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
