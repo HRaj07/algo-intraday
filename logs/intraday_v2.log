@@ -4257,3 +4257,26 @@
 2026-10-13 11:31:53 | INFO    | engine.paper_trader_v2 | ORDER REJECTED COFORGE.NS: already hold 1 position(s) in IT
 2026-10-13 11:31:53 | INFO    | engine.paper_trader_v2 | ORDER REJECTED TATAELXSI.NS: already hold 1 position(s) in IT
 2026-10-13 11:31:53 | INFO    | __main__ | equity Rs977,090 | open 1 | pending 0 | closed 39 | WR 48.7% | PF 0.6 | friction Rs14,622
+2026-10-13 11:45:50 | INFO    | __main__ | ================================================================
+2026-10-13 11:45:50 | INFO    | __main__ | Scan | 2026-10-13 11:45 IST
+2026-10-13 11:46:25 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-13 11:46:25 | INFO    | engine.paper_trader_v2 | EXIT HCLTECH.NS 170@Rs1298.34 | P&L Rs+1,160 (+0.59R) | friction Rs258 | t1_vwap
+2026-10-13 11:46:25 | INFO    | engine.paper_trader_v2 | T1 HCLTECH.NS - half out at VWAP, stop to Rs1293.23 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-13 11:46:25 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,955 risk per trade)
+2026-10-13 11:46:25 | INFO    | __main__ |   base 0.40%
+2026-10-13 11:46:25 | INFO    | __main__ |   performance x0.6: n=40, observed expectancy shrunk to -0.013R vs prior +0.125R -> trimming (0.60x)
+2026-10-13 11:46:25 | INFO    | __main__ |   drawdown    x0.807: drawdown 3.2% - sizing at 0.81x
+2026-10-13 11:46:25 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-13 11:46:25 | INFO    | __main__ | strategy: MOM-v3
+2026-10-13 11:46:25 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-13 11:46:26 | INFO    | engine.paper_trader_v2 | ORDER HCLTECH.NS market buy at next open (ref Rs1306.3, SL 0.822%, RSI 85.2, rvol 13.71)
+2026-10-13 11:46:26 | INFO    | engine.paper_trader_v2 | ORDER KPITTECH.NS market buy at next open (ref Rs505.95, SL 0.716%, RSI 78.2, rvol 9.12)
+2026-10-13 11:46:26 | INFO    | engine.paper_trader_v2 | ORDER COFORGE.NS market buy at next open (ref Rs1923.5, SL 0.633%, RSI 82.2, rvol 4.76)
+2026-10-13 11:46:26 | INFO    | engine.paper_trader_v2 | ORDER TATAELXSI.NS market buy at next open (ref Rs3400.4, SL 0.722%, RSI 80.9, rvol 4.31)
+2026-10-13 11:46:26 | INFO    | engine.paper_trader_v2 | ORDER CYIENT.NS market buy at next open (ref Rs1174.3, SL 0.755%, RSI 70.0, rvol 4.12)
+2026-10-13 11:46:26 | INFO    | engine.paper_trader_v2 | FILLED HCLTECH.NS @ Rs1306.300048828125 | qty=182 notional=Rs237,747 friction=Rs274
+2026-10-13 11:46:26 | INFO    | engine.paper_trader_v2 | FILLED KPITTECH.NS @ Rs505.95001220703125 | qty=540 notional=Rs273,213 friction=Rs308
+2026-10-13 11:46:26 | INFO    | engine.paper_trader_v2 | FILLED COFORGE.NS @ Rs1924.9000244140625 | qty=160 notional=Rs307,984 friction=Rs341
+2026-10-13 11:46:26 | INFO    | engine.paper_trader_v2 | FILLED TATAELXSI.NS @ Rs3401.89990234375 | qty=79 notional=Rs268,750 friction=Rs304
+2026-10-13 11:46:26 | INFO    | engine.paper_trader_v2 | FILLED CYIENT.NS @ Rs1173.699951171875 | qty=220 notional=Rs258,214 friction=Rs294
+2026-10-13 11:46:27 | INFO    | __main__ | equity Rs977,705 | open 5 | pending 0 | closed 40 | WR 50.0% | PF 0.62 | friction Rs14,880
