@@ -1,5 +1,5 @@
 {
-  "cash": 813217.3554163576,
+  "cash": 862618.7529979132,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 12.17,
       "margin": 61596.80078125,
       "entry_cost": 75.1583701579297,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-13 11:45:50 IST",
@@ -67,7 +67,7 @@
       "atr": 24.54,
       "margin": 53750.018457031256,
       "entry_cost": 68.59037794908888,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-13 11:45:50 IST",
@@ -81,68 +81,28 @@
       "entry_stop_pct": 0.722,
       "nifty_at_entry": 22499.650390625,
       "mfe_price": 3402.89990234375,
-      "mae_price": 3384.0
-    },
-    "CYIENT.NS": {
-      "ticker": "CYIENT.NS",
-      "direction": "LONG",
-      "entry_price": 1173.699951171875,
-      "qty": 220,
-      "qty_open": 220,
-      "stop_loss": 1164.84,
-      "initial_stop": 1164.84,
-      "t1": 1181.35,
-      "t2": 1192.02,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 8.86,
-      "atr": 8.86,
-      "margin": 51642.7978515625,
-      "entry_cost": 66.82657108569336,
-      "bars_held": 5,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-13 11:45:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 70.0,
-      "entry_deviation_pct": 2.041,
-      "entry_atr_pct": 0.755,
-      "entry_rvol": 4.12,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 2.52,
-      "entry_stop_pct": 0.755,
-      "nifty_at_entry": 22499.650390625,
-      "mfe_price": 1173.699951171875,
-      "mae_price": 1169.0
+      "mae_price": 3382.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "COFORGE.NS": {
-      "close": 1928.4000244140625,
-      "high": 1929.0999755859375,
-      "low": 1927.300048828125,
-      "as_of": "2026-10-13T13:01:10.021754+05:30"
+      "close": 1928.5999755859375,
+      "high": 1929.0,
+      "low": 1928.300048828125,
+      "as_of": "2026-10-13T13:15:53.799480+05:30"
     },
     "TATAELXSI.NS": {
-      "close": 3384.0,
-      "high": 3390.39990234375,
-      "low": 3384.0,
-      "as_of": "2026-10-13T13:01:10.021754+05:30"
+      "close": 3383.0,
+      "high": 3386.60009765625,
+      "low": 3382.5,
+      "as_of": "2026-10-13T13:15:53.799480+05:30"
     },
     "CYIENT.NS": {
-      "close": 1171.5999755859375,
-      "high": 1173.300048828125,
-      "low": 1171.5999755859375,
-      "as_of": "2026-10-13T13:01:10.021754+05:30"
+      "close": 1162.0999755859375,
+      "high": 1163.9000244140625,
+      "low": 1162.0999755859375,
+      "as_of": "2026-10-13T13:15:53.799480+05:30"
     }
   },
   "trade_history": [
@@ -1027,6 +987,27 @@
       "entry_rvol": 9.12,
       "entry_turnover_cr": 2.5,
       "entry_stop_pct": 0.716
+    },
+    {
+      "ticker": "CYIENT.NS",
+      "direction": "LONG",
+      "entry_price": 1173.699951171875,
+      "exit_price": 1164.84,
+      "qty": 220,
+      "pnl": -2241.4,
+      "R_multiple": -1.15,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 292.21,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-13 11:45:50 IST",
+      "exit_time": "2026-10-13 13:15:53 IST",
+      "entry_rsi": 70.0,
+      "entry_deviation_pct": 2.041,
+      "entry_atr_pct": 0.755,
+      "entry_rvol": 4.12,
+      "entry_turnover_cr": 2.52,
+      "entry_stop_pct": 0.755
     }
   ],
   "daily_entry_count": {
@@ -1041,7 +1022,7 @@
     "2026-10-12": 5,
     "2026-10-13": 8
   },
-  "total_pnl": -19793.027493799178,
+  "total_pnl": -22034.42776380619,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
