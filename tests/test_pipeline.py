@@ -160,9 +160,9 @@ check("a drawdown-tapered v3 trade at the widest stop still clears the notional 
       f"smallest legitimate Rs{_smallest_legit:,.0f} vs floor Rs{RISK['min_notional_per_trade']:,.0f}")
 check("a true fragment (qty=1 of a Rs500 stock) is still refused",
       500 < RISK["min_notional_per_trade"])
-check("minimum notional is derived from the tapered minimum risk, not a literal",
+check("minimum notional is derived from the tapered minimum risk at the widest stop, not a literal",
       abs(RISK["min_notional_per_trade"]
-          - SYSTEM["initial_capital"] * MIN_RISK_PCT / _floor
+          - SYSTEM["initial_capital"] * MIN_RISK_PCT / MOMENTUM["stop_pct_cap"]
             * RISK["min_notional_fraction_of_target"]) < 1,
       f"Rs{RISK['min_notional_per_trade']:,.0f}")
 # Must read the live cost, not a copy of it. A hardcoded 0.001355 here would
@@ -534,19 +534,23 @@ check("v3 has NO breakeven trail (lost in all 50 sweep cells with it on)",
       MOMENTUM["use_breakeven_trail"] is False)
 check("v3 has NO time stop (the edge is the right tail)",
       MOMENTUM["use_time_stop"] is False)
-check("v3 has NO profit target",
-      MOMENTUM["use_target"] is False)
+# Owner's choice since Sep 29: a fixed 0.6% target, whole position, about 1:1
+# with the stop. Measured Sep 29 - Oct 12: 37 trades, PF 0.60, -Rs22,761.
+# study_exits.py found targets cut the right tail; this is kept because it is
+# the design being run, and these checks pin it so it cannot change by
+# accident in either direction.
+check("v3 takes a fixed profit target",
+      MOMENTUM["use_target"] is True)
 
 # --- reachability: a threshold no real move clears is a bug ---
 # Median ATR on the measured sample was 0.619%, median adverse excursion
 # before the close -0.76%. A stop floor inside that noise band is stopped out
 # by nothing in particular; one far outside it cannot be sized.
-check("v3 stop floor sits outside ordinary noise but is still sizeable",
-      0.008 <= MOMENTUM["stop_pct_floor"] <= 0.020,
+check("v3 stop floor is a scalp stop: tight but not zero",
+      0.004 <= MOMENTUM["stop_pct_floor"] <= 0.020,
       f"{MOMENTUM['stop_pct_floor']*100:.1f}%")
-check("v3 stop floor is wider than v2's (smaller position, less friction)",
-      MOMENTUM["stop_pct_floor"] > STRATEGY["stop_pct_floor"],
-      f"{MOMENTUM['stop_pct_floor']*100:.1f}% vs {STRATEGY['stop_pct_floor']*100:.1f}%")
+check("v3 stop floor sits below its cap",
+      MOMENTUM["stop_pct_floor"] < MOMENTUM["stop_pct_cap"])
 
 # --- end to end: a trending name on a volume spike MUST produce a signal ---
 np.random.seed(33)
@@ -1103,8 +1107,9 @@ check("v3 actually traded end-to-end through main.py", len(_h3f) > 0,
 if _h3f:
     check("v3 trades are recorded under their own strategy name",
           all(t_.get("strategy") == "MOM-v3" for t_ in _h3f))
-    check("v3 exits are square-off or stop, never a target or time stop",
-          all(t_["reason"] in ("square_off", "stop_loss") for t_ in _h3f),
+    check("v3 exits are target, stop, VWAP reclaim or square-off - never a time stop",
+          all(t_["reason"] in ("t1_vwap", "stop_loss", "vwap_reclaim", "square_off")
+              for t_ in _h3f),
           f"{sorted({t_['reason'] for t_ in _h3f})}")
 
 # ---- the forming bar -------------------------------------------------------

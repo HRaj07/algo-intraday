@@ -11,8 +11,8 @@ experiment in the repo.** No server, no laptop, no broker. Paper money only.
 
 Most trading-bot repos show you a backtest. This one shows you what happened
 after: v1 lost ₹11,317 because its research charged ₹50 a trade and reality
-charged ₹421; v2's whole premise turned out to be negative *before* costs; a
-quick 0.6% scalping experiment lost ₹22,761 in two weeks. Each failure is
+charged ₹421; v2's whole premise turned out to be negative *before* costs; the
+current 0.6% scalping setup is down ₹22,761 after 37 trades. Each result is
 measured, written down, and turned into a test so it cannot quietly come back.
 
 ### What you get
@@ -22,9 +22,9 @@ measured, written down, and turned into a test so it cannot quietly come back.
 - **A real cost model.** Brokerage, STT, exchange and SEBI fees, stamp duty, GST
   and slippage are charged on every simulated fill, from one file shared by the backtest and the
   live engine, so the two cannot disagree again.
-- **Self-tuning that cannot cheat.** The weekly walk-forward may only move four
-  thresholds inside fixed bands, and only if the change also wins on two weeks
-  of data it never saw.
+- **Self-tuning that cannot cheat.** The weekly walk-forward may only move the
+  three entry thresholds inside fixed bands, and only if the change also wins on
+  two weeks of data it never saw. It never touches the stop or the target.
 - **Everything on the record.** `logs/` holds every trade, every open position
   bar by bar, and on every scan a tally of why the other ~210 stocks were skipped.
 - **144 tests**, including the bugs that cost real (paper) money.
@@ -43,9 +43,10 @@ That's it — the next market-hours scan runs on its own. To try it locally:
 `pip install -r requirements.txt && python tests/test_pipeline.py && python main.py`.
 
 > **Status (Oct 2026): v3, unproven. Do not point this at a broker.**
-> It buys NSE stocks running ≥1.2% above VWAP with RSI ≥ 70 on ≥2× volume, and
-> exits on a 1.2%+ stop, a close back below VWAP, or the 15:05 square-off. Its
-> honestly expected return is roughly zero; it runs to collect forward evidence.
+> It buys NSE stocks running ≥0.8% above VWAP with RSI ≥ 70 on ≥2× volume, and
+> sells the whole position at **+0.6%**, at a ~0.6% stop (1×ATR), on a close back
+> below VWAP, or at the 15:05 square-off. Its first 37 trades on these settings
+> lost ₹22,761 (49% winners, PF 0.60); it keeps running to collect evidence.
 > The go-live bar is at the bottom of this file and nothing here clears it.
 >
 > *Not investment advice. This is research code that trades simulated money.*
@@ -60,9 +61,9 @@ That's it — the next market-hours scan runs on its own. To try it locally:
 | RSI | < 28 | < 40 | **≥ 70** |
 | Volume | ignored | ceiling at 2× | **floor at 2×** (this bar) |
 | Entry | close of a forming bar | stop-limit above the high | market, next bar's open |
-| Stop | 0.55% flat | 1.2×ATR, floor 0.8% | 2.0×ATR, floor **1.2%** |
-| Exits | target + trail | scale at VWAP, trail, time stop | **stop or square-off, nothing else** |
-| Result | −₹11,317 live | negative before costs | 0.6% scalp variant: −₹22,761 live; current: unproven |
+| Stop | 0.55% flat | 1.2×ATR, floor 0.8% | 1.0×ATR, floor **0.6%** |
+| Exits | target + trail | scale at VWAP, trail, time stop | **+0.6% target**, stop, VWAP reclaim, square-off |
+| Result | −₹11,317 live | negative before costs | −₹22,761 over its first 37 live trades |
 
 ---
 

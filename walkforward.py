@@ -71,11 +71,16 @@ BANDS = {
     "stop_pct_floor": (0.010, 0.020),
 }
 
-GRID = list(itertools.product(
+# The STOP IS NOT TUNED HERE. Live v3 runs a fixed 0.6% target with a ~0.6%
+# stop (the owner's choice since Sep 29), and this simulator holds to the
+# close with no target. Letting it move the stop would quietly swap one exit
+# design for another. It tunes the three ENTRY thresholds only, at whatever
+# stop is live; its numbers are an approximation of a target strategy.
+TUNED = ("min_dev_above_vwap", "min_rsi", "min_rvol")
+ENTRY_GRID = list(itertools.product(
     (0.008, 0.012, 0.018),
     (70, 75, 80),
     (2.0, 4.0, 6.0),
-    (0.012, 0.016),
 ))
 
 HOLDOUT_DAYS = 10          # ~2 trading weeks kept back from the fit
@@ -133,7 +138,7 @@ def current_params() -> dict:
 
 
 def in_bands(p: dict) -> bool:
-    return all(BANDS[k][0] <= p[k] <= BANDS[k][1] for k in BANDS)
+    return all(BANDS[k][0] <= p[k] <= BANDS[k][1] for k in TUNED)
 
 
 def main():
@@ -158,7 +163,9 @@ def main():
     print(f"{'dev':>5} {'rsi':>4} {'rvol':>5} {'stop':>5}  {'n':>4} "
           f"{'net':>10} {'ex-top5':>10} {'t':>6}  robust")
     candidates = []
-    for dev, rsi, rvol, stop in GRID:
+    live_stop = float(current_params().get("stop_pct_floor", MOMENTUM["stop_pct_floor"]))
+    for dev, rsi, rvol in ENTRY_GRID:
+        stop = live_stop
         s = score(run_cell(fit, dev, rsi, rvol, stop, False, cap), cap)
         if not s.get("n"):
             continue

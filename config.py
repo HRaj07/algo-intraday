@@ -395,28 +395,27 @@ STRATEGY["min_vwap_deviation"] = _min_deviation_for_cost_hurdle(
 # turn positive and hold across all three months - the same values would have
 # been chosen from any of the three months alone.
 # HISTORY OF THE LIVE SETTINGS, so nobody repeats an experiment already run.
-#
-#   Sep 25 - Sep 28  RSI 75 / 1.2% / 4.0x, 1.2% stop, no target.
-#                    0 trades in 3 days - too strict for a flat market.
-#   Sep 29 - Oct 12  RSI 70 / 0.8% / 2.0x, 0.5-0.6% stop, 0.6% target (1:1).
-#                    37 trades, -Rs22,761, PF 0.60, Rs13,986 of it friction.
-#                    Winners were capped at +0.67R after costs; stops cost
-#                    -1.16R. A 1:1 scalp needs ~58% wins to pay costs and got
-#                    49%. The tight stop also doubled position size, and with
-#                    it the friction, for the same rupee risk.
-#   Oct 13 -         RSI 70 / 1.2% / 2.0x, 1.2% stop floor, no target.
-#                    The 59-day sweep cell that stayed positive in Jul, Aug
-#                    AND Sep (148 trades, ~2.5/day, PF 1.24) - loose enough
-#                    to trade most days, exits as measured. Unproven; t = 1.0.
+#   Sep 25 - Sep 28  RSI 75 / 1.2% / 4.0x, 1.2% stop, no target: 0 trades.
+#   Sep 29 - Oct 12  RSI 70 / 0.8% / 2.0x, 0.6% stop, 0.6% target (1:1):
+#                    37 trades, 49% wins, PF 0.60, -Rs22,761 (Rs13,986 friction).
+#   Oct 13           1.2% stop, no target - for one morning.
+#   Oct 13 -         back to the Sep 29 scalp settings, by the owner's choice.
+# The strict settings, kept so they can be restored:
+MOMENTUM_STRICT = {
+    "min_rsi": 75,
+    "min_dev_above_vwap": 0.012,
+    "min_rvol": 4.0,
+    "stop_pct_floor": 0.005,
+}
 
 MOMENTUM = {
     "rsi_period": 14,
     "atr_period": 14,
 
     # --- signal ---
-    "min_rsi": 70,                  # bottom of the walk-forward band; keeps trades flowing
-    "min_dev_above_vwap": 0.012,    # 1.2%; the 0.8-1.2% band netted exactly 0.000%
-    "min_rvol": 2.0,                # THIS BAR's volume vs the name's 50-bar median
+    "min_rsi": 70,                  # relaxed from 75 to generate more signals
+    "min_dev_above_vwap": 0.008,    # relaxed from 1.2% to 0.8%
+    "min_rvol": 2.0,                # relaxed from 4.0 to 2.0x
 
     # NOT the cumulative-day RVOL that FILTERS uses. The measurement that
     # supports this number used bar-level volume, and the two are different
@@ -445,8 +444,8 @@ MOMENTUM = {
     # less friction for the same rupee risk. Momentum wants that trade-off:
     # median adverse excursion before the close was -0.76%, so anything much
     # tighter than 1.2% is stopped out by ordinary noise.
-    "stop_atr_mult": 2.0,
-    "stop_pct_floor": 0.012,
+    "stop_atr_mult": 1.0,
+    "stop_pct_floor": 0.005,
     "stop_pct_cap": 0.025,
 
     # --- exits ---
@@ -463,7 +462,7 @@ MOMENTUM = {
     # The cost is a 43% win rate and trades that give back open profit. That is
     # the shape of the distribution, not a flaw to be engineered away.
     "hold_to_square_off": True,
-    "use_target": False,             # Sep 29-Oct 12 ran a 0.6% target: PF 0.60. See above.
+    "use_target": True,
     "use_breakeven_trail": False,
     "use_time_stop": False,
 
@@ -605,8 +604,15 @@ def _full_size_notional() -> float:
 
 
 def _smallest_tapered_notional() -> float:
+    # The smallest LEGITIMATE position is a tapered trade at the WIDEST stop the
+    # strategy allows, not at its floor. Measured from a 0.5-0.6% scalp floor,
+    # the fragment floor came out at Rs1,00,000 - above the Rs80,000 a tapered
+    # trade at the 2.5% cap sizes to - so in a drawdown the volatile names were
+    # refused as "fragments".
     from learning import MIN_RISK_PCT
-    return SYSTEM["initial_capital"] * MIN_RISK_PCT / _active_stop_floor()
+    widest = (MOMENTUM["stop_pct_cap"] if ACTIVE_STRATEGY == "momentum_v3"
+              else STRATEGY.get("stop_pct_cap", _active_stop_floor()))
+    return SYSTEM["initial_capital"] * MIN_RISK_PCT / widest
 
 
 RISK["min_median_15m_turnover"] = (
