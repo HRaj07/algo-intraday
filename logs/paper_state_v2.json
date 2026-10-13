@@ -1,62 +1,15 @@
 {
-  "cash": 914126.2611072159,
+  "cash": 973434.5256593667,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "COFORGE.NS": {
-      "ticker": "COFORGE.NS",
-      "direction": "LONG",
-      "entry_price": 1924.9000244140625,
-      "qty": 160,
-      "qty_open": 160,
-      "stop_loss": 1912.72,
-      "initial_stop": 1912.72,
-      "t1": 1935.04,
-      "t2": 1947.84,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 12.18,
-      "atr": 12.17,
-      "margin": 61596.80078125,
-      "entry_cost": 75.1583701579297,
-      "bars_held": 7,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-13 11:45:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 82.2,
-      "entry_deviation_pct": 1.933,
-      "entry_atr_pct": 0.633,
-      "entry_rvol": 4.76,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 10.61,
-      "entry_stop_pct": 0.633,
-      "nifty_at_entry": 22499.650390625,
-      "mfe_price": 1934.9000244140625,
-      "mae_price": 1918.5
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "COFORGE.NS": {
-      "close": 1919.4000244140625,
-      "high": 1920.800048828125,
-      "low": 1919.4000244140625,
-      "as_of": "2026-10-13T13:31:27.617205+05:30"
-    },
-    "TATAELXSI.NS": {
-      "close": 3374.5,
-      "high": 3379.5,
-      "low": 3374.5,
-      "as_of": "2026-10-13T13:31:27.617205+05:30"
+      "close": 1912.800048828125,
+      "high": 1916.0,
+      "low": 1912.0999755859375,
+      "as_of": "2026-10-13T13:45:52.487922+05:30"
     }
   },
   "trade_history": [
@@ -983,6 +936,27 @@
       "entry_rvol": 4.31,
       "entry_turnover_cr": 7.96,
       "entry_stop_pct": 0.722
+    },
+    {
+      "ticker": "COFORGE.NS",
+      "direction": "LONG",
+      "entry_price": 1924.9000244140625,
+      "exit_price": 1912.72,
+      "qty": 160,
+      "pnl": -2288.54,
+      "R_multiple": -1.17,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 339.73,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-13 11:45:50 IST",
+      "exit_time": "2026-10-13 13:45:52 IST",
+      "entry_rsi": 82.2,
+      "entry_deviation_pct": 1.933,
+      "entry_atr_pct": 0.633,
+      "entry_rvol": 4.76,
+      "entry_turnover_cr": 10.61,
+      "entry_stop_pct": 0.633
     }
   ],
   "daily_entry_count": {
@@ -997,7 +971,7 @@
     "2026-10-12": 5,
     "2026-10-13": 8
   },
-  "total_pnl": -24276.938111534677,
+  "total_pnl": -26565.474340633802,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,

@@ -4386,3 +4386,15 @@
 2026-10-13 13:32:05 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-13 13:32:06 | INFO    | engine.paper_trader_v2 | ORDER REJECTED HCLTECH.NS: max 2 entries per day for HCLTECH.NS
 2026-10-13 13:32:06 | INFO    | __main__ | equity Rs974,843 | open 1 | pending 0 | closed 44 | WR 50.0% | PF 0.62 | friction Rs16,059
+2026-10-13 13:45:52 | INFO    | __main__ | ================================================================
+2026-10-13 13:45:52 | INFO    | __main__ | Scan | 2026-10-13 13:45 IST
+2026-10-13 13:46:48 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-13 13:46:48 | INFO    | engine.paper_trader_v2 | EXIT COFORGE.NS 160@Rs1912.72 | P&L Rs-2,289 (-1.17R) | friction Rs340 | stop_loss
+2026-10-13 13:46:48 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,947 risk per trade)
+2026-10-13 13:46:48 | INFO    | __main__ |   base 0.40%
+2026-10-13 13:46:48 | INFO    | __main__ |   performance x0.6: n=45, observed expectancy shrunk to -0.036R vs prior +0.125R -> trimming (0.60x)
+2026-10-13 13:46:48 | INFO    | __main__ |   drawdown    x0.736: drawdown 3.6% - sizing at 0.74x
+2026-10-13 13:46:48 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-13 13:46:48 | INFO    | __main__ | strategy: MOM-v3
+2026-10-13 13:46:48 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-13 13:46:48 | INFO    | __main__ | equity Rs973,435 | open 0 | pending 0 | closed 45 | WR 48.9% | PF 0.6 | friction Rs16,399
