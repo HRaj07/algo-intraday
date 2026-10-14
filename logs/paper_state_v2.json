@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "SYNGENE.NS": {
-      "close": 389.6000061035156,
-      "high": 389.6499938964844,
-      "low": 389.3999938964844,
-      "as_of": "2026-10-14T14:45:49.918376+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
