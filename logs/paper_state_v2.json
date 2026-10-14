@@ -1,56 +1,15 @@
 {
-  "cash": 918914.5742166613,
+  "cash": 970405.2064064987,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "SYNGENE.NS": {
-      "ticker": "SYNGENE.NS",
-      "direction": "LONG",
-      "entry_price": 392.25,
-      "qty": 685,
-      "qty_open": 685,
-      "stop_loss": 389.41,
-      "initial_stop": 389.41,
-      "t1": 394.35,
-      "t2": 397.69,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.84,
-      "atr": 2.84,
-      "margin": 53738.25,
-      "entry_cost": 68.5805273975,
-      "bars_held": 18,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-14 10:15:49 IST",
-      "predicted_rr": null,
-      "entry_rsi": 86.2,
-      "entry_deviation_pct": 1.084,
-      "entry_atr_pct": 0.725,
-      "entry_rvol": 2.56,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 2.01,
-      "entry_stop_pct": 0.725,
-      "nifty_at_entry": 22692.150390625,
-      "mfe_price": 392.3500061035156,
-      "mae_price": 389.75
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "SYNGENE.NS": {
-      "close": 390.20001220703125,
-      "high": 390.25,
-      "low": 390.0,
-      "as_of": "2026-10-14T14:31:30.195402+05:30"
+      "close": 389.6000061035156,
+      "high": 389.6499938964844,
+      "low": 389.3999938964844,
+      "as_of": "2026-10-14T14:45:49.918376+05:30"
     }
   },
   "trade_history": [
@@ -1103,6 +1062,27 @@
       "entry_rvol": 2.83,
       "entry_turnover_cr": 3.52,
       "entry_stop_pct": 0.636
+    },
+    {
+      "ticker": "SYNGENE.NS",
+      "direction": "LONG",
+      "entry_price": 392.25,
+      "exit_price": 389.41,
+      "qty": 685,
+      "pnl": -2247.62,
+      "R_multiple": -1.16,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 302.22,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-14 10:15:49 IST",
+      "exit_time": "2026-10-14 14:45:49 IST",
+      "entry_rsi": 86.2,
+      "entry_deviation_pct": 1.084,
+      "entry_atr_pct": 0.725,
+      "entry_rvol": 2.56,
+      "entry_turnover_cr": 2.01,
+      "entry_stop_pct": 0.725
     }
   ],
   "daily_entry_count": {
@@ -1118,7 +1098,7 @@
     "2026-10-13": 8,
     "2026-10-14": 6
   },
-  "total_pnl": -27347.175783339375,
+  "total_pnl": -29594.793593501956,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
