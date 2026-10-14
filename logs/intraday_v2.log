@@ -4578,3 +4578,22 @@
 2026-10-14 10:46:29 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-14 10:46:30 | INFO    | engine.paper_trader_v2 | ORDER REJECTED UPL.NS: already holding this name
 2026-10-14 10:46:30 | INFO    | __main__ | equity Rs975,353 | open 2 | pending 0 | closed 46 | WR 50.0% | PF 0.61 | friction Rs16,767
+2026-10-14 11:01:19 | INFO    | __main__ | ================================================================
+2026-10-14 11:01:19 | INFO    | __main__ | Scan | 2026-10-14 11:01 IST
+2026-10-14 11:01:56 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-14 11:01:56 | INFO    | engine.paper_trader_v2 | EXIT UPL.NS 571@Rs541.48 | P&L Rs+1,502 (+0.77R) | friction Rs342 | t1_vwap
+2026-10-14 11:01:56 | INFO    | engine.paper_trader_v2 | T1 UPL.NS - half out at VWAP, stop to Rs539.36 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-14 11:01:56 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,950 risk per trade)
+2026-10-14 11:01:56 | INFO    | __main__ |   base 0.40%
+2026-10-14 11:01:56 | INFO    | __main__ |   performance x0.6: n=47, observed expectancy shrunk to -0.022R vs prior +0.125R -> trimming (0.60x)
+2026-10-14 11:01:56 | INFO    | __main__ |   drawdown    x0.764: drawdown 3.4% - sizing at 0.76x
+2026-10-14 11:01:56 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-14 11:01:56 | INFO    | __main__ | strategy: MOM-v3
+2026-10-14 11:01:56 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-14 11:01:57 | INFO    | engine.paper_trader_v2 | ORDER YESBANK.NS market buy at next open (ref Rs21.33, SL 0.519%, RSI 84.6, rvol 6.13)
+2026-10-14 11:01:57 | INFO    | engine.paper_trader_v2 | ORDER SONACOMS.NS market buy at next open (ref Rs819.2, SL 0.557%, RSI 70.6, rvol 3.33)
+2026-10-14 11:01:57 | INFO    | engine.paper_trader_v2 | ORDER ICICIGI.NS market buy at next open (ref Rs1728.6, SL 0.636%, RSI 72.5, rvol 2.83)
+2026-10-14 11:01:57 | INFO    | engine.paper_trader_v2 | FILLED YESBANK.NS @ Rs21.329999923706055 | qty=17730 notional=Rs378,181 friction=Rs408
+2026-10-14 11:01:57 | INFO    | engine.paper_trader_v2 | FILLED SONACOMS.NS @ Rs818.9500122070312 | qty=427 notional=Rs349,692 friction=Rs381
+2026-10-14 11:01:57 | INFO    | engine.paper_trader_v2 | FILLED ICICIGI.NS @ Rs1729.0 | qty=177 notional=Rs306,033 friction=Rs339
+2026-10-14 11:01:59 | INFO    | __main__ | equity Rs975,159 | open 4 | pending 0 | closed 47 | WR 51.1% | PF 0.63 | friction Rs17,109
