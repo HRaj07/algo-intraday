@@ -27,7 +27,7 @@
       "atr": 2.84,
       "margin": 53738.25,
       "entry_cost": 68.5805273975,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-14 10:15:49 IST",
@@ -67,7 +67,7 @@
       "atr": 3.41,
       "margin": 61468.15,
       "entry_cost": 75.0506855945,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-14 10:31:18 IST",
@@ -80,23 +80,23 @@
       "entry_turnover_cr": 4.18,
       "entry_stop_pct": 0.634,
       "nifty_at_entry": 22708.099609375,
-      "mfe_price": 538.25,
+      "mfe_price": 541.3499755859375,
       "mae_price": 538.25
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "UPL.NS": {
-      "close": 539.5,
-      "high": 539.5,
-      "low": 537.5,
-      "as_of": "2026-10-14T10:31:18.725891+05:30"
+      "close": 540.5,
+      "high": 541.3499755859375,
+      "low": 540.4500122070312,
+      "as_of": "2026-10-14T10:45:53.770847+05:30"
     },
     "SYNGENE.NS": {
-      "close": 391.6000061035156,
-      "high": 391.6000061035156,
-      "low": 389.75,
-      "as_of": "2026-10-14T10:31:18.725891+05:30"
+      "close": 391.75,
+      "high": 391.95001220703125,
+      "low": 391.5,
+      "as_of": "2026-10-14T10:45:53.770847+05:30"
     }
   },
   "trade_history": [
