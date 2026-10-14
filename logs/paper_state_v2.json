@@ -27,7 +27,7 @@
       "atr": 2.84,
       "margin": 53738.25,
       "entry_cost": 68.5805273975,
-      "bars_held": 16,
+      "bars_held": 17,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-14 10:15:49 IST",
@@ -47,10 +47,10 @@
   "pending_orders": {},
   "last_known_price": {
     "SYNGENE.NS": {
-      "close": 390.29998779296875,
-      "high": 390.6000061035156,
-      "low": 390.25,
-      "as_of": "2026-10-14T14:06:13.327554+05:30"
+      "close": 390.04998779296875,
+      "high": 390.04998779296875,
+      "low": 390.0,
+      "as_of": "2026-10-14T14:16:12.497824+05:30"
     }
   },
   "trade_history": [
