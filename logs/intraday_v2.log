@@ -4597,3 +4597,16 @@
 2026-10-14 11:01:57 | INFO    | engine.paper_trader_v2 | FILLED SONACOMS.NS @ Rs818.9500122070312 | qty=427 notional=Rs349,692 friction=Rs381
 2026-10-14 11:01:57 | INFO    | engine.paper_trader_v2 | FILLED ICICIGI.NS @ Rs1729.0 | qty=177 notional=Rs306,033 friction=Rs339
 2026-10-14 11:01:59 | INFO    | __main__ | equity Rs975,159 | open 4 | pending 0 | closed 47 | WR 51.1% | PF 0.63 | friction Rs17,109
+2026-10-14 11:15:51 | INFO    | __main__ | ================================================================
+2026-10-14 11:15:51 | INFO    | __main__ | Scan | 2026-10-14 11:15 IST
+2026-10-14 11:16:39 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-14 11:16:39 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,945 risk per trade)
+2026-10-14 11:16:39 | INFO    | __main__ |   base 0.40%
+2026-10-14 11:16:39 | INFO    | __main__ |   performance x0.6: n=47, observed expectancy shrunk to -0.022R vs prior +0.125R -> trimming (0.60x)
+2026-10-14 11:16:39 | INFO    | __main__ |   drawdown    x0.724: drawdown 3.7% - sizing at 0.72x
+2026-10-14 11:16:39 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-14 11:16:39 | INFO    | __main__ | strategy: MOM-v3
+2026-10-14 11:16:39 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-14 11:16:40 | INFO    | engine.paper_trader_v2 | ORDER REJECTED TATAELXSI.NS: at max concurrent positions (3)
+2026-10-14 11:16:40 | INFO    | engine.paper_trader_v2 | ORDER REJECTED CROMPTON.NS: at max concurrent positions (3)
+2026-10-14 11:16:40 | INFO    | __main__ | equity Rs972,738 | open 4 | pending 0 | closed 47 | WR 51.1% | PF 0.63 | friction Rs17,109

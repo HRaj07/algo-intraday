@@ -27,7 +27,7 @@
       "atr": 2.84,
       "margin": 53738.25,
       "entry_cost": 68.5805273975,
-      "bars_held": 3,
+      "bars_held": 4,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-14 10:15:49 IST",
@@ -67,7 +67,7 @@
       "atr": 0.11,
       "margin": 75636.17972946167,
       "entry_cost": 86.90975151895131,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-14 11:01:19 IST",
@@ -81,7 +81,7 @@
       "entry_stop_pct": 0.519,
       "nifty_at_entry": 22737.150390625,
       "mfe_price": 21.329999923706055,
-      "mae_price": 21.329999923706055
+      "mae_price": 21.25
     },
     "SONACOMS.NS": {
       "ticker": "SONACOMS.NS",
@@ -107,7 +107,7 @@
       "atr": 4.56,
       "margin": 69938.33104248047,
       "entry_cost": 82.14048123248742,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-14 11:01:19 IST",
@@ -121,7 +121,7 @@
       "entry_stop_pct": 0.557,
       "nifty_at_entry": 22737.150390625,
       "mfe_price": 818.9500122070312,
-      "mae_price": 818.9500122070312
+      "mae_price": 815.25
     },
     "ICICIGI.NS": {
       "ticker": "ICICIGI.NS",
@@ -147,7 +147,7 @@
       "atr": 10.99,
       "margin": 61206.600000000006,
       "entry_cost": 74.831760398,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-14 11:01:19 IST",
@@ -160,23 +160,35 @@
       "entry_turnover_cr": 3.52,
       "entry_stop_pct": 0.636,
       "nifty_at_entry": 22737.150390625,
-      "mfe_price": 1729.0,
+      "mfe_price": 1733.800048828125,
       "mae_price": 1729.0
     }
   },
   "pending_orders": {},
   "last_known_price": {
-    "UPL.NS": {
-      "close": 542.0,
-      "high": 542.4000244140625,
-      "low": 541.7999877929688,
-      "as_of": "2026-10-14T11:01:19.458127+05:30"
-    },
     "SYNGENE.NS": {
-      "close": 391.1499938964844,
-      "high": 391.1499938964844,
-      "low": 390.70001220703125,
-      "as_of": "2026-10-14T11:01:19.458127+05:30"
+      "close": 390.25,
+      "high": 390.54998779296875,
+      "low": 390.25,
+      "as_of": "2026-10-14T11:15:51.732910+05:30"
+    },
+    "ICICIGI.NS": {
+      "close": 1733.5,
+      "high": 1733.800048828125,
+      "low": 1733.0,
+      "as_of": "2026-10-14T11:15:51.732910+05:30"
+    },
+    "YESBANK.NS": {
+      "close": 21.270000457763672,
+      "high": 21.280000686645508,
+      "low": 21.25,
+      "as_of": "2026-10-14T11:15:51.732910+05:30"
+    },
+    "SONACOMS.NS": {
+      "close": 815.3499755859375,
+      "high": 815.8499755859375,
+      "low": 815.25,
+      "as_of": "2026-10-14T11:15:51.732910+05:30"
     }
   },
   "trade_history": [
