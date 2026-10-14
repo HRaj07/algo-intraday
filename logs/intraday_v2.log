@@ -4551,3 +4551,18 @@
 2026-10-14 10:16:50 | INFO    | engine.paper_trader_v2 | FILLED UPL.NS @ Rs533.25 | qty=628 notional=Rs334,881 friction=Rs367
 2026-10-14 10:16:50 | INFO    | engine.paper_trader_v2 | FILLED SYNGENE.NS @ Rs392.25 | qty=685 notional=Rs268,691 friction=Rs304
 2026-10-14 10:16:50 | INFO    | __main__ | equity Rs973,435 | open 2 | pending 0 | closed 45 | WR 48.9% | PF 0.6 | friction Rs16,399
+2026-10-14 10:31:18 | INFO    | __main__ | ================================================================
+2026-10-14 10:31:18 | INFO    | __main__ | Scan | 2026-10-14 10:31 IST
+2026-10-14 10:31:58 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-14 10:31:58 | INFO    | engine.paper_trader_v2 | EXIT UPL.NS 628@Rs535.39 | P&L Rs+976 (+0.50R) | friction Rs368 | t1_vwap
+2026-10-14 10:31:58 | INFO    | engine.paper_trader_v2 | T1 UPL.NS - half out at VWAP, stop to Rs534.3 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-14 10:31:58 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,948 risk per trade)
+2026-10-14 10:31:58 | INFO    | __main__ |   base 0.40%
+2026-10-14 10:31:58 | INFO    | __main__ |   performance x0.6: n=46, observed expectancy shrunk to -0.030R vs prior +0.125R -> trimming (0.60x)
+2026-10-14 10:31:58 | INFO    | __main__ |   drawdown    x0.745: drawdown 3.5% - sizing at 0.74x
+2026-10-14 10:31:58 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-14 10:31:58 | INFO    | __main__ | strategy: MOM-v3
+2026-10-14 10:31:58 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-14 10:31:59 | INFO    | engine.paper_trader_v2 | ORDER UPL.NS market buy at next open (ref Rs538.25, SL 0.634%, RSI 81.3, rvol 3.83)
+2026-10-14 10:31:59 | INFO    | engine.paper_trader_v2 | FILLED UPL.NS @ Rs538.25 | qty=571 notional=Rs307,341 friction=Rs341
+2026-10-14 10:31:59 | INFO    | __main__ | equity Rs974,679 | open 2 | pending 0 | closed 46 | WR 50.0% | PF 0.61 | friction Rs16,767

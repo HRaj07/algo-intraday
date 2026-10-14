@@ -1,48 +1,8 @@
 {
-  "cash": 852720.0756593668,
+  "cash": 859204.0390513232,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "UPL.NS": {
-      "ticker": "UPL.NS",
-      "direction": "LONG",
-      "entry_price": 533.25,
-      "qty": 628,
-      "qty_open": 628,
-      "stop_loss": 530.15,
-      "initial_stop": 530.15,
-      "t1": 535.39,
-      "t2": 538.39,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 3.1,
-      "atr": 3.1,
-      "margin": 66976.2,
-      "entry_cost": 79.661088686,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-14 10:15:49 IST",
-      "predicted_rr": null,
-      "entry_rsi": 76.3,
-      "entry_deviation_pct": 0.896,
-      "entry_atr_pct": 0.582,
-      "entry_rvol": 3.69,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.18,
-      "entry_stop_pct": 0.582,
-      "nifty_at_entry": 22692.150390625,
-      "mfe_price": 533.25,
-      "mae_price": 533.25
-    },
     "SYNGENE.NS": {
       "ticker": "SYNGENE.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 2.84,
       "margin": 53738.25,
       "entry_cost": 68.5805273975,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-14 10:15:49 IST",
@@ -81,11 +41,64 @@
       "entry_stop_pct": 0.725,
       "nifty_at_entry": 22692.150390625,
       "mfe_price": 392.25,
-      "mae_price": 392.25
+      "mae_price": 389.75
+    },
+    "UPL.NS": {
+      "ticker": "UPL.NS",
+      "direction": "LONG",
+      "entry_price": 538.25,
+      "qty": 571,
+      "qty_open": 571,
+      "stop_loss": 534.84,
+      "initial_stop": 534.84,
+      "t1": 541.48,
+      "t2": 545.07,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 3.41,
+      "atr": 3.41,
+      "margin": 61468.15,
+      "entry_cost": 75.0506855945,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-14 10:31:18 IST",
+      "predicted_rr": null,
+      "entry_rsi": 81.3,
+      "entry_deviation_pct": 1.434,
+      "entry_atr_pct": 0.634,
+      "entry_rvol": 3.83,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 4.18,
+      "entry_stop_pct": 0.634,
+      "nifty_at_entry": 22708.099609375,
+      "mfe_price": 538.25,
+      "mae_price": 538.25
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "UPL.NS": {
+      "close": 539.5,
+      "high": 539.5,
+      "low": 537.5,
+      "as_of": "2026-10-14T10:31:18.725891+05:30"
+    },
+    "SYNGENE.NS": {
+      "close": 391.6000061035156,
+      "high": 391.6000061035156,
+      "low": 389.75,
+      "as_of": "2026-10-14T10:31:18.725891+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -1031,6 +1044,27 @@
       "entry_rvol": 4.76,
       "entry_turnover_cr": 10.61,
       "entry_stop_pct": 0.633
+    },
+    {
+      "ticker": "UPL.NS",
+      "direction": "LONG",
+      "entry_price": 533.25,
+      "exit_price": 535.39,
+      "qty": 628,
+      "pnl": 975.91,
+      "R_multiple": 0.5,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 368.01,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-14 10:15:49 IST",
+      "exit_time": "2026-10-14 10:31:18 IST",
+      "entry_rsi": 76.3,
+      "entry_deviation_pct": 0.896,
+      "entry_atr_pct": 0.582,
+      "entry_rvol": 3.69,
+      "entry_turnover_cr": 4.18,
+      "entry_stop_pct": 0.582
     }
   ],
   "daily_entry_count": {
@@ -1044,16 +1078,16 @@
     "2026-10-09": 5,
     "2026-10-12": 5,
     "2026-10-13": 8,
-    "2026-10-14": 2
+    "2026-10-14": 3
   },
-  "total_pnl": -26565.474340633802,
+  "total_pnl": -25589.560948677332,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=45, observed expectancy shrunk to -0.036R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.736,
-    "drawdown_reason": "drawdown 3.6% - sizing at 0.74x",
-    "raw_pct": 0.00177,
+    "performance_reason": "n=46, observed expectancy shrunk to -0.030R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.745,
+    "drawdown_reason": "drawdown 3.5% - sizing at 0.74x",
+    "raw_pct": 0.00179,
     "final_pct": 0.002,
     "clamped": true
   },
