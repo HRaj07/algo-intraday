@@ -4921,3 +4921,15 @@
 2026-10-15 10:32:00 | INFO    | engine.paper_trader_v2 | ORDER HEROMOTOCO.NS market buy at next open (ref Rs5188.5, SL 0.537%, RSI 80.0, rvol 8.45)
 2026-10-15 10:32:00 | INFO    | engine.paper_trader_v2 | FILLED HEROMOTOCO.NS @ Rs5188.5 | qty=69 notional=Rs358,006 friction=Rs389
 2026-10-15 10:32:00 | INFO    | __main__ | equity Rs972,204 | open 1 | pending 0 | closed 52 | WR 50.0% | PF 0.61 | friction Rs18,946
+2026-10-15 10:45:52 | INFO    | __main__ | ================================================================
+2026-10-15 10:45:52 | INFO    | __main__ | Scan | 2026-10-15 10:45 IST
+2026-10-15 10:46:29 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-15 10:46:30 | INFO    | engine.paper_trader_v2 | EXIT HEROMOTOCO.NS 69@Rs5160.64 | P&L Rs-2,310 (-1.20R) | friction Rs388 | stop_loss
+2026-10-15 10:46:30 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,939 risk per trade)
+2026-10-15 10:46:30 | INFO    | __main__ |   base 0.40%
+2026-10-15 10:46:30 | INFO    | __main__ |   performance x0.6: n=53, observed expectancy shrunk to -0.052R vs prior +0.125R -> trimming (0.60x)
+2026-10-15 10:46:30 | INFO    | __main__ |   drawdown    x0.674: drawdown 4.0% - sizing at 0.67x
+2026-10-15 10:46:30 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-15 10:46:30 | INFO    | __main__ | strategy: MOM-v3
+2026-10-15 10:46:30 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-15 10:46:31 | INFO    | __main__ | equity Rs969,688 | open 0 | pending 0 | closed 53 | WR 49.1% | PF 0.6 | friction Rs19,333

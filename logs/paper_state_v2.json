@@ -1,56 +1,15 @@
 {
-  "cash": 900396.1607617894,
+  "cash": 969687.6055215615,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "HEROMOTOCO.NS": {
-      "ticker": "HEROMOTOCO.NS",
-      "direction": "LONG",
-      "entry_price": 5188.5,
-      "qty": 69,
-      "qty_open": 69,
-      "stop_loss": 5160.64,
-      "initial_stop": 5160.64,
-      "t1": 5219.63,
-      "t2": 5244.19,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 27.86,
-      "atr": 27.84,
-      "margin": 71601.3,
-      "entry_cost": 83.532436139,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-15 10:31:23 IST",
-      "predicted_rr": null,
-      "entry_rsi": 80.0,
-      "entry_deviation_pct": 1.25,
-      "entry_atr_pct": 0.537,
-      "entry_rvol": 8.45,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 5.88,
-      "entry_stop_pct": 0.537,
-      "nifty_at_entry": 22904.05078125,
-      "mfe_price": 5188.5,
-      "mae_price": 5188.5
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "HEROMOTOCO.NS": {
-      "close": 5191.5,
-      "high": 5192.5,
-      "low": 5186.5,
-      "as_of": "2026-10-15T10:31:23.094743+05:30"
+      "close": 5153.5,
+      "high": 5159.0,
+      "low": 5149.0,
+      "as_of": "2026-10-15T10:45:52.199271+05:30"
     }
   },
   "trade_history": [
@@ -1145,6 +1104,27 @@
       "entry_rvol": 4.6,
       "entry_turnover_cr": 5.88,
       "entry_stop_pct": 0.514
+    },
+    {
+      "ticker": "HEROMOTOCO.NS",
+      "direction": "LONG",
+      "entry_price": 5188.5,
+      "exit_price": 5160.64,
+      "qty": 69,
+      "pnl": -2309.86,
+      "R_multiple": -1.2,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 387.52,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-15 10:31:23 IST",
+      "exit_time": "2026-10-15 10:45:52 IST",
+      "entry_rsi": 80.0,
+      "entry_deviation_pct": 1.25,
+      "entry_atr_pct": 0.537,
+      "entry_rvol": 8.45,
+      "entry_turnover_cr": 5.88,
+      "entry_stop_pct": 0.537
     }
   ],
   "daily_entry_count": {
@@ -1161,7 +1141,7 @@
     "2026-10-14": 6,
     "2026-10-15": 2
   },
-  "total_pnl": -28002.539238211182,
+  "total_pnl": -30312.39447843912,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
