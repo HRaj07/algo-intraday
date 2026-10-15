@@ -1,48 +1,8 @@
 {
-  "cash": 848390.2317788857,
+  "cash": 850451.6178855803,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "BSOFT.NS": {
-      "ticker": "BSOFT.NS",
-      "direction": "LONG",
-      "entry_price": 314.45001220703125,
-      "qty": 713,
-      "qty_open": 713,
-      "stop_loss": 311.73,
-      "initial_stop": 311.73,
-      "t1": 316.03,
-      "t2": 319.59,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.72,
-      "atr": 2.72,
-      "margin": 44840.57174072266,
-      "entry_cost": 61.13290376413708,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-15 11:15:52 IST",
-      "predicted_rr": null,
-      "entry_rsi": 79.4,
-      "entry_deviation_pct": 0.967,
-      "entry_atr_pct": 0.866,
-      "entry_rvol": 2.77,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.05,
-      "entry_stop_pct": 0.866,
-      "nifty_at_entry": 22921.099609375,
-      "mfe_price": 316.0,
-      "mae_price": 314.45001220703125
-    },
     "BHARTIARTL.NS": {
       "ticker": "BHARTIARTL.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 9.43,
       "margin": 76456.80200195312,
       "entry_cost": 87.59663697969482,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-15 11:31:17 IST",
@@ -80,17 +40,63 @@
       "entry_turnover_cr": 34.43,
       "entry_stop_pct": 0.506,
       "nifty_at_entry": 22952.69921875,
-      "mfe_price": 1864.800048828125,
-      "mae_price": 1864.800048828125
+      "mfe_price": 1868.199951171875,
+      "mae_price": 1858.800048828125
+    },
+    "BSOFT.NS": {
+      "ticker": "BSOFT.NS",
+      "direction": "LONG",
+      "entry_price": 315.79998779296875,
+      "qty": 691,
+      "qty_open": 691,
+      "stop_loss": 312.99,
+      "initial_stop": 312.99,
+      "t1": 317.19,
+      "t2": 320.92,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 2.81,
+      "atr": 2.81,
+      "margin": 43643.55831298829,
+      "entry_cost": 60.13096761472059,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-15 11:45:54 IST",
+      "predicted_rr": null,
+      "entry_rsi": 78.9,
+      "entry_deviation_pct": 1.056,
+      "entry_atr_pct": 0.891,
+      "entry_rvol": 4.27,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 4.05,
+      "entry_stop_pct": 0.891,
+      "nifty_at_entry": 22960.5,
+      "mfe_price": 315.79998779296875,
+      "mae_price": 315.79998779296875
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "BSOFT.NS": {
-      "close": 315.79998779296875,
-      "high": 316.0,
-      "low": 315.79998779296875,
-      "as_of": "2026-10-15T11:31:17.745297+05:30"
+      "close": 315.29998779296875,
+      "high": 318.04998779296875,
+      "low": 314.6499938964844,
+      "as_of": "2026-10-15T11:45:54.722934+05:30"
+    },
+    "BHARTIARTL.NS": {
+      "close": 1866.5,
+      "high": 1868.199951171875,
+      "low": 1858.800048828125,
+      "as_of": "2026-10-15T11:45:54.722934+05:30"
     }
   },
   "trade_history": [
@@ -1206,6 +1212,27 @@
       "entry_rvol": 8.45,
       "entry_turnover_cr": 5.88,
       "entry_stop_pct": 0.537
+    },
+    {
+      "ticker": "BSOFT.NS",
+      "direction": "LONG",
+      "entry_price": 314.45001220703125,
+      "exit_price": 316.03,
+      "qty": 713,
+      "pnl": 864.37,
+      "R_multiple": 0.45,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 262.16,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-15 11:15:52 IST",
+      "exit_time": "2026-10-15 11:45:54 IST",
+      "entry_rsi": 79.4,
+      "entry_deviation_pct": 0.967,
+      "entry_atr_pct": 0.866,
+      "entry_rvol": 2.77,
+      "entry_turnover_cr": 4.05,
+      "entry_stop_pct": 0.866
     }
   ],
   "daily_entry_count": {
@@ -1220,16 +1247,16 @@
     "2026-10-12": 5,
     "2026-10-13": 8,
     "2026-10-14": 6,
-    "2026-10-15": 4
+    "2026-10-15": 5
   },
-  "total_pnl": -30312.39447843912,
+  "total_pnl": -29448.021799478898,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=53, observed expectancy shrunk to -0.052R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.69,
-    "drawdown_reason": "drawdown 3.9% - sizing at 0.69x",
-    "raw_pct": 0.00166,
+    "performance_reason": "n=54, observed expectancy shrunk to -0.047R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.694,
+    "drawdown_reason": "drawdown 3.8% - sizing at 0.69x",
+    "raw_pct": 0.00167,
     "final_pct": 0.002,
     "clamped": true
   },
