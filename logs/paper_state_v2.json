@@ -27,7 +27,7 @@
       "atr": 9.43,
       "margin": 76456.80200195312,
       "entry_cost": 87.59663697969482,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-15 11:31:17 IST",
@@ -47,10 +47,10 @@
   "pending_orders": {},
   "last_known_price": {
     "BHARTIARTL.NS": {
-      "close": 1865.199951171875,
-      "high": 1865.199951171875,
-      "low": 1865.199951171875,
-      "as_of": "2026-10-15T12:45:50.700775+05:30"
+      "close": 1864.699951171875,
+      "high": 1865.0,
+      "low": 1864.0,
+      "as_of": "2026-10-15T13:01:07.288075+05:30"
     }
   },
   "trade_history": [
