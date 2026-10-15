@@ -1,8 +1,49 @@
 {
-  "cash": 970405.2064064987,
+  "cash": 895171.4064064986,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {},
+  "positions": {
+    "HEROMOTOCO.NS": {
+      "ticker": "HEROMOTOCO.NS",
+      "direction": "LONG",
+      "entry_price": 5153.0,
+      "qty": 73,
+      "qty_open": 73,
+      "stop_loss": 5126.51,
+      "initial_stop": 5126.51,
+      "t1": 5180.4,
+      "t2": 5202.47,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 26.49,
+      "atr": 26.48,
+      "margin": 75233.8,
+      "entry_cost": 86.572947614,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-15 10:15:53 IST",
+      "predicted_rr": null,
+      "entry_rsi": 76.5,
+      "entry_deviation_pct": 0.967,
+      "entry_atr_pct": 0.514,
+      "entry_rvol": 4.6,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 5.88,
+      "entry_stop_pct": 0.514,
+      "nifty_at_entry": 22900.400390625,
+      "mfe_price": 5153.0,
+      "mae_price": 5153.0
+    }
+  },
   "pending_orders": {},
   "last_known_price": {},
   "trade_history": [
@@ -1089,16 +1130,17 @@
     "2026-10-09": 5,
     "2026-10-12": 5,
     "2026-10-13": 8,
-    "2026-10-14": 6
+    "2026-10-14": 6,
+    "2026-10-15": 1
   },
   "total_pnl": -29594.793593501956,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=47, observed expectancy shrunk to -0.022R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.764,
-    "drawdown_reason": "drawdown 3.4% - sizing at 0.76x",
-    "raw_pct": 0.00183,
+    "performance_reason": "n=51, observed expectancy shrunk to -0.049R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.686,
+    "drawdown_reason": "drawdown 3.9% - sizing at 0.69x",
+    "raw_pct": 0.00165,
     "final_pct": 0.002,
     "clamped": true
   },
@@ -1126,6 +1168,12 @@
       "pf": 0.546,
       "n": 30,
       "trade_count": 45
+    },
+    {
+      "date": "2026-10-15",
+      "pf": 0.474,
+      "n": 30,
+      "trade_count": 51
     }
   ]
 }
