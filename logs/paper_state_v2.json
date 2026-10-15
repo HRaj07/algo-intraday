@@ -1,8 +1,49 @@
 {
-  "cash": 969687.6055215615,
+  "cash": 924847.0337808388,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {},
+  "positions": {
+    "BSOFT.NS": {
+      "ticker": "BSOFT.NS",
+      "direction": "LONG",
+      "entry_price": 314.45001220703125,
+      "qty": 713,
+      "qty_open": 713,
+      "stop_loss": 311.73,
+      "initial_stop": 311.73,
+      "t1": 316.03,
+      "t2": 319.59,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 2.72,
+      "atr": 2.72,
+      "margin": 44840.57174072266,
+      "entry_cost": 61.13290376413708,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-15 11:15:52 IST",
+      "predicted_rr": null,
+      "entry_rsi": 79.4,
+      "entry_deviation_pct": 0.967,
+      "entry_atr_pct": 0.866,
+      "entry_rvol": 2.77,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 4.05,
+      "entry_stop_pct": 0.866,
+      "nifty_at_entry": 22921.099609375,
+      "mfe_price": 314.45001220703125,
+      "mae_price": 314.45001220703125
+    }
+  },
   "pending_orders": {},
   "last_known_price": {},
   "trade_history": [
@@ -1132,16 +1173,16 @@
     "2026-10-12": 5,
     "2026-10-13": 8,
     "2026-10-14": 6,
-    "2026-10-15": 2
+    "2026-10-15": 3
   },
   "total_pnl": -30312.39447843912,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=52, observed expectancy shrunk to -0.041R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.712,
-    "drawdown_reason": "drawdown 3.7% - sizing at 0.71x",
-    "raw_pct": 0.00171,
+    "performance_reason": "n=53, observed expectancy shrunk to -0.052R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.674,
+    "drawdown_reason": "drawdown 4.0% - sizing at 0.67x",
+    "raw_pct": 0.00162,
     "final_pct": 0.002,
     "clamped": true
   },
