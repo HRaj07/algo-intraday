@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "BHARTIARTL.NS": {
-      "close": 1855.199951171875,
-      "high": 1855.199951171875,
-      "low": 1855.199951171875,
-      "as_of": "2026-10-15T14:15:51.953764+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
