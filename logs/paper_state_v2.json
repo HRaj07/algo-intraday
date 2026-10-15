@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "HEROMOTOCO.NS": {
-      "close": 5153.5,
-      "high": 5159.0,
-      "low": 5149.0,
-      "as_of": "2026-10-15T10:45:52.199271+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
