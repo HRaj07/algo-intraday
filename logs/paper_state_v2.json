@@ -1,56 +1,15 @@
 {
-  "cash": 891899.4465750899,
+  "cash": 966010.3530030849,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "BHARTIARTL.NS": {
-      "ticker": "BHARTIARTL.NS",
-      "direction": "LONG",
-      "entry_price": 1864.800048828125,
-      "qty": 205,
-      "qty_open": 205,
-      "stop_loss": 1855.36,
-      "initial_stop": 1855.36,
-      "t1": 1875.49,
-      "t2": 1883.16,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 9.44,
-      "atr": 9.43,
-      "margin": 76456.80200195312,
-      "entry_cost": 87.59663697969482,
-      "bars_held": 11,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-15 11:31:17 IST",
-      "predicted_rr": null,
-      "entry_rsi": 72.4,
-      "entry_deviation_pct": 0.895,
-      "entry_atr_pct": 0.506,
-      "entry_rvol": 2.33,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 34.43,
-      "entry_stop_pct": 0.506,
-      "nifty_at_entry": 22952.69921875,
-      "mfe_price": 1868.199951171875,
-      "mae_price": 1858.800048828125
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "BHARTIARTL.NS": {
-      "close": 1859.199951171875,
-      "high": 1859.800048828125,
-      "low": 1859.199951171875,
-      "as_of": "2026-10-15T14:01:13.351663+05:30"
+      "close": 1855.199951171875,
+      "high": 1855.199951171875,
+      "low": 1855.199951171875,
+      "as_of": "2026-10-15T14:15:51.953764+05:30"
     }
   },
   "trade_history": [
@@ -1208,6 +1167,27 @@
       "entry_rvol": 4.27,
       "entry_turnover_cr": 4.05,
       "entry_stop_pct": 0.891
+    },
+    {
+      "ticker": "BHARTIARTL.NS",
+      "direction": "LONG",
+      "entry_price": 1864.800048828125,
+      "exit_price": 1855.36,
+      "qty": 205,
+      "pnl": -2345.9,
+      "R_multiple": -1.21,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 410.69,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-15 11:31:17 IST",
+      "exit_time": "2026-10-15 14:15:51 IST",
+      "entry_rsi": 72.4,
+      "entry_deviation_pct": 0.895,
+      "entry_atr_pct": 0.506,
+      "entry_rvol": 2.33,
+      "entry_turnover_cr": 34.43,
+      "entry_stop_pct": 0.506
     }
   ],
   "daily_entry_count": {
@@ -1224,7 +1204,7 @@
     "2026-10-14": 6,
     "2026-10-15": 5
   },
-  "total_pnl": -31643.751422957557,
+  "total_pnl": -33989.6469969157,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
