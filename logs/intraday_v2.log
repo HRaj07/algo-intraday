@@ -5244,3 +5244,18 @@
 2026-10-16 10:16:41 | INFO    | engine.paper_trader_v2 | FILLED KPITTECH.NS @ Rs550.0 | qty=458 notional=Rs251,900 friction=Rs288
 2026-10-16 10:16:41 | INFO    | engine.paper_trader_v2 | FILLED TATAELXSI.NS @ Rs3795.5 | qty=79 notional=Rs299,844 friction=Rs333
 2026-10-16 10:16:42 | INFO    | __main__ | equity Rs966,010 | open 4 | pending 0 | closed 56 | WR 48.2% | PF 0.57 | friction Rs20,260
+2026-10-16 10:31:18 | INFO    | __main__ | ================================================================
+2026-10-16 10:31:18 | INFO    | __main__ | Scan | 2026-10-16 10:31 IST
+2026-10-16 10:32:07 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-16 10:32:07 | INFO    | engine.paper_trader_v2 | EXIT WIPRO.NS 1441@Rs183.98 | P&L Rs+1,285 (+0.67R) | friction Rs300 | t1_vwap
+2026-10-16 10:32:07 | INFO    | engine.paper_trader_v2 | T1 WIPRO.NS - half out at VWAP, stop to Rs183.29 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-16 10:32:08 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,932 risk per trade)
+2026-10-16 10:32:08 | INFO    | __main__ |   base 0.40%
+2026-10-16 10:32:08 | INFO    | __main__ |   performance x0.6: n=57, observed expectancy shrunk to -0.061R vs prior +0.125R -> trimming (0.60x)
+2026-10-16 10:32:08 | INFO    | __main__ |   drawdown    x0.615: drawdown 4.3% - sizing at 0.62x
+2026-10-16 10:32:08 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-16 10:32:08 | INFO    | __main__ | strategy: MOM-v3
+2026-10-16 10:32:08 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-16 10:32:08 | INFO    | engine.paper_trader_v2 | ORDER REJECTED WIPRO.NS: at max concurrent positions (3)
+2026-10-16 10:32:08 | INFO    | engine.paper_trader_v2 | ORDER REJECTED TECHM.NS: already holding this name
+2026-10-16 10:32:08 | INFO    | __main__ | equity Rs966,117 | open 3 | pending 0 | closed 57 | WR 49.1% | PF 0.59 | friction Rs20,560
