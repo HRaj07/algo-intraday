@@ -5224,3 +5224,23 @@
 2026-10-16 10:01:43 | INFO    | __main__ | strategy: MOM-v3
 2026-10-16 10:01:43 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-16 10:01:43 | INFO    | __main__ | equity Rs966,010 | open 0 | pending 0 | closed 56 | WR 48.2% | PF 0.57 | friction Rs20,260
+2026-10-16 10:15:44 | INFO    | __main__ | ================================================================
+2026-10-16 10:15:44 | INFO    | __main__ | Scan | 2026-10-16 10:15 IST
+2026-10-16 10:16:40 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-16 10:16:40 | WARNING | engine.risk_manager | KILL SWITCH (paper - continuing): rolling 30-trade PF 0.36 < 0.85 - edge has degraded, manual restart required
+2026-10-16 10:16:40 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,932 risk per trade)
+2026-10-16 10:16:40 | INFO    | __main__ |   base 0.40%
+2026-10-16 10:16:40 | INFO    | __main__ |   performance x0.6: n=56, observed expectancy shrunk to -0.068R vs prior +0.125R -> trimming (0.60x)
+2026-10-16 10:16:40 | INFO    | __main__ |   drawdown    x0.613: drawdown 4.3% - sizing at 0.61x
+2026-10-16 10:16:40 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-16 10:16:40 | INFO    | __main__ | strategy: MOM-v3
+2026-10-16 10:16:40 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-16 10:16:41 | INFO    | engine.paper_trader_v2 | ORDER WIPRO.NS market buy at next open (ref Rs182.88, SL 0.73%, RSI 87.9, rvol 14.55)
+2026-10-16 10:16:41 | INFO    | engine.paper_trader_v2 | ORDER TECHM.NS market buy at next open (ref Rs1768.5, SL 0.817%, RSI 91.0, rvol 5.72)
+2026-10-16 10:16:41 | INFO    | engine.paper_trader_v2 | ORDER KPITTECH.NS market buy at next open (ref Rs549.85, SL 0.766%, RSI 76.9, rvol 5.32)
+2026-10-16 10:16:41 | INFO    | engine.paper_trader_v2 | ORDER TATAELXSI.NS market buy at next open (ref Rs3797.1, SL 0.64%, RSI 79.6, rvol 2.01)
+2026-10-16 10:16:41 | INFO    | engine.paper_trader_v2 | FILLED WIPRO.NS @ Rs182.8800048828125 | qty=1441 notional=Rs263,530 friction=Rs299
+2026-10-16 10:16:41 | INFO    | engine.paper_trader_v2 | FILLED TECHM.NS @ Rs1768.5999755859375 | qty=133 notional=Rs235,224 friction=Rs272
+2026-10-16 10:16:41 | INFO    | engine.paper_trader_v2 | FILLED KPITTECH.NS @ Rs550.0 | qty=458 notional=Rs251,900 friction=Rs288
+2026-10-16 10:16:41 | INFO    | engine.paper_trader_v2 | FILLED TATAELXSI.NS @ Rs3795.5 | qty=79 notional=Rs299,844 friction=Rs333
+2026-10-16 10:16:42 | INFO    | __main__ | equity Rs966,010 | open 4 | pending 0 | closed 56 | WR 48.2% | PF 0.57 | friction Rs20,260
