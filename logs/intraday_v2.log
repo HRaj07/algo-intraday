@@ -5285,3 +5285,24 @@
 2026-10-16 12:01:07 | INFO    | __main__ | Scan | 2026-10-16 12:01 IST
 2026-10-16 12:01:42 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
 2026-10-16 12:01:42 | WARNING | __main__ | NOT TRADING: weekly loss Rs-15,859 hit the -8.0R limit
+2026-10-16 12:15:45 | INFO    | __main__ | ================================================================
+2026-10-16 12:15:45 | INFO    | __main__ | Scan | 2026-10-16 12:15 IST
+2026-10-16 12:16:29 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-16 12:16:29 | INFO    | engine.paper_trader_v2 | EXIT TECHM.NS 133@Rs1779.11 | P&L Rs+1,125 (+0.59R) | friction Rs273 | t1_vwap
+2026-10-16 12:16:29 | INFO    | engine.paper_trader_v2 | T1 TECHM.NS - half out at VWAP, stop to Rs1772.81 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-16 12:16:29 | INFO    | engine.paper_trader_v2 | EXIT TATAELXSI.NS 79@Rs3819.88 | P&L Rs+1,591 (+0.83R) | friction Rs335 | t1_vwap
+2026-10-16 12:16:29 | INFO    | engine.paper_trader_v2 | T1 TATAELXSI.NS - half out at VWAP, stop to Rs3803.36 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-16 12:16:30 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,936 risk per trade)
+2026-10-16 12:16:30 | INFO    | __main__ |   base 0.40%
+2026-10-16 12:16:30 | INFO    | __main__ |   performance x0.6: n=60, observed expectancy shrunk to -0.057R vs prior +0.125R -> trimming (0.60x)
+2026-10-16 12:16:30 | INFO    | __main__ |   drawdown    x0.644: drawdown 4.1% - sizing at 0.64x
+2026-10-16 12:16:30 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-16 12:16:30 | INFO    | __main__ | strategy: MOM-v3
+2026-10-16 12:16:30 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-16 12:16:31 | INFO    | engine.paper_trader_v2 | ORDER TECHM.NS market buy at next open (ref Rs1787.6, SL 0.786%, RSI 84.8, rvol 4.23)
+2026-10-16 12:16:31 | INFO    | engine.paper_trader_v2 | ORDER WIPRO.NS market buy at next open (ref Rs183.75, SL 0.689%, RSI 76.2, rvol 2.98)
+2026-10-16 12:16:31 | INFO    | engine.paper_trader_v2 | ORDER TATAELXSI.NS market buy at next open (ref Rs3826.2, SL 0.581%, RSI 80.5, rvol 2.46)
+2026-10-16 12:16:31 | INFO    | engine.paper_trader_v2 | FILLED TECHM.NS @ Rs1787.0 | qty=137 notional=Rs244,819 friction=Rs281
+2026-10-16 12:16:31 | INFO    | engine.paper_trader_v2 | FILLED WIPRO.NS @ Rs183.75 | qty=1524 notional=Rs280,035 friction=Rs315
+2026-10-16 12:16:31 | INFO    | engine.paper_trader_v2 | FILLED TATAELXSI.NS @ Rs3826.199951171875 | qty=87 notional=Rs332,879 friction=Rs365
+2026-10-16 12:16:32 | INFO    | __main__ | equity Rs967,857 | open 3 | pending 0 | closed 60 | WR 50.0% | PF 0.61 | friction Rs21,455
