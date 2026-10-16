@@ -5453,3 +5453,11 @@
 2026-10-16 15:01:48 | INFO    | __main__ | strategy: MOM-v3
 2026-10-16 15:01:48 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-16 15:01:48 | INFO    | __main__ | equity Rs969,320 | open 3 | pending 0 | closed 60 | WR 50.0% | PF 0.61 | friction Rs21,455
+2026-10-16 15:15:51 | INFO    | __main__ | ================================================================
+2026-10-16 15:15:51 | INFO    | __main__ | Scan | 2026-10-16 15:15 IST
+2026-10-16 15:16:26 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-16 15:16:26 | INFO    | engine.paper_trader_v2 | EXIT TECHM.NS 137@Rs1781.5 | P&L Rs-1,034 (-0.54R) | friction Rs280 | square_off
+2026-10-16 15:16:26 | INFO    | engine.paper_trader_v2 | EXIT WIPRO.NS 1524@Rs184.6999969482422 | P&L Rs+1,132 (+0.58R) | friction Rs316 | square_off
+2026-10-16 15:16:26 | INFO    | engine.paper_trader_v2 | EXIT TATAELXSI.NS 87@Rs3840.10009765625 | P&L Rs+843 (+0.44R) | friction Rs366 | square_off
+2026-10-16 15:16:27 | INFO    | __main__ | EOD: {'equity': 968811.71, 'cash': 968811.71, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 63, 'win_rate_pct': 50.8, 'profit_factor': 0.62, 'total_friction': 22416.67, 'total_pnl': -31188.29, 'return_pct': -3.12}
+2026-10-16 15:16:27 | WARNING | __main__ | KILL SWITCH has tripped 6x in paper mode; latest {'date': '2026-10-16', 'pf': 0.357, 'n': 30, 'trade_count': 56} - live mode would be HALTED
