@@ -5265,3 +5265,7 @@
 2026-10-16 10:46:25 | INFO    | engine.paper_trader_v2 | THESIS EXIT KPITTECH.NS - vwap_reclaim at ~Rs545.95
 2026-10-16 10:46:25 | INFO    | engine.paper_trader_v2 | EXIT KPITTECH.NS 458@Rs545.9500122070312 | P&L Rs-2,141 (-1.11R) | friction Rs286 | vwap_reclaim
 2026-10-16 10:46:27 | WARNING | __main__ | NOT TRADING: weekly loss Rs-15,859 hit the -8.0R limit
+2026-10-16 11:01:09 | INFO    | __main__ | ================================================================
+2026-10-16 11:01:09 | INFO    | __main__ | Scan | 2026-10-16 11:01 IST
+2026-10-16 11:01:46 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-16 11:01:46 | WARNING | __main__ | NOT TRADING: weekly loss Rs-15,859 hit the -8.0R limit
