@@ -27,7 +27,7 @@
       "atr": 14.45,
       "margin": 47044.75935058594,
       "entry_cost": 62.97787491922095,
-      "bars_held": 6,
+      "bars_held": 7,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-16 10:15:44 IST",
@@ -67,7 +67,7 @@
       "atr": 24.32,
       "margin": 59968.9,
       "entry_cost": 73.795768367,
-      "bars_held": 6,
+      "bars_held": 7,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-16 10:15:44 IST",
@@ -80,23 +80,23 @@
       "entry_turnover_cr": 17.06,
       "entry_stop_pct": 0.64,
       "nifty_at_entry": 23104.44921875,
-      "mfe_price": 3814.800048828125,
+      "mfe_price": 3819.60009765625,
       "mae_price": 3791.699951171875
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "TECHM.NS": {
-      "close": 1761.5,
-      "high": 1762.5,
-      "low": 1760.4000244140625,
-      "as_of": "2026-10-16T11:45:45.631182+05:30"
+      "close": 1769.5999755859375,
+      "high": 1774.0,
+      "low": 1769.0999755859375,
+      "as_of": "2026-10-16T12:01:07.362223+05:30"
     },
     "TATAELXSI.NS": {
-      "close": 3807.89990234375,
-      "high": 3814.0,
-      "low": 3807.89990234375,
-      "as_of": "2026-10-16T11:45:45.631182+05:30"
+      "close": 3817.60009765625,
+      "high": 3819.60009765625,
+      "low": 3816.199951171875,
+      "as_of": "2026-10-16T12:01:07.362223+05:30"
     }
   },
   "trade_history": [
