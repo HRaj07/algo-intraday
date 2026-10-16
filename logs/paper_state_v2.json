@@ -1,5 +1,5 @@
 {
-  "cash": 809901.7168151926,
+  "cash": 858140.5658182001,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 14.45,
       "margin": 47044.75935058594,
       "entry_cost": 62.97787491922095,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-16 10:15:44 IST",
@@ -41,47 +41,7 @@
       "entry_stop_pct": 0.817,
       "nifty_at_entry": 23104.44921875,
       "mfe_price": 1768.5999755859375,
-      "mae_price": 1763.5999755859375
-    },
-    "KPITTECH.NS": {
-      "ticker": "KPITTECH.NS",
-      "direction": "LONG",
-      "entry_price": 550.0,
-      "qty": 458,
-      "qty_open": 458,
-      "stop_loss": 545.79,
-      "initial_stop": 545.79,
-      "t1": 553.15,
-      "t2": 558.27,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 4.21,
-      "atr": 4.21,
-      "margin": 50380.0,
-      "entry_cost": 65.7695714,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-16 10:15:44 IST",
-      "predicted_rr": null,
-      "entry_rsi": 76.9,
-      "entry_deviation_pct": 0.881,
-      "entry_atr_pct": 0.766,
-      "entry_rvol": 5.32,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.84,
-      "entry_stop_pct": 0.766,
-      "nifty_at_entry": 23104.44921875,
-      "mfe_price": 550.0,
-      "mae_price": 548.5999755859375
+      "mae_price": 1761.199951171875
     },
     "TATAELXSI.NS": {
       "ticker": "TATAELXSI.NS",
@@ -107,7 +67,7 @@
       "atr": 24.32,
       "margin": 59968.9,
       "entry_cost": 73.795768367,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-16 10:15:44 IST",
@@ -120,35 +80,29 @@
       "entry_turnover_cr": 17.06,
       "entry_stop_pct": 0.64,
       "nifty_at_entry": 23104.44921875,
-      "mfe_price": 3795.5,
+      "mfe_price": 3809.10009765625,
       "mae_price": 3791.699951171875
     }
   },
   "pending_orders": {},
   "last_known_price": {
-    "WIPRO.NS": {
-      "close": 184.0,
-      "high": 184.14999389648438,
-      "low": 183.82000732421875,
-      "as_of": "2026-10-16T10:31:18.962612+05:30"
-    },
     "TECHM.NS": {
-      "close": 1764.9000244140625,
-      "high": 1765.9000244140625,
-      "low": 1763.5999755859375,
-      "as_of": "2026-10-16T10:31:18.962612+05:30"
+      "close": 1762.0,
+      "high": 1765.800048828125,
+      "low": 1761.199951171875,
+      "as_of": "2026-10-16T10:45:50.770633+05:30"
     },
     "TATAELXSI.NS": {
-      "close": 3792.89990234375,
-      "high": 3794.60009765625,
-      "low": 3791.699951171875,
-      "as_of": "2026-10-16T10:31:18.962612+05:30"
+      "close": 3805.0,
+      "high": 3809.10009765625,
+      "low": 3805.0,
+      "as_of": "2026-10-16T10:45:50.770633+05:30"
     },
     "KPITTECH.NS": {
-      "close": 548.9500122070312,
-      "high": 549.3499755859375,
-      "low": 548.5999755859375,
-      "as_of": "2026-10-16T10:31:18.962612+05:30"
+      "close": 545.9500122070312,
+      "high": 547.0499877929688,
+      "low": 545.9500122070312,
+      "as_of": "2026-10-16T10:45:50.770633+05:30"
     }
   },
   "trade_history": [
@@ -1348,6 +1302,27 @@
       "entry_rvol": 14.55,
       "entry_turnover_cr": 5.35,
       "entry_stop_pct": 0.73
+    },
+    {
+      "ticker": "KPITTECH.NS",
+      "direction": "LONG",
+      "entry_price": 550.0,
+      "exit_price": 545.95,
+      "qty": 458,
+      "pnl": -2141.15,
+      "R_multiple": -1.11,
+      "reason": "vwap_reclaim",
+      "partial": false,
+      "friction": 286.26,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-16 10:15:44 IST",
+      "exit_time": "2026-10-16 10:45:50 IST",
+      "entry_rsi": 76.9,
+      "entry_deviation_pct": 0.881,
+      "entry_atr_pct": 0.766,
+      "entry_rvol": 5.32,
+      "entry_turnover_cr": 4.84,
+      "entry_stop_pct": 0.766
     }
   ],
   "daily_entry_count": {
@@ -1365,7 +1340,7 @@
     "2026-10-15": 5,
     "2026-10-16": 4
   },
-  "total_pnl": -32704.623834221977,
+  "total_pnl": -34845.77483121451,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,

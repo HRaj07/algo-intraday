@@ -5259,3 +5259,9 @@
 2026-10-16 10:32:08 | INFO    | engine.paper_trader_v2 | ORDER REJECTED WIPRO.NS: at max concurrent positions (3)
 2026-10-16 10:32:08 | INFO    | engine.paper_trader_v2 | ORDER REJECTED TECHM.NS: already holding this name
 2026-10-16 10:32:08 | INFO    | __main__ | equity Rs966,117 | open 3 | pending 0 | closed 57 | WR 49.1% | PF 0.59 | friction Rs20,560
+2026-10-16 10:45:50 | INFO    | __main__ | ================================================================
+2026-10-16 10:45:50 | INFO    | __main__ | Scan | 2026-10-16 10:45 IST
+2026-10-16 10:46:25 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-16 10:46:25 | INFO    | engine.paper_trader_v2 | THESIS EXIT KPITTECH.NS - vwap_reclaim at ~Rs545.95
+2026-10-16 10:46:25 | INFO    | engine.paper_trader_v2 | EXIT KPITTECH.NS 458@Rs545.9500122070312 | P&L Rs-2,141 (-1.11R) | friction Rs286 | vwap_reclaim
+2026-10-16 10:46:27 | WARNING | __main__ | NOT TRADING: weekly loss Rs-15,859 hit the -8.0R limit
