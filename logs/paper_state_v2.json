@@ -27,7 +27,7 @@
       "atr": 14.05,
       "margin": 48963.8,
       "entry_cost": 64.584169514,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-16 12:15:45 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.786,
       "nifty_at_entry": 23123.44921875,
       "mfe_price": 1787.0,
-      "mae_price": 1774.5
+      "mae_price": 1774.0
     },
     "WIPRO.NS": {
       "ticker": "WIPRO.NS",
@@ -67,7 +67,7 @@
       "atr": 1.27,
       "margin": 56007.0,
       "entry_cost": 70.47953921,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-16 12:15:45 IST",
@@ -107,7 +107,7 @@
       "atr": 22.23,
       "margin": 66575.87915039062,
       "entry_cost": 79.32600812525146,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-16 12:15:45 IST",
@@ -127,22 +127,22 @@
   "pending_orders": {},
   "last_known_price": {
     "TECHM.NS": {
-      "close": 1774.699951171875,
-      "high": 1775.800048828125,
-      "low": 1774.5,
-      "as_of": "2026-10-16T13:31:19.928564+05:30"
+      "close": 1775.0999755859375,
+      "high": 1776.0,
+      "low": 1774.0,
+      "as_of": "2026-10-16T13:34:31.345212+05:30"
     },
     "TATAELXSI.NS": {
-      "close": 3818.0,
-      "high": 3818.300048828125,
+      "close": 3823.10009765625,
+      "high": 3824.699951171875,
       "low": 3816.699951171875,
-      "as_of": "2026-10-16T13:31:19.928564+05:30"
+      "as_of": "2026-10-16T13:34:31.345212+05:30"
     },
     "WIPRO.NS": {
-      "close": 183.85000610351562,
-      "high": 183.9199981689453,
+      "close": 183.97999572753906,
+      "high": 184.0,
       "low": 183.75,
-      "as_of": "2026-10-16T13:31:19.928564+05:30"
+      "as_of": "2026-10-16T13:34:31.345212+05:30"
     }
   },
   "trade_history": [
