@@ -27,7 +27,7 @@
       "atr": 14.05,
       "margin": 48963.8,
       "entry_cost": 64.584169514,
-      "bars_held": 3,
+      "bars_held": 4,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-16 12:15:45 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.786,
       "nifty_at_entry": 23123.44921875,
       "mfe_price": 1787.0,
-      "mae_price": 1780.5
+      "mae_price": 1777.5999755859375
     },
     "WIPRO.NS": {
       "ticker": "WIPRO.NS",
@@ -67,7 +67,7 @@
       "atr": 1.27,
       "margin": 56007.0,
       "entry_cost": 70.47953921,
-      "bars_held": 3,
+      "bars_held": 4,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-16 12:15:45 IST",
@@ -107,7 +107,7 @@
       "atr": 22.23,
       "margin": 66575.87915039062,
       "entry_cost": 79.32600812525146,
-      "bars_held": 3,
+      "bars_held": 4,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-16 12:15:45 IST",
@@ -121,28 +121,28 @@
       "entry_stop_pct": 0.581,
       "nifty_at_entry": 23123.44921875,
       "mfe_price": 3828.10009765625,
-      "mae_price": 3821.0
+      "mae_price": 3818.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "TECHM.NS": {
-      "close": 1783.0,
-      "high": 1783.0,
-      "low": 1781.5,
-      "as_of": "2026-10-16T13:01:12.123171+05:30"
+      "close": 1777.800048828125,
+      "high": 1779.9000244140625,
+      "low": 1777.5999755859375,
+      "as_of": "2026-10-16T13:15:53.683149+05:30"
     },
     "TATAELXSI.NS": {
-      "close": 3823.0,
-      "high": 3823.5,
-      "low": 3821.0,
-      "as_of": "2026-10-16T13:01:12.123171+05:30"
+      "close": 3819.0,
+      "high": 3820.699951171875,
+      "low": 3818.5,
+      "as_of": "2026-10-16T13:15:53.683149+05:30"
     },
     "WIPRO.NS": {
-      "close": 184.32000732421875,
-      "high": 184.32000732421875,
-      "low": 184.16000366210938,
-      "as_of": "2026-10-16T13:01:12.123171+05:30"
+      "close": 183.99000549316406,
+      "high": 184.0399932861328,
+      "low": 183.9199981689453,
+      "as_of": "2026-10-16T13:15:53.683149+05:30"
     }
   },
   "trade_history": [
