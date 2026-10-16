@@ -5461,3 +5461,6 @@
 2026-10-16 15:16:26 | INFO    | engine.paper_trader_v2 | EXIT TATAELXSI.NS 87@Rs3840.10009765625 | P&L Rs+843 (+0.44R) | friction Rs366 | square_off
 2026-10-16 15:16:27 | INFO    | __main__ | EOD: {'equity': 968811.71, 'cash': 968811.71, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 63, 'win_rate_pct': 50.8, 'profit_factor': 0.62, 'total_friction': 22416.67, 'total_pnl': -31188.29, 'return_pct': -3.12}
 2026-10-16 15:16:27 | WARNING | __main__ | KILL SWITCH has tripped 6x in paper mode; latest {'date': '2026-10-16', 'pf': 0.357, 'n': 30, 'trade_count': 56} - live mode would be HALTED
+2026-10-16 15:31:25 | INFO    | __main__ | ================================================================
+2026-10-16 15:31:25 | INFO    | __main__ | Scan | 2026-10-16 15:31 IST
+2026-10-16 15:31:25 | INFO    | __main__ | outside NSE hours
