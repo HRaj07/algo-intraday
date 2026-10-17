@@ -1,28 +1,29 @@
 fetching 60d of 15-minute bars for 212 symbols...
 cached 212 symbols to cache_recent_15m.pkl
-replaying 210 names over 59 trading days
+replaying 210 names over 60 trading days
 
 strategy under replay: MOM-v3
 
 ========================================================================
-  REPLAY RESULT — 59 trading days, 1371 scans
+  REPLAY RESULT — 60 trading days, 611 scans
 ========================================================================
-  signals generated   294
-  trades closed       103
-  win rate            47.6%
-  profit factor       1.06
-  net P&L             Rs8,150   (0.81% on Rs1,000,000)
-  friction paid       Rs26,073
-  gross before costs  Rs34,223
-  avg R               +0.062
-  t-stat              0.23   (>2 is the go-live bar)
-  max drawdown        Rs-26,189  (2.62%)
+  signals generated   414
+  trades closed       127
+  win rate            52.0%
+  profit factor       0.64
+  net P&L             Rs-59,377   (-5.94% on Rs1,000,000)
+  friction paid       Rs47,591
+  gross before costs  Rs-11,786
+  avg R               -0.198
+  t-stat              -2.34   (>2 is the go-live bar)
+  max drawdown        Rs-62,383  (6.24%)
   exits:
-    square_off            60 trades  Rs  115,965
-    vwap_reclaim          24 trades  Rs  -45,208
-    stop_loss             19 trades  Rs  -62,607
+    t1_vwap               65 trades  Rs  101,582
+    square_off             3 trades  Rs    1,537
+    vwap_reclaim           1 trades  Rs   -3,939
+    stop_loss             58 trades  Rs -158,557
 
-  >> Net positive after real costs.
+  >> Negative before costs. The signal itself is not working.
 
 ========================================================================
   WHAT THIS DOES NOT TELL YOU
