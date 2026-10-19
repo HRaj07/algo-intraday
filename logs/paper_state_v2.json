@@ -27,7 +27,7 @@
       "atr": 4.07,
       "margin": 35581.0,
       "entry_cost": 53.38236443,
-      "bars_held": 11,
+      "bars_held": 12,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-19 10:31:17 IST",
@@ -47,10 +47,10 @@
   "pending_orders": {},
   "last_known_price": {
     "KARURVYSYA.NS": {
-      "close": 374.6499938964844,
-      "high": 374.8999938964844,
-      "low": 374.6000061035156,
-      "as_of": "2026-10-19T13:15:48.020184+05:30"
+      "close": 374.3999938964844,
+      "high": 374.3999938964844,
+      "low": 374.1000061035156,
+      "as_of": "2026-10-19T13:31:18.618966+05:30"
     }
   },
   "trade_history": [
