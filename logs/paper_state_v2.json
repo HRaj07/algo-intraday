@@ -1,8 +1,49 @@
 {
-  "cash": 968811.7066050699,
+  "cash": 933700.9171824625,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {},
+  "positions": {
+    "KARURVYSYA.NS": {
+      "ticker": "KARURVYSYA.NS",
+      "direction": "LONG",
+      "entry_price": 371.1499938964844,
+      "qty": 473,
+      "qty_open": 473,
+      "stop_loss": 367.06,
+      "initial_stop": 367.06,
+      "t1": 373.28,
+      "t2": 379.22,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 4.09,
+      "atr": 4.09,
+      "margin": 35110.78942260742,
+      "entry_cost": 52.988784070405096,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-19 10:15:50 IST",
+      "predicted_rr": null,
+      "entry_rsi": 73.2,
+      "entry_deviation_pct": 0.864,
+      "entry_atr_pct": 1.102,
+      "entry_rvol": 4.09,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 8.01,
+      "entry_stop_pct": 1.102,
+      "nifty_at_entry": 23078.099609375,
+      "mfe_price": 371.1499938964844,
+      "mae_price": 371.1499938964844
+    }
+  },
   "pending_orders": {},
   "last_known_price": {},
   "trade_history": [
@@ -1343,16 +1384,17 @@
     "2026-10-13": 8,
     "2026-10-14": 6,
     "2026-10-15": 5,
-    "2026-10-16": 7
+    "2026-10-16": 7,
+    "2026-10-19": 1
   },
   "total_pnl": -31188.293394930603,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=60, observed expectancy shrunk to -0.057R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.647,
-    "drawdown_reason": "drawdown 4.1% - sizing at 0.65x",
-    "raw_pct": 0.00155,
+    "performance_reason": "n=63, observed expectancy shrunk to -0.051R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.66,
+    "drawdown_reason": "drawdown 4.0% - sizing at 0.66x",
+    "raw_pct": 0.00158,
     "final_pct": 0.002,
     "clamped": true
   },
@@ -1392,6 +1434,12 @@
       "pf": 0.357,
       "n": 30,
       "trade_count": 56
+    },
+    {
+      "date": "2026-10-19",
+      "pf": 0.672,
+      "n": 30,
+      "trade_count": 63
     }
   ]
 }
