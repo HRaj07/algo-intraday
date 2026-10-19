@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "KARURVYSYA.NS": {
-      "close": 369.95001220703125,
-      "high": 372.54998779296875,
-      "low": 369.45001220703125,
-      "as_of": "2026-10-19T14:14:30.495518+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
