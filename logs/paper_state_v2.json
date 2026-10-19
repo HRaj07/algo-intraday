@@ -4,26 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "TECHM.NS": {
-      "close": 1781.5,
-      "high": 1781.5,
-      "low": 1781.5,
-      "as_of": "2026-10-16T15:15:51.237657+05:30"
-    },
-    "TATAELXSI.NS": {
-      "close": 3840.10009765625,
-      "high": 3850.0,
-      "low": 3825.0,
-      "as_of": "2026-10-16T15:15:51.237657+05:30"
-    },
-    "WIPRO.NS": {
-      "close": 184.6999969482422,
-      "high": 184.6999969482422,
-      "low": 184.6999969482422,
-      "as_of": "2026-10-16T15:15:51.237657+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
