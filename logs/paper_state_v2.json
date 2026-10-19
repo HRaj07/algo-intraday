@@ -1,18 +1,18 @@
 {
-  "cash": 933700.9171824625,
+  "cash": 934022.5851707378,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
     "KARURVYSYA.NS": {
       "ticker": "KARURVYSYA.NS",
       "direction": "LONG",
-      "entry_price": 371.1499938964844,
-      "qty": 473,
-      "qty_open": 473,
-      "stop_loss": 367.06,
-      "initial_stop": 367.06,
-      "t1": 373.28,
-      "t2": 379.22,
+      "entry_price": 373.75,
+      "qty": 476,
+      "qty_open": 476,
+      "stop_loss": 369.68,
+      "initial_stop": 369.68,
+      "t1": 376.04,
+      "t2": 381.93,
       "t1_fraction": 1.0,
       "exit_cfg": {
         "hold_to_square_off": true,
@@ -23,29 +23,36 @@
       },
       "t1_done": false,
       "trailed": false,
-      "risk_per_share": 4.09,
-      "atr": 4.09,
-      "margin": 35110.78942260742,
-      "entry_cost": 52.988784070405096,
+      "risk_per_share": 4.07,
+      "atr": 4.07,
+      "margin": 35581.0,
+      "entry_cost": 53.38236443,
       "bars_held": 0,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
-      "entry_time": "2026-10-19 10:15:50 IST",
+      "entry_time": "2026-10-19 10:31:17 IST",
       "predicted_rr": null,
-      "entry_rsi": 73.2,
-      "entry_deviation_pct": 0.864,
-      "entry_atr_pct": 1.102,
-      "entry_rvol": 4.09,
+      "entry_rsi": 75.4,
+      "entry_deviation_pct": 1.456,
+      "entry_atr_pct": 1.088,
+      "entry_rvol": 3.02,
       "entry_gap_pct": null,
-      "entry_turnover_cr": 8.01,
-      "entry_stop_pct": 1.102,
-      "nifty_at_entry": 23078.099609375,
-      "mfe_price": 371.1499938964844,
-      "mae_price": 371.1499938964844
+      "entry_turnover_cr": 8.37,
+      "entry_stop_pct": 1.088,
+      "nifty_at_entry": 23098.75,
+      "mfe_price": 373.75,
+      "mae_price": 373.75
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "KARURVYSYA.NS": {
+      "close": 373.25,
+      "high": 373.8999938964844,
+      "low": 373.25,
+      "as_of": "2026-10-19T10:31:17.411703+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -1369,6 +1376,27 @@
       "entry_rvol": 2.46,
       "entry_turnover_cr": 12.74,
       "entry_stop_pct": 0.581
+    },
+    {
+      "ticker": "KARURVYSYA.NS",
+      "direction": "LONG",
+      "entry_price": 371.1499938964844,
+      "exit_price": 373.28,
+      "qty": 473,
+      "pnl": 791.88,
+      "R_multiple": 0.41,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 215.61,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-19 10:15:50 IST",
+      "exit_time": "2026-10-19 10:31:17 IST",
+      "entry_rsi": 73.2,
+      "entry_deviation_pct": 0.864,
+      "entry_atr_pct": 1.102,
+      "entry_rvol": 4.09,
+      "entry_turnover_cr": 8.01,
+      "entry_stop_pct": 1.102
     }
   ],
   "daily_entry_count": {
@@ -1385,16 +1413,16 @@
     "2026-10-14": 6,
     "2026-10-15": 5,
     "2026-10-16": 7,
-    "2026-10-19": 1
+    "2026-10-19": 2
   },
-  "total_pnl": -31188.293394930603,
+  "total_pnl": -30396.41482926277,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=63, observed expectancy shrunk to -0.051R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.66,
-    "drawdown_reason": "drawdown 4.0% - sizing at 0.66x",
-    "raw_pct": 0.00158,
+    "performance_reason": "n=64, observed expectancy shrunk to -0.047R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.673,
+    "drawdown_reason": "drawdown 4.0% - sizing at 0.67x",
+    "raw_pct": 0.00161,
     "final_pct": 0.002,
     "clamped": true
   },
