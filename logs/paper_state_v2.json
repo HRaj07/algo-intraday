@@ -1,56 +1,15 @@
 {
-  "cash": 934022.5851707378,
+  "cash": 967450.7247992697,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "KARURVYSYA.NS": {
-      "ticker": "KARURVYSYA.NS",
-      "direction": "LONG",
-      "entry_price": 373.75,
-      "qty": 476,
-      "qty_open": 476,
-      "stop_loss": 369.68,
-      "initial_stop": 369.68,
-      "t1": 376.04,
-      "t2": 381.93,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 4.07,
-      "atr": 4.07,
-      "margin": 35581.0,
-      "entry_cost": 53.38236443,
-      "bars_held": 14,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-19 10:31:17 IST",
-      "predicted_rr": null,
-      "entry_rsi": 75.4,
-      "entry_deviation_pct": 1.456,
-      "entry_atr_pct": 1.088,
-      "entry_rvol": 3.02,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 8.37,
-      "entry_stop_pct": 1.088,
-      "nifty_at_entry": 23098.75,
-      "mfe_price": 375.1000061035156,
-      "mae_price": 370.45001220703125
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "KARURVYSYA.NS": {
-      "close": 371.6000061035156,
-      "high": 371.8999938964844,
-      "low": 371.45001220703125,
-      "as_of": "2026-10-19T14:01:11.194842+05:30"
+      "close": 369.95001220703125,
+      "high": 372.54998779296875,
+      "low": 369.45001220703125,
+      "as_of": "2026-10-19T14:14:30.495518+05:30"
     }
   },
   "trade_history": [
@@ -1397,6 +1356,27 @@
       "entry_rvol": 4.09,
       "entry_turnover_cr": 8.01,
       "entry_stop_pct": 1.102
+    },
+    {
+      "ticker": "KARURVYSYA.NS",
+      "direction": "LONG",
+      "entry_price": 373.75,
+      "exit_price": 369.68,
+      "qty": 476,
+      "pnl": -2152.86,
+      "R_multiple": -1.11,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 215.54,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-19 10:31:17 IST",
+      "exit_time": "2026-10-19 14:14:30 IST",
+      "entry_rsi": 75.4,
+      "entry_deviation_pct": 1.456,
+      "entry_atr_pct": 1.088,
+      "entry_rvol": 3.02,
+      "entry_turnover_cr": 8.37,
+      "entry_stop_pct": 1.088
     }
   ],
   "daily_entry_count": {
@@ -1415,7 +1395,7 @@
     "2026-10-16": 7,
     "2026-10-19": 2
   },
-  "total_pnl": -30396.41482926277,
+  "total_pnl": -32549.275200730845,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
