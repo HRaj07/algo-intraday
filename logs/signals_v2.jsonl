@@ -479,3 +479,4 @@
 {"time": "2026-10-21 09:15:48.062938+05:30", "strategy": "MOM-v3", "regime": "insufficient index bars", "scanned": 210, "signals": [], "rejects": {"regime gate closed": 210}, "near_misses": []}
 {"time": "2026-10-21 09:31:18.877768+05:30", "strategy": "MOM-v3", "regime": "insufficient index bars", "scanned": 210, "signals": [], "rejects": {"regime gate closed": 210}, "near_misses": []}
 {"time": "2026-10-21 09:45:50.202871+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"too few bars today": 210}, "near_misses": []}
+{"time": "2026-10-21 10:01:03.509508+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"too few bars today": 210}, "near_misses": []}
