@@ -1,56 +1,15 @@
 {
-  "cash": 910465.1089298099,
+  "cash": 968736.3313752481,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "KAYNES.NS": {
-      "ticker": "KAYNES.NS",
-      "direction": "LONG",
-      "entry_price": 3277.10009765625,
-      "qty": 87,
-      "qty_open": 87,
-      "stop_loss": 3254.95,
-      "initial_stop": 3254.95,
-      "t1": 3295.15,
-      "t2": 3319.79,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 22.15,
-      "atr": 22.14,
-      "margin": 57021.54169921875,
-      "entry_cost": 71.32874104849706,
-      "bars_held": 17,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-22 10:31:19 IST",
-      "predicted_rr": null,
-      "entry_rsi": 72.2,
-      "entry_deviation_pct": 1.251,
-      "entry_atr_pct": 0.676,
-      "entry_rvol": 8.02,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 3.54,
-      "entry_stop_pct": 0.676,
-      "nifty_at_entry": 22730.599609375,
-      "mfe_price": 3291.89990234375,
-      "mae_price": 3255.0
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "KAYNES.NS": {
-      "close": 3267.10009765625,
-      "high": 3269.300048828125,
-      "low": 3266.39990234375,
-      "as_of": "2026-10-22T14:45:51.765120+05:30"
+      "close": 3297.5,
+      "high": 3298.0,
+      "low": 3294.39990234375,
+      "as_of": "2026-10-22T15:01:07.003094+05:30"
     }
   },
   "trade_history": [
@@ -1481,6 +1440,27 @@
       "entry_rvol": 2.59,
       "entry_turnover_cr": 2.41,
       "entry_stop_pct": 0.69
+    },
+    {
+      "ticker": "KAYNES.NS",
+      "direction": "LONG",
+      "entry_price": 3277.10009765625,
+      "exit_price": 3295.15,
+      "qty": 87,
+      "pnl": 1249.68,
+      "R_multiple": 0.65,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 320.66,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-22 10:31:19 IST",
+      "exit_time": "2026-10-22 15:01:07 IST",
+      "entry_rsi": 72.2,
+      "entry_deviation_pct": 1.251,
+      "entry_atr_pct": 0.676,
+      "entry_rvol": 8.02,
+      "entry_turnover_cr": 3.54,
+      "entry_stop_pct": 0.676
     }
   ],
   "daily_entry_count": {
@@ -1500,7 +1480,7 @@
     "2026-10-19": 2,
     "2026-10-22": 4
   },
-  "total_pnl": -32513.34937097186,
+  "total_pnl": -31263.6686247524,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,

@@ -6772,3 +6772,16 @@
 2026-10-22 14:46:38 | INFO    | __main__ | strategy: MOM-v3
 2026-10-22 14:46:38 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-22 14:46:38 | INFO    | __main__ | equity Rs966,617 | open 1 | pending 0 | closed 68 | WR 51.5% | PF 0.63 | friction Rs23,687
+2026-10-22 15:01:07 | INFO    | __main__ | ================================================================
+2026-10-22 15:01:07 | INFO    | __main__ | Scan | 2026-10-22 15:01 IST
+2026-10-22 15:01:43 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-22 15:01:43 | INFO    | engine.paper_trader_v2 | EXIT KAYNES.NS 87@Rs3295.15 | P&L Rs+1,250 (+0.65R) | friction Rs321 | t1_vwap
+2026-10-22 15:01:43 | INFO    | engine.paper_trader_v2 | T1 KAYNES.NS - half out at VWAP, stop to Rs3284.09 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-22 15:01:44 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,937 risk per trade)
+2026-10-22 15:01:44 | INFO    | __main__ |   base 0.40%
+2026-10-22 15:01:44 | INFO    | __main__ |   performance x0.6: n=69, observed expectancy shrunk to -0.049R vs prior +0.125R -> trimming (0.60x)
+2026-10-22 15:01:44 | INFO    | __main__ |   drawdown    x0.658: drawdown 4.0% - sizing at 0.66x
+2026-10-22 15:01:44 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-22 15:01:44 | INFO    | __main__ | strategy: MOM-v3
+2026-10-22 15:01:44 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-22 15:01:44 | INFO    | __main__ | equity Rs968,736 | open 0 | pending 0 | closed 69 | WR 52.2% | PF 0.64 | friction Rs24,007
