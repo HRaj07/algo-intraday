@@ -6552,3 +6552,20 @@
 2026-10-22 10:16:40 | INFO    | engine.paper_trader_v2 | ORDER INDHOTEL.NS market buy at next open (ref Rs780.0, SL 0.851%, RSI 76.6, rvol 12.79)
 2026-10-22 10:16:40 | INFO    | engine.paper_trader_v2 | FILLED INDHOTEL.NS @ Rs780.3499755859375 | qty=291 notional=Rs227,082 friction=Rs264
 2026-10-22 10:16:41 | INFO    | __main__ | equity Rs967,451 | open 1 | pending 0 | closed 65 | WR 50.8% | PF 0.62 | friction Rs22,848
+2026-10-22 10:31:19 | INFO    | __main__ | ================================================================
+2026-10-22 10:31:19 | INFO    | __main__ | Scan | 2026-10-22 10:31 IST
+2026-10-22 10:31:53 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-22 10:31:53 | INFO    | engine.paper_trader_v2 | EXIT INDHOTEL.NS 291@Rs784.68 | P&L Rs+995 (+0.51R) | friction Rs265 | t1_vwap
+2026-10-22 10:31:53 | INFO    | engine.paper_trader_v2 | T1 INDHOTEL.NS - half out at VWAP, stop to Rs782.25 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-22 10:31:53 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,937 risk per trade)
+2026-10-22 10:31:53 | INFO    | __main__ |   base 0.40%
+2026-10-22 10:31:53 | INFO    | __main__ |   performance x0.6: n=66, observed expectancy shrunk to -0.051R vs prior +0.125R -> trimming (0.60x)
+2026-10-22 10:31:53 | INFO    | __main__ |   drawdown    x0.654: drawdown 4.1% - sizing at 0.65x
+2026-10-22 10:31:53 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-22 10:31:53 | INFO    | __main__ | strategy: MOM-v3
+2026-10-22 10:31:53 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-22 10:31:54 | INFO    | engine.paper_trader_v2 | ORDER INDHOTEL.NS market buy at next open (ref Rs783.6, SL 0.87%, RSI 78.4, rvol 13.25)
+2026-10-22 10:31:54 | INFO    | engine.paper_trader_v2 | ORDER KAYNES.NS market buy at next open (ref Rs3275.5, SL 0.676%, RSI 72.2, rvol 8.02)
+2026-10-22 10:31:54 | INFO    | engine.paper_trader_v2 | FILLED INDHOTEL.NS @ Rs783.8499755859375 | qty=284 notional=Rs222,613 friction=Rs260
+2026-10-22 10:31:54 | INFO    | engine.paper_trader_v2 | FILLED KAYNES.NS @ Rs3277.10009765625 | qty=87 notional=Rs285,108 friction=Rs319
+2026-10-22 10:31:55 | INFO    | __main__ | equity Rs969,042 | open 2 | pending 0 | closed 66 | WR 51.5% | PF 0.63 | friction Rs23,113
