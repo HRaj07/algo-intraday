@@ -501,3 +501,4 @@
 {"time": "2026-10-21 14:31:19.407620+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 210}, "near_misses": []}
 {"time": "2026-10-21 14:45:44.048641+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 210}, "near_misses": []}
 {"time": "2026-10-21 15:01:07.060149+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 210}, "near_misses": []}
+{"time": "2026-10-22 09:15:53.017441+05:30", "strategy": "MOM-v3", "regime": "insufficient index bars", "scanned": 210, "signals": [], "rejects": {"regime gate closed": 210}, "near_misses": []}
