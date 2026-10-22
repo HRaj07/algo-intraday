@@ -27,7 +27,7 @@
       "atr": 22.14,
       "margin": 57021.54169921875,
       "entry_cost": 71.32874104849706,
-      "bars_held": 6,
+      "bars_held": 7,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-22 10:31:19 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.676,
       "nifty_at_entry": 22730.599609375,
       "mfe_price": 3291.89990234375,
-      "mae_price": 3261.0
+      "mae_price": 3255.0
     },
     "PVRINOX.NS": {
       "ticker": "PVRINOX.NS",
@@ -67,7 +67,7 @@
       "atr": 9.94,
       "margin": 55980.641894531254,
       "entry_cost": 70.4574766849795,
-      "bars_held": 3,
+      "bars_held": 4,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-22 11:15:44 IST",
@@ -87,16 +87,16 @@
   "pending_orders": {},
   "last_known_price": {
     "KAYNES.NS": {
-      "close": 3262.89990234375,
-      "high": 3265.0,
-      "low": 3261.0,
-      "as_of": "2026-10-22T12:01:07.998131+05:30"
+      "close": 3256.699951171875,
+      "high": 3258.89990234375,
+      "low": 3255.0,
+      "as_of": "2026-10-22T12:15:55.214425+05:30"
     },
     "PVRINOX.NS": {
-      "close": 1447.4000244140625,
-      "high": 1450.5999755859375,
-      "low": 1446.699951171875,
-      "as_of": "2026-10-22T12:01:07.998131+05:30"
+      "close": 1443.0,
+      "high": 1444.4000244140625,
+      "low": 1443.0,
+      "as_of": "2026-10-22T12:15:55.214425+05:30"
     }
   },
   "trade_history": [
