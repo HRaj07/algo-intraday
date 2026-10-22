@@ -1,8 +1,49 @@
 {
-  "cash": 967450.7247992697,
+  "cash": 922034.3562201682,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {},
+  "positions": {
+    "INDHOTEL.NS": {
+      "ticker": "INDHOTEL.NS",
+      "direction": "LONG",
+      "entry_price": 780.3499755859375,
+      "qty": 291,
+      "qty_open": 291,
+      "stop_loss": 773.71,
+      "initial_stop": 773.71,
+      "t1": 784.68,
+      "t2": 793.28,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 6.64,
+      "atr": 6.64,
+      "margin": 45416.36857910157,
+      "entry_cost": 61.61486299176538,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-22 10:15:49 IST",
+      "predicted_rr": null,
+      "entry_rsi": 76.6,
+      "entry_deviation_pct": 1.485,
+      "entry_atr_pct": 0.851,
+      "entry_rvol": 12.79,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 9.45,
+      "entry_stop_pct": 0.851,
+      "nifty_at_entry": 22669.19921875,
+      "mfe_price": 780.3499755859375,
+      "mae_price": 780.3499755859375
+    }
+  },
   "pending_orders": {},
   "last_known_price": {},
   "trade_history": [
@@ -1386,16 +1427,17 @@
     "2026-10-14": 6,
     "2026-10-15": 5,
     "2026-10-16": 7,
-    "2026-10-19": 2
+    "2026-10-19": 2,
+    "2026-10-22": 1
   },
   "total_pnl": -32549.275200730845,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=64, observed expectancy shrunk to -0.047R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.673,
-    "drawdown_reason": "drawdown 4.0% - sizing at 0.67x",
-    "raw_pct": 0.00161,
+    "performance_reason": "n=65, observed expectancy shrunk to -0.056R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.637,
+    "drawdown_reason": "drawdown 4.2% - sizing at 0.64x",
+    "raw_pct": 0.00153,
     "final_pct": 0.002,
     "clamped": true
   },
@@ -1441,6 +1483,12 @@
       "pf": 0.672,
       "n": 30,
       "trade_count": 63
+    },
+    {
+      "date": "2026-10-22",
+      "pf": 0.659,
+      "n": 30,
+      "trade_count": 65
     }
   ]
 }
