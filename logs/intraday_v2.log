@@ -6682,3 +6682,16 @@
 2026-10-22 12:46:24 | INFO    | __main__ | strategy: MOM-v3
 2026-10-22 12:46:24 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-22 12:46:25 | INFO    | __main__ | equity Rs967,697 | open 2 | pending 0 | closed 67 | WR 52.2% | PF 0.64 | friction Rs23,374
+2026-10-22 13:01:07 | INFO    | __main__ | ================================================================
+2026-10-22 13:01:07 | INFO    | __main__ | Scan | 2026-10-22 13:01 IST
+2026-10-22 13:02:02 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-22 13:02:02 | INFO    | engine.paper_trader_v2 | THESIS EXIT PVRINOX.NS - vwap_reclaim at ~Rs1434.30
+2026-10-22 13:02:02 | INFO    | engine.paper_trader_v2 | EXIT PVRINOX.NS 194@Rs1434.300048828125 | P&L Rs-1,962 (-1.02R) | friction Rs313 | vwap_reclaim
+2026-10-22 13:02:03 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,934 risk per trade)
+2026-10-22 13:02:03 | INFO    | __main__ |   base 0.40%
+2026-10-22 13:02:03 | INFO    | __main__ |   performance x0.6: n=68, observed expectancy shrunk to -0.055R vs prior +0.125R -> trimming (0.60x)
+2026-10-22 13:02:03 | INFO    | __main__ |   drawdown    x0.633: drawdown 4.2% - sizing at 0.63x
+2026-10-22 13:02:03 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-22 13:02:03 | INFO    | __main__ | strategy: MOM-v3
+2026-10-22 13:02:03 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-22 13:02:04 | INFO    | __main__ | equity Rs967,208 | open 1 | pending 0 | closed 68 | WR 51.5% | PF 0.63 | friction Rs23,687
