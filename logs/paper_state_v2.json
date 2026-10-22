@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "KAYNES.NS": {
-      "close": 3297.5,
-      "high": 3298.0,
-      "low": 3294.39990234375,
-      "as_of": "2026-10-22T15:01:07.003094+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
