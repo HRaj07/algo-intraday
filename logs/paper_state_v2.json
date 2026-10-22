@@ -1,48 +1,8 @@
 {
-  "cash": 866901.5289619068,
+  "cash": 912427.2654405589,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "INDHOTEL.NS": {
-      "ticker": "INDHOTEL.NS",
-      "direction": "LONG",
-      "entry_price": 783.8499755859375,
-      "qty": 284,
-      "qty_open": 284,
-      "stop_loss": 777.03,
-      "initial_stop": 777.03,
-      "t1": 788.3,
-      "t2": 797.23,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 6.82,
-      "atr": 6.82,
-      "margin": 44522.678613281256,
-      "entry_cost": 60.86681767967481,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-22 10:31:19 IST",
-      "predicted_rr": null,
-      "entry_rsi": 78.4,
-      "entry_deviation_pct": 1.537,
-      "entry_atr_pct": 0.87,
-      "entry_rvol": 13.25,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 9.71,
-      "entry_stop_pct": 0.87,
-      "nifty_at_entry": 22730.599609375,
-      "mfe_price": 783.8499755859375,
-      "mae_price": 783.8499755859375
-    },
     "KAYNES.NS": {
       "ticker": "KAYNES.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 22.14,
       "margin": 57021.54169921875,
       "entry_cost": 71.32874104849706,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-22 10:31:19 IST",
@@ -80,17 +40,23 @@
       "entry_turnover_cr": 3.54,
       "entry_stop_pct": 0.676,
       "nifty_at_entry": 22730.599609375,
-      "mfe_price": 3277.10009765625,
-      "mae_price": 3277.10009765625
+      "mfe_price": 3281.199951171875,
+      "mae_price": 3276.199951171875
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "INDHOTEL.NS": {
-      "close": 785.9500122070312,
-      "high": 786.9500122070312,
-      "low": 783.4000244140625,
-      "as_of": "2026-10-22T10:31:19.320999+05:30"
+      "close": 788.25,
+      "high": 791.2000122070312,
+      "low": 788.25,
+      "as_of": "2026-10-22T10:45:52.795001+05:30"
+    },
+    "KAYNES.NS": {
+      "close": 3277.199951171875,
+      "high": 3281.199951171875,
+      "low": 3276.199951171875,
+      "as_of": "2026-10-22T10:45:52.795001+05:30"
     }
   },
   "trade_history": [
@@ -1479,6 +1445,27 @@
       "entry_rvol": 12.79,
       "entry_turnover_cr": 9.45,
       "entry_stop_pct": 0.851
+    },
+    {
+      "ticker": "INDHOTEL.NS",
+      "direction": "LONG",
+      "entry_price": 783.8499755859375,
+      "exit_price": 788.3,
+      "qty": 284,
+      "pnl": 1003.06,
+      "R_multiple": 0.52,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 260.75,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-22 10:31:19 IST",
+      "exit_time": "2026-10-22 10:45:52 IST",
+      "entry_rsi": 78.4,
+      "entry_deviation_pct": 1.537,
+      "entry_atr_pct": 0.87,
+      "entry_rvol": 13.25,
+      "entry_turnover_cr": 9.71,
+      "entry_stop_pct": 0.87
     }
   ],
   "daily_entry_count": {
@@ -1498,7 +1485,7 @@
     "2026-10-19": 2,
     "2026-10-22": 3
   },
-  "total_pnl": -31554.250725593716,
+  "total_pnl": -30551.192860222855,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,

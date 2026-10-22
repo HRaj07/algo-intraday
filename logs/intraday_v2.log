@@ -6569,3 +6569,18 @@
 2026-10-22 10:31:54 | INFO    | engine.paper_trader_v2 | FILLED INDHOTEL.NS @ Rs783.8499755859375 | qty=284 notional=Rs222,613 friction=Rs260
 2026-10-22 10:31:54 | INFO    | engine.paper_trader_v2 | FILLED KAYNES.NS @ Rs3277.10009765625 | qty=87 notional=Rs285,108 friction=Rs319
 2026-10-22 10:31:55 | INFO    | __main__ | equity Rs969,042 | open 2 | pending 0 | closed 66 | WR 51.5% | PF 0.63 | friction Rs23,113
+2026-10-22 10:45:52 | INFO    | __main__ | ================================================================
+2026-10-22 10:45:52 | INFO    | __main__ | Scan | 2026-10-22 10:45 IST
+2026-10-22 10:46:20 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-22 10:46:20 | INFO    | engine.paper_trader_v2 | EXIT INDHOTEL.NS 284@Rs788.3 | P&L Rs+1,003 (+0.52R) | friction Rs261 | t1_vwap
+2026-10-22 10:46:20 | INFO    | engine.paper_trader_v2 | T1 INDHOTEL.NS - half out at VWAP, stop to Rs785.79 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-22 10:46:21 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,939 risk per trade)
+2026-10-22 10:46:21 | INFO    | __main__ |   base 0.40%
+2026-10-22 10:46:21 | INFO    | __main__ |   performance x0.6: n=67, observed expectancy shrunk to -0.046R vs prior +0.125R -> trimming (0.60x)
+2026-10-22 10:46:21 | INFO    | __main__ |   drawdown    x0.67: drawdown 4.0% - sizing at 0.67x
+2026-10-22 10:46:21 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-22 10:46:21 | INFO    | __main__ | strategy: MOM-v3
+2026-10-22 10:46:21 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-22 10:46:22 | INFO    | engine.paper_trader_v2 | ORDER REJECTED INDHOTEL.NS: max 2 entries per day for INDHOTEL.NS
+2026-10-22 10:46:22 | INFO    | engine.paper_trader_v2 | ORDER REJECTED KAYNES.NS: already holding this name
+2026-10-22 10:46:22 | INFO    | __main__ | equity Rs969,457 | open 1 | pending 0 | closed 67 | WR 52.2% | PF 0.64 | friction Rs23,374
