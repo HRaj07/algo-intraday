@@ -1,5 +1,5 @@
 {
-  "cash": 912427.2654405589,
+  "cash": 856446.6235460277,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 22.14,
       "margin": 57021.54169921875,
       "entry_cost": 71.32874104849706,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-22 10:31:19 IST",
@@ -42,15 +42,55 @@
       "nifty_at_entry": 22730.599609375,
       "mfe_price": 3291.89990234375,
       "mae_price": 3276.199951171875
+    },
+    "PVRINOX.NS": {
+      "ticker": "PVRINOX.NS",
+      "direction": "LONG",
+      "entry_price": 1442.800048828125,
+      "qty": 194,
+      "qty_open": 194,
+      "stop_loss": 1432.84,
+      "initial_stop": 1432.84,
+      "t1": 1450.85,
+      "t2": 1462.09,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 9.96,
+      "atr": 9.94,
+      "margin": 55980.641894531254,
+      "entry_cost": 70.4574766849795,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-22 11:15:44 IST",
+      "predicted_rr": null,
+      "entry_rsi": 70.2,
+      "entry_deviation_pct": 1.331,
+      "entry_atr_pct": 0.69,
+      "entry_rvol": 2.59,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 2.41,
+      "entry_stop_pct": 0.69,
+      "nifty_at_entry": 22776.5,
+      "mfe_price": 1442.800048828125,
+      "mae_price": 1442.800048828125
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "KAYNES.NS": {
-      "close": 3288.5,
-      "high": 3291.89990234375,
-      "low": 3283.800048828125,
-      "as_of": "2026-10-22T11:01:08.016735+05:30"
+      "close": 3283.89990234375,
+      "high": 3283.89990234375,
+      "low": 3283.89990234375,
+      "as_of": "2026-10-22T11:15:44.847485+05:30"
     }
   },
   "trade_history": [
@@ -1477,16 +1517,16 @@
     "2026-10-15": 5,
     "2026-10-16": 7,
     "2026-10-19": 2,
-    "2026-10-22": 3
+    "2026-10-22": 4
   },
   "total_pnl": -30551.192860222855,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=66, observed expectancy shrunk to -0.051R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.663,
-    "drawdown_reason": "drawdown 4.0% - sizing at 0.66x",
-    "raw_pct": 0.00159,
+    "performance_reason": "n=67, observed expectancy shrunk to -0.046R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.68,
+    "drawdown_reason": "drawdown 3.9% - sizing at 0.68x",
+    "raw_pct": 0.00163,
     "final_pct": 0.002,
     "clamped": true
   },
