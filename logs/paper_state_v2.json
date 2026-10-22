@@ -27,7 +27,7 @@
       "atr": 22.14,
       "margin": 57021.54169921875,
       "entry_cost": 71.32874104849706,
-      "bars_held": 14,
+      "bars_held": 15,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-22 10:31:19 IST",
@@ -47,10 +47,10 @@
   "pending_orders": {},
   "last_known_price": {
     "KAYNES.NS": {
-      "close": 3277.0,
-      "high": 3277.0,
-      "low": 3277.0,
-      "as_of": "2026-10-22T14:00:31.059801+05:30"
+      "close": 3268.0,
+      "high": 3268.199951171875,
+      "low": 3264.199951171875,
+      "as_of": "2026-10-22T14:15:48.220966+05:30"
     }
   },
   "trade_history": [
