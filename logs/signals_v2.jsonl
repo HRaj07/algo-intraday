@@ -523,3 +523,4 @@
 {"time": "2026-10-22 14:00:31.059801+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 210}, "near_misses": []}
 {"time": "2026-10-22 14:15:48.220966+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 210}, "near_misses": []}
 {"time": "2026-10-22 14:31:25.511057+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 210}, "near_misses": []}
+{"time": "2026-10-22 14:45:51.765120+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 210}, "near_misses": []}
