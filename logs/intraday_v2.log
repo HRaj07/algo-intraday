@@ -6924,3 +6924,15 @@
 2026-10-23 11:16:30 | INFO    | __main__ | strategy: MOM-v3
 2026-10-23 11:16:30 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-23 11:16:31 | INFO    | __main__ | equity Rs968,736 | open 0 | pending 0 | closed 69 | WR 52.2% | PF 0.64 | friction Rs24,007
+2026-10-23 11:31:21 | INFO    | __main__ | ================================================================
+2026-10-23 11:31:21 | INFO    | __main__ | Scan | 2026-10-23 11:31 IST
+2026-10-23 11:32:01 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-23 11:32:01 | WARNING | engine.risk_manager | KILL SWITCH (paper - continuing): rolling 30-trade PF 0.72 < 0.85 - edge has degraded, manual restart required
+2026-10-23 11:32:01 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,937 risk per trade)
+2026-10-23 11:32:01 | INFO    | __main__ |   base 0.40%
+2026-10-23 11:32:01 | INFO    | __main__ |   performance x0.6: n=69, observed expectancy shrunk to -0.049R vs prior +0.125R -> trimming (0.60x)
+2026-10-23 11:32:01 | INFO    | __main__ |   drawdown    x0.658: drawdown 4.0% - sizing at 0.66x
+2026-10-23 11:32:01 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-23 11:32:01 | INFO    | __main__ | strategy: MOM-v3
+2026-10-23 11:32:01 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-23 11:32:02 | INFO    | __main__ | equity Rs968,736 | open 0 | pending 0 | closed 69 | WR 52.2% | PF 0.64 | friction Rs24,007
