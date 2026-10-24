@@ -5,33 +5,33 @@ caps: 3 concurrent, 5/day, 1/sector, risk 0.40% of Rs1,000,000
   ACCOUNT RESULT — the candidate rule run as a book
 ============================================================================
   trading days          60
-  trades                151  (2.5/day)
-  win rate              44.4%
-  profit factor         1.10
-  net P&L               Rs28,333   (+2.83%)
-  friction paid         Rs75,796
-  gross before costs    Rs104,129
-  avg trade             Rs+188   (+0.049R)
-  t-stat                +0.46   (>2 is the go-live bar)
-  max drawdown          Rs44,696  (4.47%)
-  median notional       Rs344,728
+  trades                142  (2.4/day)
+  win rate              43.7%
+  profit factor         0.97
+  net P&L               Rs-8,815   (-0.88%)
+  friction paid         Rs68,977
+  gross before costs    Rs60,162
+  avg trade             Rs-62   (-0.014R)
+  t-stat                -0.17   (>2 is the go-live bar)
+  max drawdown          Rs43,010  (4.30%)
+  median notional       Rs331,834
 
   by exit:
-    square_off     103 trades  Rs   253,695  avg Rs  +2,463
-    stop            48 trades  Rs  -225,363  avg Rs  -4,695
+    square_off      95 trades  Rs   203,532  avg Rs  +2,142
+    stop            47 trades  Rs  -212,347  avg Rs  -4,518
 
   by month:
-    2026-07     19 trades  Rs    34,771  (+3.48%)  avg +0.456R
-    2026-08     59 trades  Rs    10,583  (+1.06%)  avg +0.045R
-    2026-09     45 trades  Rs     5,738  (+0.57%)  avg +0.032R
-    2026-10     28 trades  Rs   -22,759  (-2.28%)  avg -0.194R
+    2026-07      8 trades  Rs    -4,325  (-0.43%)  avg -0.134R
+    2026-08     59 trades  Rs     9,936  (+0.99%)  avg +0.045R
+    2026-09     45 trades  Rs     5,506  (+0.55%)  avg +0.031R
+    2026-10     30 trades  Rs   -19,934  (-1.99%)  avg -0.164R
 
   concentration — how much of the P&L is the best few trades:
-    top 1   trades = Rs   27,399 of Rs28,333 total
-    top 3   trades = Rs   53,260 of Rs28,333 total
-    top 5   trades = Rs   74,954 of Rs28,333 total
-    top 10  trades = Rs  119,272 of Rs28,333 total
-    without the top 5: Rs-46,621 (-4.66%)
+    top 1   trades = Rs   13,017 of Rs-8,815 total
+    top 3   trades = Rs   36,163 of Rs-8,815 total
+    top 5   trades = Rs   54,016 of Rs-8,815 total
+    top 10  trades = Rs   93,289 of Rs-8,815 total
+    without the top 5: Rs-62,832 (-6.28%)
 
 ============================================================================
   HOW TO READ THIS
