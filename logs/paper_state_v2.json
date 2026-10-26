@@ -1,8 +1,89 @@
 {
-  "cash": 968736.3313752481,
+  "cash": 857073.372293217,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {},
+  "positions": {
+    "BSE.NS": {
+      "ticker": "BSE.NS",
+      "direction": "LONG",
+      "entry_price": 3355.300048828125,
+      "qty": 84,
+      "qty_open": 84,
+      "stop_loss": 3332.42,
+      "initial_stop": 3332.42,
+      "t1": 3377.24,
+      "t2": 3402.88,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 22.88,
+      "atr": 22.89,
+      "margin": 56369.040820312504,
+      "entry_cost": 70.78257823782617,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-26 10:15:50 IST",
+      "predicted_rr": null,
+      "entry_rsi": 78.5,
+      "entry_deviation_pct": 1.263,
+      "entry_atr_pct": 0.682,
+      "entry_rvol": 5.47,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 19.22,
+      "entry_stop_pct": 0.682,
+      "nifty_at_entry": 22669.900390625,
+      "mfe_price": 3355.300048828125,
+      "mae_price": 3355.300048828125
+    },
+    "MCX.NS": {
+      "ticker": "MCX.NS",
+      "direction": "LONG",
+      "entry_price": 3106.39990234375,
+      "qty": 89,
+      "qty_open": 89,
+      "stop_loss": 3084.75,
+      "initial_stop": 3084.75,
+      "t1": 3124.64,
+      "t2": 3149.27,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 21.65,
+      "atr": 21.64,
+      "margin": 55293.918261718754,
+      "entry_cost": 69.88266840260644,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-26 10:15:50 IST",
+      "predicted_rr": null,
+      "entry_rsi": 71.5,
+      "entry_deviation_pct": 1.731,
+      "entry_atr_pct": 0.697,
+      "entry_rvol": 3.07,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 9.42,
+      "entry_stop_pct": 0.697,
+      "nifty_at_entry": 22669.900390625,
+      "mfe_price": 3106.39990234375,
+      "mae_price": 3106.39990234375
+    }
+  },
   "pending_orders": {},
   "last_known_price": {},
   "trade_history": [
@@ -1471,16 +1552,17 @@
     "2026-10-15": 5,
     "2026-10-16": 7,
     "2026-10-19": 2,
-    "2026-10-22": 4
+    "2026-10-22": 4,
+    "2026-10-26": 2
   },
   "total_pnl": -31263.6686247524,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=67, observed expectancy shrunk to -0.046R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.68,
-    "drawdown_reason": "drawdown 3.9% - sizing at 0.68x",
-    "raw_pct": 0.00163,
+    "performance_reason": "n=69, observed expectancy shrunk to -0.049R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.658,
+    "drawdown_reason": "drawdown 4.0% - sizing at 0.66x",
+    "raw_pct": 0.00158,
     "final_pct": 0.002,
     "clamped": true
   },
@@ -1532,6 +1614,12 @@
       "pf": 0.659,
       "n": 30,
       "trade_count": 65
+    },
+    {
+      "date": "2026-10-26",
+      "pf": 0.719,
+      "n": 30,
+      "trade_count": 69
     }
   ]
 }

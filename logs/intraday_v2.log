@@ -7195,3 +7195,19 @@
 2026-10-26 10:01:44 | INFO    | __main__ | strategy: MOM-v3
 2026-10-26 10:01:44 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-26 10:01:44 | INFO    | __main__ | equity Rs968,736 | open 0 | pending 0 | closed 69 | WR 52.2% | PF 0.64 | friction Rs24,007
+2026-10-26 10:15:50 | INFO    | __main__ | ================================================================
+2026-10-26 10:15:50 | INFO    | __main__ | Scan | 2026-10-26 10:15 IST
+2026-10-26 10:16:26 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-26 10:16:26 | WARNING | engine.risk_manager | KILL SWITCH (paper - continuing): rolling 30-trade PF 0.72 < 0.85 - edge has degraded, manual restart required
+2026-10-26 10:16:26 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,937 risk per trade)
+2026-10-26 10:16:26 | INFO    | __main__ |   base 0.40%
+2026-10-26 10:16:26 | INFO    | __main__ |   performance x0.6: n=69, observed expectancy shrunk to -0.049R vs prior +0.125R -> trimming (0.60x)
+2026-10-26 10:16:26 | INFO    | __main__ |   drawdown    x0.658: drawdown 4.0% - sizing at 0.66x
+2026-10-26 10:16:26 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-26 10:16:26 | INFO    | __main__ | strategy: MOM-v3
+2026-10-26 10:16:26 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-26 10:16:27 | INFO    | engine.paper_trader_v2 | ORDER BSE.NS market buy at next open (ref Rs3357.1, SL 0.682%, RSI 78.5, rvol 5.47)
+2026-10-26 10:16:27 | INFO    | engine.paper_trader_v2 | ORDER MCX.NS market buy at next open (ref Rs3106.0, SL 0.697%, RSI 71.5, rvol 3.07)
+2026-10-26 10:16:27 | INFO    | engine.paper_trader_v2 | FILLED BSE.NS @ Rs3355.300048828125 | qty=84 notional=Rs281,845 friction=Rs316
+2026-10-26 10:16:27 | INFO    | engine.paper_trader_v2 | FILLED MCX.NS @ Rs3106.39990234375 | qty=89 notional=Rs276,470 friction=Rs311
+2026-10-26 10:16:28 | INFO    | __main__ | equity Rs968,736 | open 2 | pending 0 | closed 69 | WR 52.2% | PF 0.64 | friction Rs24,007
