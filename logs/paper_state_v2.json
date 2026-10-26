@@ -27,7 +27,7 @@
       "atr": 22.89,
       "margin": 56369.040820312504,
       "entry_cost": 70.78257823782617,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-26 10:15:50 IST",
@@ -67,7 +67,7 @@
       "atr": 21.64,
       "margin": 55293.918261718754,
       "entry_cost": 69.88266840260644,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-26 10:15:50 IST",
@@ -107,7 +107,7 @@
       "atr": 10.09,
       "margin": 48902.4,
       "entry_cost": 64.532775872,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-26 10:31:22 IST",
@@ -120,23 +120,29 @@
       "entry_turnover_cr": 6.83,
       "entry_stop_pct": 0.792,
       "nifty_at_entry": 22655.349609375,
-      "mfe_price": 1273.5,
+      "mfe_price": 1274.5,
       "mae_price": 1273.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "BSE.NS": {
-      "close": 3366.0,
-      "high": 3366.0,
-      "low": 3355.699951171875,
-      "as_of": "2026-10-26T10:31:22.048374+05:30"
+      "close": 3360.10009765625,
+      "high": 3360.10009765625,
+      "low": 3360.10009765625,
+      "as_of": "2026-10-26T10:45:44.305024+05:30"
     },
     "MCX.NS": {
-      "close": 3100.0,
-      "high": 3100.0,
-      "low": 3095.0,
-      "as_of": "2026-10-26T10:31:22.048374+05:30"
+      "close": 3104.0,
+      "high": 3105.0,
+      "low": 3101.10009765625,
+      "as_of": "2026-10-26T10:45:44.305024+05:30"
+    },
+    "DRREDDY.NS": {
+      "close": 1274.5,
+      "high": 1274.5,
+      "low": 1274.5,
+      "as_of": "2026-10-26T10:45:44.305024+05:30"
     }
   },
   "trade_history": [
