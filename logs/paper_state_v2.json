@@ -1,5 +1,5 @@
 {
-  "cash": 912562.6922389079,
+  "cash": 856837.9422389079,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 22.89,
       "margin": 56369.040820312504,
       "entry_cost": 70.78257823782617,
-      "bars_held": 7,
+      "bars_held": 8,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-26 10:15:50 IST",
@@ -40,23 +40,57 @@
       "entry_turnover_cr": 19.22,
       "entry_stop_pct": 0.682,
       "nifty_at_entry": 22669.900390625,
-      "mfe_price": 3368.0,
+      "mfe_price": 3375.0,
       "mae_price": 3346.0
+    },
+    "VBL.NS": {
+      "ticker": "VBL.NS",
+      "direction": "LONG",
+      "entry_price": 406.75,
+      "qty": 685,
+      "qty_open": 685,
+      "stop_loss": 403.92,
+      "initial_stop": 403.92,
+      "t1": 409.24,
+      "t2": 412.45,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 2.83,
+      "atr": 2.83,
+      "margin": 55724.75,
+      "entry_cost": 70.2432874925,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-26 12:15:46 IST",
+      "predicted_rr": null,
+      "entry_rsi": 71.8,
+      "entry_deviation_pct": 2.058,
+      "entry_atr_pct": 0.695,
+      "entry_rvol": 2.3,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 6.23,
+      "entry_stop_pct": 0.695,
+      "nifty_at_entry": 22596.849609375,
+      "mfe_price": 406.75,
+      "mae_price": 406.75
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "BSE.NS": {
-      "close": 3365.10009765625,
-      "high": 3368.0,
-      "low": 3358.699951171875,
-      "as_of": "2026-10-26T12:01:10.214615+05:30"
-    },
-    "DRREDDY.NS": {
-      "close": 1291.0,
-      "high": 1291.5,
-      "low": 1288.5999755859375,
-      "as_of": "2026-10-26T12:01:10.214615+05:30"
+      "close": 3375.0,
+      "high": 3375.0,
+      "low": 3375.0,
+      "as_of": "2026-10-26T12:15:46.018812+05:30"
     }
   },
   "trade_history": [
@@ -1589,16 +1623,16 @@
     "2026-10-16": 7,
     "2026-10-19": 2,
     "2026-10-22": 4,
-    "2026-10-26": 4
+    "2026-10-26": 5
   },
   "total_pnl": -31068.266940780133,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=71, observed expectancy shrunk to -0.053R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.635,
-    "drawdown_reason": "drawdown 4.2% - sizing at 0.64x",
-    "raw_pct": 0.00152,
+    "performance_reason": "n=72, observed expectancy shrunk to -0.047R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.689,
+    "drawdown_reason": "drawdown 3.9% - sizing at 0.69x",
+    "raw_pct": 0.00165,
     "final_pct": 0.002,
     "clamped": true
   },
