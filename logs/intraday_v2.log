@@ -7278,3 +7278,15 @@
 2026-10-26 11:32:01 | INFO    | engine.paper_trader_v2 | ORDER DRREDDY.NS market buy at next open (ref Rs1280.4, SL 0.727%, RSI 75.0, rvol 8.92)
 2026-10-26 11:32:01 | INFO    | engine.paper_trader_v2 | FILLED DRREDDY.NS @ Rs1280.5999755859375 | qty=207 notional=Rs265,084 friction=Rs300
 2026-10-26 11:32:02 | INFO    | __main__ | equity Rs967,282 | open 2 | pending 0 | closed 71 | WR 52.1% | PF 0.64 | friction Rs24,599
+2026-10-26 11:45:52 | INFO    | __main__ | ================================================================
+2026-10-26 11:45:52 | INFO    | __main__ | Scan | 2026-10-26 11:45 IST
+2026-10-26 11:46:38 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-26 11:46:38 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,937 risk per trade)
+2026-10-26 11:46:38 | INFO    | __main__ |   base 0.40%
+2026-10-26 11:46:38 | INFO    | __main__ |   performance x0.6: n=71, observed expectancy shrunk to -0.053R vs prior +0.125R -> trimming (0.60x)
+2026-10-26 11:46:38 | INFO    | __main__ |   drawdown    x0.652: drawdown 4.1% - sizing at 0.65x
+2026-10-26 11:46:38 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-26 11:46:38 | INFO    | __main__ | strategy: MOM-v3
+2026-10-26 11:46:38 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-26 11:46:39 | INFO    | engine.paper_trader_v2 | ORDER REJECTED DRREDDY.NS: already holding this name
+2026-10-26 11:46:39 | INFO    | __main__ | equity Rs968,367 | open 2 | pending 0 | closed 71 | WR 52.1% | PF 0.64 | friction Rs24,599
