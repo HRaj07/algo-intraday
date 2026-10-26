@@ -1,5 +1,5 @@
 {
-  "cash": 808170.972293217,
+  "cash": 861228.3899693328,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 22.89,
       "margin": 56369.040820312504,
       "entry_cost": 70.78257823782617,
-      "bars_held": 3,
+      "bars_held": 4,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-26 10:15:50 IST",
@@ -41,47 +41,7 @@
       "entry_stop_pct": 0.682,
       "nifty_at_entry": 22669.900390625,
       "mfe_price": 3366.0,
-      "mae_price": 3355.300048828125
-    },
-    "MCX.NS": {
-      "ticker": "MCX.NS",
-      "direction": "LONG",
-      "entry_price": 3106.39990234375,
-      "qty": 89,
-      "qty_open": 89,
-      "stop_loss": 3084.75,
-      "initial_stop": 3084.75,
-      "t1": 3124.64,
-      "t2": 3149.27,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 21.65,
-      "atr": 21.64,
-      "margin": 55293.918261718754,
-      "entry_cost": 69.88266840260644,
-      "bars_held": 3,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-26 10:15:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 71.5,
-      "entry_deviation_pct": 1.731,
-      "entry_atr_pct": 0.697,
-      "entry_rvol": 3.07,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 9.42,
-      "entry_stop_pct": 0.697,
-      "nifty_at_entry": 22669.900390625,
-      "mfe_price": 3106.39990234375,
-      "mae_price": 3092.5
+      "mae_price": 3346.60009765625
     },
     "DRREDDY.NS": {
       "ticker": "DRREDDY.NS",
@@ -107,7 +67,7 @@
       "atr": 10.09,
       "margin": 48902.4,
       "entry_cost": 64.532775872,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-26 10:31:22 IST",
@@ -127,22 +87,22 @@
   "pending_orders": {},
   "last_known_price": {
     "BSE.NS": {
-      "close": 3360.39990234375,
-      "high": 3365.199951171875,
-      "low": 3360.39990234375,
-      "as_of": "2026-10-26T11:01:08.671948+05:30"
+      "close": 3348.0,
+      "high": 3355.0,
+      "low": 3346.60009765625,
+      "as_of": "2026-10-26T11:15:51.986650+05:30"
     },
     "MCX.NS": {
-      "close": 3093.0,
-      "high": 3095.89990234375,
-      "low": 3092.5,
-      "as_of": "2026-10-26T11:01:08.671948+05:30"
+      "close": 3083.60009765625,
+      "high": 3085.89990234375,
+      "low": 3083.0,
+      "as_of": "2026-10-26T11:15:51.986650+05:30"
     },
     "DRREDDY.NS": {
-      "close": 1269.699951171875,
-      "high": 1270.800048828125,
-      "low": 1269.4000244140625,
-      "as_of": "2026-10-26T11:01:08.671948+05:30"
+      "close": 1269.800048828125,
+      "high": 1269.800048828125,
+      "low": 1269.800048828125,
+      "as_of": "2026-10-26T11:15:51.986650+05:30"
     }
   },
   "trade_history": [
@@ -1594,6 +1554,27 @@
       "entry_rvol": 8.02,
       "entry_turnover_cr": 3.54,
       "entry_stop_pct": 0.676
+    },
+    {
+      "ticker": "MCX.NS",
+      "direction": "LONG",
+      "entry_price": 3106.39990234375,
+      "exit_price": 3084.75,
+      "qty": 89,
+      "pnl": -2236.5,
+      "R_multiple": -1.16,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 309.66,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-26 10:15:50 IST",
+      "exit_time": "2026-10-26 11:15:51 IST",
+      "entry_rsi": 71.5,
+      "entry_deviation_pct": 1.731,
+      "entry_atr_pct": 0.697,
+      "entry_rvol": 3.07,
+      "entry_turnover_cr": 9.42,
+      "entry_stop_pct": 0.697
     }
   ],
   "daily_entry_count": {
@@ -1614,7 +1595,7 @@
     "2026-10-22": 4,
     "2026-10-26": 3
   },
-  "total_pnl": -31263.6686247524,
+  "total_pnl": -33500.169210355256,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
