@@ -27,7 +27,7 @@
       "atr": 22.89,
       "margin": 56369.040820312504,
       "entry_cost": 70.78257823782617,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-26 10:15:50 IST",
@@ -67,7 +67,7 @@
       "atr": 21.64,
       "margin": 55293.918261718754,
       "entry_cost": 69.88266840260644,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-26 10:15:50 IST",
@@ -81,7 +81,7 @@
       "entry_stop_pct": 0.697,
       "nifty_at_entry": 22669.900390625,
       "mfe_price": 3106.39990234375,
-      "mae_price": 3095.0
+      "mae_price": 3092.5
     },
     "DRREDDY.NS": {
       "ticker": "DRREDDY.NS",
@@ -107,7 +107,7 @@
       "atr": 10.09,
       "margin": 48902.4,
       "entry_cost": 64.532775872,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-26 10:31:22 IST",
@@ -121,28 +121,28 @@
       "entry_stop_pct": 0.792,
       "nifty_at_entry": 22655.349609375,
       "mfe_price": 1274.5,
-      "mae_price": 1273.5
+      "mae_price": 1269.4000244140625
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "BSE.NS": {
-      "close": 3360.10009765625,
-      "high": 3360.10009765625,
-      "low": 3360.10009765625,
-      "as_of": "2026-10-26T10:45:44.305024+05:30"
+      "close": 3360.39990234375,
+      "high": 3365.199951171875,
+      "low": 3360.39990234375,
+      "as_of": "2026-10-26T11:01:08.671948+05:30"
     },
     "MCX.NS": {
-      "close": 3104.0,
-      "high": 3105.0,
-      "low": 3101.10009765625,
-      "as_of": "2026-10-26T10:45:44.305024+05:30"
+      "close": 3093.0,
+      "high": 3095.89990234375,
+      "low": 3092.5,
+      "as_of": "2026-10-26T11:01:08.671948+05:30"
     },
     "DRREDDY.NS": {
-      "close": 1274.5,
-      "high": 1274.5,
-      "low": 1274.5,
-      "as_of": "2026-10-26T10:45:44.305024+05:30"
+      "close": 1269.699951171875,
+      "high": 1270.800048828125,
+      "low": 1269.4000244140625,
+      "as_of": "2026-10-26T11:01:08.671948+05:30"
     }
   },
   "trade_history": [
