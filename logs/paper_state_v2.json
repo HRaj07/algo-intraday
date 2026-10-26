@@ -1,5 +1,5 @@
 {
-  "cash": 861228.3899693328,
+  "cash": 858299.0129582178,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 22.89,
       "margin": 56369.040820312504,
       "entry_cost": 70.78257823782617,
-      "bars_held": 4,
+      "bars_held": 5,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-26 10:15:50 IST",
@@ -41,18 +41,18 @@
       "entry_stop_pct": 0.682,
       "nifty_at_entry": 22669.900390625,
       "mfe_price": 3366.0,
-      "mae_price": 3346.60009765625
+      "mae_price": 3346.0
     },
     "DRREDDY.NS": {
       "ticker": "DRREDDY.NS",
       "direction": "LONG",
-      "entry_price": 1273.5,
-      "qty": 192,
-      "qty_open": 192,
-      "stop_loss": 1263.41,
-      "initial_stop": 1263.41,
-      "t1": 1281.14,
-      "t2": 1293.68,
+      "entry_price": 1280.5999755859375,
+      "qty": 207,
+      "qty_open": 207,
+      "stop_loss": 1271.29,
+      "initial_stop": 1271.29,
+      "t1": 1288.08,
+      "t2": 1299.01,
       "t1_fraction": 1.0,
       "exit_cfg": {
         "hold_to_square_off": true,
@@ -63,46 +63,40 @@
       },
       "t1_done": false,
       "trailed": false,
-      "risk_per_share": 10.09,
-      "atr": 10.09,
-      "margin": 48902.4,
-      "entry_cost": 64.532775872,
-      "bars_held": 3,
+      "risk_per_share": 9.31,
+      "atr": 9.3,
+      "margin": 53016.83898925781,
+      "entry_cost": 67.97668473917847,
+      "bars_held": 0,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
-      "entry_time": "2026-10-26 10:31:22 IST",
+      "entry_time": "2026-10-26 11:31:23 IST",
       "predicted_rr": null,
-      "entry_rsi": 74.9,
-      "entry_deviation_pct": 1.061,
-      "entry_atr_pct": 0.792,
-      "entry_rvol": 5.14,
+      "entry_rsi": 75.0,
+      "entry_deviation_pct": 1.325,
+      "entry_atr_pct": 0.727,
+      "entry_rvol": 8.92,
       "entry_gap_pct": null,
-      "entry_turnover_cr": 6.83,
-      "entry_stop_pct": 0.792,
-      "nifty_at_entry": 22655.349609375,
-      "mfe_price": 1274.5,
-      "mae_price": 1269.4000244140625
+      "entry_turnover_cr": 7.34,
+      "entry_stop_pct": 0.727,
+      "nifty_at_entry": 22576.44921875,
+      "mfe_price": 1280.5999755859375,
+      "mae_price": 1280.5999755859375
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "BSE.NS": {
-      "close": 3348.0,
-      "high": 3355.0,
-      "low": 3346.60009765625,
-      "as_of": "2026-10-26T11:15:51.986650+05:30"
-    },
-    "MCX.NS": {
-      "close": 3083.60009765625,
-      "high": 3085.89990234375,
-      "low": 3083.0,
-      "as_of": "2026-10-26T11:15:51.986650+05:30"
+      "close": 3351.0,
+      "high": 3352.300048828125,
+      "low": 3346.0,
+      "as_of": "2026-10-26T11:31:23.963736+05:30"
     },
     "DRREDDY.NS": {
-      "close": 1269.800048828125,
-      "high": 1269.800048828125,
-      "low": 1269.800048828125,
-      "as_of": "2026-10-26T11:15:51.986650+05:30"
+      "close": 1280.4000244140625,
+      "high": 1281.800048828125,
+      "low": 1280.0999755859375,
+      "as_of": "2026-10-26T11:31:23.963736+05:30"
     }
   },
   "trade_history": [
@@ -1575,6 +1569,27 @@
       "entry_rvol": 3.07,
       "entry_turnover_cr": 9.42,
       "entry_stop_pct": 0.697
+    },
+    {
+      "ticker": "DRREDDY.NS",
+      "direction": "LONG",
+      "entry_price": 1273.5,
+      "exit_price": 1281.14,
+      "qty": 192,
+      "pnl": 1185.06,
+      "R_multiple": 0.61,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 281.82,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-26 10:31:22 IST",
+      "exit_time": "2026-10-26 11:31:23 IST",
+      "entry_rsi": 74.9,
+      "entry_deviation_pct": 1.061,
+      "entry_atr_pct": 0.792,
+      "entry_rvol": 5.14,
+      "entry_turnover_cr": 6.83,
+      "entry_stop_pct": 0.792
     }
   ],
   "daily_entry_count": {
@@ -1593,16 +1608,16 @@
     "2026-10-16": 7,
     "2026-10-19": 2,
     "2026-10-22": 4,
-    "2026-10-26": 3
+    "2026-10-26": 4
   },
-  "total_pnl": -33500.169210355256,
+  "total_pnl": -32315.10723221252,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=69, observed expectancy shrunk to -0.049R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.664,
-    "drawdown_reason": "drawdown 4.0% - sizing at 0.66x",
-    "raw_pct": 0.00159,
+    "performance_reason": "n=71, observed expectancy shrunk to -0.053R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.635,
+    "drawdown_reason": "drawdown 4.2% - sizing at 0.64x",
+    "raw_pct": 0.00152,
     "final_pct": 0.002,
     "clamped": true
   },
