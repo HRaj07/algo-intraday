@@ -7355,3 +7355,17 @@
 2026-10-26 13:01:44 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-26 13:01:45 | INFO    | engine.paper_trader_v2 | ORDER REJECTED DRREDDY.NS: max 2 entries per day for DRREDDY.NS
 2026-10-26 13:01:45 | INFO    | __main__ | equity Rs968,707 | open 2 | pending 0 | closed 72 | WR 52.8% | PF 0.65 | friction Rs24,900
+2026-10-26 13:15:52 | INFO    | __main__ | ================================================================
+2026-10-26 13:15:52 | INFO    | __main__ | Scan | 2026-10-26 13:15 IST
+2026-10-26 13:16:37 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-26 13:16:37 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,940 risk per trade)
+2026-10-26 13:16:37 | INFO    | __main__ |   base 0.40%
+2026-10-26 13:16:37 | INFO    | __main__ |   performance x0.6: n=72, observed expectancy shrunk to -0.047R vs prior +0.125R -> trimming (0.60x)
+2026-10-26 13:16:37 | INFO    | __main__ |   drawdown    x0.683: drawdown 3.9% - sizing at 0.68x
+2026-10-26 13:16:37 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-26 13:16:37 | INFO    | __main__ | strategy: MOM-v3
+2026-10-26 13:16:37 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-26 13:16:38 | INFO    | engine.paper_trader_v2 | ORDER REJECTED JUBLFOOD.NS: at max entries per day (5)
+2026-10-26 13:16:38 | INFO    | engine.paper_trader_v2 | ORDER REJECTED DRREDDY.NS: max 2 entries per day for DRREDDY.NS
+2026-10-26 13:16:38 | INFO    | engine.paper_trader_v2 | ORDER REJECTED VBL.NS: already holding this name
+2026-10-26 13:16:38 | INFO    | __main__ | equity Rs970,208 | open 2 | pending 0 | closed 72 | WR 52.8% | PF 0.65 | friction Rs24,900
