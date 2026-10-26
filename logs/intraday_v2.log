@@ -7455,3 +7455,6 @@
 2026-10-26 15:16:23 | INFO    | engine.paper_trader_v2 | EXIT VBL.NS 685@Rs407.0 | P&L Rs-142 (-0.07R) | friction Rs313 | square_off
 2026-10-26 15:16:25 | INFO    | __main__ | EOD: {'equity': 969707.13, 'cash': 969707.13, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 74, 'win_rate_pct': 52.7, 'profit_factor': 0.66, 'total_friction': 25531.05, 'total_pnl': -30292.87, 'return_pct': -3.03}
 2026-10-26 15:16:25 | WARNING | __main__ | KILL SWITCH has tripped 9x in paper mode; latest {'date': '2026-10-26', 'pf': 0.719, 'n': 30, 'trade_count': 69} - live mode would be HALTED
+2026-10-26 15:31:23 | INFO    | __main__ | ================================================================
+2026-10-26 15:31:23 | INFO    | __main__ | Scan | 2026-10-26 15:31 IST
+2026-10-26 15:31:23 | INFO    | __main__ | outside NSE hours
