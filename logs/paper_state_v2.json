@@ -4,20 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "BSE.NS": {
-      "close": 3370.0,
-      "high": 3370.0,
-      "low": 3370.0,
-      "as_of": "2026-10-26T15:15:56.722933+05:30"
-    },
-    "VBL.NS": {
-      "close": 407.0,
-      "high": 407.5,
-      "low": 406.1000061035156,
-      "as_of": "2026-10-26T15:15:56.722933+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
