@@ -7529,3 +7529,23 @@
 2026-10-27 10:01:56 | INFO    | __main__ | strategy: MOM-v3
 2026-10-27 10:01:56 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-27 10:01:56 | INFO    | __main__ | equity Rs969,707 | open 0 | pending 0 | closed 74 | WR 52.7% | PF 0.66 | friction Rs25,531
+2026-10-27 10:15:45 | INFO    | __main__ | ================================================================
+2026-10-27 10:15:45 | INFO    | __main__ | Scan | 2026-10-27 10:15 IST
+2026-10-27 10:16:25 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-27 10:16:25 | WARNING | engine.risk_manager | KILL SWITCH (paper - continuing): rolling 30-trade PF 0.77 < 0.85 - edge has degraded, manual restart required
+2026-10-27 10:16:25 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,939 risk per trade)
+2026-10-27 10:16:25 | INFO    | __main__ |   base 0.40%
+2026-10-27 10:16:25 | INFO    | __main__ |   performance x0.6: n=74, observed expectancy shrunk to -0.043R vs prior +0.125R -> trimming (0.60x)
+2026-10-27 10:16:25 | INFO    | __main__ |   drawdown    x0.674: drawdown 4.0% - sizing at 0.67x
+2026-10-27 10:16:25 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-27 10:16:25 | INFO    | __main__ | strategy: MOM-v3
+2026-10-27 10:16:25 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-27 10:16:25 | INFO    | engine.paper_trader_v2 | ORDER SONACOMS.NS market buy at next open (ref Rs839.5, SL 0.978%, RSI 91.2, rvol 10.87)
+2026-10-27 10:16:25 | INFO    | engine.paper_trader_v2 | ORDER LAURUSLABS.NS market buy at next open (ref Rs2116.0, SL 0.539%, RSI 88.3, rvol 4.56)
+2026-10-27 10:16:25 | INFO    | engine.paper_trader_v2 | ORDER WELCORP.NS market buy at next open (ref Rs2472.1, SL 1.024%, RSI 70.5, rvol 2.05)
+2026-10-27 10:16:25 | INFO    | engine.paper_trader_v2 | ORDER TATASTEEL.NS market buy at next open (ref Rs171.96, SL 0.518%, RSI 78.2, rvol 2.04)
+2026-10-27 10:16:25 | INFO    | engine.paper_trader_v2 | FILLED SONACOMS.NS @ Rs839.5 | qty=236 notional=Rs198,122 friction=Rs236
+2026-10-27 10:16:25 | INFO    | engine.paper_trader_v2 | FILLED LAURUSLABS.NS @ Rs2114.0 | qty=170 notional=Rs359,380 friction=Rs390
+2026-10-27 10:16:25 | INFO    | engine.paper_trader_v2 | FILLED WELCORP.NS @ Rs2472.39990234375 | qty=76 notional=Rs187,902 friction=Rs227
+2026-10-27 10:16:25 | INFO    | engine.paper_trader_v2 | FILLED TATASTEEL.NS @ Rs171.9499969482422 | qty=2179 notional=Rs374,679 friction=Rs405
+2026-10-27 10:16:29 | INFO    | __main__ | equity Rs969,707 | open 4 | pending 0 | closed 74 | WR 52.7% | PF 0.66 | friction Rs25,531
