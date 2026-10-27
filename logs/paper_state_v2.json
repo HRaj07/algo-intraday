@@ -1,5 +1,5 @@
 {
-  "cash": 631475.9804149695,
+  "cash": 704177.9302481733,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 11.41,
       "margin": 71876.0,
       "entry_cost": 83.76236828,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-27 10:15:45 IST",
@@ -42,46 +42,6 @@
       "nifty_at_entry": 22766.099609375,
       "mfe_price": 2123.699951171875,
       "mae_price": 2110.10009765625
-    },
-    "TATASTEEL.NS": {
-      "ticker": "TATASTEEL.NS",
-      "direction": "LONG",
-      "entry_price": 171.9499969482422,
-      "qty": 2179,
-      "qty_open": 2179,
-      "stop_loss": 171.06,
-      "initial_stop": 171.06,
-      "t1": 172.99,
-      "t2": 173.74,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 0.89,
-      "atr": 0.89,
-      "margin": 74935.80867004395,
-      "entry_cost": 86.32351993108688,
-      "bars_held": 5,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-27 10:15:45 IST",
-      "predicted_rr": null,
-      "entry_rsi": 78.2,
-      "entry_deviation_pct": 0.826,
-      "entry_atr_pct": 0.518,
-      "entry_rvol": 2.04,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 14.16,
-      "entry_stop_pct": 0.518,
-      "nifty_at_entry": 22766.099609375,
-      "mfe_price": 171.9499969482422,
-      "mae_price": 171.25
     },
     "KFINTECH.NS": {
       "ticker": "KFINTECH.NS",
@@ -107,7 +67,7 @@
       "atr": 9.16,
       "margin": 37278.08051757813,
       "entry_cost": 54.802871735628415,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-27 11:31:15 IST",
@@ -121,7 +81,7 @@
       "entry_stop_pct": 1.042,
       "nifty_at_entry": 22755.349609375,
       "mfe_price": 879.2000122070312,
-      "mae_price": 879.2000122070312
+      "mae_price": 875.4000244140625
     },
     "SONACOMS.NS": {
       "ticker": "SONACOMS.NS",
@@ -147,7 +107,7 @@
       "atr": 8.08,
       "margin": 40982.3994140625,
       "entry_cost": 57.90349778155273,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-27 11:31:15 IST",
@@ -160,7 +120,7 @@
       "entry_turnover_cr": 7.22,
       "entry_stop_pct": 0.946,
       "nifty_at_entry": 22755.349609375,
-      "mfe_price": 853.7999877929688,
+      "mfe_price": 855.5999755859375,
       "mae_price": 853.7999877929688
     },
     "BANDHANBNK.NS": {
@@ -187,7 +147,7 @@
       "atr": 1.27,
       "margin": 47827.80093383789,
       "entry_cost": 63.633304215650334,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-27 11:31:15 IST",
@@ -200,7 +160,7 @@
       "entry_turnover_cr": 4.68,
       "entry_stop_pct": 0.811,
       "nifty_at_entry": 22755.349609375,
-      "mfe_price": 156.3000030517578,
+      "mfe_price": 156.4499969482422,
       "mae_price": 156.3000030517578
     },
     "ANGELONE.NS": {
@@ -227,7 +187,7 @@
       "atr": 1.69,
       "margin": 67160.0,
       "entry_cost": 79.8149348,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-27 11:31:15 IST",
@@ -241,28 +201,46 @@
       "entry_stop_pct": 0.579,
       "nifty_at_entry": 22755.349609375,
       "mfe_price": 292.0,
-      "mae_price": 292.0
+      "mae_price": 290.70001220703125
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "TATASTEEL.NS": {
-      "close": 171.4499969482422,
-      "high": 171.52999877929688,
-      "low": 171.3800048828125,
-      "as_of": "2026-10-27T11:31:15.288358+05:30"
-    },
-    "WELCORP.NS": {
-      "close": 2486.199951171875,
-      "high": 2487.699951171875,
-      "low": 2486.199951171875,
-      "as_of": "2026-10-27T11:31:15.288358+05:30"
+      "close": 171.11000061035156,
+      "high": 171.1699981689453,
+      "low": 171.08999633789062,
+      "as_of": "2026-10-27T11:45:46.915613+05:30"
     },
     "LAURUSLABS.NS": {
       "close": 2122.0,
-      "high": 2123.699951171875,
-      "low": 2121.800048828125,
-      "as_of": "2026-10-27T11:31:15.288358+05:30"
+      "high": 2122.89990234375,
+      "low": 2121.39990234375,
+      "as_of": "2026-10-27T11:45:46.915613+05:30"
+    },
+    "KFINTECH.NS": {
+      "close": 876.2000122070312,
+      "high": 876.6500244140625,
+      "low": 875.4000244140625,
+      "as_of": "2026-10-27T11:45:46.915613+05:30"
+    },
+    "BANDHANBNK.NS": {
+      "close": 156.4499969482422,
+      "high": 156.4499969482422,
+      "low": 156.4499969482422,
+      "as_of": "2026-10-27T11:45:46.915613+05:30"
+    },
+    "SONACOMS.NS": {
+      "close": 854.7000122070312,
+      "high": 855.5999755859375,
+      "low": 854.4000244140625,
+      "as_of": "2026-10-27T11:45:46.915613+05:30"
+    },
+    "ANGELONE.NS": {
+      "close": 290.70001220703125,
+      "high": 290.70001220703125,
+      "low": 290.70001220703125,
+      "as_of": "2026-10-27T11:45:46.915613+05:30"
     }
   },
   "trade_history": [
@@ -1861,6 +1839,27 @@
       "entry_rvol": 2.05,
       "entry_turnover_cr": 9.49,
       "entry_stop_pct": 1.024
+    },
+    {
+      "ticker": "TATASTEEL.NS",
+      "direction": "LONG",
+      "entry_price": 171.9499969482422,
+      "exit_price": 171.11,
+      "qty": 2179,
+      "pnl": -2233.86,
+      "R_multiple": -1.15,
+      "reason": "vwap_reclaim",
+      "partial": false,
+      "friction": 403.51,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-27 10:15:45 IST",
+      "exit_time": "2026-10-27 11:45:46 IST",
+      "entry_rsi": 78.2,
+      "entry_deviation_pct": 0.826,
+      "entry_atr_pct": 0.518,
+      "entry_rvol": 2.04,
+      "entry_turnover_cr": 14.16,
+      "entry_stop_pct": 0.518
     }
   ],
   "daily_entry_count": {
@@ -1882,7 +1881,7 @@
     "2026-10-26": 5,
     "2026-10-27": 8
   },
-  "total_pnl": -28463.930049508635,
+  "total_pnl": -30697.78888634875,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
