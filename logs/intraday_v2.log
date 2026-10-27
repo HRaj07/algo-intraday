@@ -7603,3 +7603,25 @@
 2026-10-27 11:16:31 | INFO    | engine.paper_trader_v2 | ORDER REJECTED KFINTECH.NS: at max concurrent positions (3)
 2026-10-27 11:16:31 | INFO    | engine.paper_trader_v2 | ORDER REJECTED JSWSTEEL.NS: at max concurrent positions (3)
 2026-10-27 11:16:31 | INFO    | __main__ | equity Rs970,294 | open 3 | pending 0 | closed 75 | WR 53.3% | PF 0.67 | friction Rs25,768
+2026-10-27 11:31:15 | INFO    | __main__ | ================================================================
+2026-10-27 11:31:15 | INFO    | __main__ | Scan | 2026-10-27 11:31 IST
+2026-10-27 11:32:06 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-27 11:32:07 | INFO    | engine.paper_trader_v2 | EXIT WELCORP.NS 76@Rs2486.93 | P&L Rs+877 (+0.46R) | friction Rs227 | t1_vwap
+2026-10-27 11:32:07 | INFO    | engine.paper_trader_v2 | T1 WELCORP.NS - half out at VWAP, stop to Rs2479.18 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-27 11:32:07 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,944 risk per trade)
+2026-10-27 11:32:07 | INFO    | __main__ |   base 0.40%
+2026-10-27 11:32:07 | INFO    | __main__ |   performance x0.6: n=76, observed expectancy shrunk to -0.035R vs prior +0.125R -> trimming (0.60x)
+2026-10-27 11:32:07 | INFO    | __main__ |   drawdown    x0.709: drawdown 3.7% - sizing at 0.71x
+2026-10-27 11:32:07 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-27 11:32:07 | INFO    | __main__ | strategy: MOM-v3
+2026-10-27 11:32:07 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-27 11:32:08 | INFO    | engine.paper_trader_v2 | ORDER KFINTECH.NS market buy at next open (ref Rs879.2, SL 1.042%, RSI 77.1, rvol 10.42)
+2026-10-27 11:32:08 | INFO    | engine.paper_trader_v2 | ORDER SONACOMS.NS market buy at next open (ref Rs854.0, SL 0.946%, RSI 86.2, rvol 3.69)
+2026-10-27 11:32:08 | INFO    | engine.paper_trader_v2 | ORDER BANDHANBNK.NS market buy at next open (ref Rs156.23, SL 0.811%, RSI 74.9, rvol 3.18)
+2026-10-27 11:32:08 | INFO    | engine.paper_trader_v2 | ORDER ANGELONE.NS market buy at next open (ref Rs291.9, SL 0.579%, RSI 75.4, rvol 2.35)
+2026-10-27 11:32:08 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SAIL.NS: already hold 1 position(s) in METAL
+2026-10-27 11:32:08 | INFO    | engine.paper_trader_v2 | FILLED KFINTECH.NS @ Rs879.2000122070312 | qty=212 notional=Rs186,390 friction=Rs225
+2026-10-27 11:32:08 | INFO    | engine.paper_trader_v2 | FILLED SONACOMS.NS @ Rs853.7999877929688 | qty=240 notional=Rs204,912 friction=Rs243
+2026-10-27 11:32:08 | INFO    | engine.paper_trader_v2 | FILLED BANDHANBNK.NS @ Rs156.3000030517578 | qty=1530 notional=Rs239,139 friction=Rs276
+2026-10-27 11:32:08 | INFO    | engine.paper_trader_v2 | FILLED ANGELONE.NS @ Rs292.0 | qty=1150 notional=Rs335,800 friction=Rs368
+2026-10-27 11:32:09 | INFO    | __main__ | equity Rs971,807 | open 6 | pending 0 | closed 76 | WR 53.9% | PF 0.68 | friction Rs25,996
