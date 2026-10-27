@@ -1,48 +1,8 @@
 {
-  "cash": 745690.4421600087,
+  "cash": 786266.9763247521,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "SONACOMS.NS": {
-      "ticker": "SONACOMS.NS",
-      "direction": "LONG",
-      "entry_price": 839.5,
-      "qty": 236,
-      "qty_open": 236,
-      "stop_loss": 831.29,
-      "initial_stop": 831.29,
-      "t1": 844.54,
-      "t2": 855.91,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 8.21,
-      "atr": 8.21,
-      "margin": 39624.4,
-      "entry_cost": 56.766811532000006,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-27 10:15:45 IST",
-      "predicted_rr": null,
-      "entry_rsi": 91.2,
-      "entry_deviation_pct": 1.165,
-      "entry_atr_pct": 0.978,
-      "entry_rvol": 10.87,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 5.07,
-      "entry_stop_pct": 0.978,
-      "nifty_at_entry": 22766.099609375,
-      "mfe_price": 839.5,
-      "mae_price": 839.5
-    },
     "LAURUSLABS.NS": {
       "ticker": "LAURUSLABS.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 11.41,
       "margin": 71876.0,
       "entry_cost": 83.76236828,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-27 10:15:45 IST",
@@ -81,7 +41,7 @@
       "entry_stop_pct": 0.539,
       "nifty_at_entry": 22766.099609375,
       "mfe_price": 2114.0,
-      "mae_price": 2114.0
+      "mae_price": 2110.10009765625
     },
     "WELCORP.NS": {
       "ticker": "WELCORP.NS",
@@ -107,7 +67,7 @@
       "atr": 25.32,
       "margin": 37580.478515625,
       "entry_cost": 55.05598793193359,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-27 10:15:45 IST",
@@ -120,7 +80,7 @@
       "entry_turnover_cr": 9.49,
       "entry_stop_pct": 1.024,
       "nifty_at_entry": 22766.099609375,
-      "mfe_price": 2472.39990234375,
+      "mfe_price": 2474.699951171875,
       "mae_price": 2472.39990234375
     },
     "TATASTEEL.NS": {
@@ -147,7 +107,7 @@
       "atr": 0.89,
       "margin": 74935.80867004395,
       "entry_cost": 86.32351993108688,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-27 10:15:45 IST",
@@ -161,11 +121,36 @@
       "entry_stop_pct": 0.518,
       "nifty_at_entry": 22766.099609375,
       "mfe_price": 171.9499969482422,
-      "mae_price": 171.9499969482422
+      "mae_price": 171.25
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "TATASTEEL.NS": {
+      "close": 171.33999633789062,
+      "high": 171.3699951171875,
+      "low": 171.25,
+      "as_of": "2026-10-27T10:31:14.756648+05:30"
+    },
+    "WELCORP.NS": {
+      "close": 2473.0,
+      "high": 2474.699951171875,
+      "low": 2473.0,
+      "as_of": "2026-10-27T10:31:14.756648+05:30"
+    },
+    "LAURUSLABS.NS": {
+      "close": 2110.10009765625,
+      "high": 2111.0,
+      "low": 2110.10009765625,
+      "as_of": "2026-10-27T10:31:14.756648+05:30"
+    },
+    "SONACOMS.NS": {
+      "close": 847.5,
+      "high": 847.5,
+      "low": 839.5,
+      "as_of": "2026-10-27T10:31:14.756648+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -1720,6 +1705,27 @@
       "entry_rvol": 2.3,
       "entry_turnover_cr": 6.23,
       "entry_stop_pct": 0.695
+    },
+    {
+      "ticker": "SONACOMS.NS",
+      "direction": "LONG",
+      "entry_price": 839.5,
+      "exit_price": 844.54,
+      "qty": 236,
+      "pnl": 952.13,
+      "R_multiple": 0.49,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 237.31,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-27 10:15:45 IST",
+      "exit_time": "2026-10-27 10:31:14 IST",
+      "entry_rsi": 91.2,
+      "entry_deviation_pct": 1.165,
+      "entry_atr_pct": 0.978,
+      "entry_rvol": 10.87,
+      "entry_turnover_cr": 5.07,
+      "entry_stop_pct": 0.978
     }
   ],
   "daily_entry_count": {
@@ -1741,7 +1747,7 @@
     "2026-10-26": 5,
     "2026-10-27": 4
   },
-  "total_pnl": -30292.87065432296,
+  "total_pnl": -29340.73648957961,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
