@@ -7711,3 +7711,16 @@
 2026-10-27 13:01:44 | INFO    | __main__ | strategy: MOM-v3
 2026-10-27 13:01:44 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-27 13:01:45 | INFO    | __main__ | equity Rs972,099 | open 3 | pending 0 | closed 79 | WR 54.4% | PF 0.69 | friction Rs26,869
+2026-10-27 13:15:50 | INFO    | __main__ | ================================================================
+2026-10-27 13:15:50 | INFO    | __main__ | Scan | 2026-10-27 13:15 IST
+2026-10-27 13:16:41 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-27 13:16:41 | INFO    | engine.paper_trader_v2 | EXIT BANDHANBNK.NS 1530@Rs155.03 | P&L Rs-2,217 (-1.14R) | friction Rs274 | stop_loss
+2026-10-27 13:16:41 | INFO    | engine.paper_trader_v2 | EXIT ANGELONE.NS 1150@Rs290.31 | P&L Rs-2,310 (-1.19R) | friction Rs366 | stop_loss
+2026-10-27 13:16:43 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,936 risk per trade)
+2026-10-27 13:16:43 | INFO    | __main__ |   base 0.40%
+2026-10-27 13:16:43 | INFO    | __main__ |   performance x0.6: n=81, observed expectancy shrunk to -0.052R vs prior +0.125R -> trimming (0.60x)
+2026-10-27 13:16:43 | INFO    | __main__ |   drawdown    x0.646: drawdown 4.1% - sizing at 0.65x
+2026-10-27 13:16:43 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-27 13:16:43 | INFO    | __main__ | strategy: MOM-v3
+2026-10-27 13:16:43 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-27 13:16:43 | INFO    | __main__ | equity Rs968,011 | open 1 | pending 0 | closed 81 | WR 53.1% | PF 0.65 | friction Rs27,510

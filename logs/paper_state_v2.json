@@ -1,5 +1,5 @@
 {
-  "cash": 784364.6635437582,
+  "cash": 894825.5614833166,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 11.41,
       "margin": 71876.0,
       "entry_cost": 83.76236828,
-      "bars_held": 11,
+      "bars_held": 12,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-27 10:15:45 IST",
@@ -42,107 +42,27 @@
       "nifty_at_entry": 22766.099609375,
       "mfe_price": 2123.699951171875,
       "mae_price": 2110.10009765625
-    },
-    "BANDHANBNK.NS": {
-      "ticker": "BANDHANBNK.NS",
-      "direction": "LONG",
-      "entry_price": 156.3000030517578,
-      "qty": 1530,
-      "qty_open": 1530,
-      "stop_loss": 155.03,
-      "initial_stop": 155.03,
-      "t1": 157.17,
-      "t2": 158.76,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 1.27,
-      "atr": 1.27,
-      "margin": 47827.80093383789,
-      "entry_cost": 63.633304215650334,
-      "bars_held": 6,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-27 11:31:15 IST",
-      "predicted_rr": null,
-      "entry_rsi": 74.9,
-      "entry_deviation_pct": 1.574,
-      "entry_atr_pct": 0.811,
-      "entry_rvol": 3.18,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.68,
-      "entry_stop_pct": 0.811,
-      "nifty_at_entry": 22755.349609375,
-      "mfe_price": 157.0800018310547,
-      "mae_price": 155.5800018310547
-    },
-    "ANGELONE.NS": {
-      "ticker": "ANGELONE.NS",
-      "direction": "LONG",
-      "entry_price": 292.0,
-      "qty": 1150,
-      "qty_open": 1150,
-      "stop_loss": 290.31,
-      "initial_stop": 290.31,
-      "t1": 293.65,
-      "t2": 295.28,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 1.69,
-      "atr": 1.69,
-      "margin": 67160.0,
-      "entry_cost": 79.8149348,
-      "bars_held": 6,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-27 11:31:15 IST",
-      "predicted_rr": null,
-      "entry_rsi": 75.4,
-      "entry_deviation_pct": 1.54,
-      "entry_atr_pct": 0.579,
-      "entry_rvol": 2.35,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.17,
-      "entry_stop_pct": 0.579,
-      "nifty_at_entry": 22755.349609375,
-      "mfe_price": 292.0,
-      "mae_price": 290.45001220703125
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "LAURUSLABS.NS": {
-      "close": 2122.39990234375,
-      "high": 2123.39990234375,
-      "low": 2122.39990234375,
-      "as_of": "2026-10-27T13:01:10.338982+05:30"
+      "close": 2121.699951171875,
+      "high": 2122.0,
+      "low": 2120.5,
+      "as_of": "2026-10-27T13:15:50.596971+05:30"
     },
     "BANDHANBNK.NS": {
-      "close": 156.8000030517578,
-      "high": 157.0800018310547,
-      "low": 156.8000030517578,
-      "as_of": "2026-10-27T13:01:10.338982+05:30"
+      "close": 153.63999938964844,
+      "high": 153.63999938964844,
+      "low": 153.63999938964844,
+      "as_of": "2026-10-27T13:15:50.596971+05:30"
     },
     "ANGELONE.NS": {
-      "close": 290.8500061035156,
-      "high": 291.54998779296875,
-      "low": 290.8500061035156,
-      "as_of": "2026-10-27T13:01:10.338982+05:30"
+      "close": 289.3999938964844,
+      "high": 289.3999938964844,
+      "low": 289.3999938964844,
+      "as_of": "2026-10-27T13:15:50.596971+05:30"
     }
   },
   "trade_history": [
@@ -1804,6 +1724,48 @@
       "entry_rvol": 3.69,
       "entry_turnover_cr": 7.22,
       "entry_stop_pct": 0.946
+    },
+    {
+      "ticker": "BANDHANBNK.NS",
+      "direction": "LONG",
+      "entry_price": 156.3000030517578,
+      "exit_price": 155.03,
+      "qty": 1530,
+      "pnl": -2217.11,
+      "R_multiple": -1.14,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 274.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-27 11:31:15 IST",
+      "exit_time": "2026-10-27 13:15:50 IST",
+      "entry_rsi": 74.9,
+      "entry_deviation_pct": 1.574,
+      "entry_atr_pct": 0.811,
+      "entry_rvol": 3.18,
+      "entry_turnover_cr": 4.68,
+      "entry_stop_pct": 0.811
+    },
+    {
+      "ticker": "ANGELONE.NS",
+      "direction": "LONG",
+      "entry_price": 292.0,
+      "exit_price": 290.31,
+      "qty": 1150,
+      "pnl": -2309.8,
+      "R_multiple": -1.19,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 366.3,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-27 11:31:15 IST",
+      "exit_time": "2026-10-27 13:15:50 IST",
+      "entry_rsi": 75.4,
+      "entry_deviation_pct": 1.54,
+      "entry_atr_pct": 0.579,
+      "entry_rvol": 2.35,
+      "entry_turnover_cr": 4.17,
+      "entry_stop_pct": 0.579
     }
   ],
   "daily_entry_count": {
@@ -1825,7 +1787,7 @@
     "2026-10-26": 5,
     "2026-10-27": 8
   },
-  "total_pnl": -28771.53552240441,
+  "total_pnl": -33298.43851668391,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
