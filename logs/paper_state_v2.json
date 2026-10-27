@@ -1,56 +1,15 @@
 {
-  "cash": 894825.5614833166,
+  "cash": 968808.2534191626,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "LAURUSLABS.NS": {
-      "ticker": "LAURUSLABS.NS",
-      "direction": "LONG",
-      "entry_price": 2114.0,
-      "qty": 170,
-      "qty_open": 170,
-      "stop_loss": 2102.61,
-      "initial_stop": 2102.61,
-      "t1": 2128.7,
-      "t2": 2138.83,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 11.39,
-      "atr": 11.41,
-      "margin": 71876.0,
-      "entry_cost": 83.76236828,
-      "bars_held": 14,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-27 10:15:45 IST",
-      "predicted_rr": null,
-      "entry_rsi": 88.3,
-      "entry_deviation_pct": 0.801,
-      "entry_atr_pct": 0.539,
-      "entry_rvol": 4.56,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 13.74,
-      "entry_stop_pct": 0.539,
-      "nifty_at_entry": 22766.099609375,
-      "mfe_price": 2128.699951171875,
-      "mae_price": 2110.10009765625
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "LAURUSLABS.NS": {
-      "close": 2128.699951171875,
-      "high": 2128.699951171875,
-      "low": 2127.39990234375,
-      "as_of": "2026-10-27T13:45:47.884522+05:30"
+      "close": 2130.199951171875,
+      "high": 2132.0,
+      "low": 2130.199951171875,
+      "as_of": "2026-10-27T14:01:04.455805+05:30"
     }
   },
   "trade_history": [
@@ -1754,6 +1713,27 @@
       "entry_rvol": 2.35,
       "entry_turnover_cr": 4.17,
       "entry_stop_pct": 0.579
+    },
+    {
+      "ticker": "LAURUSLABS.NS",
+      "direction": "LONG",
+      "entry_price": 2114.0,
+      "exit_price": 2128.7,
+      "qty": 170,
+      "pnl": 2106.69,
+      "R_multiple": 1.09,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 392.31,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-27 10:15:45 IST",
+      "exit_time": "2026-10-27 14:01:04 IST",
+      "entry_rsi": 88.3,
+      "entry_deviation_pct": 0.801,
+      "entry_atr_pct": 0.539,
+      "entry_rvol": 4.56,
+      "entry_turnover_cr": 13.74,
+      "entry_stop_pct": 0.539
     }
   ],
   "daily_entry_count": {
@@ -1775,7 +1755,7 @@
     "2026-10-26": 5,
     "2026-10-27": 8
   },
-  "total_pnl": -33298.43851668391,
+  "total_pnl": -31191.746580837942,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,

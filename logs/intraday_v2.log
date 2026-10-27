@@ -7747,3 +7747,16 @@
 2026-10-27 13:46:38 | INFO    | __main__ | strategy: MOM-v3
 2026-10-27 13:46:38 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-27 13:46:38 | INFO    | __main__ | equity Rs969,201 | open 1 | pending 0 | closed 81 | WR 53.1% | PF 0.65 | friction Rs27,510
+2026-10-27 14:01:04 | INFO    | __main__ | ================================================================
+2026-10-27 14:01:04 | INFO    | __main__ | Scan | 2026-10-27 14:01 IST
+2026-10-27 14:01:59 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-27 14:01:59 | INFO    | engine.paper_trader_v2 | EXIT LAURUSLABS.NS 170@Rs2128.7 | P&L Rs+2,107 (+1.09R) | friction Rs392 | t1_vwap
+2026-10-27 14:01:59 | INFO    | engine.paper_trader_v2 | T1 LAURUSLABS.NS - half out at VWAP, stop to Rs2118.0 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-27 14:01:59 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,938 risk per trade)
+2026-10-27 14:01:59 | INFO    | __main__ |   base 0.40%
+2026-10-27 14:01:59 | INFO    | __main__ |   performance x0.6: n=82, observed expectancy shrunk to -0.044R vs prior +0.125R -> trimming (0.60x)
+2026-10-27 14:01:59 | INFO    | __main__ |   drawdown    x0.66: drawdown 4.0% - sizing at 0.66x
+2026-10-27 14:01:59 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-27 14:01:59 | INFO    | __main__ | strategy: MOM-v3
+2026-10-27 14:01:59 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-27 14:01:59 | INFO    | __main__ | equity Rs968,808 | open 0 | pending 0 | closed 82 | WR 53.7% | PF 0.67 | friction Rs27,902
