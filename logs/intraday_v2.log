@@ -7820,3 +7820,6 @@
 2026-10-27 15:16:27 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
 2026-10-27 15:16:27 | INFO    | __main__ | EOD: {'equity': 968808.25, 'cash': 968808.25, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 82, 'win_rate_pct': 53.7, 'profit_factor': 0.67, 'total_friction': 27901.87, 'total_pnl': -31191.75, 'return_pct': -3.12}
 2026-10-27 15:16:27 | WARNING | __main__ | KILL SWITCH has tripped 10x in paper mode; latest {'date': '2026-10-27', 'pf': 0.766, 'n': 30, 'trade_count': 74} - live mode would be HALTED
+2026-10-27 15:31:20 | INFO    | __main__ | ================================================================
+2026-10-27 15:31:20 | INFO    | __main__ | Scan | 2026-10-27 15:31 IST
+2026-10-27 15:31:20 | INFO    | __main__ | outside NSE hours
