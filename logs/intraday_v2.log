@@ -7815,3 +7815,8 @@
 2026-10-27 15:01:50 | INFO    | __main__ | strategy: MOM-v3
 2026-10-27 15:01:50 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-27 15:01:50 | INFO    | __main__ | equity Rs968,808 | open 0 | pending 0 | closed 82 | WR 53.7% | PF 0.67 | friction Rs27,902
+2026-10-27 15:15:52 | INFO    | __main__ | ================================================================
+2026-10-27 15:15:52 | INFO    | __main__ | Scan | 2026-10-27 15:15 IST
+2026-10-27 15:16:27 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-27 15:16:27 | INFO    | __main__ | EOD: {'equity': 968808.25, 'cash': 968808.25, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 82, 'win_rate_pct': 53.7, 'profit_factor': 0.67, 'total_friction': 27901.87, 'total_pnl': -31191.75, 'return_pct': -3.12}
+2026-10-27 15:16:27 | WARNING | __main__ | KILL SWITCH has tripped 10x in paper mode; latest {'date': '2026-10-27', 'pf': 0.766, 'n': 30, 'trade_count': 74} - live mode would be HALTED
