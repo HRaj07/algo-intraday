@@ -1,5 +1,5 @@
 {
-  "cash": 704177.9302481733,
+  "cash": 784364.6635437582,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 11.41,
       "margin": 71876.0,
       "entry_cost": 83.76236828,
-      "bars_held": 7,
+      "bars_held": 8,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-27 10:15:45 IST",
@@ -42,86 +42,6 @@
       "nifty_at_entry": 22766.099609375,
       "mfe_price": 2123.699951171875,
       "mae_price": 2110.10009765625
-    },
-    "KFINTECH.NS": {
-      "ticker": "KFINTECH.NS",
-      "direction": "LONG",
-      "entry_price": 879.2000122070312,
-      "qty": 212,
-      "qty_open": 212,
-      "stop_loss": 870.04,
-      "initial_stop": 870.04,
-      "t1": 884.48,
-      "t2": 897.52,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 9.16,
-      "atr": 9.16,
-      "margin": 37278.08051757813,
-      "entry_cost": 54.802871735628415,
-      "bars_held": 2,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-27 11:31:15 IST",
-      "predicted_rr": null,
-      "entry_rsi": 77.1,
-      "entry_deviation_pct": 1.561,
-      "entry_atr_pct": 1.042,
-      "entry_rvol": 10.42,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 3.19,
-      "entry_stop_pct": 1.042,
-      "nifty_at_entry": 22755.349609375,
-      "mfe_price": 881.9500122070312,
-      "mae_price": 875.4000244140625
-    },
-    "SONACOMS.NS": {
-      "ticker": "SONACOMS.NS",
-      "direction": "LONG",
-      "entry_price": 853.7999877929688,
-      "qty": 240,
-      "qty_open": 240,
-      "stop_loss": 845.72,
-      "initial_stop": 845.72,
-      "t1": 859.12,
-      "t2": 870.16,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 8.08,
-      "atr": 8.08,
-      "margin": 40982.3994140625,
-      "entry_cost": 57.90349778155273,
-      "bars_held": 2,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-27 11:31:15 IST",
-      "predicted_rr": null,
-      "entry_rsi": 86.2,
-      "entry_deviation_pct": 1.706,
-      "entry_atr_pct": 0.946,
-      "entry_rvol": 3.69,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 7.22,
-      "entry_stop_pct": 0.946,
-      "nifty_at_entry": 22755.349609375,
-      "mfe_price": 857.75,
-      "mae_price": 853.7999877929688
     },
     "BANDHANBNK.NS": {
       "ticker": "BANDHANBNK.NS",
@@ -147,7 +67,7 @@
       "atr": 1.27,
       "margin": 47827.80093383789,
       "entry_cost": 63.633304215650334,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-27 11:31:15 IST",
@@ -187,7 +107,7 @@
       "atr": 1.69,
       "margin": 67160.0,
       "entry_cost": 79.8149348,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-27 11:31:15 IST",
@@ -201,40 +121,40 @@
       "entry_stop_pct": 0.579,
       "nifty_at_entry": 22755.349609375,
       "mfe_price": 292.0,
-      "mae_price": 290.70001220703125
+      "mae_price": 290.6000061035156
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "LAURUSLABS.NS": {
-      "close": 2120.199951171875,
-      "high": 2121.5,
-      "low": 2120.0,
-      "as_of": "2026-10-27T12:01:14.131076+05:30"
+      "close": 2117.300048828125,
+      "high": 2117.699951171875,
+      "low": 2117.199951171875,
+      "as_of": "2026-10-27T12:15:49.469807+05:30"
     },
     "KFINTECH.NS": {
-      "close": 880.4500122070312,
-      "high": 881.9500122070312,
-      "low": 880.3499755859375,
-      "as_of": "2026-10-27T12:01:14.131076+05:30"
+      "close": 884.9500122070312,
+      "high": 885.9500122070312,
+      "low": 884.4500122070312,
+      "as_of": "2026-10-27T12:15:49.469807+05:30"
     },
     "BANDHANBNK.NS": {
-      "close": 156.88999938964844,
-      "high": 156.91000366210938,
-      "low": 156.6999969482422,
-      "as_of": "2026-10-27T12:01:14.131076+05:30"
+      "close": 156.47999572753906,
+      "high": 156.47999572753906,
+      "low": 156.47999572753906,
+      "as_of": "2026-10-27T12:15:49.469807+05:30"
     },
     "SONACOMS.NS": {
-      "close": 857.75,
-      "high": 857.75,
-      "low": 855.7000122070312,
-      "as_of": "2026-10-27T12:01:14.131076+05:30"
+      "close": 860.0499877929688,
+      "high": 860.0499877929688,
+      "low": 860.0499877929688,
+      "as_of": "2026-10-27T12:15:49.469807+05:30"
     },
     "ANGELONE.NS": {
-      "close": 291.0,
-      "high": 291.0,
-      "low": 290.70001220703125,
-      "as_of": "2026-10-27T12:01:14.131076+05:30"
+      "close": 290.6000061035156,
+      "high": 290.6000061035156,
+      "low": 290.6000061035156,
+      "as_of": "2026-10-27T12:15:49.469807+05:30"
     }
   },
   "trade_history": [
@@ -1854,6 +1774,48 @@
       "entry_rvol": 2.04,
       "entry_turnover_cr": 14.16,
       "entry_stop_pct": 0.518
+    },
+    {
+      "ticker": "KFINTECH.NS",
+      "direction": "LONG",
+      "entry_price": 879.2000122070312,
+      "exit_price": 884.48,
+      "qty": 212,
+      "pnl": 893.31,
+      "R_multiple": 0.46,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 226.05,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-27 11:31:15 IST",
+      "exit_time": "2026-10-27 12:15:49 IST",
+      "entry_rsi": 77.1,
+      "entry_deviation_pct": 1.561,
+      "entry_atr_pct": 1.042,
+      "entry_rvol": 10.42,
+      "entry_turnover_cr": 3.19,
+      "entry_stop_pct": 1.042
+    },
+    {
+      "ticker": "SONACOMS.NS",
+      "direction": "LONG",
+      "entry_price": 853.7999877929688,
+      "exit_price": 859.12,
+      "qty": 240,
+      "pnl": 1032.95,
+      "R_multiple": 0.53,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 243.86,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-27 11:31:15 IST",
+      "exit_time": "2026-10-27 12:15:49 IST",
+      "entry_rsi": 86.2,
+      "entry_deviation_pct": 1.706,
+      "entry_atr_pct": 0.946,
+      "entry_rvol": 3.69,
+      "entry_turnover_cr": 7.22,
+      "entry_stop_pct": 0.946
     }
   ],
   "daily_entry_count": {
@@ -1875,7 +1837,7 @@
     "2026-10-26": 5,
     "2026-10-27": 8
   },
-  "total_pnl": -30697.78888634875,
+  "total_pnl": -28771.53552240441,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
