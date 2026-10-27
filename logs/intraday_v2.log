@@ -7575,3 +7575,16 @@
 2026-10-27 10:46:37 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-27 10:46:38 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SONACOMS.NS: at max concurrent positions (3)
 2026-10-27 10:46:38 | INFO    | __main__ | equity Rs969,972 | open 3 | pending 0 | closed 75 | WR 53.3% | PF 0.67 | friction Rs25,768
+2026-10-27 11:01:11 | INFO    | __main__ | ================================================================
+2026-10-27 11:01:11 | INFO    | __main__ | Scan | 2026-10-27 11:01 IST
+2026-10-27 11:01:47 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-27 11:01:47 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,939 risk per trade)
+2026-10-27 11:01:47 | INFO    | __main__ |   base 0.40%
+2026-10-27 11:01:47 | INFO    | __main__ |   performance x0.6: n=75, observed expectancy shrunk to -0.038R vs prior +0.125R -> trimming (0.60x)
+2026-10-27 11:01:47 | INFO    | __main__ |   drawdown    x0.671: drawdown 4.0% - sizing at 0.67x
+2026-10-27 11:01:47 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-27 11:01:47 | INFO    | __main__ | strategy: MOM-v3
+2026-10-27 11:01:47 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-27 11:01:48 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SONACOMS.NS: at max concurrent positions (3)
+2026-10-27 11:01:48 | INFO    | engine.paper_trader_v2 | ORDER REJECTED HEROMOTOCO.NS: at max concurrent positions (3)
+2026-10-27 11:01:48 | INFO    | __main__ | equity Rs969,493 | open 3 | pending 0 | closed 75 | WR 53.3% | PF 0.67 | friction Rs25,768
