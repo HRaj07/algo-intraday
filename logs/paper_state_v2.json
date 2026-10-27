@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "LAURUSLABS.NS": {
-      "close": 2130.199951171875,
-      "high": 2132.0,
-      "low": 2130.199951171875,
-      "as_of": "2026-10-27T14:01:04.455805+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
