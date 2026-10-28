@@ -1,5 +1,5 @@
 {
-  "cash": 798360.3699524783,
+  "cash": 859951.4449668163,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 76.03,
       "margin": 42800.0,
       "entry_cost": 59.424884000000006,
-      "bars_held": 14,
+      "bars_held": 15,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 10:15:51 IST",
@@ -67,7 +67,7 @@
       "atr": 48.86,
       "margin": 63000.600000000006,
       "entry_cost": 76.333392218,
-      "bars_held": 10,
+      "bars_held": 11,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 11:15:51 IST",
@@ -82,67 +82,27 @@
       "nifty_at_entry": 22599.05078125,
       "mfe_price": 8077.0,
       "mae_price": 8033.5
-    },
-    "FORTIS.NS": {
-      "ticker": "FORTIS.NS",
-      "direction": "LONG",
-      "entry_price": 758.7000122070312,
-      "qty": 421,
-      "qty_open": 421,
-      "stop_loss": 754.09,
-      "initial_stop": 754.09,
-      "t1": 763.91,
-      "t2": 768.58,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 4.61,
-      "atr": 4.61,
-      "margin": 63882.541027832034,
-      "entry_cost": 77.07160331652625,
-      "bars_held": 10,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-28 11:15:51 IST",
-      "predicted_rr": null,
-      "entry_rsi": 76.3,
-      "entry_deviation_pct": 1.022,
-      "entry_atr_pct": 0.608,
-      "entry_rvol": 4.18,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 3.29,
-      "entry_stop_pct": 0.608,
-      "nifty_at_entry": 22599.05078125,
-      "mfe_price": 761.5999755859375,
-      "mae_price": 755.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "NAVINFLUOR.NS": {
-      "close": 8575.0,
-      "high": 8575.0,
-      "low": 8562.5,
-      "as_of": "2026-10-28T13:45:48.320896+05:30"
+      "close": 8555.5,
+      "high": 8564.5,
+      "low": 8552.5,
+      "as_of": "2026-10-28T14:01:08.844957+05:30"
     },
     "FORTIS.NS": {
-      "close": 756.1500244140625,
-      "high": 756.1500244140625,
-      "low": 756.1500244140625,
-      "as_of": "2026-10-28T13:45:48.320896+05:30"
+      "close": 753.75,
+      "high": 754.0999755859375,
+      "low": 753.0499877929688,
+      "as_of": "2026-10-28T14:01:08.844957+05:30"
     },
     "APOLLOHOSP.NS": {
-      "close": 8064.5,
-      "high": 8064.5,
-      "low": 8064.5,
-      "as_of": "2026-10-28T13:45:48.320896+05:30"
+      "close": 8056.0,
+      "high": 8059.0,
+      "low": 8056.0,
+      "as_of": "2026-10-28T14:01:08.844957+05:30"
     }
   },
   "trade_history": [
@@ -1909,6 +1869,27 @@
       "entry_rvol": 3.66,
       "entry_turnover_cr": 7.7,
       "entry_stop_pct": 0.847
+    },
+    {
+      "ticker": "FORTIS.NS",
+      "direction": "LONG",
+      "entry_price": 758.7000122070312,
+      "exit_price": 754.09,
+      "qty": 421,
+      "pnl": -2291.47,
+      "R_multiple": -1.18,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 350.65,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-28 11:15:51 IST",
+      "exit_time": "2026-10-28 14:01:08 IST",
+      "entry_rsi": 76.3,
+      "entry_deviation_pct": 1.022,
+      "entry_atr_pct": 0.608,
+      "entry_rvol": 4.18,
+      "entry_turnover_cr": 3.29,
+      "entry_stop_pct": 0.608
     }
   ],
   "daily_entry_count": {
@@ -1931,7 +1912,7 @@
     "2026-10-27": 8,
     "2026-10-28": 5
   },
-  "total_pnl": -31956.489019690114,
+  "total_pnl": -34247.955033184124,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
