@@ -27,7 +27,7 @@
       "atr": 76.03,
       "margin": 42800.0,
       "entry_cost": 59.424884000000006,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 10:15:51 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.888,
       "nifty_at_entry": 22532.80078125,
       "mfe_price": 8560.0,
-      "mae_price": 8560.0
+      "mae_price": 8484.5
     },
     "FORTIS.NS": {
       "ticker": "FORTIS.NS",
@@ -67,7 +67,7 @@
       "atr": 4.4,
       "margin": 66391.60107421875,
       "entry_cost": 79.17176184715332,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 10:15:51 IST",
@@ -80,12 +80,25 @@
       "entry_turnover_cr": 2.75,
       "entry_stop_pct": 0.583,
       "nifty_at_entry": 22532.80078125,
-      "mfe_price": 754.4500122070312,
+      "mfe_price": 756.3499755859375,
       "mae_price": 754.4500122070312
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "NAVINFLUOR.NS": {
+      "close": 8495.0,
+      "high": 8495.0,
+      "low": 8484.5,
+      "as_of": "2026-10-28T10:31:19.747337+05:30"
+    },
+    "FORTIS.NS": {
+      "close": 755.5999755859375,
+      "high": 756.3499755859375,
+      "low": 755.2999877929688,
+      "as_of": "2026-10-28T10:31:19.747337+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",

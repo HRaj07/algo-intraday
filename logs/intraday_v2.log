@@ -7905,3 +7905,14 @@
 2026-10-28 10:16:52 | INFO    | engine.paper_trader_v2 | FILLED NAVINFLUOR.NS @ Rs8560.0 | qty=25 notional=Rs214,000 friction=Rs252
 2026-10-28 10:16:52 | INFO    | engine.paper_trader_v2 | FILLED FORTIS.NS @ Rs754.4500122070312 | qty=440 notional=Rs331,958 friction=Rs364
 2026-10-28 10:16:53 | INFO    | __main__ | equity Rs968,808 | open 2 | pending 0 | closed 82 | WR 53.7% | PF 0.67 | friction Rs27,902
+2026-10-28 10:31:19 | INFO    | __main__ | ================================================================
+2026-10-28 10:31:19 | INFO    | __main__ | Scan | 2026-10-28 10:31 IST
+2026-10-28 10:32:12 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-28 10:32:12 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,935 risk per trade)
+2026-10-28 10:32:12 | INFO    | __main__ |   base 0.40%
+2026-10-28 10:32:12 | INFO    | __main__ |   performance x0.6: n=82, observed expectancy shrunk to -0.044R vs prior +0.125R -> trimming (0.60x)
+2026-10-28 10:32:12 | INFO    | __main__ |   drawdown    x0.641: drawdown 4.2% - sizing at 0.64x
+2026-10-28 10:32:12 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-28 10:32:12 | INFO    | __main__ | strategy: MOM-v3
+2026-10-28 10:32:12 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-28 10:32:12 | INFO    | __main__ | equity Rs967,689 | open 2 | pending 0 | closed 82 | WR 53.7% | PF 0.67 | friction Rs27,902
