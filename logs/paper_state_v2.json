@@ -27,7 +27,7 @@
       "atr": 76.03,
       "margin": 42800.0,
       "entry_cost": 59.424884000000006,
-      "bars_held": 4,
+      "bars_held": 5,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 10:15:51 IST",
@@ -67,7 +67,7 @@
       "atr": 22.15,
       "margin": 45504.47915039063,
       "entry_cost": 61.688614183251474,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 11:01:13 IST",
@@ -81,7 +81,7 @@
       "entry_stop_pct": 0.847,
       "nifty_at_entry": 22600.05078125,
       "mfe_price": 2615.199951171875,
-      "mae_price": 2605.199951171875
+      "mae_price": 2598.0
     },
     "APOLLOHOSP.NS": {
       "ticker": "APOLLOHOSP.NS",
@@ -107,7 +107,7 @@
       "atr": 48.86,
       "margin": 63000.600000000006,
       "entry_cost": 76.333392218,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 11:15:51 IST",
@@ -121,7 +121,7 @@
       "entry_stop_pct": 0.604,
       "nifty_at_entry": 22599.05078125,
       "mfe_price": 8077.0,
-      "mae_price": 8077.0
+      "mae_price": 8041.0
     },
     "FORTIS.NS": {
       "ticker": "FORTIS.NS",
@@ -147,7 +147,7 @@
       "atr": 4.61,
       "margin": 63882.541027832034,
       "entry_cost": 77.07160331652625,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 11:15:51 IST",
@@ -161,28 +161,34 @@
       "entry_stop_pct": 0.608,
       "nifty_at_entry": 22599.05078125,
       "mfe_price": 758.7000122070312,
-      "mae_price": 758.7000122070312
+      "mae_price": 756.6500244140625
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "NAVINFLUOR.NS": {
-      "close": 8586.0,
-      "high": 8594.5,
-      "low": 8584.0,
-      "as_of": "2026-10-28T11:15:51.880737+05:30"
+      "close": 8575.5,
+      "high": 8589.5,
+      "low": 8575.5,
+      "as_of": "2026-10-28T11:31:23.002990+05:30"
     },
     "FORTIS.NS": {
-      "close": 758.7000122070312,
-      "high": 758.7000122070312,
-      "low": 758.7000122070312,
-      "as_of": "2026-10-28T11:15:51.880737+05:30"
+      "close": 757.2000122070312,
+      "high": 757.6500244140625,
+      "low": 756.6500244140625,
+      "as_of": "2026-10-28T11:31:23.002990+05:30"
     },
     "WELCORP.NS": {
-      "close": 2610.0,
-      "high": 2610.0,
-      "low": 2605.199951171875,
-      "as_of": "2026-10-28T11:15:51.880737+05:30"
+      "close": 2601.0,
+      "high": 2601.0,
+      "low": 2598.0,
+      "as_of": "2026-10-28T11:31:23.002990+05:30"
+    },
+    "APOLLOHOSP.NS": {
+      "close": 8045.0,
+      "high": 8058.5,
+      "low": 8041.0,
+      "as_of": "2026-10-28T11:31:23.002990+05:30"
     }
   },
   "trade_history": [
