@@ -1,62 +1,15 @@
 {
-  "cash": 901026.0766226663,
+  "cash": 966445.5276510164,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "APOLLOHOSP.NS": {
-      "ticker": "APOLLOHOSP.NS",
-      "direction": "LONG",
-      "entry_price": 8077.0,
-      "qty": 39,
-      "qty_open": 39,
-      "stop_loss": 8028.21,
-      "initial_stop": 8028.21,
-      "t1": 8136.53,
-      "t2": 8185.72,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 48.79,
-      "atr": 48.86,
-      "margin": 63000.600000000006,
-      "entry_cost": 76.333392218,
-      "bars_held": 15,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-28 11:15:51 IST",
-      "predicted_rr": null,
-      "entry_rsi": 72.1,
-      "entry_deviation_pct": 1.17,
-      "entry_atr_pct": 0.604,
-      "entry_rvol": 4.34,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 10.52,
-      "entry_stop_pct": 0.604,
-      "nifty_at_entry": 22599.05078125,
-      "mfe_price": 8130.0,
-      "mae_price": 8033.5
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
-    "NAVINFLUOR.NS": {
-      "close": 8501.0,
-      "high": 8507.0,
-      "low": 8501.0,
-      "as_of": "2026-10-28T15:01:09.620574+05:30"
-    },
     "APOLLOHOSP.NS": {
-      "close": 8129.5,
-      "high": 8130.0,
-      "low": 8122.5,
-      "as_of": "2026-10-28T15:01:09.620574+05:30"
+      "close": 8148.0,
+      "high": 8148.0,
+      "low": 8148.0,
+      "as_of": "2026-10-28T15:15:54.240868+05:30"
     }
   },
   "trade_history": [
@@ -1865,6 +1818,27 @@
       "entry_rvol": 4.28,
       "entry_turnover_cr": 3.72,
       "entry_stop_pct": 0.888
+    },
+    {
+      "ticker": "APOLLOHOSP.NS",
+      "direction": "LONG",
+      "entry_price": 8077.0,
+      "exit_price": 8148.0,
+      "qty": 39,
+      "pnl": 2418.85,
+      "R_multiple": 1.27,
+      "reason": "square_off",
+      "partial": false,
+      "friction": 350.15,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-28 11:15:51 IST",
+      "exit_time": "2026-10-28 15:15:54 IST",
+      "entry_rsi": 72.1,
+      "entry_deviation_pct": 1.17,
+      "entry_atr_pct": 0.604,
+      "entry_rvol": 4.34,
+      "entry_turnover_cr": 10.52,
+      "entry_stop_pct": 0.604
     }
   ],
   "daily_entry_count": {
@@ -1887,7 +1861,7 @@
     "2026-10-27": 8,
     "2026-10-28": 5
   },
-  "total_pnl": -35973.32337733413,
+  "total_pnl": -33554.47234898413,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,

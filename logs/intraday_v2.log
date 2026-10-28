@@ -8155,3 +8155,9 @@
 2026-10-28 15:01:56 | INFO    | __main__ | strategy: MOM-v3
 2026-10-28 15:01:56 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-28 15:01:56 | INFO    | __main__ | equity Rs966,074 | open 1 | pending 0 | closed 86 | WR 52.3% | PF 0.65 | friction Rs29,131
+2026-10-28 15:15:54 | INFO    | __main__ | ================================================================
+2026-10-28 15:15:54 | INFO    | __main__ | Scan | 2026-10-28 15:15 IST
+2026-10-28 15:16:21 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-28 15:16:21 | INFO    | engine.paper_trader_v2 | EXIT APOLLOHOSP.NS 39@Rs8148.0 | P&L Rs+2,419 (+1.27R) | friction Rs350 | square_off
+2026-10-28 15:16:22 | INFO    | __main__ | EOD: {'equity': 966445.53, 'cash': 966445.53, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 87, 'win_rate_pct': 52.9, 'profit_factor': 0.67, 'total_friction': 29481.53, 'total_pnl': -33554.47, 'return_pct': -3.36}
+2026-10-28 15:16:22 | WARNING | __main__ | KILL SWITCH has tripped 10x in paper mode; latest {'date': '2026-10-27', 'pf': 0.766, 'n': 30, 'trade_count': 74} - live mode would be HALTED
