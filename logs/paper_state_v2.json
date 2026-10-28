@@ -27,7 +27,7 @@
       "atr": 76.03,
       "margin": 42800.0,
       "entry_cost": 59.424884000000006,
-      "bars_held": 11,
+      "bars_held": 12,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 10:15:51 IST",
@@ -67,7 +67,7 @@
       "atr": 48.86,
       "margin": 63000.600000000006,
       "entry_cost": 76.333392218,
-      "bars_held": 7,
+      "bars_held": 8,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 11:15:51 IST",
@@ -107,7 +107,7 @@
       "atr": 4.61,
       "margin": 63882.541027832034,
       "entry_cost": 77.07160331652625,
-      "bars_held": 7,
+      "bars_held": 8,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 11:15:51 IST",
@@ -127,22 +127,22 @@
   "pending_orders": {},
   "last_known_price": {
     "NAVINFLUOR.NS": {
-      "close": 8556.0,
-      "high": 8559.0,
-      "low": 8544.0,
-      "as_of": "2026-10-28T13:01:11.567495+05:30"
+      "close": 8566.5,
+      "high": 8566.5,
+      "low": 8565.5,
+      "as_of": "2026-10-28T13:15:53.543402+05:30"
     },
     "FORTIS.NS": {
-      "close": 756.5,
-      "high": 756.5,
-      "low": 756.3499755859375,
-      "as_of": "2026-10-28T13:01:11.567495+05:30"
+      "close": 756.7000122070312,
+      "high": 756.7000122070312,
+      "low": 756.7000122070312,
+      "as_of": "2026-10-28T13:15:53.543402+05:30"
     },
     "APOLLOHOSP.NS": {
-      "close": 8062.0,
-      "high": 8064.0,
-      "low": 8062.0,
-      "as_of": "2026-10-28T13:01:11.567495+05:30"
+      "close": 8069.0,
+      "high": 8069.0,
+      "low": 8069.0,
+      "as_of": "2026-10-28T13:15:53.543402+05:30"
     }
   },
   "trade_history": [
