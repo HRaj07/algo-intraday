@@ -620,3 +620,4 @@
 {"time": "2026-10-28 13:45:48.320896+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 209, "too few bars today": 1}, "near_misses": []}
 {"time": "2026-10-28 14:01:08.844957+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 209, "too few bars today": 1}, "near_misses": []}
 {"time": "2026-10-28 14:15:52.383001+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 209, "too few bars today": 1}, "near_misses": []}
+{"time": "2026-10-28 14:31:24.357625+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 209, "too few bars today": 1}, "near_misses": []}
