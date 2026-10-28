@@ -1,5 +1,5 @@
 {
-  "cash": 755045.8603003862,
+  "cash": 798360.3699524783,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 76.03,
       "margin": 42800.0,
       "entry_cost": 59.424884000000006,
-      "bars_held": 6,
+      "bars_held": 7,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 10:15:51 IST",
@@ -42,46 +42,6 @@
       "nifty_at_entry": 22532.80078125,
       "mfe_price": 8596.0,
       "mae_price": 8484.5
-    },
-    "WELCORP.NS": {
-      "ticker": "WELCORP.NS",
-      "direction": "LONG",
-      "entry_price": 2615.199951171875,
-      "qty": 87,
-      "qty_open": 87,
-      "stop_loss": 2593.05,
-      "initial_stop": 2593.05,
-      "t1": 2631.6,
-      "t2": 2660.2,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 22.15,
-      "atr": 22.15,
-      "margin": 45504.47915039063,
-      "entry_cost": 61.688614183251474,
-      "bars_held": 3,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-28 11:01:13 IST",
-      "predicted_rr": null,
-      "entry_rsi": 81.1,
-      "entry_deviation_pct": 1.083,
-      "entry_atr_pct": 0.847,
-      "entry_rvol": 3.66,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 7.7,
-      "entry_stop_pct": 0.847,
-      "nifty_at_entry": 22600.05078125,
-      "mfe_price": 2615.199951171875,
-      "mae_price": 2598.0
     },
     "APOLLOHOSP.NS": {
       "ticker": "APOLLOHOSP.NS",
@@ -107,7 +67,7 @@
       "atr": 48.86,
       "margin": 63000.600000000006,
       "entry_cost": 76.333392218,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 11:15:51 IST",
@@ -121,7 +81,7 @@
       "entry_stop_pct": 0.604,
       "nifty_at_entry": 22599.05078125,
       "mfe_price": 8077.0,
-      "mae_price": 8041.0
+      "mae_price": 8033.5
     },
     "FORTIS.NS": {
       "ticker": "FORTIS.NS",
@@ -147,7 +107,7 @@
       "atr": 4.61,
       "margin": 63882.541027832034,
       "entry_cost": 77.07160331652625,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 11:15:51 IST",
@@ -167,28 +127,28 @@
   "pending_orders": {},
   "last_known_price": {
     "NAVINFLUOR.NS": {
-      "close": 8548.5,
-      "high": 8559.5,
-      "low": 8548.5,
-      "as_of": "2026-10-28T11:45:48.129150+05:30"
+      "close": 8543.5,
+      "high": 8543.5,
+      "low": 8538.5,
+      "as_of": "2026-10-28T12:01:06.260450+05:30"
     },
     "FORTIS.NS": {
-      "close": 761.25,
-      "high": 761.5999755859375,
-      "low": 761.0999755859375,
-      "as_of": "2026-10-28T11:45:48.129150+05:30"
+      "close": 759.0999755859375,
+      "high": 760.0,
+      "low": 759.0999755859375,
+      "as_of": "2026-10-28T12:01:06.260450+05:30"
     },
     "WELCORP.NS": {
-      "close": 2602.89990234375,
-      "high": 2602.89990234375,
-      "low": 2599.0,
-      "as_of": "2026-10-28T11:45:48.129150+05:30"
+      "close": 2592.800048828125,
+      "high": 2593.60009765625,
+      "low": 2591.199951171875,
+      "as_of": "2026-10-28T12:01:06.260450+05:30"
     },
     "APOLLOHOSP.NS": {
-      "close": 8043.0,
-      "high": 8043.0,
-      "low": 8043.0,
-      "as_of": "2026-10-28T11:45:48.129150+05:30"
+      "close": 8033.5,
+      "high": 8035.5,
+      "low": 8033.5,
+      "as_of": "2026-10-28T12:01:06.260450+05:30"
     }
   },
   "trade_history": [
@@ -1934,6 +1894,27 @@
       "entry_rvol": 3.36,
       "entry_turnover_cr": 2.75,
       "entry_stop_pct": 0.583
+    },
+    {
+      "ticker": "WELCORP.NS",
+      "direction": "LONG",
+      "entry_price": 2615.199951171875,
+      "exit_price": 2593.05,
+      "qty": 87,
+      "pnl": -2189.97,
+      "R_multiple": -1.14,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 262.92,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-28 11:01:13 IST",
+      "exit_time": "2026-10-28 12:01:06 IST",
+      "entry_rsi": 81.1,
+      "entry_deviation_pct": 1.083,
+      "entry_atr_pct": 0.847,
+      "entry_rvol": 3.66,
+      "entry_turnover_cr": 7.7,
+      "entry_stop_pct": 0.847
     }
   ],
   "daily_entry_count": {
@@ -1956,7 +1937,7 @@
     "2026-10-27": 8,
     "2026-10-28": 5
   },
-  "total_pnl": -29766.519521391652,
+  "total_pnl": -31956.489019690114,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,

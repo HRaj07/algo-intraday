@@ -7981,3 +7981,18 @@
 2026-10-28 11:46:43 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-28 11:46:43 | INFO    | engine.paper_trader_v2 | ORDER REJECTED CROMPTON.NS: at max concurrent positions (3)
 2026-10-28 11:46:43 | INFO    | __main__ | equity Rs968,623 | open 4 | pending 0 | closed 83 | WR 54.2% | PF 0.69 | friction Rs28,267
+2026-10-28 12:01:06 | INFO    | __main__ | ================================================================
+2026-10-28 12:01:06 | INFO    | __main__ | Scan | 2026-10-28 12:01 IST
+2026-10-28 12:01:51 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-28 12:01:51 | INFO    | engine.paper_trader_v2 | EXIT WELCORP.NS 87@Rs2593.05 | P&L Rs-2,190 (-1.14R) | friction Rs263 | stop_loss
+2026-10-28 12:01:52 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,932 risk per trade)
+2026-10-28 12:01:52 | INFO    | __main__ |   base 0.40%
+2026-10-28 12:01:52 | INFO    | __main__ |   performance x0.6: n=84, observed expectancy shrunk to -0.046R vs prior +0.125R -> trimming (0.60x)
+2026-10-28 12:01:52 | INFO    | __main__ |   drawdown    x0.615: drawdown 4.3% - sizing at 0.61x
+2026-10-28 12:01:52 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-28 12:01:52 | INFO    | __main__ | strategy: MOM-v3
+2026-10-28 12:01:52 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-28 12:01:52 | INFO    | engine.paper_trader_v2 | ORDER REJECTED NAUKRI.NS: at max concurrent positions (3)
+2026-10-28 12:01:52 | INFO    | engine.paper_trader_v2 | ORDER REJECTED BIOCON.NS: at max concurrent positions (3)
+2026-10-28 12:01:52 | INFO    | engine.paper_trader_v2 | ORDER REJECTED CROMPTON.NS: at max concurrent positions (3)
+2026-10-28 12:01:52 | INFO    | __main__ | equity Rs966,103 | open 3 | pending 0 | closed 84 | WR 53.6% | PF 0.67 | friction Rs28,530
