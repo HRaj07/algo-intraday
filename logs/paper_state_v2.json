@@ -27,7 +27,7 @@
       "atr": 76.03,
       "margin": 42800.0,
       "entry_cost": 59.424884000000006,
-      "bars_held": 17,
+      "bars_held": 18,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 10:15:51 IST",
@@ -67,7 +67,7 @@
       "atr": 48.86,
       "margin": 63000.600000000006,
       "entry_cost": 76.333392218,
-      "bars_held": 13,
+      "bars_held": 14,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 11:15:51 IST",
@@ -80,23 +80,23 @@
       "entry_turnover_cr": 10.52,
       "entry_stop_pct": 0.604,
       "nifty_at_entry": 22599.05078125,
-      "mfe_price": 8084.5,
+      "mfe_price": 8126.0,
       "mae_price": 8033.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "NAVINFLUOR.NS": {
-      "close": 8551.0,
-      "high": 8554.0,
-      "low": 8551.0,
-      "as_of": "2026-10-28T14:31:24.357625+05:30"
+      "close": 8534.0,
+      "high": 8543.0,
+      "low": 8533.0,
+      "as_of": "2026-10-28T14:45:54.604786+05:30"
     },
     "APOLLOHOSP.NS": {
-      "close": 8084.5,
-      "high": 8084.5,
-      "low": 8078.0,
-      "as_of": "2026-10-28T14:31:24.357625+05:30"
+      "close": 8126.0,
+      "high": 8126.0,
+      "low": 8126.0,
+      "as_of": "2026-10-28T14:45:54.604786+05:30"
     }
   },
   "trade_history": [
