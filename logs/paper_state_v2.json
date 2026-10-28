@@ -27,7 +27,7 @@
       "atr": 76.03,
       "margin": 42800.0,
       "entry_cost": 59.424884000000006,
-      "bars_held": 12,
+      "bars_held": 13,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 10:15:51 IST",
@@ -40,7 +40,7 @@
       "entry_turnover_cr": 3.72,
       "entry_stop_pct": 0.888,
       "nifty_at_entry": 22532.80078125,
-      "mfe_price": 8596.0,
+      "mfe_price": 8609.0,
       "mae_price": 8484.5
     },
     "APOLLOHOSP.NS": {
@@ -67,7 +67,7 @@
       "atr": 48.86,
       "margin": 63000.600000000006,
       "entry_cost": 76.333392218,
-      "bars_held": 8,
+      "bars_held": 9,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 11:15:51 IST",
@@ -107,7 +107,7 @@
       "atr": 4.61,
       "margin": 63882.541027832034,
       "entry_cost": 77.07160331652625,
-      "bars_held": 8,
+      "bars_held": 9,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-28 11:15:51 IST",
@@ -121,28 +121,28 @@
       "entry_stop_pct": 0.608,
       "nifty_at_entry": 22599.05078125,
       "mfe_price": 761.5999755859375,
-      "mae_price": 755.9500122070312
+      "mae_price": 755.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "NAVINFLUOR.NS": {
-      "close": 8566.5,
-      "high": 8566.5,
-      "low": 8565.5,
-      "as_of": "2026-10-28T13:15:53.543402+05:30"
+      "close": 8597.5,
+      "high": 8609.0,
+      "low": 8594.0,
+      "as_of": "2026-10-28T13:31:21.633857+05:30"
     },
     "FORTIS.NS": {
-      "close": 756.7000122070312,
-      "high": 756.7000122070312,
-      "low": 756.7000122070312,
-      "as_of": "2026-10-28T13:15:53.543402+05:30"
+      "close": 755.5,
+      "high": 755.9000244140625,
+      "low": 755.5,
+      "as_of": "2026-10-28T13:31:21.633857+05:30"
     },
     "APOLLOHOSP.NS": {
-      "close": 8069.0,
-      "high": 8069.0,
-      "low": 8069.0,
-      "as_of": "2026-10-28T13:15:53.543402+05:30"
+      "close": 8058.5,
+      "high": 8060.5,
+      "low": 8058.5,
+      "as_of": "2026-10-28T13:31:21.633857+05:30"
     }
   },
   "trade_history": [
