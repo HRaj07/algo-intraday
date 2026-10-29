@@ -1,5 +1,5 @@
 {
-  "cash": 920689.5069723055,
+  "cash": 860934.465370743,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 13.9,
       "margin": 45756.02067871094,
       "entry_cost": 61.899161988701415,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-29 10:15:48 IST",
@@ -41,11 +41,58 @@
       "entry_stop_pct": 0.844,
       "nifty_at_entry": 22795.19921875,
       "mfe_price": 1645.9000244140625,
-      "mae_price": 1645.9000244140625
+      "mae_price": 1633.699951171875
+    },
+    "ADANIPORTS.NS": {
+      "ticker": "ADANIPORTS.NS",
+      "direction": "LONG",
+      "entry_price": 1821.800048828125,
+      "qty": 164,
+      "qty_open": 164,
+      "stop_loss": 1810.05,
+      "initial_stop": 1810.05,
+      "t1": 1831.93,
+      "t2": 1844.49,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 11.75,
+      "atr": 11.75,
+      "margin": 59755.0416015625,
+      "entry_cost": 73.61676247175586,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-29 10:31:15 IST",
+      "predicted_rr": null,
+      "entry_rsi": 77.8,
+      "entry_deviation_pct": 0.97,
+      "entry_atr_pct": 0.645,
+      "entry_rvol": 5.59,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 10.19,
+      "entry_stop_pct": 0.645,
+      "nifty_at_entry": 22859.69921875,
+      "mfe_price": 1821.800048828125,
+      "mae_price": 1821.800048828125
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "SYRMA.NS": {
+      "close": 1638.0,
+      "high": 1638.199951171875,
+      "low": 1633.699951171875,
+      "as_of": "2026-10-29T10:31:15.341567+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -1894,16 +1941,16 @@
     "2026-10-26": 5,
     "2026-10-27": 8,
     "2026-10-28": 5,
-    "2026-10-29": 1
+    "2026-10-29": 2
   },
   "total_pnl": -33554.47234898413,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
     "performance_reason": "n=87, observed expectancy shrunk to -0.051R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.621,
-    "drawdown_reason": "drawdown 4.3% - sizing at 0.62x",
-    "raw_pct": 0.00149,
+    "drawdown_scalar": 0.602,
+    "drawdown_reason": "drawdown 4.4% - sizing at 0.60x",
+    "raw_pct": 0.00145,
     "final_pct": 0.002,
     "clamped": true
   },
