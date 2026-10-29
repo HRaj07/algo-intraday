@@ -27,7 +27,7 @@
       "atr": 13.9,
       "margin": 45756.02067871094,
       "entry_cost": 61.899161988701415,
-      "bars_held": 4,
+      "bars_held": 5,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-29 10:15:48 IST",
@@ -67,7 +67,7 @@
       "atr": 12.26,
       "margin": 57584.460766601565,
       "entry_cost": 71.7999211954685,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-29 10:45:54 IST",
@@ -81,22 +81,22 @@
       "entry_stop_pct": 0.669,
       "nifty_at_entry": 22854.900390625,
       "mfe_price": 1835.0,
-      "mae_price": 1831.9000244140625
+      "mae_price": 1828.0
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "SYRMA.NS": {
-      "close": 1654.0,
+      "close": 1653.199951171875,
       "high": 1654.9000244140625,
-      "low": 1653.0,
-      "as_of": "2026-10-29T11:15:49.534635+05:30"
+      "low": 1652.0,
+      "as_of": "2026-10-29T11:31:23.607818+05:30"
     },
     "ADANIPORTS.NS": {
-      "close": 1834.5,
-      "high": 1834.5,
-      "low": 1834.5,
-      "as_of": "2026-10-29T11:15:49.534635+05:30"
+      "close": 1829.0999755859375,
+      "high": 1829.800048828125,
+      "low": 1828.0,
+      "as_of": "2026-10-29T11:31:23.607818+05:30"
     }
   },
   "trade_history": [
