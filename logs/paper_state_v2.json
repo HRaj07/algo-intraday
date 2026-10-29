@@ -1,17 +1,51 @@
 {
-  "cash": 971433.0459814804,
+  "cash": 909237.9284888046,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {},
-  "pending_orders": {},
-  "last_known_price": {
-    "SYRMA.NS": {
-      "close": 1664.5999755859375,
-      "high": 1667.5999755859375,
-      "low": 1660.0,
-      "as_of": "2026-10-29T12:31:28.533295+05:30"
+  "positions": {
+    "MANAPPURAM.NS": {
+      "ticker": "MANAPPURAM.NS",
+      "direction": "LONG",
+      "entry_price": 302.79998779296875,
+      "qty": 1027,
+      "qty_open": 1027,
+      "stop_loss": 300.91,
+      "initial_stop": 300.91,
+      "t1": 304.97,
+      "t2": 306.93,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 1.89,
+      "atr": 1.89,
+      "margin": 62195.11749267578,
+      "entry_cost": 75.6591791948944,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-29 12:45:50 IST",
+      "predicted_rr": null,
+      "entry_rsi": 78.4,
+      "entry_deviation_pct": 1.179,
+      "entry_atr_pct": 0.624,
+      "entry_rvol": 3.35,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 2.11,
+      "entry_stop_pct": 0.624,
+      "nifty_at_entry": 22819.0,
+      "mfe_price": 302.79998779296875,
+      "mae_price": 302.79998779296875
     }
   },
+  "pending_orders": {},
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -1944,16 +1978,16 @@
     "2026-10-26": 5,
     "2026-10-27": 8,
     "2026-10-28": 5,
-    "2026-10-29": 4
+    "2026-10-29": 5
   },
   "total_pnl": -28566.954018520013,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=90, observed expectancy shrunk to -0.037R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.679,
-    "drawdown_reason": "drawdown 3.9% - sizing at 0.68x",
-    "raw_pct": 0.00163,
+    "performance_reason": "n=91, observed expectancy shrunk to -0.031R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.703,
+    "drawdown_reason": "drawdown 3.8% - sizing at 0.70x",
+    "raw_pct": 0.00169,
     "final_pct": 0.002,
     "clamped": true
   },
