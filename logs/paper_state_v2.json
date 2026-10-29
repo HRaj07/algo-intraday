@@ -1,5 +1,5 @@
 {
-  "cash": 864432.5759169525,
+  "cash": 923120.9274520722,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 13.9,
       "margin": 45756.02067871094,
       "entry_cost": 61.899161988701415,
-      "bars_held": 6,
+      "bars_held": 7,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-29 10:15:48 IST",
@@ -42,61 +42,21 @@
       "nifty_at_entry": 22795.19921875,
       "mfe_price": 1654.9000244140625,
       "mae_price": 1633.699951171875
-    },
-    "ADANIPORTS.NS": {
-      "ticker": "ADANIPORTS.NS",
-      "direction": "LONG",
-      "entry_price": 1833.9000244140625,
-      "qty": 157,
-      "qty_open": 157,
-      "stop_loss": 1821.63,
-      "initial_stop": 1821.63,
-      "t1": 1842.99,
-      "t2": 1856.52,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 12.27,
-      "atr": 12.26,
-      "margin": 57584.460766601565,
-      "entry_cost": 71.7999211954685,
-      "bars_held": 4,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-29 10:45:54 IST",
-      "predicted_rr": null,
-      "entry_rsi": 80.2,
-      "entry_deviation_pct": 1.255,
-      "entry_atr_pct": 0.669,
-      "entry_rvol": 9.26,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 10.36,
-      "entry_stop_pct": 0.669,
-      "nifty_at_entry": 22854.900390625,
-      "mfe_price": 1835.0,
-      "mae_price": 1828.0
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "SYRMA.NS": {
-      "close": 1650.0,
-      "high": 1650.800048828125,
-      "low": 1650.0,
-      "as_of": "2026-10-29T11:45:51.222104+05:30"
+      "close": 1644.5,
+      "high": 1647.300048828125,
+      "low": 1644.5,
+      "as_of": "2026-10-29T12:01:13.804266+05:30"
     },
     "ADANIPORTS.NS": {
-      "close": 1834.5,
-      "high": 1834.5,
-      "low": 1834.5,
-      "as_of": "2026-10-29T11:45:51.222104+05:30"
+      "close": 1848.5999755859375,
+      "high": 1852.4000244140625,
+      "low": 1848.5999755859375,
+      "as_of": "2026-10-29T12:01:13.804266+05:30"
     }
   },
   "trade_history": [
@@ -1947,6 +1907,27 @@
       "entry_rvol": 5.59,
       "entry_turnover_cr": 10.19,
       "entry_stop_pct": 0.645
+    },
+    {
+      "ticker": "ADANIPORTS.NS",
+      "direction": "LONG",
+      "entry_price": 1833.9000244140625,
+      "exit_price": 1842.99,
+      "qty": 157,
+      "pnl": 1103.89,
+      "R_multiple": 0.57,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 323.24,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-29 10:45:54 IST",
+      "exit_time": "2026-10-29 12:01:13 IST",
+      "entry_rsi": 80.2,
+      "entry_deviation_pct": 1.255,
+      "entry_atr_pct": 0.669,
+      "entry_rvol": 9.26,
+      "entry_turnover_cr": 10.36,
+      "entry_stop_pct": 0.669
     }
   ],
   "daily_entry_count": {
@@ -1970,7 +1951,7 @@
     "2026-10-28": 5,
     "2026-10-29": 3
   },
-  "total_pnl": -32226.942637735494,
+  "total_pnl": -31123.051869217354,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
