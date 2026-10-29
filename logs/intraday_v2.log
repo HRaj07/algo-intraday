@@ -8351,3 +8351,16 @@
 2026-10-29 12:16:40 | INFO    | engine.paper_trader_v2 | ORDER SYRMA.NS market buy at next open (ref Rs1655.5, SL 0.713%, RSI 72.7, rvol 2.18)
 2026-10-29 12:16:40 | INFO    | engine.paper_trader_v2 | FILLED SYRMA.NS @ Rs1654.800048828125 | qty=164 notional=Rs271,387 friction=Rs306
 2026-10-29 12:16:40 | INFO    | __main__ | equity Rs970,243 | open 1 | pending 0 | closed 90 | WR 54.4% | PF 0.71 | friction Rs30,405
+2026-10-29 12:31:28 | INFO    | __main__ | ================================================================
+2026-10-29 12:31:28 | INFO    | __main__ | Scan | 2026-10-29 12:31 IST
+2026-10-29 12:32:22 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-29 12:32:22 | INFO    | engine.paper_trader_v2 | EXIT SYRMA.NS 164@Rs1665.43 | P&L Rs+1,436 (+0.74R) | friction Rs308 | t1_vwap
+2026-10-29 12:32:22 | INFO    | engine.paper_trader_v2 | T1 SYRMA.NS - half out at VWAP, stop to Rs1658.44 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-29 12:32:23 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,943 risk per trade)
+2026-10-29 12:32:23 | INFO    | __main__ |   base 0.40%
+2026-10-29 12:32:23 | INFO    | __main__ |   performance x0.6: n=91, observed expectancy shrunk to -0.031R vs prior +0.125R -> trimming (0.60x)
+2026-10-29 12:32:23 | INFO    | __main__ |   drawdown    x0.703: drawdown 3.8% - sizing at 0.70x
+2026-10-29 12:32:23 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-29 12:32:23 | INFO    | __main__ | strategy: MOM-v3
+2026-10-29 12:32:23 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-29 12:32:23 | INFO    | __main__ | equity Rs971,433 | open 0 | pending 0 | closed 91 | WR 54.9% | PF 0.72 | friction Rs30,713
