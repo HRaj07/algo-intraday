@@ -8404,3 +8404,17 @@
 2026-10-29 13:16:37 | INFO    | engine.paper_trader_v2 | ORDER REJECTED MUTHOOTFIN.NS: at max entries per day (5)
 2026-10-29 13:16:37 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SYRMA.NS: max 2 entries per day for SYRMA.NS
 2026-10-29 13:16:37 | INFO    | __main__ | equity Rs970,817 | open 1 | pending 0 | closed 91 | WR 54.9% | PF 0.72 | friction Rs30,713
+2026-10-29 13:31:24 | INFO    | __main__ | ================================================================
+2026-10-29 13:31:24 | INFO    | __main__ | Scan | 2026-10-29 13:31 IST
+2026-10-29 13:31:58 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-29 13:31:58 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,941 risk per trade)
+2026-10-29 13:31:58 | INFO    | __main__ |   base 0.40%
+2026-10-29 13:31:58 | INFO    | __main__ |   performance x0.6: n=91, observed expectancy shrunk to -0.031R vs prior +0.125R -> trimming (0.60x)
+2026-10-29 13:31:58 | INFO    | __main__ |   drawdown    x0.683: drawdown 3.9% - sizing at 0.68x
+2026-10-29 13:31:58 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-29 13:31:58 | INFO    | __main__ | strategy: MOM-v3
+2026-10-29 13:31:58 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-29 13:31:59 | INFO    | engine.paper_trader_v2 | ORDER REJECTED ADANIPOWER.NS: at max entries per day (5)
+2026-10-29 13:31:59 | INFO    | engine.paper_trader_v2 | ORDER REJECTED ADANIPORTS.NS: max 2 entries per day for ADANIPORTS.NS
+2026-10-29 13:31:59 | INFO    | engine.paper_trader_v2 | ORDER REJECTED BANDHANBNK.NS: at max entries per day (5)
+2026-10-29 13:31:59 | INFO    | __main__ | equity Rs970,252 | open 1 | pending 0 | closed 91 | WR 54.9% | PF 0.72 | friction Rs30,713
