@@ -27,7 +27,7 @@
       "atr": 1.89,
       "margin": 62195.11749267578,
       "entry_cost": 75.6591791948944,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-29 12:45:50 IST",
@@ -40,17 +40,17 @@
       "entry_turnover_cr": 2.11,
       "entry_stop_pct": 0.624,
       "nifty_at_entry": 22819.0,
-      "mfe_price": 302.79998779296875,
+      "mfe_price": 302.95001220703125,
       "mae_price": 301.3500061035156
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "MANAPPURAM.NS": {
-      "close": 302.20001220703125,
-      "high": 302.20001220703125,
-      "low": 301.95001220703125,
-      "as_of": "2026-10-29T14:01:13.419603+05:30"
+      "close": 302.79998779296875,
+      "high": 302.95001220703125,
+      "low": 302.75,
+      "as_of": "2026-10-29T14:15:51.931106+05:30"
     }
   },
   "trade_history": [
