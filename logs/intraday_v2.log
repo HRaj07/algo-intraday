@@ -8597,3 +8597,22 @@
 2026-10-30 10:31:58 | INFO    | engine.paper_trader_v2 | ORDER REJECTED LAURUSLABS.NS: already holding this name
 2026-10-30 10:31:58 | INFO    | engine.paper_trader_v2 | FILLED COFORGE.NS @ Rs2047.4000244140625 | qty=132 notional=Rs270,257 friction=Rs305
 2026-10-30 10:31:58 | INFO    | __main__ | equity Rs970,845 | open 2 | pending 0 | closed 93 | WR 54.8% | PF 0.72 | friction Rs31,406
+2026-10-30 10:45:48 | INFO    | __main__ | ================================================================
+2026-10-30 10:45:48 | INFO    | __main__ | Scan | 2026-10-30 10:45 IST
+2026-10-30 10:46:40 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-30 10:46:40 | INFO    | engine.paper_trader_v2 | EXIT LAURUSLABS.NS 85@Rs2344.99 | P&L Rs+926 (+0.48R) | friction Rs237 | t1_vwap
+2026-10-30 10:46:40 | INFO    | engine.paper_trader_v2 | T1 LAURUSLABS.NS - half out at VWAP, stop to Rs2337.5 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-30 10:46:41 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,943 risk per trade)
+2026-10-30 10:46:41 | INFO    | __main__ |   base 0.40%
+2026-10-30 10:46:41 | INFO    | __main__ |   performance x0.6: n=94, observed expectancy shrunk to -0.029R vs prior +0.125R -> trimming (0.60x)
+2026-10-30 10:46:41 | INFO    | __main__ |   drawdown    x0.705: drawdown 3.8% - sizing at 0.70x
+2026-10-30 10:46:41 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-30 10:46:41 | INFO    | __main__ | strategy: MOM-v3
+2026-10-30 10:46:41 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-30 10:46:41 | INFO    | engine.paper_trader_v2 | ORDER ZYDUSLIFE.NS market buy at next open (ref Rs1226.0, SL 0.582%, RSI 84.1, rvol 10.36)
+2026-10-30 10:46:41 | INFO    | engine.paper_trader_v2 | ORDER LAURUSLABS.NS market buy at next open (ref Rs2348.9, SL 0.956%, RSI 89.0, rvol 5.91)
+2026-10-30 10:46:41 | INFO    | engine.paper_trader_v2 | ORDER POWERGRID.NS market buy at next open (ref Rs265.35, SL 0.538%, RSI 70.1, rvol 2.13)
+2026-10-30 10:46:41 | INFO    | engine.paper_trader_v2 | FILLED ZYDUSLIFE.NS @ Rs1226.0 | qty=272 notional=Rs333,472 friction=Rs366
+2026-10-30 10:46:41 | INFO    | engine.paper_trader_v2 | FILLED LAURUSLABS.NS @ Rs2349.0 | qty=86 notional=Rs202,014 friction=Rs240
+2026-10-30 10:46:41 | INFO    | engine.paper_trader_v2 | FILLED POWERGRID.NS @ Rs265.3999938964844 | qty=1359 notional=Rs360,679 friction=Rs392
+2026-10-30 10:46:42 | INFO    | __main__ | equity Rs971,866 | open 4 | pending 0 | closed 94 | WR 55.3% | PF 0.73 | friction Rs31,643
