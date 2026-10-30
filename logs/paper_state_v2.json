@@ -1,5 +1,5 @@
 {
-  "cash": 738682.2503340247,
+  "cash": 807011.3909429412,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 14.63,
       "margin": 54051.360644531254,
       "entry_cost": 68.84261040029199,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-30 10:31:22 IST",
@@ -41,47 +41,7 @@
       "entry_stop_pct": 0.715,
       "nifty_at_entry": 22930.5,
       "mfe_price": 2047.4000244140625,
-      "mae_price": 2042.9000244140625
-    },
-    "ZYDUSLIFE.NS": {
-      "ticker": "ZYDUSLIFE.NS",
-      "direction": "LONG",
-      "entry_price": 1226.0,
-      "qty": 272,
-      "qty_open": 272,
-      "stop_loss": 1218.86,
-      "initial_stop": 1218.86,
-      "t1": 1233.36,
-      "t2": 1240.27,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 7.14,
-      "atr": 7.13,
-      "margin": 66694.40000000001,
-      "entry_cost": 79.42521363200001,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-30 10:45:48 IST",
-      "predicted_rr": null,
-      "entry_rsi": 84.1,
-      "entry_deviation_pct": 1.136,
-      "entry_atr_pct": 0.582,
-      "entry_rvol": 10.36,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 2.94,
-      "entry_stop_pct": 0.582,
-      "nifty_at_entry": 22943.19921875,
-      "mfe_price": 1231.699951171875,
-      "mae_price": 1226.0
+      "mae_price": 2035.5999755859375
     },
     "LAURUSLABS.NS": {
       "ticker": "LAURUSLABS.NS",
@@ -107,7 +67,7 @@
       "atr": 22.45,
       "margin": 40402.8,
       "entry_cost": 57.418355684,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-30 10:45:48 IST",
@@ -121,7 +81,7 @@
       "entry_stop_pct": 0.956,
       "nifty_at_entry": 22943.19921875,
       "mfe_price": 2355.0,
-      "mae_price": 2349.0
+      "mae_price": 2339.10009765625
     },
     "POWERGRID.NS": {
       "ticker": "POWERGRID.NS",
@@ -147,7 +107,7 @@
       "atr": 1.43,
       "margin": 72135.71834106445,
       "entry_cost": 83.97976032302118,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-30 10:45:48 IST",
@@ -161,34 +121,34 @@
       "entry_stop_pct": 0.538,
       "nifty_at_entry": 22943.19921875,
       "mfe_price": 265.79998779296875,
-      "mae_price": 265.3500061035156
+      "mae_price": 265.1000061035156
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "LAURUSLABS.NS": {
-      "close": 2354.0,
-      "high": 2355.0,
-      "low": 2352.0,
-      "as_of": "2026-10-30T11:01:09.673756+05:30"
+      "close": 2343.0,
+      "high": 2345.60009765625,
+      "low": 2339.10009765625,
+      "as_of": "2026-10-30T11:15:54.689616+05:30"
     },
     "COFORGE.NS": {
-      "close": 2044.5,
-      "high": 2044.9000244140625,
-      "low": 2042.9000244140625,
-      "as_of": "2026-10-30T11:01:09.673756+05:30"
+      "close": 2036.9000244140625,
+      "high": 2037.0,
+      "low": 2035.5999755859375,
+      "as_of": "2026-10-30T11:15:54.689616+05:30"
     },
     "POWERGRID.NS": {
-      "close": 265.79998779296875,
-      "high": 265.79998779296875,
-      "low": 265.3500061035156,
-      "as_of": "2026-10-30T11:01:09.673756+05:30"
+      "close": 265.3999938964844,
+      "high": 265.45001220703125,
+      "low": 265.1000061035156,
+      "as_of": "2026-10-30T11:15:54.689616+05:30"
     },
     "ZYDUSLIFE.NS": {
-      "close": 1228.5,
-      "high": 1231.699951171875,
-      "low": 1228.5,
-      "as_of": "2026-10-30T11:01:09.673756+05:30"
+      "close": 1237.0999755859375,
+      "high": 1239.800048828125,
+      "low": 1237.0999755859375,
+      "as_of": "2026-10-30T11:15:54.689616+05:30"
     }
   },
   "trade_history": [
@@ -2165,6 +2125,27 @@
       "entry_rvol": 5.12,
       "entry_turnover_cr": 14.25,
       "entry_stop_pct": 0.978
+    },
+    {
+      "ticker": "ZYDUSLIFE.NS",
+      "direction": "LONG",
+      "entry_price": 1226.0,
+      "exit_price": 1233.36,
+      "qty": 272,
+      "pnl": 1634.74,
+      "R_multiple": 0.84,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 367.18,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-30 10:45:48 IST",
+      "exit_time": "2026-10-30 11:15:54 IST",
+      "entry_rsi": 84.1,
+      "entry_deviation_pct": 1.136,
+      "entry_atr_pct": 0.582,
+      "entry_rvol": 10.36,
+      "entry_turnover_cr": 2.94,
+      "entry_stop_pct": 0.582
     }
   ],
   "daily_entry_count": {
@@ -2189,7 +2170,7 @@
     "2026-10-29": 5,
     "2026-10-30": 6
   },
-  "total_pnl": -28033.470680380113,
+  "total_pnl": -26398.73007146366,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
