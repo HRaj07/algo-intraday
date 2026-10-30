@@ -1,62 +1,15 @@
 {
-  "cash": 900289.055910061,
+  "cash": 971150.5478468586,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "POWERGRID.NS": {
-      "ticker": "POWERGRID.NS",
-      "direction": "LONG",
-      "entry_price": 265.3999938964844,
-      "qty": 1359,
-      "qty_open": 1359,
-      "stop_loss": 263.97,
-      "initial_stop": 263.97,
-      "t1": 266.94,
-      "t2": 268.2,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 1.43,
-      "atr": 1.43,
-      "margin": 72135.71834106445,
-      "entry_cost": 83.97976032302118,
-      "bars_held": 10,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-30 10:45:48 IST",
-      "predicted_rr": null,
-      "entry_rsi": 70.1,
-      "entry_deviation_pct": 0.988,
-      "entry_atr_pct": 0.538,
-      "entry_rvol": 2.13,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 7.77,
-      "entry_stop_pct": 0.538,
-      "nifty_at_entry": 22943.19921875,
-      "mfe_price": 266.6000061035156,
-      "mae_price": 265.1000061035156
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
-    "COFORGE.NS": {
-      "close": 2033.5,
-      "high": 2035.5,
-      "low": 2033.0999755859375,
-      "as_of": "2026-10-30T13:15:55.396630+05:30"
-    },
     "POWERGRID.NS": {
-      "close": 265.79998779296875,
-      "high": 265.95001220703125,
-      "low": 265.79998779296875,
-      "as_of": "2026-10-30T13:15:55.396630+05:30"
+      "close": 264.75,
+      "high": 264.95001220703125,
+      "low": 264.75,
+      "as_of": "2026-10-30T13:31:23.663726+05:30"
     }
   },
   "trade_history": [
@@ -2096,6 +2049,27 @@
       "entry_rvol": 5.96,
       "entry_turnover_cr": 9.85,
       "entry_stop_pct": 0.715
+    },
+    {
+      "ticker": "POWERGRID.NS",
+      "direction": "LONG",
+      "entry_price": 265.3999938964844,
+      "exit_price": 264.75,
+      "qty": 1359,
+      "pnl": -1274.23,
+      "R_multiple": -0.66,
+      "reason": "vwap_reclaim",
+      "partial": false,
+      "friction": 390.88,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-30 10:45:48 IST",
+      "exit_time": "2026-10-30 13:31:23 IST",
+      "entry_rsi": 70.1,
+      "entry_deviation_pct": 0.988,
+      "entry_atr_pct": 0.538,
+      "entry_rvol": 2.13,
+      "entry_turnover_cr": 7.77,
+      "entry_stop_pct": 0.538
     }
   ],
   "daily_entry_count": {
@@ -2120,7 +2094,7 @@
     "2026-10-29": 5,
     "2026-10-30": 6
   },
-  "total_pnl": -27575.225748875062,
+  "total_pnl": -28849.45215314185,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
