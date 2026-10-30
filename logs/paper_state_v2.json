@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "POWERGRID.NS": {
-      "close": 264.75,
-      "high": 264.95001220703125,
-      "low": 264.75,
-      "as_of": "2026-10-30T13:31:23.663726+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
