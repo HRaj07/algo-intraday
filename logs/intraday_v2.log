@@ -8616,3 +8616,16 @@
 2026-10-30 10:46:41 | INFO    | engine.paper_trader_v2 | FILLED LAURUSLABS.NS @ Rs2349.0 | qty=86 notional=Rs202,014 friction=Rs240
 2026-10-30 10:46:41 | INFO    | engine.paper_trader_v2 | FILLED POWERGRID.NS @ Rs265.3999938964844 | qty=1359 notional=Rs360,679 friction=Rs392
 2026-10-30 10:46:42 | INFO    | __main__ | equity Rs971,866 | open 4 | pending 0 | closed 94 | WR 55.3% | PF 0.73 | friction Rs31,643
+2026-10-30 11:01:09 | INFO    | __main__ | ================================================================
+2026-10-30 11:01:09 | INFO    | __main__ | Scan | 2026-10-30 11:01 IST
+2026-10-30 11:01:52 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-30 11:01:52 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,946 risk per trade)
+2026-10-30 11:01:52 | INFO    | __main__ |   base 0.40%
+2026-10-30 11:01:52 | INFO    | __main__ |   performance x0.6: n=94, observed expectancy shrunk to -0.029R vs prior +0.125R -> trimming (0.60x)
+2026-10-30 11:01:52 | INFO    | __main__ |   drawdown    x0.733: drawdown 3.6% - sizing at 0.73x
+2026-10-30 11:01:52 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-30 11:01:52 | INFO    | __main__ | strategy: MOM-v3
+2026-10-30 11:01:52 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-30 11:01:52 | INFO    | engine.paper_trader_v2 | ORDER REJECTED ZYDUSLIFE.NS: already holding this name
+2026-10-30 11:01:52 | INFO    | engine.paper_trader_v2 | ORDER REJECTED LAURUSLABS.NS: already holding this name
+2026-10-30 11:01:52 | INFO    | __main__ | equity Rs973,237 | open 4 | pending 0 | closed 94 | WR 55.3% | PF 0.73 | friction Rs31,643
