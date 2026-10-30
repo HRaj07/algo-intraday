@@ -27,7 +27,7 @@
       "atr": 14.63,
       "margin": 54051.360644531254,
       "entry_cost": 68.84261040029199,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-30 10:31:22 IST",
@@ -40,7 +40,7 @@
       "entry_turnover_cr": 9.85,
       "entry_stop_pct": 0.715,
       "nifty_at_entry": 22930.5,
-      "mfe_price": 2049.300048828125,
+      "mfe_price": 2054.0,
       "mae_price": 2035.5999755859375
     },
     "LAURUSLABS.NS": {
@@ -67,7 +67,7 @@
       "atr": 22.45,
       "margin": 40402.8,
       "entry_cost": 57.418355684,
-      "bars_held": 4,
+      "bars_held": 5,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-30 10:45:48 IST",
@@ -80,7 +80,7 @@
       "entry_turnover_cr": 14.87,
       "entry_stop_pct": 0.956,
       "nifty_at_entry": 22943.19921875,
-      "mfe_price": 2356.5,
+      "mfe_price": 2356.89990234375,
       "mae_price": 2339.10009765625
     },
     "POWERGRID.NS": {
@@ -107,7 +107,7 @@
       "atr": 1.43,
       "margin": 72135.71834106445,
       "entry_cost": 83.97976032302118,
-      "bars_held": 4,
+      "bars_held": 5,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-30 10:45:48 IST",
@@ -120,29 +120,29 @@
       "entry_turnover_cr": 7.77,
       "entry_stop_pct": 0.538,
       "nifty_at_entry": 22943.19921875,
-      "mfe_price": 266.1000061035156,
+      "mfe_price": 266.5,
       "mae_price": 265.1000061035156
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "LAURUSLABS.NS": {
-      "close": 2355.0,
-      "high": 2355.699951171875,
-      "low": 2353.0,
-      "as_of": "2026-10-30T11:45:51.903727+05:30"
+      "close": 2355.10009765625,
+      "high": 2356.89990234375,
+      "low": 2355.10009765625,
+      "as_of": "2026-10-30T12:01:09.224812+05:30"
     },
     "COFORGE.NS": {
-      "close": 2049.300048828125,
-      "high": 2049.300048828125,
-      "low": 2049.300048828125,
-      "as_of": "2026-10-30T11:45:51.903727+05:30"
+      "close": 2051.0,
+      "high": 2054.0,
+      "low": 2050.5,
+      "as_of": "2026-10-30T12:01:09.224812+05:30"
     },
     "POWERGRID.NS": {
-      "close": 266.1000061035156,
-      "high": 266.1000061035156,
-      "low": 265.95001220703125,
-      "as_of": "2026-10-30T11:45:51.903727+05:30"
+      "close": 266.5,
+      "high": 266.5,
+      "low": 266.20001220703125,
+      "as_of": "2026-10-30T12:01:09.224812+05:30"
     }
   },
   "trade_history": [
