@@ -8566,3 +8566,18 @@
 2026-10-30 10:01:48 | INFO    | __main__ | strategy: MOM-v3
 2026-10-30 10:01:48 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-10-30 10:01:48 | INFO    | __main__ | equity Rs973,316 | open 0 | pending 0 | closed 92 | WR 55.4% | PF 0.74 | friction Rs31,059
+2026-10-30 10:15:51 | INFO    | __main__ | ================================================================
+2026-10-30 10:15:51 | INFO    | __main__ | Scan | 2026-10-30 10:15 IST
+2026-10-30 10:16:26 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-30 10:16:26 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,947 risk per trade)
+2026-10-30 10:16:26 | INFO    | __main__ |   base 0.40%
+2026-10-30 10:16:26 | INFO    | __main__ |   performance x0.6: n=92, observed expectancy shrunk to -0.024R vs prior +0.125R -> trimming (0.60x)
+2026-10-30 10:16:26 | INFO    | __main__ |   drawdown    x0.734: drawdown 3.6% - sizing at 0.73x
+2026-10-30 10:16:26 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-30 10:16:26 | INFO    | __main__ | strategy: MOM-v3
+2026-10-30 10:16:26 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-30 10:16:26 | INFO    | engine.paper_trader_v2 | ORDER INDIGO.NS market buy at next open (ref Rs4857.4, SL 0.611%, RSI 84.0, rvol 5.94)
+2026-10-30 10:16:26 | INFO    | engine.paper_trader_v2 | ORDER LAURUSLABS.NS market buy at next open (ref Rs2331.0, SL 0.978%, RSI 87.5, rvol 5.12)
+2026-10-30 10:16:26 | INFO    | engine.paper_trader_v2 | FILLED INDIGO.NS @ Rs4855.39990234375 | qty=65 notional=Rs315,601 friction=Rs349
+2026-10-30 10:16:26 | INFO    | engine.paper_trader_v2 | FILLED LAURUSLABS.NS @ Rs2331.300048828125 | qty=85 notional=Rs198,161 friction=Rs236
+2026-10-30 10:16:27 | INFO    | __main__ | equity Rs973,316 | open 2 | pending 0 | closed 92 | WR 55.4% | PF 0.74 | friction Rs31,059
