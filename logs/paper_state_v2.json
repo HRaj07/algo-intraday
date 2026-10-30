@@ -1,5 +1,5 @@
 {
-  "cash": 807011.3909429412,
+  "cash": 848376.2981919183,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 14.63,
       "margin": 54051.360644531254,
       "entry_cost": 68.84261040029199,
-      "bars_held": 7,
+      "bars_held": 8,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-30 10:31:22 IST",
@@ -42,46 +42,6 @@
       "nifty_at_entry": 22930.5,
       "mfe_price": 2054.89990234375,
       "mae_price": 2035.5999755859375
-    },
-    "LAURUSLABS.NS": {
-      "ticker": "LAURUSLABS.NS",
-      "direction": "LONG",
-      "entry_price": 2349.0,
-      "qty": 86,
-      "qty_open": 86,
-      "stop_loss": 2326.54,
-      "initial_stop": 2326.54,
-      "t1": 2362.99,
-      "t2": 2393.81,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 22.46,
-      "atr": 22.45,
-      "margin": 40402.8,
-      "entry_cost": 57.418355684,
-      "bars_held": 6,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-30 10:45:48 IST",
-      "predicted_rr": null,
-      "entry_rsi": 89.0,
-      "entry_deviation_pct": 1.523,
-      "entry_atr_pct": 0.956,
-      "entry_rvol": 5.91,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 14.87,
-      "entry_stop_pct": 0.956,
-      "nifty_at_entry": 22943.19921875,
-      "mfe_price": 2362.39990234375,
-      "mae_price": 2339.10009765625
     },
     "POWERGRID.NS": {
       "ticker": "POWERGRID.NS",
@@ -107,7 +67,7 @@
       "atr": 1.43,
       "margin": 72135.71834106445,
       "entry_cost": 83.97976032302118,
-      "bars_held": 6,
+      "bars_held": 7,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-30 10:45:48 IST",
@@ -127,22 +87,22 @@
   "pending_orders": {},
   "last_known_price": {
     "LAURUSLABS.NS": {
-      "close": 2361.5,
-      "high": 2362.39990234375,
-      "low": 2360.89990234375,
-      "as_of": "2026-10-30T12:15:51.851567+05:30"
+      "close": 2374.300048828125,
+      "high": 2377.0,
+      "low": 2374.0,
+      "as_of": "2026-10-30T12:31:16.672063+05:30"
     },
     "COFORGE.NS": {
-      "close": 2053.0,
-      "high": 2054.89990234375,
-      "low": 2053.0,
-      "as_of": "2026-10-30T12:15:51.851567+05:30"
+      "close": 2042.0,
+      "high": 2044.800048828125,
+      "low": 2042.0,
+      "as_of": "2026-10-30T12:31:16.672063+05:30"
     },
     "POWERGRID.NS": {
-      "close": 266.6000061035156,
-      "high": 266.6000061035156,
-      "low": 266.45001220703125,
-      "as_of": "2026-10-30T12:15:51.851567+05:30"
+      "close": 266.3500061035156,
+      "high": 266.45001220703125,
+      "low": 266.29998779296875,
+      "as_of": "2026-10-30T12:31:16.672063+05:30"
     }
   },
   "trade_history": [
@@ -2140,6 +2100,27 @@
       "entry_rvol": 10.36,
       "entry_turnover_cr": 2.94,
       "entry_stop_pct": 0.582
+    },
+    {
+      "ticker": "LAURUSLABS.NS",
+      "direction": "LONG",
+      "entry_price": 2349.0,
+      "exit_price": 2362.99,
+      "qty": 86,
+      "pnl": 962.11,
+      "R_multiple": 0.5,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 241.03,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-30 10:45:48 IST",
+      "exit_time": "2026-10-30 12:31:16 IST",
+      "entry_rsi": 89.0,
+      "entry_deviation_pct": 1.523,
+      "entry_atr_pct": 0.956,
+      "entry_rvol": 5.91,
+      "entry_turnover_cr": 14.87,
+      "entry_stop_pct": 0.956
     }
   ],
   "daily_entry_count": {
@@ -2164,7 +2145,7 @@
     "2026-10-29": 5,
     "2026-10-30": 6
   },
-  "total_pnl": -26398.73007146366,
+  "total_pnl": -25436.62282248652,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,

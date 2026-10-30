@@ -8699,3 +8699,18 @@
 2026-10-30 12:16:27 | INFO    | engine.paper_trader_v2 | ORDER REJECTED LAURUSLABS.NS: already holding this name
 2026-10-30 12:16:27 | INFO    | engine.paper_trader_v2 | ORDER REJECTED COFORGE.NS: already holding this name
 2026-10-30 12:16:27 | INFO    | __main__ | equity Rs977,046 | open 3 | pending 0 | closed 95 | WR 55.8% | PF 0.75 | friction Rs32,010
+2026-10-30 12:31:16 | INFO    | __main__ | ================================================================
+2026-10-30 12:31:16 | INFO    | __main__ | Scan | 2026-10-30 12:31 IST
+2026-10-30 12:32:00 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-30 12:32:00 | INFO    | engine.paper_trader_v2 | EXIT LAURUSLABS.NS 86@Rs2362.99 | P&L Rs+962 (+0.50R) | friction Rs241 | t1_vwap
+2026-10-30 12:32:00 | INFO    | engine.paper_trader_v2 | T1 LAURUSLABS.NS - half out at VWAP, stop to Rs2355.16 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-10-30 12:32:00 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,950 risk per trade)
+2026-10-30 12:32:00 | INFO    | __main__ |   base 0.40%
+2026-10-30 12:32:00 | INFO    | __main__ |   performance x0.6: n=96, observed expectancy shrunk to -0.019R vs prior +0.125R -> trimming (0.60x)
+2026-10-30 12:32:00 | INFO    | __main__ |   drawdown    x0.764: drawdown 3.4% - sizing at 0.76x
+2026-10-30 12:32:00 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-30 12:32:00 | INFO    | __main__ | strategy: MOM-v3
+2026-10-30 12:32:00 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-30 12:32:01 | INFO    | engine.paper_trader_v2 | ORDER REJECTED LAURUSLABS.NS: max 2 entries per day for LAURUSLABS.NS
+2026-10-30 12:32:01 | INFO    | engine.paper_trader_v2 | ORDER REJECTED ZYDUSLIFE.NS: at max entries per day (5)
+2026-10-30 12:32:01 | INFO    | __main__ | equity Rs975,142 | open 2 | pending 0 | closed 96 | WR 56.2% | PF 0.76 | friction Rs32,251
