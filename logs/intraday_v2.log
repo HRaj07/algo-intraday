@@ -8581,3 +8581,19 @@
 2026-10-30 10:16:26 | INFO    | engine.paper_trader_v2 | FILLED INDIGO.NS @ Rs4855.39990234375 | qty=65 notional=Rs315,601 friction=Rs349
 2026-10-30 10:16:26 | INFO    | engine.paper_trader_v2 | FILLED LAURUSLABS.NS @ Rs2331.300048828125 | qty=85 notional=Rs198,161 friction=Rs236
 2026-10-30 10:16:27 | INFO    | __main__ | equity Rs973,316 | open 2 | pending 0 | closed 92 | WR 55.4% | PF 0.74 | friction Rs31,059
+2026-10-30 10:31:22 | INFO    | __main__ | ================================================================
+2026-10-30 10:31:22 | INFO    | __main__ | Scan | 2026-10-30 10:31 IST
+2026-10-30 10:31:56 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-30 10:31:56 | INFO    | engine.paper_trader_v2 | EXIT INDIGO.NS 65@Rs4825.73 | P&L Rs-2,276 (-1.18R) | friction Rs347 | stop_loss
+2026-10-30 10:31:57 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,942 risk per trade)
+2026-10-30 10:31:57 | INFO    | __main__ |   base 0.40%
+2026-10-30 10:31:57 | INFO    | __main__ |   performance x0.6: n=93, observed expectancy shrunk to -0.032R vs prior +0.125R -> trimming (0.60x)
+2026-10-30 10:31:57 | INFO    | __main__ |   drawdown    x0.693: drawdown 3.8% - sizing at 0.69x
+2026-10-30 10:31:57 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-30 10:31:57 | INFO    | __main__ | strategy: MOM-v3
+2026-10-30 10:31:57 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-30 10:31:58 | INFO    | engine.paper_trader_v2 | ORDER COFORGE.NS market buy at next open (ref Rs2047.7, SL 0.715%, RSI 79.8, rvol 5.96)
+2026-10-30 10:31:58 | INFO    | engine.paper_trader_v2 | ORDER REJECTED ZYDUSLIFE.NS: already hold 1 position(s) in PHARMA
+2026-10-30 10:31:58 | INFO    | engine.paper_trader_v2 | ORDER REJECTED LAURUSLABS.NS: already holding this name
+2026-10-30 10:31:58 | INFO    | engine.paper_trader_v2 | FILLED COFORGE.NS @ Rs2047.4000244140625 | qty=132 notional=Rs270,257 friction=Rs305
+2026-10-30 10:31:58 | INFO    | __main__ | equity Rs970,845 | open 2 | pending 0 | closed 93 | WR 54.8% | PF 0.72 | friction Rs31,406

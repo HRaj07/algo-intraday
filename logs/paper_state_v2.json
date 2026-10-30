@@ -1,48 +1,8 @@
 {
-  "cash": 870563.4709199286,
+  "cash": 877356.7442844143,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "INDIGO.NS": {
-      "ticker": "INDIGO.NS",
-      "direction": "LONG",
-      "entry_price": 4855.39990234375,
-      "qty": 65,
-      "qty_open": 65,
-      "stop_loss": 4825.73,
-      "initial_stop": 4825.73,
-      "t1": 4886.54,
-      "t2": 4916.79,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 29.67,
-      "atr": 29.69,
-      "margin": 63120.19873046875,
-      "entry_cost": 76.43349994336425,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-30 10:15:51 IST",
-      "predicted_rr": null,
-      "entry_rsi": 84.0,
-      "entry_deviation_pct": 1.086,
-      "entry_atr_pct": 0.611,
-      "entry_rvol": 5.94,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 6.65,
-      "entry_stop_pct": 0.611,
-      "nifty_at_entry": 22925.94921875,
-      "mfe_price": 4855.39990234375,
-      "mae_price": 4855.39990234375
-    },
     "LAURUSLABS.NS": {
       "ticker": "LAURUSLABS.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 22.8,
       "margin": 39632.100830078125,
       "entry_cost": 56.7732573578003,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-30 10:15:51 IST",
@@ -80,12 +40,65 @@
       "entry_turnover_cr": 14.25,
       "entry_stop_pct": 0.978,
       "nifty_at_entry": 22925.94921875,
-      "mfe_price": 2331.300048828125,
-      "mae_price": 2331.300048828125
+      "mfe_price": 2332.89990234375,
+      "mae_price": 2329.0
+    },
+    "COFORGE.NS": {
+      "ticker": "COFORGE.NS",
+      "direction": "LONG",
+      "entry_price": 2047.4000244140625,
+      "qty": 132,
+      "qty_open": 132,
+      "stop_loss": 2032.76,
+      "initial_stop": 2032.76,
+      "t1": 2059.99,
+      "t2": 2076.97,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 14.64,
+      "atr": 14.63,
+      "margin": 54051.360644531254,
+      "entry_cost": 68.84261040029199,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-30 10:31:22 IST",
+      "predicted_rr": null,
+      "entry_rsi": 79.8,
+      "entry_deviation_pct": 1.004,
+      "entry_atr_pct": 0.715,
+      "entry_rvol": 5.96,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 9.85,
+      "entry_stop_pct": 0.715,
+      "nifty_at_entry": 22930.5,
+      "mfe_price": 2047.4000244140625,
+      "mae_price": 2047.4000244140625
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "INDIGO.NS": {
+      "close": 4819.10009765625,
+      "high": 4828.7998046875,
+      "low": 4819.10009765625,
+      "as_of": "2026-10-30T10:31:22.510812+05:30"
+    },
+    "LAURUSLABS.NS": {
+      "close": 2329.0,
+      "high": 2332.89990234375,
+      "low": 2329.0,
+      "as_of": "2026-10-30T10:31:22.510812+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -2018,6 +2031,27 @@
       "entry_rvol": 3.35,
       "entry_turnover_cr": 2.11,
       "entry_stop_pct": 0.624
+    },
+    {
+      "ticker": "INDIGO.NS",
+      "direction": "LONG",
+      "entry_price": 4855.39990234375,
+      "exit_price": 4825.73,
+      "qty": 65,
+      "pnl": -2275.56,
+      "R_multiple": -1.18,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 347.02,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-30 10:15:51 IST",
+      "exit_time": "2026-10-30 10:31:22 IST",
+      "entry_rsi": 84.0,
+      "entry_deviation_pct": 1.086,
+      "entry_atr_pct": 0.611,
+      "entry_rvol": 5.94,
+      "entry_turnover_cr": 6.65,
+      "entry_stop_pct": 0.611
     }
   ],
   "daily_entry_count": {
@@ -2040,16 +2074,16 @@
     "2026-10-27": 8,
     "2026-10-28": 5,
     "2026-10-29": 5,
-    "2026-10-30": 2
+    "2026-10-30": 3
   },
-  "total_pnl": -26684.229519524924,
+  "total_pnl": -28959.794240976767,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=92, observed expectancy shrunk to -0.024R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.734,
-    "drawdown_reason": "drawdown 3.6% - sizing at 0.73x",
-    "raw_pct": 0.00176,
+    "performance_reason": "n=93, observed expectancy shrunk to -0.032R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.693,
+    "drawdown_reason": "drawdown 3.8% - sizing at 0.69x",
+    "raw_pct": 0.00166,
     "final_pct": 0.002,
     "clamped": true
   },
