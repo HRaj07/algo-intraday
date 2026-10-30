@@ -8729,3 +8729,15 @@
 2026-10-30 12:46:34 | INFO    | engine.paper_trader_v2 | ORDER REJECTED LAURUSLABS.NS: max 2 entries per day for LAURUSLABS.NS
 2026-10-30 12:46:34 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SONACOMS.NS: at max entries per day (5)
 2026-10-30 12:46:34 | INFO    | __main__ | equity Rs974,666 | open 2 | pending 0 | closed 96 | WR 56.2% | PF 0.76 | friction Rs32,251
+2026-10-30 13:01:10 | INFO    | __main__ | ================================================================
+2026-10-30 13:01:10 | INFO    | __main__ | Scan | 2026-10-30 13:01 IST
+2026-10-30 13:01:44 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-10-30 13:01:44 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,949 risk per trade)
+2026-10-30 13:01:44 | INFO    | __main__ |   base 0.40%
+2026-10-30 13:01:44 | INFO    | __main__ |   performance x0.6: n=96, observed expectancy shrunk to -0.019R vs prior +0.125R -> trimming (0.60x)
+2026-10-30 13:01:44 | INFO    | __main__ |   drawdown    x0.75: drawdown 3.5% - sizing at 0.75x
+2026-10-30 13:01:44 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-10-30 13:01:44 | INFO    | __main__ | strategy: MOM-v3
+2026-10-30 13:01:44 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-10-30 13:01:44 | INFO    | engine.paper_trader_v2 | ORDER REJECTED LAURUSLABS.NS: max 2 entries per day for LAURUSLABS.NS
+2026-10-30 13:01:44 | INFO    | __main__ | equity Rs974,266 | open 2 | pending 0 | closed 96 | WR 56.2% | PF 0.76 | friction Rs32,251
