@@ -1,48 +1,8 @@
 {
-  "cash": 848376.2981919183,
+  "cash": 900289.055910061,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "COFORGE.NS": {
-      "ticker": "COFORGE.NS",
-      "direction": "LONG",
-      "entry_price": 2047.4000244140625,
-      "qty": 132,
-      "qty_open": 132,
-      "stop_loss": 2032.76,
-      "initial_stop": 2032.76,
-      "t1": 2059.99,
-      "t2": 2076.97,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 14.64,
-      "atr": 14.63,
-      "margin": 54051.360644531254,
-      "entry_cost": 68.84261040029199,
-      "bars_held": 10,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-10-30 10:31:22 IST",
-      "predicted_rr": null,
-      "entry_rsi": 79.8,
-      "entry_deviation_pct": 1.004,
-      "entry_atr_pct": 0.715,
-      "entry_rvol": 5.96,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 9.85,
-      "entry_stop_pct": 0.715,
-      "nifty_at_entry": 22930.5,
-      "mfe_price": 2054.89990234375,
-      "mae_price": 2035.5999755859375
-    },
     "POWERGRID.NS": {
       "ticker": "POWERGRID.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 1.43,
       "margin": 72135.71834106445,
       "entry_cost": 83.97976032302118,
-      "bars_held": 9,
+      "bars_held": 10,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-10-30 10:45:48 IST",
@@ -87,16 +47,16 @@
   "pending_orders": {},
   "last_known_price": {
     "COFORGE.NS": {
-      "close": 2040.0,
-      "high": 2041.5,
-      "low": 2040.0,
-      "as_of": "2026-10-30T13:01:10.130571+05:30"
+      "close": 2033.5,
+      "high": 2035.5,
+      "low": 2033.0999755859375,
+      "as_of": "2026-10-30T13:15:55.396630+05:30"
     },
     "POWERGRID.NS": {
-      "close": 265.8999938964844,
+      "close": 265.79998779296875,
       "high": 265.95001220703125,
       "low": 265.79998779296875,
-      "as_of": "2026-10-30T13:01:10.130571+05:30"
+      "as_of": "2026-10-30T13:15:55.396630+05:30"
     }
   },
   "trade_history": [
@@ -2115,6 +2075,27 @@
       "entry_rvol": 5.91,
       "entry_turnover_cr": 14.87,
       "entry_stop_pct": 0.956
+    },
+    {
+      "ticker": "COFORGE.NS",
+      "direction": "LONG",
+      "entry_price": 2047.4000244140625,
+      "exit_price": 2033.5,
+      "qty": 132,
+      "pnl": -2138.6,
+      "R_multiple": -1.11,
+      "reason": "vwap_reclaim",
+      "partial": false,
+      "friction": 303.8,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-10-30 10:31:22 IST",
+      "exit_time": "2026-10-30 13:15:55 IST",
+      "entry_rsi": 79.8,
+      "entry_deviation_pct": 1.004,
+      "entry_atr_pct": 0.715,
+      "entry_rvol": 5.96,
+      "entry_turnover_cr": 9.85,
+      "entry_stop_pct": 0.715
     }
   ],
   "daily_entry_count": {
@@ -2139,7 +2120,7 @@
     "2026-10-29": 5,
     "2026-10-30": 6
   },
-  "total_pnl": -25436.62282248652,
+  "total_pnl": -27575.225748875062,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
