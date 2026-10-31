@@ -6,32 +6,31 @@ caps: 3 concurrent, 5/day, 1/sector, risk 0.40% of Rs1,000,000
 ============================================================================
   trading days          60
   trades                142  (2.4/day)
-  win rate              43.7%
-  profit factor         0.97
-  net P&L               Rs-8,815   (-0.88%)
-  friction paid         Rs68,977
-  gross before costs    Rs60,162
-  avg trade             Rs-62   (-0.014R)
-  t-stat                -0.17   (>2 is the go-live bar)
-  max drawdown          Rs43,010  (4.30%)
-  median notional       Rs331,834
+  win rate              45.8%
+  profit factor         1.10
+  net P&L               Rs23,796   (+2.38%)
+  friction paid         Rs70,051
+  gross before costs    Rs93,847
+  avg trade             Rs+168   (+0.044R)
+  t-stat                +0.45   (>2 is the go-live bar)
+  max drawdown          Rs43,939  (4.39%)
+  median notional       Rs338,351
 
   by exit:
-    square_off      95 trades  Rs   203,532  avg Rs  +2,142
-    stop            47 trades  Rs  -212,347  avg Rs  -4,518
+    square_off      98 trades  Rs   226,778  avg Rs  +2,314
+    stop            44 trades  Rs  -202,982  avg Rs  -4,613
 
   by month:
-    2026-07      8 trades  Rs    -4,325  (-0.43%)  avg -0.134R
-    2026-08     59 trades  Rs     9,936  (+0.99%)  avg +0.045R
-    2026-09     45 trades  Rs     5,506  (+0.55%)  avg +0.031R
-    2026-10     30 trades  Rs   -19,934  (-1.99%)  avg -0.164R
+    2026-08     49 trades  Rs    25,434  (+2.54%)  avg +0.132R
+    2026-09     45 trades  Rs     5,419  (+0.54%)  avg +0.032R
+    2026-10     48 trades  Rs    -7,058  (-0.71%)  avg -0.034R
 
   concentration — how much of the P&L is the best few trades:
-    top 1   trades = Rs   13,017 of Rs-8,815 total
-    top 3   trades = Rs   36,163 of Rs-8,815 total
-    top 5   trades = Rs   54,016 of Rs-8,815 total
-    top 10  trades = Rs   93,289 of Rs-8,815 total
-    without the top 5: Rs-62,832 (-6.28%)
+    top 1   trades = Rs   13,219 of Rs23,796 total
+    top 3   trades = Rs   36,784 of Rs23,796 total
+    top 5   trades = Rs   55,933 of Rs23,796 total
+    top 10  trades = Rs   97,957 of Rs23,796 total
+    without the top 5: Rs-32,138 (-3.21%)
 
 ============================================================================
   HOW TO READ THIS
