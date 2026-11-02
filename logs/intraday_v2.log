@@ -8947,3 +8947,21 @@
 2026-11-02 10:32:02 | INFO    | engine.paper_trader_v2 | FILLED RELIANCE.NS @ Rs1250.5 | qty=201 notional=Rs251,350 friction=Rs287
 2026-11-02 10:32:02 | INFO    | engine.paper_trader_v2 | FILLED MAXHEALTH.NS @ Rs899.6500244140625 | qty=214 notional=Rs192,525 friction=Rs231
 2026-11-02 10:32:02 | INFO    | __main__ | equity Rs972,537 | open 4 | pending 0 | closed 99 | WR 55.6% | PF 0.74 | friction Rs33,176
+2026-11-02 10:46:00 | INFO    | __main__ | ================================================================
+2026-11-02 10:46:00 | INFO    | __main__ | Scan | 2026-11-02 10:46 IST
+2026-11-02 10:46:52 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-02 10:46:52 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,944 risk per trade)
+2026-11-02 10:46:52 | INFO    | __main__ |   base 0.40%
+2026-11-02 10:46:52 | INFO    | __main__ |   performance x0.6: n=99, observed expectancy shrunk to -0.027R vs prior +0.125R -> trimming (0.60x)
+2026-11-02 10:46:52 | INFO    | __main__ |   drawdown    x0.715: drawdown 3.7% - sizing at 0.71x
+2026-11-02 10:46:52 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-02 10:46:52 | INFO    | __main__ | strategy: MOM-v3
+2026-11-02 10:46:52 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-02 10:46:53 | INFO    | engine.paper_trader_v2 | ORDER REJECTED DELHIVERY.NS: at max concurrent positions (3)
+2026-11-02 10:46:53 | INFO    | engine.paper_trader_v2 | ORDER REJECTED DIXON.NS: already holding this name
+2026-11-02 10:46:53 | INFO    | engine.paper_trader_v2 | ORDER REJECTED JINDALSTEL.NS: at max concurrent positions (3)
+2026-11-02 10:46:53 | INFO    | engine.paper_trader_v2 | ORDER REJECTED RELIANCE.NS: already holding this name
+2026-11-02 10:46:53 | INFO    | engine.paper_trader_v2 | ORDER REJECTED TATASTEEL.NS: at max concurrent positions (3)
+2026-11-02 10:46:53 | INFO    | engine.paper_trader_v2 | ORDER REJECTED AMBER.NS: at max concurrent positions (3)
+2026-11-02 10:46:53 | INFO    | engine.paper_trader_v2 | ORDER REJECTED NBCC.NS: at max concurrent positions (3)
+2026-11-02 10:46:53 | INFO    | __main__ | equity Rs972,147 | open 4 | pending 0 | closed 99 | WR 55.6% | PF 0.74 | friction Rs33,176

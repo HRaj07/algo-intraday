@@ -27,7 +27,7 @@
       "atr": 2.47,
       "margin": 57110.75808105469,
       "entry_cost": 71.4034178365852,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-02 10:15:49 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.68,
       "nifty_at_entry": 23313.150390625,
       "mfe_price": 363.8500061035156,
-      "mae_price": 363.29998779296875
+      "mae_price": 361.75
     },
     "DIXON.NS": {
       "ticker": "DIXON.NS",
@@ -67,7 +67,7 @@
       "atr": 122.14,
       "margin": 36300.0,
       "entry_cost": 53.984189,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-02 10:31:24 IST",
@@ -80,7 +80,7 @@
       "entry_turnover_cr": 12.59,
       "entry_stop_pct": 1.009,
       "nifty_at_entry": 23333.69921875,
-      "mfe_price": 12100.0,
+      "mfe_price": 12155.0,
       "mae_price": 12100.0
     },
     "RELIANCE.NS": {
@@ -107,7 +107,7 @@
       "atr": 9.62,
       "margin": 50270.100000000006,
       "entry_cost": 65.677581803,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-02 10:31:24 IST",
@@ -120,7 +120,7 @@
       "entry_turnover_cr": 54.87,
       "entry_stop_pct": 0.77,
       "nifty_at_entry": 23333.69921875,
-      "mfe_price": 1250.5,
+      "mfe_price": 1253.0,
       "mae_price": 1250.5
     },
     "MAXHEALTH.NS": {
@@ -147,7 +147,7 @@
       "atr": 9.06,
       "margin": 38505.02104492188,
       "entry_cost": 55.82985776523096,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-02 10:31:24 IST",
@@ -160,23 +160,35 @@
       "entry_turnover_cr": 13.3,
       "entry_stop_pct": 1.006,
       "nifty_at_entry": 23333.69921875,
-      "mfe_price": 899.6500244140625,
+      "mfe_price": 900.5999755859375,
       "mae_price": 899.6500244140625
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "DIXON.NS": {
-      "close": 12100.0,
-      "high": 12100.0,
-      "low": 12100.0,
-      "as_of": "2026-11-02T10:31:24.349573+05:30"
+      "close": 12152.0,
+      "high": 12155.0,
+      "low": 12122.0,
+      "as_of": "2026-11-02T10:46:00.421106+05:30"
     },
     "AMBUJACEM.NS": {
-      "close": 363.79998779296875,
-      "high": 363.8500061035156,
-      "low": 363.54998779296875,
-      "as_of": "2026-11-02T10:31:24.349573+05:30"
+      "close": 361.75,
+      "high": 361.75,
+      "low": 361.75,
+      "as_of": "2026-11-02T10:46:00.421106+05:30"
+    },
+    "MAXHEALTH.NS": {
+      "close": 900.2999877929688,
+      "high": 900.5999755859375,
+      "low": 900.0,
+      "as_of": "2026-11-02T10:46:00.421106+05:30"
+    },
+    "RELIANCE.NS": {
+      "close": 1252.0,
+      "high": 1253.0,
+      "low": 1251.5,
+      "as_of": "2026-11-02T10:46:00.421106+05:30"
     }
   },
   "trade_history": [
