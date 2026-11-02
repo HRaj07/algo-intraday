@@ -8928,3 +8928,22 @@
 2026-11-02 10:16:38 | INFO    | engine.paper_trader_v2 | FILLED DIXON.NS @ Rs11910.0 | qty=16 notional=Rs190,560 friction=Rs229
 2026-11-02 10:16:38 | INFO    | engine.paper_trader_v2 | FILLED AMBUJACEM.NS @ Rs363.29998779296875 | qty=786 notional=Rs285,554 friction=Rs320
 2026-11-02 10:16:38 | INFO    | __main__ | equity Rs971,151 | open 2 | pending 0 | closed 98 | WR 55.1% | PF 0.73 | friction Rs32,946
+2026-11-02 10:31:24 | INFO    | __main__ | ================================================================
+2026-11-02 10:31:24 | INFO    | __main__ | Scan | 2026-11-02 10:31 IST
+2026-11-02 10:32:00 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-02 10:32:00 | INFO    | engine.paper_trader_v2 | EXIT DIXON.NS 16@Rs11986.49 | P&L Rs+994 (+0.53R) | friction Rs230 | t1_vwap
+2026-11-02 10:32:00 | INFO    | engine.paper_trader_v2 | T1 DIXON.NS - half out at VWAP, stop to Rs11941.83 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-02 10:32:01 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,945 risk per trade)
+2026-11-02 10:32:01 | INFO    | __main__ |   base 0.40%
+2026-11-02 10:32:01 | INFO    | __main__ |   performance x0.6: n=99, observed expectancy shrunk to -0.027R vs prior +0.125R -> trimming (0.60x)
+2026-11-02 10:32:01 | INFO    | __main__ |   drawdown    x0.721: drawdown 3.7% - sizing at 0.72x
+2026-11-02 10:32:01 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-02 10:32:01 | INFO    | __main__ | strategy: MOM-v3
+2026-11-02 10:32:01 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-02 10:32:02 | INFO    | engine.paper_trader_v2 | ORDER DIXON.NS market buy at next open (ref Rs12100.0, SL 1.009%, RSI 83.9, rvol 12.82)
+2026-11-02 10:32:02 | INFO    | engine.paper_trader_v2 | ORDER RELIANCE.NS market buy at next open (ref Rs1250.1, SL 0.77%, RSI 89.0, rvol 7.96)
+2026-11-02 10:32:02 | INFO    | engine.paper_trader_v2 | ORDER MAXHEALTH.NS market buy at next open (ref Rs900.0, SL 1.006%, RSI 76.6, rvol 4.13)
+2026-11-02 10:32:02 | INFO    | engine.paper_trader_v2 | FILLED DIXON.NS @ Rs12100.0 | qty=15 notional=Rs181,500 friction=Rs220
+2026-11-02 10:32:02 | INFO    | engine.paper_trader_v2 | FILLED RELIANCE.NS @ Rs1250.5 | qty=201 notional=Rs251,350 friction=Rs287
+2026-11-02 10:32:02 | INFO    | engine.paper_trader_v2 | FILLED MAXHEALTH.NS @ Rs899.6500244140625 | qty=214 notional=Rs192,525 friction=Rs231
+2026-11-02 10:32:02 | INFO    | __main__ | equity Rs972,537 | open 4 | pending 0 | closed 99 | WR 55.6% | PF 0.74 | friction Rs33,176
