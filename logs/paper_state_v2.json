@@ -1,48 +1,8 @@
 {
-  "cash": 881977.0663923274,
+  "cash": 933385.9502116188,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "RELIANCE.NS": {
-      "ticker": "RELIANCE.NS",
-      "direction": "LONG",
-      "entry_price": 1250.5,
-      "qty": 201,
-      "qty_open": 201,
-      "stop_loss": 1240.87,
-      "initial_stop": 1240.87,
-      "t1": 1257.6,
-      "t2": 1269.34,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 9.63,
-      "atr": 9.62,
-      "margin": 50270.100000000006,
-      "entry_cost": 65.677581803,
-      "bars_held": 2,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-02 10:31:24 IST",
-      "predicted_rr": null,
-      "entry_rsi": 89.0,
-      "entry_deviation_pct": 1.457,
-      "entry_atr_pct": 0.77,
-      "entry_rvol": 7.96,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 54.87,
-      "entry_stop_pct": 0.77,
-      "nifty_at_entry": 23333.69921875,
-      "mfe_price": 1255.5999755859375,
-      "mae_price": 1250.5
-    },
     "MAXHEALTH.NS": {
       "ticker": "MAXHEALTH.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 9.06,
       "margin": 38505.02104492188,
       "entry_cost": 55.82985776523096,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-02 10:31:24 IST",
@@ -86,29 +46,17 @@
   },
   "pending_orders": {},
   "last_known_price": {
-    "DIXON.NS": {
-      "close": 12228.0,
-      "high": 12232.0,
-      "low": 12220.0,
-      "as_of": "2026-11-02T11:01:10.968995+05:30"
-    },
-    "AMBUJACEM.NS": {
-      "close": 360.54998779296875,
-      "high": 361.0,
-      "low": 360.54998779296875,
-      "as_of": "2026-11-02T11:01:10.968995+05:30"
-    },
     "MAXHEALTH.NS": {
-      "close": 899.2000122070312,
-      "high": 900.0,
-      "low": 899.2000122070312,
-      "as_of": "2026-11-02T11:01:10.968995+05:30"
+      "close": 900.0499877929688,
+      "high": 900.5999755859375,
+      "low": 899.4500122070312,
+      "as_of": "2026-11-02T11:16:03.406982+05:30"
     },
     "RELIANCE.NS": {
-      "close": 1254.199951171875,
-      "high": 1255.5999755859375,
-      "low": 1254.0,
-      "as_of": "2026-11-02T11:01:10.968995+05:30"
+      "close": 1256.4000244140625,
+      "high": 1258.0,
+      "low": 1256.4000244140625,
+      "as_of": "2026-11-02T11:16:03.406982+05:30"
     }
   },
   "trade_history": [
@@ -2232,6 +2180,27 @@
       "entry_rvol": 12.82,
       "entry_turnover_cr": 12.59,
       "entry_stop_pct": 1.009
+    },
+    {
+      "ticker": "RELIANCE.NS",
+      "direction": "LONG",
+      "entry_price": 1250.5,
+      "exit_price": 1257.6,
+      "qty": 201,
+      "pnl": 1138.78,
+      "R_multiple": 0.59,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 288.32,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-02 10:31:24 IST",
+      "exit_time": "2026-11-02 11:16:03 IST",
+      "entry_rsi": 89.0,
+      "entry_deviation_pct": 1.457,
+      "entry_atr_pct": 0.77,
+      "entry_rvol": 7.96,
+      "entry_turnover_cr": 54.87,
+      "entry_stop_pct": 0.77
     }
   ],
   "daily_entry_count": {
@@ -2257,7 +2226,7 @@
     "2026-10-30": 6,
     "2026-11-02": 5
   },
-  "total_pnl": -29247.812562751205,
+  "total_pnl": -28109.028743459825,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
