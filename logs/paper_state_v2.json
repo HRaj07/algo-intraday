@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "MAXHEALTH.NS": {
-      "close": 888.0,
-      "high": 888.2999877929688,
-      "low": 888.0,
-      "as_of": "2026-11-02T12:46:00.269527+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
