@@ -27,7 +27,7 @@
       "atr": 9.06,
       "margin": 38505.02104492188,
       "entry_cost": 55.82985776523096,
-      "bars_held": 7,
+      "bars_held": 8,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-02 10:31:24 IST",
@@ -47,10 +47,10 @@
   "pending_orders": {},
   "last_known_price": {
     "MAXHEALTH.NS": {
-      "close": 892.7999877929688,
-      "high": 893.0,
-      "low": 892.5,
-      "as_of": "2026-11-02T12:15:53.545288+05:30"
+      "close": 896.3499755859375,
+      "high": 896.9000244140625,
+      "low": 896.3499755859375,
+      "as_of": "2026-11-02T12:31:27.346408+05:30"
     }
   },
   "trade_history": [
