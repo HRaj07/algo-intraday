@@ -1,88 +1,8 @@
 {
-  "cash": 789958.3960872031,
+  "cash": 881977.0663923274,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "AMBUJACEM.NS": {
-      "ticker": "AMBUJACEM.NS",
-      "direction": "LONG",
-      "entry_price": 363.29998779296875,
-      "qty": 786,
-      "qty_open": 786,
-      "stop_loss": 360.83,
-      "initial_stop": 360.83,
-      "t1": 365.43,
-      "t2": 368.19,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.47,
-      "atr": 2.47,
-      "margin": 57110.75808105469,
-      "entry_cost": 71.4034178365852,
-      "bars_held": 2,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-02 10:15:49 IST",
-      "predicted_rr": null,
-      "entry_rsi": 74.7,
-      "entry_deviation_pct": 1.35,
-      "entry_atr_pct": 0.68,
-      "entry_rvol": 2.61,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 5.39,
-      "entry_stop_pct": 0.68,
-      "nifty_at_entry": 23313.150390625,
-      "mfe_price": 363.8500061035156,
-      "mae_price": 361.75
-    },
-    "DIXON.NS": {
-      "ticker": "DIXON.NS",
-      "direction": "LONG",
-      "entry_price": 12100.0,
-      "qty": 15,
-      "qty_open": 15,
-      "stop_loss": 11977.91,
-      "initial_stop": 11977.91,
-      "t1": 12172.6,
-      "t2": 12344.29,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 122.09,
-      "atr": 122.14,
-      "margin": 36300.0,
-      "entry_cost": 53.984189,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-02 10:31:24 IST",
-      "predicted_rr": null,
-      "entry_rsi": 83.9,
-      "entry_deviation_pct": 2.708,
-      "entry_atr_pct": 1.009,
-      "entry_rvol": 12.82,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 12.59,
-      "entry_stop_pct": 1.009,
-      "nifty_at_entry": 23333.69921875,
-      "mfe_price": 12155.0,
-      "mae_price": 12100.0
-    },
     "RELIANCE.NS": {
       "ticker": "RELIANCE.NS",
       "direction": "LONG",
@@ -107,7 +27,7 @@
       "atr": 9.62,
       "margin": 50270.100000000006,
       "entry_cost": 65.677581803,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-02 10:31:24 IST",
@@ -120,7 +40,7 @@
       "entry_turnover_cr": 54.87,
       "entry_stop_pct": 0.77,
       "nifty_at_entry": 23333.69921875,
-      "mfe_price": 1253.0,
+      "mfe_price": 1255.5999755859375,
       "mae_price": 1250.5
     },
     "MAXHEALTH.NS": {
@@ -147,7 +67,7 @@
       "atr": 9.06,
       "margin": 38505.02104492188,
       "entry_cost": 55.82985776523096,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-02 10:31:24 IST",
@@ -161,34 +81,34 @@
       "entry_stop_pct": 1.006,
       "nifty_at_entry": 23333.69921875,
       "mfe_price": 900.5999755859375,
-      "mae_price": 899.6500244140625
+      "mae_price": 899.2000122070312
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "DIXON.NS": {
-      "close": 12152.0,
-      "high": 12155.0,
-      "low": 12122.0,
-      "as_of": "2026-11-02T10:46:00.421106+05:30"
+      "close": 12228.0,
+      "high": 12232.0,
+      "low": 12220.0,
+      "as_of": "2026-11-02T11:01:10.968995+05:30"
     },
     "AMBUJACEM.NS": {
-      "close": 361.75,
-      "high": 361.75,
-      "low": 361.75,
-      "as_of": "2026-11-02T10:46:00.421106+05:30"
+      "close": 360.54998779296875,
+      "high": 361.0,
+      "low": 360.54998779296875,
+      "as_of": "2026-11-02T11:01:10.968995+05:30"
     },
     "MAXHEALTH.NS": {
-      "close": 900.2999877929688,
-      "high": 900.5999755859375,
-      "low": 900.0,
-      "as_of": "2026-11-02T10:46:00.421106+05:30"
+      "close": 899.2000122070312,
+      "high": 900.0,
+      "low": 899.2000122070312,
+      "as_of": "2026-11-02T11:01:10.968995+05:30"
     },
     "RELIANCE.NS": {
-      "close": 1252.0,
-      "high": 1253.0,
-      "low": 1251.5,
-      "as_of": "2026-11-02T10:46:00.421106+05:30"
+      "close": 1254.199951171875,
+      "high": 1255.5999755859375,
+      "low": 1254.0,
+      "as_of": "2026-11-02T11:01:10.968995+05:30"
     }
   },
   "trade_history": [
@@ -2270,6 +2190,48 @@
       "entry_rvol": 6.83,
       "entry_turnover_cr": 11.81,
       "entry_stop_pct": 0.98
+    },
+    {
+      "ticker": "AMBUJACEM.NS",
+      "direction": "LONG",
+      "entry_price": 363.29998779296875,
+      "exit_price": 360.83,
+      "qty": 786,
+      "pnl": -2259.73,
+      "R_multiple": -1.16,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 318.32,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-02 10:15:49 IST",
+      "exit_time": "2026-11-02 11:01:10 IST",
+      "entry_rsi": 74.7,
+      "entry_deviation_pct": 1.35,
+      "entry_atr_pct": 0.68,
+      "entry_rvol": 2.61,
+      "entry_turnover_cr": 5.39,
+      "entry_stop_pct": 0.68
+    },
+    {
+      "ticker": "DIXON.NS",
+      "direction": "LONG",
+      "entry_price": 12100.0,
+      "exit_price": 12172.6,
+      "qty": 15,
+      "pnl": 867.64,
+      "R_multiple": 0.47,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 221.36,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-02 10:31:24 IST",
+      "exit_time": "2026-11-02 11:01:10 IST",
+      "entry_rsi": 83.9,
+      "entry_deviation_pct": 2.708,
+      "entry_atr_pct": 1.009,
+      "entry_rvol": 12.82,
+      "entry_turnover_cr": 12.59,
+      "entry_stop_pct": 1.009
     }
   ],
   "daily_entry_count": {
@@ -2295,7 +2257,7 @@
     "2026-10-30": 6,
     "2026-11-02": 5
   },
-  "total_pnl": -27855.724786820894,
+  "total_pnl": -29247.812562751205,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,

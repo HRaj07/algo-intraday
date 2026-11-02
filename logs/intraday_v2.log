@@ -8965,3 +8965,20 @@
 2026-11-02 10:46:53 | INFO    | engine.paper_trader_v2 | ORDER REJECTED AMBER.NS: at max concurrent positions (3)
 2026-11-02 10:46:53 | INFO    | engine.paper_trader_v2 | ORDER REJECTED NBCC.NS: at max concurrent positions (3)
 2026-11-02 10:46:53 | INFO    | __main__ | equity Rs972,147 | open 4 | pending 0 | closed 99 | WR 55.6% | PF 0.74 | friction Rs33,176
+2026-11-02 11:01:10 | INFO    | __main__ | ================================================================
+2026-11-02 11:01:10 | INFO    | __main__ | Scan | 2026-11-02 11:01 IST
+2026-11-02 11:01:45 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-02 11:01:45 | INFO    | engine.paper_trader_v2 | EXIT AMBUJACEM.NS 786@Rs360.83 | P&L Rs-2,260 (-1.16R) | friction Rs318 | stop_loss
+2026-11-02 11:01:45 | INFO    | engine.paper_trader_v2 | EXIT DIXON.NS 15@Rs12172.6 | P&L Rs+868 (+0.47R) | friction Rs221 | t1_vwap
+2026-11-02 11:01:45 | INFO    | engine.paper_trader_v2 | T1 DIXON.NS - half out at VWAP, stop to Rs12133.01 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-02 11:01:46 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,943 risk per trade)
+2026-11-02 11:01:46 | INFO    | __main__ |   base 0.40%
+2026-11-02 11:01:46 | INFO    | __main__ |   performance x0.6: n=101, observed expectancy shrunk to -0.031R vs prior +0.125R -> trimming (0.60x)
+2026-11-02 11:01:46 | INFO    | __main__ |   drawdown    x0.702: drawdown 3.8% - sizing at 0.70x
+2026-11-02 11:01:46 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-02 11:01:46 | INFO    | __main__ | strategy: MOM-v3
+2026-11-02 11:01:46 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-02 11:01:47 | INFO    | engine.paper_trader_v2 | ORDER REJECTED DIXON.NS: max 2 entries per day for DIXON.NS
+2026-11-02 11:01:47 | INFO    | engine.paper_trader_v2 | ORDER REJECTED DELHIVERY.NS: at max entries per day (5)
+2026-11-02 11:01:47 | INFO    | engine.paper_trader_v2 | ORDER REJECTED RELIANCE.NS: already holding this name
+2026-11-02 11:01:47 | INFO    | __main__ | equity Rs971,400 | open 2 | pending 0 | closed 101 | WR 55.4% | PF 0.73 | friction Rs33,716
