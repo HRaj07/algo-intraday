@@ -1,56 +1,15 @@
 {
-  "cash": 933385.9502116188,
+  "cash": 969724.7657244757,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "MAXHEALTH.NS": {
-      "ticker": "MAXHEALTH.NS",
-      "direction": "LONG",
-      "entry_price": 899.6500244140625,
-      "qty": 214,
-      "qty_open": 214,
-      "stop_loss": 890.6,
-      "initial_stop": 890.6,
-      "t1": 905.4,
-      "t2": 918.11,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 9.05,
-      "atr": 9.06,
-      "margin": 38505.02104492188,
-      "entry_cost": 55.82985776523096,
-      "bars_held": 8,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-02 10:31:24 IST",
-      "predicted_rr": null,
-      "entry_rsi": 76.6,
-      "entry_deviation_pct": 0.982,
-      "entry_atr_pct": 1.006,
-      "entry_rvol": 4.13,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 13.3,
-      "entry_stop_pct": 1.006,
-      "nifty_at_entry": 23333.69921875,
-      "mfe_price": 900.5999755859375,
-      "mae_price": 892.5
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "MAXHEALTH.NS": {
-      "close": 896.3499755859375,
-      "high": 896.9000244140625,
-      "low": 896.3499755859375,
-      "as_of": "2026-11-02T12:31:27.346408+05:30"
+      "close": 888.0,
+      "high": 888.2999877929688,
+      "low": 888.0,
+      "as_of": "2026-11-02T12:46:00.269527+05:30"
     }
   },
   "trade_history": [
@@ -2195,6 +2154,27 @@
       "entry_rvol": 7.96,
       "entry_turnover_cr": 54.87,
       "entry_stop_pct": 0.77
+    },
+    {
+      "ticker": "MAXHEALTH.NS",
+      "direction": "LONG",
+      "entry_price": 899.6500244140625,
+      "exit_price": 890.6,
+      "qty": 214,
+      "pnl": -2166.21,
+      "R_multiple": -1.12,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 229.5,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-02 10:31:24 IST",
+      "exit_time": "2026-11-02 12:46:00 IST",
+      "entry_rsi": 76.6,
+      "entry_deviation_pct": 0.982,
+      "entry_atr_pct": 1.006,
+      "entry_rvol": 4.13,
+      "entry_turnover_cr": 13.3,
+      "entry_stop_pct": 1.006
     }
   ],
   "daily_entry_count": {
@@ -2220,7 +2200,7 @@
     "2026-10-30": 6,
     "2026-11-02": 5
   },
-  "total_pnl": -28109.028743459825,
+  "total_pnl": -30275.234275524825,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
