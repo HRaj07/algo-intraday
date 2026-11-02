@@ -9016,3 +9016,19 @@
 2026-11-02 11:32:01 | INFO    | engine.paper_trader_v2 | ORDER REJECTED GAIL.NS: at max entries per day (5)
 2026-11-02 11:32:01 | INFO    | engine.paper_trader_v2 | ORDER REJECTED TATAPOWER.NS: at max entries per day (5)
 2026-11-02 11:32:01 | INFO    | __main__ | equity Rs971,966 | open 1 | pending 0 | closed 102 | WR 55.9% | PF 0.74 | friction Rs34,004
+2026-11-02 11:45:51 | INFO    | __main__ | ================================================================
+2026-11-02 11:45:51 | INFO    | __main__ | Scan | 2026-11-02 11:45 IST
+2026-11-02 11:46:36 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-02 11:46:36 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,944 risk per trade)
+2026-11-02 11:46:36 | INFO    | __main__ |   base 0.40%
+2026-11-02 11:46:36 | INFO    | __main__ |   performance x0.6: n=102, observed expectancy shrunk to -0.027R vs prior +0.125R -> trimming (0.60x)
+2026-11-02 11:46:36 | INFO    | __main__ |   drawdown    x0.71: drawdown 3.7% - sizing at 0.71x
+2026-11-02 11:46:36 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-02 11:46:36 | INFO    | __main__ | strategy: MOM-v3
+2026-11-02 11:46:36 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-02 11:46:36 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SHRIRAMFIN.NS: at max entries per day (5)
+2026-11-02 11:46:36 | INFO    | engine.paper_trader_v2 | ORDER REJECTED GAIL.NS: at max entries per day (5)
+2026-11-02 11:46:36 | INFO    | engine.paper_trader_v2 | ORDER REJECTED DIXON.NS: max 2 entries per day for DIXON.NS
+2026-11-02 11:46:36 | INFO    | engine.paper_trader_v2 | ORDER REJECTED RVNL.NS: at max entries per day (5)
+2026-11-02 11:46:36 | INFO    | engine.paper_trader_v2 | ORDER REJECTED COALINDIA.NS: at max entries per day (5)
+2026-11-02 11:46:36 | INFO    | __main__ | equity Rs971,870 | open 1 | pending 0 | closed 102 | WR 55.9% | PF 0.74 | friction Rs34,004
