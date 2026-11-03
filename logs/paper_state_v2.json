@@ -1,48 +1,8 @@
 {
-  "cash": 760371.5801377271,
+  "cash": 853027.3122719246,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "MARICO.NS": {
-      "ticker": "MARICO.NS",
-      "direction": "LONG",
-      "entry_price": 859.0999755859375,
-      "qty": 241,
-      "qty_open": 241,
-      "stop_loss": 851.08,
-      "initial_stop": 851.08,
-      "t1": 864.25,
-      "t2": 875.15,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 8.02,
-      "atr": 8.02,
-      "margin": 41408.61882324219,
-      "entry_cost": 58.26025621361842,
-      "bars_held": 5,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-03 10:15:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 81.1,
-      "entry_deviation_pct": 1.44,
-      "entry_atr_pct": 0.934,
-      "entry_rvol": 12.58,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 6.03,
-      "entry_stop_pct": 0.934,
-      "nifty_at_entry": 23638.94921875,
-      "mfe_price": 863.7000122070312,
-      "mae_price": 859.0999755859375
-    },
     "MOTHERSON.NS": {
       "ticker": "MOTHERSON.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 1.02,
       "margin": 61482.144552612306,
       "entry_cost": 75.06239945487309,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-03 10:15:50 IST",
@@ -82,46 +42,6 @@
       "nifty_at_entry": 23638.94921875,
       "mfe_price": 162.55999755859375,
       "mae_price": 161.25999450683594
-    },
-    "CDSL.NS": {
-      "ticker": "CDSL.NS",
-      "direction": "LONG",
-      "entry_price": 1318.4000244140625,
-      "qty": 186,
-      "qty_open": 186,
-      "stop_loss": 1307.97,
-      "initial_stop": 1307.97,
-      "t1": 1326.41,
-      "t2": 1339.37,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 10.43,
-      "atr": 10.43,
-      "margin": 49044.48090820313,
-      "entry_cost": 64.65170185459326,
-      "bars_held": 4,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-03 10:31:19 IST",
-      "predicted_rr": null,
-      "entry_rsi": 79.0,
-      "entry_deviation_pct": 1.583,
-      "entry_atr_pct": 0.791,
-      "entry_rvol": 6.35,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 6.15,
-      "entry_stop_pct": 0.791,
-      "nifty_at_entry": 23656.94921875,
-      "mfe_price": 1323.0999755859375,
-      "mae_price": 1318.0
     },
     "KFINTECH.NS": {
       "ticker": "KFINTECH.NS",
@@ -147,7 +67,7 @@
       "atr": 5.68,
       "margin": 60243.3,
       "entry_cost": 74.025449399,
-      "bars_held": 4,
+      "bars_held": 5,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-03 10:31:19 IST",
@@ -167,28 +87,28 @@
   "pending_orders": {},
   "last_known_price": {
     "MOTHERSON.NS": {
-      "close": 161.5800018310547,
-      "high": 161.75,
-      "low": 161.5800018310547,
-      "as_of": "2026-11-03T11:31:22.795411+05:30"
+      "close": 161.72999572753906,
+      "high": 161.77000427246094,
+      "low": 161.64999389648438,
+      "as_of": "2026-11-03T11:45:52.095189+05:30"
     },
     "CDSL.NS": {
-      "close": 1321.0,
-      "high": 1322.699951171875,
-      "low": 1321.0,
-      "as_of": "2026-11-03T11:31:22.795411+05:30"
+      "close": 1325.5999755859375,
+      "high": 1326.699951171875,
+      "low": 1325.4000244140625,
+      "as_of": "2026-11-03T11:45:52.095189+05:30"
     },
     "MARICO.NS": {
-      "close": 863.4500122070312,
-      "high": 863.7000122070312,
-      "low": 863.2999877929688,
-      "as_of": "2026-11-03T11:31:22.795411+05:30"
+      "close": 864.0999755859375,
+      "high": 864.2999877929688,
+      "low": 863.5999755859375,
+      "as_of": "2026-11-03T11:45:52.095189+05:30"
     },
     "KFINTECH.NS": {
-      "close": 878.1500244140625,
-      "high": 879.3499755859375,
-      "low": 878.1500244140625,
-      "as_of": "2026-11-03T11:31:22.795411+05:30"
+      "close": 879.4500122070312,
+      "high": 880.25,
+      "low": 879.0,
+      "as_of": "2026-11-03T11:45:52.095189+05:30"
     }
   },
   "trade_history": [
@@ -2396,6 +2316,48 @@
       "entry_rvol": 9.44,
       "entry_turnover_cr": 2.47,
       "entry_stop_pct": 0.677
+    },
+    {
+      "ticker": "MARICO.NS",
+      "direction": "LONG",
+      "entry_price": 859.0999755859375,
+      "exit_price": 864.25,
+      "qty": 241,
+      "pnl": 995.29,
+      "R_multiple": 0.51,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 245.86,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-03 10:15:50 IST",
+      "exit_time": "2026-11-03 11:45:52 IST",
+      "entry_rsi": 81.1,
+      "entry_deviation_pct": 1.44,
+      "entry_atr_pct": 0.934,
+      "entry_rvol": 12.58,
+      "entry_turnover_cr": 6.03,
+      "entry_stop_pct": 0.934
+    },
+    {
+      "ticker": "CDSL.NS",
+      "direction": "LONG",
+      "entry_price": 1318.4000244140625,
+      "exit_price": 1326.41,
+      "qty": 186,
+      "pnl": 1207.34,
+      "R_multiple": 0.62,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 282.51,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-03 10:31:19 IST",
+      "exit_time": "2026-11-03 11:45:52 IST",
+      "entry_rsi": 79.0,
+      "entry_deviation_pct": 1.583,
+      "entry_atr_pct": 0.791,
+      "entry_rvol": 6.35,
+      "entry_turnover_cr": 6.15,
+      "entry_stop_pct": 0.791
     }
   ],
   "daily_entry_count": {
@@ -2422,7 +2384,7 @@
     "2026-11-02": 5,
     "2026-11-03": 6
   },
-  "total_pnl": -27449.875578215753,
+  "total_pnl": -25247.24317546357,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
