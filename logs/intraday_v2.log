@@ -9288,3 +9288,23 @@
 2026-11-03 10:16:38 | INFO    | engine.paper_trader_v2 | FILLED CDSL.NS @ Rs1307.4000244140625 | qty=191 notional=Rs249,713 friction=Rs286
 2026-11-03 10:16:38 | INFO    | engine.paper_trader_v2 | FILLED MOTHERSON.NS @ Rs161.7100067138672 | qty=1901 notional=Rs307,411 friction=Rs341
 2026-11-03 10:16:40 | INFO    | __main__ | equity Rs969,725 | open 3 | pending 0 | closed 103 | WR 55.3% | PF 0.73 | friction Rs34,234
+2026-11-03 10:31:19 | INFO    | __main__ | ================================================================
+2026-11-03 10:31:19 | INFO    | __main__ | Scan | 2026-11-03 10:31 IST
+2026-11-03 10:32:08 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-03 10:32:08 | INFO    | engine.paper_trader_v2 | EXIT CDSL.NS 191@Rs1316.35 | P&L Rs+1,422 (+0.73R) | friction Rs287 | t1_vwap
+2026-11-03 10:32:08 | INFO    | engine.paper_trader_v2 | T1 CDSL.NS - half out at VWAP, stop to Rs1310.42 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-03 10:32:11 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,943 risk per trade)
+2026-11-03 10:32:11 | INFO    | __main__ |   base 0.40%
+2026-11-03 10:32:11 | INFO    | __main__ |   performance x0.6: n=104, observed expectancy shrunk to -0.029R vs prior +0.125R -> trimming (0.60x)
+2026-11-03 10:32:11 | INFO    | __main__ |   drawdown    x0.708: drawdown 3.8% - sizing at 0.71x
+2026-11-03 10:32:11 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-03 10:32:11 | INFO    | __main__ | strategy: MOM-v3
+2026-11-03 10:32:11 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-03 10:32:11 | INFO    | engine.paper_trader_v2 | ORDER REJECTED MARICO.NS: already holding this name
+2026-11-03 10:32:11 | INFO    | engine.paper_trader_v2 | ORDER ANGELONE.NS market buy at next open (ref Rs306.45, SL 0.677%, RSI 84.6, rvol 9.44)
+2026-11-03 10:32:11 | INFO    | engine.paper_trader_v2 | ORDER CDSL.NS market buy at next open (ref Rs1318.5, SL 0.791%, RSI 79.0, rvol 6.35)
+2026-11-03 10:32:11 | INFO    | engine.paper_trader_v2 | ORDER KFINTECH.NS market buy at next open (ref Rs881.05, SL 0.644%, RSI 75.4, rvol 3.57)
+2026-11-03 10:32:11 | INFO    | engine.paper_trader_v2 | FILLED ANGELONE.NS @ Rs306.45001220703125 | qty=938 notional=Rs287,450 friction=Rs322
+2026-11-03 10:32:11 | INFO    | engine.paper_trader_v2 | FILLED CDSL.NS @ Rs1318.4000244140625 | qty=186 notional=Rs245,222 friction=Rs281
+2026-11-03 10:32:11 | INFO    | engine.paper_trader_v2 | FILLED KFINTECH.NS @ Rs880.75 | qty=342 notional=Rs301,216 friction=Rs335
+2026-11-03 10:32:12 | INFO    | __main__ | equity Rs971,413 | open 5 | pending 0 | closed 104 | WR 55.8% | PF 0.74 | friction Rs34,521
