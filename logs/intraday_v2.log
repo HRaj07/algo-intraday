@@ -9413,3 +9413,17 @@
 2026-11-03 12:16:44 | INFO    | engine.paper_trader_v2 | ORDER REJECTED ANGELONE.NS: at max entries per day (5)
 2026-11-03 12:16:44 | INFO    | engine.paper_trader_v2 | ORDER REJECTED CDSL.NS: max 2 entries per day for CDSL.NS
 2026-11-03 12:16:44 | INFO    | __main__ | equity Rs972,567 | open 2 | pending 0 | closed 107 | WR 57.0% | PF 0.78 | friction Rs35,372
+2026-11-03 12:31:27 | INFO    | __main__ | ================================================================
+2026-11-03 12:31:27 | INFO    | __main__ | Scan | 2026-11-03 12:31 IST
+2026-11-03 12:32:03 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-03 12:32:03 | INFO    | engine.paper_trader_v2 | EXIT KFINTECH.NS 342@Rs875.08 | P&L Rs-2,272 (-1.17R) | friction Rs333 | stop_loss
+2026-11-03 12:32:03 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,943 risk per trade)
+2026-11-03 12:32:03 | INFO    | __main__ |   base 0.40%
+2026-11-03 12:32:03 | INFO    | __main__ |   performance x0.6: n=108, observed expectancy shrunk to -0.024R vs prior +0.125R -> trimming (0.60x)
+2026-11-03 12:32:03 | INFO    | __main__ |   drawdown    x0.708: drawdown 3.8% - sizing at 0.71x
+2026-11-03 12:32:03 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-03 12:32:03 | INFO    | __main__ | strategy: MOM-v3
+2026-11-03 12:32:03 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-03 12:32:04 | INFO    | engine.paper_trader_v2 | ORDER REJECTED ANGELONE.NS: at max entries per day (5)
+2026-11-03 12:32:04 | INFO    | engine.paper_trader_v2 | ORDER REJECTED MCX.NS: at max entries per day (5)
+2026-11-03 12:32:04 | INFO    | __main__ | equity Rs971,720 | open 1 | pending 0 | closed 108 | WR 56.5% | PF 0.76 | friction Rs35,705
