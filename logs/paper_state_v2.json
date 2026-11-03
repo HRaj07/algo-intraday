@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "MOTHERSON.NS": {
-      "close": 160.64999389648438,
-      "high": 160.64999389648438,
-      "low": 160.57000732421875,
-      "as_of": "2026-11-03T13:01:12.377189+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
