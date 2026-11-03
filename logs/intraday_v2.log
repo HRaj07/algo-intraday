@@ -9271,3 +9271,20 @@
 2026-11-03 10:01:56 | INFO    | __main__ | strategy: MOM-v3
 2026-11-03 10:01:56 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-03 10:01:56 | INFO    | __main__ | equity Rs969,725 | open 0 | pending 0 | closed 103 | WR 55.3% | PF 0.73 | friction Rs34,234
+2026-11-03 10:15:50 | INFO    | __main__ | ================================================================
+2026-11-03 10:15:50 | INFO    | __main__ | Scan | 2026-11-03 10:15 IST
+2026-11-03 10:16:38 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-03 10:16:38 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,939 risk per trade)
+2026-11-03 10:16:38 | INFO    | __main__ |   base 0.40%
+2026-11-03 10:16:38 | INFO    | __main__ |   performance x0.6: n=103, observed expectancy shrunk to -0.034R vs prior +0.125R -> trimming (0.60x)
+2026-11-03 10:16:38 | INFO    | __main__ |   drawdown    x0.675: drawdown 4.0% - sizing at 0.67x
+2026-11-03 10:16:38 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-03 10:16:38 | INFO    | __main__ | strategy: MOM-v3
+2026-11-03 10:16:38 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-03 10:16:38 | INFO    | engine.paper_trader_v2 | ORDER MARICO.NS market buy at next open (ref Rs859.1, SL 0.934%, RSI 81.1, rvol 12.58)
+2026-11-03 10:16:38 | INFO    | engine.paper_trader_v2 | ORDER CDSL.NS market buy at next open (ref Rs1308.5, SL 0.776%, RSI 76.2, rvol 6.06)
+2026-11-03 10:16:38 | INFO    | engine.paper_trader_v2 | ORDER MOTHERSON.NS market buy at next open (ref Rs161.7, SL 0.631%, RSI 79.7, rvol 3.0)
+2026-11-03 10:16:38 | INFO    | engine.paper_trader_v2 | FILLED MARICO.NS @ Rs859.0999755859375 | qty=241 notional=Rs207,043 friction=Rs245
+2026-11-03 10:16:38 | INFO    | engine.paper_trader_v2 | FILLED CDSL.NS @ Rs1307.4000244140625 | qty=191 notional=Rs249,713 friction=Rs286
+2026-11-03 10:16:38 | INFO    | engine.paper_trader_v2 | FILLED MOTHERSON.NS @ Rs161.7100067138672 | qty=1901 notional=Rs307,411 friction=Rs341
+2026-11-03 10:16:40 | INFO    | __main__ | equity Rs969,725 | open 3 | pending 0 | closed 103 | WR 55.3% | PF 0.73 | friction Rs34,234
