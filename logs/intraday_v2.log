@@ -9323,3 +9323,21 @@
 2026-11-03 10:46:42 | INFO    | engine.paper_trader_v2 | ORDER REJECTED ASIANPAINT.NS: at max concurrent positions (3)
 2026-11-03 10:46:42 | INFO    | engine.paper_trader_v2 | ORDER REJECTED CDSL.NS: already holding this name
 2026-11-03 10:46:42 | INFO    | __main__ | equity Rs973,457 | open 5 | pending 0 | closed 104 | WR 55.8% | PF 0.74 | friction Rs34,521
+2026-11-03 11:01:13 | INFO    | __main__ | ================================================================
+2026-11-03 11:01:13 | INFO    | __main__ | Scan | 2026-11-03 11:01 IST
+2026-11-03 11:01:49 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-03 11:01:49 | INFO    | engine.paper_trader_v2 | EXIT ANGELONE.NS 938@Rs308.29 | P&L Rs+1,403 (+0.72R) | friction Rs323 | t1_vwap
+2026-11-03 11:01:49 | INFO    | engine.paper_trader_v2 | T1 ANGELONE.NS - half out at VWAP, stop to Rs307.1 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-03 11:01:50 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,948 risk per trade)
+2026-11-03 11:01:50 | INFO    | __main__ |   base 0.40%
+2026-11-03 11:01:50 | INFO    | __main__ |   performance x0.6: n=105, observed expectancy shrunk to -0.024R vs prior +0.125R -> trimming (0.60x)
+2026-11-03 11:01:50 | INFO    | __main__ |   drawdown    x0.746: drawdown 3.5% - sizing at 0.75x
+2026-11-03 11:01:50 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-03 11:01:50 | INFO    | __main__ | strategy: MOM-v3
+2026-11-03 11:01:50 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-03 11:01:50 | INFO    | engine.paper_trader_v2 | ORDER REJECTED ANGELONE.NS: at max concurrent positions (3)
+2026-11-03 11:01:50 | INFO    | engine.paper_trader_v2 | ORDER REJECTED ASIANPAINT.NS: at max concurrent positions (3)
+2026-11-03 11:01:50 | INFO    | engine.paper_trader_v2 | ORDER REJECTED CDSL.NS: already holding this name
+2026-11-03 11:01:50 | INFO    | engine.paper_trader_v2 | ORDER REJECTED MARICO.NS: already holding this name
+2026-11-03 11:01:50 | INFO    | engine.paper_trader_v2 | ORDER REJECTED KFINTECH.NS: already holding this name
+2026-11-03 11:01:50 | INFO    | __main__ | equity Rs974,024 | open 4 | pending 0 | closed 105 | WR 56.2% | PF 0.76 | friction Rs34,844

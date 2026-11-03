@@ -1,5 +1,5 @@
 {
-  "cash": 701478.6691044449,
+  "cash": 760371.5801377271,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 8.02,
       "margin": 41408.61882324219,
       "entry_cost": 58.26025621361842,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-03 10:15:50 IST",
@@ -67,7 +67,7 @@
       "atr": 1.02,
       "margin": 61482.144552612306,
       "entry_cost": 75.06239945487309,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-03 10:15:50 IST",
@@ -80,48 +80,8 @@
       "entry_turnover_cr": 4.58,
       "entry_stop_pct": 0.631,
       "nifty_at_entry": 23638.94921875,
-      "mfe_price": 161.91000366210938,
+      "mfe_price": 162.55999755859375,
       "mae_price": 161.25999450683594
-    },
-    "ANGELONE.NS": {
-      "ticker": "ANGELONE.NS",
-      "direction": "LONG",
-      "entry_price": 306.45001220703125,
-      "qty": 938,
-      "qty_open": 938,
-      "stop_loss": 304.38,
-      "initial_stop": 304.38,
-      "t1": 308.29,
-      "t2": 310.6,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.07,
-      "atr": 2.07,
-      "margin": 57490.022290039065,
-      "entry_cost": 71.7208733574314,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-03 10:31:19 IST",
-      "predicted_rr": null,
-      "entry_rsi": 84.6,
-      "entry_deviation_pct": 1.196,
-      "entry_atr_pct": 0.677,
-      "entry_rvol": 9.44,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 2.47,
-      "entry_stop_pct": 0.677,
-      "nifty_at_entry": 23656.94921875,
-      "mfe_price": 307.8999938964844,
-      "mae_price": 306.45001220703125
     },
     "CDSL.NS": {
       "ticker": "CDSL.NS",
@@ -147,7 +107,7 @@
       "atr": 10.43,
       "margin": 49044.48090820313,
       "entry_cost": 64.65170185459326,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-03 10:31:19 IST",
@@ -187,7 +147,7 @@
       "atr": 5.68,
       "margin": 60243.3,
       "entry_cost": 74.025449399,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-03 10:31:19 IST",
@@ -200,41 +160,41 @@
       "entry_turnover_cr": 2.17,
       "entry_stop_pct": 0.644,
       "nifty_at_entry": 23656.94921875,
-      "mfe_price": 880.75,
+      "mfe_price": 881.0,
       "mae_price": 878.9500122070312
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "MOTHERSON.NS": {
-      "close": 161.4600067138672,
-      "high": 161.4600067138672,
-      "low": 161.25999450683594,
-      "as_of": "2026-11-03T10:45:54.237629+05:30"
+      "close": 162.0500030517578,
+      "high": 162.55999755859375,
+      "low": 162.02999877929688,
+      "as_of": "2026-11-03T11:01:13.057570+05:30"
     },
     "CDSL.NS": {
-      "close": 1323.0999755859375,
-      "high": 1323.0999755859375,
-      "low": 1321.0,
-      "as_of": "2026-11-03T10:45:54.237629+05:30"
+      "close": 1319.699951171875,
+      "high": 1320.9000244140625,
+      "low": 1319.4000244140625,
+      "as_of": "2026-11-03T11:01:13.057570+05:30"
     },
     "MARICO.NS": {
-      "close": 862.4500122070312,
-      "high": 862.7999877929688,
-      "low": 862.2000122070312,
-      "as_of": "2026-11-03T10:45:54.237629+05:30"
+      "close": 862.0999755859375,
+      "high": 862.0999755859375,
+      "low": 861.6500244140625,
+      "as_of": "2026-11-03T11:01:13.057570+05:30"
     },
     "ANGELONE.NS": {
-      "close": 307.8999938964844,
-      "high": 307.8999938964844,
-      "low": 307.8999938964844,
-      "as_of": "2026-11-03T10:45:54.237629+05:30"
+      "close": 309.3999938964844,
+      "high": 309.6000061035156,
+      "low": 309.29998779296875,
+      "as_of": "2026-11-03T11:01:13.057570+05:30"
     },
     "KFINTECH.NS": {
-      "close": 880.0,
-      "high": 880.4000244140625,
-      "low": 878.9500122070312,
-      "as_of": "2026-11-03T10:45:54.237629+05:30"
+      "close": 880.3499755859375,
+      "high": 881.0,
+      "low": 880.1500244140625,
+      "as_of": "2026-11-03T11:01:13.057570+05:30"
     }
   },
   "trade_history": [
@@ -2421,6 +2381,27 @@
       "entry_rvol": 6.06,
       "entry_turnover_cr": 5.92,
       "entry_stop_pct": 0.776
+    },
+    {
+      "ticker": "ANGELONE.NS",
+      "direction": "LONG",
+      "entry_price": 306.45001220703125,
+      "exit_price": 308.29,
+      "qty": 938,
+      "pnl": 1402.89,
+      "R_multiple": 0.72,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 323.02,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-03 10:31:19 IST",
+      "exit_time": "2026-11-03 11:01:13 IST",
+      "entry_rsi": 84.6,
+      "entry_deviation_pct": 1.196,
+      "entry_atr_pct": 0.677,
+      "entry_rvol": 9.44,
+      "entry_turnover_cr": 2.47,
+      "entry_stop_pct": 0.677
     }
   ],
   "daily_entry_count": {
@@ -2447,7 +2428,7 @@
     "2026-11-02": 5,
     "2026-11-03": 6
   },
-  "total_pnl": -28852.764321458908,
+  "total_pnl": -27449.875578215753,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
