@@ -27,7 +27,7 @@
       "atr": 1.02,
       "margin": 61482.144552612306,
       "entry_cost": 75.06239945487309,
-      "bars_held": 7,
+      "bars_held": 8,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-03 10:15:50 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.631,
       "nifty_at_entry": 23638.94921875,
       "mfe_price": 162.55999755859375,
-      "mae_price": 161.25999450683594
+      "mae_price": 161.16000366210938
     },
     "KFINTECH.NS": {
       "ticker": "KFINTECH.NS",
@@ -67,7 +67,7 @@
       "atr": 5.68,
       "margin": 60243.3,
       "entry_cost": 74.025449399,
-      "bars_held": 6,
+      "bars_held": 7,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-03 10:31:19 IST",
@@ -81,22 +81,22 @@
       "entry_stop_pct": 0.644,
       "nifty_at_entry": 23656.94921875,
       "mfe_price": 881.0,
-      "mae_price": 878.1500244140625
+      "mae_price": 876.75
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "MOTHERSON.NS": {
-      "close": 161.5800018310547,
-      "high": 161.6999969482422,
-      "low": 161.5800018310547,
-      "as_of": "2026-11-03T12:01:05.800250+05:30"
+      "close": 161.27999877929688,
+      "high": 161.27999877929688,
+      "low": 161.16000366210938,
+      "as_of": "2026-11-03T12:15:49.839380+05:30"
     },
     "KFINTECH.NS": {
-      "close": 879.5499877929688,
-      "high": 879.9500122070312,
-      "low": 879.0,
-      "as_of": "2026-11-03T12:01:05.800250+05:30"
+      "close": 876.75,
+      "high": 877.7999877929688,
+      "low": 876.75,
+      "as_of": "2026-11-03T12:15:49.839380+05:30"
     }
   },
   "trade_history": [
