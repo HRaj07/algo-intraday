@@ -9723,3 +9723,7 @@
 2026-11-04 14:31:25 | INFO    | __main__ | Scan | 2026-11-04 14:31 IST
 2026-11-04 14:31:52 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
 2026-11-04 14:31:52 | WARNING | __main__ | NOT TRADING: daily loss Rs-11,386 hit the -3.0R limit (-Rs5,753)
+2026-11-04 14:45:53 | INFO    | __main__ | ================================================================
+2026-11-04 14:45:53 | INFO    | __main__ | Scan | 2026-11-04 14:45 IST
+2026-11-04 14:46:41 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-04 14:46:41 | WARNING | __main__ | NOT TRADING: daily loss Rs-11,386 hit the -3.0R limit (-Rs5,753)
