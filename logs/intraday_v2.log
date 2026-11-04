@@ -9731,3 +9731,8 @@
 2026-11-04 15:01:10 | INFO    | __main__ | Scan | 2026-11-04 15:01 IST
 2026-11-04 15:01:45 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
 2026-11-04 15:01:45 | WARNING | __main__ | NOT TRADING: daily loss Rs-11,386 hit the -3.0R limit (-Rs5,753)
+2026-11-04 15:15:55 | INFO    | __main__ | ================================================================
+2026-11-04 15:15:55 | INFO    | __main__ | Scan | 2026-11-04 15:15 IST
+2026-11-04 15:16:41 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-04 15:16:41 | INFO    | __main__ | EOD: {'equity': 958816.08, 'cash': 958816.08, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 114, 'win_rate_pct': 53.5, 'profit_factor': 0.68, 'total_friction': 37742.08, 'total_pnl': -41183.92, 'return_pct': -4.12}
+2026-11-04 15:16:41 | WARNING | __main__ | KILL SWITCH has tripped 10x in paper mode; latest {'date': '2026-10-27', 'pf': 0.766, 'n': 30, 'trade_count': 74} - live mode would be HALTED
