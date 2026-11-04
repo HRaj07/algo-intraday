@@ -9663,3 +9663,7 @@
 2026-11-04 10:46:40 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
 2026-11-04 10:46:41 | INFO    | engine.paper_trader_v2 | EXIT KFINTECH.NS 266@Rs899.62 | P&L Rs-2,212 (-1.14R) | friction Rs276 | stop_loss
 2026-11-04 10:46:41 | WARNING | __main__ | NOT TRADING: daily loss Rs-11,386 hit the -3.0R limit (-Rs5,753)
+2026-11-04 11:01:05 | INFO    | __main__ | ================================================================
+2026-11-04 11:01:05 | INFO    | __main__ | Scan | 2026-11-04 11:01 IST
+2026-11-04 11:01:51 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-04 11:01:51 | WARNING | __main__ | NOT TRADING: daily loss Rs-11,386 hit the -3.0R limit (-Rs5,753)

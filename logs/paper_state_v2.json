@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "KFINTECH.NS": {
-      "close": 894.0499877929688,
-      "high": 894.9000244140625,
-      "low": 893.5499877929688,
-      "as_of": "2026-11-04T10:45:53.062827+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
