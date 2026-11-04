@@ -9650,3 +9650,11 @@
 2026-11-04 10:16:27 | INFO    | engine.paper_trader_v2 | FILLED RVNL.NS @ Rs190.27999877929688 | qty=1921 notional=Rs365,528 friction=Rs396
 2026-11-04 10:16:27 | INFO    | engine.paper_trader_v2 | FILLED ITC.NS @ Rs282.8999938964844 | qty=955 notional=Rs270,169 friction=Rs305
 2026-11-04 10:16:28 | INFO    | __main__ | equity Rs970,202 | open 5 | pending 0 | closed 109 | WR 56.0% | PF 0.74 | friction Rs36,045
+2026-11-04 10:31:24 | INFO    | __main__ | ================================================================
+2026-11-04 10:31:24 | INFO    | __main__ | Scan | 2026-11-04 10:31 IST
+2026-11-04 10:32:04 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-04 10:32:04 | INFO    | engine.paper_trader_v2 | EXIT BAJAJFINSV.NS 172@Rs1778.34 | P&L Rs-2,276 (-1.18R) | friction Rs340 | stop_loss
+2026-11-04 10:32:04 | INFO    | engine.paper_trader_v2 | EXIT ADANIENT.NS 132@Rs2666.83 | P&L Rs-2,320 (-1.20R) | friction Rs384 | stop_loss
+2026-11-04 10:32:04 | INFO    | engine.paper_trader_v2 | EXIT RVNL.NS 1921@Rs189.27 | P&L Rs-2,335 (-1.20R) | friction Rs395 | stop_loss
+2026-11-04 10:32:04 | INFO    | engine.paper_trader_v2 | EXIT ITC.NS 955@Rs280.87 | P&L Rs-2,242 (-1.16R) | friction Rs304 | stop_loss
+2026-11-04 10:32:05 | WARNING | __main__ | NOT TRADING: daily loss Rs-9,174 hit the -3.0R limit (-Rs5,765)
