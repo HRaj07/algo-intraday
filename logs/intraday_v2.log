@@ -9629,3 +9629,24 @@
 2026-11-04 10:01:47 | INFO    | __main__ | strategy: MOM-v3
 2026-11-04 10:01:47 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-04 10:01:47 | INFO    | __main__ | equity Rs970,202 | open 0 | pending 0 | closed 109 | WR 56.0% | PF 0.74 | friction Rs36,045
+2026-11-04 10:15:50 | INFO    | __main__ | ================================================================
+2026-11-04 10:15:50 | INFO    | __main__ | Scan | 2026-11-04 10:15 IST
+2026-11-04 10:16:27 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-04 10:16:27 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,940 risk per trade)
+2026-11-04 10:16:27 | INFO    | __main__ |   base 0.40%
+2026-11-04 10:16:27 | INFO    | __main__ |   performance x0.6: n=109, observed expectancy shrunk to -0.031R vs prior +0.125R -> trimming (0.60x)
+2026-11-04 10:16:27 | INFO    | __main__ |   drawdown    x0.683: drawdown 3.9% - sizing at 0.68x
+2026-11-04 10:16:27 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-04 10:16:27 | INFO    | __main__ | strategy: MOM-v3
+2026-11-04 10:16:27 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-04 10:16:27 | INFO    | engine.paper_trader_v2 | ORDER KFINTECH.NS market buy at next open (ref Rs906.9, SL 0.803%, RSI 74.5, rvol 4.7)
+2026-11-04 10:16:27 | INFO    | engine.paper_trader_v2 | ORDER BAJAJFINSV.NS market buy at next open (ref Rs1792.9, SL 0.629%, RSI 85.7, rvol 4.22)
+2026-11-04 10:16:27 | INFO    | engine.paper_trader_v2 | ORDER ADANIENT.NS market buy at next open (ref Rs2680.4, SL 0.547%, RSI 78.7, rvol 4.07)
+2026-11-04 10:16:27 | INFO    | engine.paper_trader_v2 | ORDER RVNL.NS market buy at next open (ref Rs190.28, SL 0.529%, RSI 73.9, rvol 3.98)
+2026-11-04 10:16:27 | INFO    | engine.paper_trader_v2 | ORDER ITC.NS market buy at next open (ref Rs283.0, SL 0.718%, RSI 86.5, rvol 3.07)
+2026-11-04 10:16:27 | INFO    | engine.paper_trader_v2 | FILLED KFINTECH.NS @ Rs906.9000244140625 | qty=266 notional=Rs241,235 friction=Rs278
+2026-11-04 10:16:27 | INFO    | engine.paper_trader_v2 | FILLED BAJAJFINSV.NS @ Rs1789.5999755859375 | qty=172 notional=Rs307,811 friction=Rs341
+2026-11-04 10:16:27 | INFO    | engine.paper_trader_v2 | FILLED ADANIENT.NS @ Rs2681.5 | qty=132 notional=Rs353,958 friction=Rs385
+2026-11-04 10:16:27 | INFO    | engine.paper_trader_v2 | FILLED RVNL.NS @ Rs190.27999877929688 | qty=1921 notional=Rs365,528 friction=Rs396
+2026-11-04 10:16:27 | INFO    | engine.paper_trader_v2 | FILLED ITC.NS @ Rs282.8999938964844 | qty=955 notional=Rs270,169 friction=Rs305
+2026-11-04 10:16:28 | INFO    | __main__ | equity Rs970,202 | open 5 | pending 0 | closed 109 | WR 56.0% | PF 0.74 | friction Rs36,045
