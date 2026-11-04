@@ -9658,3 +9658,8 @@
 2026-11-04 10:32:04 | INFO    | engine.paper_trader_v2 | EXIT RVNL.NS 1921@Rs189.27 | P&L Rs-2,335 (-1.20R) | friction Rs395 | stop_loss
 2026-11-04 10:32:04 | INFO    | engine.paper_trader_v2 | EXIT ITC.NS 955@Rs280.87 | P&L Rs-2,242 (-1.16R) | friction Rs304 | stop_loss
 2026-11-04 10:32:05 | WARNING | __main__ | NOT TRADING: daily loss Rs-9,174 hit the -3.0R limit (-Rs5,765)
+2026-11-04 10:45:53 | INFO    | __main__ | ================================================================
+2026-11-04 10:45:53 | INFO    | __main__ | Scan | 2026-11-04 10:45 IST
+2026-11-04 10:46:40 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-04 10:46:41 | INFO    | engine.paper_trader_v2 | EXIT KFINTECH.NS 266@Rs899.62 | P&L Rs-2,212 (-1.14R) | friction Rs276 | stop_loss
+2026-11-04 10:46:41 | WARNING | __main__ | NOT TRADING: daily loss Rs-11,386 hit the -3.0R limit (-Rs5,753)

@@ -1,80 +1,15 @@
 {
-  "cash": 912781.4915853244,
+  "cash": 958816.0767301508,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "KFINTECH.NS": {
-      "ticker": "KFINTECH.NS",
-      "direction": "LONG",
-      "entry_price": 906.9000244140625,
-      "qty": 266,
-      "qty_open": 266,
-      "stop_loss": 899.62,
-      "initial_stop": 899.62,
-      "t1": 912.34,
-      "t2": 921.47,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 7.28,
-      "atr": 7.28,
-      "margin": 48247.081298828125,
-      "entry_cost": 63.984254459558116,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-04 10:15:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 74.5,
-      "entry_deviation_pct": 0.946,
-      "entry_atr_pct": 0.803,
-      "entry_rvol": 4.7,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 5.13,
-      "entry_stop_pct": 0.803,
-      "nifty_at_entry": 23908.349609375,
-      "mfe_price": 906.9000244140625,
-      "mae_price": 904.6500244140625
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
-    "ADANIENT.NS": {
-      "close": 2669.0,
-      "high": 2674.199951171875,
-      "low": 2666.60009765625,
-      "as_of": "2026-11-04T10:31:24.159800+05:30"
-    },
-    "ITC.NS": {
-      "close": 281.6499938964844,
-      "high": 281.6499938964844,
-      "low": 280.25,
-      "as_of": "2026-11-04T10:31:24.159800+05:30"
-    },
-    "BAJAJFINSV.NS": {
-      "close": 1764.0,
-      "high": 1768.9000244140625,
-      "low": 1764.0,
-      "as_of": "2026-11-04T10:31:24.159800+05:30"
-    },
-    "RVNL.NS": {
-      "close": 188.50999450683594,
-      "high": 188.8300018310547,
-      "low": 188.50999450683594,
-      "as_of": "2026-11-04T10:31:24.159800+05:30"
-    },
     "KFINTECH.NS": {
-      "close": 906.0,
-      "high": 906.0,
-      "low": 904.6500244140625,
-      "as_of": "2026-11-04T10:31:24.159800+05:30"
+      "close": 894.0499877929688,
+      "high": 894.9000244140625,
+      "low": 893.5499877929688,
+      "as_of": "2026-11-04T10:45:53.062827+05:30"
     }
   },
   "trade_history": [
@@ -2450,6 +2385,27 @@
       "entry_rvol": 3.07,
       "entry_turnover_cr": 16.45,
       "entry_stop_pct": 0.718
+    },
+    {
+      "ticker": "KFINTECH.NS",
+      "direction": "LONG",
+      "entry_price": 906.9000244140625,
+      "exit_price": 899.62,
+      "qty": 266,
+      "pnl": -2212.5,
+      "R_multiple": -1.14,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 276.01,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-04 10:15:50 IST",
+      "exit_time": "2026-11-04 10:45:53 IST",
+      "entry_rsi": 74.5,
+      "entry_deviation_pct": 0.946,
+      "entry_atr_pct": 0.803,
+      "entry_rvol": 4.7,
+      "entry_turnover_cr": 5.13,
+      "entry_stop_pct": 0.803
     }
   ],
   "daily_entry_count": {
@@ -2477,7 +2433,7 @@
     "2026-11-03": 6,
     "2026-11-04": 5
   },
-  "total_pnl": -38971.427115847895,
+  "total_pnl": -41183.9232698496,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
