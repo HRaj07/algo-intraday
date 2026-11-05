@@ -9846,3 +9846,19 @@
 2026-11-05 10:31:57 | INFO    | engine.paper_trader_v2 | FILLED BIOCON.NS @ Rs361.8999938964844 | qty=541 notional=Rs195,788 friction=Rs234
 2026-11-05 10:31:57 | INFO    | engine.paper_trader_v2 | FILLED HDFCAMC.NS @ Rs2641.0 | qty=110 notional=Rs290,510 friction=Rs325
 2026-11-05 10:31:58 | INFO    | __main__ | equity Rs960,911 | open 4 | pending 0 | closed 116 | WR 54.3% | PF 0.69 | friction Rs38,217
+2026-11-05 10:45:52 | INFO    | __main__ | ================================================================
+2026-11-05 10:45:52 | INFO    | __main__ | Scan | 2026-11-05 10:45 IST
+2026-11-05 10:46:39 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-05 10:46:39 | INFO    | engine.paper_trader_v2 | EXIT ANGELONE.NS 935@Rs325.2 | P&L Rs-2,255 (-1.18R) | friction Rs338 | stop_loss
+2026-11-05 10:46:39 | INFO    | engine.paper_trader_v2 | EXIT ASHOKLEY.NS 1206@Rs170.45 | P&L Rs+987 (+0.51R) | friction Rs243 | t1_vwap
+2026-11-05 10:46:39 | INFO    | engine.paper_trader_v2 | T1 ASHOKLEY.NS - half out at VWAP, stop to Rs169.87 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-05 10:46:40 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,915 risk per trade)
+2026-11-05 10:46:40 | INFO    | __main__ |   base 0.40%
+2026-11-05 10:46:40 | INFO    | __main__ |   performance x0.6: n=118, observed expectancy shrunk to -0.064R vs prior +0.125R -> trimming (0.60x)
+2026-11-05 10:46:40 | INFO    | __main__ |   drawdown    x0.5: drawdown 5.1% - sizing at 0.50x
+2026-11-05 10:46:40 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-05 10:46:40 | INFO    | __main__ | strategy: MOM-v3
+2026-11-05 10:46:40 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-05 10:46:41 | INFO    | engine.paper_trader_v2 | ORDER REJECTED ASHOKLEY.NS: max 2 entries per day for ASHOKLEY.NS
+2026-11-05 10:46:41 | INFO    | engine.paper_trader_v2 | ORDER REJECTED BIOCON.NS: already holding this name
+2026-11-05 10:46:41 | INFO    | __main__ | equity Rs957,660 | open 2 | pending 0 | closed 118 | WR 54.2% | PF 0.69 | friction Rs38,798

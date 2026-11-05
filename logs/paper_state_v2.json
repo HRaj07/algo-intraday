@@ -1,88 +1,8 @@
 {
-  "cash": 761053.2693654082,
+  "cash": 861847.801708255,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "ANGELONE.NS": {
-      "ticker": "ANGELONE.NS",
-      "direction": "LONG",
-      "entry_price": 327.25,
-      "qty": 935,
-      "qty_open": 935,
-      "stop_loss": 325.2,
-      "initial_stop": 325.2,
-      "t1": 329.06,
-      "t2": 331.2,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.05,
-      "atr": 2.05,
-      "margin": 61195.75,
-      "entry_cost": 74.8226786225,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-05 10:15:49 IST",
-      "predicted_rr": null,
-      "entry_rsi": 88.2,
-      "entry_deviation_pct": 0.967,
-      "entry_atr_pct": 0.627,
-      "entry_rvol": 3.47,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 9.85,
-      "entry_stop_pct": 0.627,
-      "nifty_at_entry": 24391.44921875,
-      "mfe_price": 327.25,
-      "mae_price": 325.6000061035156
-    },
-    "ASHOKLEY.NS": {
-      "ticker": "ASHOKLEY.NS",
-      "direction": "LONG",
-      "entry_price": 169.42999267578125,
-      "qty": 1206,
-      "qty_open": 1206,
-      "stop_loss": 167.84,
-      "initial_stop": 167.84,
-      "t1": 170.45,
-      "t2": 172.62,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 1.59,
-      "atr": 1.59,
-      "margin": 40866.51423339844,
-      "entry_cost": 57.80649840878149,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-05 10:31:25 IST",
-      "predicted_rr": null,
-      "entry_rsi": 88.7,
-      "entry_deviation_pct": 1.37,
-      "entry_atr_pct": 0.941,
-      "entry_rvol": 24.45,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 7.91,
-      "entry_stop_pct": 0.941,
-      "nifty_at_entry": 24394.099609375,
-      "mfe_price": 169.42999267578125,
-      "mae_price": 169.42999267578125
-    },
     "BIOCON.NS": {
       "ticker": "BIOCON.NS",
       "direction": "LONG",
@@ -107,7 +27,7 @@
       "atr": 3.55,
       "margin": 39157.57933959961,
       "entry_cost": 56.37606863462506,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-05 10:31:25 IST",
@@ -120,7 +40,7 @@
       "entry_turnover_cr": 4.17,
       "entry_stop_pct": 0.98,
       "nifty_at_entry": 24394.099609375,
-      "mfe_price": 361.8999938964844,
+      "mfe_price": 362.04998779296875,
       "mae_price": 361.8999938964844
     },
     "HDFCAMC.NS": {
@@ -147,7 +67,7 @@
       "atr": 17.36,
       "margin": 58102.0,
       "entry_cost": 72.23311706,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-05 10:31:25 IST",
@@ -161,28 +81,34 @@
       "entry_stop_pct": 0.657,
       "nifty_at_entry": 24394.099609375,
       "mfe_price": 2641.0,
-      "mae_price": 2641.0
+      "mae_price": 2625.10009765625
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "BIOCON.NS": {
-      "close": 362.70001220703125,
-      "high": 362.79998779296875,
-      "low": 361.8999938964844,
-      "as_of": "2026-11-05T10:31:25.376137+05:30"
+      "close": 362.04998779296875,
+      "high": 362.04998779296875,
+      "low": 362.04998779296875,
+      "as_of": "2026-11-05T10:45:52.683640+05:30"
     },
     "ASHOKLEY.NS": {
-      "close": 170.63999938964844,
-      "high": 170.63999938964844,
-      "low": 169.42999267578125,
-      "as_of": "2026-11-05T10:31:25.376137+05:30"
+      "close": 171.0500030517578,
+      "high": 171.10000610351562,
+      "low": 170.77000427246094,
+      "as_of": "2026-11-05T10:45:52.683640+05:30"
     },
     "ANGELONE.NS": {
-      "close": 325.79998779296875,
-      "high": 325.8500061035156,
-      "low": 325.6000061035156,
-      "as_of": "2026-11-05T10:31:25.376137+05:30"
+      "close": 324.6499938964844,
+      "high": 324.6499938964844,
+      "low": 324.6499938964844,
+      "as_of": "2026-11-05T10:45:52.683640+05:30"
+    },
+    "HDFCAMC.NS": {
+      "close": 2627.10009765625,
+      "high": 2627.60009765625,
+      "low": 2625.10009765625,
+      "as_of": "2026-11-05T10:45:52.683640+05:30"
     }
   },
   "trade_history": [
@@ -2621,6 +2547,48 @@
       "entry_rvol": 5.92,
       "entry_turnover_cr": 4.17,
       "entry_stop_pct": 0.961
+    },
+    {
+      "ticker": "ANGELONE.NS",
+      "direction": "LONG",
+      "entry_price": 327.25,
+      "exit_price": 325.2,
+      "qty": 935,
+      "pnl": -2254.59,
+      "R_multiple": -1.18,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 337.84,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-05 10:15:49 IST",
+      "exit_time": "2026-11-05 10:45:52 IST",
+      "entry_rsi": 88.2,
+      "entry_deviation_pct": 0.967,
+      "entry_atr_pct": 0.627,
+      "entry_rvol": 3.47,
+      "entry_turnover_cr": 9.85,
+      "entry_stop_pct": 0.627
+    },
+    {
+      "ticker": "ASHOKLEY.NS",
+      "direction": "LONG",
+      "entry_price": 169.42999267578125,
+      "exit_price": 170.45,
+      "qty": 1206,
+      "pnl": 986.86,
+      "R_multiple": 0.51,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 243.27,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-05 10:31:25 IST",
+      "exit_time": "2026-11-05 10:45:52 IST",
+      "entry_rsi": 88.7,
+      "entry_deviation_pct": 1.37,
+      "entry_atr_pct": 0.941,
+      "entry_rvol": 24.45,
+      "entry_turnover_cr": 7.91,
+      "entry_stop_pct": 0.941
     }
   ],
   "daily_entry_count": {
@@ -2649,7 +2617,7 @@
     "2026-11-04": 5,
     "2026-11-05": 6
   },
-  "total_pnl": -39624.88706159415,
+  "total_pnl": -40892.618952145844,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
