@@ -1,5 +1,5 @@
 {
-  "cash": 861847.801708255,
+  "cash": 917718.2220384859,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 3.55,
       "margin": 39157.57933959961,
       "entry_cost": 56.37606863462506,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-05 10:31:25 IST",
@@ -41,74 +41,22 @@
       "entry_stop_pct": 0.98,
       "nifty_at_entry": 24394.099609375,
       "mfe_price": 362.04998779296875,
-      "mae_price": 361.8999938964844
-    },
-    "HDFCAMC.NS": {
-      "ticker": "HDFCAMC.NS",
-      "direction": "LONG",
-      "entry_price": 2641.0,
-      "qty": 110,
-      "qty_open": 110,
-      "stop_loss": 2623.65,
-      "initial_stop": 2623.65,
-      "t1": 2656.64,
-      "t2": 2675.51,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 17.35,
-      "atr": 17.36,
-      "margin": 58102.0,
-      "entry_cost": 72.23311706,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-05 10:31:25 IST",
-      "predicted_rr": null,
-      "entry_rsi": 88.0,
-      "entry_deviation_pct": 0.922,
-      "entry_atr_pct": 0.657,
-      "entry_rvol": 2.97,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 11.19,
-      "entry_stop_pct": 0.657,
-      "nifty_at_entry": 24394.099609375,
-      "mfe_price": 2641.0,
-      "mae_price": 2625.10009765625
+      "mae_price": 358.6000061035156
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "BIOCON.NS": {
-      "close": 362.04998779296875,
-      "high": 362.04998779296875,
-      "low": 362.04998779296875,
-      "as_of": "2026-11-05T10:45:52.683640+05:30"
-    },
-    "ASHOKLEY.NS": {
-      "close": 171.0500030517578,
-      "high": 171.10000610351562,
-      "low": 170.77000427246094,
-      "as_of": "2026-11-05T10:45:52.683640+05:30"
-    },
-    "ANGELONE.NS": {
-      "close": 324.6499938964844,
-      "high": 324.6499938964844,
-      "low": 324.6499938964844,
-      "as_of": "2026-11-05T10:45:52.683640+05:30"
+      "close": 358.6000061035156,
+      "high": 358.95001220703125,
+      "low": 358.6000061035156,
+      "as_of": "2026-11-05T11:01:07.503091+05:30"
     },
     "HDFCAMC.NS": {
-      "close": 2627.10009765625,
-      "high": 2627.60009765625,
-      "low": 2625.10009765625,
-      "as_of": "2026-11-05T10:45:52.683640+05:30"
+      "close": 2628.699951171875,
+      "high": 2629.300048828125,
+      "low": 2622.5,
+      "as_of": "2026-11-05T11:01:07.503091+05:30"
     }
   },
   "trade_history": [
@@ -2589,6 +2537,27 @@
       "entry_rvol": 24.45,
       "entry_turnover_cr": 7.91,
       "entry_stop_pct": 0.941
+    },
+    {
+      "ticker": "HDFCAMC.NS",
+      "direction": "LONG",
+      "entry_price": 2641.0,
+      "exit_price": 2623.65,
+      "qty": 110,
+      "pnl": -2231.58,
+      "R_multiple": -1.17,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 323.08,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-05 10:31:25 IST",
+      "exit_time": "2026-11-05 11:01:07 IST",
+      "entry_rsi": 88.0,
+      "entry_deviation_pct": 0.922,
+      "entry_atr_pct": 0.657,
+      "entry_rvol": 2.97,
+      "entry_turnover_cr": 11.19,
+      "entry_stop_pct": 0.657
     }
   ],
   "daily_entry_count": {
@@ -2617,7 +2586,7 @@
     "2026-11-04": 5,
     "2026-11-05": 6
   },
-  "total_pnl": -40892.618952145844,
+  "total_pnl": -43124.19862191483,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
