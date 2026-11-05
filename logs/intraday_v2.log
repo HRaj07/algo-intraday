@@ -9882,3 +9882,7 @@
 2026-11-05 11:16:56 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
 2026-11-05 11:16:56 | INFO    | engine.paper_trader_v2 | EXIT BIOCON.NS 541@Rs358.35 | P&L Rs-2,153 (-1.12R) | friction Rs233 | stop_loss
 2026-11-05 11:16:56 | WARNING | __main__ | NOT TRADING: weekly loss Rs-16,428 hit the -8.0R limit
+2026-11-05 11:31:25 | INFO    | __main__ | ================================================================
+2026-11-05 11:31:25 | INFO    | __main__ | Scan | 2026-11-05 11:31 IST
+2026-11-05 11:32:01 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-05 11:32:01 | WARNING | __main__ | NOT TRADING: weekly loss Rs-16,428 hit the -8.0R limit
