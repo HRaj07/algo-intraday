@@ -9914,3 +9914,7 @@
 2026-11-05 13:15:53 | INFO    | __main__ | Scan | 2026-11-05 13:15 IST
 2026-11-05 13:16:49 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
 2026-11-05 13:16:49 | WARNING | __main__ | NOT TRADING: weekly loss Rs-16,428 hit the -8.0R limit
+2026-11-05 13:31:24 | INFO    | __main__ | ================================================================
+2026-11-05 13:31:24 | INFO    | __main__ | Scan | 2026-11-05 13:31 IST
+2026-11-05 13:31:58 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-05 13:31:58 | WARNING | __main__ | NOT TRADING: weekly loss Rs-16,428 hit the -8.0R limit
