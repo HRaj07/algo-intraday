@@ -9807,3 +9807,21 @@
 2026-11-05 10:02:00 | INFO    | __main__ | strategy: MOM-v3
 2026-11-05 10:02:00 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-05 10:02:00 | INFO    | __main__ | equity Rs958,816 | open 0 | pending 0 | closed 114 | WR 53.5% | PF 0.68 | friction Rs37,742
+2026-11-05 10:15:49 | INFO    | __main__ | ================================================================
+2026-11-05 10:15:49 | INFO    | __main__ | Scan | 2026-11-05 10:15 IST
+2026-11-05 10:16:15 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-05 10:16:16 | WARNING | engine.risk_manager | KILL SWITCH (paper - continuing): rolling 30-trade PF 0.69 < 0.85 - edge has degraded, manual restart required
+2026-11-05 10:16:16 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,918 risk per trade)
+2026-11-05 10:16:16 | INFO    | __main__ |   base 0.40%
+2026-11-05 10:16:16 | INFO    | __main__ |   performance x0.6: n=114, observed expectancy shrunk to -0.066R vs prior +0.125R -> trimming (0.60x)
+2026-11-05 10:16:16 | INFO    | __main__ |   drawdown    x0.5: drawdown 5.0% - sizing at 0.50x
+2026-11-05 10:16:16 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-05 10:16:16 | INFO    | __main__ | strategy: MOM-v3
+2026-11-05 10:16:16 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-05 10:16:16 | INFO    | engine.paper_trader_v2 | ORDER ASHOKLEY.NS market buy at next open (ref Rs168.42, SL 0.973%, RSI 87.9, rvol 9.09)
+2026-11-05 10:16:16 | INFO    | engine.paper_trader_v2 | ORDER BIOCON.NS market buy at next open (ref Rs358.85, SL 0.961%, RSI 76.5, rvol 5.92)
+2026-11-05 10:16:16 | INFO    | engine.paper_trader_v2 | ORDER ANGELONE.NS market buy at next open (ref Rs327.1, SL 0.627%, RSI 88.2, rvol 3.47)
+2026-11-05 10:16:16 | INFO    | engine.paper_trader_v2 | FILLED ASHOKLEY.NS @ Rs168.63999938964844 | qty=1169 notional=Rs197,140 friction=Rs235
+2026-11-05 10:16:16 | INFO    | engine.paper_trader_v2 | FILLED BIOCON.NS @ Rs359.0 | qty=555 notional=Rs199,245 friction=Rs237
+2026-11-05 10:16:16 | INFO    | engine.paper_trader_v2 | FILLED ANGELONE.NS @ Rs327.25 | qty=935 notional=Rs305,979 friction=Rs339
+2026-11-05 10:16:18 | INFO    | __main__ | equity Rs958,816 | open 3 | pending 0 | closed 114 | WR 53.5% | PF 0.68 | friction Rs37,742
