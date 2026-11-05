@@ -9825,3 +9825,24 @@
 2026-11-05 10:16:16 | INFO    | engine.paper_trader_v2 | FILLED BIOCON.NS @ Rs359.0 | qty=555 notional=Rs199,245 friction=Rs237
 2026-11-05 10:16:16 | INFO    | engine.paper_trader_v2 | FILLED ANGELONE.NS @ Rs327.25 | qty=935 notional=Rs305,979 friction=Rs339
 2026-11-05 10:16:18 | INFO    | __main__ | equity Rs958,816 | open 3 | pending 0 | closed 114 | WR 53.5% | PF 0.68 | friction Rs37,742
+2026-11-05 10:31:25 | INFO    | __main__ | ================================================================
+2026-11-05 10:31:25 | INFO    | __main__ | Scan | 2026-11-05 10:31 IST
+2026-11-05 10:31:56 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-05 10:31:56 | INFO    | engine.paper_trader_v2 | EXIT ASHOKLEY.NS 1169@Rs169.43 | P&L Rs+687 (+0.36R) | friction Rs236 | t1_vwap
+2026-11-05 10:31:56 | INFO    | engine.paper_trader_v2 | T1 ASHOKLEY.NS - half out at VWAP, stop to Rs169.09 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-05 10:31:56 | INFO    | engine.paper_trader_v2 | EXIT BIOCON.NS 555@Rs361.0 | P&L Rs+872 (+0.46R) | friction Rs238 | t1_vwap
+2026-11-05 10:31:56 | INFO    | engine.paper_trader_v2 | T1 BIOCON.NS - half out at VWAP, stop to Rs359.95 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-05 10:31:57 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,918 risk per trade)
+2026-11-05 10:31:57 | INFO    | __main__ |   base 0.40%
+2026-11-05 10:31:57 | INFO    | __main__ |   performance x0.6: n=116, observed expectancy shrunk to -0.061R vs prior +0.125R -> trimming (0.60x)
+2026-11-05 10:31:57 | INFO    | __main__ |   drawdown    x0.5: drawdown 5.0% - sizing at 0.50x
+2026-11-05 10:31:57 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-05 10:31:57 | INFO    | __main__ | strategy: MOM-v3
+2026-11-05 10:31:57 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-05 10:31:57 | INFO    | engine.paper_trader_v2 | ORDER ASHOKLEY.NS market buy at next open (ref Rs169.43, SL 0.941%, RSI 88.7, rvol 24.45)
+2026-11-05 10:31:57 | INFO    | engine.paper_trader_v2 | ORDER BIOCON.NS market buy at next open (ref Rs361.8, SL 0.98%, RSI 79.3, rvol 4.83)
+2026-11-05 10:31:57 | INFO    | engine.paper_trader_v2 | ORDER HDFCAMC.NS market buy at next open (ref Rs2640.8, SL 0.657%, RSI 88.0, rvol 2.97)
+2026-11-05 10:31:57 | INFO    | engine.paper_trader_v2 | FILLED ASHOKLEY.NS @ Rs169.42999267578125 | qty=1206 notional=Rs204,333 friction=Rs242
+2026-11-05 10:31:57 | INFO    | engine.paper_trader_v2 | FILLED BIOCON.NS @ Rs361.8999938964844 | qty=541 notional=Rs195,788 friction=Rs234
+2026-11-05 10:31:57 | INFO    | engine.paper_trader_v2 | FILLED HDFCAMC.NS @ Rs2641.0 | qty=110 notional=Rs290,510 friction=Rs325
+2026-11-05 10:31:58 | INFO    | __main__ | equity Rs960,911 | open 4 | pending 0 | closed 116 | WR 54.3% | PF 0.69 | friction Rs38,217
