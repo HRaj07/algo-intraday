@@ -5,23 +5,23 @@ replaying 210 names over 60 trading days
 strategy under replay: MOM-v3
 
 ========================================================================
-  REPLAY RESULT — 60 trading days, 508 scans
+  REPLAY RESULT — 60 trading days, 623 scans
 ========================================================================
-  signals generated   279
-  trades closed       97
-  win rate            47.4%
-  profit factor       0.54
-  net P&L             Rs-60,761   (-6.08% on Rs1,000,000)
-  friction paid       Rs35,828
-  gross before costs  Rs-24,933
-  avg R               -0.276
-  t-stat              -2.83   (>2 is the go-live bar)
-  max drawdown        Rs-62,848  (6.28%)
+  signals generated   241
+  trades closed       93
+  win rate            46.2%
+  profit factor       0.55
+  net P&L             Rs-58,207   (-5.82% on Rs1,000,000)
+  friction paid       Rs35,340
+  gross before costs  Rs-22,868
+  avg R               -0.284
+  t-stat              -2.67   (>2 is the go-live bar)
+  max drawdown        Rs-64,388  (6.44%)
   exits:
-    t1_vwap               45 trades  Rs   70,485
-    square_off             3 trades  Rs     -393
-    vwap_reclaim           3 trades  Rs   -7,835
-    stop_loss             46 trades  Rs -123,018
+    t1_vwap               42 trades  Rs   71,281
+    square_off             2 trades  Rs   -1,253
+    vwap_reclaim           4 trades  Rs   -8,207
+    stop_loss             45 trades  Rs -120,028
 
   >> Negative before costs. The signal itself is not working.
 

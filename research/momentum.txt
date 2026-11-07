@@ -1,4 +1,4 @@
-188,895 bars, 210 names, 60 days
+188,820 bars, 210 names, 60 days
 entry = NEXT bar's open (tradeable). cost = 0.0955% round trip
 
 ======================================================================================
@@ -6,63 +6,64 @@ entry = NEXT bar's open (tradeable). cost = 0.0955% round trip
 ======================================================================================
                                       n      gross        net    win%        t
   -- momentum: long, stretched ABOVE vwap, RSI>=60 --
-  momentum +30 min                5,549    -0.002%    -0.097%    46.1%    -0.19  
-  momentum +1 hour                5,549    -0.001%    -0.096%    47.4%    -0.04  
-  momentum +2 hours               4,930    +0.024%    -0.072%    48.3%    +1.36  
-  momentum to close               5,549    +0.108%    +0.012%    50.5%    +5.53  
+  momentum +30 min                6,115    +0.016%    -0.080%    47.5%    +1.63  
+  momentum +1 hour                6,115    +0.028%    -0.067%    48.7%    +2.33  
+  momentum +2 hours               5,439    +0.061%    -0.035%    49.9%    +3.65  
+  momentum to close               6,115    +0.157%    +0.061%    51.9%    +8.44  
   -- reversion: long, stretched BELOW vwap, RSI<=40 (what we trade) --
-  reversion +30 min               8,320    -0.055%    -0.151%    41.9%    -9.00  
-  reversion +1 hour               8,320    -0.072%    -0.168%    43.2%    -9.43  
-  reversion +2 hours              7,192    -0.119%    -0.214%    42.8%   -11.31  
-  reversion to close              8,320    -0.043%    -0.139%    47.9%    -3.52  
+  reversion +30 min               8,469    -0.050%    -0.145%    42.5%    -8.02  
+  reversion +1 hour               8,469    -0.061%    -0.156%    44.0%    -7.79  
+  reversion +2 hours              7,347    -0.102%    -0.197%    43.6%    -9.41  
+  reversion to close              8,469    -0.012%    -0.107%    48.9%    -0.93  
   -- baseline: every bar --
-  all bars +2 hours             174,384    -0.044%    -0.139%    45.1%   -23.38  
-  all bars to close             188,895    -0.007%    -0.103%    47.4%    -2.94  
+  all bars +2 hours             174,507    -0.025%    -0.121%    46.3%   -13.06  
+  all bars to close             188,820    +0.036%    -0.060%    49.3%   +14.09  
 
 ======================================================================================
   2. DOES IT HOLD IN BOTH HALVES OF THE SAMPLE?
 ======================================================================================
                                       n      gross        net    win%        t
-  momentum first half             2,307    +0.116%    +0.020%    49.0%    +4.09  
-  momentum second half            3,242    +0.102%    +0.007%    51.5%    +3.84  
-  reversion first half            2,508    -0.179%    -0.275%    42.4%    -7.70  
-  reversion second half           5,812    +0.016%    -0.080%    50.3%    +1.09  
+  momentum first half             2,331    +0.140%    +0.045%    48.2%    +4.56  
+  momentum second half            3,784    +0.167%    +0.071%    54.1%    +7.17  
+  reversion first half            2,298    -0.170%    -0.265%    41.5%    -6.92  
+  reversion second half           6,171    +0.047%    -0.049%    51.6%    +3.10  
 
-  split at 2026-09-17
+  split at 2026-09-24
 
 ======================================================================================
   3. MONTH BY MONTH (momentum, to close)
 ======================================================================================
                                       n      gross        net    win%        t
-  2026-08                         1,453    +0.245%    +0.149%    52.9%    +6.74  
+  2026-08                           960    +0.194%    +0.099%    50.6%    +4.26  
   2026-09                         1,782    +0.002%    -0.094%    44.3%    +0.05  
   2026-10                         2,314    +0.104%    +0.008%    53.7%    +3.64  
+  2026-11                         1,059    +0.498%    +0.403%    61.8%   +12.04  
 
 ======================================================================================
   4. IS IT A FEW NAMES? (momentum, to close, names with n>=20)
 ======================================================================================
-  113 names with >=20 signals
-  65 of them positive (58%)
-  median name mean  +0.079%
-  mean of the means +0.111%
-  best 5:  POONAWALLA.NS +1.84%, ADANIENT.NS +1.46%, POLYCAB.NS +1.45%, NAVINFLUOR.NS +1.38%, UPL.NS +1.32%
-  worst 5: TATACHEM.NS -2.62%, SUNDRMFAST.NS -1.04%, NAUKRI.NS -0.72%, AJANTPHARM.NS -0.71%, DEEPAKNTR.NS -0.69%
+  131 names with >=20 signals
+  83 of them positive (63%)
+  median name mean  +0.131%
+  mean of the means +0.167%
+  best 5:  POONAWALLA.NS +2.11%, RELIANCE.NS +1.88%, HAVELLS.NS +1.72%, POLYCAB.NS +1.45%, ADANIENT.NS +1.44%
+  worst 5: TATACHEM.NS -2.62%, SUNDRMFAST.NS -0.99%, NAUKRI.NS -0.83%, RVNL.NS -0.70%, BANDHANBNK.NS -0.66%
 
                                       n      gross        net    win%        t
-  excluding the best 5 names      5,381    +0.064%    -0.032%    49.5%    +3.28  
+  excluding the best 5 names      5,965    +0.117%    +0.021%    51.1%    +6.35  
 
 ======================================================================================
   5. CAN A STOP SURVIVE IT? (momentum, to close)
 ======================================================================================
-  median adverse excursion before the close  -0.682%
-  median favourable excursion               +0.694%
-  median ATR                                 0.545%
+  median adverse excursion before the close  -0.659%
+  median favourable excursion               +0.720%
+  median ATR                                 0.548%
 
                                       n      gross        net    win%        t
-  with a 0.4% stop                5,549    +0.073%    -0.023%    28.2%    +5.65  
-  with a 0.6% stop                5,549    +0.075%    -0.020%    36.3%    +5.23  
-  with a 0.8% stop                5,549    +0.087%    -0.009%    41.5%    +5.42  
-  with a 1.2% stop                5,549    +0.094%    -0.001%    46.9%    +5.52  
+  with a 0.4% stop                6,115    +0.096%    +0.000%    29.2%    +7.68  
+  with a 0.6% stop                6,115    +0.115%    +0.019%    37.9%    +8.19  
+  with a 0.8% stop                6,115    +0.137%    +0.041%    43.3%    +8.81  
+  with a 1.2% stop                6,115    +0.147%    +0.052%    48.7%    +8.92  
 
 ======================================================================================
   6. WHAT THIS DOES AND DOES NOT ESTABLISH
