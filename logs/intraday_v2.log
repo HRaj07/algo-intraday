@@ -10222,3 +10222,21 @@
 2026-11-09 11:16:24 | INFO    | engine.paper_trader_v2 | ORDER LAURUSLABS.NS market buy at next open (ref Rs2460.3, SL 0.653%, RSI 82.2, rvol 3.88)
 2026-11-09 11:16:24 | INFO    | engine.paper_trader_v2 | FILLED LAURUSLABS.NS @ Rs2459.699951171875 | qty=119 notional=Rs292,704 friction=Rs327
 2026-11-09 11:16:25 | INFO    | __main__ | equity Rs956,690 | open 1 | pending 0 | closed 122 | WR 54.1% | PF 0.68 | friction Rs40,105
+2026-11-09 11:31:23 | INFO    | __main__ | ================================================================
+2026-11-09 11:31:23 | INFO    | __main__ | Scan | 2026-11-09 11:31 IST
+2026-11-09 11:31:53 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-09 11:31:53 | INFO    | engine.paper_trader_v2 | EXIT LAURUSLABS.NS 119@Rs2443.64 | P&L Rs-2,236 (-1.17R) | friction Rs325 | stop_loss
+2026-11-09 11:31:54 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,909 risk per trade)
+2026-11-09 11:31:54 | INFO    | __main__ |   base 0.40%
+2026-11-09 11:31:54 | INFO    | __main__ |   performance x0.6: n=123, observed expectancy shrunk to -0.076R vs prior +0.125R -> trimming (0.60x)
+2026-11-09 11:31:54 | INFO    | __main__ |   drawdown    x0.5: drawdown 5.5% - sizing at 0.50x
+2026-11-09 11:31:54 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-09 11:31:54 | INFO    | __main__ | strategy: MOM-v3
+2026-11-09 11:31:54 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-09 11:31:54 | INFO    | engine.paper_trader_v2 | ORDER IRFC.NS market buy at next open (ref Rs81.63, SL 0.531%, RSI 71.4, rvol 5.27)
+2026-11-09 11:31:54 | INFO    | engine.paper_trader_v2 | ORDER EXIDEIND.NS market buy at next open (ref Rs376.4, SL 0.689%, RSI 80.6, rvol 3.62)
+2026-11-09 11:31:54 | INFO    | engine.paper_trader_v2 | ORDER PFC.NS market buy at next open (ref Rs336.75, SL 0.546%, RSI 70.6, rvol 2.11)
+2026-11-09 11:31:54 | INFO    | engine.paper_trader_v2 | FILLED IRFC.NS @ Rs81.63999938964844 | qty=4439 notional=Rs362,400 friction=Rs393
+2026-11-09 11:31:54 | INFO    | engine.paper_trader_v2 | FILLED EXIDEIND.NS @ Rs376.3500061035156 | qty=737 notional=Rs277,370 friction=Rs312
+2026-11-09 11:31:54 | INFO    | engine.paper_trader_v2 | FILLED PFC.NS @ Rs336.79998779296875 | qty=1037 notional=Rs349,262 friction=Rs381
+2026-11-09 11:31:55 | INFO    | __main__ | equity Rs954,454 | open 3 | pending 0 | closed 123 | WR 53.7% | PF 0.67 | friction Rs40,430
