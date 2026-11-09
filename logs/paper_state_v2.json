@@ -1,48 +1,8 @@
 {
-  "cash": 813510.5265912834,
+  "cash": 887726.3391868976,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "IRFC.NS": {
-      "ticker": "IRFC.NS",
-      "direction": "LONG",
-      "entry_price": 81.63999938964844,
-      "qty": 4439,
-      "qty_open": 4439,
-      "stop_loss": 81.21,
-      "initial_stop": 81.21,
-      "t1": 82.12,
-      "t2": 82.5,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 0.43,
-      "atr": 0.43,
-      "margin": 72479.99145812988,
-      "entry_cost": 84.26792725019845,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-09 11:31:23 IST",
-      "predicted_rr": null,
-      "entry_rsi": 71.4,
-      "entry_deviation_pct": 1.32,
-      "entry_atr_pct": 0.531,
-      "entry_rvol": 5.27,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 2.2,
-      "entry_stop_pct": 0.531,
-      "nifty_at_entry": 24935.69921875,
-      "mfe_price": 82.0,
-      "mae_price": 81.63999938964844
-    },
     "PFC.NS": {
       "ticker": "PFC.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 1.84,
       "margin": 69852.31746826172,
       "entry_cost": 82.06848529045911,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-09 11:31:23 IST",
@@ -81,28 +41,22 @@
       "entry_stop_pct": 0.546,
       "nifty_at_entry": 24935.69921875,
       "mfe_price": 336.79998779296875,
-      "mae_price": 336.29998779296875
+      "mae_price": 335.29998779296875
     }
   },
   "pending_orders": {},
   "last_known_price": {
-    "EXIDEIND.NS": {
-      "close": 378.04998779296875,
-      "high": 380.5,
-      "low": 376.95001220703125,
-      "as_of": "2026-11-09T11:45:58.170560+05:30"
-    },
     "IRFC.NS": {
-      "close": 82.0,
-      "high": 82.0,
-      "low": 81.87999725341797,
-      "as_of": "2026-11-09T11:45:58.170560+05:30"
+      "close": 82.0999984741211,
+      "high": 82.19999694824219,
+      "low": 82.0199966430664,
+      "as_of": "2026-11-09T12:01:08.007549+05:30"
     },
     "PFC.NS": {
-      "close": 336.54998779296875,
-      "high": 336.54998779296875,
-      "low": 336.29998779296875,
-      "as_of": "2026-11-09T11:45:58.170560+05:30"
+      "close": 335.29998779296875,
+      "high": 335.79998779296875,
+      "low": 335.29998779296875,
+      "as_of": "2026-11-09T12:01:08.007549+05:30"
     }
   },
   "trade_history": [
@@ -2709,6 +2663,27 @@
       "entry_rvol": 3.62,
       "entry_turnover_cr": 3.81,
       "entry_stop_pct": 0.689
+    },
+    {
+      "ticker": "IRFC.NS",
+      "direction": "LONG",
+      "entry_price": 81.63999938964844,
+      "exit_price": 82.12,
+      "qty": 4439,
+      "pnl": 1735.82,
+      "R_multiple": 0.91,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 394.9,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-09 11:31:23 IST",
+      "exit_time": "2026-11-09 12:01:08 IST",
+      "entry_rsi": 71.4,
+      "entry_deviation_pct": 1.32,
+      "entry_atr_pct": 0.531,
+      "entry_rvol": 5.27,
+      "entry_turnover_cr": 2.2,
+      "entry_stop_pct": 0.531
     }
   ],
   "daily_entry_count": {
@@ -2738,7 +2713,7 @@
     "2026-11-05": 6,
     "2026-11-09": 6
   },
-  "total_pnl": -44157.16448232551,
+  "total_pnl": -42421.34334484118,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
