@@ -27,7 +27,7 @@
       "atr": 1.84,
       "margin": 69852.31746826172,
       "entry_cost": 82.06848529045911,
-      "bars_held": 12,
+      "bars_held": 13,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-09 11:31:23 IST",
@@ -40,17 +40,17 @@
       "entry_turnover_cr": 8.47,
       "entry_stop_pct": 0.546,
       "nifty_at_entry": 24935.69921875,
-      "mfe_price": 337.95001220703125,
+      "mfe_price": 338.45001220703125,
       "mae_price": 335.29998779296875
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "PFC.NS": {
-      "close": 337.70001220703125,
-      "high": 337.95001220703125,
-      "low": 337.5,
-      "as_of": "2026-11-09T14:31:22.383636+05:30"
+      "close": 338.3500061035156,
+      "high": 338.45001220703125,
+      "low": 338.3500061035156,
+      "as_of": "2026-11-09T14:45:52.780865+05:30"
     }
   },
   "trade_history": [
