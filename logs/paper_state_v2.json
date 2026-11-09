@@ -27,7 +27,7 @@
       "atr": 9.93,
       "margin": 70364.40000000001,
       "entry_cost": 82.497113732,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-09 10:15:46 IST",
@@ -41,16 +41,16 @@
       "entry_stop_pct": 0.541,
       "nifty_at_entry": 24934.400390625,
       "mfe_price": 1845.0,
-      "mae_price": 1838.699951171875
+      "mae_price": 1838.199951171875
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "AUROPHARMA.NS": {
-      "close": 1838.699951171875,
-      "high": 1838.699951171875,
-      "low": 1838.699951171875,
-      "as_of": "2026-11-09T10:45:47.014122+05:30"
+      "close": 1842.0,
+      "high": 1842.0,
+      "low": 1838.199951171875,
+      "as_of": "2026-11-09T11:01:10.240661+05:30"
     }
   },
   "trade_history": [
