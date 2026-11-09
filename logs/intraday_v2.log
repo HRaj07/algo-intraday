@@ -10152,3 +10152,19 @@
 2026-11-09 10:01:43 | INFO    | __main__ | strategy: MOM-v3
 2026-11-09 10:01:43 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-09 10:01:43 | INFO    | __main__ | equity Rs954,723 | open 0 | pending 0 | closed 120 | WR 53.3% | PF 0.66 | friction Rs39,353
+2026-11-09 10:15:46 | INFO    | __main__ | ================================================================
+2026-11-09 10:15:46 | INFO    | __main__ | Scan | 2026-11-09 10:15 IST
+2026-11-09 10:16:39 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-09 10:16:39 | WARNING | engine.risk_manager | KILL SWITCH (paper - continuing): rolling 30-trade PF 0.53 < 0.85 - edge has degraded, manual restart required
+2026-11-09 10:16:39 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,909 risk per trade)
+2026-11-09 10:16:39 | INFO    | __main__ |   base 0.40%
+2026-11-09 10:16:39 | INFO    | __main__ |   performance x0.6: n=120, observed expectancy shrunk to -0.077R vs prior +0.125R -> trimming (0.60x)
+2026-11-09 10:16:39 | INFO    | __main__ |   drawdown    x0.5: drawdown 5.4% - sizing at 0.50x
+2026-11-09 10:16:39 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-09 10:16:39 | INFO    | __main__ | strategy: MOM-v3
+2026-11-09 10:16:39 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-09 10:16:40 | INFO    | engine.paper_trader_v2 | ORDER LAURUSLABS.NS market buy at next open (ref Rs2437.9, SL 0.57%, RSI 87.7, rvol 3.75)
+2026-11-09 10:16:40 | INFO    | engine.paper_trader_v2 | ORDER AUROPHARMA.NS market buy at next open (ref Rs1834.3, SL 0.541%, RSI 74.8, rvol 2.07)
+2026-11-09 10:16:40 | INFO    | engine.paper_trader_v2 | FILLED LAURUSLABS.NS @ Rs2437.300048828125 | qty=137 notional=Rs333,910 friction=Rs366
+2026-11-09 10:16:40 | INFO    | engine.paper_trader_v2 | FILLED AUROPHARMA.NS @ Rs1842.0 | qty=191 notional=Rs351,822 friction=Rs383
+2026-11-09 10:16:40 | INFO    | __main__ | equity Rs954,723 | open 2 | pending 0 | closed 120 | WR 53.3% | PF 0.66 | friction Rs39,353
