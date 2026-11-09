@@ -1,18 +1,18 @@
 {
-  "cash": 886077.0653053916,
+  "cash": 898149.1947940896,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "AUROPHARMA.NS": {
-      "ticker": "AUROPHARMA.NS",
+    "LAURUSLABS.NS": {
+      "ticker": "LAURUSLABS.NS",
       "direction": "LONG",
-      "entry_price": 1842.0,
-      "qty": 191,
-      "qty_open": 191,
-      "stop_loss": 1832.03,
-      "initial_stop": 1832.03,
-      "t1": 1845.31,
-      "t2": 1854.16,
+      "entry_price": 2459.699951171875,
+      "qty": 119,
+      "qty_open": 119,
+      "stop_loss": 2443.64,
+      "initial_stop": 2443.64,
+      "t1": 2475.06,
+      "t2": 2492.41,
       "t1_fraction": 1.0,
       "exit_cfg": {
         "hold_to_square_off": true,
@@ -23,34 +23,34 @@
       },
       "t1_done": false,
       "trailed": false,
-      "risk_per_share": 9.97,
-      "atr": 9.93,
-      "margin": 70364.40000000001,
-      "entry_cost": 82.497113732,
-      "bars_held": 3,
+      "risk_per_share": 16.06,
+      "atr": 16.06,
+      "margin": 58540.85883789063,
+      "entry_cost": 72.60045507307959,
+      "bars_held": 0,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
-      "entry_time": "2026-11-09 10:15:46 IST",
+      "entry_time": "2026-11-09 11:15:51 IST",
       "predicted_rr": null,
-      "entry_rsi": 74.8,
-      "entry_deviation_pct": 0.806,
-      "entry_atr_pct": 0.541,
-      "entry_rvol": 2.07,
+      "entry_rsi": 82.2,
+      "entry_deviation_pct": 1.203,
+      "entry_atr_pct": 0.653,
+      "entry_rvol": 3.88,
       "entry_gap_pct": null,
-      "entry_turnover_cr": 9.07,
-      "entry_stop_pct": 0.541,
-      "nifty_at_entry": 24934.400390625,
-      "mfe_price": 1845.0,
-      "mae_price": 1838.199951171875
+      "entry_turnover_cr": 10.64,
+      "entry_stop_pct": 0.653,
+      "nifty_at_entry": 24913.44921875,
+      "mfe_price": 2459.699951171875,
+      "mae_price": 2459.699951171875
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "AUROPHARMA.NS": {
-      "close": 1842.0,
-      "high": 1842.0,
-      "low": 1838.199951171875,
-      "as_of": "2026-11-09T11:01:10.240661+05:30"
+      "close": 1845.800048828125,
+      "high": 1845.800048828125,
+      "low": 1845.800048828125,
+      "as_of": "2026-11-09T11:15:51.033371+05:30"
     }
   },
   "trade_history": [
@@ -2594,6 +2594,27 @@
       "entry_rvol": 3.75,
       "entry_turnover_cr": 10.45,
       "entry_stop_pct": 0.57
+    },
+    {
+      "ticker": "AUROPHARMA.NS",
+      "direction": "LONG",
+      "entry_price": 1842.0,
+      "exit_price": 1845.31,
+      "qty": 191,
+      "pnl": 248.59,
+      "R_multiple": 0.13,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 383.62,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-09 10:15:46 IST",
+      "exit_time": "2026-11-09 11:15:51 IST",
+      "entry_rsi": 74.8,
+      "entry_deviation_pct": 0.806,
+      "entry_atr_pct": 0.541,
+      "entry_rvol": 2.07,
+      "entry_turnover_cr": 9.07,
+      "entry_stop_pct": 0.541
     }
   ],
   "daily_entry_count": {
@@ -2621,15 +2642,15 @@
     "2026-11-03": 6,
     "2026-11-04": 5,
     "2026-11-05": 6,
-    "2026-11-09": 2
+    "2026-11-09": 3
   },
-  "total_pnl": -43558.5346946088,
+  "total_pnl": -43309.94636802007,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=120, observed expectancy shrunk to -0.077R vs prior +0.125R -> trimming (0.60x)",
+    "performance_reason": "n=122, observed expectancy shrunk to -0.070R vs prior +0.125R -> trimming (0.60x)",
     "drawdown_scalar": 0.5,
-    "drawdown_reason": "drawdown 5.4% - sizing at 0.50x",
+    "drawdown_reason": "drawdown 5.2% - sizing at 0.50x",
     "raw_pct": 0.0012,
     "final_pct": 0.002,
     "clamped": true
