@@ -1,5 +1,5 @@
 {
-  "cash": 756647.4468824614,
+  "cash": 813510.5265912834,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 0.43,
       "margin": 72479.99145812988,
       "entry_cost": 84.26792725019845,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-09 11:31:23 IST",
@@ -40,48 +40,8 @@
       "entry_turnover_cr": 2.2,
       "entry_stop_pct": 0.531,
       "nifty_at_entry": 24935.69921875,
-      "mfe_price": 81.63999938964844,
+      "mfe_price": 82.0,
       "mae_price": 81.63999938964844
-    },
-    "EXIDEIND.NS": {
-      "ticker": "EXIDEIND.NS",
-      "direction": "LONG",
-      "entry_price": 376.3500061035156,
-      "qty": 737,
-      "qty_open": 737,
-      "stop_loss": 373.76,
-      "initial_stop": 373.76,
-      "t1": 378.66,
-      "t2": 381.59,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.59,
-      "atr": 2.59,
-      "margin": 55473.99089965821,
-      "entry_cost": 70.03339460274091,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-09 11:31:23 IST",
-      "predicted_rr": null,
-      "entry_rsi": 80.6,
-      "entry_deviation_pct": 1.467,
-      "entry_atr_pct": 0.689,
-      "entry_rvol": 3.62,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 3.81,
-      "entry_stop_pct": 0.689,
-      "nifty_at_entry": 24935.69921875,
-      "mfe_price": 376.3500061035156,
-      "mae_price": 376.3500061035156
     },
     "PFC.NS": {
       "ticker": "PFC.NS",
@@ -107,7 +67,7 @@
       "atr": 1.84,
       "margin": 69852.31746826172,
       "entry_cost": 82.06848529045911,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-09 11:31:23 IST",
@@ -121,16 +81,28 @@
       "entry_stop_pct": 0.546,
       "nifty_at_entry": 24935.69921875,
       "mfe_price": 336.79998779296875,
-      "mae_price": 336.79998779296875
+      "mae_price": 336.29998779296875
     }
   },
   "pending_orders": {},
   "last_known_price": {
-    "LAURUSLABS.NS": {
-      "close": 2435.0,
-      "high": 2439.10009765625,
-      "low": 2435.0,
-      "as_of": "2026-11-09T11:31:23.646070+05:30"
+    "EXIDEIND.NS": {
+      "close": 378.04998779296875,
+      "high": 380.5,
+      "low": 376.95001220703125,
+      "as_of": "2026-11-09T11:45:58.170560+05:30"
+    },
+    "IRFC.NS": {
+      "close": 82.0,
+      "high": 82.0,
+      "low": 81.87999725341797,
+      "as_of": "2026-11-09T11:45:58.170560+05:30"
+    },
+    "PFC.NS": {
+      "close": 336.54998779296875,
+      "high": 336.54998779296875,
+      "low": 336.29998779296875,
+      "as_of": "2026-11-09T11:45:58.170560+05:30"
     }
   },
   "trade_history": [
@@ -2716,6 +2688,27 @@
       "entry_rvol": 3.88,
       "entry_turnover_cr": 10.64,
       "entry_stop_pct": 0.653
+    },
+    {
+      "ticker": "EXIDEIND.NS",
+      "direction": "LONG",
+      "entry_price": 376.3500061035156,
+      "exit_price": 378.66,
+      "qty": 737,
+      "pnl": 1389.09,
+      "R_multiple": 0.73,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 313.38,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-09 11:31:23 IST",
+      "exit_time": "2026-11-09 11:45:58 IST",
+      "entry_rsi": 80.6,
+      "entry_deviation_pct": 1.467,
+      "entry_atr_pct": 0.689,
+      "entry_rvol": 3.62,
+      "entry_turnover_cr": 3.81,
+      "entry_stop_pct": 0.689
     }
   ],
   "daily_entry_count": {
@@ -2745,7 +2738,7 @@
     "2026-11-05": 6,
     "2026-11-09": 6
   },
-  "total_pnl": -45546.25329148925,
+  "total_pnl": -44157.16448232551,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
