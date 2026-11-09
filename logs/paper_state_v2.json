@@ -1,48 +1,8 @@
 {
-  "cash": 817576.2049589681,
+  "cash": 886077.0653053916,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "LAURUSLABS.NS": {
-      "ticker": "LAURUSLABS.NS",
-      "direction": "LONG",
-      "entry_price": 2437.300048828125,
-      "qty": 137,
-      "qty_open": 137,
-      "stop_loss": 2423.41,
-      "initial_stop": 2423.41,
-      "t1": 2452.53,
-      "t2": 2465.68,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 13.89,
-      "atr": 13.89,
-      "margin": 66782.02133789063,
-      "entry_cost": 79.49855532045459,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-09 10:15:46 IST",
-      "predicted_rr": null,
-      "entry_rsi": 87.7,
-      "entry_deviation_pct": 1.217,
-      "entry_atr_pct": 0.57,
-      "entry_rvol": 3.75,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 10.45,
-      "entry_stop_pct": 0.57,
-      "nifty_at_entry": 24934.400390625,
-      "mfe_price": 2437.300048828125,
-      "mae_price": 2437.300048828125
-    },
     "AUROPHARMA.NS": {
       "ticker": "AUROPHARMA.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 9.93,
       "margin": 70364.40000000001,
       "entry_cost": 82.497113732,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-09 10:15:46 IST",
@@ -80,12 +40,25 @@
       "entry_turnover_cr": 9.07,
       "entry_stop_pct": 0.541,
       "nifty_at_entry": 24934.400390625,
-      "mfe_price": 1842.0,
-      "mae_price": 1842.0
+      "mfe_price": 1845.0,
+      "mae_price": 1840.800048828125
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "LAURUSLABS.NS": {
+      "close": 2462.199951171875,
+      "high": 2462.199951171875,
+      "low": 2455.89990234375,
+      "as_of": "2026-11-09T10:31:21.878602+05:30"
+    },
+    "AUROPHARMA.NS": {
+      "close": 1845.0,
+      "high": 1845.0,
+      "low": 1840.800048828125,
+      "as_of": "2026-11-09T10:31:21.878602+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -2606,6 +2579,27 @@
       "entry_rvol": 4.83,
       "entry_turnover_cr": 4.17,
       "entry_stop_pct": 0.98
+    },
+    {
+      "ticker": "LAURUSLABS.NS",
+      "direction": "LONG",
+      "entry_price": 2437.300048828125,
+      "exit_price": 2452.53,
+      "qty": 137,
+      "pnl": 1718.84,
+      "R_multiple": 0.9,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 367.66,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-09 10:15:46 IST",
+      "exit_time": "2026-11-09 10:31:21 IST",
+      "entry_rsi": 87.7,
+      "entry_deviation_pct": 1.217,
+      "entry_atr_pct": 0.57,
+      "entry_rvol": 3.75,
+      "entry_turnover_cr": 10.45,
+      "entry_stop_pct": 0.57
     }
   ],
   "daily_entry_count": {
@@ -2635,7 +2629,7 @@
     "2026-11-05": 6,
     "2026-11-09": 2
   },
-  "total_pnl": -45277.37370314159,
+  "total_pnl": -43558.5346946088,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
