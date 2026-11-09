@@ -753,3 +753,4 @@
 {"time": "2026-11-09 13:45:51.162363+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 209, "too few bars today": 1}, "near_misses": []}
 {"time": "2026-11-09 14:01:08.710252+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 209, "too few bars today": 1}, "near_misses": []}
 {"time": "2026-11-09 14:15:49.963663+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 209, "too few bars today": 1}, "near_misses": []}
+{"time": "2026-11-09 14:31:22.383636+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 210, "signals": [], "rejects": {"after last entry time": 209, "too few bars today": 1}, "near_misses": []}
