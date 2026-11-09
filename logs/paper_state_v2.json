@@ -1,56 +1,15 @@
 {
-  "cash": 887726.3391868976,
+  "cash": 958907.7055068383,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "PFC.NS": {
-      "ticker": "PFC.NS",
-      "direction": "LONG",
-      "entry_price": 336.79998779296875,
-      "qty": 1037,
-      "qty_open": 1037,
-      "stop_loss": 334.96,
-      "initial_stop": 334.96,
-      "t1": 338.77,
-      "t2": 340.43,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 1.84,
-      "atr": 1.84,
-      "margin": 69852.31746826172,
-      "entry_cost": 82.06848529045911,
-      "bars_held": 14,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-09 11:31:23 IST",
-      "predicted_rr": null,
-      "entry_rsi": 70.6,
-      "entry_deviation_pct": 0.986,
-      "entry_atr_pct": 0.546,
-      "entry_rvol": 2.11,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 8.47,
-      "entry_stop_pct": 0.546,
-      "nifty_at_entry": 24935.69921875,
-      "mfe_price": 338.45001220703125,
-      "mae_price": 335.29998779296875
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "PFC.NS": {
-      "close": 337.5,
-      "high": 337.6499938964844,
-      "low": 337.3999938964844,
-      "as_of": "2026-11-09T15:01:20.316016+05:30"
+      "close": 338.45001220703125,
+      "high": 338.45001220703125,
+      "low": 338.45001220703125,
+      "as_of": "2026-11-09T15:15:54.817111+05:30"
     }
   },
   "trade_history": [
@@ -2678,6 +2637,27 @@
       "entry_rvol": 5.27,
       "entry_turnover_cr": 2.2,
       "entry_stop_pct": 0.531
+    },
+    {
+      "ticker": "PFC.NS",
+      "direction": "LONG",
+      "entry_price": 336.79998779296875,
+      "exit_price": 338.45,
+      "qty": 1037,
+      "pnl": 1329.05,
+      "R_multiple": 0.7,
+      "reason": "square_off",
+      "partial": false,
+      "friction": 382.03,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-09 11:31:23 IST",
+      "exit_time": "2026-11-09 15:15:54 IST",
+      "entry_rsi": 70.6,
+      "entry_deviation_pct": 0.986,
+      "entry_atr_pct": 0.546,
+      "entry_rvol": 2.11,
+      "entry_turnover_cr": 8.47,
+      "entry_stop_pct": 0.546
     }
   ],
   "daily_entry_count": {
@@ -2707,7 +2687,7 @@
     "2026-11-05": 6,
     "2026-11-09": 6
   },
-  "total_pnl": -42421.34334484118,
+  "total_pnl": -41092.294493162255,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
