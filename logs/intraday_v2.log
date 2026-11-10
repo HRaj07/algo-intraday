@@ -10750,3 +10750,8 @@
 2026-11-10 15:01:39 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-10 15:01:39 | INFO    | strategies.momentum_v3 | REGIME GATE CLOSED: insufficient index bars - no entries this scan
 2026-11-10 15:01:39 | INFO    | __main__ | equity Rs958,908 | open 0 | pending 0 | closed 126 | WR 54.8% | PF 0.7 | friction Rs41,520
+2026-11-10 15:16:00 | INFO    | __main__ | ================================================================
+2026-11-10 15:16:00 | INFO    | __main__ | Scan | 2026-11-10 15:16 IST
+2026-11-10 15:16:46 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-10 15:16:46 | INFO    | __main__ | EOD: {'equity': 958907.71, 'cash': 958907.71, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 126, 'win_rate_pct': 54.8, 'profit_factor': 0.7, 'total_friction': 41520.14, 'total_pnl': -41092.29, 'return_pct': -4.11}
+2026-11-10 15:16:46 | WARNING | __main__ | KILL SWITCH has tripped 12x in paper mode; latest {'date': '2026-11-09', 'pf': 0.533, 'n': 30, 'trade_count': 120} - live mode would be HALTED
