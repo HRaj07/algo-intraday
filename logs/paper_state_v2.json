@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "PFC.NS": {
-      "close": 338.45001220703125,
-      "high": 338.45001220703125,
-      "low": 338.45001220703125,
-      "as_of": "2026-11-09T15:15:54.817111+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
