@@ -1,5 +1,5 @@
 {
-  "cash": 754246.9097097176,
+  "cash": 904259.5372291647,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 8.76,
       "margin": 29419.100000000002,
       "entry_cost": 48.224669272999996,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-11 10:15:45 IST",
@@ -40,88 +40,8 @@
       "entry_turnover_cr": 5.49,
       "entry_stop_pct": 1.299,
       "nifty_at_entry": 25358.900390625,
-      "mfe_price": 674.75,
+      "mfe_price": 676.0999755859375,
       "mae_price": 669.0999755859375
-    },
-    "TRENT.NS": {
-      "ticker": "TRENT.NS",
-      "direction": "LONG",
-      "entry_price": 3192.0,
-      "qty": 116,
-      "qty_open": 116,
-      "stop_loss": 3175.53,
-      "initial_stop": 3175.53,
-      "t1": 3211.66,
-      "t2": 3225.44,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 16.47,
-      "atr": 16.47,
-      "margin": 74054.40000000001,
-      "entry_cost": 85.58575443199999,
-      "bars_held": 2,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-11 10:15:45 IST",
-      "predicted_rr": null,
-      "entry_rsi": 82.0,
-      "entry_deviation_pct": 0.848,
-      "entry_atr_pct": 0.516,
-      "entry_rvol": 4.72,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 6.94,
-      "entry_stop_pct": 0.516,
-      "nifty_at_entry": 25358.900390625,
-      "mfe_price": 3210.10009765625,
-      "mae_price": 3192.0
-    },
-    "AUBANK.NS": {
-      "ticker": "AUBANK.NS",
-      "direction": "LONG",
-      "entry_price": 953.9500122070312,
-      "qty": 378,
-      "qty_open": 378,
-      "stop_loss": 948.88,
-      "initial_stop": 948.88,
-      "t1": 960.18,
-      "t2": 964.58,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 5.07,
-      "atr": 5.06,
-      "margin": 72118.62092285157,
-      "entry_cost": 83.96544927105444,
-      "bars_held": 2,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-11 10:15:45 IST",
-      "predicted_rr": null,
-      "entry_rsi": 82.3,
-      "entry_deviation_pct": 1.053,
-      "entry_atr_pct": 0.531,
-      "entry_rvol": 4.5,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.18,
-      "entry_stop_pct": 0.531,
-      "nifty_at_entry": 25358.900390625,
-      "mfe_price": 957.3499755859375,
-      "mae_price": 953.9500122070312
     },
     "NAVINFLUOR.NS": {
       "ticker": "NAVINFLUOR.NS",
@@ -147,7 +67,7 @@
       "atr": 50.83,
       "margin": 33415.200000000004,
       "entry_cost": 51.569524856,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-11 10:15:45 IST",
@@ -167,34 +87,28 @@
   "pending_orders": {},
   "last_known_price": {
     "IIFL.NS": {
-      "close": 670.9500122070312,
-      "high": 671.0499877929688,
-      "low": 669.4000244140625,
-      "as_of": "2026-11-11T10:45:52.021317+05:30"
-    },
-    "FEDERALBNK.NS": {
-      "close": 356.20001220703125,
-      "high": 356.5,
-      "low": 356.20001220703125,
-      "as_of": "2026-11-11T10:45:52.021317+05:30"
+      "close": 675.0499877929688,
+      "high": 676.0999755859375,
+      "low": 674.7999877929688,
+      "as_of": "2026-11-11T11:01:10.552017+05:30"
     },
     "TRENT.NS": {
-      "close": 3207.699951171875,
-      "high": 3210.10009765625,
-      "low": 3207.199951171875,
-      "as_of": "2026-11-11T10:45:52.021317+05:30"
+      "close": 3230.0,
+      "high": 3232.0,
+      "low": 3220.699951171875,
+      "as_of": "2026-11-11T11:01:10.552017+05:30"
     },
     "NAVINFLUOR.NS": {
-      "close": 9254.0,
-      "high": 9258.0,
-      "low": 9242.5,
-      "as_of": "2026-11-11T10:45:52.021317+05:30"
+      "close": 9262.5,
+      "high": 9268.0,
+      "low": 9262.5,
+      "as_of": "2026-11-11T11:01:10.552017+05:30"
     },
     "AUBANK.NS": {
-      "close": 957.25,
-      "high": 957.25,
-      "low": 957.25,
-      "as_of": "2026-11-11T10:45:52.021317+05:30"
+      "close": 960.7999877929688,
+      "high": 961.0,
+      "low": 959.9500122070312,
+      "as_of": "2026-11-11T11:01:10.552017+05:30"
     }
   },
   "trade_history": [
@@ -2906,6 +2820,48 @@
       "entry_rvol": 4.94,
       "entry_turnover_cr": 7.26,
       "entry_stop_pct": 0.529
+    },
+    {
+      "ticker": "TRENT.NS",
+      "direction": "LONG",
+      "entry_price": 3192.0,
+      "exit_price": 3211.66,
+      "qty": 116,
+      "pnl": 1878.02,
+      "R_multiple": 0.98,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 402.54,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-11 10:15:45 IST",
+      "exit_time": "2026-11-11 11:01:10 IST",
+      "entry_rsi": 82.0,
+      "entry_deviation_pct": 0.848,
+      "entry_atr_pct": 0.516,
+      "entry_rvol": 4.72,
+      "entry_turnover_cr": 6.94,
+      "entry_stop_pct": 0.516
+    },
+    {
+      "ticker": "AUBANK.NS",
+      "direction": "LONG",
+      "entry_price": 953.9500122070312,
+      "exit_price": 960.18,
+      "qty": 378,
+      "pnl": 1961.58,
+      "R_multiple": 1.02,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 393.35,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-11 10:15:45 IST",
+      "exit_time": "2026-11-11 11:01:10 IST",
+      "entry_rsi": 82.3,
+      "entry_deviation_pct": 1.053,
+      "entry_atr_pct": 0.531,
+      "entry_rvol": 4.5,
+      "entry_turnover_cr": 4.18,
+      "entry_stop_pct": 0.531
     }
   ],
   "daily_entry_count": {
@@ -2936,7 +2892,7 @@
     "2026-11-09": 6,
     "2026-11-11": 7
   },
-  "total_pnl": -36745.76936743131,
+  "total_pnl": -32906.162770835814,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
