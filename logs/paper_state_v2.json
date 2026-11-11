@@ -1,5 +1,5 @@
 {
-  "cash": 679950.2796065806,
+  "cash": 754246.9097097176,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 8.76,
       "margin": 29419.100000000002,
       "entry_cost": 48.224669272999996,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-11 10:15:45 IST",
@@ -42,46 +42,6 @@
       "nifty_at_entry": 25358.900390625,
       "mfe_price": 674.75,
       "mae_price": 669.0999755859375
-    },
-    "FEDERALBNK.NS": {
-      "ticker": "FEDERALBNK.NS",
-      "direction": "LONG",
-      "entry_price": 353.75,
-      "qty": 1025,
-      "qty_open": 1025,
-      "stop_loss": 351.88,
-      "initial_stop": 351.88,
-      "t1": 355.87,
-      "t2": 357.49,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 1.87,
-      "atr": 1.87,
-      "margin": 72518.75,
-      "entry_cost": 84.30036931250001,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-11 10:15:45 IST",
-      "predicted_rr": null,
-      "entry_rsi": 87.2,
-      "entry_deviation_pct": 1.238,
-      "entry_atr_pct": 0.529,
-      "entry_rvol": 4.94,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 7.26,
-      "entry_stop_pct": 0.529,
-      "nifty_at_entry": 25358.900390625,
-      "mfe_price": 354.95001220703125,
-      "mae_price": 353.75
     },
     "TRENT.NS": {
       "ticker": "TRENT.NS",
@@ -107,7 +67,7 @@
       "atr": 16.47,
       "margin": 74054.40000000001,
       "entry_cost": 85.58575443199999,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-11 10:15:45 IST",
@@ -120,7 +80,7 @@
       "entry_turnover_cr": 6.94,
       "entry_stop_pct": 0.516,
       "nifty_at_entry": 25358.900390625,
-      "mfe_price": 3210.0,
+      "mfe_price": 3210.10009765625,
       "mae_price": 3192.0
     },
     "AUBANK.NS": {
@@ -147,7 +107,7 @@
       "atr": 5.06,
       "margin": 72118.62092285157,
       "entry_cost": 83.96544927105444,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-11 10:15:45 IST",
@@ -187,7 +147,7 @@
       "atr": 50.83,
       "margin": 33415.200000000004,
       "entry_cost": 51.569524856,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-11 10:15:45 IST",
@@ -201,52 +161,40 @@
       "entry_stop_pct": 0.548,
       "nifty_at_entry": 25358.900390625,
       "mfe_price": 9282.0,
-      "mae_price": 9247.0
+      "mae_price": 9242.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "IIFL.NS": {
-      "close": 669.2999877929688,
-      "high": 671.9500122070312,
-      "low": 669.0999755859375,
-      "as_of": "2026-11-11T10:31:24.475670+05:30"
-    },
-    "RVNL.NS": {
-      "close": 213.80999755859375,
-      "high": 214.08999633789062,
-      "low": 213.32000732421875,
-      "as_of": "2026-11-11T10:31:24.475670+05:30"
+      "close": 670.9500122070312,
+      "high": 671.0499877929688,
+      "low": 669.4000244140625,
+      "as_of": "2026-11-11T10:45:52.021317+05:30"
     },
     "FEDERALBNK.NS": {
-      "close": 354.79998779296875,
-      "high": 354.95001220703125,
-      "low": 354.6000061035156,
-      "as_of": "2026-11-11T10:31:24.475670+05:30"
-    },
-    "IRFC.NS": {
-      "close": 88.29000091552734,
-      "high": 88.37999725341797,
-      "low": 88.2300033569336,
-      "as_of": "2026-11-11T10:31:24.475670+05:30"
+      "close": 356.20001220703125,
+      "high": 356.5,
+      "low": 356.20001220703125,
+      "as_of": "2026-11-11T10:45:52.021317+05:30"
     },
     "TRENT.NS": {
-      "close": 3207.5,
-      "high": 3210.0,
-      "low": 3207.5,
-      "as_of": "2026-11-11T10:31:24.475670+05:30"
+      "close": 3207.699951171875,
+      "high": 3210.10009765625,
+      "low": 3207.199951171875,
+      "as_of": "2026-11-11T10:45:52.021317+05:30"
     },
     "NAVINFLUOR.NS": {
-      "close": 9252.5,
-      "high": 9255.0,
-      "low": 9247.0,
-      "as_of": "2026-11-11T10:31:24.475670+05:30"
+      "close": 9254.0,
+      "high": 9258.0,
+      "low": 9242.5,
+      "as_of": "2026-11-11T10:45:52.021317+05:30"
     },
     "AUBANK.NS": {
-      "close": 956.7000122070312,
-      "high": 957.3499755859375,
-      "low": 955.75,
-      "as_of": "2026-11-11T10:31:24.475670+05:30"
+      "close": 957.25,
+      "high": 957.25,
+      "low": 957.25,
+      "as_of": "2026-11-11T10:45:52.021317+05:30"
     }
   },
   "trade_history": [
@@ -2937,6 +2885,27 @@
       "entry_rvol": 4.28,
       "entry_turnover_cr": 3.85,
       "entry_stop_pct": 0.847
+    },
+    {
+      "ticker": "FEDERALBNK.NS",
+      "direction": "LONG",
+      "entry_price": 353.75,
+      "exit_price": 355.87,
+      "qty": 1025,
+      "pnl": 1777.88,
+      "R_multiple": 0.93,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 395.12,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-11 10:15:45 IST",
+      "exit_time": "2026-11-11 10:45:52 IST",
+      "entry_rsi": 87.2,
+      "entry_deviation_pct": 1.238,
+      "entry_atr_pct": 0.529,
+      "entry_rvol": 4.94,
+      "entry_turnover_cr": 7.26,
+      "entry_stop_pct": 0.529
     }
   ],
   "daily_entry_count": {
@@ -2967,7 +2936,7 @@
     "2026-11-09": 6,
     "2026-11-11": 7
   },
-  "total_pnl": -38523.649470568314,
+  "total_pnl": -36745.76936743131,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
