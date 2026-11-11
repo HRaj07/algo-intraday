@@ -1,48 +1,8 @@
 {
-  "cash": 904259.5372291647,
+  "cash": 934286.0621416646,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "IIFL.NS": {
-      "ticker": "IIFL.NS",
-      "direction": "LONG",
-      "entry_price": 674.75,
-      "qty": 218,
-      "qty_open": 218,
-      "stop_loss": 665.98,
-      "initial_stop": 665.98,
-      "t1": 678.4,
-      "t2": 691.87,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 8.77,
-      "atr": 8.76,
-      "margin": 29419.100000000002,
-      "entry_cost": 48.224669272999996,
-      "bars_held": 4,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-11 10:15:45 IST",
-      "predicted_rr": null,
-      "entry_rsi": 83.4,
-      "entry_deviation_pct": 1.265,
-      "entry_atr_pct": 1.299,
-      "entry_rvol": 66.73,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 5.49,
-      "entry_stop_pct": 1.299,
-      "nifty_at_entry": 25358.900390625,
-      "mfe_price": 676.2999877929688,
-      "mae_price": 669.0999755859375
-    },
     "NAVINFLUOR.NS": {
       "ticker": "NAVINFLUOR.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 50.83,
       "margin": 33415.200000000004,
       "entry_cost": 51.569524856,
-      "bars_held": 4,
+      "bars_held": 5,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-11 10:15:45 IST",
@@ -80,23 +40,23 @@
       "entry_turnover_cr": 4.75,
       "entry_stop_pct": 0.548,
       "nifty_at_entry": 25358.900390625,
-      "mfe_price": 9282.0,
+      "mfe_price": 9328.0,
       "mae_price": 9242.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "IIFL.NS": {
-      "close": 675.5,
-      "high": 676.2999877929688,
-      "low": 674.75,
-      "as_of": "2026-11-11T11:15:52.999013+05:30"
+      "close": 677.5999755859375,
+      "high": 678.8499755859375,
+      "low": 677.5999755859375,
+      "as_of": "2026-11-11T11:31:25.993842+05:30"
     },
     "NAVINFLUOR.NS": {
-      "close": 9247.5,
-      "high": 9250.5,
-      "low": 9247.5,
-      "as_of": "2026-11-11T11:15:52.999013+05:30"
+      "close": 9321.5,
+      "high": 9328.0,
+      "low": 9311.5,
+      "as_of": "2026-11-11T11:31:25.993842+05:30"
     }
   },
   "trade_history": [
@@ -2850,6 +2810,27 @@
       "entry_rvol": 4.5,
       "entry_turnover_cr": 4.18,
       "entry_stop_pct": 0.531
+    },
+    {
+      "ticker": "IIFL.NS",
+      "direction": "LONG",
+      "entry_price": 674.75,
+      "exit_price": 678.4,
+      "qty": 218,
+      "pnl": 607.42,
+      "R_multiple": 0.32,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 188.28,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-11 10:15:45 IST",
+      "exit_time": "2026-11-11 11:31:25 IST",
+      "entry_rsi": 83.4,
+      "entry_deviation_pct": 1.265,
+      "entry_atr_pct": 1.299,
+      "entry_rvol": 66.73,
+      "entry_turnover_cr": 5.49,
+      "entry_stop_pct": 1.299
     }
   ],
   "daily_entry_count": {
@@ -2880,7 +2861,7 @@
     "2026-11-09": 6,
     "2026-11-11": 7
   },
-  "total_pnl": -32906.162770835814,
+  "total_pnl": -32298.73785833602,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
