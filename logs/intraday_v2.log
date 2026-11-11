@@ -10857,3 +10857,25 @@
 2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | FILLED NAVINFLUOR.NS @ Rs9282.0 | qty=18 notional=Rs167,076 friction=Rs207
 2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | SIZING SKIP YESBANK.NS: notional Rs5,768 below the Rs20,000.0 floor - fixed costs would dominate, skipping rather than trading small
 2026-11-11 10:16:20 | INFO    | __main__ | equity Rs958,908 | open 7 | pending 0 | closed 126 | WR 54.8% | PF 0.7 | friction Rs41,520
+2026-11-11 10:31:24 | INFO    | __main__ | ================================================================
+2026-11-11 10:31:24 | INFO    | __main__ | Scan | 2026-11-11 10:31 IST
+2026-11-11 10:31:52 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-11 10:31:52 | INFO    | engine.paper_trader_v2 | EXIT IRFC.NS 3196@Rs87.4 | P&L Rs+1,444 (+0.75R) | friction Rs314 | t1_vwap
+2026-11-11 10:31:52 | INFO    | engine.paper_trader_v2 | T1 IRFC.NS - half out at VWAP, stop to Rs87.04 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-11 10:31:52 | INFO    | engine.paper_trader_v2 | EXIT RVNL.NS 1077@Rs211.91 | P&L Rs+1,124 (+0.59R) | friction Rs265 | t1_vwap
+2026-11-11 10:31:52 | INFO    | engine.paper_trader_v2 | T1 RVNL.NS - half out at VWAP, stop to Rs211.13 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-11 10:31:53 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,927 risk per trade)
+2026-11-11 10:31:53 | INFO    | __main__ |   base 0.40%
+2026-11-11 10:31:53 | INFO    | __main__ |   performance x0.6: n=128, observed expectancy shrunk to -0.053R vs prior +0.125R -> trimming (0.60x)
+2026-11-11 10:31:53 | INFO    | __main__ |   drawdown    x0.575: drawdown 4.6% - sizing at 0.57x
+2026-11-11 10:31:53 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-11 10:31:53 | INFO    | __main__ | strategy: MOM-v3
+2026-11-11 10:31:53 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-11 10:31:54 | INFO    | engine.paper_trader_v2 | ORDER REJECTED IRFC.NS: at max concurrent positions (3)
+2026-11-11 10:31:54 | INFO    | engine.paper_trader_v2 | ORDER REJECTED RVNL.NS: at max concurrent positions (3)
+2026-11-11 10:31:54 | INFO    | engine.paper_trader_v2 | ORDER REJECTED TRENT.NS: already holding this name
+2026-11-11 10:31:54 | INFO    | engine.paper_trader_v2 | ORDER REJECTED AUBANK.NS: already holding this name
+2026-11-11 10:31:54 | INFO    | engine.paper_trader_v2 | ORDER REJECTED PNB.NS: at max concurrent positions (3)
+2026-11-11 10:31:54 | INFO    | engine.paper_trader_v2 | ORDER REJECTED BANKBARODA.NS: at max concurrent positions (3)
+2026-11-11 10:31:54 | INFO    | engine.paper_trader_v2 | ORDER REJECTED FEDERALBNK.NS: already holding this name
+2026-11-11 10:31:54 | INFO    | __main__ | equity Rs963,671 | open 5 | pending 0 | closed 128 | WR 55.5% | PF 0.72 | friction Rs42,099
