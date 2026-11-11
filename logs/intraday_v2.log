@@ -10829,3 +10829,31 @@
 2026-11-11 10:01:57 | INFO    | __main__ | strategy: MOM-v3
 2026-11-11 10:01:57 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-11 10:01:57 | INFO    | __main__ | equity Rs958,908 | open 0 | pending 0 | closed 126 | WR 54.8% | PF 0.7 | friction Rs41,520
+2026-11-11 10:15:45 | INFO    | __main__ | ================================================================
+2026-11-11 10:15:45 | INFO    | __main__ | Scan | 2026-11-11 10:15 IST
+2026-11-11 10:16:17 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-11 10:16:18 | WARNING | engine.risk_manager | KILL SWITCH (paper - continuing): rolling 30-trade PF 0.52 < 0.85 - edge has degraded, manual restart required
+2026-11-11 10:16:18 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,918 risk per trade)
+2026-11-11 10:16:18 | INFO    | __main__ |   base 0.40%
+2026-11-11 10:16:18 | INFO    | __main__ |   performance x0.6: n=126, observed expectancy shrunk to -0.061R vs prior +0.125R -> trimming (0.60x)
+2026-11-11 10:16:18 | INFO    | __main__ |   drawdown    x0.5: drawdown 5.0% - sizing at 0.50x
+2026-11-11 10:16:18 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-11 10:16:18 | INFO    | __main__ | strategy: MOM-v3
+2026-11-11 10:16:18 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | ORDER IIFL.NS market buy at next open (ref Rs674.35, SL 1.299%, RSI 83.4, rvol 66.73)
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | ORDER IRFC.NS market buy at next open (ref Rs86.88, SL 0.692%, RSI 87.9, rvol 7.68)
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | ORDER FEDERALBNK.NS market buy at next open (ref Rs353.75, SL 0.529%, RSI 87.2, rvol 4.94)
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | ORDER TRENT.NS market buy at next open (ref Rs3192.5, SL 0.516%, RSI 82.0, rvol 4.72)
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | ORDER AUBANK.NS market buy at next open (ref Rs954.45, SL 0.531%, RSI 82.3, rvol 4.5)
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | ORDER RVNL.NS market buy at next open (ref Rs210.65, SL 0.847%, RSI 89.4, rvol 4.28)
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | ORDER NAVINFLUOR.NS market buy at next open (ref Rs9282.5, SL 0.548%, RSI 73.5, rvol 4.06)
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | ORDER YESBANK.NS market buy at next open (ref Rs17.64, SL 0.765%, RSI 77.0, rvol 2.34)
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | FILLED IIFL.NS @ Rs674.75 | qty=218 notional=Rs147,096 friction=Rs188
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | FILLED IRFC.NS @ Rs86.8499984741211 | qty=3196 notional=Rs277,573 friction=Rs312
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | FILLED FEDERALBNK.NS @ Rs353.75 | qty=1025 notional=Rs362,594 friction=Rs393
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | FILLED TRENT.NS @ Rs3192.0 | qty=116 notional=Rs370,272 friction=Rs401
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | FILLED AUBANK.NS @ Rs953.9500122070312 | qty=378 notional=Rs360,593 friction=Rs391
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | FILLED RVNL.NS @ Rs210.6199951171875 | qty=1077 notional=Rs226,838 friction=Rs264
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | FILLED NAVINFLUOR.NS @ Rs9282.0 | qty=18 notional=Rs167,076 friction=Rs207
+2026-11-11 10:16:18 | INFO    | engine.paper_trader_v2 | SIZING SKIP YESBANK.NS: notional Rs5,768 below the Rs20,000.0 floor - fixed costs would dominate, skipping rather than trading small
+2026-11-11 10:16:20 | INFO    | __main__ | equity Rs958,908 | open 7 | pending 0 | closed 126 | WR 54.8% | PF 0.7 | friction Rs41,520
