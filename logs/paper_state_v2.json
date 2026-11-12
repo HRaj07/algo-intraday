@@ -1,5 +1,5 @@
 {
-  "cash": 588781.3416782683,
+  "cash": 700642.4531489273,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 4.24,
       "margin": 69793.03776855468,
       "entry_cost": 82.01886640341334,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-12 10:15:50 IST",
@@ -40,7 +40,7 @@
       "entry_turnover_cr": 7.5,
       "entry_stop_pct": 0.554,
       "nifty_at_entry": 25347.69921875,
-      "mfe_price": 764.2000122070312,
+      "mfe_price": 764.9000244140625,
       "mae_price": 763.5999755859375
     },
     "DIXON.NS": {
@@ -67,7 +67,7 @@
       "atr": 69.46,
       "margin": 71199.0,
       "entry_cost": 83.19569897,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-12 10:15:50 IST",
@@ -82,86 +82,6 @@
       "nifty_at_entry": 25347.69921875,
       "mfe_price": 13185.0,
       "mae_price": 13134.0
-    },
-    "PRESTIGE.NS": {
-      "ticker": "PRESTIGE.NS",
-      "direction": "LONG",
-      "entry_price": 1674.9000244140625,
-      "qty": 150,
-      "qty_open": 150,
-      "stop_loss": 1661.99,
-      "initial_stop": 1661.99,
-      "t1": 1683.64,
-      "t2": 1699.42,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 12.91,
-      "atr": 12.91,
-      "margin": 50247.000732421875,
-      "entry_cost": 65.65824702305908,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-12 10:15:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 81.4,
-      "entry_deviation_pct": 1.18,
-      "entry_atr_pct": 0.771,
-      "entry_rvol": 4.68,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 2.5,
-      "entry_stop_pct": 0.771,
-      "nifty_at_entry": 25347.69921875,
-      "mfe_price": 1675.4000244140625,
-      "mae_price": 1672.800048828125
-    },
-    "LICHSGFIN.NS": {
-      "ticker": "LICHSGFIN.NS",
-      "direction": "LONG",
-      "entry_price": 580.0,
-      "qty": 542,
-      "qty_open": 542,
-      "stop_loss": 576.43,
-      "initial_stop": 576.43,
-      "t1": 583.48,
-      "t2": 587.14,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 3.57,
-      "atr": 3.57,
-      "margin": 62872.0,
-      "entry_cost": 76.22575015999999,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-12 10:15:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 75.3,
-      "entry_deviation_pct": 0.9,
-      "entry_atr_pct": 0.616,
-      "entry_rvol": 3.46,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.17,
-      "entry_stop_pct": 0.616,
-      "nifty_at_entry": 25347.69921875,
-      "mfe_price": 580.0,
-      "mae_price": 578.4000244140625
     },
     "GODREJPROP.NS": {
       "ticker": "GODREJPROP.NS",
@@ -187,7 +107,7 @@
       "atr": 10.31,
       "margin": 69665.28183593751,
       "entry_cost": 81.91193085513476,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-12 10:15:50 IST",
@@ -200,7 +120,7 @@
       "entry_turnover_cr": 3.52,
       "entry_stop_pct": 0.556,
       "nifty_at_entry": 25347.69921875,
-      "mfe_price": 1855.0999755859375,
+      "mfe_price": 1860.9000244140625,
       "mae_price": 1849.800048828125
     },
     "PHOENIXLTD.NS": {
@@ -227,7 +147,7 @@
       "atr": 15.43,
       "margin": 55947.49755859375,
       "entry_cost": 70.42973388146973,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-12 10:15:50 IST",
@@ -240,47 +160,47 @@
       "entry_turnover_cr": 2.59,
       "entry_stop_pct": 0.689,
       "nifty_at_entry": 25347.69921875,
-      "mfe_price": 2237.89990234375,
+      "mfe_price": 2239.800048828125,
       "mae_price": 2227.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "DIXON.NS": {
-      "close": 13150.0,
-      "high": 13150.0,
-      "low": 13134.0,
-      "as_of": "2026-11-12T10:31:22.718356+05:30"
+      "close": 13177.0,
+      "high": 13177.0,
+      "low": 13177.0,
+      "as_of": "2026-11-12T10:45:50.952733+05:30"
     },
     "GODREJPROP.NS": {
-      "close": 1855.0999755859375,
-      "high": 1855.0999755859375,
-      "low": 1849.800048828125,
-      "as_of": "2026-11-12T10:31:22.718356+05:30"
+      "close": 1860.9000244140625,
+      "high": 1860.9000244140625,
+      "low": 1860.9000244140625,
+      "as_of": "2026-11-12T10:45:50.952733+05:30"
     },
     "PHOENIXLTD.NS": {
-      "close": 2230.300048828125,
-      "high": 2230.300048828125,
-      "low": 2227.5,
-      "as_of": "2026-11-12T10:31:22.718356+05:30"
+      "close": 2237.699951171875,
+      "high": 2239.800048828125,
+      "low": 2235.0,
+      "as_of": "2026-11-12T10:45:50.952733+05:30"
     },
     "DLF.NS": {
-      "close": 764.2000122070312,
-      "high": 764.2000122070312,
-      "low": 763.5999755859375,
-      "as_of": "2026-11-12T10:31:22.718356+05:30"
+      "close": 764.9000244140625,
+      "high": 764.9000244140625,
+      "low": 764.9000244140625,
+      "as_of": "2026-11-12T10:45:50.952733+05:30"
     },
     "PRESTIGE.NS": {
-      "close": 1675.0,
-      "high": 1675.4000244140625,
-      "low": 1672.800048828125,
-      "as_of": "2026-11-12T10:31:22.718356+05:30"
+      "close": 1682.699951171875,
+      "high": 1684.5,
+      "low": 1680.800048828125,
+      "as_of": "2026-11-12T10:45:50.952733+05:30"
     },
     "LICHSGFIN.NS": {
-      "close": 578.4000244140625,
-      "high": 579.7000122070312,
-      "low": 578.4000244140625,
-      "as_of": "2026-11-12T10:31:22.718356+05:30"
+      "close": 575.4000244140625,
+      "high": 576.0999755859375,
+      "low": 575.4000244140625,
+      "as_of": "2026-11-12T10:45:50.952733+05:30"
     }
   },
   "trade_history": [
@@ -3076,6 +2996,48 @@
       "entry_rvol": 4.06,
       "entry_turnover_cr": 4.75,
       "entry_stop_pct": 0.548
+    },
+    {
+      "ticker": "PRESTIGE.NS",
+      "direction": "LONG",
+      "entry_price": 1674.9000244140625,
+      "exit_price": 1683.64,
+      "qty": 150,
+      "pnl": 1022.88,
+      "R_multiple": 0.53,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 288.11,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-12 10:15:50 IST",
+      "exit_time": "2026-11-12 10:45:50 IST",
+      "entry_rsi": 81.4,
+      "entry_deviation_pct": 1.18,
+      "entry_atr_pct": 0.771,
+      "entry_rvol": 4.68,
+      "entry_turnover_cr": 2.5,
+      "entry_stop_pct": 0.771
+    },
+    {
+      "ticker": "LICHSGFIN.NS",
+      "direction": "LONG",
+      "entry_price": 580.0,
+      "exit_price": 576.43,
+      "qty": 542,
+      "pnl": -2280.77,
+      "R_multiple": -1.18,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 345.83,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-12 10:15:50 IST",
+      "exit_time": "2026-11-12 10:45:50 IST",
+      "entry_rsi": 75.3,
+      "entry_deviation_pct": 0.9,
+      "entry_atr_pct": 0.616,
+      "entry_rvol": 3.46,
+      "entry_turnover_cr": 4.17,
+      "entry_stop_pct": 0.616
     }
   ],
   "daily_entry_count": {
@@ -3107,7 +3069,7 @@
     "2026-11-11": 7,
     "2026-11-12": 6
   },
-  "total_pnl": -31494.84042622453,
+  "total_pnl": -32752.72968798734,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
