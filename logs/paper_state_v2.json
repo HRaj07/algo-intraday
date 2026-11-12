@@ -1,5 +1,5 @@
 {
-  "cash": 826894.010417348,
+  "cash": 894657.886734822,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 4.24,
       "margin": 69793.03776855468,
       "entry_cost": 82.01886640341334,
-      "bars_held": 9,
+      "bars_held": 10,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-12 10:15:50 IST",
@@ -42,67 +42,21 @@
       "nifty_at_entry": 25347.69921875,
       "mfe_price": 767.9000244140625,
       "mae_price": 763.5999755859375
-    },
-    "GODREJPROP.NS": {
-      "ticker": "GODREJPROP.NS",
-      "direction": "LONG",
-      "entry_price": 1852.800048828125,
-      "qty": 188,
-      "qty_open": 188,
-      "stop_loss": 1842.5,
-      "initial_stop": 1842.5,
-      "t1": 1866.23,
-      "t2": 1875.72,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 10.3,
-      "atr": 10.31,
-      "margin": 69665.28183593751,
-      "entry_cost": 81.91193085513476,
-      "bars_held": 9,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-12 10:15:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 79.0,
-      "entry_deviation_pct": 1.138,
-      "entry_atr_pct": 0.556,
-      "entry_rvol": 3.44,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 3.52,
-      "entry_stop_pct": 0.556,
-      "nifty_at_entry": 25347.69921875,
-      "mfe_price": 1863.199951171875,
-      "mae_price": 1849.800048828125
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "GODREJPROP.NS": {
-      "close": 1852.300048828125,
-      "high": 1852.5,
-      "low": 1851.300048828125,
-      "as_of": "2026-11-12T12:31:16.450365+05:30"
-    },
-    "PHOENIXLTD.NS": {
-      "close": 2254.0,
-      "high": 2254.39990234375,
-      "low": 2252.0,
-      "as_of": "2026-11-12T12:31:16.450365+05:30"
+      "close": 1844.699951171875,
+      "high": 1844.699951171875,
+      "low": 1844.699951171875,
+      "as_of": "2026-11-12T12:45:48.486544+05:30"
     },
     "DLF.NS": {
-      "close": 767.5,
-      "high": 767.5499877929688,
-      "low": 767.2000122070312,
-      "as_of": "2026-11-12T12:31:16.450365+05:30"
+      "close": 765.8499755859375,
+      "high": 765.8499755859375,
+      "low": 765.8499755859375,
+      "as_of": "2026-11-12T12:45:48.486544+05:30"
     }
   },
   "trade_history": [
@@ -2982,6 +2936,27 @@
       "entry_rvol": 2.97,
       "entry_turnover_cr": 2.59,
       "entry_stop_pct": 0.689
+    },
+    {
+      "ticker": "GODREJPROP.NS",
+      "direction": "LONG",
+      "entry_price": 1852.800048828125,
+      "exit_price": 1844.7,
+      "qty": 188,
+      "pnl": -1901.41,
+      "R_multiple": -0.98,
+      "reason": "vwap_reclaim",
+      "partial": false,
+      "friction": 378.59,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-12 10:15:50 IST",
+      "exit_time": "2026-11-12 12:45:48 IST",
+      "entry_rsi": 79.0,
+      "entry_deviation_pct": 1.138,
+      "entry_atr_pct": 0.556,
+      "entry_rvol": 3.44,
+      "entry_turnover_cr": 3.52,
+      "entry_stop_pct": 0.556
     }
   ],
   "daily_entry_count": {
@@ -3013,7 +2988,7 @@
     "2026-11-11": 7,
     "2026-11-12": 6
   },
-  "total_pnl": -33647.669978160375,
+  "total_pnl": -35549.07549662397,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
