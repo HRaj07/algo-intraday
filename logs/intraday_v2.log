@@ -11253,3 +11253,26 @@
 2026-11-12 10:01:44 | INFO    | __main__ | strategy: MOM-v3
 2026-11-12 10:01:44 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-12 10:01:44 | INFO    | __main__ | equity Rs968,505 | open 0 | pending 0 | closed 133 | WR 57.1% | PF 0.77 | friction Rs43,685
+2026-11-12 10:15:50 | INFO    | __main__ | ================================================================
+2026-11-12 10:15:50 | INFO    | __main__ | Scan | 2026-11-12 10:15 IST
+2026-11-12 10:16:18 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-12 10:16:19 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,937 risk per trade)
+2026-11-12 10:16:19 | INFO    | __main__ |   base 0.40%
+2026-11-12 10:16:19 | INFO    | __main__ |   performance x0.6: n=133, observed expectancy shrunk to -0.029R vs prior +0.125R -> trimming (0.60x)
+2026-11-12 10:16:19 | INFO    | __main__ |   drawdown    x0.655: drawdown 4.1% - sizing at 0.65x
+2026-11-12 10:16:19 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-12 10:16:19 | INFO    | __main__ | strategy: MOM-v3
+2026-11-12 10:16:19 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-12 10:16:19 | INFO    | engine.paper_trader_v2 | ORDER DLF.NS market buy at next open (ref Rs764.3, SL 0.554%, RSI 74.3, rvol 5.79)
+2026-11-12 10:16:19 | INFO    | engine.paper_trader_v2 | ORDER DIXON.NS market buy at next open (ref Rs13197.0, SL 0.526%, RSI 82.8, rvol 5.51)
+2026-11-12 10:16:19 | INFO    | engine.paper_trader_v2 | ORDER PRESTIGE.NS market buy at next open (ref Rs1673.6, SL 0.771%, RSI 81.4, rvol 4.68)
+2026-11-12 10:16:19 | INFO    | engine.paper_trader_v2 | ORDER LICHSGFIN.NS market buy at next open (ref Rs580.0, SL 0.616%, RSI 75.3, rvol 3.46)
+2026-11-12 10:16:19 | INFO    | engine.paper_trader_v2 | ORDER GODREJPROP.NS market buy at next open (ref Rs1855.1, SL 0.556%, RSI 79.0, rvol 3.44)
+2026-11-12 10:16:19 | INFO    | engine.paper_trader_v2 | ORDER PHOENIXLTD.NS market buy at next open (ref Rs2237.9, SL 0.689%, RSI 78.6, rvol 2.97)
+2026-11-12 10:16:19 | INFO    | engine.paper_trader_v2 | FILLED DLF.NS @ Rs763.5999755859375 | qty=457 notional=Rs348,965 friction=Rs380
+2026-11-12 10:16:19 | INFO    | engine.paper_trader_v2 | FILLED DIXON.NS @ Rs13185.0 | qty=27 notional=Rs355,995 friction=Rs387
+2026-11-12 10:16:19 | INFO    | engine.paper_trader_v2 | FILLED PRESTIGE.NS @ Rs1674.9000244140625 | qty=150 notional=Rs251,235 friction=Rs287
+2026-11-12 10:16:19 | INFO    | engine.paper_trader_v2 | FILLED LICHSGFIN.NS @ Rs580.0 | qty=542 notional=Rs314,360 friction=Rs347
+2026-11-12 10:16:19 | INFO    | engine.paper_trader_v2 | FILLED GODREJPROP.NS @ Rs1852.800048828125 | qty=188 notional=Rs348,326 friction=Rs380
+2026-11-12 10:16:19 | INFO    | engine.paper_trader_v2 | FILLED PHOENIXLTD.NS @ Rs2237.89990234375 | qty=125 notional=Rs279,737 friction=Rs314
+2026-11-12 10:16:21 | INFO    | __main__ | equity Rs968,505 | open 6 | pending 0 | closed 133 | WR 57.1% | PF 0.77 | friction Rs43,685
