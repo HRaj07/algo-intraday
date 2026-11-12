@@ -1,5 +1,5 @@
 {
-  "cash": 700642.4531489273,
+  "cash": 769583.369229352,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 4.24,
       "margin": 69793.03776855468,
       "entry_cost": 82.01886640341334,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-12 10:15:50 IST",
@@ -40,48 +40,8 @@
       "entry_turnover_cr": 7.5,
       "entry_stop_pct": 0.554,
       "nifty_at_entry": 25347.69921875,
-      "mfe_price": 764.9000244140625,
+      "mfe_price": 766.7000122070312,
       "mae_price": 763.5999755859375
-    },
-    "DIXON.NS": {
-      "ticker": "DIXON.NS",
-      "direction": "LONG",
-      "entry_price": 13185.0,
-      "qty": 27,
-      "qty_open": 27,
-      "stop_loss": 13115.65,
-      "initial_stop": 13115.65,
-      "t1": 13276.18,
-      "t2": 13335.91,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 69.35,
-      "atr": 69.46,
-      "margin": 71199.0,
-      "entry_cost": 83.19569897,
-      "bars_held": 2,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-12 10:15:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 82.8,
-      "entry_deviation_pct": 1.059,
-      "entry_atr_pct": 0.526,
-      "entry_rvol": 5.51,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 10.12,
-      "entry_stop_pct": 0.526,
-      "nifty_at_entry": 25347.69921875,
-      "mfe_price": 13185.0,
-      "mae_price": 13134.0
     },
     "GODREJPROP.NS": {
       "ticker": "GODREJPROP.NS",
@@ -107,7 +67,7 @@
       "atr": 10.31,
       "margin": 69665.28183593751,
       "entry_cost": 81.91193085513476,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-12 10:15:50 IST",
@@ -120,7 +80,7 @@
       "entry_turnover_cr": 3.52,
       "entry_stop_pct": 0.556,
       "nifty_at_entry": 25347.69921875,
-      "mfe_price": 1860.9000244140625,
+      "mfe_price": 1863.199951171875,
       "mae_price": 1849.800048828125
     },
     "PHOENIXLTD.NS": {
@@ -147,7 +107,7 @@
       "atr": 15.43,
       "margin": 55947.49755859375,
       "entry_cost": 70.42973388146973,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-12 10:15:50 IST",
@@ -160,47 +120,35 @@
       "entry_turnover_cr": 2.59,
       "entry_stop_pct": 0.689,
       "nifty_at_entry": 25347.69921875,
-      "mfe_price": 2239.800048828125,
+      "mfe_price": 2247.0,
       "mae_price": 2227.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "DIXON.NS": {
-      "close": 13177.0,
-      "high": 13177.0,
-      "low": 13177.0,
-      "as_of": "2026-11-12T10:45:50.952733+05:30"
+      "close": 13103.0,
+      "high": 13112.0,
+      "low": 13101.0,
+      "as_of": "2026-11-12T11:01:12.634013+05:30"
     },
     "GODREJPROP.NS": {
-      "close": 1860.9000244140625,
-      "high": 1860.9000244140625,
-      "low": 1860.9000244140625,
-      "as_of": "2026-11-12T10:45:50.952733+05:30"
+      "close": 1859.5,
+      "high": 1863.199951171875,
+      "low": 1858.5999755859375,
+      "as_of": "2026-11-12T11:01:12.634013+05:30"
     },
     "PHOENIXLTD.NS": {
-      "close": 2237.699951171875,
-      "high": 2239.800048828125,
-      "low": 2235.0,
-      "as_of": "2026-11-12T10:45:50.952733+05:30"
+      "close": 2244.199951171875,
+      "high": 2247.0,
+      "low": 2244.199951171875,
+      "as_of": "2026-11-12T11:01:12.634013+05:30"
     },
     "DLF.NS": {
-      "close": 764.9000244140625,
-      "high": 764.9000244140625,
-      "low": 764.9000244140625,
-      "as_of": "2026-11-12T10:45:50.952733+05:30"
-    },
-    "PRESTIGE.NS": {
-      "close": 1682.699951171875,
-      "high": 1684.5,
-      "low": 1680.800048828125,
-      "as_of": "2026-11-12T10:45:50.952733+05:30"
-    },
-    "LICHSGFIN.NS": {
-      "close": 575.4000244140625,
-      "high": 576.0999755859375,
-      "low": 575.4000244140625,
-      "as_of": "2026-11-12T10:45:50.952733+05:30"
+      "close": 766.0999755859375,
+      "high": 766.7000122070312,
+      "low": 766.0,
+      "as_of": "2026-11-12T11:01:12.634013+05:30"
     }
   },
   "trade_history": [
@@ -3038,6 +2986,27 @@
       "entry_rvol": 3.46,
       "entry_turnover_cr": 4.17,
       "entry_stop_pct": 0.616
+    },
+    {
+      "ticker": "DIXON.NS",
+      "direction": "LONG",
+      "entry_price": 13185.0,
+      "exit_price": 13115.65,
+      "qty": 27,
+      "pnl": -2258.08,
+      "R_multiple": -1.21,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 385.63,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-12 10:15:50 IST",
+      "exit_time": "2026-11-12 11:01:12 IST",
+      "entry_rsi": 82.8,
+      "entry_deviation_pct": 1.059,
+      "entry_atr_pct": 0.526,
+      "entry_rvol": 5.51,
+      "entry_turnover_cr": 10.12,
+      "entry_stop_pct": 0.526
     }
   ],
   "daily_entry_count": {
@@ -3069,7 +3038,7 @@
     "2026-11-11": 7,
     "2026-11-12": 6
   },
-  "total_pnl": -32752.72968798734,
+  "total_pnl": -35010.813607562646,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
