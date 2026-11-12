@@ -1,5 +1,5 @@
 {
-  "cash": 769583.369229352,
+  "cash": 826894.010417348,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 4.24,
       "margin": 69793.03776855468,
       "entry_cost": 82.01886640341334,
-      "bars_held": 8,
+      "bars_held": 9,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-12 10:15:50 IST",
@@ -67,7 +67,7 @@
       "atr": 10.31,
       "margin": 69665.28183593751,
       "entry_cost": 81.91193085513476,
-      "bars_held": 8,
+      "bars_held": 9,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-12 10:15:50 IST",
@@ -82,67 +82,27 @@
       "nifty_at_entry": 25347.69921875,
       "mfe_price": 1863.199951171875,
       "mae_price": 1849.800048828125
-    },
-    "PHOENIXLTD.NS": {
-      "ticker": "PHOENIXLTD.NS",
-      "direction": "LONG",
-      "entry_price": 2237.89990234375,
-      "qty": 125,
-      "qty_open": 125,
-      "stop_loss": 2222.48,
-      "initial_stop": 2222.48,
-      "t1": 2251.33,
-      "t2": 2268.75,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 15.42,
-      "atr": 15.43,
-      "margin": 55947.49755859375,
-      "entry_cost": 70.42973388146973,
-      "bars_held": 8,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-12 10:15:50 IST",
-      "predicted_rr": null,
-      "entry_rsi": 78.6,
-      "entry_deviation_pct": 1.252,
-      "entry_atr_pct": 0.689,
-      "entry_rvol": 2.97,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 2.59,
-      "entry_stop_pct": 0.689,
-      "nifty_at_entry": 25347.69921875,
-      "mfe_price": 2247.0,
-      "mae_price": 2227.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "GODREJPROP.NS": {
-      "close": 1851.199951171875,
-      "high": 1851.199951171875,
-      "low": 1851.199951171875,
-      "as_of": "2026-11-12T12:15:49.953200+05:30"
+      "close": 1852.300048828125,
+      "high": 1852.5,
+      "low": 1851.300048828125,
+      "as_of": "2026-11-12T12:31:16.450365+05:30"
     },
     "PHOENIXLTD.NS": {
-      "close": 2242.199951171875,
-      "high": 2243.60009765625,
-      "low": 2240.699951171875,
-      "as_of": "2026-11-12T12:15:49.953200+05:30"
+      "close": 2254.0,
+      "high": 2254.39990234375,
+      "low": 2252.0,
+      "as_of": "2026-11-12T12:31:16.450365+05:30"
     },
     "DLF.NS": {
-      "close": 765.9000244140625,
-      "high": 765.9000244140625,
-      "low": 765.9000244140625,
-      "as_of": "2026-11-12T12:15:49.953200+05:30"
+      "close": 767.5,
+      "high": 767.5499877929688,
+      "low": 767.2000122070312,
+      "as_of": "2026-11-12T12:31:16.450365+05:30"
     }
   },
   "trade_history": [
@@ -3001,6 +2961,27 @@
       "entry_rvol": 5.51,
       "entry_turnover_cr": 10.12,
       "entry_stop_pct": 0.526
+    },
+    {
+      "ticker": "PHOENIXLTD.NS",
+      "direction": "LONG",
+      "entry_price": 2237.89990234375,
+      "exit_price": 2251.33,
+      "qty": 125,
+      "pnl": 1363.14,
+      "R_multiple": 0.71,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 315.62,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-12 10:15:50 IST",
+      "exit_time": "2026-11-12 12:31:16 IST",
+      "entry_rsi": 78.6,
+      "entry_deviation_pct": 1.252,
+      "entry_atr_pct": 0.689,
+      "entry_rvol": 2.97,
+      "entry_turnover_cr": 2.59,
+      "entry_stop_pct": 0.689
     }
   ],
   "daily_entry_count": {
@@ -3032,7 +3013,7 @@
     "2026-11-11": 7,
     "2026-11-12": 6
   },
-  "total_pnl": -35010.813607562646,
+  "total_pnl": -33647.669978160375,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,

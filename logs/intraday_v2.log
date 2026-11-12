@@ -11394,3 +11394,17 @@
 2026-11-12 12:16:35 | INFO    | __main__ | strategy: MOM-v3
 2026-11-12 12:16:35 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-12 12:16:36 | INFO    | __main__ | equity Rs966,277 | open 3 | pending 0 | closed 136 | WR 56.6% | PF 0.75 | friction Rs44,705
+2026-11-12 12:31:16 | INFO    | __main__ | ================================================================
+2026-11-12 12:31:16 | INFO    | __main__ | Scan | 2026-11-12 12:31 IST
+2026-11-12 12:31:52 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-12 12:31:52 | INFO    | engine.paper_trader_v2 | EXIT PHOENIXLTD.NS 125@Rs2251.33 | P&L Rs+1,363 (+0.71R) | friction Rs316 | t1_vwap
+2026-11-12 12:31:52 | INFO    | engine.paper_trader_v2 | T1 PHOENIXLTD.NS - half out at VWAP, stop to Rs2242.73 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-12 12:31:53 | WARNING | engine.risk_manager | KILL SWITCH (paper - continuing): rolling 30-trade PF 0.71 < 0.85 - edge has degraded, manual restart required
+2026-11-12 12:31:53 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,936 risk per trade)
+2026-11-12 12:31:53 | INFO    | __main__ |   base 0.40%
+2026-11-12 12:31:53 | INFO    | __main__ |   performance x0.6: n=137, observed expectancy shrunk to -0.035R vs prior +0.125R -> trimming (0.60x)
+2026-11-12 12:31:53 | INFO    | __main__ |   drawdown    x0.647: drawdown 4.1% - sizing at 0.65x
+2026-11-12 12:31:53 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-12 12:31:53 | INFO    | __main__ | strategy: MOM-v3
+2026-11-12 12:31:53 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-12 12:31:53 | INFO    | __main__ | equity Rs968,041 | open 2 | pending 0 | closed 137 | WR 56.9% | PF 0.76 | friction Rs45,021
