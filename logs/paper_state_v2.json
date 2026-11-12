@@ -27,7 +27,7 @@
       "atr": 4.24,
       "margin": 69793.03776855468,
       "entry_cost": 82.01886640341334,
-      "bars_held": 12,
+      "bars_held": 13,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-12 10:15:50 IST",
@@ -47,10 +47,10 @@
   "pending_orders": {},
   "last_known_price": {
     "DLF.NS": {
-      "close": 765.25,
-      "high": 765.25,
-      "low": 765.25,
-      "as_of": "2026-11-12T13:15:49.273347+05:30"
+      "close": 765.8499755859375,
+      "high": 765.9000244140625,
+      "low": 765.3499755859375,
+      "as_of": "2026-11-12T13:31:20.202799+05:30"
     }
   },
   "trade_history": [
