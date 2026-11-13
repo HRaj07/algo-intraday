@@ -27,7 +27,7 @@
       "atr": 80.18,
       "margin": 31247.800000000003,
       "entry_cost": 49.755346034,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-13 12:31:16 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 1.181,
       "nifty_at_entry": 25114.55078125,
       "mfe_price": 6793.0,
-      "mae_price": 6780.5
+      "mae_price": 6764.5
     },
     "BANKINDIA.NS": {
       "ticker": "BANKINDIA.NS",
@@ -67,7 +67,7 @@
       "atr": 0.88,
       "margin": 67603.89866638184,
       "entry_cost": 80.18649130072158,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-13 12:45:55 IST",
@@ -81,16 +81,22 @@
       "entry_stop_pct": 0.566,
       "nifty_at_entry": 25105.80078125,
       "mfe_price": 154.6999969482422,
-      "mae_price": 154.6999969482422
+      "mae_price": 154.05999755859375
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "AMBER.NS": {
-      "close": 6788.0,
-      "high": 6791.5,
-      "low": 6780.5,
-      "as_of": "2026-11-13T12:45:55.025297+05:30"
+      "close": 6776.0,
+      "high": 6776.0,
+      "low": 6764.5,
+      "as_of": "2026-11-13T13:01:02.509754+05:30"
+    },
+    "BANKINDIA.NS": {
+      "close": 154.05999755859375,
+      "high": 154.1699981689453,
+      "low": 154.05999755859375,
+      "as_of": "2026-11-13T13:01:02.509754+05:30"
     }
   },
   "trade_history": [

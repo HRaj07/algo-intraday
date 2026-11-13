@@ -11757,3 +11757,14 @@
 2026-11-13 12:46:24 | INFO    | engine.paper_trader_v2 | ORDER REJECTED AMBER.NS: already holding this name
 2026-11-13 12:46:24 | INFO    | engine.paper_trader_v2 | FILLED BANKINDIA.NS @ Rs154.6999969482422 | qty=2185 notional=Rs338,019 friction=Rs370
 2026-11-13 12:46:25 | INFO    | __main__ | equity Rs961,617 | open 2 | pending 0 | closed 142 | WR 56.3% | PF 0.74 | friction Rs46,775
+2026-11-13 13:01:02 | INFO    | __main__ | ================================================================
+2026-11-13 13:01:02 | INFO    | __main__ | Scan | 2026-11-13 13:01 IST
+2026-11-13 13:01:39 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-13 13:01:40 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,920 risk per trade)
+2026-11-13 13:01:40 | INFO    | __main__ |   base 0.40%
+2026-11-13 13:01:40 | INFO    | __main__ |   performance x0.6: n=142, observed expectancy shrunk to -0.046R vs prior +0.125R -> trimming (0.60x)
+2026-11-13 13:01:40 | INFO    | __main__ |   drawdown    x0.513: drawdown 4.9% - sizing at 0.51x
+2026-11-13 13:01:40 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-13 13:01:40 | INFO    | __main__ | strategy: MOM-v3
+2026-11-13 13:01:40 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-13 13:01:40 | INFO    | __main__ | equity Rs959,942 | open 2 | pending 0 | closed 142 | WR 56.3% | PF 0.74 | friction Rs46,775
