@@ -1,56 +1,15 @@
 {
-  "cash": 896979.3760385518,
+  "cash": 961731.710598335,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "VOLTAS.NS": {
-      "ticker": "VOLTAS.NS",
-      "direction": "LONG",
-      "entry_price": 1140.0999755859375,
-      "qty": 294,
-      "qty_open": 294,
-      "stop_loss": 1133.57,
-      "initial_stop": 1133.57,
-      "t1": 1146.84,
-      "t2": 1153.06,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 6.53,
-      "atr": 6.53,
-      "margin": 67037.87856445313,
-      "entry_cost": 79.7127154948042,
-      "bars_held": 4,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-13 11:01:14 IST",
-      "predicted_rr": null,
-      "entry_rsi": 72.3,
-      "entry_deviation_pct": 0.898,
-      "entry_atr_pct": 0.573,
-      "entry_rvol": 3.02,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.43,
-      "entry_stop_pct": 0.573,
-      "nifty_at_entry": 25191.349609375,
-      "mfe_price": 1142.9000244140625,
-      "mae_price": 1133.699951171875
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "VOLTAS.NS": {
-      "close": 1134.5999755859375,
-      "high": 1134.800048828125,
-      "low": 1133.699951171875,
-      "as_of": "2026-11-13T12:01:05.676310+05:30"
+      "close": 1127.4000244140625,
+      "high": 1128.5999755859375,
+      "low": 1127.0,
+      "as_of": "2026-11-13T12:15:55.823717+05:30"
     }
   },
   "trade_history": [
@@ -3014,6 +2973,27 @@
       "entry_rvol": 10.63,
       "entry_turnover_cr": 7.15,
       "entry_stop_pct": 0.957
+    },
+    {
+      "ticker": "VOLTAS.NS",
+      "direction": "LONG",
+      "entry_price": 1140.0999755859375,
+      "exit_price": 1133.57,
+      "qty": 294,
+      "pnl": -2285.54,
+      "R_multiple": -1.19,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 365.73,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-13 11:01:14 IST",
+      "exit_time": "2026-11-13 12:15:55 IST",
+      "entry_rsi": 72.3,
+      "entry_deviation_pct": 0.898,
+      "entry_atr_pct": 0.573,
+      "entry_rvol": 3.02,
+      "entry_turnover_cr": 4.43,
+      "entry_stop_pct": 0.573
     }
   ],
   "daily_entry_count": {
@@ -3046,7 +3026,7 @@
     "2026-11-12": 6,
     "2026-11-13": 3
   },
-  "total_pnl": -35982.74539699571,
+  "total_pnl": -38268.28940166564,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
