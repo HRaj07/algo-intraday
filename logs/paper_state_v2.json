@@ -1,48 +1,8 @@
 {
-  "cash": 856262.3014661804,
+  "cash": 896979.3760385518,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "AMBER.NS": {
-      "ticker": "AMBER.NS",
-      "direction": "LONG",
-      "entry_price": 6629.5,
-      "qty": 30,
-      "qty_open": 30,
-      "stop_loss": 6566.06,
-      "initial_stop": 6566.06,
-      "t1": 6668.77,
-      "t2": 6755.88,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 63.44,
-      "atr": 63.44,
-      "margin": 39777.0,
-      "entry_cost": 56.89454231,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-13 11:01:14 IST",
-      "predicted_rr": null,
-      "entry_rsi": 78.7,
-      "entry_deviation_pct": 2.532,
-      "entry_atr_pct": 0.957,
-      "entry_rvol": 10.63,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 7.15,
-      "entry_stop_pct": 0.957,
-      "nifty_at_entry": 25191.349609375,
-      "mfe_price": 6652.0,
-      "mae_price": 6629.5
-    },
     "VOLTAS.NS": {
       "ticker": "VOLTAS.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 6.53,
       "margin": 67037.87856445313,
       "entry_cost": 79.7127154948042,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-13 11:01:14 IST",
@@ -81,22 +41,22 @@
       "entry_stop_pct": 0.573,
       "nifty_at_entry": 25191.349609375,
       "mfe_price": 1142.9000244140625,
-      "mae_price": 1140.0999755859375
+      "mae_price": 1137.699951171875
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "VOLTAS.NS": {
-      "close": 1141.9000244140625,
-      "high": 1142.9000244140625,
-      "low": 1141.5999755859375,
-      "as_of": "2026-11-13T11:15:49.219590+05:30"
+      "close": 1137.699951171875,
+      "high": 1139.5999755859375,
+      "low": 1137.699951171875,
+      "as_of": "2026-11-13T11:31:23.040881+05:30"
     },
     "AMBER.NS": {
-      "close": 6652.0,
-      "high": 6652.0,
-      "low": 6652.0,
-      "as_of": "2026-11-13T11:15:49.219590+05:30"
+      "close": 6774.5,
+      "high": 6774.5,
+      "low": 6650.0,
+      "as_of": "2026-11-13T11:31:23.040881+05:30"
     }
   },
   "trade_history": [
@@ -3039,6 +2999,27 @@
       "entry_rvol": 7.56,
       "entry_turnover_cr": 5.0,
       "entry_stop_pct": 0.533
+    },
+    {
+      "ticker": "AMBER.NS",
+      "direction": "LONG",
+      "entry_price": 6629.5,
+      "exit_price": 6668.77,
+      "qty": 30,
+      "pnl": 940.07,
+      "R_multiple": 0.49,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 238.03,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-13 11:01:14 IST",
+      "exit_time": "2026-11-13 11:31:23 IST",
+      "entry_rsi": 78.7,
+      "entry_deviation_pct": 2.532,
+      "entry_atr_pct": 0.957,
+      "entry_rvol": 10.63,
+      "entry_turnover_cr": 7.15,
+      "entry_stop_pct": 0.957
     }
   ],
   "daily_entry_count": {
@@ -3071,7 +3052,7 @@
     "2026-11-12": 6,
     "2026-11-13": 3
   },
-  "total_pnl": -36922.81996936713,
+  "total_pnl": -35982.74539699571,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
