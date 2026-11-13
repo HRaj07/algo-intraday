@@ -1,8 +1,49 @@
 {
-  "cash": 965394.7959527568,
+  "cash": 893097.1959527568,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {},
+  "positions": {
+    "ABB.NS": {
+      "ticker": "ABB.NS",
+      "direction": "LONG",
+      "entry_price": 7088.0,
+      "qty": 51,
+      "qty_open": 51,
+      "stop_loss": 7050.22,
+      "initial_stop": 7050.22,
+      "t1": 7132.54,
+      "t2": 7165.62,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 37.78,
+      "atr": 37.81,
+      "margin": 72297.6,
+      "entry_cost": 84.115260128,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-13 10:15:51 IST",
+      "predicted_rr": null,
+      "entry_rsi": 73.2,
+      "entry_deviation_pct": 0.936,
+      "entry_atr_pct": 0.533,
+      "entry_rvol": 7.56,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 5.0,
+      "entry_stop_pct": 0.533,
+      "nifty_at_entry": 25215.650390625,
+      "mfe_price": 7088.0,
+      "mae_price": 7088.0
+    }
+  },
   "pending_orders": {},
   "last_known_price": {},
   "trade_history": [
@@ -2953,16 +2994,17 @@
     "2026-11-05": 6,
     "2026-11-09": 6,
     "2026-11-11": 7,
-    "2026-11-12": 6
+    "2026-11-12": 6,
+    "2026-11-13": 1
   },
   "total_pnl": -34605.20404724382,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=133, observed expectancy shrunk to -0.029R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.655,
-    "drawdown_reason": "drawdown 4.1% - sizing at 0.65x",
-    "raw_pct": 0.00157,
+    "performance_reason": "n=139, observed expectancy shrunk to -0.037R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.603,
+    "drawdown_reason": "drawdown 4.4% - sizing at 0.60x",
+    "raw_pct": 0.00145,
     "final_pct": 0.002,
     "clamped": true
   },
@@ -3044,6 +3086,12 @@
       "pf": 0.521,
       "n": 30,
       "trade_count": 126
+    },
+    {
+      "date": "2026-11-13",
+      "pf": 0.82,
+      "n": 30,
+      "trade_count": 139
     }
   ]
 }
