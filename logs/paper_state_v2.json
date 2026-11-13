@@ -27,7 +27,7 @@
       "atr": 63.44,
       "margin": 39777.0,
       "entry_cost": 56.89454231,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-13 11:01:14 IST",
@@ -40,7 +40,7 @@
       "entry_turnover_cr": 7.15,
       "entry_stop_pct": 0.957,
       "nifty_at_entry": 25191.349609375,
-      "mfe_price": 6629.5,
+      "mfe_price": 6652.0,
       "mae_price": 6629.5
     },
     "VOLTAS.NS": {
@@ -67,7 +67,7 @@
       "atr": 6.53,
       "margin": 67037.87856445313,
       "entry_cost": 79.7127154948042,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-13 11:01:14 IST",
@@ -80,17 +80,23 @@
       "entry_turnover_cr": 4.43,
       "entry_stop_pct": 0.573,
       "nifty_at_entry": 25191.349609375,
-      "mfe_price": 1140.0999755859375,
+      "mfe_price": 1142.9000244140625,
       "mae_price": 1140.0999755859375
     }
   },
   "pending_orders": {},
   "last_known_price": {
-    "ABB.NS": {
-      "close": 7038.0,
-      "high": 7058.0,
-      "low": 7030.0,
-      "as_of": "2026-11-13T11:01:14.483687+05:30"
+    "VOLTAS.NS": {
+      "close": 1141.9000244140625,
+      "high": 1142.9000244140625,
+      "low": 1141.5999755859375,
+      "as_of": "2026-11-13T11:15:49.219590+05:30"
+    },
+    "AMBER.NS": {
+      "close": 6652.0,
+      "high": 6652.0,
+      "low": 6652.0,
+      "as_of": "2026-11-13T11:15:49.219590+05:30"
     }
   },
   "trade_history": [

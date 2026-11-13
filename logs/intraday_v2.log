@@ -11669,3 +11669,15 @@
 2026-11-13 11:01:44 | INFO    | engine.paper_trader_v2 | FILLED AMBER.NS @ Rs6629.5 | qty=30 notional=Rs198,885 friction=Rs237
 2026-11-13 11:01:44 | INFO    | engine.paper_trader_v2 | FILLED VOLTAS.NS @ Rs1140.0999755859375 | qty=294 notional=Rs335,189 friction=Rs367
 2026-11-13 11:01:44 | INFO    | __main__ | equity Rs963,077 | open 2 | pending 0 | closed 140 | WR 56.4% | PF 0.75 | friction Rs46,172
+2026-11-13 11:15:49 | INFO    | __main__ | ================================================================
+2026-11-13 11:15:49 | INFO    | __main__ | Scan | 2026-11-13 11:15 IST
+2026-11-13 11:16:36 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-13 11:16:36 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,929 risk per trade)
+2026-11-13 11:16:36 | INFO    | __main__ |   base 0.40%
+2026-11-13 11:16:36 | INFO    | __main__ |   performance x0.6: n=140, observed expectancy shrunk to -0.043R vs prior +0.125R -> trimming (0.60x)
+2026-11-13 11:16:36 | INFO    | __main__ |   drawdown    x0.585: drawdown 4.5% - sizing at 0.58x
+2026-11-13 11:16:36 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-13 11:16:36 | INFO    | __main__ | strategy: MOM-v3
+2026-11-13 11:16:36 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-13 11:16:36 | INFO    | engine.paper_trader_v2 | ORDER REJECTED AMBER.NS: already holding this name
+2026-11-13 11:16:36 | INFO    | __main__ | equity Rs964,281 | open 2 | pending 0 | closed 140 | WR 56.4% | PF 0.75 | friction Rs46,172
