@@ -11797,3 +11797,7 @@
 2026-11-13 14:16:26 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
 2026-11-13 14:16:26 | INFO    | engine.paper_trader_v2 | EXIT AMBER.NS 23@Rs6712.77 | P&L Rs-2,040 (-1.11R) | friction Rs195 | stop_loss
 2026-11-13 14:16:26 | WARNING | __main__ | NOT TRADING: daily loss Rs-7,995 hit the -3.0R limit (-Rs5,744)
+2026-11-13 14:31:20 | INFO    | __main__ | ================================================================
+2026-11-13 14:31:20 | INFO    | __main__ | Scan | 2026-11-13 14:31 IST
+2026-11-13 14:31:59 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-13 14:31:59 | WARNING | __main__ | NOT TRADING: daily loss Rs-7,995 hit the -3.0R limit (-Rs5,744)
