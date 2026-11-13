@@ -11641,3 +11641,15 @@
 2026-11-13 10:31:58 | INFO    | engine.paper_trader_v2 | ORDER REJECTED AMBER.NS: already hold 1 position(s) in INDUSTRIAL
 2026-11-13 10:31:58 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SIEMENS.NS: already hold 1 position(s) in INDUSTRIAL
 2026-11-13 10:31:58 | INFO    | __main__ | equity Rs964,273 | open 1 | pending 0 | closed 139 | WR 56.8% | PF 0.76 | friction Rs45,781
+2026-11-13 10:45:49 | INFO    | __main__ | ================================================================
+2026-11-13 10:45:49 | INFO    | __main__ | Scan | 2026-11-13 10:45 IST
+2026-11-13 10:46:37 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-13 10:46:37 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,929 risk per trade)
+2026-11-13 10:46:37 | INFO    | __main__ |   base 0.40%
+2026-11-13 10:46:37 | INFO    | __main__ |   performance x0.6: n=139, observed expectancy shrunk to -0.037R vs prior +0.125R -> trimming (0.60x)
+2026-11-13 10:46:37 | INFO    | __main__ |   drawdown    x0.591: drawdown 4.5% - sizing at 0.59x
+2026-11-13 10:46:37 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-13 10:46:37 | INFO    | __main__ | strategy: MOM-v3
+2026-11-13 10:46:37 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-13 10:46:37 | INFO    | engine.paper_trader_v2 | ORDER REJECTED AMBER.NS: already hold 1 position(s) in INDUSTRIAL
+2026-11-13 10:46:37 | INFO    | __main__ | equity Rs964,630 | open 1 | pending 0 | closed 139 | WR 56.8% | PF 0.76 | friction Rs45,781
