@@ -11707,3 +11707,14 @@
 2026-11-13 11:46:23 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-13 11:46:24 | INFO    | engine.paper_trader_v2 | ORDER REJECTED AMBER.NS: already hold 1 position(s) in INDUSTRIAL
 2026-11-13 11:46:24 | INFO    | __main__ | equity Rs962,929 | open 1 | pending 0 | closed 141 | WR 56.7% | PF 0.75 | friction Rs46,410
+2026-11-13 12:01:05 | INFO    | __main__ | ================================================================
+2026-11-13 12:01:05 | INFO    | __main__ | Scan | 2026-11-13 12:01 IST
+2026-11-13 12:01:51 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-13 12:01:52 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,925 risk per trade)
+2026-11-13 12:01:52 | INFO    | __main__ |   base 0.40%
+2026-11-13 12:01:52 | INFO    | __main__ |   performance x0.6: n=141, observed expectancy shrunk to -0.040R vs prior +0.125R -> trimming (0.60x)
+2026-11-13 12:01:52 | INFO    | __main__ |   drawdown    x0.554: drawdown 4.7% - sizing at 0.55x
+2026-11-13 12:01:52 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-13 12:01:52 | INFO    | __main__ | strategy: MOM-v3
+2026-11-13 12:01:52 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-13 12:01:52 | INFO    | __main__ | equity Rs962,400 | open 1 | pending 0 | closed 141 | WR 56.7% | PF 0.75 | friction Rs46,410
