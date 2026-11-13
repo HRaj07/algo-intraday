@@ -1,56 +1,15 @@
 {
-  "cash": 928192.6862169649,
+  "cash": 957400.2703373146,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "AMBER.NS": {
-      "ticker": "AMBER.NS",
-      "direction": "LONG",
-      "entry_price": 6793.0,
-      "qty": 23,
-      "qty_open": 23,
-      "stop_loss": 6712.77,
-      "initial_stop": 6712.77,
-      "t1": 6831.24,
-      "t2": 6950.86,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 80.23,
-      "atr": 80.18,
-      "margin": 31247.800000000003,
-      "entry_cost": 49.755346034,
-      "bars_held": 6,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-13 12:31:16 IST",
-      "predicted_rr": null,
-      "entry_rsi": 71.6,
-      "entry_deviation_pct": 1.957,
-      "entry_atr_pct": 1.181,
-      "entry_rvol": 6.56,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 7.65,
-      "entry_stop_pct": 1.181,
-      "nifty_at_entry": 25114.55078125,
-      "mfe_price": 6793.0,
-      "mae_price": 6730.5
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "AMBER.NS": {
-      "close": 6744.5,
-      "high": 6745.0,
-      "low": 6740.5,
-      "as_of": "2026-11-13T14:01:10.371722+05:30"
+      "close": 6693.0,
+      "high": 6693.0,
+      "low": 6693.0,
+      "as_of": "2026-11-13T14:15:52.625909+05:30"
     }
   },
   "trade_history": [
@@ -3056,6 +3015,27 @@
       "entry_rvol": 4.6,
       "entry_turnover_cr": 6.18,
       "entry_stop_pct": 0.566
+    },
+    {
+      "ticker": "AMBER.NS",
+      "direction": "LONG",
+      "entry_price": 6793.0,
+      "exit_price": 6712.77,
+      "qty": 23,
+      "pnl": -2040.22,
+      "R_multiple": -1.11,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 194.93,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-13 12:31:16 IST",
+      "exit_time": "2026-11-13 14:15:52 IST",
+      "entry_rsi": 71.6,
+      "entry_deviation_pct": 1.957,
+      "entry_atr_pct": 1.181,
+      "entry_rvol": 6.56,
+      "entry_turnover_cr": 7.65,
+      "entry_stop_pct": 1.181
     }
   ],
   "daily_entry_count": {
@@ -3088,7 +3068,7 @@
     "2026-11-12": 6,
     "2026-11-13": 5
   },
-  "total_pnl": -40559.513783035756,
+  "total_pnl": -42599.729662686004,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
