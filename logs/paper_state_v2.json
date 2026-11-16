@@ -27,7 +27,7 @@
       "atr": 4.24,
       "margin": 72117.6,
       "entry_cost": 83.96459472800001,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-16 11:31:26 IST",
@@ -40,17 +40,17 @@
       "entry_turnover_cr": 3.25,
       "entry_stop_pct": 0.533,
       "nifty_at_entry": 25228.849609375,
-      "mfe_price": 796.0,
+      "mfe_price": 798.4500122070312,
       "mae_price": 796.0
     }
   },
   "pending_orders": {},
   "last_known_price": {
-    "MAXHEALTH.NS": {
-      "close": 1003.0499877929688,
-      "high": 1003.0499877929688,
-      "low": 999.0999755859375,
-      "as_of": "2026-11-16T11:31:26.566083+05:30"
+    "FORTIS.NS": {
+      "close": 798.4500122070312,
+      "high": 798.4500122070312,
+      "low": 798.4500122070312,
+      "as_of": "2026-11-16T11:45:47.330886+05:30"
     }
   },
   "trade_history": [
