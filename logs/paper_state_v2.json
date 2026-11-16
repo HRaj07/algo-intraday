@@ -1,5 +1,5 @@
 {
-  "cash": 817490.0114009862,
+  "cash": 890268.3746039588,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 4.24,
       "margin": 72117.6,
       "entry_cost": 83.96459472800001,
-      "bars_held": 11,
+      "bars_held": 12,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-16 11:31:26 IST",
@@ -42,61 +42,21 @@
       "nifty_at_entry": 25228.849609375,
       "mfe_price": 800.75,
       "mae_price": 793.5
-    },
-    "LICHSGFIN.NS": {
-      "ticker": "LICHSGFIN.NS",
-      "direction": "LONG",
-      "entry_price": 601.0,
-      "qty": 590,
-      "qty_open": 590,
-      "stop_loss": 597.74,
-      "initial_stop": 597.74,
-      "t1": 604.81,
-      "t2": 607.73,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 3.26,
-      "atr": 3.26,
-      "margin": 70918.0,
-      "entry_cost": 82.96049354000002,
-      "bars_held": 4,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-16 13:15:47 IST",
-      "predicted_rr": null,
-      "entry_rsi": 74.2,
-      "entry_deviation_pct": 1.413,
-      "entry_atr_pct": 0.543,
-      "entry_rvol": 9.26,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.26,
-      "entry_stop_pct": 0.543,
-      "nifty_at_entry": 25264.75,
-      "mfe_price": 602.2000122070312,
-      "mae_price": 598.7999877929688
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "FORTIS.NS": {
-      "close": 798.0,
-      "high": 798.5,
-      "low": 797.7000122070312,
-      "as_of": "2026-11-16T14:16:02.373919+05:30"
+      "close": 799.9500122070312,
+      "high": 800.0,
+      "low": 799.6500244140625,
+      "as_of": "2026-11-16T14:31:20.338047+05:30"
     },
     "LICHSGFIN.NS": {
-      "close": 600.5999755859375,
-      "high": 601.9000244140625,
-      "low": 600.4000244140625,
-      "as_of": "2026-11-16T14:16:02.373919+05:30"
+      "close": 603.9000244140625,
+      "high": 607.7000122070312,
+      "low": 603.8499755859375,
+      "as_of": "2026-11-16T14:31:20.338047+05:30"
     }
   },
   "trade_history": [
@@ -3165,6 +3125,27 @@
       "entry_rvol": 2.98,
       "entry_turnover_cr": 6.19,
       "entry_stop_pct": 0.586
+    },
+    {
+      "ticker": "LICHSGFIN.NS",
+      "direction": "LONG",
+      "entry_price": 601.0,
+      "exit_price": 604.81,
+      "qty": 590,
+      "pnl": 1860.36,
+      "R_multiple": 0.97,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 387.54,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-16 13:15:47 IST",
+      "exit_time": "2026-11-16 14:31:20 IST",
+      "entry_rsi": 74.2,
+      "entry_deviation_pct": 1.413,
+      "entry_atr_pct": 0.543,
+      "entry_rvol": 9.26,
+      "entry_turnover_cr": 4.26,
+      "entry_stop_pct": 0.543
     }
   ],
   "daily_entry_count": {
@@ -3198,7 +3179,7 @@
     "2026-11-13": 5,
     "2026-11-16": 4
   },
-  "total_pnl": -39474.388599014324,
+  "total_pnl": -37614.025396041754,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
