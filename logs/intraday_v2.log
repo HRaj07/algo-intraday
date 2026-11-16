@@ -11887,3 +11887,16 @@
 2026-11-16 10:01:44 | INFO    | __main__ | strategy: MOM-v3
 2026-11-16 10:01:44 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-16 10:01:44 | INFO    | __main__ | equity Rs957,400 | open 0 | pending 0 | closed 144 | WR 55.6% | PF 0.72 | friction Rs47,339
+2026-11-16 10:15:59 | INFO    | __main__ | ================================================================
+2026-11-16 10:15:59 | INFO    | __main__ | Scan | 2026-11-16 10:15 IST
+2026-11-16 10:16:26 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-16 10:16:26 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,915 risk per trade)
+2026-11-16 10:16:26 | INFO    | __main__ |   base 0.40%
+2026-11-16 10:16:26 | INFO    | __main__ |   performance x0.6: n=144, observed expectancy shrunk to -0.058R vs prior +0.125R -> trimming (0.60x)
+2026-11-16 10:16:26 | INFO    | __main__ |   drawdown    x0.5: drawdown 5.2% - sizing at 0.50x
+2026-11-16 10:16:26 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-16 10:16:26 | INFO    | __main__ | strategy: MOM-v3
+2026-11-16 10:16:26 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-16 10:16:26 | INFO    | engine.paper_trader_v2 | ORDER MAXHEALTH.NS market buy at next open (ref Rs989.75, SL 0.557%, RSI 89.1, rvol 10.76)
+2026-11-16 10:16:26 | INFO    | engine.paper_trader_v2 | FILLED MAXHEALTH.NS @ Rs989.2999877929688 | qty=347 notional=Rs343,287 friction=Rs375
+2026-11-16 10:16:27 | INFO    | __main__ | equity Rs957,400 | open 1 | pending 0 | closed 144 | WR 55.6% | PF 0.72 | friction Rs47,339
