@@ -27,7 +27,7 @@
       "atr": 4.24,
       "margin": 72117.6,
       "entry_cost": 83.96459472800001,
-      "bars_held": 7,
+      "bars_held": 8,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-16 11:31:26 IST",
@@ -40,7 +40,7 @@
       "entry_turnover_cr": 3.25,
       "entry_stop_pct": 0.533,
       "nifty_at_entry": 25228.849609375,
-      "mfe_price": 798.9500122070312,
+      "mfe_price": 799.7999877929688,
       "mae_price": 793.5
     },
     "LICHSGFIN.NS": {
@@ -67,7 +67,7 @@
       "atr": 3.26,
       "margin": 70918.0,
       "entry_cost": 82.96049354000002,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-16 13:15:47 IST",
@@ -80,17 +80,23 @@
       "entry_turnover_cr": 4.26,
       "entry_stop_pct": 0.543,
       "nifty_at_entry": 25264.75,
-      "mfe_price": 601.0,
-      "mae_price": 601.0
+      "mfe_price": 602.2000122070312,
+      "mae_price": 600.8499755859375
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "FORTIS.NS": {
-      "close": 798.7999877929688,
-      "high": 798.7999877929688,
-      "low": 798.7999877929688,
-      "as_of": "2026-11-16T13:15:47.954138+05:30"
+      "close": 799.7999877929688,
+      "high": 799.7999877929688,
+      "low": 798.0999755859375,
+      "as_of": "2026-11-16T13:31:20.037787+05:30"
+    },
+    "LICHSGFIN.NS": {
+      "close": 600.8499755859375,
+      "high": 602.2000122070312,
+      "low": 600.8499755859375,
+      "as_of": "2026-11-16T13:31:20.037787+05:30"
     }
   },
   "trade_history": [
