@@ -1,62 +1,15 @@
 {
-  "cash": 890268.3746039588,
+  "cash": 964158.1158527947,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "FORTIS.NS": {
-      "ticker": "FORTIS.NS",
-      "direction": "LONG",
-      "entry_price": 796.0,
-      "qty": 453,
-      "qty_open": 453,
-      "stop_loss": 791.76,
-      "initial_stop": 791.76,
-      "t1": 800.78,
-      "t2": 804.48,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 4.24,
-      "atr": 4.24,
-      "margin": 72117.6,
-      "entry_cost": 83.96459472800001,
-      "bars_held": 12,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-16 11:31:26 IST",
-      "predicted_rr": null,
-      "entry_rsi": 80.9,
-      "entry_deviation_pct": 1.126,
-      "entry_atr_pct": 0.533,
-      "entry_rvol": 2.52,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 3.25,
-      "entry_stop_pct": 0.533,
-      "nifty_at_entry": 25228.849609375,
-      "mfe_price": 800.75,
-      "mae_price": 793.5
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "FORTIS.NS": {
-      "close": 799.9500122070312,
-      "high": 800.0,
-      "low": 799.6500244140625,
-      "as_of": "2026-11-16T14:31:20.338047+05:30"
-    },
-    "LICHSGFIN.NS": {
-      "close": 603.9000244140625,
-      "high": 607.7000122070312,
-      "low": 603.8499755859375,
-      "as_of": "2026-11-16T14:31:20.338047+05:30"
+      "close": 801.5,
+      "high": 801.5,
+      "low": 801.5,
+      "as_of": "2026-11-16T14:45:53.989429+05:30"
     }
   },
   "trade_history": [
@@ -3146,6 +3099,27 @@
       "entry_rvol": 9.26,
       "entry_turnover_cr": 4.26,
       "entry_stop_pct": 0.543
+    },
+    {
+      "ticker": "FORTIS.NS",
+      "direction": "LONG",
+      "entry_price": 796.0,
+      "exit_price": 800.78,
+      "qty": 453,
+      "pnl": 1772.14,
+      "R_multiple": 0.92,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 393.2,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-16 11:31:26 IST",
+      "exit_time": "2026-11-16 14:45:53 IST",
+      "entry_rsi": 80.9,
+      "entry_deviation_pct": 1.126,
+      "entry_atr_pct": 0.533,
+      "entry_rvol": 2.52,
+      "entry_turnover_cr": 3.25,
+      "entry_stop_pct": 0.533
     }
   ],
   "daily_entry_count": {
@@ -3179,7 +3153,7 @@
     "2026-11-13": 5,
     "2026-11-16": 4
   },
-  "total_pnl": -37614.025396041754,
+  "total_pnl": -35841.884147205805,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
