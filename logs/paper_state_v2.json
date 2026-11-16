@@ -27,7 +27,7 @@
       "atr": 4.24,
       "margin": 72117.6,
       "entry_cost": 83.96459472800001,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-16 11:31:26 IST",
@@ -40,17 +40,17 @@
       "entry_turnover_cr": 3.25,
       "entry_stop_pct": 0.533,
       "nifty_at_entry": 25228.849609375,
-      "mfe_price": 798.4500122070312,
+      "mfe_price": 798.9500122070312,
       "mae_price": 793.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "FORTIS.NS": {
-      "close": 797.5499877929688,
-      "high": 797.6500244140625,
-      "low": 796.5499877929688,
-      "as_of": "2026-11-16T12:45:51.018368+05:30"
+      "close": 798.1500244140625,
+      "high": 798.9500122070312,
+      "low": 797.6500244140625,
+      "as_of": "2026-11-16T13:01:13.246797+05:30"
     }
   },
   "trade_history": [
