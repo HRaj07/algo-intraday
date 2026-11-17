@@ -27,7 +27,7 @@
       "atr": 10.13,
       "margin": 64406.200927734375,
       "entry_cost": 77.5099223625415,
-      "bars_held": 3,
+      "bars_held": 4,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-17 10:45:46 IST",
@@ -47,10 +47,10 @@
   "pending_orders": {},
   "last_known_price": {
     "PRESTIGE.NS": {
-      "close": 1693.800048828125,
-      "high": 1693.9000244140625,
-      "low": 1691.4000244140625,
-      "as_of": "2026-11-17T11:31:22.604989+05:30"
+      "close": 1699.199951171875,
+      "high": 1700.0,
+      "low": 1694.5,
+      "as_of": "2026-11-17T11:45:50.475500+05:30"
     }
   },
   "trade_history": [
