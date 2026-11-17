@@ -1,5 +1,5 @@
 {
-  "cash": 804480.7448251827,
+  "cash": 793035.993529381,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 0.98,
       "margin": 59316.851519775395,
       "entry_cost": 73.2499842275976,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-17 10:15:54 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.648,
       "nifty_at_entry": 25381.0,
       "mfe_price": 150.77999877929688,
-      "mae_price": 150.50999450683594
+      "mae_price": 150.0399932861328
     },
     "WELCORP.NS": {
       "ticker": "WELCORP.NS",
@@ -67,7 +67,7 @@
       "atr": 17.81,
       "margin": 49453.200000000004,
       "entry_cost": 64.993811996,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-17 10:15:54 IST",
@@ -83,16 +83,16 @@
       "mfe_price": 2289.5,
       "mae_price": 2285.699951171875
     },
-    "ANGELONE.NS": {
-      "ticker": "ANGELONE.NS",
+    "PRESTIGE.NS": {
+      "ticker": "PRESTIGE.NS",
       "direction": "LONG",
-      "entry_price": 363.04998779296875,
-      "qty": 714,
-      "qty_open": 714,
-      "stop_loss": 360.35,
-      "initial_stop": 360.35,
-      "t1": 365.03,
-      "t2": 368.26,
+      "entry_price": 1694.9000244140625,
+      "qty": 190,
+      "qty_open": 190,
+      "stop_loss": 1684.76,
+      "initial_stop": 1684.76,
+      "t1": 1705.27,
+      "t2": 1715.37,
       "t1_fraction": 1.0,
       "exit_cfg": {
         "hold_to_square_off": true,
@@ -103,46 +103,46 @@
       },
       "t1_done": false,
       "trailed": false,
-      "risk_per_share": 2.7,
-      "atr": 2.7,
-      "margin": 51843.53825683594,
-      "entry_cost": 66.99459682711938,
+      "risk_per_share": 10.14,
+      "atr": 10.13,
+      "margin": 64406.200927734375,
+      "entry_cost": 77.5099223625415,
       "bars_held": 0,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
-      "entry_time": "2026-11-17 10:31:24 IST",
+      "entry_time": "2026-11-17 10:45:46 IST",
       "predicted_rr": null,
-      "entry_rsi": 77.3,
-      "entry_deviation_pct": 1.754,
-      "entry_atr_pct": 0.745,
-      "entry_rvol": 8.51,
+      "entry_rsi": 77.8,
+      "entry_deviation_pct": 0.965,
+      "entry_atr_pct": 0.598,
+      "entry_rvol": 2.94,
       "entry_gap_pct": null,
-      "entry_turnover_cr": 9.23,
-      "entry_stop_pct": 0.745,
-      "nifty_at_entry": 25388.55078125,
-      "mfe_price": 363.04998779296875,
-      "mae_price": 363.04998779296875
+      "entry_turnover_cr": 2.57,
+      "entry_stop_pct": 0.598,
+      "nifty_at_entry": 25389.25,
+      "mfe_price": 1694.9000244140625,
+      "mae_price": 1694.9000244140625
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "WELCORP.NS": {
-      "close": 2285.699951171875,
-      "high": 2288.199951171875,
-      "low": 2285.699951171875,
-      "as_of": "2026-11-17T10:31:24.910899+05:30"
+      "close": 2287.89990234375,
+      "high": 2288.39990234375,
+      "low": 2286.89990234375,
+      "as_of": "2026-11-17T10:45:46.904503+05:30"
     },
     "PNB.NS": {
-      "close": 150.61000061035156,
-      "high": 150.63999938964844,
-      "low": 150.50999450683594,
-      "as_of": "2026-11-17T10:31:24.910899+05:30"
+      "close": 150.10000610351562,
+      "high": 150.14999389648438,
+      "low": 150.0399932861328,
+      "as_of": "2026-11-17T10:45:46.904503+05:30"
     },
     "ANGELONE.NS": {
-      "close": 362.95001220703125,
-      "high": 363.45001220703125,
-      "low": 362.79998779296875,
-      "as_of": "2026-11-17T10:31:24.910899+05:30"
+      "close": 367.6499938964844,
+      "high": 367.6499938964844,
+      "low": 367.6499938964844,
+      "as_of": "2026-11-17T10:45:46.904503+05:30"
     }
   },
   "trade_history": [
@@ -3274,6 +3274,27 @@
       "entry_rvol": 5.01,
       "entry_turnover_cr": 9.23,
       "entry_stop_pct": 0.684
+    },
+    {
+      "ticker": "ANGELONE.NS",
+      "direction": "LONG",
+      "entry_price": 363.04998779296875,
+      "exit_price": 365.03,
+      "qty": 714,
+      "pnl": 1117.91,
+      "R_multiple": 0.58,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 295.82,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-17 10:31:24 IST",
+      "exit_time": "2026-11-17 10:45:46 IST",
+      "entry_rsi": 77.3,
+      "entry_deviation_pct": 1.754,
+      "entry_atr_pct": 0.745,
+      "entry_rvol": 8.51,
+      "entry_turnover_cr": 9.23,
+      "entry_stop_pct": 0.745
     }
   ],
   "daily_entry_count": {
@@ -3306,16 +3327,16 @@
     "2026-11-12": 6,
     "2026-11-13": 5,
     "2026-11-16": 4,
-    "2026-11-17": 4
+    "2026-11-17": 5
   },
-  "total_pnl": -34905.66539820658,
+  "total_pnl": -33787.75402310993,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=149, observed expectancy shrunk to -0.036R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.586,
-    "drawdown_reason": "drawdown 4.5% - sizing at 0.59x",
-    "raw_pct": 0.00141,
+    "performance_reason": "n=150, observed expectancy shrunk to -0.033R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.592,
+    "drawdown_reason": "drawdown 4.4% - sizing at 0.59x",
+    "raw_pct": 0.00142,
     "final_pct": 0.002,
     "clamped": true
   },
