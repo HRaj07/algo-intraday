@@ -27,7 +27,7 @@
       "atr": 0.98,
       "margin": 59316.851519775395,
       "entry_cost": 73.2499842275976,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-17 10:15:54 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.648,
       "nifty_at_entry": 25381.0,
       "mfe_price": 150.77999877929688,
-      "mae_price": 150.0399932861328
+      "mae_price": 150.0
     },
     "WELCORP.NS": {
       "ticker": "WELCORP.NS",
@@ -67,7 +67,7 @@
       "atr": 17.81,
       "margin": 49453.200000000004,
       "entry_cost": 64.993811996,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-17 10:15:54 IST",
@@ -80,7 +80,7 @@
       "entry_turnover_cr": 4.55,
       "entry_stop_pct": 0.778,
       "nifty_at_entry": 25381.0,
-      "mfe_price": 2289.5,
+      "mfe_price": 2289.89990234375,
       "mae_price": 2285.699951171875
     },
     "PRESTIGE.NS": {
@@ -107,7 +107,7 @@
       "atr": 10.13,
       "margin": 64406.200927734375,
       "entry_cost": 77.5099223625415,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-17 10:45:46 IST",
@@ -120,29 +120,29 @@
       "entry_turnover_cr": 2.57,
       "entry_stop_pct": 0.598,
       "nifty_at_entry": 25389.25,
-      "mfe_price": 1694.9000244140625,
+      "mfe_price": 1702.0,
       "mae_price": 1694.9000244140625
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "WELCORP.NS": {
-      "close": 2287.89990234375,
-      "high": 2288.39990234375,
-      "low": 2286.89990234375,
-      "as_of": "2026-11-17T10:45:46.904503+05:30"
+      "close": 2288.60009765625,
+      "high": 2289.89990234375,
+      "low": 2288.0,
+      "as_of": "2026-11-17T11:01:09.753716+05:30"
     },
     "PNB.NS": {
-      "close": 150.10000610351562,
-      "high": 150.14999389648438,
-      "low": 150.0399932861328,
-      "as_of": "2026-11-17T10:45:46.904503+05:30"
+      "close": 150.00999450683594,
+      "high": 150.11000061035156,
+      "low": 150.0,
+      "as_of": "2026-11-17T11:01:09.753716+05:30"
     },
-    "ANGELONE.NS": {
-      "close": 367.6499938964844,
-      "high": 367.6499938964844,
-      "low": 367.6499938964844,
-      "as_of": "2026-11-17T10:45:46.904503+05:30"
+    "PRESTIGE.NS": {
+      "close": 1700.300048828125,
+      "high": 1702.0,
+      "low": 1698.199951171875,
+      "as_of": "2026-11-17T11:01:09.753716+05:30"
     }
   },
   "trade_history": [
