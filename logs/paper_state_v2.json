@@ -1,5 +1,5 @@
 {
-  "cash": 799168.6643330194,
+  "cash": 804480.7448251827,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 0.98,
       "margin": 59316.851519775395,
       "entry_cost": 73.2499842275976,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-17 10:15:54 IST",
@@ -41,47 +41,7 @@
       "entry_stop_pct": 0.648,
       "nifty_at_entry": 25381.0,
       "mfe_price": 150.77999877929688,
-      "mae_price": 150.77999877929688
-    },
-    "ANGELONE.NS": {
-      "ticker": "ANGELONE.NS",
-      "direction": "LONG",
-      "entry_price": 359.0,
-      "qty": 783,
-      "qty_open": 783,
-      "stop_loss": 356.54,
-      "initial_stop": 356.54,
-      "t1": 360.6,
-      "t2": 363.36,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.46,
-      "atr": 2.45,
-      "margin": 56219.4,
-      "entry_cost": 70.657324382,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-17 10:15:54 IST",
-      "predicted_rr": null,
-      "entry_rsi": 71.5,
-      "entry_deviation_pct": 1.175,
-      "entry_atr_pct": 0.684,
-      "entry_rvol": 5.01,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 9.23,
-      "entry_stop_pct": 0.684,
-      "nifty_at_entry": 25381.0,
-      "mfe_price": 359.0,
-      "mae_price": 359.0
+      "mae_price": 150.50999450683594
     },
     "WELCORP.NS": {
       "ticker": "WELCORP.NS",
@@ -107,7 +67,7 @@
       "atr": 17.81,
       "margin": 49453.200000000004,
       "entry_cost": 64.993811996,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-17 10:15:54 IST",
@@ -121,11 +81,70 @@
       "entry_stop_pct": 0.778,
       "nifty_at_entry": 25381.0,
       "mfe_price": 2289.5,
-      "mae_price": 2289.5
+      "mae_price": 2285.699951171875
+    },
+    "ANGELONE.NS": {
+      "ticker": "ANGELONE.NS",
+      "direction": "LONG",
+      "entry_price": 363.04998779296875,
+      "qty": 714,
+      "qty_open": 714,
+      "stop_loss": 360.35,
+      "initial_stop": 360.35,
+      "t1": 365.03,
+      "t2": 368.26,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 2.7,
+      "atr": 2.7,
+      "margin": 51843.53825683594,
+      "entry_cost": 66.99459682711938,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-17 10:31:24 IST",
+      "predicted_rr": null,
+      "entry_rsi": 77.3,
+      "entry_deviation_pct": 1.754,
+      "entry_atr_pct": 0.745,
+      "entry_rvol": 8.51,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 9.23,
+      "entry_stop_pct": 0.745,
+      "nifty_at_entry": 25388.55078125,
+      "mfe_price": 363.04998779296875,
+      "mae_price": 363.04998779296875
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "WELCORP.NS": {
+      "close": 2285.699951171875,
+      "high": 2288.199951171875,
+      "low": 2285.699951171875,
+      "as_of": "2026-11-17T10:31:24.910899+05:30"
+    },
+    "PNB.NS": {
+      "close": 150.61000061035156,
+      "high": 150.63999938964844,
+      "low": 150.50999450683594,
+      "as_of": "2026-11-17T10:31:24.910899+05:30"
+    },
+    "ANGELONE.NS": {
+      "close": 362.95001220703125,
+      "high": 363.45001220703125,
+      "low": 362.79998779296875,
+      "as_of": "2026-11-17T10:31:24.910899+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -3234,6 +3253,27 @@
       "entry_rvol": 2.52,
       "entry_turnover_cr": 3.25,
       "entry_stop_pct": 0.533
+    },
+    {
+      "ticker": "ANGELONE.NS",
+      "direction": "LONG",
+      "entry_price": 359.0,
+      "exit_price": 360.6,
+      "qty": 783,
+      "pnl": 936.22,
+      "R_multiple": 0.49,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 316.58,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-17 10:15:54 IST",
+      "exit_time": "2026-11-17 10:31:24 IST",
+      "entry_rsi": 71.5,
+      "entry_deviation_pct": 1.175,
+      "entry_atr_pct": 0.684,
+      "entry_rvol": 5.01,
+      "entry_turnover_cr": 9.23,
+      "entry_stop_pct": 0.684
     }
   ],
   "daily_entry_count": {
@@ -3266,16 +3306,16 @@
     "2026-11-12": 6,
     "2026-11-13": 5,
     "2026-11-16": 4,
-    "2026-11-17": 3
+    "2026-11-17": 4
   },
-  "total_pnl": -35841.884147205805,
+  "total_pnl": -34905.66539820658,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=148, observed expectancy shrunk to -0.039R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.583,
-    "drawdown_reason": "drawdown 4.5% - sizing at 0.58x",
-    "raw_pct": 0.0014,
+    "performance_reason": "n=149, observed expectancy shrunk to -0.036R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.586,
+    "drawdown_reason": "drawdown 4.5% - sizing at 0.59x",
+    "raw_pct": 0.00141,
     "final_pct": 0.002,
     "clamped": true
   },

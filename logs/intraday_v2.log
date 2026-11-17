@@ -12228,3 +12228,21 @@
 2026-11-17 10:16:32 | INFO    | engine.paper_trader_v2 | FILLED ANGELONE.NS @ Rs359.0 | qty=783 notional=Rs281,097 friction=Rs316
 2026-11-17 10:16:32 | INFO    | engine.paper_trader_v2 | FILLED WELCORP.NS @ Rs2289.5 | qty=108 notional=Rs247,266 friction=Rs283
 2026-11-17 10:16:35 | INFO    | __main__ | equity Rs964,158 | open 3 | pending 0 | closed 148 | WR 56.8% | PF 0.76 | friction Rs48,856
+2026-11-17 10:31:24 | INFO    | __main__ | ================================================================
+2026-11-17 10:31:24 | INFO    | __main__ | Scan | 2026-11-17 10:31 IST
+2026-11-17 10:31:58 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-17 10:31:58 | INFO    | engine.paper_trader_v2 | EXIT ANGELONE.NS 783@Rs360.6 | P&L Rs+936 (+0.49R) | friction Rs317 | t1_vwap
+2026-11-17 10:31:58 | INFO    | engine.paper_trader_v2 | T1 ANGELONE.NS - half out at VWAP, stop to Rs359.77 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-17 10:31:59 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,929 risk per trade)
+2026-11-17 10:31:59 | INFO    | __main__ |   base 0.40%
+2026-11-17 10:31:59 | INFO    | __main__ |   performance x0.6: n=149, observed expectancy shrunk to -0.036R vs prior +0.125R -> trimming (0.60x)
+2026-11-17 10:31:59 | INFO    | __main__ |   drawdown    x0.586: drawdown 4.5% - sizing at 0.59x
+2026-11-17 10:31:59 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-17 10:31:59 | INFO    | __main__ | strategy: MOM-v3
+2026-11-17 10:31:59 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-17 10:31:59 | INFO    | engine.paper_trader_v2 | ORDER ANGELONE.NS market buy at next open (ref Rs362.85, SL 0.745%, RSI 77.3, rvol 8.51)
+2026-11-17 10:31:59 | INFO    | engine.paper_trader_v2 | ORDER REJECTED BANKINDIA.NS: already hold 1 position(s) in BANK
+2026-11-17 10:31:59 | INFO    | engine.paper_trader_v2 | ORDER REJECTED WELCORP.NS: already holding this name
+2026-11-17 10:31:59 | INFO    | engine.paper_trader_v2 | ORDER REJECTED PNB.NS: already holding this name
+2026-11-17 10:31:59 | INFO    | engine.paper_trader_v2 | FILLED ANGELONE.NS @ Rs363.04998779296875 | qty=714 notional=Rs259,218 friction=Rs295
+2026-11-17 10:32:00 | INFO    | __main__ | equity Rs964,278 | open 3 | pending 0 | closed 149 | WR 57.0% | PF 0.77 | friction Rs49,173
