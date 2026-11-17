@@ -1,56 +1,15 @@
 {
-  "cash": 900629.196494,
+  "cash": 963446.6908005434,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "PRESTIGE.NS": {
-      "ticker": "PRESTIGE.NS",
-      "direction": "LONG",
-      "entry_price": 1694.9000244140625,
-      "qty": 190,
-      "qty_open": 190,
-      "stop_loss": 1684.76,
-      "initial_stop": 1684.76,
-      "t1": 1705.27,
-      "t2": 1715.37,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 10.14,
-      "atr": 10.13,
-      "margin": 64406.200927734375,
-      "entry_cost": 77.5099223625415,
-      "bars_held": 5,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-17 10:45:46 IST",
-      "predicted_rr": null,
-      "entry_rsi": 77.8,
-      "entry_deviation_pct": 0.965,
-      "entry_atr_pct": 0.598,
-      "entry_rvol": 2.94,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 2.57,
-      "entry_stop_pct": 0.598,
-      "nifty_at_entry": 25389.25,
-      "mfe_price": 1702.0,
-      "mae_price": 1691.4000244140625
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "PRESTIGE.NS": {
-      "close": 1696.5,
-      "high": 1698.699951171875,
-      "low": 1696.199951171875,
-      "as_of": "2026-11-17T12:01:10.914921+05:30"
+      "close": 1688.4000244140625,
+      "high": 1688.4000244140625,
+      "low": 1688.0,
+      "as_of": "2026-11-17T12:15:52.549597+05:30"
     }
   },
   "trade_history": [
@@ -3245,6 +3204,27 @@
       "entry_rvol": 4.51,
       "entry_turnover_cr": 4.55,
       "entry_stop_pct": 0.778
+    },
+    {
+      "ticker": "PRESTIGE.NS",
+      "direction": "LONG",
+      "entry_price": 1694.9000244140625,
+      "exit_price": 1688.4,
+      "qty": 190,
+      "pnl": -1588.71,
+      "R_multiple": -0.82,
+      "reason": "vwap_reclaim",
+      "partial": false,
+      "friction": 353.71,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-17 10:45:46 IST",
+      "exit_time": "2026-11-17 12:15:52 IST",
+      "entry_rsi": 77.8,
+      "entry_deviation_pct": 0.965,
+      "entry_atr_pct": 0.598,
+      "entry_rvol": 2.94,
+      "entry_turnover_cr": 2.57,
+      "entry_stop_pct": 0.598
     }
   ],
   "daily_entry_count": {
@@ -3279,7 +3259,7 @@
     "2026-11-16": 4,
     "2026-11-17": 5
   },
-  "total_pnl": -34964.602578266284,
+  "total_pnl": -36553.30919945734,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
