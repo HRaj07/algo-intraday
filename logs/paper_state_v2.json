@@ -27,7 +27,7 @@
       "atr": 7.3,
       "margin": 74842.92255859375,
       "entry_cost": 86.24577146921973,
-      "bars_held": 9,
+      "bars_held": 10,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-18 11:45:55 IST",
@@ -67,7 +67,7 @@
       "atr": 58.08,
       "margin": 67112.1,
       "entry_cost": 79.774841063,
-      "bars_held": 4,
+      "bars_held": 5,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-18 13:01:08 IST",
@@ -87,16 +87,16 @@
   "pending_orders": {},
   "last_known_price": {
     "NAVINFLUOR.NS": {
-      "close": 10151.0,
-      "high": 10160.0,
-      "low": 10151.0,
-      "as_of": "2026-11-18T14:01:12.361430+05:30"
+      "close": 10153.5,
+      "high": 10159.0,
+      "low": 10153.5,
+      "as_of": "2026-11-18T14:15:47.916225+05:30"
     },
     "CIPLA.NS": {
-      "close": 1425.199951171875,
-      "high": 1428.0,
-      "low": 1425.0999755859375,
-      "as_of": "2026-11-18T14:01:12.361430+05:30"
+      "close": 1426.0,
+      "high": 1426.0,
+      "low": 1426.0,
+      "as_of": "2026-11-18T14:15:47.916225+05:30"
     }
   },
   "trade_history": [
