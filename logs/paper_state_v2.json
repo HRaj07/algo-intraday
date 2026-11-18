@@ -1,48 +1,8 @@
 {
-  "cash": 823532.5745493553,
+  "cash": 818564.5528982001,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "NAVINFLUOR.NS": {
-      "ticker": "NAVINFLUOR.NS",
-      "direction": "LONG",
-      "entry_price": 10105.5,
-      "qty": 30,
-      "qty_open": 30,
-      "stop_loss": 10042.54,
-      "initial_stop": 10042.54,
-      "t1": 10167.14,
-      "t2": 10232.46,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 62.96,
-      "atr": 62.98,
-      "margin": 60633.0,
-      "entry_cost": 74.35163999000001,
-      "bars_held": 6,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-18 11:15:52 IST",
-      "predicted_rr": null,
-      "entry_rsi": 70.2,
-      "entry_deviation_pct": 1.359,
-      "entry_atr_pct": 0.623,
-      "entry_rvol": 5.48,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 3.4,
-      "entry_stop_pct": 0.623,
-      "nifty_at_entry": 25244.69921875,
-      "mfe_price": 10111.0,
-      "mae_price": 10054.5
-    },
     "CIPLA.NS": {
       "ticker": "CIPLA.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 7.3,
       "margin": 74842.92255859375,
       "entry_cost": 86.24577146921973,
-      "bars_held": 4,
+      "bars_held": 5,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-18 11:45:55 IST",
@@ -82,21 +42,61 @@
       "nifty_at_entry": 25240.150390625,
       "mfe_price": 1432.0,
       "mae_price": 1423.0
+    },
+    "NAVINFLUOR.NS": {
+      "ticker": "NAVINFLUOR.NS",
+      "direction": "LONG",
+      "entry_price": 10168.5,
+      "qty": 33,
+      "qty_open": 33,
+      "stop_loss": 10110.44,
+      "initial_stop": 10110.44,
+      "t1": 10226.49,
+      "t2": 10281.67,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 58.06,
+      "atr": 58.08,
+      "margin": 67112.1,
+      "entry_cost": 79.774841063,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-18 13:01:08 IST",
+      "predicted_rr": null,
+      "entry_rsi": 70.2,
+      "entry_deviation_pct": 1.473,
+      "entry_atr_pct": 0.571,
+      "entry_rvol": 3.44,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 4.39,
+      "entry_stop_pct": 0.571,
+      "nifty_at_entry": 25187.05078125,
+      "mfe_price": 10168.5,
+      "mae_price": 10168.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "NAVINFLUOR.NS": {
-      "close": 10100.0,
-      "high": 10103.5,
-      "low": 10092.0,
-      "as_of": "2026-11-18T12:45:56.808309+05:30"
+      "close": 10164.5,
+      "high": 10184.0,
+      "low": 10164.5,
+      "as_of": "2026-11-18T13:01:08.009156+05:30"
     },
     "CIPLA.NS": {
-      "close": 1428.4000244140625,
-      "high": 1432.0,
-      "low": 1428.4000244140625,
-      "as_of": "2026-11-18T12:45:56.808309+05:30"
+      "close": 1428.699951171875,
+      "high": 1429.300048828125,
+      "low": 1427.5,
+      "as_of": "2026-11-18T13:01:08.009156+05:30"
     }
   },
   "trade_history": [
@@ -3354,6 +3354,27 @@
       "entry_rvol": 14.25,
       "entry_turnover_cr": 9.63,
       "entry_stop_pct": 1.205
+    },
+    {
+      "ticker": "NAVINFLUOR.NS",
+      "direction": "LONG",
+      "entry_price": 10105.5,
+      "exit_price": 10167.14,
+      "qty": 30,
+      "pnl": 1511.08,
+      "R_multiple": 0.8,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 338.12,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-18 11:15:52 IST",
+      "exit_time": "2026-11-18 13:01:08 IST",
+      "entry_rsi": 70.2,
+      "entry_deviation_pct": 1.359,
+      "entry_atr_pct": 0.623,
+      "entry_rvol": 5.48,
+      "entry_turnover_cr": 3.4,
+      "entry_stop_pct": 0.623
     }
   ],
   "daily_entry_count": {
@@ -3387,16 +3408,16 @@
     "2026-11-13": 5,
     "2026-11-16": 4,
     "2026-11-17": 5,
-    "2026-11-18": 4
+    "2026-11-18": 5
   },
-  "total_pnl": -40991.502892051714,
+  "total_pnl": -39480.42454320693,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=155, observed expectancy shrunk to -0.050R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.5,
-    "drawdown_reason": "drawdown 5.1% - sizing at 0.50x",
-    "raw_pct": 0.0012,
+    "performance_reason": "n=156, observed expectancy shrunk to -0.046R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.524,
+    "drawdown_reason": "drawdown 4.9% - sizing at 0.52x",
+    "raw_pct": 0.00126,
     "final_pct": 0.002,
     "clamped": true
   },
