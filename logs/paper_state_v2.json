@@ -1,48 +1,8 @@
 {
-  "cash": 818564.5528982001,
+  "cash": 891091.8640637439,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "CIPLA.NS": {
-      "ticker": "CIPLA.NS",
-      "direction": "LONG",
-      "entry_price": 1428.300048828125,
-      "qty": 262,
-      "qty_open": 262,
-      "stop_loss": 1421.0,
-      "initial_stop": 1421.0,
-      "t1": 1437.47,
-      "t2": 1443.5,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 7.3,
-      "atr": 7.3,
-      "margin": 74842.92255859375,
-      "entry_cost": 86.24577146921973,
-      "bars_held": 12,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-18 11:45:55 IST",
-      "predicted_rr": null,
-      "entry_rsi": 78.5,
-      "entry_deviation_pct": 1.084,
-      "entry_atr_pct": 0.511,
-      "entry_rvol": 11.36,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 3.83,
-      "entry_stop_pct": 0.511,
-      "nifty_at_entry": 25240.150390625,
-      "mfe_price": 1432.0,
-      "mae_price": 1422.800048828125
-    },
     "NAVINFLUOR.NS": {
       "ticker": "NAVINFLUOR.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 58.08,
       "margin": 67112.1,
       "entry_cost": 79.774841063,
-      "bars_held": 7,
+      "bars_held": 8,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-18 13:01:08 IST",
@@ -87,16 +47,16 @@
   "pending_orders": {},
   "last_known_price": {
     "NAVINFLUOR.NS": {
-      "close": 10143.0,
-      "high": 10149.0,
-      "low": 10143.0,
-      "as_of": "2026-11-18T14:45:56.106715+05:30"
+      "close": 10155.0,
+      "high": 10161.5,
+      "low": 10152.0,
+      "as_of": "2026-11-18T15:01:12.451467+05:30"
     },
     "CIPLA.NS": {
-      "close": 1423.800048828125,
-      "high": 1423.800048828125,
-      "low": 1422.800048828125,
-      "as_of": "2026-11-18T14:45:56.106715+05:30"
+      "close": 1419.5,
+      "high": 1421.199951171875,
+      "low": 1419.4000244140625,
+      "as_of": "2026-11-18T15:01:12.451467+05:30"
     }
   },
   "trade_history": [
@@ -3375,6 +3335,27 @@
       "entry_rvol": 5.48,
       "entry_turnover_cr": 3.4,
       "entry_stop_pct": 0.623
+    },
+    {
+      "ticker": "CIPLA.NS",
+      "direction": "LONG",
+      "entry_price": 1428.300048828125,
+      "exit_price": 1421.0,
+      "qty": 262,
+      "pnl": -2315.61,
+      "R_multiple": -1.21,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 403.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-18 11:45:55 IST",
+      "exit_time": "2026-11-18 15:01:12 IST",
+      "entry_rsi": 78.5,
+      "entry_deviation_pct": 1.084,
+      "entry_atr_pct": 0.511,
+      "entry_rvol": 11.36,
+      "entry_turnover_cr": 3.83,
+      "entry_stop_pct": 0.511
     }
   ],
   "daily_entry_count": {
@@ -3410,7 +3391,7 @@
     "2026-11-17": 5,
     "2026-11-18": 5
   },
-  "total_pnl": -39480.42454320693,
+  "total_pnl": -41796.0359362569,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
