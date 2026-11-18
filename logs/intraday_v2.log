@@ -12633,3 +12633,14 @@
 2026-11-18 11:46:33 | INFO    | engine.paper_trader_v2 | ORDER CIPLA.NS market buy at next open (ref Rs1428.9, SL 0.511%, RSI 78.5, rvol 11.36)
 2026-11-18 11:46:33 | INFO    | engine.paper_trader_v2 | FILLED CIPLA.NS @ Rs1428.300048828125 | qty=262 notional=Rs374,215 friction=Rs405
 2026-11-18 11:46:33 | INFO    | __main__ | equity Rs958,244 | open 2 | pending 0 | closed 155 | WR 56.1% | PF 0.75 | friction Rs51,028
+2026-11-18 12:01:06 | INFO    | __main__ | ================================================================
+2026-11-18 12:01:06 | INFO    | __main__ | Scan | 2026-11-18 12:01 IST
+2026-11-18 12:01:56 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-18 12:01:56 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,915 risk per trade)
+2026-11-18 12:01:56 | INFO    | __main__ |   base 0.40%
+2026-11-18 12:01:56 | INFO    | __main__ |   performance x0.6: n=155, observed expectancy shrunk to -0.050R vs prior +0.125R -> trimming (0.60x)
+2026-11-18 12:01:56 | INFO    | __main__ |   drawdown    x0.5: drawdown 5.2% - sizing at 0.50x
+2026-11-18 12:01:56 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-18 12:01:56 | INFO    | __main__ | strategy: MOM-v3
+2026-11-18 12:01:56 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-18 12:01:56 | INFO    | __main__ | equity Rs957,386 | open 2 | pending 0 | closed 155 | WR 56.1% | PF 0.75 | friction Rs51,028
