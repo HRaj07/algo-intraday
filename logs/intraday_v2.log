@@ -12608,3 +12608,15 @@
 2026-11-18 11:16:25 | INFO    | engine.paper_trader_v2 | ORDER NAVINFLUOR.NS market buy at next open (ref Rs10106.5, SL 0.623%, RSI 70.2, rvol 5.48)
 2026-11-18 11:16:25 | INFO    | engine.paper_trader_v2 | FILLED NAVINFLUOR.NS @ Rs10105.5 | qty=30 notional=Rs303,165 friction=Rs337
 2026-11-18 11:16:25 | INFO    | __main__ | equity Rs959,775 | open 2 | pending 0 | closed 154 | WR 56.5% | PF 0.75 | friction Rs50,830
+2026-11-18 11:31:27 | INFO    | __main__ | ================================================================
+2026-11-18 11:31:27 | INFO    | __main__ | Scan | 2026-11-18 11:31 IST
+2026-11-18 11:31:56 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-18 11:31:56 | INFO    | engine.paper_trader_v2 | EXIT IIFL.NS 236@Rs668.69 | P&L Rs-2,124 (-1.10R) | friction Rs198 | stop_loss
+2026-11-18 11:31:57 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,917 risk per trade)
+2026-11-18 11:31:57 | INFO    | __main__ |   base 0.40%
+2026-11-18 11:31:57 | INFO    | __main__ |   performance x0.6: n=155, observed expectancy shrunk to -0.050R vs prior +0.125R -> trimming (0.60x)
+2026-11-18 11:31:57 | INFO    | __main__ |   drawdown    x0.5: drawdown 5.0% - sizing at 0.50x
+2026-11-18 11:31:57 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-18 11:31:57 | INFO    | __main__ | strategy: MOM-v3
+2026-11-18 11:31:57 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-18 11:31:57 | INFO    | __main__ | equity Rs958,694 | open 1 | pending 0 | closed 155 | WR 56.1% | PF 0.75 | friction Rs51,028
