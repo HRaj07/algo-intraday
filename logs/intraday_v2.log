@@ -12790,3 +12790,6 @@
 2026-11-18 15:16:22 | INFO    | engine.paper_trader_v2 | EXIT NAVINFLUOR.NS 33@Rs10250.0 | P&L Rs+2,320 (+1.21R) | friction Rs370 | square_off
 2026-11-18 15:16:22 | INFO    | __main__ | EOD: {'equity': 960523.75, 'cash': 960523.75, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 158, 'win_rate_pct': 56.3, 'profit_factor': 0.76, 'total_friction': 52138.67, 'total_pnl': -39476.25, 'return_pct': -3.95}
 2026-11-18 15:16:22 | WARNING | __main__ | KILL SWITCH has tripped 14x in paper mode; latest {'date': '2026-11-13', 'pf': 0.82, 'n': 30, 'trade_count': 139} - live mode would be HALTED
+2026-11-18 15:31:28 | INFO    | __main__ | ================================================================
+2026-11-18 15:31:28 | INFO    | __main__ | Scan | 2026-11-18 15:31 IST
+2026-11-18 15:31:28 | INFO    | __main__ | outside NSE hours
