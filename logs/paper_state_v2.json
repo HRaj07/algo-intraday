@@ -27,7 +27,7 @@
       "atr": 7.3,
       "margin": 74842.92255859375,
       "entry_cost": 86.24577146921973,
-      "bars_held": 10,
+      "bars_held": 11,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-18 11:45:55 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.511,
       "nifty_at_entry": 25240.150390625,
       "mfe_price": 1432.0,
-      "mae_price": 1423.0
+      "mae_price": 1422.800048828125
     },
     "NAVINFLUOR.NS": {
       "ticker": "NAVINFLUOR.NS",
@@ -67,7 +67,7 @@
       "atr": 58.08,
       "margin": 67112.1,
       "entry_cost": 79.774841063,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-18 13:01:08 IST",
@@ -80,23 +80,23 @@
       "entry_turnover_cr": 4.39,
       "entry_stop_pct": 0.571,
       "nifty_at_entry": 25187.05078125,
-      "mfe_price": 10170.0,
+      "mfe_price": 10192.5,
       "mae_price": 10125.5
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "NAVINFLUOR.NS": {
-      "close": 10153.5,
-      "high": 10159.0,
-      "low": 10153.5,
-      "as_of": "2026-11-18T14:15:47.916225+05:30"
+      "close": 10173.0,
+      "high": 10192.5,
+      "low": 10166.0,
+      "as_of": "2026-11-18T14:31:27.633057+05:30"
     },
     "CIPLA.NS": {
-      "close": 1426.0,
-      "high": 1426.0,
-      "low": 1426.0,
-      "as_of": "2026-11-18T14:15:47.916225+05:30"
+      "close": 1423.0,
+      "high": 1423.4000244140625,
+      "low": 1422.800048828125,
+      "as_of": "2026-11-18T14:31:27.633057+05:30"
     }
   },
   "trade_history": [
