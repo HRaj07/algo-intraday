@@ -1,62 +1,15 @@
 {
-  "cash": 891091.8640637439,
+  "cash": 960523.7491431809,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "NAVINFLUOR.NS": {
-      "ticker": "NAVINFLUOR.NS",
-      "direction": "LONG",
-      "entry_price": 10168.5,
-      "qty": 33,
-      "qty_open": 33,
-      "stop_loss": 10110.44,
-      "initial_stop": 10110.44,
-      "t1": 10226.49,
-      "t2": 10281.67,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 58.06,
-      "atr": 58.08,
-      "margin": 67112.1,
-      "entry_cost": 79.774841063,
-      "bars_held": 8,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-18 13:01:08 IST",
-      "predicted_rr": null,
-      "entry_rsi": 70.2,
-      "entry_deviation_pct": 1.473,
-      "entry_atr_pct": 0.571,
-      "entry_rvol": 3.44,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.39,
-      "entry_stop_pct": 0.571,
-      "nifty_at_entry": 25187.05078125,
-      "mfe_price": 10192.5,
-      "mae_price": 10125.5
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "NAVINFLUOR.NS": {
-      "close": 10155.0,
-      "high": 10161.5,
-      "low": 10152.0,
-      "as_of": "2026-11-18T15:01:12.451467+05:30"
-    },
-    "CIPLA.NS": {
-      "close": 1419.5,
-      "high": 1421.199951171875,
-      "low": 1419.4000244140625,
-      "as_of": "2026-11-18T15:01:12.451467+05:30"
+      "close": 10250.0,
+      "high": 10250.0,
+      "low": 10250.0,
+      "as_of": "2026-11-18T15:15:55.252586+05:30"
     }
   },
   "trade_history": [
@@ -3356,6 +3309,27 @@
       "entry_rvol": 11.36,
       "entry_turnover_cr": 3.83,
       "entry_stop_pct": 0.511
+    },
+    {
+      "ticker": "NAVINFLUOR.NS",
+      "direction": "LONG",
+      "entry_price": 10168.5,
+      "exit_price": 10250.0,
+      "qty": 33,
+      "pnl": 2319.79,
+      "R_multiple": 1.21,
+      "reason": "square_off",
+      "partial": false,
+      "friction": 369.71,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-18 13:01:08 IST",
+      "exit_time": "2026-11-18 15:15:55 IST",
+      "entry_rsi": 70.2,
+      "entry_deviation_pct": 1.473,
+      "entry_atr_pct": 0.571,
+      "entry_rvol": 3.44,
+      "entry_turnover_cr": 4.39,
+      "entry_stop_pct": 0.571
     }
   ],
   "daily_entry_count": {
@@ -3391,7 +3365,7 @@
     "2026-11-17": 5,
     "2026-11-18": 5
   },
-  "total_pnl": -41796.0359362569,
+  "total_pnl": -39476.2508568199,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
