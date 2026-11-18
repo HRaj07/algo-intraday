@@ -1,5 +1,5 @@
 {
-  "cash": 858510.2529831605,
+  "cash": 929185.1345651501,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 8.16,
       "margin": 31947.31884765625,
       "entry_cost": 50.34086429505371,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-18 10:15:59 IST",
@@ -41,62 +41,22 @@
       "entry_stop_pct": 1.205,
       "nifty_at_entry": 25276.650390625,
       "mfe_price": 676.8499755859375,
-      "mae_price": 674.0999755859375
-    },
-    "PVRINOX.NS": {
-      "ticker": "PVRINOX.NS",
-      "direction": "LONG",
-      "entry_price": 1729.5999755859375,
-      "qty": 211,
-      "qty_open": 211,
-      "stop_loss": 1720.5,
-      "initial_stop": 1720.5,
-      "t1": 1740.98,
-      "t2": 1748.8,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 9.1,
-      "atr": 9.1,
-      "margin": 72989.11896972657,
-      "entry_cost": 84.69408225123021,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-18 10:15:59 IST",
-      "predicted_rr": null,
-      "entry_rsi": 85.9,
-      "entry_deviation_pct": 1.241,
-      "entry_atr_pct": 0.526,
-      "entry_rvol": 13.27,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 2.3,
-      "entry_stop_pct": 0.526,
-      "nifty_at_entry": 25276.650390625,
-      "mfe_price": 1732.5,
-      "mae_price": 1729.5999755859375
+      "mae_price": 674.0
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "PVRINOX.NS": {
-      "close": 1731.0,
-      "high": 1732.5,
-      "low": 1731.0,
-      "as_of": "2026-11-18T10:31:20.793062+05:30"
+      "close": 1727.300048828125,
+      "high": 1727.300048828125,
+      "low": 1719.9000244140625,
+      "as_of": "2026-11-18T10:45:56.562692+05:30"
     },
     "IIFL.NS": {
-      "close": 674.0999755859375,
-      "high": 675.4500122070312,
-      "low": 674.0999755859375,
-      "as_of": "2026-11-18T10:31:20.793062+05:30"
+      "close": 675.0,
+      "high": 675.0,
+      "low": 674.0,
+      "as_of": "2026-11-18T10:45:56.562692+05:30"
     }
   },
   "trade_history": [
@@ -3312,6 +3272,27 @@
       "entry_rvol": 2.94,
       "entry_turnover_cr": 2.57,
       "entry_stop_pct": 0.598
+    },
+    {
+      "ticker": "PVRINOX.NS",
+      "direction": "LONG",
+      "entry_price": 1729.5999755859375,
+      "exit_price": 1720.5,
+      "qty": 211,
+      "pnl": -2314.24,
+      "R_multiple": -1.21,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 394.14,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-18 10:15:59 IST",
+      "exit_time": "2026-11-18 10:45:56 IST",
+      "entry_rsi": 85.9,
+      "entry_deviation_pct": 1.241,
+      "entry_atr_pct": 0.526,
+      "entry_rvol": 13.27,
+      "entry_turnover_cr": 2.3,
+      "entry_stop_pct": 0.526
     }
   ],
   "daily_entry_count": {
@@ -3347,7 +3328,7 @@
     "2026-11-17": 5,
     "2026-11-18": 2
   },
-  "total_pnl": -36553.30919945734,
+  "total_pnl": -38867.54658719438,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,

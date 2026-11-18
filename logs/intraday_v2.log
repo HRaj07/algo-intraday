@@ -12572,3 +12572,15 @@
 2026-11-18 10:31:58 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-18 10:31:58 | INFO    | engine.paper_trader_v2 | ORDER REJECTED PVRINOX.NS: already holding this name
 2026-11-18 10:31:58 | INFO    | __main__ | equity Rs963,093 | open 2 | pending 0 | closed 153 | WR 56.9% | PF 0.77 | friction Rs50,436
+2026-11-18 10:45:56 | INFO    | __main__ | ================================================================
+2026-11-18 10:45:56 | INFO    | __main__ | Scan | 2026-11-18 10:45 IST
+2026-11-18 10:46:24 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-18 10:46:24 | INFO    | engine.paper_trader_v2 | EXIT PVRINOX.NS 211@Rs1720.5 | P&L Rs-2,314 (-1.21R) | friction Rs394 | stop_loss
+2026-11-18 10:46:24 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,921 risk per trade)
+2026-11-18 10:46:24 | INFO    | __main__ |   base 0.40%
+2026-11-18 10:46:24 | INFO    | __main__ |   performance x0.6: n=154, observed expectancy shrunk to -0.045R vs prior +0.125R -> trimming (0.60x)
+2026-11-18 10:46:24 | INFO    | __main__ |   drawdown    x0.526: drawdown 4.8% - sizing at 0.53x
+2026-11-18 10:46:24 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-18 10:46:24 | INFO    | __main__ | strategy: MOM-v3
+2026-11-18 10:46:24 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-18 10:46:25 | INFO    | __main__ | equity Rs960,696 | open 1 | pending 0 | closed 154 | WR 56.5% | PF 0.75 | friction Rs50,830
