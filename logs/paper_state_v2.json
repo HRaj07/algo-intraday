@@ -27,7 +27,7 @@
       "atr": 8.16,
       "margin": 31947.31884765625,
       "entry_cost": 50.34086429505371,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-18 10:15:59 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 1.205,
       "nifty_at_entry": 25276.650390625,
       "mfe_price": 676.8499755859375,
-      "mae_price": 676.8499755859375
+      "mae_price": 674.0999755859375
     },
     "PVRINOX.NS": {
       "ticker": "PVRINOX.NS",
@@ -67,7 +67,7 @@
       "atr": 9.1,
       "margin": 72989.11896972657,
       "entry_cost": 84.69408225123021,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-18 10:15:59 IST",
@@ -80,12 +80,25 @@
       "entry_turnover_cr": 2.3,
       "entry_stop_pct": 0.526,
       "nifty_at_entry": 25276.650390625,
-      "mfe_price": 1729.5999755859375,
+      "mfe_price": 1732.5,
       "mae_price": 1729.5999755859375
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "PVRINOX.NS": {
+      "close": 1731.0,
+      "high": 1732.5,
+      "low": 1731.0,
+      "as_of": "2026-11-18T10:31:20.793062+05:30"
+    },
+    "IIFL.NS": {
+      "close": 674.0999755859375,
+      "high": 675.4500122070312,
+      "low": 674.0999755859375,
+      "as_of": "2026-11-18T10:31:20.793062+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
