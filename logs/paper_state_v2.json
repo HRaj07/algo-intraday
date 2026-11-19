@@ -1,5 +1,5 @@
 {
-  "cash": 632368.1712226487,
+  "cash": 695935.3751025698,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 77.53,
       "margin": 63840.0,
       "entry_cost": 77.0359952,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-19 10:15:47 IST",
@@ -41,47 +41,7 @@
       "entry_stop_pct": 0.583,
       "nifty_at_entry": 25296.349609375,
       "mfe_price": 13300.0,
-      "mae_price": 13300.0
-    },
-    "PNB.NS": {
-      "ticker": "PNB.NS",
-      "direction": "LONG",
-      "entry_price": 154.9499969482422,
-      "qty": 2001,
-      "qty_open": 2001,
-      "stop_loss": 153.99,
-      "initial_stop": 153.99,
-      "t1": 155.9,
-      "t2": 156.89,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 0.96,
-      "atr": 0.96,
-      "margin": 62010.98877868653,
-      "entry_cost": 75.50505793742397,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-19 10:15:47 IST",
-      "predicted_rr": null,
-      "entry_rsi": 74.3,
-      "entry_deviation_pct": 1.146,
-      "entry_atr_pct": 0.618,
-      "entry_rvol": 3.84,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 16.28,
-      "entry_stop_pct": 0.618,
-      "nifty_at_entry": 25296.349609375,
-      "mfe_price": 154.9499969482422,
-      "mae_price": 154.9499969482422
+      "mae_price": 13263.0
     },
     "M&M.NS": {
       "ticker": "M&M.NS",
@@ -107,7 +67,7 @@
       "atr": 18.02,
       "margin": 73542.8,
       "entry_cost": 85.157529884,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-19 10:15:47 IST",
@@ -120,7 +80,7 @@
       "entry_turnover_cr": 20.98,
       "entry_stop_pct": 0.519,
       "nifty_at_entry": 25296.349609375,
-      "mfe_price": 3469.0,
+      "mfe_price": 3480.0,
       "mae_price": 3469.0
     },
     "HAVELLS.NS": {
@@ -147,7 +107,7 @@
       "atr": 6.19,
       "margin": 72571.0,
       "entry_cost": 84.34410413,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-19 10:15:47 IST",
@@ -160,7 +120,7 @@
       "entry_turnover_cr": 2.42,
       "entry_stop_pct": 0.528,
       "nifty_at_entry": 25296.349609375,
-      "mfe_price": 1170.5,
+      "mfe_price": 1171.199951171875,
       "mae_price": 1170.5
     },
     "EXIDEIND.NS": {
@@ -187,7 +147,7 @@
       "atr": 2.73,
       "margin": 56190.78914184571,
       "entry_cost": 70.63337623539911,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-19 10:15:47 IST",
@@ -201,11 +161,42 @@
       "entry_stop_pct": 0.682,
       "nifty_at_entry": 25296.349609375,
       "mfe_price": 399.6499938964844,
-      "mae_price": 399.6499938964844
+      "mae_price": 398.5
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "MARUTI.NS": {
+      "close": 13282.0,
+      "high": 13286.0,
+      "low": 13263.0,
+      "as_of": "2026-11-19T10:31:25.498714+05:30"
+    },
+    "HAVELLS.NS": {
+      "close": 1171.199951171875,
+      "high": 1171.199951171875,
+      "low": 1170.699951171875,
+      "as_of": "2026-11-19T10:31:25.498714+05:30"
+    },
+    "EXIDEIND.NS": {
+      "close": 398.5,
+      "high": 398.70001220703125,
+      "low": 398.5,
+      "as_of": "2026-11-19T10:31:25.498714+05:30"
+    },
+    "M&M.NS": {
+      "close": 3475.5,
+      "high": 3480.0,
+      "low": 3475.5,
+      "as_of": "2026-11-19T10:31:25.498714+05:30"
+    },
+    "PNB.NS": {
+      "close": 156.22000122070312,
+      "high": 156.22000122070312,
+      "low": 155.86000061035156,
+      "as_of": "2026-11-19T10:31:25.498714+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -3524,6 +3515,27 @@
       "entry_rvol": 3.44,
       "entry_turnover_cr": 4.39,
       "entry_stop_pct": 0.571
+    },
+    {
+      "ticker": "PNB.NS",
+      "direction": "LONG",
+      "entry_price": 154.9499969482422,
+      "exit_price": 155.9,
+      "qty": 2001,
+      "pnl": 1556.22,
+      "R_multiple": 0.81,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 344.74,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-19 10:15:47 IST",
+      "exit_time": "2026-11-19 10:31:25 IST",
+      "entry_rsi": 74.3,
+      "entry_deviation_pct": 1.146,
+      "entry_atr_pct": 0.618,
+      "entry_rvol": 3.84,
+      "entry_turnover_cr": 16.28,
+      "entry_stop_pct": 0.618
     }
   ],
   "daily_entry_count": {
@@ -3560,7 +3572,7 @@
     "2026-11-18": 5,
     "2026-11-19": 5
   },
-  "total_pnl": -39476.2508568199,
+  "total_pnl": -37920.035755585326,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
