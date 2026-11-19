@@ -12902,3 +12902,29 @@
 2026-11-19 10:32:12 | INFO    | engine.paper_trader_v2 | ORDER REJECTED MARUTI.NS: already holding this name
 2026-11-19 10:32:12 | INFO    | engine.paper_trader_v2 | ORDER REJECTED BANKINDIA.NS: at max concurrent positions (3)
 2026-11-19 10:32:12 | INFO    | __main__ | equity Rs961,746 | open 4 | pending 0 | closed 159 | WR 56.6% | PF 0.77 | friction Rs52,483
+2026-11-19 10:46:00 | INFO    | __main__ | ================================================================
+2026-11-19 10:46:00 | INFO    | __main__ | Scan | 2026-11-19 10:46 IST
+2026-11-19 10:46:28 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-19 10:46:29 | INFO    | engine.paper_trader_v2 | EXIT MARUTI.NS 24@Rs13379.8 | P&L Rs+1,562 (+0.84R) | friction Rs353 | t1_vwap
+2026-11-19 10:46:29 | INFO    | engine.paper_trader_v2 | T1 MARUTI.NS - half out at VWAP, stop to Rs13326.3 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-19 10:46:29 | INFO    | engine.paper_trader_v2 | EXIT M&M.NS 106@Rs3489.71 | P&L Rs+1,795 (+0.94R) | friction Rs400 | t1_vwap
+2026-11-19 10:46:29 | INFO    | engine.paper_trader_v2 | T1 M&M.NS - half out at VWAP, stop to Rs3475.46 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-19 10:46:29 | INFO    | engine.paper_trader_v2 | EXIT HAVELLS.NS 310@Rs1178.03 | P&L Rs+1,939 (+1.01R) | friction Rs396 | t1_vwap
+2026-11-19 10:46:29 | INFO    | engine.paper_trader_v2 | T1 HAVELLS.NS - half out at VWAP, stop to Rs1172.7 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-19 10:46:29 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,934 risk per trade)
+2026-11-19 10:46:29 | INFO    | __main__ |   base 0.40%
+2026-11-19 10:46:29 | INFO    | __main__ |   performance x0.6: n=162, observed expectancy shrunk to -0.028R vs prior +0.125R -> trimming (0.60x)
+2026-11-19 10:46:29 | INFO    | __main__ |   drawdown    x0.631: drawdown 4.2% - sizing at 0.63x
+2026-11-19 10:46:29 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-19 10:46:29 | INFO    | __main__ | strategy: MOM-v3
+2026-11-19 10:46:29 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-19 10:46:30 | INFO    | engine.paper_trader_v2 | ORDER REJECTED AMBER.NS: at max entries per day (5)
+2026-11-19 10:46:30 | INFO    | engine.paper_trader_v2 | ORDER REJECTED BLUESTARCO.NS: at max entries per day (5)
+2026-11-19 10:46:30 | INFO    | engine.paper_trader_v2 | ORDER REJECTED HEROMOTOCO.NS: at max entries per day (5)
+2026-11-19 10:46:30 | INFO    | engine.paper_trader_v2 | ORDER REJECTED HAVELLS.NS: at max entries per day (5)
+2026-11-19 10:46:30 | INFO    | engine.paper_trader_v2 | ORDER REJECTED MARUTI.NS: at max entries per day (5)
+2026-11-19 10:46:30 | INFO    | engine.paper_trader_v2 | ORDER REJECTED PNB.NS: at max entries per day (5)
+2026-11-19 10:46:30 | INFO    | engine.paper_trader_v2 | ORDER REJECTED EICHERMOT.NS: at max entries per day (5)
+2026-11-19 10:46:30 | INFO    | engine.paper_trader_v2 | ORDER REJECTED M&M.NS: at max entries per day (5)
+2026-11-19 10:46:30 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SYRMA.NS: at max entries per day (5)
+2026-11-19 10:46:30 | INFO    | __main__ | equity Rs967,059 | open 1 | pending 0 | closed 162 | WR 57.4% | PF 0.8 | friction Rs53,632
