@@ -1,56 +1,15 @@
 {
-  "cash": 911184.9284214493,
+  "cash": 968921.7467538697,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "EXIDEIND.NS": {
-      "ticker": "EXIDEIND.NS",
-      "direction": "LONG",
-      "entry_price": 399.6499938964844,
-      "qty": 703,
-      "qty_open": 703,
-      "stop_loss": 396.92,
-      "initial_stop": 396.92,
-      "t1": 402.3,
-      "t2": 405.35,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.73,
-      "atr": 2.73,
-      "margin": 56190.78914184571,
-      "entry_cost": 70.63337623539911,
-      "bars_held": 5,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-19 10:15:47 IST",
-      "predicted_rr": null,
-      "entry_rsi": 81.0,
-      "entry_deviation_pct": 0.976,
-      "entry_atr_pct": 0.682,
-      "entry_rvol": 2.6,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 4.98,
-      "entry_stop_pct": 0.682,
-      "nifty_at_entry": 25296.349609375,
-      "mfe_price": 401.8500061035156,
-      "mae_price": 398.5
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "EXIDEIND.NS": {
-      "close": 401.75,
-      "high": 401.8500061035156,
-      "low": 401.54998779296875,
-      "as_of": "2026-11-19T11:31:26.354133+05:30"
+      "close": 402.0,
+      "high": 402.3500061035156,
+      "low": 402.0,
+      "as_of": "2026-11-19T11:45:52.893153+05:30"
     }
   },
   "trade_history": [
@@ -3455,6 +3414,27 @@
       "entry_rvol": 2.88,
       "entry_turnover_cr": 2.42,
       "entry_stop_pct": 0.528
+    },
+    {
+      "ticker": "EXIDEIND.NS",
+      "direction": "LONG",
+      "entry_price": 399.6499938964844,
+      "exit_price": 402.3,
+      "qty": 703,
+      "pnl": 1546.03,
+      "R_multiple": 0.81,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 316.93,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-19 10:15:47 IST",
+      "exit_time": "2026-11-19 11:45:52 IST",
+      "entry_rsi": 81.0,
+      "entry_deviation_pct": 0.976,
+      "entry_atr_pct": 0.682,
+      "entry_rvol": 2.6,
+      "entry_turnover_cr": 4.98,
+      "entry_stop_pct": 0.682
     }
   ],
   "daily_entry_count": {
@@ -3491,7 +3471,7 @@
     "2026-11-18": 5,
     "2026-11-19": 5
   },
-  "total_pnl": -32624.282436705904,
+  "total_pnl": -31078.25324613121,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,

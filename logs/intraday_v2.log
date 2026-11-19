@@ -12976,3 +12976,22 @@
 2026-11-19 11:32:05 | INFO    | engine.paper_trader_v2 | ORDER REJECTED HAVELLS.NS: at max entries per day (5)
 2026-11-19 11:32:05 | INFO    | engine.paper_trader_v2 | ORDER REJECTED MARUTI.NS: at max entries per day (5)
 2026-11-19 11:32:05 | INFO    | __main__ | equity Rs968,852 | open 1 | pending 0 | closed 162 | WR 57.4% | PF 0.8 | friction Rs53,632
+2026-11-19 11:45:52 | INFO    | __main__ | ================================================================
+2026-11-19 11:45:52 | INFO    | __main__ | Scan | 2026-11-19 11:45 IST
+2026-11-19 11:46:38 | INFO    | data.fetcher | Fetched 15min data for 212/212 tickers
+2026-11-19 11:46:38 | INFO    | engine.paper_trader_v2 | EXIT EXIDEIND.NS 703@Rs402.3 | P&L Rs+1,546 (+0.81R) | friction Rs317 | t1_vwap
+2026-11-19 11:46:38 | INFO    | engine.paper_trader_v2 | T1 EXIDEIND.NS - half out at VWAP, stop to Rs400.51 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-19 11:46:38 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,938 risk per trade)
+2026-11-19 11:46:38 | INFO    | __main__ |   base 0.40%
+2026-11-19 11:46:38 | INFO    | __main__ |   performance x0.6: n=163, observed expectancy shrunk to -0.024R vs prior +0.125R -> trimming (0.60x)
+2026-11-19 11:46:38 | INFO    | __main__ |   drawdown    x0.661: drawdown 4.0% - sizing at 0.66x
+2026-11-19 11:46:38 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-19 11:46:38 | INFO    | __main__ | strategy: MOM-v3
+2026-11-19 11:46:38 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-19 11:46:39 | INFO    | engine.paper_trader_v2 | ORDER REJECTED AMBER.NS: at max entries per day (5)
+2026-11-19 11:46:39 | INFO    | engine.paper_trader_v2 | ORDER REJECTED GODREJCP.NS: at max entries per day (5)
+2026-11-19 11:46:39 | INFO    | engine.paper_trader_v2 | ORDER REJECTED CROMPTON.NS: at max entries per day (5)
+2026-11-19 11:46:39 | INFO    | engine.paper_trader_v2 | ORDER REJECTED SYRMA.NS: at max entries per day (5)
+2026-11-19 11:46:39 | INFO    | engine.paper_trader_v2 | ORDER REJECTED MARUTI.NS: at max entries per day (5)
+2026-11-19 11:46:39 | INFO    | engine.paper_trader_v2 | ORDER REJECTED BLUESTARCO.NS: at max entries per day (5)
+2026-11-19 11:46:39 | INFO    | __main__ | equity Rs968,922 | open 0 | pending 0 | closed 163 | WR 57.7% | PF 0.81 | friction Rs53,949
