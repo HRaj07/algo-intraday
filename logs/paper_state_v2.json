@@ -1,5 +1,5 @@
 {
-  "cash": 650149.7086923464,
+  "cash": 712615.2697044633,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 50.96,
       "margin": 69783.2,
       "entry_cost": 82.010631896,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-20 10:16:00 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.555,
       "nifty_at_entry": 25515.099609375,
       "mfe_price": 9182.0,
-      "mae_price": 9182.0
+      "mae_price": 9133.0
     },
     "MPHASIS.NS": {
       "ticker": "MPHASIS.NS",
@@ -67,7 +67,7 @@
       "atr": 16.14,
       "margin": 58641.59765625,
       "entry_cost": 72.68477648621094,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-20 10:16:00 IST",
@@ -80,48 +80,8 @@
       "entry_turnover_cr": 2.69,
       "entry_stop_pct": 0.66,
       "nifty_at_entry": 25515.099609375,
-      "mfe_price": 2443.39990234375,
+      "mfe_price": 2457.0,
       "mae_price": 2443.39990234375
-    },
-    "PERSISTENT.NS": {
-      "ticker": "PERSISTENT.NS",
-      "direction": "LONG",
-      "entry_price": 6102.5,
-      "qty": 50,
-      "qty_open": 50,
-      "stop_loss": 6064.24,
-      "initial_stop": 6064.24,
-      "t1": 6138.11,
-      "t2": 6178.0,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 38.26,
-      "atr": 38.25,
-      "margin": 61025.0,
-      "entry_cost": 74.67975575,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-20 10:16:00 IST",
-      "predicted_rr": null,
-      "entry_rsi": 80.1,
-      "entry_deviation_pct": 0.971,
-      "entry_atr_pct": 0.627,
-      "entry_rvol": 6.22,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 5.43,
-      "entry_stop_pct": 0.627,
-      "nifty_at_entry": 25515.099609375,
-      "mfe_price": 6102.5,
-      "mae_price": 6102.5
     },
     "INDUSINDBK.NS": {
       "ticker": "INDUSINDBK.NS",
@@ -147,7 +107,7 @@
       "atr": 5.98,
       "margin": 61890.478417968756,
       "entry_cost": 75.40418715019239,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-20 10:16:00 IST",
@@ -161,7 +121,7 @@
       "entry_stop_pct": 0.626,
       "nifty_at_entry": 25515.099609375,
       "mfe_price": 955.0999755859375,
-      "mae_price": 955.0999755859375
+      "mae_price": 950.0
     },
     "FORTIS.NS": {
       "ticker": "FORTIS.NS",
@@ -187,7 +147,7 @@
       "atr": 4.75,
       "margin": 67431.7619873047,
       "entry_cost": 80.04240773623364,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-20 10:16:00 IST",
@@ -201,11 +161,42 @@
       "entry_stop_pct": 0.574,
       "nifty_at_entry": 25515.099609375,
       "mfe_price": 828.4000244140625,
-      "mae_price": 828.4000244140625
+      "mae_price": 826.5499877929688
     }
   },
   "pending_orders": {},
-  "last_known_price": {},
+  "last_known_price": {
+    "FORTIS.NS": {
+      "close": 827.2000122070312,
+      "high": 827.4500122070312,
+      "low": 826.5499877929688,
+      "as_of": "2026-11-20T10:31:27.647801+05:30"
+    },
+    "MPHASIS.NS": {
+      "close": 2455.5,
+      "high": 2457.0,
+      "low": 2452.10009765625,
+      "as_of": "2026-11-20T10:31:27.647801+05:30"
+    },
+    "PERSISTENT.NS": {
+      "close": 6187.5,
+      "high": 6196.0,
+      "low": 6178.5,
+      "as_of": "2026-11-20T10:31:27.647801+05:30"
+    },
+    "APOLLOHOSP.NS": {
+      "close": 9140.0,
+      "high": 9159.0,
+      "low": 9133.0,
+      "as_of": "2026-11-20T10:31:27.647801+05:30"
+    },
+    "INDUSINDBK.NS": {
+      "close": 950.0,
+      "high": 951.3499755859375,
+      "low": 950.0,
+      "as_of": "2026-11-20T10:31:27.647801+05:30"
+    }
+  },
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
@@ -3629,6 +3620,27 @@
       "entry_rvol": 2.6,
       "entry_turnover_cr": 4.98,
       "entry_stop_pct": 0.682
+    },
+    {
+      "ticker": "PERSISTENT.NS",
+      "direction": "LONG",
+      "entry_price": 6102.5,
+      "exit_price": 6138.11,
+      "qty": 50,
+      "pnl": 1440.56,
+      "R_multiple": 0.75,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 339.94,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-20 10:16:00 IST",
+      "exit_time": "2026-11-20 10:31:27 IST",
+      "entry_rsi": 80.1,
+      "entry_deviation_pct": 0.971,
+      "entry_atr_pct": 0.627,
+      "entry_rvol": 6.22,
+      "entry_turnover_cr": 5.43,
+      "entry_stop_pct": 0.627
     }
   ],
   "daily_entry_count": {
@@ -3666,7 +3678,7 @@
     "2026-11-19": 5,
     "2026-11-20": 5
   },
-  "total_pnl": -31078.25324613121,
+  "total_pnl": -29637.692234014226,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
