@@ -1,48 +1,8 @@
 {
-  "cash": 712615.2697044633,
+  "cash": 845214.066350264,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "APOLLOHOSP.NS": {
-      "ticker": "APOLLOHOSP.NS",
-      "direction": "LONG",
-      "entry_price": 9182.0,
-      "qty": 38,
-      "qty_open": 38,
-      "stop_loss": 9131.04,
-      "initial_stop": 9131.04,
-      "t1": 9235.08,
-      "t2": 9281.92,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 50.96,
-      "atr": 50.96,
-      "margin": 69783.2,
-      "entry_cost": 82.010631896,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-20 10:16:00 IST",
-      "predicted_rr": null,
-      "entry_rsi": 89.2,
-      "entry_deviation_pct": 1.419,
-      "entry_atr_pct": 0.555,
-      "entry_rvol": 9.91,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 10.31,
-      "entry_stop_pct": 0.555,
-      "nifty_at_entry": 25515.099609375,
-      "mfe_price": 9182.0,
-      "mae_price": 9133.0
-    },
     "MPHASIS.NS": {
       "ticker": "MPHASIS.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 16.14,
       "margin": 58641.59765625,
       "entry_cost": 72.68477648621094,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-20 10:16:00 IST",
@@ -81,7 +41,7 @@
       "entry_stop_pct": 0.66,
       "nifty_at_entry": 25515.099609375,
       "mfe_price": 2457.0,
-      "mae_price": 2443.39990234375
+      "mae_price": 2442.89990234375
     },
     "INDUSINDBK.NS": {
       "ticker": "INDUSINDBK.NS",
@@ -107,7 +67,7 @@
       "atr": 5.98,
       "margin": 61890.478417968756,
       "entry_cost": 75.40418715019239,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-20 10:16:00 IST",
@@ -122,79 +82,33 @@
       "nifty_at_entry": 25515.099609375,
       "mfe_price": 955.0999755859375,
       "mae_price": 950.0
-    },
-    "FORTIS.NS": {
-      "ticker": "FORTIS.NS",
-      "direction": "LONG",
-      "entry_price": 828.4000244140625,
-      "qty": 407,
-      "qty_open": 407,
-      "stop_loss": 823.65,
-      "initial_stop": 823.65,
-      "t1": 833.42,
-      "t2": 837.96,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 4.75,
-      "atr": 4.75,
-      "margin": 67431.7619873047,
-      "entry_cost": 80.04240773623364,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-20 10:16:00 IST",
-      "predicted_rr": null,
-      "entry_rsi": 87.9,
-      "entry_deviation_pct": 0.909,
-      "entry_atr_pct": 0.574,
-      "entry_rvol": 4.99,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 2.05,
-      "entry_stop_pct": 0.574,
-      "nifty_at_entry": 25515.099609375,
-      "mfe_price": 828.4000244140625,
-      "mae_price": 826.5499877929688
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "FORTIS.NS": {
-      "close": 827.2000122070312,
-      "high": 827.4500122070312,
-      "low": 826.5499877929688,
-      "as_of": "2026-11-20T10:31:27.647801+05:30"
+      "close": 821.7999877929688,
+      "high": 822.1500244140625,
+      "low": 821.3499755859375,
+      "as_of": "2026-11-20T10:45:55.116450+05:30"
     },
     "MPHASIS.NS": {
-      "close": 2455.5,
-      "high": 2457.0,
-      "low": 2452.10009765625,
-      "as_of": "2026-11-20T10:31:27.647801+05:30"
-    },
-    "PERSISTENT.NS": {
-      "close": 6187.5,
-      "high": 6196.0,
-      "low": 6178.5,
-      "as_of": "2026-11-20T10:31:27.647801+05:30"
+      "close": 2443.89990234375,
+      "high": 2448.0,
+      "low": 2442.89990234375,
+      "as_of": "2026-11-20T10:45:55.116450+05:30"
     },
     "APOLLOHOSP.NS": {
-      "close": 9140.0,
-      "high": 9159.0,
-      "low": 9133.0,
-      "as_of": "2026-11-20T10:31:27.647801+05:30"
+      "close": 9099.0,
+      "high": 9099.0,
+      "low": 9099.0,
+      "as_of": "2026-11-20T10:45:55.116450+05:30"
     },
     "INDUSINDBK.NS": {
-      "close": 950.0,
-      "high": 951.3499755859375,
-      "low": 950.0,
-      "as_of": "2026-11-20T10:31:27.647801+05:30"
+      "close": 952.7999877929688,
+      "high": 953.7000122070312,
+      "low": 952.7000122070312,
+      "as_of": "2026-11-20T10:45:55.116450+05:30"
     }
   },
   "trade_history": [
@@ -3641,6 +3555,48 @@
       "entry_rvol": 6.22,
       "entry_turnover_cr": 5.43,
       "entry_stop_pct": 0.627
+    },
+    {
+      "ticker": "APOLLOHOSP.NS",
+      "direction": "LONG",
+      "entry_price": 9182.0,
+      "exit_price": 9131.04,
+      "qty": 38,
+      "pnl": -2315.3,
+      "R_multiple": -1.2,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 378.82,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-20 10:16:00 IST",
+      "exit_time": "2026-11-20 10:45:55 IST",
+      "entry_rsi": 89.2,
+      "entry_deviation_pct": 1.419,
+      "entry_atr_pct": 0.555,
+      "entry_rvol": 9.91,
+      "entry_turnover_cr": 10.31,
+      "entry_stop_pct": 0.555
+    },
+    {
+      "ticker": "FORTIS.NS",
+      "direction": "LONG",
+      "entry_price": 828.4000244140625,
+      "exit_price": 823.65,
+      "qty": 407,
+      "pnl": -2300.86,
+      "R_multiple": -1.19,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 367.6,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-20 10:16:00 IST",
+      "exit_time": "2026-11-20 10:45:55 IST",
+      "entry_rsi": 87.9,
+      "entry_deviation_pct": 0.909,
+      "entry_atr_pct": 0.574,
+      "entry_rvol": 4.99,
+      "entry_turnover_cr": 2.05,
+      "entry_stop_pct": 0.574
     }
   ],
   "daily_entry_count": {
@@ -3678,7 +3634,7 @@
     "2026-11-19": 5,
     "2026-11-20": 5
   },
-  "total_pnl": -29637.692234014226,
+  "total_pnl": -34253.8575755183,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
