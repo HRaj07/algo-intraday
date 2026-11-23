@@ -13926,3 +13926,12 @@
 2026-11-23 13:01:45 | INFO    | data.fetcher | Fetched 15min data for 211/212 tickers
 2026-11-23 13:01:45 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ICICIPRULI.NS
 2026-11-23 13:01:45 | WARNING | __main__ | NOT TRADING: daily loss Rs-6,790 hit the -3.0R limit (-Rs5,750)
+2026-11-23 13:15:55 | INFO    | __main__ | ================================================================
+2026-11-23 13:15:55 | INFO    | __main__ | Scan | 2026-11-23 13:15 IST
+2026-11-23 13:16:13 | ERROR   | yfinance | $ICICIPRULI.NS: possibly delisted; no price data found  (period=20d)
+2026-11-23 13:16:14 | ERROR   | yfinance | 
+1 Failed download:
+2026-11-23 13:16:14 | ERROR   | yfinance | ['ICICIPRULI.NS']: possibly delisted; no price data found  (period=20d)
+2026-11-23 13:16:29 | INFO    | data.fetcher | Fetched 15min data for 211/212 tickers
+2026-11-23 13:16:29 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ICICIPRULI.NS
+2026-11-23 13:16:29 | WARNING | __main__ | NOT TRADING: daily loss Rs-6,790 hit the -3.0R limit (-Rs5,750)
