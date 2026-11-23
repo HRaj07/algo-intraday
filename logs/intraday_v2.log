@@ -13739,3 +13739,25 @@
 2026-11-23 10:01:51 | INFO    | __main__ | strategy: MOM-v3
 2026-11-23 10:01:51 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-23 10:01:51 | INFO    | __main__ | equity Rs965,094 | open 0 | pending 0 | closed 168 | WR 57.1% | PF 0.79 | friction Rs55,706
+2026-11-23 10:15:55 | INFO    | __main__ | ================================================================
+2026-11-23 10:15:55 | INFO    | __main__ | Scan | 2026-11-23 10:15 IST
+2026-11-23 10:16:10 | ERROR   | yfinance | $ICICIPRULI.NS: possibly delisted; no price data found  (period=20d)
+2026-11-23 10:16:15 | ERROR   | yfinance | 
+1 Failed download:
+2026-11-23 10:16:15 | ERROR   | yfinance | ['ICICIPRULI.NS']: possibly delisted; no price data found  (period=20d)
+2026-11-23 10:16:31 | INFO    | data.fetcher | Fetched 15min data for 211/212 tickers
+2026-11-23 10:16:31 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ICICIPRULI.NS
+2026-11-23 10:16:31 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,930 risk per trade)
+2026-11-23 10:16:31 | INFO    | __main__ |   base 0.40%
+2026-11-23 10:16:31 | INFO    | __main__ |   performance x0.6: n=168, observed expectancy shrunk to -0.033R vs prior +0.125R -> trimming (0.60x)
+2026-11-23 10:16:31 | INFO    | __main__ |   drawdown    x0.598: drawdown 4.4% - sizing at 0.60x
+2026-11-23 10:16:31 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-23 10:16:31 | INFO    | __main__ | strategy: MOM-v3
+2026-11-23 10:16:31 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-23 10:16:32 | INFO    | engine.paper_trader_v2 | ORDER TCS.NS market buy at next open (ref Rs2493.6, SL 0.652%, RSI 81.6, rvol 10.09)
+2026-11-23 10:16:32 | INFO    | engine.paper_trader_v2 | ORDER TECHM.NS market buy at next open (ref Rs1800.9, SL 0.636%, RSI 75.1, rvol 2.66)
+2026-11-23 10:16:32 | INFO    | engine.paper_trader_v2 | ORDER INFY.NS market buy at next open (ref Rs1130.0, SL 0.586%, RSI 74.2, rvol 2.21)
+2026-11-23 10:16:32 | INFO    | engine.paper_trader_v2 | FILLED TCS.NS @ Rs2493.199951171875 | qty=118 notional=Rs294,198 friction=Rs328
+2026-11-23 10:16:32 | INFO    | engine.paper_trader_v2 | FILLED TECHM.NS @ Rs1800.9000244140625 | qty=168 notional=Rs302,551 friction=Rs336
+2026-11-23 10:16:32 | INFO    | engine.paper_trader_v2 | FILLED INFY.NS @ Rs1130.300048828125 | qty=291 notional=Rs328,917 friction=Rs361
+2026-11-23 10:16:33 | INFO    | __main__ | equity Rs965,094 | open 3 | pending 0 | closed 168 | WR 57.1% | PF 0.79 | friction Rs55,706
