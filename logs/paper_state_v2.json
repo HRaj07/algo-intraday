@@ -1,5 +1,5 @@
 {
-  "cash": 779961.2178972679,
+  "cash": 843458.5092173207,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 16.27,
       "margin": 58839.518847656254,
       "entry_cost": 72.8504424610537,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-23 10:15:55 IST",
@@ -41,7 +41,7 @@
       "entry_stop_pct": 0.652,
       "nifty_at_entry": 25639.30078125,
       "mfe_price": 2493.89990234375,
-      "mae_price": 2491.10009765625
+      "mae_price": 2484.0
     },
     "TECHM.NS": {
       "ticker": "TECHM.NS",
@@ -67,7 +67,7 @@
       "atr": 11.46,
       "margin": 60510.2408203125,
       "entry_cost": 74.24888687382618,
-      "bars_held": 1,
+      "bars_held": 2,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-23 10:15:55 IST",
@@ -80,69 +80,29 @@
       "entry_turnover_cr": 12.28,
       "entry_stop_pct": 0.636,
       "nifty_at_entry": 25639.30078125,
-      "mfe_price": 1805.0,
+      "mfe_price": 1806.199951171875,
       "mae_price": 1800.9000244140625
-    },
-    "INFY.NS": {
-      "ticker": "INFY.NS",
-      "direction": "LONG",
-      "entry_price": 1130.300048828125,
-      "qty": 291,
-      "qty_open": 291,
-      "stop_loss": 1123.68,
-      "initial_stop": 1123.68,
-      "t1": 1136.78,
-      "t2": 1143.25,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 6.62,
-      "atr": 6.63,
-      "margin": 65783.46284179688,
-      "entry_cost": 78.66273190246923,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-23 10:15:55 IST",
-      "predicted_rr": null,
-      "entry_rsi": 74.2,
-      "entry_deviation_pct": 0.999,
-      "entry_atr_pct": 0.586,
-      "entry_rvol": 2.21,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 45.83,
-      "entry_stop_pct": 0.586,
-      "nifty_at_entry": 25639.30078125,
-      "mfe_price": 1130.300048828125,
-      "mae_price": 1127.800048828125
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "TECHM.NS": {
-      "close": 1804.199951171875,
-      "high": 1805.0,
-      "low": 1802.5999755859375,
-      "as_of": "2026-11-23T10:31:28.050239+05:30"
+      "close": 1803.5999755859375,
+      "high": 1806.199951171875,
+      "low": 1803.0,
+      "as_of": "2026-11-23T10:46:00.521380+05:30"
     },
     "TCS.NS": {
-      "close": 2491.60009765625,
-      "high": 2493.89990234375,
-      "low": 2491.10009765625,
-      "as_of": "2026-11-23T10:31:28.050239+05:30"
+      "close": 2485.800048828125,
+      "high": 2487.89990234375,
+      "low": 2484.0,
+      "as_of": "2026-11-23T10:46:00.521380+05:30"
     },
     "INFY.NS": {
-      "close": 1127.800048828125,
-      "high": 1128.699951171875,
-      "low": 1127.800048828125,
-      "as_of": "2026-11-23T10:31:28.050239+05:30"
+      "close": 1121.199951171875,
+      "high": 1122.9000244140625,
+      "low": 1120.5,
+      "as_of": "2026-11-23T10:46:00.521380+05:30"
     }
   },
   "trade_history": [
@@ -3673,6 +3633,27 @@
       "entry_rvol": 6.94,
       "entry_turnover_cr": 2.69,
       "entry_stop_pct": 0.66
+    },
+    {
+      "ticker": "INFY.NS",
+      "direction": "LONG",
+      "entry_price": 1130.300048828125,
+      "exit_price": 1123.68,
+      "qty": 291,
+      "pnl": -2286.17,
+      "R_multiple": -1.19,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 359.74,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-23 10:15:55 IST",
+      "exit_time": "2026-11-23 10:46:00 IST",
+      "entry_rsi": 74.2,
+      "entry_deviation_pct": 0.999,
+      "entry_atr_pct": 0.586,
+      "entry_rvol": 2.21,
+      "entry_turnover_cr": 45.83,
+      "entry_stop_pct": 0.586
     }
   ],
   "daily_entry_count": {
@@ -3711,7 +3692,7 @@
     "2026-11-20": 5,
     "2026-11-23": 3
   },
-  "total_pnl": -34905.55959296758,
+  "total_pnl": -37191.731114711685,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
