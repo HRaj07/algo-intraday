@@ -1,48 +1,8 @@
 {
-  "cash": 843458.5092173207,
+  "cash": 900052.7612089531,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "TCS.NS": {
-      "ticker": "TCS.NS",
-      "direction": "LONG",
-      "entry_price": 2493.199951171875,
-      "qty": 118,
-      "qty_open": 118,
-      "stop_loss": 2476.94,
-      "initial_stop": 2476.94,
-      "t1": 2508.56,
-      "t2": 2526.14,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 16.26,
-      "atr": 16.27,
-      "margin": 58839.518847656254,
-      "entry_cost": 72.8504424610537,
-      "bars_held": 3,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-23 10:15:55 IST",
-      "predicted_rr": null,
-      "entry_rsi": 81.6,
-      "entry_deviation_pct": 1.706,
-      "entry_atr_pct": 0.652,
-      "entry_rvol": 10.09,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 18.49,
-      "entry_stop_pct": 0.652,
-      "nifty_at_entry": 25639.30078125,
-      "mfe_price": 2493.89990234375,
-      "mae_price": 2477.199951171875
-    },
     "TECHM.NS": {
       "ticker": "TECHM.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 11.46,
       "margin": 60510.2408203125,
       "entry_cost": 74.24888687382618,
-      "bars_held": 3,
+      "bars_held": 4,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-23 10:15:55 IST",
@@ -81,22 +41,22 @@
       "entry_stop_pct": 0.636,
       "nifty_at_entry": 25639.30078125,
       "mfe_price": 1806.199951171875,
-      "mae_price": 1799.199951171875
+      "mae_price": 1792.5999755859375
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "TECHM.NS": {
-      "close": 1799.5999755859375,
-      "high": 1800.4000244140625,
-      "low": 1799.199951171875,
-      "as_of": "2026-11-23T11:01:10.390715+05:30"
+      "close": 1794.5999755859375,
+      "high": 1794.699951171875,
+      "low": 1792.5999755859375,
+      "as_of": "2026-11-23T11:15:49.792800+05:30"
     },
     "TCS.NS": {
-      "close": 2477.199951171875,
-      "high": 2479.699951171875,
-      "low": 2477.199951171875,
-      "as_of": "2026-11-23T11:01:10.390715+05:30"
+      "close": 2478.0,
+      "high": 2478.0,
+      "low": 2475.0,
+      "as_of": "2026-11-23T11:15:49.792800+05:30"
     }
   },
   "trade_history": [
@@ -3648,6 +3608,27 @@
       "entry_rvol": 2.21,
       "entry_turnover_cr": 45.83,
       "entry_stop_pct": 0.586
+    },
+    {
+      "ticker": "TCS.NS",
+      "direction": "LONG",
+      "entry_price": 2493.199951171875,
+      "exit_price": 2476.94,
+      "qty": 118,
+      "pnl": -2245.27,
+      "R_multiple": -1.17,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 326.59,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-23 10:15:55 IST",
+      "exit_time": "2026-11-23 11:15:49 IST",
+      "entry_rsi": 81.6,
+      "entry_deviation_pct": 1.706,
+      "entry_atr_pct": 0.652,
+      "entry_rvol": 10.09,
+      "entry_turnover_cr": 18.49,
+      "entry_stop_pct": 0.652
     }
   ],
   "daily_entry_count": {
@@ -3686,7 +3667,7 @@
     "2026-11-20": 5,
     "2026-11-23": 3
   },
-  "total_pnl": -37191.731114711685,
+  "total_pnl": -39436.9979707355,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
