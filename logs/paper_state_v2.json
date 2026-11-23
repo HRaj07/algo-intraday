@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "TECHM.NS": {
-      "close": 1791.800048828125,
-      "high": 1791.800048828125,
-      "low": 1784.800048828125,
-      "as_of": "2026-11-23T12:31:30.249734+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
