@@ -1,56 +1,15 @@
 {
-  "cash": 900052.7612089531,
+  "cash": 958304.8330648236,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "TECHM.NS": {
-      "ticker": "TECHM.NS",
-      "direction": "LONG",
-      "entry_price": 1800.9000244140625,
-      "qty": 168,
-      "qty_open": 168,
-      "stop_loss": 1789.45,
-      "initial_stop": 1789.45,
-      "t1": 1811.71,
-      "t2": 1823.82,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 11.45,
-      "atr": 11.46,
-      "margin": 60510.2408203125,
-      "entry_cost": 74.24888687382618,
-      "bars_held": 8,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-23 10:15:55 IST",
-      "predicted_rr": null,
-      "entry_rsi": 75.1,
-      "entry_deviation_pct": 0.914,
-      "entry_atr_pct": 0.636,
-      "entry_rvol": 2.66,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 12.28,
-      "entry_stop_pct": 0.636,
-      "nifty_at_entry": 25639.30078125,
-      "mfe_price": 1806.199951171875,
-      "mae_price": 1792.5999755859375
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "TECHM.NS": {
-      "close": 1794.0,
-      "high": 1797.4000244140625,
-      "low": 1794.0,
-      "as_of": "2026-11-23T12:15:55.174227+05:30"
+      "close": 1791.800048828125,
+      "high": 1791.800048828125,
+      "low": 1784.800048828125,
+      "as_of": "2026-11-23T12:31:30.249734+05:30"
     }
   },
   "trade_history": [
@@ -3623,6 +3582,27 @@
       "entry_rvol": 10.09,
       "entry_turnover_cr": 18.49,
       "entry_stop_pct": 0.652
+    },
+    {
+      "ticker": "TECHM.NS",
+      "direction": "LONG",
+      "entry_price": 1800.9000244140625,
+      "exit_price": 1789.45,
+      "qty": 168,
+      "pnl": -2258.17,
+      "R_multiple": -1.17,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 334.56,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-23 10:15:55 IST",
+      "exit_time": "2026-11-23 12:31:30 IST",
+      "entry_rsi": 75.1,
+      "entry_deviation_pct": 0.914,
+      "entry_atr_pct": 0.636,
+      "entry_rvol": 2.66,
+      "entry_turnover_cr": 12.28,
+      "entry_stop_pct": 0.636
     }
   ],
   "daily_entry_count": {
@@ -3661,7 +3641,7 @@
     "2026-11-20": 5,
     "2026-11-23": 3
   },
-  "total_pnl": -39436.9979707355,
+  "total_pnl": -41695.16693517742,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
