@@ -1,5 +1,5 @@
 {
-  "cash": 785236.9436137876,
+  "cash": 842440.4050109485,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 7.12,
       "margin": 54505.84130859375,
       "entry_cost": 69.22302435053223,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-25 10:31:16 IST",
@@ -42,46 +42,6 @@
       "nifty_at_entry": 25805.599609375,
       "mfe_price": 1016.9000244140625,
       "mae_price": 1012.0
-    },
-    "DABUR.NS": {
-      "ticker": "DABUR.NS",
-      "direction": "LONG",
-      "entry_price": 418.45001220703125,
-      "qty": 670,
-      "qty_open": 670,
-      "stop_loss": 415.59,
-      "initial_stop": 415.59,
-      "t1": 420.61,
-      "t2": 423.81,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.86,
-      "atr": 2.85,
-      "margin": 56072.30163574219,
-      "entry_cost": 70.5341986381653,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-25 11:01:07 IST",
-      "predicted_rr": null,
-      "entry_rsi": 79.7,
-      "entry_deviation_pct": 1.339,
-      "entry_atr_pct": 0.683,
-      "entry_rvol": 2.53,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 7.29,
-      "entry_stop_pct": 0.683,
-      "nifty_at_entry": 25891.75,
-      "mfe_price": 418.45001220703125,
-      "mae_price": 418.45001220703125
     },
     "TRENT.NS": {
       "ticker": "TRENT.NS",
@@ -107,7 +67,7 @@
       "atr": 20.03,
       "margin": 63070.5,
       "entry_cost": 76.391900615,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-25 11:01:07 IST",
@@ -121,28 +81,28 @@
       "entry_stop_pct": 0.603,
       "nifty_at_entry": 25891.75,
       "mfe_price": 3319.5,
-      "mae_price": 3319.5
+      "mae_price": 3310.800048828125
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "DABUR.NS": {
-      "close": 418.20001220703125,
-      "high": 418.5,
-      "low": 418.1000061035156,
-      "as_of": "2026-11-25T11:01:07.492068+05:30"
+      "close": 422.5,
+      "high": 422.70001220703125,
+      "low": 420.5,
+      "as_of": "2026-11-25T11:15:58.078683+05:30"
     },
     "AUBANK.NS": {
-      "close": 1015.2000122070312,
-      "high": 1015.4500122070312,
-      "low": 1014.0999755859375,
-      "as_of": "2026-11-25T11:01:07.492068+05:30"
+      "close": 1014.7000122070312,
+      "high": 1014.7000122070312,
+      "low": 1014.7000122070312,
+      "as_of": "2026-11-25T11:15:58.078683+05:30"
     },
     "TRENT.NS": {
-      "close": 3322.10009765625,
-      "high": 3324.0,
-      "low": 3318.60009765625,
-      "as_of": "2026-11-25T11:01:07.492068+05:30"
+      "close": 3313.60009765625,
+      "high": 3314.800048828125,
+      "low": 3310.800048828125,
+      "as_of": "2026-11-25T11:15:58.078683+05:30"
     }
   },
   "trade_history": [
@@ -3799,6 +3759,27 @@
       "entry_rvol": 3.7,
       "entry_turnover_cr": 6.02,
       "entry_stop_pct": 0.703
+    },
+    {
+      "ticker": "DABUR.NS",
+      "direction": "LONG",
+      "entry_price": 418.45001220703125,
+      "exit_price": 420.61,
+      "qty": 670,
+      "pnl": 1131.16,
+      "R_multiple": 0.59,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 316.03,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-25 11:01:07 IST",
+      "exit_time": "2026-11-25 11:15:58 IST",
+      "entry_rsi": 79.7,
+      "entry_deviation_pct": 1.339,
+      "entry_atr_pct": 0.683,
+      "entry_rvol": 2.53,
+      "entry_turnover_cr": 7.29,
+      "entry_stop_pct": 0.683
     }
   ],
   "daily_entry_count": {
@@ -3838,7 +3819,7 @@
     "2026-11-23": 3,
     "2026-11-25": 6
   },
-  "total_pnl": -41114.41344187737,
+  "total_pnl": -39983.25368045866,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
