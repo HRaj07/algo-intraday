@@ -1,8 +1,49 @@
 {
-  "cash": 958304.8330648236,
+  "cash": 898964.0330648236,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {},
+  "positions": {
+    "HDFCLIFE.NS": {
+      "ticker": "HDFCLIFE.NS",
+      "direction": "LONG",
+      "entry_price": 608.0,
+      "qty": 488,
+      "qty_open": 488,
+      "stop_loss": 604.08,
+      "initial_stop": 604.08,
+      "t1": 611.75,
+      "t2": 615.93,
+      "t1_fraction": 1.0,
+      "exit_cfg": {
+        "hold_to_square_off": true,
+        "use_target": true,
+        "use_breakeven_trail": false,
+        "use_time_stop": false,
+        "thesis_exits": true
+      },
+      "t1_done": false,
+      "trailed": false,
+      "risk_per_share": 3.92,
+      "atr": 3.91,
+      "margin": 59340.8,
+      "entry_cost": 73.270029824,
+      "bars_held": 0,
+      "realised_pnl": 0.0,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-25 10:15:58 IST",
+      "predicted_rr": null,
+      "entry_rsi": 81.3,
+      "entry_deviation_pct": 0.931,
+      "entry_atr_pct": 0.644,
+      "entry_rvol": 5.46,
+      "entry_gap_pct": null,
+      "entry_turnover_cr": 6.3,
+      "entry_stop_pct": 0.644,
+      "nifty_at_entry": 25765.599609375,
+      "mfe_price": 608.0,
+      "mae_price": 608.0
+    }
+  },
   "pending_orders": {},
   "last_known_price": {},
   "trade_history": [
@@ -3632,16 +3673,17 @@
     "2026-11-18": 5,
     "2026-11-19": 5,
     "2026-11-20": 5,
-    "2026-11-23": 3
+    "2026-11-23": 3,
+    "2026-11-25": 1
   },
   "total_pnl": -41695.16693517742,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
-    "performance_reason": "n=168, observed expectancy shrunk to -0.033R vs prior +0.125R -> trimming (0.60x)",
-    "drawdown_scalar": 0.598,
-    "drawdown_reason": "drawdown 4.4% - sizing at 0.60x",
-    "raw_pct": 0.00144,
+    "performance_reason": "n=171, observed expectancy shrunk to -0.048R vs prior +0.125R -> trimming (0.60x)",
+    "drawdown_scalar": 0.5,
+    "drawdown_reason": "drawdown 5.1% - sizing at 0.50x",
+    "raw_pct": 0.0012,
     "final_pct": 0.002,
     "clamped": true
   },
@@ -3729,6 +3771,12 @@
       "pf": 0.82,
       "n": 30,
       "trade_count": 139
+    },
+    {
+      "date": "2026-11-25",
+      "pf": 0.815,
+      "n": 30,
+      "trade_count": 171
     }
   ]
 }
