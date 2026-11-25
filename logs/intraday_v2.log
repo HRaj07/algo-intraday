@@ -14609,3 +14609,20 @@
 2026-11-25 10:31:55 | INFO    | engine.paper_trader_v2 | FILLED DABUR.NS @ Rs414.6499938964844 | qty=657 notional=Rs272,425 friction=Rs307
 2026-11-25 10:31:55 | INFO    | engine.paper_trader_v2 | FILLED AUBANK.NS @ Rs1016.9000244140625 | qty=268 notional=Rs272,529 friction=Rs307
 2026-11-25 10:31:55 | INFO    | __main__ | equity Rs957,134 | open 4 | pending 0 | closed 171 | WR 56.1% | PF 0.76 | friction Rs56,726
+2026-11-25 10:45:52 | INFO    | __main__ | ================================================================
+2026-11-25 10:45:52 | INFO    | __main__ | Scan | 2026-11-25 10:45 IST
+2026-11-25 10:46:16 | ERROR   | yfinance | $ICICIPRULI.NS: possibly delisted; no price data found  (period=20d)
+2026-11-25 10:46:17 | ERROR   | yfinance | 
+1 Failed download:
+2026-11-25 10:46:17 | ERROR   | yfinance | ['ICICIPRULI.NS']: possibly delisted; no price data found  (period=20d)
+2026-11-25 10:46:37 | INFO    | data.fetcher | Fetched 15min data for 211/212 tickers
+2026-11-25 10:46:37 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ICICIPRULI.NS
+2026-11-25 10:46:37 | INFO    | engine.paper_trader_v2 | EXIT HDFCLIFE.NS 488@Rs604.08 | P&L Rs-2,242 (-1.17R) | friction Rs329 | stop_loss
+2026-11-25 10:46:37 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,912 risk per trade)
+2026-11-25 10:46:37 | INFO    | __main__ |   base 0.40%
+2026-11-25 10:46:37 | INFO    | __main__ |   performance x0.6: n=172, observed expectancy shrunk to -0.053R vs prior +0.125R -> trimming (0.60x)
+2026-11-25 10:46:37 | INFO    | __main__ |   drawdown    x0.5: drawdown 5.3% - sizing at 0.50x
+2026-11-25 10:46:37 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-25 10:46:37 | INFO    | __main__ | strategy: MOM-v3
+2026-11-25 10:46:37 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-25 10:46:38 | INFO    | __main__ | equity Rs955,899 | open 3 | pending 0 | closed 172 | WR 55.8% | PF 0.75 | friction Rs57,055

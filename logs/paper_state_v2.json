@@ -1,48 +1,8 @@
 {
-  "cash": 724538.1415914348,
+  "cash": 781636.9913279687,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "HDFCLIFE.NS": {
-      "ticker": "HDFCLIFE.NS",
-      "direction": "LONG",
-      "entry_price": 608.0,
-      "qty": 488,
-      "qty_open": 488,
-      "stop_loss": 604.08,
-      "initial_stop": 604.08,
-      "t1": 611.75,
-      "t2": 615.93,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 3.92,
-      "atr": 3.91,
-      "margin": 59340.8,
-      "entry_cost": 73.270029824,
-      "bars_held": 1,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-25 10:15:58 IST",
-      "predicted_rr": null,
-      "entry_rsi": 81.3,
-      "entry_deviation_pct": 0.931,
-      "entry_atr_pct": 0.644,
-      "entry_rvol": 5.46,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 6.3,
-      "entry_stop_pct": 0.644,
-      "nifty_at_entry": 25765.599609375,
-      "mfe_price": 608.0,
-      "mae_price": 605.5999755859375
-    },
     "TRENT.NS": {
       "ticker": "TRENT.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 19.28,
       "margin": 65435.04096679688,
       "entry_cost": 78.371092340438,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-25 10:31:16 IST",
@@ -81,7 +41,7 @@
       "entry_stop_pct": 0.584,
       "nifty_at_entry": 25805.599609375,
       "mfe_price": 3304.800048828125,
-      "mae_price": 3304.800048828125
+      "mae_price": 3297.699951171875
     },
     "DABUR.NS": {
       "ticker": "DABUR.NS",
@@ -107,7 +67,7 @@
       "atr": 2.92,
       "margin": 54485.00919799805,
       "entry_cost": 69.2055872490003,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-25 10:31:16 IST",
@@ -120,7 +80,7 @@
       "entry_turnover_cr": 6.02,
       "entry_stop_pct": 0.703,
       "nifty_at_entry": 25805.599609375,
-      "mfe_price": 414.6499938964844,
+      "mfe_price": 416.70001220703125,
       "mae_price": 414.6499938964844
     },
     "AUBANK.NS": {
@@ -147,7 +107,7 @@
       "atr": 7.12,
       "margin": 54505.84130859375,
       "entry_cost": 69.22302435053223,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-25 10:31:16 IST",
@@ -161,16 +121,34 @@
       "entry_stop_pct": 0.701,
       "nifty_at_entry": 25805.599609375,
       "mfe_price": 1016.9000244140625,
-      "mae_price": 1016.9000244140625
+      "mae_price": 1012.0
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "HDFCLIFE.NS": {
-      "close": 605.5999755859375,
-      "high": 606.7000122070312,
-      "low": 605.5999755859375,
-      "as_of": "2026-11-25T10:31:16.266481+05:30"
+      "close": 604.2000122070312,
+      "high": 604.5,
+      "low": 603.2000122070312,
+      "as_of": "2026-11-25T10:45:52.745997+05:30"
+    },
+    "DABUR.NS": {
+      "close": 416.70001220703125,
+      "high": 416.70001220703125,
+      "low": 416.25,
+      "as_of": "2026-11-25T10:45:52.745997+05:30"
+    },
+    "AUBANK.NS": {
+      "close": 1012.0,
+      "high": 1012.0,
+      "low": 1012.0,
+      "as_of": "2026-11-25T10:45:52.745997+05:30"
+    },
+    "TRENT.NS": {
+      "close": 3302.800048828125,
+      "high": 3303.39990234375,
+      "low": 3297.699951171875,
+      "as_of": "2026-11-25T10:45:52.745997+05:30"
     }
   },
   "trade_history": [
@@ -3764,6 +3742,27 @@
       "entry_rvol": 2.66,
       "entry_turnover_cr": 12.28,
       "entry_stop_pct": 0.636
+    },
+    {
+      "ticker": "HDFCLIFE.NS",
+      "direction": "LONG",
+      "entry_price": 608.0,
+      "exit_price": 604.08,
+      "qty": 488,
+      "pnl": -2241.95,
+      "R_multiple": -1.17,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 328.99,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-25 10:15:58 IST",
+      "exit_time": "2026-11-25 10:45:52 IST",
+      "entry_rsi": 81.3,
+      "entry_deviation_pct": 0.931,
+      "entry_atr_pct": 0.644,
+      "entry_rvol": 5.46,
+      "entry_turnover_cr": 6.3,
+      "entry_stop_pct": 0.644
     }
   ],
   "daily_entry_count": {
@@ -3803,7 +3802,7 @@
     "2026-11-23": 3,
     "2026-11-25": 4
   },
-  "total_pnl": -41695.16693517742,
+  "total_pnl": -43937.11719864364,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
