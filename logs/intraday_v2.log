@@ -14936,3 +14936,13 @@
 2026-11-25 15:01:56 | INFO    | __main__ | strategy: MOM-v3
 2026-11-25 15:01:56 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-25 15:01:56 | INFO    | __main__ | equity Rs959,390 | open 0 | pending 0 | closed 177 | WR 56.5% | PF 0.78 | friction Rs58,697
+2026-11-25 15:15:55 | INFO    | __main__ | ================================================================
+2026-11-25 15:15:55 | INFO    | __main__ | Scan | 2026-11-25 15:15 IST
+2026-11-25 15:16:08 | ERROR   | yfinance | $ICICIPRULI.NS: possibly delisted; no price data found  (period=20d)
+2026-11-25 15:16:13 | ERROR   | yfinance | 
+1 Failed download:
+2026-11-25 15:16:13 | ERROR   | yfinance | ['ICICIPRULI.NS']: possibly delisted; no price data found  (period=20d)
+2026-11-25 15:16:28 | INFO    | data.fetcher | Fetched 15min data for 211/212 tickers
+2026-11-25 15:16:28 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ICICIPRULI.NS
+2026-11-25 15:16:28 | INFO    | __main__ | EOD: {'equity': 959390.06, 'cash': 959390.06, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 177, 'win_rate_pct': 56.5, 'profit_factor': 0.78, 'total_friction': 58696.86, 'total_pnl': -40609.94, 'return_pct': -4.06}
+2026-11-25 15:16:28 | WARNING | __main__ | KILL SWITCH has tripped 15x in paper mode; latest {'date': '2026-11-25', 'pf': 0.815, 'n': 30, 'trade_count': 171} - live mode would be HALTED
