@@ -14626,3 +14626,27 @@
 2026-11-25 10:46:37 | INFO    | __main__ | strategy: MOM-v3
 2026-11-25 10:46:37 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-25 10:46:38 | INFO    | __main__ | equity Rs955,899 | open 3 | pending 0 | closed 172 | WR 55.8% | PF 0.75 | friction Rs57,055
+2026-11-25 11:01:07 | INFO    | __main__ | ================================================================
+2026-11-25 11:01:07 | INFO    | __main__ | Scan | 2026-11-25 11:01 IST
+2026-11-25 11:01:25 | ERROR   | yfinance | $ICICIPRULI.NS: possibly delisted; no price data found  (period=20d)
+2026-11-25 11:01:30 | ERROR   | yfinance | 
+1 Failed download:
+2026-11-25 11:01:30 | ERROR   | yfinance | ['ICICIPRULI.NS']: possibly delisted; no price data found  (period=20d)
+2026-11-25 11:01:49 | INFO    | data.fetcher | Fetched 15min data for 211/212 tickers
+2026-11-25 11:01:49 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ICICIPRULI.NS
+2026-11-25 11:01:49 | INFO    | engine.paper_trader_v2 | EXIT TRENT.NS 99@Rs3323.22 | P&L Rs+1,463 (+0.77R) | friction Rs361 | t1_vwap
+2026-11-25 11:01:49 | INFO    | engine.paper_trader_v2 | T1 TRENT.NS - half out at VWAP, stop to Rs3311.33 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-25 11:01:49 | INFO    | engine.paper_trader_v2 | EXIT DABUR.NS 657@Rs417.19 | P&L Rs+1,360 (+0.71R) | friction Rs309 | t1_vwap
+2026-11-25 11:01:49 | INFO    | engine.paper_trader_v2 | T1 DABUR.NS - half out at VWAP, stop to Rs415.55 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-25 11:01:49 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,917 risk per trade)
+2026-11-25 11:01:49 | INFO    | __main__ |   base 0.40%
+2026-11-25 11:01:49 | INFO    | __main__ |   performance x0.6: n=174, observed expectancy shrunk to -0.046R vs prior +0.125R -> trimming (0.60x)
+2026-11-25 11:01:49 | INFO    | __main__ |   drawdown    x0.5: drawdown 5.1% - sizing at 0.50x
+2026-11-25 11:01:49 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-25 11:01:49 | INFO    | __main__ | strategy: MOM-v3
+2026-11-25 11:01:49 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-25 11:01:50 | INFO    | engine.paper_trader_v2 | ORDER DABUR.NS market buy at next open (ref Rs418.1, SL 0.683%, RSI 79.7, rvol 2.53)
+2026-11-25 11:01:50 | INFO    | engine.paper_trader_v2 | ORDER TRENT.NS market buy at next open (ref Rs3320.0, SL 0.603%, RSI 74.9, rvol 2.31)
+2026-11-25 11:01:50 | INFO    | engine.paper_trader_v2 | FILLED DABUR.NS @ Rs418.45001220703125 | qty=670 notional=Rs280,362 friction=Rs315
+2026-11-25 11:01:50 | INFO    | engine.paper_trader_v2 | FILLED TRENT.NS @ Rs3319.5 | qty=95 notional=Rs315,352 friction=Rs348
+2026-11-25 11:01:50 | INFO    | __main__ | equity Rs958,509 | open 3 | pending 0 | closed 174 | WR 56.3% | PF 0.77 | friction Rs57,725
