@@ -4,14 +4,7 @@
   "equity_peak": 1009622.2267159987,
   "positions": {},
   "pending_orders": {},
-  "last_known_price": {
-    "AUBANK.NS": {
-      "close": 1007.5,
-      "high": 1010.0,
-      "low": 1007.5,
-      "as_of": "2026-11-25T12:31:27.861405+05:30"
-    }
-  },
+  "last_known_price": {},
   "trade_history": [
     {
       "ticker": "SUNTV.NS",
