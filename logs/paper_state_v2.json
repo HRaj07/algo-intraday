@@ -1,5 +1,5 @@
 {
-  "cash": 842440.4050109485,
+  "cash": 907100.9751708191,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 7.12,
       "margin": 54505.84130859375,
       "entry_cost": 69.22302435053223,
-      "bars_held": 5,
+      "bars_held": 6,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-25 10:31:16 IST",
@@ -42,61 +42,21 @@
       "nifty_at_entry": 25805.599609375,
       "mfe_price": 1016.9000244140625,
       "mae_price": 1012.0
-    },
-    "TRENT.NS": {
-      "ticker": "TRENT.NS",
-      "direction": "LONG",
-      "entry_price": 3319.5,
-      "qty": 95,
-      "qty_open": 95,
-      "stop_loss": 3299.48,
-      "initial_stop": 3299.48,
-      "t1": 3339.92,
-      "t2": 3360.05,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 20.02,
-      "atr": 20.03,
-      "margin": 63070.5,
-      "entry_cost": 76.391900615,
-      "bars_held": 3,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-25 11:01:07 IST",
-      "predicted_rr": null,
-      "entry_rsi": 74.9,
-      "entry_deviation_pct": 1.055,
-      "entry_atr_pct": 0.603,
-      "entry_rvol": 2.31,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 10.02,
-      "entry_stop_pct": 0.603,
-      "nifty_at_entry": 25891.75,
-      "mfe_price": 3325.0,
-      "mae_price": 3310.800048828125
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "AUBANK.NS": {
-      "close": 1015.9000244140625,
-      "high": 1015.9000244140625,
-      "low": 1015.9000244140625,
-      "as_of": "2026-11-25T11:45:57.039473+05:30"
+      "close": 1013.25,
+      "high": 1013.9000244140625,
+      "low": 1013.25,
+      "as_of": "2026-11-25T12:01:06.224639+05:30"
     },
     "TRENT.NS": {
-      "close": 3325.0,
-      "high": 3325.0,
-      "low": 3320.5,
-      "as_of": "2026-11-25T11:45:57.039473+05:30"
+      "close": 3338.5,
+      "high": 3343.0,
+      "low": 3337.39990234375,
+      "as_of": "2026-11-25T12:01:06.224639+05:30"
     }
   },
   "trade_history": [
@@ -3774,6 +3734,27 @@
       "entry_rvol": 2.53,
       "entry_turnover_cr": 7.29,
       "entry_stop_pct": 0.683
+    },
+    {
+      "ticker": "TRENT.NS",
+      "direction": "LONG",
+      "entry_price": 3319.5,
+      "exit_price": 3339.92,
+      "qty": 95,
+      "pnl": 1590.07,
+      "R_multiple": 0.84,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 349.83,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-25 11:01:07 IST",
+      "exit_time": "2026-11-25 12:01:06 IST",
+      "entry_rsi": 74.9,
+      "entry_deviation_pct": 1.055,
+      "entry_atr_pct": 0.603,
+      "entry_rvol": 2.31,
+      "entry_turnover_cr": 10.02,
+      "entry_stop_pct": 0.603
     }
   ],
   "daily_entry_count": {
@@ -3813,7 +3794,7 @@
     "2026-11-23": 3,
     "2026-11-25": 6
   },
-  "total_pnl": -39983.25368045866,
+  "total_pnl": -38393.183520588056,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
