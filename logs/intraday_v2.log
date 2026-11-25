@@ -14669,3 +14669,22 @@
 2026-11-25 11:16:33 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-25 11:16:34 | INFO    | engine.paper_trader_v2 | ORDER REJECTED DABUR.NS: max 2 entries per day for DABUR.NS
 2026-11-25 11:16:34 | INFO    | __main__ | equity Rs958,867 | open 2 | pending 0 | closed 175 | WR 56.6% | PF 0.78 | friction Rs58,041
+2026-11-25 11:31:21 | INFO    | __main__ | ================================================================
+2026-11-25 11:31:21 | INFO    | __main__ | Scan | 2026-11-25 11:31 IST
+2026-11-25 11:31:39 | ERROR   | yfinance | $ICICIPRULI.NS: possibly delisted; no price data found  (period=20d)
+2026-11-25 11:31:39 | ERROR   | yfinance | 
+1 Failed download:
+2026-11-25 11:31:39 | ERROR   | yfinance | ['ICICIPRULI.NS']: possibly delisted; no price data found  (period=20d)
+2026-11-25 11:31:54 | INFO    | data.fetcher | Fetched 15min data for 211/212 tickers
+2026-11-25 11:31:54 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ICICIPRULI.NS
+2026-11-25 11:31:54 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,918 risk per trade)
+2026-11-25 11:31:54 | INFO    | __main__ |   base 0.40%
+2026-11-25 11:31:54 | INFO    | __main__ |   performance x0.6: n=175, observed expectancy shrunk to -0.043R vs prior +0.125R -> trimming (0.60x)
+2026-11-25 11:31:54 | INFO    | __main__ |   drawdown    x0.5: drawdown 5.0% - sizing at 0.50x
+2026-11-25 11:31:54 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-25 11:31:54 | INFO    | __main__ | strategy: MOM-v3
+2026-11-25 11:31:54 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-25 11:31:55 | INFO    | engine.paper_trader_v2 | ORDER REJECTED DABUR.NS: max 2 entries per day for DABUR.NS
+2026-11-25 11:31:55 | INFO    | engine.paper_trader_v2 | ORDER REJECTED HINDUNILVR.NS: at max entries per day (5)
+2026-11-25 11:31:55 | INFO    | engine.paper_trader_v2 | ORDER REJECTED BAJFINANCE.NS: at max entries per day (5)
+2026-11-25 11:31:55 | INFO    | __main__ | equity Rs959,086 | open 2 | pending 0 | closed 175 | WR 56.6% | PF 0.78 | friction Rs58,041
