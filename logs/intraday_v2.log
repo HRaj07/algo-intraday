@@ -15020,3 +15020,20 @@
 2026-11-26 09:46:29 | INFO    | __main__ | strategy: MOM-v3
 2026-11-26 09:46:29 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
 2026-11-26 09:46:29 | INFO    | __main__ | equity Rs959,390 | open 0 | pending 0 | closed 177 | WR 56.5% | PF 0.78 | friction Rs58,697
+2026-11-26 10:01:11 | INFO    | __main__ | ================================================================
+2026-11-26 10:01:11 | INFO    | __main__ | Scan | 2026-11-26 10:01 IST
+2026-11-26 10:01:12 | WARNING | yfinance | Crumb fetch rate-limited (HTTP 429), continuing without crumb
+2026-11-26 10:01:26 | ERROR   | yfinance | $ICICIPRULI.NS: possibly delisted; no price data found  (period=20d)
+2026-11-26 10:01:30 | ERROR   | yfinance | 
+1 Failed download:
+2026-11-26 10:01:30 | ERROR   | yfinance | ['ICICIPRULI.NS']: possibly delisted; no price data found  (period=20d)
+2026-11-26 10:01:46 | INFO    | data.fetcher | Fetched 15min data for 211/212 tickers
+2026-11-26 10:01:46 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ICICIPRULI.NS
+2026-11-26 10:01:46 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,919 risk per trade)
+2026-11-26 10:01:46 | INFO    | __main__ |   base 0.40%
+2026-11-26 10:01:46 | INFO    | __main__ |   performance x0.6: n=177, observed expectancy shrunk to -0.044R vs prior +0.125R -> trimming (0.60x)
+2026-11-26 10:01:46 | INFO    | __main__ |   drawdown    x0.504: drawdown 5.0% - sizing at 0.50x
+2026-11-26 10:01:46 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-26 10:01:46 | INFO    | __main__ | strategy: MOM-v3
+2026-11-26 10:01:46 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-26 10:01:46 | INFO    | __main__ | equity Rs959,390 | open 0 | pending 0 | closed 177 | WR 56.5% | PF 0.78 | friction Rs58,697

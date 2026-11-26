@@ -1029,3 +1029,4 @@
 {"time": "2026-11-26 09:15:54.295147+05:30", "strategy": "MOM-v3", "regime": "insufficient index bars", "scanned": 209, "signals": [], "rejects": {"regime gate closed": 209}, "near_misses": []}
 {"time": "2026-11-26 09:31:20.561849+05:30", "strategy": "MOM-v3", "regime": "insufficient index bars", "scanned": 209, "signals": [], "rejects": {"regime gate closed": 209}, "near_misses": []}
 {"time": "2026-11-26 09:45:54.556582+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 209, "signals": [], "rejects": {"too few bars today": 209}, "near_misses": []}
+{"time": "2026-11-26 10:01:11.791400+05:30", "strategy": "MOM-v3", "regime": "regime ok", "scanned": 209, "signals": [], "rejects": {"too few bars today": 209}, "near_misses": []}
