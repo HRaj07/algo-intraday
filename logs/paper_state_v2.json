@@ -1,5 +1,5 @@
 {
-  "cash": 769049.559790246,
+  "cash": 845142.5454598892,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
@@ -27,7 +27,7 @@
       "atr": 21.93,
       "margin": 68348.94169921875,
       "entry_cost": 80.81011467049709,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-26 10:31:42 IST",
@@ -67,7 +67,7 @@
       "atr": 28.51,
       "margin": 50079.82065429688,
       "entry_cost": 65.51831228226611,
-      "bars_held": 2,
+      "bars_held": 3,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-26 10:31:42 IST",
@@ -80,75 +80,29 @@
       "entry_turnover_cr": 23.26,
       "entry_stop_pct": 0.763,
       "nifty_at_entry": 25910.849609375,
-      "mfe_price": 3753.89990234375,
+      "mfe_price": 3757.0,
       "mae_price": 3725.5
-    },
-    "HDFCBANK.NS": {
-      "ticker": "HDFCBANK.NS",
-      "direction": "LONG",
-      "entry_price": 865.0499877929688,
-      "qty": 430,
-      "qty_open": 430,
-      "stop_loss": 860.59,
-      "initial_stop": 860.59,
-      "t1": 869.94,
-      "t2": 873.66,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 4.46,
-      "atr": 4.46,
-      "margin": 74394.29895019531,
-      "entry_cost": 85.87026005028198,
-      "bars_held": 2,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-26 10:31:42 IST",
-      "predicted_rr": null,
-      "entry_rsi": 75.0,
-      "entry_deviation_pct": 1.136,
-      "entry_atr_pct": 0.515,
-      "entry_rvol": 3.79,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 120.08,
-      "entry_stop_pct": 0.515,
-      "nifty_at_entry": 25910.849609375,
-      "mfe_price": 867.5499877929688,
-      "mae_price": 865.0499877929688
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "MCX.NS": {
-      "close": 3751.0,
-      "high": 3753.89990234375,
-      "low": 3748.10009765625,
-      "as_of": "2026-11-26T11:01:14.036600+05:30"
+      "close": 3755.0,
+      "high": 3757.0,
+      "low": 3752.300048828125,
+      "as_of": "2026-11-26T11:15:48.989327+05:30"
     },
     "BSE.NS": {
-      "close": 3937.0,
-      "high": 3942.0,
-      "low": 3936.10009765625,
-      "as_of": "2026-11-26T11:01:14.036600+05:30"
-    },
-    "PRESTIGE.NS": {
-      "close": 1751.800048828125,
-      "high": 1751.800048828125,
-      "low": 1741.4000244140625,
-      "as_of": "2026-11-26T11:01:14.036600+05:30"
+      "close": 3934.0,
+      "high": 3934.0,
+      "low": 3934.0,
+      "as_of": "2026-11-26T11:15:48.989327+05:30"
     },
     "HDFCBANK.NS": {
-      "close": 866.5,
-      "high": 867.5499877929688,
-      "low": 866.2000122070312,
-      "as_of": "2026-11-26T11:01:14.036600+05:30"
+      "close": 870.0,
+      "high": 870.7000122070312,
+      "low": 870.0,
+      "as_of": "2026-11-26T11:15:48.989327+05:30"
     }
   },
   "trade_history": [
@@ -3910,6 +3864,27 @@
       "entry_rvol": 4.88,
       "entry_turnover_cr": 4.15,
       "entry_stop_pct": 0.687
+    },
+    {
+      "ticker": "HDFCBANK.NS",
+      "direction": "LONG",
+      "entry_price": 865.0499877929688,
+      "exit_price": 869.94,
+      "qty": 430,
+      "pnl": 1698.69,
+      "R_multiple": 0.89,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 404.02,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-26 10:31:42 IST",
+      "exit_time": "2026-11-26 11:15:48 IST",
+      "entry_rsi": 75.0,
+      "entry_deviation_pct": 1.136,
+      "entry_atr_pct": 0.515,
+      "entry_rvol": 3.79,
+      "entry_turnover_cr": 120.08,
+      "entry_stop_pct": 0.515
     }
   ],
   "daily_entry_count": {
@@ -3950,7 +3925,7 @@
     "2026-11-25": 6,
     "2026-11-26": 5
   },
-  "total_pnl": -38127.378906044105,
+  "total_pnl": -36428.69218659613,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
