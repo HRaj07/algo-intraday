@@ -27,7 +27,7 @@
       "atr": 21.93,
       "margin": 68348.94169921875,
       "entry_cost": 80.81011467049709,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-26 10:31:42 IST",
@@ -40,8 +40,8 @@
       "entry_turnover_cr": 24.54,
       "entry_stop_pct": 0.558,
       "nifty_at_entry": 25910.849609375,
-      "mfe_price": 3928.10009765625,
-      "mae_price": 3928.10009765625
+      "mfe_price": 3934.0,
+      "mae_price": 3927.39990234375
     },
     "PRESTIGE.NS": {
       "ticker": "PRESTIGE.NS",
@@ -67,7 +67,7 @@
       "atr": 11.91,
       "margin": 55812.26157226563,
       "entry_cost": 70.3165373038335,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-26 10:31:42 IST",
@@ -81,7 +81,7 @@
       "entry_stop_pct": 0.687,
       "nifty_at_entry": 25910.849609375,
       "mfe_price": 1733.300048828125,
-      "mae_price": 1733.300048828125
+      "mae_price": 1730.300048828125
     },
     "MCX.NS": {
       "ticker": "MCX.NS",
@@ -107,7 +107,7 @@
       "atr": 28.51,
       "margin": 50079.82065429688,
       "entry_cost": 65.51831228226611,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-26 10:31:42 IST",
@@ -121,7 +121,7 @@
       "entry_stop_pct": 0.763,
       "nifty_at_entry": 25910.849609375,
       "mfe_price": 3737.300048828125,
-      "mae_price": 3737.300048828125
+      "mae_price": 3725.5
     },
     "HDFCBANK.NS": {
       "ticker": "HDFCBANK.NS",
@@ -147,7 +147,7 @@
       "atr": 4.46,
       "margin": 74394.29895019531,
       "entry_cost": 85.87026005028198,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-26 10:31:42 IST",
@@ -160,17 +160,35 @@
       "entry_turnover_cr": 120.08,
       "entry_stop_pct": 0.515,
       "nifty_at_entry": 25910.849609375,
-      "mfe_price": 865.0499877929688,
+      "mfe_price": 866.5,
       "mae_price": 865.0499877929688
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "MCX.NS": {
-      "close": 3736.60009765625,
-      "high": 3746.699951171875,
-      "low": 3736.60009765625,
-      "as_of": "2026-11-26T10:31:42.243745+05:30"
+      "close": 3727.699951171875,
+      "high": 3731.199951171875,
+      "low": 3725.5,
+      "as_of": "2026-11-26T10:45:52.029563+05:30"
+    },
+    "BSE.NS": {
+      "close": 3933.300048828125,
+      "high": 3934.0,
+      "low": 3927.39990234375,
+      "as_of": "2026-11-26T10:45:52.029563+05:30"
+    },
+    "PRESTIGE.NS": {
+      "close": 1731.4000244140625,
+      "high": 1733.0999755859375,
+      "low": 1730.300048828125,
+      "as_of": "2026-11-26T10:45:52.029563+05:30"
+    },
+    "HDFCBANK.NS": {
+      "close": 866.5,
+      "high": 866.5,
+      "low": 865.4500122070312,
+      "as_of": "2026-11-26T10:45:52.029563+05:30"
     }
   },
   "trade_history": [
