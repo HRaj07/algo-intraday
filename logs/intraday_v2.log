@@ -15143,3 +15143,25 @@
 2026-11-26 11:16:28 | INFO    | engine.paper_trader_v2 | ORDER REJECTED HDFCBANK.NS: at max entries per day (5)
 2026-11-26 11:16:28 | INFO    | engine.paper_trader_v2 | ORDER REJECTED BSE.NS: already holding this name
 2026-11-26 11:16:28 | INFO    | __main__ | equity Rs965,270 | open 2 | pending 0 | closed 180 | WR 57.2% | PF 0.8 | friction Rs59,702
+2026-11-26 11:31:22 | INFO    | __main__ | ================================================================
+2026-11-26 11:31:22 | INFO    | __main__ | Scan | 2026-11-26 11:31 IST
+2026-11-26 11:31:40 | ERROR   | yfinance | $ICICIPRULI.NS: possibly delisted; no price data found  (period=20d)
+2026-11-26 11:31:46 | ERROR   | yfinance | 
+1 Failed download:
+2026-11-26 11:31:46 | ERROR   | yfinance | ['ICICIPRULI.NS']: possibly delisted; no price data found  (period=20d)
+2026-11-26 11:32:03 | INFO    | data.fetcher | Fetched 15min data for 211/212 tickers
+2026-11-26 11:32:03 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ICICIPRULI.NS
+2026-11-26 11:32:03 | INFO    | engine.paper_trader_v2 | EXIT MCX.NS 67@Rs3761.03 | P&L Rs+1,302 (+0.68R) | friction Rs288 | t1_vwap
+2026-11-26 11:32:03 | INFO    | engine.paper_trader_v2 | T1 MCX.NS - half out at VWAP, stop to Rs3745.85 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-26 11:32:04 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,931 risk per trade)
+2026-11-26 11:32:04 | INFO    | __main__ |   base 0.40%
+2026-11-26 11:32:04 | INFO    | __main__ |   performance x0.6: n=181, observed expectancy shrunk to -0.031R vs prior +0.125R -> trimming (0.60x)
+2026-11-26 11:32:04 | INFO    | __main__ |   drawdown    x0.602: drawdown 4.4% - sizing at 0.60x
+2026-11-26 11:32:04 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-26 11:32:04 | INFO    | __main__ | strategy: MOM-v3
+2026-11-26 11:32:04 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-26 11:32:04 | INFO    | engine.paper_trader_v2 | ORDER REJECTED BRITANNIA.NS: at max entries per day (5)
+2026-11-26 11:32:04 | INFO    | engine.paper_trader_v2 | ORDER REJECTED PRESTIGE.NS: at max entries per day (5)
+2026-11-26 11:32:04 | INFO    | engine.paper_trader_v2 | ORDER REJECTED MCX.NS: max 2 entries per day for MCX.NS
+2026-11-26 11:32:04 | INFO    | engine.paper_trader_v2 | ORDER REJECTED HDFCBANK.NS: at max entries per day (5)
+2026-11-26 11:32:04 | INFO    | __main__ | equity Rs965,300 | open 1 | pending 0 | closed 181 | WR 57.5% | PF 0.81 | friction Rs59,989
