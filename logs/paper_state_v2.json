@@ -1,56 +1,15 @@
 {
-  "cash": 896524.7368720114,
+  "cash": 966715.1826430932,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
-  "positions": {
-    "BSE.NS": {
-      "ticker": "BSE.NS",
-      "direction": "LONG",
-      "entry_price": 3928.10009765625,
-      "qty": 87,
-      "qty_open": 87,
-      "stop_loss": 3906.18,
-      "initial_stop": 3906.18,
-      "t1": 3953.58,
-      "t2": 3973.85,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 21.92,
-      "atr": 21.93,
-      "margin": 68348.94169921875,
-      "entry_cost": 80.81011467049709,
-      "bars_held": 7,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-26 10:31:42 IST",
-      "predicted_rr": null,
-      "entry_rsi": 80.6,
-      "entry_deviation_pct": 1.127,
-      "entry_atr_pct": 0.558,
-      "entry_rvol": 7.54,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 24.54,
-      "entry_stop_pct": 0.558,
-      "nifty_at_entry": 25910.849609375,
-      "mfe_price": 3947.89990234375,
-      "mae_price": 3915.5
-    }
-  },
+  "positions": {},
   "pending_orders": {},
   "last_known_price": {
     "BSE.NS": {
-      "close": 3947.89990234375,
-      "high": 3947.89990234375,
-      "low": 3947.89990234375,
-      "as_of": "2026-11-26T12:15:53.431998+05:30"
+      "close": 3958.0,
+      "high": 3962.5,
+      "low": 3958.0,
+      "as_of": "2026-11-26T12:31:38.094857+05:30"
     }
   },
   "trade_history": [
@@ -3854,6 +3813,27 @@
       "entry_rvol": 3.93,
       "entry_turnover_cr": 23.26,
       "entry_stop_pct": 0.763
+    },
+    {
+      "ticker": "BSE.NS",
+      "direction": "LONG",
+      "entry_price": 3928.10009765625,
+      "exit_price": 3953.58,
+      "qty": 87,
+      "pnl": 1841.5,
+      "R_multiple": 0.97,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 375.25,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-26 10:31:42 IST",
+      "exit_time": "2026-11-26 12:31:38 IST",
+      "entry_rsi": 80.6,
+      "entry_deviation_pct": 1.127,
+      "entry_atr_pct": 0.558,
+      "entry_rvol": 7.54,
+      "entry_turnover_cr": 24.54,
+      "entry_stop_pct": 0.558
     }
   ],
   "daily_entry_count": {
@@ -3894,7 +3874,7 @@
     "2026-11-25": 6,
     "2026-11-26": 5
   },
-  "total_pnl": -35126.32142877082,
+  "total_pnl": -33284.81735690783,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
