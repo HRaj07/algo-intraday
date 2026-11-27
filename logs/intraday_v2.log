@@ -15841,3 +15841,6 @@
 2026-11-27 15:16:31 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ICICIPRULI.NS
 2026-11-27 15:16:31 | INFO    | __main__ | EOD: {'equity': 960009.24, 'cash': 960009.24, 'open_positions': 0, 'pending_orders': 0, 'closed_trades': 190, 'win_rate_pct': 56.8, 'profit_factor': 0.79, 'total_friction': 63228.84, 'total_pnl': -39990.76, 'return_pct': -4.0}
 2026-11-27 15:16:31 | WARNING | __main__ | KILL SWITCH has tripped 15x in paper mode; latest {'date': '2026-11-25', 'pf': 0.815, 'n': 30, 'trade_count': 171} - live mode would be HALTED
+2026-11-27 15:31:26 | INFO    | __main__ | ================================================================
+2026-11-27 15:31:26 | INFO    | __main__ | Scan | 2026-11-27 15:31 IST
+2026-11-27 15:31:26 | INFO    | __main__ | outside NSE hours
