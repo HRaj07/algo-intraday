@@ -15777,3 +15777,12 @@
 2026-11-27 13:32:13 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ICICIPRULI.NS
 2026-11-27 13:32:13 | INFO    | engine.paper_trader_v2 | EXIT SYRMA.NS 211@Rs1514.39 | P&L Rs-2,275 (-1.18R) | friction Rs353 | stop_loss
 2026-11-27 13:32:13 | WARNING | __main__ | NOT TRADING: daily loss Rs-6,706 hit the -3.0R limit (-Rs5,760)
+2026-11-27 13:46:01 | INFO    | __main__ | ================================================================
+2026-11-27 13:46:01 | INFO    | __main__ | Scan | 2026-11-27 13:46 IST
+2026-11-27 13:46:12 | ERROR   | yfinance | $ICICIPRULI.NS: possibly delisted; no price data found  (period=20d)
+2026-11-27 13:46:16 | ERROR   | yfinance | 
+1 Failed download:
+2026-11-27 13:46:16 | ERROR   | yfinance | ['ICICIPRULI.NS']: possibly delisted; no price data found  (period=20d)
+2026-11-27 13:46:30 | INFO    | data.fetcher | Fetched 15min data for 211/212 tickers
+2026-11-27 13:46:30 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ICICIPRULI.NS
+2026-11-27 13:46:30 | WARNING | __main__ | NOT TRADING: daily loss Rs-6,706 hit the -3.0R limit (-Rs5,760)
