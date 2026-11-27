@@ -1,48 +1,8 @@
 {
-  "cash": 645906.3069492816,
+  "cash": 784833.5767989097,
   "initial_capital": 1000000,
   "equity_peak": 1009622.2267159987,
   "positions": {
-    "RBLBANK.NS": {
-      "ticker": "RBLBANK.NS",
-      "direction": "LONG",
-      "entry_price": 402.20001220703125,
-      "qty": 785,
-      "qty_open": 785,
-      "stop_loss": 399.74,
-      "initial_stop": 399.74,
-      "t1": 404.61,
-      "t2": 407.12,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 2.46,
-      "atr": 2.46,
-      "margin": 63145.401916503906,
-      "entry_cost": 76.45459576617127,
-      "bars_held": 2,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-27 10:15:54 IST",
-      "predicted_rr": null,
-      "entry_rsi": 72.6,
-      "entry_deviation_pct": 0.818,
-      "entry_atr_pct": 0.611,
-      "entry_rvol": 2.95,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 3.94,
-      "entry_stop_pct": 0.611,
-      "nifty_at_entry": 25850.69921875,
-      "mfe_price": 402.20001220703125,
-      "mae_price": 400.04998779296875
-    },
     "HAL.NS": {
       "ticker": "HAL.NS",
       "direction": "LONG",
@@ -67,7 +27,7 @@
       "atr": 28.5,
       "margin": 68672.3173828125,
       "entry_cost": 81.08078981893556,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-27 10:45:54 IST",
@@ -81,7 +41,7 @@
       "entry_stop_pct": 0.556,
       "nifty_at_entry": 25784.400390625,
       "mfe_price": 5124.7998046875,
-      "mae_price": 5124.7998046875
+      "mae_price": 5111.10009765625
     },
     "ANGELONE.NS": {
       "ticker": "ANGELONE.NS",
@@ -107,7 +67,7 @@
       "atr": 3.18,
       "margin": 45606.078515625006,
       "entry_cost": 61.77365589993359,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-27 10:45:54 IST",
@@ -120,48 +80,8 @@
       "entry_turnover_cr": 7.23,
       "entry_stop_pct": 0.846,
       "nifty_at_entry": 25784.400390625,
-      "mfe_price": 375.04998779296875,
+      "mfe_price": 375.8999938964844,
       "mae_price": 375.04998779296875
-    },
-    "GLENMARK.NS": {
-      "ticker": "GLENMARK.NS",
-      "direction": "LONG",
-      "entry_price": 2805.89990234375,
-      "qty": 136,
-      "qty_open": 136,
-      "stop_loss": 2791.76,
-      "initial_stop": 2791.76,
-      "t1": 2821.73,
-      "t2": 2833.17,
-      "t1_fraction": 1.0,
-      "exit_cfg": {
-        "hold_to_square_off": true,
-        "use_target": true,
-        "use_breakeven_trail": false,
-        "use_time_stop": false,
-        "thesis_exits": true
-      },
-      "t1_done": false,
-      "trailed": false,
-      "risk_per_share": 14.14,
-      "atr": 14.13,
-      "margin": 76320.47734375,
-      "entry_cost": 87.48252915103905,
-      "bars_held": 0,
-      "realised_pnl": 0.0,
-      "strategy": "MOM-v3",
-      "entry_time": "2026-11-27 10:45:54 IST",
-      "predicted_rr": null,
-      "entry_rsi": 79.4,
-      "entry_deviation_pct": 0.998,
-      "entry_atr_pct": 0.504,
-      "entry_rvol": 2.78,
-      "entry_gap_pct": null,
-      "entry_turnover_cr": 5.89,
-      "entry_stop_pct": 0.504,
-      "nifty_at_entry": 25784.400390625,
-      "mfe_price": 2805.89990234375,
-      "mae_price": 2805.89990234375
     },
     "SYRMA.NS": {
       "ticker": "SYRMA.NS",
@@ -187,7 +107,7 @@
       "atr": 9.11,
       "margin": 64291.700000000004,
       "entry_cost": 77.414081651,
-      "bars_held": 0,
+      "bars_held": 1,
       "realised_pnl": 0.0,
       "strategy": "MOM-v3",
       "entry_time": "2026-11-27 10:45:54 IST",
@@ -201,22 +121,40 @@
       "entry_stop_pct": 0.598,
       "nifty_at_entry": 25784.400390625,
       "mfe_price": 1523.5,
-      "mae_price": 1523.5
+      "mae_price": 1519.699951171875
     }
   },
   "pending_orders": {},
   "last_known_price": {
     "RBLBANK.NS": {
-      "close": 400.79998779296875,
-      "high": 400.79998779296875,
-      "low": 400.04998779296875,
-      "as_of": "2026-11-27T10:45:54.352587+05:30"
+      "close": 399.04998779296875,
+      "high": 399.04998779296875,
+      "low": 398.3999938964844,
+      "as_of": "2026-11-27T11:01:09.203862+05:30"
     },
     "HAL.NS": {
-      "close": 5143.7001953125,
-      "high": 5143.7001953125,
-      "low": 5124.2001953125,
-      "as_of": "2026-11-27T10:45:54.352587+05:30"
+      "close": 5122.39990234375,
+      "high": 5123.0,
+      "low": 5111.10009765625,
+      "as_of": "2026-11-27T11:01:09.203862+05:30"
+    },
+    "SYRMA.NS": {
+      "close": 1519.699951171875,
+      "high": 1520.4000244140625,
+      "low": 1519.699951171875,
+      "as_of": "2026-11-27T11:01:09.203862+05:30"
+    },
+    "GLENMARK.NS": {
+      "close": 2818.199951171875,
+      "high": 2822.0,
+      "low": 2818.0,
+      "as_of": "2026-11-27T11:01:09.203862+05:30"
+    },
+    "ANGELONE.NS": {
+      "close": 375.5,
+      "high": 375.8999938964844,
+      "low": 375.20001220703125,
+      "as_of": "2026-11-27T11:01:09.203862+05:30"
     }
   },
   "trade_history": [
@@ -4104,6 +4042,48 @@
       "entry_rvol": 10.08,
       "entry_turnover_cr": 13.6,
       "entry_stop_pct": 0.528
+    },
+    {
+      "ticker": "RBLBANK.NS",
+      "direction": "LONG",
+      "entry_price": 402.20001220703125,
+      "exit_price": 399.74,
+      "qty": 785,
+      "pnl": -2278.25,
+      "R_multiple": -1.18,
+      "reason": "stop_loss",
+      "partial": false,
+      "friction": 347.14,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-27 10:15:54 IST",
+      "exit_time": "2026-11-27 11:01:09 IST",
+      "entry_rsi": 72.6,
+      "entry_deviation_pct": 0.818,
+      "entry_atr_pct": 0.611,
+      "entry_rvol": 2.95,
+      "entry_turnover_cr": 3.94,
+      "entry_stop_pct": 0.611
+    },
+    {
+      "ticker": "GLENMARK.NS",
+      "direction": "LONG",
+      "entry_price": 2805.89990234375,
+      "exit_price": 2821.73,
+      "qty": 136,
+      "pnl": 1739.64,
+      "R_multiple": 0.9,
+      "reason": "t1_vwap",
+      "partial": true,
+      "friction": 413.25,
+      "strategy": "MOM-v3",
+      "entry_time": "2026-11-27 10:45:54 IST",
+      "exit_time": "2026-11-27 11:01:09 IST",
+      "entry_rsi": 79.4,
+      "entry_deviation_pct": 0.998,
+      "entry_atr_pct": 0.504,
+      "entry_rvol": 2.78,
+      "entry_turnover_cr": 5.89,
+      "entry_stop_pct": 0.504
     }
   ],
   "daily_entry_count": {
@@ -4145,7 +4125,7 @@
     "2026-11-26": 5,
     "2026-11-27": 8
   },
-  "total_pnl": -36057.71789202823,
+  "total_pnl": -36596.32730265404,
   "last_sizing_decision": {
     "base_pct": 0.004,
     "performance_scalar": 0.6,
