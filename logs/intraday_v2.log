@@ -15558,3 +15558,29 @@
 2026-11-27 10:32:05 | INFO    | engine.paper_trader_v2 | ORDER HAL.NS market buy at next open (ref Rs5108.0, SL 0.528%, RSI 83.9, rvol 10.08)
 2026-11-27 10:32:05 | INFO    | engine.paper_trader_v2 | FILLED HAL.NS @ Rs5107.60009765625 | qty=71 notional=Rs362,640 friction=Rs393
 2026-11-27 10:32:06 | INFO    | __main__ | equity Rs960,877 | open 2 | pending 0 | closed 184 | WR 57.1% | PF 0.8 | friction Rs61,081
+2026-11-27 10:45:54 | INFO    | __main__ | ================================================================
+2026-11-27 10:45:54 | INFO    | __main__ | Scan | 2026-11-27 10:45 IST
+2026-11-27 10:46:17 | ERROR   | yfinance | $ICICIPRULI.NS: possibly delisted; no price data found  (period=20d)
+2026-11-27 10:46:19 | ERROR   | yfinance | 
+1 Failed download:
+2026-11-27 10:46:19 | ERROR   | yfinance | ['ICICIPRULI.NS']: possibly delisted; no price data found  (period=20d)
+2026-11-27 10:46:40 | INFO    | data.fetcher | Fetched 15min data for 211/212 tickers
+2026-11-27 10:46:40 | WARNING | data.fetcher | NO DATA for 1 symbol(s): ICICIPRULI.NS
+2026-11-27 10:46:40 | INFO    | engine.paper_trader_v2 | EXIT HAL.NS 71@Rs5138.65 | P&L Rs+1,809 (+0.94R) | friction Rs395 | t1_vwap
+2026-11-27 10:46:40 | INFO    | engine.paper_trader_v2 | T1 HAL.NS - half out at VWAP, stop to Rs5117.19 (a real breakeven, not v1's entry+0.1R which locked in -0.17R)
+2026-11-27 10:46:40 | INFO    | __main__ | SIZING: 0.200% of equity (Rs1,926 risk per trade)
+2026-11-27 10:46:40 | INFO    | __main__ |   base 0.40%
+2026-11-27 10:46:40 | INFO    | __main__ |   performance x0.6: n=185, observed expectancy shrunk to -0.033R vs prior +0.125R -> trimming (0.60x)
+2026-11-27 10:46:40 | INFO    | __main__ |   drawdown    x0.561: drawdown 4.6% - sizing at 0.56x
+2026-11-27 10:46:40 | INFO    | __main__ |   clamped to the [0.20%, 0.60%] band
+2026-11-27 10:46:40 | INFO    | __main__ | strategy: MOM-v3
+2026-11-27 10:46:40 | INFO    | __main__ | walk-forward overrides in force: {'min_dev_above_vwap': 0.008, 'min_rsi': 70, 'min_rvol': 2.0}
+2026-11-27 10:46:41 | INFO    | engine.paper_trader_v2 | ORDER HAL.NS market buy at next open (ref Rs5125.0, SL 0.556%, RSI 85.0, rvol 9.14)
+2026-11-27 10:46:41 | INFO    | engine.paper_trader_v2 | ORDER ANGELONE.NS market buy at next open (ref Rs375.15, SL 0.846%, RSI 75.9, rvol 8.52)
+2026-11-27 10:46:41 | INFO    | engine.paper_trader_v2 | ORDER GLENMARK.NS market buy at next open (ref Rs2804.9, SL 0.504%, RSI 79.4, rvol 2.78)
+2026-11-27 10:46:41 | INFO    | engine.paper_trader_v2 | ORDER SYRMA.NS market buy at next open (ref Rs1523.0, SL 0.598%, RSI 79.1, rvol 2.06)
+2026-11-27 10:46:41 | INFO    | engine.paper_trader_v2 | FILLED HAL.NS @ Rs5124.7998046875 | qty=67 notional=Rs343,362 friction=Rs375
+2026-11-27 10:46:41 | INFO    | engine.paper_trader_v2 | FILLED ANGELONE.NS @ Rs375.04998779296875 | qty=608 notional=Rs228,030 friction=Rs265
+2026-11-27 10:46:41 | INFO    | engine.paper_trader_v2 | FILLED GLENMARK.NS @ Rs2805.89990234375 | qty=136 notional=Rs381,602 friction=Rs412
+2026-11-27 10:46:41 | INFO    | engine.paper_trader_v2 | FILLED SYRMA.NS @ Rs1523.5 | qty=211 notional=Rs321,458 friction=Rs354
+2026-11-27 10:46:41 | INFO    | __main__ | equity Rs964,110 | open 5 | pending 0 | closed 185 | WR 57.3% | PF 0.81 | friction Rs61,476
