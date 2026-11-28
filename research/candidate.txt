@@ -1,57 +1,57 @@
-188,685 bars, 60 days, cost 0.0955% round trip
+188,636 bars, 60 days, cost 0.0955% round trip
   'net' is after cost. 3/3 = cleared cost in July, August AND September.
 
 ========================================================================================================
   1. THE THREE MONTH-ROBUST CUTS, SEPARATELY AND TOGETHER
 ========================================================================================================
                                           n     gross       net    win%       t      Jul     Aug     Sep
-  unselected momentum                 6,879   +0.147%   +0.051%   52.8%   +8.45    --     +0.343  -0.093
-  RSI >= 75                           2,620   +0.163%   +0.068%   54.5%   +5.33    --     +0.486  +0.013
-  rvol >= 4                           1,658   +0.062%   -0.034%   50.4%   +1.30    --     +0.122  +0.002
-  dev >= 1.2%                         2,449   +0.100%   +0.005%   52.0%   +3.10    --     +0.096  +0.018
+  unselected momentum                 6,991   +0.138%   +0.042%   52.4%   +7.97    --     +0.825  -0.092
+  RSI >= 75                           2,649   +0.152%   +0.056%   54.1%   +4.91    --     +0.747  +0.042
+  rvol >= 4                           1,660   +0.062%   -0.033%   51.0%   +1.31    --      --     +0.025
+  dev >= 1.2%                         2,445   +0.119%   +0.023%   52.7%   +3.61    --     +1.118  +0.028
 
-  RSI>=75 AND rvol>=4                 1,043   +0.055%   -0.040%   51.5%   +0.91    --     +0.422  +0.041
-  RSI>=75 AND dev>=1.2%               1,258   +0.092%   -0.003%   52.7%   +1.88    --     +0.077  +0.105
-  all three                             621   -0.038%   -0.133%   51.0%   -0.44    --     -0.063  +0.087
+  RSI>=75 AND rvol>=4                 1,044   +0.028%   -0.068%   51.7%   +0.46    --      --     +0.059
+  RSI>=75 AND dev>=1.2%               1,274   +0.126%   +0.031%   53.7%   +2.53    --      --     +0.148
+  all three                             628   -0.033%   -0.129%   51.9%   -0.39    --      --     +0.127
 
 ========================================================================================================
   2. THE SAME CUTS WITH A REAL STOP (and the trade held to the close)
 ========================================================================================================
                                           n     gross       net    win%       t      Jul     Aug     Sep
-  RSI>=75, 0.6% stop                  2,620   +0.162%   +0.066%   39.5%   +7.51    --     +0.330  +0.003
-  RSI>=75, 0.8% stop                  2,620   +0.204%   +0.108%   46.1%   +8.21    --     +0.359  +0.111
-  RSI>=75, 1.2% stop                  2,620   +0.200%   +0.105%   51.8%   +7.56    --     +0.463  +0.087
-  RSI>=75, 1.6% stop                  2,620   +0.193%   +0.098%   53.4%   +7.01    --     +0.477  +0.085
+  RSI>=75, 0.6% stop                  2,649   +0.152%   +0.057%   38.8%   +7.04    --     +0.408  +0.027
+  RSI>=75, 0.8% stop                  2,649   +0.196%   +0.101%   45.6%   +7.88    --     +0.374  +0.143
+  RSI>=75, 1.2% stop                  2,649   +0.192%   +0.096%   51.4%   +7.20    --     +0.473  +0.126
+  RSI>=75, 1.6% stop                  2,649   +0.182%   +0.087%   53.0%   +6.57    --     +0.671  +0.117
 
-  RSI>=75 AND rvol>=4, 0.6% stop      1,043   +0.143%   +0.048%   34.9%   +3.80    --     +0.136  +0.035
-  RSI>=75 AND rvol>=4, 0.8% stop      1,043   +0.195%   +0.100%   41.2%   +4.23    --     +0.227  +0.216
-  RSI>=75 AND rvol>=4, 1.2% stop      1,043   +0.171%   +0.076%   47.5%   +3.45    --     +0.395  +0.183
-  RSI>=75 AND rvol>=4, 1.6% stop      1,043   +0.141%   +0.046%   49.8%   +2.72    --     +0.416  +0.150
+  RSI>=75 AND rvol>=4, 0.6% stop      1,044   +0.132%   +0.037%   35.0%   +3.57    --      --     +0.041
+  RSI>=75 AND rvol>=4, 0.8% stop      1,044   +0.183%   +0.088%   41.3%   +4.00    --      --     +0.239
+  RSI>=75 AND rvol>=4, 1.2% stop      1,044   +0.153%   +0.058%   47.6%   +3.13    --      --     +0.216
+  RSI>=75 AND rvol>=4, 1.6% stop      1,044   +0.124%   +0.028%   50.1%   +2.40    --      --     +0.179
 
 ========================================================================================================
   3. IS IT TRADEABLE? — signals per day, and what the book can hold
 ========================================================================================================
-  unselected momentum         114.7/day     81.3/day pass the turnover floor   (60 of 60 days had one)
-  RSI >= 75                    43.7/day     30.8/day pass the turnover floor   (58 of 60 days had one)
-  RSI>=75 AND rvol>=4          17.4/day     10.2/day pass the turnover floor   (55 of 60 days had one)
-  all three                    10.3/day      6.0/day pass the turnover floor   (52 of 60 days had one)
+  unselected momentum         116.5/day     83.4/day pass the turnover floor   (60 of 60 days had one)
+  RSI >= 75                    44.1/day     31.6/day pass the turnover floor   (58 of 60 days had one)
+  RSI>=75 AND rvol>=4          17.4/day     10.4/day pass the turnover floor   (55 of 60 days had one)
+  all three                    10.5/day      6.1/day pass the turnover floor   (52 of 60 days had one)
 
   the book holds 3 positions, 5 entries/day
 
 ========================================================================================================
   4. IS IT A FEW NAMES? (RSI>=75 AND rvol>=4)
 ========================================================================================================
-  33 names with >=10 signals, 17 of them beat cost (52%)
-  median name  +0.118% gross
+  34 names with >=10 signals, 17 of them beat cost (50%)
+  median name  +0.083% gross
                                           n     gross       net    win%       t      Jul     Aug     Sep
-  excluding the best 5 names            967   -0.090%   -0.185%   48.7%   -1.59    --     -0.053  -0.114
+  excluding the best 5 names            972   -0.111%   -0.207%   48.6%   -1.81    --      --     -0.014
 
 ========================================================================================================
   5. WHAT A TRADE ACTUALLY LOOKS LIKE
 ========================================================================================================
-  median adverse excursion   -0.817%
-  median favourable          +1.038%
-  median ATR                 0.642%
+  median adverse excursion   -0.833%
+  median favourable          +1.040%
+  median ATR                 0.652%
   median bar entered         #8 of ~25
   at a 0.8% stop: Rs500,000 notional, Rs525 friction = 13% of the Rs4,000 risked
   at a 1.2% stop: Rs333,333 notional, Rs365 friction = 9% of the Rs4,000 risked
